@@ -81,3 +81,43 @@ nav>ul {
 .parent-nav2>ul>li:hover {
     background-color: rgba(128, 128, 128, 0.145);
 }
+
+.parent-nav>.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent-nav2>.section {
+    align-items: center;
+    display: flex;
+}
+
+/* .parent-nav2>.section img {
+    width: 0.8rem;
+    height: 0.8rem;
+} */
+
+.section p {
+    margin: 0.5rem;
+}
+
+.parent-nav .section img {
+    transform: rotate(90deg);
+    width: 0.8rem;
+    aspect-ratio: 1;
+}
+
+.parent-nav2>.section img {
+    transform: rotate(0deg);
+}
+
+.parent-nav2:hover>.section img {
+    transform: rotate(180deg);
+    transition: all 0.3s ease;
+}
+
+.parent-nav:hover>.section img {
+    transform: rotate(-90deg);
+    transition: all 0.3s ease;
+}
