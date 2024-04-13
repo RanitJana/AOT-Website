@@ -1,0 +1,83 @@
+@import url('./basicStyles.css');
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    z-index: 50;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    cursor: pointer;
+}
+
+nav>ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 3.5rem;
+    z-index: 60;
+    box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.08);
+}
+
+.parent-nav {
+    width: 24%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.parent-nav>ul,
+.parent-nav2>ul {
+    display: none;
+    position: relative;
+    box-shadow: 0 0 5px 5px rgba(128, 128, 128, 0.122);
+}
+
+.parent-nav:hover>ul,
+.parent-nav2:hover>ul {
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 0%;
+    border-top: 3px solid green;
+}
+
+.parent-nav2:hover>ul {
+    left: 100%;
+    top: -5%;
+}
+
+.parent-nav>ul {
+    width: 100%;
+}
+
+.parent-nav2>ul {
+    width: max-content;
+    min-width: 10rem;
+}
+
+.parent-nav>ul>li,
+.parent-nav2>ul>li {
+    position: relative;
+    padding: 0.5rem 1rem;
+    /* margin: 0.3rem; */
+    background-color: white;
+}
+
+.parent-nav2>ul {
+    position: absolute;
+    left: 100%;
+    top: 0;
+}
+
+.parent-nav>ul>li:hover,
+.parent-nav2>ul>li:hover {
+    background-color: rgba(128, 128, 128, 0.145);
+}
