@@ -143,14 +143,8 @@ nav>ul {
     align-items: center;
     display: flex;
 }
-
-/* .parent-nav2>.section img {
-    width: 0.8rem;
-    height: 0.8rem;
-} */
-
 .section p {
-    margin: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 .parent-nav .section img {
