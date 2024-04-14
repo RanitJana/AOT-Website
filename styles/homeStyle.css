@@ -72,6 +72,9 @@ header {
     border-radius: var(--button-radius--);
     color: var(--aot-light-color--);
     background-color: var(--aot-color--);
+    box-shadow: 0 10px 20px rgba(35, 44, 105, 0.5),
+        0 6px 6px rgba(35, 44, 105, 0.5),
+        0 0 100px -10px var(--aot-color--);
 }
 
 #searchBtn:hover {
