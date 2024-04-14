@@ -7,11 +7,12 @@
 @media only screen and (max-width:832px) {
     .banner {
         margin-top: 2rem;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         position: relative;
         margin-top: 3rem;
+        padding-top: 3.5rem;
     }
 
     .banner .middle {
@@ -24,29 +25,16 @@
 
     .banner .right {
         position: absolute;
-        top: 10%;
+        top: 0%;
         right: 5%;
-    }
-}
-
-@media only screen and (max-width:739px) {
-    .banner {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .banner {
-        padding-top: 3.5rem;
     }
 
     .banner h1 {
         line-height: 3rem;
     }
-
-    .banner .right {
-        top: 0%;
-    }
 }
+
+@media only screen and (max-width:739px) {}
 
 @media only screen and (min-width:570px) {
 
