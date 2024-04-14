@@ -16,7 +16,7 @@ header {
     aspect-ratio: 1;
     position: absolute;
     top: 4%;
-    right: 4%;
+    left: 4%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -40,7 +40,7 @@ header {
     padding: 1rem;
 }
 
-.banner .left img{
+.banner .left img {
     margin: 10px;
 }
 
@@ -55,12 +55,7 @@ header {
 }
 
 
-
-
-
-
 .banner .right input,
-
 #searchBtn {
     padding: 0.3rem 0.7rem;
     border: none;
@@ -108,14 +103,14 @@ nav {
 
 .goback img {
     filter: invert(100%);
-    transform: rotate(180deg);
     width: 1rem;
     margin: 0.3rem;
 }
 
-.goback:active{
+.goback:active {
     background-color: #161c43;
 }
+
 nav ul {
     width: 100%;
     list-style: none;
