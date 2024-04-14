@@ -5,11 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/homeStyle.css">
+    <link rel="stylesheet" href="./styles/homeResponsive.css">
+    <link rel="stylesheet" href="./styles/animations.css">
     <title>Home</title>
 </head>
 
 <body>
     <header>
+        <div class="hamberg-menu">
+            <div class="stick"></div>
+            <div class="stick"></div>
+            <div class="stick"></div>
+        </div>
         <div class="banner">
             <div class="left">
                 <img src="./assets/images/aot-logo.jpg" alt="Error">
@@ -109,6 +116,20 @@
     </header>
     <main></main>
     <footer></footer>
+    <script>
+        let hambergMenu = document.querySelector('.hamberg-menu');
+        let body = document.querySelector('body');
+        let nav = document.querySelector('nav');
+        hambergMenu.addEventListener('click', e => {
+            nav.style.right = "0%"
+        })
+        window.addEventListener('click', e => {
+            if (e.clientX < (screen.width - 200)) {
+                nav.style.right = "-100%"
+            }
+        })
+    </script>
+
 </body>
 
 </html>

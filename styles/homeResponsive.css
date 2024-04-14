@@ -1,0 +1,132 @@
+@media only screen and (max-width:990px) {
+    header {
+        zoom: 0.8;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    .banner {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner .middle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width:570px) {
+
+    .parent-nav:hover>ul,
+    .parent-nav2:hover>ul {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 100%;
+        left: 0%;
+        border-top: 3px solid var(--aot-color--);
+    }
+
+    .parent-nav2:hover>ul {
+        left: 100%;
+        top: -5%;
+    }
+
+    .parent-nav>ul>li:hover,
+    .parent-nav2>ul>li:hover {
+        background-color: rgba(128, 128, 128, 0.145);
+    }
+
+}
+
+@media only screen and (max-width:570px) {
+    .hamberg-menu {
+        display: flex;
+    }
+
+    header nav {
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.195);
+        transition: all 0.5s ease;
+        position: fixed;
+        overflow-y: scroll;
+        top: 0;
+        right: -100%;
+        width: 285px;
+        height: 100%;
+        background-color: white;
+    }
+
+    header nav>ul {
+        box-shadow: none;
+        height: fit-content;
+        position: absolute;
+        top: 10%;
+        flex-direction: column;
+    }
+
+    nav ul {
+        padding: 1rem 0.5rem 1rem 1rem;
+    }
+
+    .parent-nav>.section {
+        background-color: rgba(128, 128, 128, 0.094);
+        border-bottom: 0.3rem solid var(--aot-color--);
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 2rem;
+        font-size: larger;
+    }
+
+    .parent-nav>ul>li {
+        list-style: decimal;
+        width: 100%;
+        margin-left: 2rem;
+        border-bottom: 0.1rem solid gray
+    }
+
+    .parent-nav2>ul>li {
+        width: 100%;
+        border-left: 1px solid gray;
+        width: 100%;
+        list-style: circle;
+        margin-top: 0%;
+    }
+
+    .parent-nav,
+    .parent-nav>ul {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .parent-nav>.section,
+    .parent-nav2>.section {
+        position: relative;
+        width: 100%;
+        display: flex;
+        height: 3rem;
+    }
+
+
+    .parent-nav>ul,
+    .parent-nav2>ul {
+        position: relative;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: none;
+    }
+
+    nav img {
+        display: none;
+    }
+}
