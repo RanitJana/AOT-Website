@@ -40,6 +40,7 @@ header {
     padding: 1rem;
 }
 
+
 .banner .left img {
     margin: 10px;
 }
@@ -69,8 +70,11 @@ header {
 
 #searchBtn {
     border-radius: var(--button-radius--);
-    color: white;
+    color: var(--aot-light-color--);
     background-color: var(--aot-color--);
+    box-shadow: 0 10px 20px rgba(35, 44, 105, 0.5),
+        0 6px 6px rgba(35, 44, 105, 0.5),
+        0 0 100px -10px var(--aot-color--);
 }
 
 #searchBtn:hover {
@@ -96,7 +100,7 @@ nav {
     padding: 0.5rem 1rem;
     border-radius: 6px;
     margin-bottom: 1rem;
-    color: white;
+    color: var(--aot-light-color--);
     background-color: var(--aot-color--);
     display: none;
 }
@@ -108,7 +112,7 @@ nav {
 }
 
 .goback:active {
-    background-color: #161c43;
+    background-color: var(--aot-dark-color--);
 }
 
 nav ul {
@@ -157,7 +161,7 @@ nav>ul {
 .parent-nav2>ul>li {
     position: relative;
     padding: 0.5rem 1rem;
-    background-color: white;
+    background-color: var(--aot-light-color--);
 }
 
 .parent-nav2>ul {
