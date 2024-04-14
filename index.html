@@ -120,24 +120,24 @@
     </header>
     <main></main>
     <footer></footer>
-    <script>
-        let hambergMenu = document.querySelector('.hamberg-menu');
-        let body = document.querySelector('body');
-        let nav = document.querySelector('nav');
-        let goback = document.querySelector('.goback');
-        goback.addEventListener('click', () => {
-            nav.style.right = "-100%";
-        })
-        hambergMenu.addEventListener('click', e => {
-            nav.style.right = "0%"
-        })
-        window.addEventListener('click', e => {
-            if (e.clientX < (screen.width - 200)) {
-                nav.style.right = "-100%"
-            }
-        })
-    </script>
 
 </body>
+<script>
+    let hambergMenu = document.querySelector('.hamberg-menu');
+    let body = document.querySelector('body');
+    let nav = document.querySelector('nav');
+    let goback = document.querySelector('.goback');
+    goback.addEventListener('click', () => {
+        nav.style.right = "-100%";
+    })
+    hambergMenu.addEventListener('click', e => {
+        nav.style.right = "0%"
+    })
+    window.addEventListener('click', e => {
+        if (e.clientX < (screen.width - 200)) {
+            nav.style.right = "-100%"
+        }
+    })
+</script>
 
 </html>
