@@ -7,6 +7,7 @@ header {
     align-items: center;
     flex-direction: column;
     z-index: 99;
+    position: relative;
 }
 
 .hamberg-menu {
@@ -15,8 +16,8 @@ header {
     width: 2.2rem;
     aspect-ratio: 1;
     position: absolute;
-    top: 4%;
-    left: 4%;
+    top: 20%;
+    right: 4%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -38,10 +39,7 @@ header {
     align-items: center;
     width: 90%;
     padding: 1rem;
-}
-
-.banner .left img {
-    margin: 10px;
+    margin-top: 2rem;
 }
 
 .banner .middle {
@@ -87,6 +85,10 @@ nav {
     justify-content: center;
     list-style: none;
     z-index: 50;
+    position: sticky;
+    background-color: white;
+    top: 0;
+    z-index: 100;
 }
 
 .goback {
@@ -103,6 +105,7 @@ nav {
 
 .goback img {
     filter: invert(100%);
+    transform: rotate(180deg);
     width: 1rem;
     margin: 0.3rem;
 }
