@@ -34,8 +34,8 @@
         </div>
         <nav>
             <div class="goback">
-                <img src="./assets/images/icons8-forward-52.png" alt="">
                 <span>Back</span>
+                <img src="./assets/images/icons8-forward-52.png" alt="">
             </div>
             <ul>
                 <li class="parent-nav">
@@ -128,14 +128,14 @@
     let nav = document.querySelector('nav');
     let goback = document.querySelector('.goback');
     goback.addEventListener('click', () => {
-        nav.style.right = "-100%";
+        nav.style.left = "-100%";
     })
     hambergMenu.addEventListener('click', e => {
-        nav.style.right = "0%"
+        nav.style.left = "0%"
     })
     window.addEventListener('click', e => {
-        if (e.clientX < (screen.width - 200)) {
-            nav.style.right = "-100%"
+        if (e.x > 230) {
+            nav.style.left = "-100%"
         }
     })
 </script>

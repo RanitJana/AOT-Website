@@ -63,7 +63,7 @@
         position: fixed;
         overflow-y: scroll;
         top: 0;
-        right: -100%;
+        left: -100%;
         width: 285px;
         height: 100%;
         background-color: white;
@@ -78,7 +78,7 @@
     }
 
     nav ul {
-        padding: 1rem 0.5rem 1rem 1rem;
+        padding: 1rem;
     }
 
     .parent-nav>.section {
@@ -97,13 +97,11 @@
         margin-right: 1rem;
         border-bottom: 0.1rem solid gray
     }
-
     .parent-nav2>ul>li {
         width: 100%;
         border-left: 1px solid gray;
-        width: 100%;
+        width: 110%;
         list-style: circle;
-        margin-top: 0%;
     }
 
     .parent-nav,
@@ -142,11 +140,13 @@
     .goback img {
         display: flex;
     }
-
+    nav{
+        position: relative;
+    }
     .goback {
         position: relative;
         top: 0;
-        left: 0;
+        left: 55%;
         transform: translate(-90%, 50%);
         display: flex;
         height: fit-content;
