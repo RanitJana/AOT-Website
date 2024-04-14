@@ -4,6 +4,19 @@
     }
 }
 
+@media screen and (min-width: 832px) and (max-width: 1100px) {
+    .banner .middle span{
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .banner .right .search{
+        display: grid;
+        grid-template-columns: 5fr 1fr;    
+    }
+}
+
 @media only screen and (max-width:832px) {
     .banner {
         margin-top: 2rem;
