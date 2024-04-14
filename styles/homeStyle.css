@@ -98,7 +98,7 @@ nav {
     padding: 0.5rem 1rem;
     border-radius: 6px;
     margin-bottom: 1rem;
-    color: white;
+    color: var(--aot-light-color--);
     background-color: var(--aot-color--);
     display: none;
 }
@@ -111,7 +111,7 @@ nav {
 }
 
 .goback:active {
-    background-color: #161c43;
+    background-color: var(--aot-dark-color--);
 }
 
 nav ul {
@@ -160,7 +160,7 @@ nav>ul {
 .parent-nav2>ul>li {
     position: relative;
     padding: 0.5rem 1rem;
-    background-color: white;
+    background-color: var(--aot-light-color--);
 }
 
 .parent-nav2>ul {
