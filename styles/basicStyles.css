@@ -15,4 +15,5 @@ body {
 :root {
     --button-radius--: 5px;
     --aot-color--: #232C69;
+    --aot-dark-color--:#161c43;
 }
