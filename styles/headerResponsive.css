@@ -178,7 +178,8 @@
         height: fit-content;
         z-index: 111;
     }
-    .parent-nav2 img{
+
+    .parent-nav2 ul img {
         display: flex;
     }
 }
