@@ -1,2 +1,151 @@
 @import url('./basicStyles.css');
 
+
+.dept-hamberg-menu {
+    padding: 0.3rem;
+    border-radius: 50%;
+    width: 2.2rem;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 20%;
+    right: 4%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    z-index: 10;
+}
+
+.dept-hamberg-menu  .stick {
+    width: 100%;
+    height: 3.1px;
+    background-color: black;
+    border-radius: var(--button-radius--);
+}
+
+
+
+
+@media only screen and (max-width:840px) {
+    .banner .right {
+        display: none;
+    }
+
+    .banner {
+        flex-direction: column;
+        padding-top: 0;
+    }
+
+    .dept-hamberg-menu {
+        display: flex;
+    }
+
+    main nav {
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.195);
+        transition: all 0.5s ease;
+        position: fixed;
+        overflow-y: scroll;
+        top: 0;
+        right: -100%;
+        width: 285px;
+        height: 100%;
+        background-color: white;
+    }
+
+    main nav>ul {
+        margin-top: 4rem;
+        box-shadow: none;
+        height: fit-content;
+        position: absolute;
+        flex-direction: column;
+    }
+
+    nav ul {
+        padding: 1rem;
+    }
+
+    .parent-nav>.section {
+        background-color: rgba(128, 128, 128, 0.094);
+        border-bottom: 0.3rem solid var(--aot-color--);
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 2rem;
+        font-size: larger;
+    }
+
+    .parent-nav>ul>li {
+        list-style: decimal;
+        width: 100%;
+        margin-left: 2rem;
+        margin-right: 1rem;
+        border-bottom: 0.1rem solid gray;
+    }
+
+    .parent-nav2>ul li {
+        width: 110%;
+        list-style: circle;
+    }
+
+    .parent-nav2>ul>* {
+        border-bottom: 1px dotted gray;
+    }
+
+    .parent-nav2>ul>*:first-child {
+        margin-top: -10%;
+    }
+
+    .parent-nav,
+    .parent-nav>ul {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .parent-nav>.section,
+    .parent-nav2>.section {
+        position: relative;
+        width: 100%;
+        display: flex;
+        height: 3rem;
+    }
+
+
+    .parent-nav>ul,
+    .parent-nav2>ul {
+        position: relative;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: none;
+    }
+
+    nav img {
+        display: none;
+    }
+
+    .goback img {
+        display: flex;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    .goback {
+        position: relative;
+        top: 0;
+        left: 0%;
+        transform: translate(-90%, 50%);
+        display: flex;
+        height: fit-content;
+        z-index: 111;
+    }
+    .parent-nav2 img{
+        display: flex;
+    }
+}
