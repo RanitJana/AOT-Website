@@ -1,0 +1,2 @@
+1. bulletin element's info should be present here.
+2. pic name and file name should be same.
