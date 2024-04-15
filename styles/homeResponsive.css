@@ -112,14 +112,20 @@
         width: 100%;
         margin-left: 2rem;
         margin-right: 1rem;
-        border-bottom: 0.1rem solid gray
+        border-bottom: 0.1rem solid gray;
     }
 
-    .parent-nav2>ul>li {
-        width: 100%;
-        border-left: 1px solid gray;
+    .parent-nav2>ul li {
         width: 110%;
         list-style: circle;
+    }
+
+    .parent-nav2>ul>* {
+        border-bottom: 1px dotted gray;
+    }
+
+    .parent-nav2>ul>*:first-child {
+        margin-top: -10%;
     }
 
     .parent-nav,

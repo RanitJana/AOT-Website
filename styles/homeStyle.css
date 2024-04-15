@@ -1,5 +1,8 @@
 @import url('./basicStyles.css');
 
+* {
+    user-select: none;
+}
 
 header {
     display: flex;
@@ -94,7 +97,9 @@ nav {
 nav a {
     text-decoration: none;
     color: black;
-    background-color: aqua;
+}
+.parent-nav2 a{
+    padding-right: 5.5rem;
 }
 
 .goback {
@@ -163,8 +168,7 @@ nav>ul {
 }
 
 .parent-nav>ul>li,
-.parent-nav2>ul>li,
-.parent-nav2>ul>a {
+.parent-nav2>ul>li {
     position: relative;
     padding: 0.5rem 1rem;
     background-color: var(--aot-light-color--);
