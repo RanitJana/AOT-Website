@@ -178,6 +178,9 @@
         height: fit-content;
         z-index: 111;
     }
+    .parent-nav2 img{
+        display: flex;
+    }
 }
 
 @media only screen and (max-width:457px) {

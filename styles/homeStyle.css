@@ -98,8 +98,21 @@ nav a {
     text-decoration: none;
     color: black;
 }
-.parent-nav2 a{
+
+.parent-nav2 a {
     padding-right: 5.5rem;
+}
+
+.parent-nav2 img {
+    margin-left: 0.5rem;
+    width: 1rem;
+    aspect-ratio: 1;
+}
+
+.parent-nav2 ul>li>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .goback {
