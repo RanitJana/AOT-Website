@@ -1,12 +1,10 @@
 @import url('./basicStyles.css');
-*{
-    overflow-x: hidden;
-}
+
+
+
 .sec1{
-    /* background-color: aqua;     */
     display: grid;
     padding: 1rem;
-    /* grid-template-columns: 2; */
     grid-template-areas: 
     'news news notice'
     'event event notice'
@@ -18,7 +16,6 @@
 .news{
     padding: 1rem;
     grid-area: news;
-    /* background-color: aquamarine; */
     border: 2px solid var(--aot-color--);
     border-radius: 5px;
     color: var(--aot-dark-color--);
@@ -32,31 +29,26 @@ p,h1{
 .event{
     padding: 1rem;
     grid-area: event;
-    /* background-color: beige; */
     border: 2px solid var(--aot-color--);
     border-radius: 5px;
 }
 .map{
     padding: 1rem;
     grid-area: map;
-    /* background-color: blue; */
     border: 2px solid var(--aot-color--);
     border-radius: 5px;
 }
 .notice{
     padding: 1rem;
     grid-area: notice;
-    /* background-color: yellowgreen; */
     border: 2px solid var(--aot-color--);
     border-radius: 5px;
 }
 
 @media  (max-width:500px) {
     .sec1{
-        /* background-color: aqua;     */
         display: grid;
         padding: 1rem;
-        /* grid-template-columns: 2; */
         grid-template-areas: 
         'news notice'
         'event notice'
@@ -67,10 +59,8 @@ p,h1{
 
 @media (max-width:700px) {
     .sec1{
-        /* background-color: aqua;     */
         display: grid;
         padding: 1rem;
-        /* grid-template-columns: 2; */
         grid-template-areas: 
         'news' 
         'event'
