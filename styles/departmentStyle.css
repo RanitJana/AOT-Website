@@ -1,5 +1,7 @@
 @import url('./basicStyles.css');
-
+*{
+    overflow-x: hidden;
+}
 .sec1{
     /* background-color: aqua;     */
     display: grid;
@@ -10,6 +12,7 @@
     'event event notice'
     'map map notice';
     grid-gap: 1rem;
+    
 }
 
 .news{
@@ -46,4 +49,33 @@ p,h1{
     /* background-color: yellowgreen; */
     border: 2px solid var(--aot-color--);
     border-radius: 5px;
+}
+
+@media  (max-width:500px) {
+    .sec1{
+        /* background-color: aqua;     */
+        display: grid;
+        padding: 1rem;
+        /* grid-template-columns: 2; */
+        grid-template-areas: 
+        'news notice'
+        'event notice'
+        'map notice';
+        grid-gap: 1rem;
+    }
+}
+
+@media (max-width:700px) {
+    .sec1{
+        /* background-color: aqua;     */
+        display: grid;
+        padding: 1rem;
+        /* grid-template-columns: 2; */
+        grid-template-areas: 
+        'news' 
+        'event'
+        'notice'
+        'map';
+        grid-gap: 1rem;
+    }
 }
