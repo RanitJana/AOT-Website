@@ -5,7 +5,7 @@ let blackCover = document.querySelector('.black-cover');
 let first = document.querySelector('.first');
 let eventInfo;
 let idx = 0;
-let idxImg = 1;
+let idxImg = 5;
 let refInterval;
 let images = ['../assets/bulletinImage/first.jpeg', '../assets/bulletinImage/second.jpeg', '../assets/bulletinImage/third.jpeg', '../assets/bulletinImage/fourth.jpeg', '../assets/bulletinImage/fifth.jpeg', '../assets/bulletinImage/sixth.jpeg', '../assets/bulletinImage/seventh.jpeg', '../assets/bulletinImage/eighth.jpeg', '../assets/bulletinImage/ninth.jpeg'];
 
