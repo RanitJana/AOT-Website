@@ -1,13 +1,13 @@
 // bulletin section
 let heading = document.querySelector('#bulletin h2');
 let para = document.querySelector('#bulletin p');
+let blackCover = document.querySelector('.black-cover');
 let first = document.querySelector('.first');
 let eventInfo;
 let idx = 0;
 let idxImg = 1;
 let refInterval;
 let images = ['../assets/bulletinImage/first.jpeg', '../assets/bulletinImage/second.jpeg', '../assets/bulletinImage/third.jpeg', '../assets/bulletinImage/fourth.jpeg', '../assets/bulletinImage/fifth.jpeg', '../assets/bulletinImage/sixth.jpeg', '../assets/bulletinImage/seventh.jpeg', '../assets/bulletinImage/eighth.jpeg', '../assets/bulletinImage/ninth.jpeg'];
-
 
 
 
@@ -39,6 +39,7 @@ let calInterval = () => {
         first.style.backgroundImage = `url('${images[idxImg]}')`;
         idxImg++;
         if (idxImg > images.length - 1) idxImg = 0;
+        blackCover.style.backgroundImage = `url('${images[idxImg]}')`;
     }, 3000);
 }
 
@@ -72,10 +73,11 @@ nArrow.addEventListener('click', e => {
     idx++;
     if (idx >= eventInfo.length) idx = 0;
     const data = eventInfo[idx];
+    creation(data.heading, data.content);
+    first.style.backgroundImage = `url('${images[idxImg]}')`;
     idxImg++;
     if (idxImg > images.length - 1) idxImg = 0;
-    first.style.backgroundImage = `url('${images[idxImg]}')`;
-    creation(data.heading, data.content);
+    blackCover.style.backgroundImage = `url('${images[idxImg]}')`;
     clearInterval(refInterval);
     calInterval();
 })
@@ -83,10 +85,11 @@ pArrow.addEventListener('click', e => {
     idx--;
     if (idx < 0) idx = eventInfo.length - 1;
     const data = eventInfo[idx];
+    creation(data.heading, data.content);
+    first.style.backgroundImage = `url('${images[idxImg]}')`;
     idxImg--;
     if (idxImg < 0) idxImg = images.length - 1;
-    first.style.backgroundImage = `url('${images[idxImg]}')`;
-    creation(data.heading, data.content);
+    blackCover.style.backgroundImage = `url('${images[idxImg]}')`;
     clearInterval(refInterval);
     calInterval();
 })

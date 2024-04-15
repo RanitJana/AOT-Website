@@ -26,7 +26,8 @@
 
 .ticker-heading {
     position: absolute;
-    background: #A6C22F;
+    /* background: #A6C22F; */
+    background-color: var(--aot-color--);
     display: block;
     left: 0;
     top: 0;
@@ -55,7 +56,7 @@
     height: 0;
     border-top: 8px solid transparent;
     border-bottom: 8px solid transparent;
-    border-left: 11px solid #A6C22F;
+    border-left: 11px solid var(--aot-color--);
     position: absolute;
     margin-left: 40px;
 }
