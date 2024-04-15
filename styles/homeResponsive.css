@@ -4,8 +4,28 @@
     }
 }
 
+@media only screen and (max-width:1018px) {
+    #bulletin {
+        zoom: 0.8;
+    }
+}
+
 @media only screen and (max-width:832px) {
-    main>.content{
+    main>.content {
         grid-template-columns: auto;
+    }
+
+    #bulletin {
+        zoom: 0.8;
+    }
+
+    #bulletin h2 {
+        zoom: 0.7;
+    }
+}
+
+@media only screen and (max-width:394px) {
+    #bulletin {
+        zoom: 0.6;
     }
 }

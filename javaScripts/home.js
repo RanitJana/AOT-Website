@@ -8,7 +8,9 @@ const creation = function (head, text) {
     heading.innerHTML = `${head}`;
     para.innerHTML = `${text}`;
 };
-
+images.forEach(val=>{
+    console.log(val);
+})
 let idx = 0;
 let idxImg = 1;
 let refInterval;
