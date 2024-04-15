@@ -80,3 +80,9 @@ h1 {
         grid-gap: 1rem;
     }
 }
+
+@media only screen and (max-width:1100px) {
+    body>* {
+        zoom: 0.8;
+    }
+}
