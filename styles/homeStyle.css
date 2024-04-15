@@ -14,8 +14,9 @@ main>.content section div a {
 }
 
 main>.content>.first {
+    min-height: 500px;
     border-radius: 8px;
-    padding: 1rem 2rem;
+    padding: 1rem 3rem;
     background-color: var(--aot-light-color--);
     display: flex;
     justify-content: center;
@@ -36,6 +37,8 @@ main>.content>.first {
     padding: 1rem;
     transform: translateY(-50%);
     width: 1rem;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 .next-arrow {
@@ -49,6 +52,8 @@ main>.content>.first {
     padding: 1rem;
     transform: translateY(-50%);
     width: 1rem;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
 
 .prev-arrow img,
@@ -59,6 +64,17 @@ main>.content>.first {
 
 .prev-arrow img {
     transform: rotate(180deg);
+}
+
+.prev-arrow:hover,
+.next-arrow:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.618);
+}
+
+.prev-arrow:active img,
+.next-arrow:active img {
+    filter: invert(100%);
 }
 
 main>.content .second {
@@ -95,9 +111,11 @@ main>.content .second>.content {
 main>.content .second>.content .sub-content {
     position: absolute;
     top: 0;
+    width: 100%;
 }
 
 .sub-content>div {
+    width: 100%;
     border-bottom: 1px solid gray;
-    padding: 1rem 0;
+    padding: 1rem;
 }
