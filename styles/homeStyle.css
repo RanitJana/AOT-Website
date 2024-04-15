@@ -66,9 +66,13 @@ main>.content>.first {
     transform: rotate(180deg);
 }
 
+.prev-arrow:hover,
+.next-arrow:hover {
+    cursor: pointer;
+}
+
 .prev-arrow:active,
 .next-arrow:active {
-    cursor: pointer;
     background-color: rgba(0, 0, 0, 0.618);
 }
 
