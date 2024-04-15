@@ -90,7 +90,10 @@ nav {
     top: 0;
     z-index: 100;
 }
-
+nav li a{
+    text-decoration: none;
+    color: black;
+}
 .goback {
     display: flex;
     justify-content: center;
