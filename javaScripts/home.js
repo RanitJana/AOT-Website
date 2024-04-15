@@ -8,16 +8,11 @@ let idx = 0;
 let idxImg = 5;
 let refInterval;
 let images = ['../assets/bulletinImage/first.jpeg', '../assets/bulletinImage/second.jpeg', '../assets/bulletinImage/third.jpeg', '../assets/bulletinImage/fourth.jpeg', '../assets/bulletinImage/fifth.jpeg', '../assets/bulletinImage/sixth.jpeg', '../assets/bulletinImage/seventh.jpeg', '../assets/bulletinImage/eighth.jpeg', '../assets/bulletinImage/ninth.jpeg'];
-
-
-
 //functions
 const creation = function (head, text) {
     heading.innerHTML = `${head}`;
     para.innerHTML = `${text}`;
 };
-
-
 async function getData() {
     let res = await fetch('../assets/bulletinInfo/bulletinInfo.json');
     let text = await res.json();
@@ -29,7 +24,6 @@ getData().then(() => {
     creation(data.heading, data.content);
     idx++;
 });
-
 let calInterval = () => {
     refInterval = setInterval(() => {
         const data = eventInfo[idx];
@@ -42,7 +36,6 @@ let calInterval = () => {
         blackCover.style.backgroundImage = `url('${images[idxImg]}')`;
     }, 3000);
 }
-
 function imageLoaded(src, alt = '') {
     return new Promise((resolve) => {
         const image = document.createElement('img');
@@ -51,12 +44,10 @@ function imageLoaded(src, alt = '') {
         image.addEventListener('load', () => resolve(image));
     });
 }
-
 async function preloadImages(images) {
     const promises = images.map(imageLoaded);
     return await Promise.all(promises);
 }
-
 //preload images
 preloadImages(images)
     .then((image) => {
@@ -66,8 +57,6 @@ preloadImages(images)
         console.error("Failed to preload images:", error);
     });
 let pArrow = document.querySelector('.prev-arrow'), nArrow = document.querySelector('.next-arrow');
-
-
 //events
 nArrow.addEventListener('click', e => {
     idx++;

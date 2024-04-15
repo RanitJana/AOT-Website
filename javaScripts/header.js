@@ -9,7 +9,7 @@ hambergMenu.addEventListener('click', e => {
     nav.style.right = "0%"
 })
 window.addEventListener('click', e => {
-    if (e.x < screen.width - 285) {
+    if (e.x < screen.width - 225) {
         nav.style.right = "-100%"
     }
 })
