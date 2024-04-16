@@ -33,7 +33,7 @@
         'event event notice'
         'map map notice';
     grid-gap: 1rem;
-
+    font-size: 1rem;
 }
 
 .news {
