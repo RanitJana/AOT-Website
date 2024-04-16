@@ -61,7 +61,8 @@
     margin-left: 40px;
 }
 
-main {
+.brakingNews {
+    width: 100%;
     overflow-x: hidden;
 }
 
