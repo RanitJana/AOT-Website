@@ -29,11 +29,12 @@ main>.content>.first {
 
 .first {
     position: absolute;
+    overflow: hidden;
     top: 0px;
     left: 0px;
     width: 100%;
     height: 100%;
-    background: url('../assets/bulletinImage/sixth.jpeg');
+    background: url('../assets/bulletinImage/first.jpeg');
     border-radius: 8px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -46,13 +47,17 @@ main>.content>.first {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../assets/bulletinImage/sixth.jpeg') rgba(0, 0, 0, 0.500);
+    background: url('../assets/bulletinImage/first.jpeg')rgba(0, 0, 0, 0.500);
     border-radius: 8px;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
     filter: brightness(50%);
     z-index: 1;
+    overflow: hidden;
+}
+
+.newsBox {
+    transition: all 0.3s ease;
 }
 
 #bulletin {
@@ -66,6 +71,19 @@ main>.content>.first {
     z-index: 5;
     font-size: 5rem;
     text-wrap: pretty;
+    animation: move1 1s ease forwards;
+}
+
+@keyframes move1 {
+    0% {
+        left: -100%;
+        color: transparent;
+    }
+
+    100% {
+        left: 4%;
+        color: white;
+    }
 }
 
 #bulletin p {
@@ -79,13 +97,26 @@ main>.content>.first {
     line-height: 2.1rem;
     text-align: left;
     text-wrap: pretty;
+    animation: move2 1s ease forwards;
+}
+
+@keyframes move2 {
+    0% {
+        left: 100%;
+        color: transparent;
+    }
+
+    100% {
+        left: 4%;
+        color: white;
+    }
 }
 
 .prev-arrow {
     position: absolute;
     left: 0;
     top: 50%;
-    background-color: rgba(255, 255, 255, 0.633);
+    background-color: rgba(255, 255, 255, 0.313);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,7 +132,7 @@ main>.content>.first {
     position: absolute;
     right: 0;
     top: 50%;
-    background-color: rgba(255, 255, 255, 0.633);
+    background-color: rgba(255, 255, 255, 0.313);
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,17 +1,21 @@
-// bulletin section
-let heading = document.querySelector('#bulletin h2');
-let para = document.querySelector('#bulletin p');
-let blackCover = document.querySelector('.black-cover');
-let first = document.querySelector('.first');
-let eventInfo;
-let idx = 0;
-let idxImg = 5;
-let refInterval;
-let images = ['../assets/bulletinImage/first.jpeg', '../assets/bulletinImage/second.jpeg', '../assets/bulletinImage/third.jpeg', '../assets/bulletinImage/fourth.jpeg', '../assets/bulletinImage/fifth.jpeg', '../assets/bulletinImage/sixth.jpeg', '../assets/bulletinImage/seventh.jpeg', '../assets/bulletinImage/eighth.jpeg', '../assets/bulletinImage/ninth.jpeg'];
+// // bulletin section
+let first = document.querySelector('.first'),
+    newsBox = document.querySelector('.newsBox'),
+    blackCover = document.querySelector('.black-cover'),
+    eventInfo,
+    idx = 0,
+    idxImg = 5,
+    refInterval,
+    images = ['../assets/bulletinImage/first.jpeg', '../assets/bulletinImage/second.jpeg', '../assets/bulletinImage/third.jpeg', '../assets/bulletinImage/fourth.jpeg', '../assets/bulletinImage/fifth.jpeg', '../assets/bulletinImage/sixth.jpeg', '../assets/bulletinImage/seventh.jpeg', '../assets/bulletinImage/eighth.jpeg', '../assets/bulletinImage/ninth.jpeg'];
 //functions
 const creation = function (head, text) {
-    heading.innerHTML = `${head}`;
-    para.innerHTML = `${text}`;
+    newsBox.innerHTML =
+        `
+    <a href="" id="bulletin">
+        <h2>${head}</h2>
+        <P>${text}</P>
+    </a>
+    `;
 };
 async function getData() {
     let res = await fetch('../assets/bulletinInfo/bulletinInfo.json');
@@ -34,7 +38,7 @@ let calInterval = () => {
         idxImg++;
         if (idxImg > images.length - 1) idxImg = 0;
         blackCover.style.backgroundImage = `url('${images[idxImg]}')`;
-    }, 3000);
+    }, 4000);
 }
 function imageLoaded(src, alt = '') {
     return new Promise((resolve) => {
