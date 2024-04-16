@@ -182,9 +182,15 @@ main>.content .second {
 }
 
 main>.content .second>h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--aot-color--);
 }
-
+main>.content .second >h2> img{
+    width: 13%;
+    margin: 0 0.3rem;
+}
 main>.content .second>.content {
     width: 100%;
     height: 500px;
