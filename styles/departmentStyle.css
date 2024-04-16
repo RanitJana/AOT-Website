@@ -1,12 +1,20 @@
 @import url('./basicStyles.css');
 
-.parent-nav>a {
+
+
+#go-to-home .section{
     display: flex;
     width: 100%;
     height: 100%;
-    justify-content: center;
-    align-items: center;
 }
+#go-to-home .section a{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    padding: 0.4em 0;
+}
+
 
 .sec1 {
     display: grid;

@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+
+/* footer */
+
+footer{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.footerContainer{
+    width: 100%;
+    background-color: var(--aot-dark-color--);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 0.2em 0;
+}
+
+.footerTalk{
+    font-size: 0.8em;
+}
+.footerTalk p{
+    text-align: center;
+}
+
+
+.footerSocialMediaLinks{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerSocialMediaLinks a{
+    padding: 0px 7px;
+}
+.footerSocialMediaLinks a i{
+    font-size: 1.3em;
+    color: white;
+}
