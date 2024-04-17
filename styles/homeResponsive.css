@@ -10,11 +10,17 @@
     }
 }
 
-@media only screen and (max-width:832px) {
+@media only screen and (max-width:949px) {
     main>.content {
         grid-template-columns: auto;
     }
-
+    main>.content .second>.content{
+        max-height: 20rem;
+    }
+    main>.content .first{
+        max-height: fit-content;
+        min-height: 25rem;
+    }
     #bulletin {
         zoom: 0.8;
     }
@@ -32,7 +38,11 @@
         border-radius: 0px;
     }
 }
-
+@media only screen and (max-width:4226px){
+    .loadingPage img{
+        scale: 0.8;
+    }
+}
 @media only screen and (max-width:394px) {
     #bulletin {
         zoom: 0.6;

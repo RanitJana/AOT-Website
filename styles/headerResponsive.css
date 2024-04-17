@@ -72,6 +72,11 @@
 
     .hamberg-menu {
         display: flex;
+        z-index: 12;
+    }
+
+    .hamberg-menu:hover {
+        cursor: pointer;
     }
 
     main nav {

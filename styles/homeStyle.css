@@ -1,5 +1,34 @@
 @import url('./basicStyles.css');
 
+body {
+    position: relative;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+.loadingPage {
+    width: 100%;
+    height: 100dvh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    z-index: 200;
+    transition: all 1s;
+
+
+    color: white;
+    font-size: 5rem;
+}
+
+.loadingPage img {
+    transition: all 1s;
+    filter: invert(100%);
+    transform: translateX(-5%);
+}
 
 main>.content {
     margin: 2rem 0;
@@ -187,10 +216,12 @@ main>.content .second>h2 {
     align-items: center;
     color: var(--aot-color--);
 }
-main>.content .second >h2> img{
+
+main>.content .second>h2>img {
     width: 13%;
     margin: 0 0.3rem;
 }
+
 main>.content .second>.content {
     width: 100%;
     height: 500px;
@@ -214,10 +245,16 @@ main>.content .second>.content .sub-content {
 }
 
 .sub-content>div {
+    text-wrap: pretty;
     width: 100%;
     border-bottom: 1px solid gray;
-    padding: 0.3rem 1rem;
+    padding: 1rem;
     line-height: 1.5rem;
+}
+
+.updateBox a:hover {
+    text-decoration: underline;
+    color: purple;
 }
 
 .seeMore {
