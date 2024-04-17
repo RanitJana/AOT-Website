@@ -1,0 +1,108 @@
+.rules{
+    grid-area: rules;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    background: var(--aot-light-color--);
+    border: 2px solid var(--aot-dark-color--);
+    border-radius: 5px;
+}
+
+.book{
+    grid-area: book;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    background: var(--aot-light-color--);
+    border: 2px solid var(--aot-dark-color--);
+    border-radius: 5px;
+}
+
+h1,span{
+    color: var(--aot-dark-color--);
+    /* color: red; */
+}
+.image{
+    grid-area: image;
+    padding: 1rem;
+    background: var(--aot-light-color--);
+    border-radius: 5px;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+
+.parent{
+    /* height: 70%;
+    width: 100%; */
+    margin: 1rem;
+    display: grid;
+    grid-template-areas: 
+    'rules'
+    'book'
+    'image';
+    gap: 2em;
+}
+
+.member{
+    display: flex;
+
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+th{
+    color: #fff;
+    padding-right: 5rem;
+    padding-left: 5rem;
+    background: var(--aot-dark-color--);
+}
+td{
+    padding-left: 5px;
+    background: var(--aot-light-color--);
+}
+
+@media (min-width:550px){
+    .parent {
+        display: grid;
+        gap: 0.5rem;
+        grid-template-areas:
+            'rules  rules'
+            'book image';
+    }
+    .image{
+        padding: 5px;
+    }
+}
+
+@media (min-width:850px){
+    .parent {
+        display: grid;
+        gap: 0.5rem;
+        grid-template-areas:
+        'rules image'
+        'rules book';
+    }
+    .image{
+        padding: 5px;
+    }
+}
+
+@media (min-width:1150px){
+    .parent {
+        display: grid;
+        gap: 0.5rem;
+        grid-template-areas:
+        'rules image'
+        'book book';
+    }
+    .image{
+        padding: 5px;
+    }
+}
