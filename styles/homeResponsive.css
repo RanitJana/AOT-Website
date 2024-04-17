@@ -34,10 +34,10 @@
 }
 
 @media only screen and (max-width:572px) {
-    nav ul>.search {
+
+    nav .search {
         display: block;
     }
-
     main>.content {
         padding: 0;
     }

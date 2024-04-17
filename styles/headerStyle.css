@@ -115,13 +115,21 @@ nav a {
     align-items: center;
 }
 
+.parentGoback {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .goback {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0.5rem 1rem;
     border-radius: 6px;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     color: var(--aot-light-color--);
     background-color: var(--aot-color--);
     display: none;
@@ -138,14 +146,14 @@ nav a {
     background-color: var(--aot-dark-color--);
 }
 
-nav ul>.search {
+nav .search {
     position: relative;
     width: 100%;
     align-self: flex-start;
     margin: 0.5rem 0 1rem 0;
 }
 
-nav ul>.search input {
+nav .search input {
     outline: none;
     font-size: medium;
     border-radius: 20px;
@@ -155,14 +163,14 @@ nav ul>.search input {
     padding-right: 3rem;
 }
 
-nav ul>.search img {
+nav .search img {
     position: absolute;
     right: 5%;
     top: 50%;
     transform: translateY(-50%);
 }
 
-nav ul>.search {
+nav .search {
     display: none;
 }
 
