@@ -3,9 +3,11 @@
 body {
     position: relative;
 }
-body::-webkit-scrollbar{
+
+body::-webkit-scrollbar {
     display: none;
 }
+
 .loadingPage {
     width: 100%;
     height: 100dvh;

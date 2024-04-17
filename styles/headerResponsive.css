@@ -34,8 +34,6 @@
     }
 }
 
-@media only screen and (max-width:739px) {}
-
 @media only screen and (min-width:570px) {
 
     .parent-nav:hover>ul,
@@ -162,7 +160,7 @@
         box-shadow: none;
     }
 
-    nav img {
+    nav li img {
         display: none;
     }
 
