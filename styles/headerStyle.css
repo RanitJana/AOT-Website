@@ -121,6 +121,8 @@ nav a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: aqua;
+    margin: 0 1rem;
 }
 
 .goback {
