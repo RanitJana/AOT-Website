@@ -82,7 +82,7 @@ header {
     background-color: var(--aot-dark-color--);
 }
 
-main{
+main {
     position: relative;
 }
 
@@ -140,6 +140,34 @@ nav a {
 
 .goback:active {
     background-color: var(--aot-dark-color--);
+}
+
+nav ul>.search {
+    position: relative;
+    width: 100%;
+    align-self: flex-start;
+    margin: 0.5rem 0 1rem 0;
+}
+
+nav ul>.search input {
+    outline: none;
+    font-size: medium;
+    border-radius: 20px;
+    width: 100%;
+    border: 1px solid gray;
+    padding: 0.5rem 1rem;
+    padding-right: 3rem;
+}
+
+nav ul>.search img {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+nav ul>.search {
+    display: none;
 }
 
 nav ul {

@@ -72,7 +72,12 @@
     .hamberg-menu {
         display: flex;
     }
-
+    nav ul>.search {
+        display:  block;
+    }
+    nav ul>.search img{
+        display: block;
+    }
     main nav {
         box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.195);
         transition: all 0.5s ease;
