@@ -117,7 +117,6 @@ if (!sessionStorage.getItem('loadingPage')) {
 else {
     body.style.overflow = "auto";
     loadingPage.style.display = "none";
-    sessionStorage.removeItem('loadingPage');
     imageSlider();
     announceSeeMore();
 }
