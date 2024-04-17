@@ -29,7 +29,8 @@
     border-bottom: 8px solid transparent;
     border-left: 11px solid var(--aot-color--);
     position: absolute;
-    margin-left: 10.8rem;
+    right: 0;
+    transform: translateX(100%);
 }
 
 .ticker-wrap .ticker__item:before {
