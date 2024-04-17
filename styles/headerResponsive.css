@@ -11,8 +11,6 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        margin-top: 3rem;
-        padding-top: 3.5rem;
     }
 
     .banner .middle {
@@ -21,12 +19,15 @@
         align-items: center;
         flex-direction: column;
         text-align: center;
+        text-wrap: nowrap;
     }
 
     .banner .right {
-        position: absolute;
-        top: 0%;
-        right: 5%;
+        width: 50%;
+        margin-top: 1rem;
+    }
+    .banner .right img{
+        transform: translate(-30%,-50%);
     }
 
     .banner h1 {
@@ -188,8 +189,10 @@
 }
 
 @media only screen and (max-width:457px) {
-    .banner .middle {
-        width: 120dvw;
+    .banner {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
