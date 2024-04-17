@@ -1,13 +1,13 @@
+let first = document.querySelector('.first'),
+    newsBox = document.querySelector('.newsBox'),
+    blackCover = document.querySelector('.black-cover'),
+    eventInfo,
+    idx = 0,
+    idxImg = 5,
+    refInterval,
+    images = ['../assets/bulletinImage/first.webp', '../assets/bulletinImage/second.webp', '../assets/bulletinImage/third.webp', '../assets/bulletinImage/fourth.webp', '../assets/bulletinImage/fifth.webp', '../assets/bulletinImage/sixth.webp', '../assets/bulletinImage/seventh.webp', '../assets/bulletinImage/eighth.webp', '../assets/bulletinImage/ninth.webp'];
 function imageSlider() {
     // // bulletin section
-    let first = document.querySelector('.first'),
-        newsBox = document.querySelector('.newsBox'),
-        blackCover = document.querySelector('.black-cover'),
-        eventInfo,
-        idx = 0,
-        idxImg = 5,
-        refInterval,
-        images = ['../assets/bulletinImage/first.jpeg', '../assets/bulletinImage/second.jpeg', '../assets/bulletinImage/third.jpeg', '../assets/bulletinImage/fourth.jpeg', '../assets/bulletinImage/fifth.jpeg', '../assets/bulletinImage/sixth.jpeg', '../assets/bulletinImage/seventh.jpeg', '../assets/bulletinImage/eighth.jpeg', '../assets/bulletinImage/ninth.jpeg'];
     //functions
     const creation = function (head, text) {
         newsBox.innerHTML =
