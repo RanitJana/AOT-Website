@@ -8,9 +8,7 @@ let first = document.querySelector('.first'),
     idxImg = 5,
     refInterval,
     images = ['../assets/bulletinImage/first.webp', '../assets/bulletinImage/second.webp', '../assets/bulletinImage/third.webp', '../assets/bulletinImage/fourth.webp', '../assets/bulletinImage/fifth.webp', '../assets/bulletinImage/sixth.webp', '../assets/bulletinImage/seventh.webp', '../assets/bulletinImage/eighth.webp', '../assets/bulletinImage/ninth.webp'];
-
 let pArrow = document.querySelector('.prev-arrow'), nArrow = document.querySelector('.next-arrow');
-// // bulletin section
 //functions
 const creation = function (head, text) {
     newsBox.innerHTML =
@@ -27,6 +25,11 @@ async function getData() {
     eventInfo = text;
     console.log(eventInfo);
 };
+getData().then(() => {
+    const data = eventInfo[idx];
+    creation(data.heading, data.content);
+    idx++;
+});
 
 let calInterval = () => {
     refInterval = setInterval(() => {
@@ -52,6 +55,8 @@ async function preloadImages(images) {
     const promises = images.map(imageLoaded);
     return await Promise.all(promises);
 }
+
+
 //events
 nArrow.addEventListener('click', e => {
     idx++;
@@ -90,18 +95,6 @@ function announceSeeMore() {
 //main content
 body.style.overflow = "hidden";
 if (!sessionStorage.getItem('loadingPage')) {
-    preloadImages(images)
-        .then((image) => {
-            calInterval();
-        })
-        .catch((error) => {
-            console.error("Failed to preload images:", error);
-        });
-    getData().then(() => {
-        const data = eventInfo[idx];
-        creation(data.heading, data.content);
-        idx++;
-    });
     sessionStorage.setItem('loadingPage', 'true');
     setTimeout(() => {
         loadingPage.style.scale = "40";
@@ -117,5 +110,11 @@ else {
     body.style.overflow = "auto";
     loadingPage.style.display = "none";
 }
-imageSlider();
+preloadImages(images)
+    .then((image) => {
+        calInterval();
+    })
+    .catch((error) => {
+        console.error("Failed to preload images:", error);
+    });
 announceSeeMore();
