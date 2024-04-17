@@ -34,10 +34,10 @@ function imageSlider() {
     });
     let calInterval = () => {
         refInterval = setInterval(() => {
-            const data = eventInfo[idx];
-            creation(data.heading, data.content);
             idx++;
             if (idx >= eventInfo.length) idx = 0;
+            const data = eventInfo[idx];
+            creation(data.heading, data.content);
             first.style.backgroundImage = `url('${images[idxImg]}')`;
             idxImg++;
             if (idxImg > images.length - 1) idxImg = 0;
