@@ -37,9 +37,9 @@ footer{
 }
 
 .footerSocialMediaLinks a{
-    padding: 0px 7px;
+    padding: 0px 0.25em;
 }
-.footerSocialMediaLinks a i{
-    font-size: 1.3em;
-    color: white;
+.footerSocialMediaLinks a img{
+    width: 1.5em;
 }
+
