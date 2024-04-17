@@ -110,13 +110,11 @@ if (!sessionStorage.getItem('loadingPage')) {
             loadingPage.style.zIndex = "-10";
             body.style.overflow = "auto";
         }, 1000);
-        imageSlider();
-        announceSeeMore();
     }, 2000);
 }
 else {
     body.style.overflow = "auto";
     loadingPage.style.display = "none";
-    imageSlider();
-    announceSeeMore();
 }
+imageSlider();
+announceSeeMore();
