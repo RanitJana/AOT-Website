@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
-
+@font-face {
+    font-family: "Mukta";
+    src: url('../assets/fonts/Mukta-Regular.woff');
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Mukta", sans-serif;
+    font-family: "Mukta";
 }
 
 body {
