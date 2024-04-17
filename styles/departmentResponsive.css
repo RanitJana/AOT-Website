@@ -52,6 +52,11 @@
         background-color: rgba(128, 128, 128, 0.145);
     }
 
+    #go-to-home .section a{
+        justify-content: center;
+        padding: 0.4em 0;
+    }
+
 }
 
 @media only screen and (max-width:902px) {
