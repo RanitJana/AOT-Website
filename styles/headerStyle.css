@@ -40,6 +40,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     width: 90%;
     padding: 1rem;
     margin-top: 2rem;
@@ -55,31 +56,26 @@ header {
     text-align: center;
 }
 
-
-.banner .right input,
-#searchBtn {
-    padding: 0.3rem 0.7rem;
-    border: none;
-    font-size: 1rem;
+.banner .right {
+    position: relative;
+    margin-left: 1rem;
 }
 
 .banner .right input {
-    border-bottom: 1px solid gray;
+    padding: 0.3rem 1rem;
+    border: 1px solid gray;
+    border-radius: 10rem;
+    font-size: 1rem;
     outline: none;
+    width: 100%;
+    padding-right: 3rem;
 }
 
-#searchBtn {
-    border-radius: var(--button-radius--);
-    color: white;
-    background-color: var(--aot-color--);
-}
-
-#searchBtn:hover {
-    cursor: pointer;
-}
-
-#searchBtn:active {
-    background-color: var(--aot-dark-color--);
+.banner .right img {
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    transform: translate(-25%, -50%);
 }
 
 main {
