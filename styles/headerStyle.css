@@ -79,7 +79,11 @@ header {
 }
 
 #searchBtn:active {
-    background-color: var(--aot-dark-color--)
+    background-color: var(--aot-dark-color--);
+}
+
+main{
+    position: relative;
 }
 
 nav {

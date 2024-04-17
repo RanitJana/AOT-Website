@@ -1,9 +1,38 @@
 @import url('./basicStyles.css');
 
+body {
+    position: relative;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+.loadingPage {
+    width: 100%;
+    height: 100dvh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    z-index: 200;
+    transition: all 1s;
+
+
+    color: white;
+    font-size: 5rem;
+}
+
+.loadingPage img {
+    transition: all 1s;
+    filter: invert(100%);
+    transform: translateX(-5%);
+}
 
 main>.content {
     margin: 2rem 0;
-    padding: 0 2rem;
+    padding: 0 1rem;
     display: grid;
     gap: 1rem;
     grid-template-columns: 70% auto;
@@ -29,11 +58,12 @@ main>.content>.first {
 
 .first {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    overflow: hidden;
+    top: 0%;
+    left: 0%;
     width: 100%;
     height: 100%;
-    background: url('../assets/bulletinImage/sixth.jpeg');
+    background: url('../assets/bulletinImage/first.webp');
     border-radius: 8px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -42,17 +72,22 @@ main>.content>.first {
 
 .black-cover {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0%;
+    left: 0%;
     width: 100%;
     height: 100%;
-    background: url('../assets/bulletinImage/sixth.jpeg') rgba(0, 0, 0, 0.500);
+    background: url('../assets/bulletinImage/first.webp')rgba(0, 0, 0, 0.500);
     border-radius: 8px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     filter: brightness(50%);
     z-index: 1;
+    overflow: hidden;
+}
+
+.newsBox {
+    transition: all 0.3s ease;
 }
 
 #bulletin {
@@ -66,6 +101,19 @@ main>.content>.first {
     z-index: 5;
     font-size: 5rem;
     text-wrap: pretty;
+    animation: move1 1s ease forwards;
+}
+
+@keyframes move1 {
+    0% {
+        left: -100%;
+        color: transparent;
+    }
+
+    100% {
+        left: 4%;
+        color: white;
+    }
 }
 
 #bulletin p {
@@ -79,13 +127,26 @@ main>.content>.first {
     line-height: 2.1rem;
     text-align: left;
     text-wrap: pretty;
+    animation: move2 1s ease forwards;
+}
+
+@keyframes move2 {
+    0% {
+        left: 100%;
+        color: transparent;
+    }
+
+    100% {
+        left: 4%;
+        color: white;
+    }
 }
 
 .prev-arrow {
     position: absolute;
     left: 0;
     top: 50%;
-    background-color: rgba(255, 255, 255, 0.633);
+    background-color: rgba(255, 255, 255, 0.313);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,7 +162,7 @@ main>.content>.first {
     position: absolute;
     right: 0;
     top: 50%;
-    background-color: rgba(255, 255, 255, 0.633);
+    background-color: rgba(255, 255, 255, 0.313);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -150,7 +211,15 @@ main>.content .second {
 }
 
 main>.content .second>h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--aot-color--);
+}
+
+main>.content .second>h2>img {
+    width: 13%;
+    margin: 0 0.3rem;
 }
 
 main>.content .second>.content {
@@ -165,7 +234,7 @@ main>.content .second>.content {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    overflow: auto;
+    overflow: hidden;
 }
 
 
@@ -176,7 +245,29 @@ main>.content .second>.content .sub-content {
 }
 
 .sub-content>div {
+    text-wrap: pretty;
     width: 100%;
     border-bottom: 1px solid gray;
     padding: 1rem;
+    line-height: 1.5rem;
+}
+
+.updateBox a:hover {
+    text-decoration: underline;
+    color: purple;
+}
+
+.seeMore {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(72, 72, 72);
+    color: white;
+    padding: 0.3rem;
+    box-shadow: 0 -5px 50px 5rem rgb(255, 255, 255);
+}
+
+.seeMore:hover {
+    background-color: rgb(40, 40, 40);
+    cursor: pointer;
 }
