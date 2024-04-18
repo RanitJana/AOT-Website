@@ -25,6 +25,7 @@
 h1,span{
     color: var(--aot-dark-color--);
 }
+
 .image{
     grid-area: image;
     padding: 1rem;
@@ -54,8 +55,6 @@ img{
     display: flex;
 }
 
-/* for table */
-
 .tbl{
     box-shadow: 0 0 30px rgba(0,0,0,0.15);
 }
@@ -63,7 +62,6 @@ img{
 table{
     margin-left: auto;
     margin-right: auto;
-    /* border-radius: 10px; */
 }
 th{
     color: #fff;
