@@ -38,6 +38,7 @@
     nav .search {
         display: block;
     }
+
     main>.content {
         padding: 0;
     }
@@ -46,6 +47,10 @@
     .black-cover,
     main>.content>.second {
         border-radius: 0px;
+    }
+
+    .black-cover {
+        filter: brightness(40%);
     }
 }
 
