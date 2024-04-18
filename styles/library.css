@@ -8,6 +8,10 @@
     border-radius: 5px;
 }
 
+#heading{
+    text-align: center;
+}
+
 .book{
     grid-area: book;
     padding: 2rem;
