@@ -1,0 +1,66 @@
+@import url('./basicStyles.css');
+
+#heading{
+    text-align: center;
+    
+}
+main{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.tbl{
+    box-shadow: 0 0 30px rgba(0,0,0,0.15);
+    /* margin: 10px; */
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    /* margin: 10px; */
+    /* border-radius: 10px; */
+}
+th{
+    color: #fff;
+    padding-right: 0.1rem;
+    padding-left: 0.1rem;
+    background: var(--aot-dark-color--);
+}
+td{
+    padding: 0;
+    text-align: center;
+    background: var(--aot-light-color--);
+    font-weight: 5px;
+}
+
+@media (min-width:550px){
+    th{
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+    td{
+        padding: 0;
+        text-align: center;
+    }
+}
+
+@media (min-width:850px){
+    th{
+        padding-right: 4rem;
+        padding-left: 4rem;
+    }
+    td{
+        padding: 0;
+        text-align: center;
+    }
+}
+
+@media (min-width:1150px){
+    th{
+        padding-right: 6.5rem;
+        padding-left: 6.5rem;
+    }
+    td{
+        padding: 0;
+        text-align: center;
+    }
+}
