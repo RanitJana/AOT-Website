@@ -74,6 +74,7 @@ th{
 td{
     padding-left: 5px;
     background: var(--aot-light-color--);
+    text-align: center;
 }
 
 @media (min-width:550px){
