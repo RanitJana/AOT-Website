@@ -1,30 +1,31 @@
 @import url('./basicStyles.css');
 
-#heading{
-    text-align: center;
-    
-}
 main{
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
+
+#heading{
+    text-align: center;
+    
+}
+
 .tbl{
     box-shadow: 0 0 30px rgba(0,0,0,0.15);
-    /* margin: 10px; */
 }
 
 table{
     margin-left: auto;
     margin-right: auto;
-    /* margin: 10px; */
-    /* border-radius: 10px; */
 }
+
 th{
     color: #fff;
     padding-right: 0.1rem;
     padding-left: 0.1rem;
     background: var(--aot-dark-color--);
 }
+
 td{
     padding: 0;
     text-align: center;
