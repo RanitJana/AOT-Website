@@ -72,6 +72,10 @@
         display: flex;
     }
 
+    .parentGoback {
+        display: flex;
+    }
+
     nav .search {
         display: block;
     }

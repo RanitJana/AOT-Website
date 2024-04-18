@@ -26,8 +26,9 @@
         width: 50%;
         margin-top: 1rem;
     }
-    .banner .right img{
-        transform: translate(-30%,-50%);
+
+    .banner .right img {
+        transform: translate(-30%, -50%);
     }
 
     .banner h1 {
@@ -171,6 +172,10 @@
 
     nav {
         position: relative;
+    }
+
+    .parentGoback {
+        display: flex;
     }
 
     .goback {
