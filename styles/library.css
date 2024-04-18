@@ -87,6 +87,8 @@ td{
     }
     .image{
         padding: 5px;
+        padding-bottom: 5rem;
+        padding-top: 5rem;
     }
     th{
         padding-right: 5.5rem;
