@@ -23,6 +23,10 @@ async function getData() {
     let res = await fetch('../assets/bulletinInfo/bulletinInfo.json');
     let text = await res.json();
     eventInfo = text;
+    images = images.map((val, idx) => {
+        localStorage.setItem(val, val);
+        return val;
+    })
     console.log(eventInfo);
 };
 getData().then(() => {
@@ -37,11 +41,11 @@ let calInterval = () => {
         if (idx >= eventInfo.length) idx = 0;
         const data = eventInfo[idx];
         creation(data.heading, data.content);
-        first.style.backgroundImage = `url('${images[idxImg]}')`;
+        first.style.backgroundImage = `url('${localStorage.getItem(images[idxImg])}')`;
         idxImg++;
         if (idxImg > images.length - 1) idxImg = 0;
-        blackCover.style.backgroundImage = `url('${images[idxImg]}')`;
-    }, 4000);
+        blackCover.style.backgroundImage = `url('${localStorage.getItem(images[idxImg])}')`;
+    }, 5000);
 };
 function imageLoaded(src, alt = '') {
     return new Promise((resolve) => {
@@ -112,9 +116,9 @@ else {
 }
 preloadImages(images)
     .then((image) => {
-        calInterval();
     })
     .catch((error) => {
         console.error("Failed to preload images:", error);
     });
+calInterval();
 announceSeeMore();
