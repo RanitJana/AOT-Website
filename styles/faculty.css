@@ -33,6 +33,17 @@ td{
     font-weight: 5px;
 }
 
+.para{
+    margin: 1rem;
+    padding: 1.5rem;
+    border: 3px solid var(--aot-dark-color--);
+    border-radius: 10px;
+}
+
+p,li{
+    color: var(--aot-dark-color--);
+}
+
 @media (min-width:550px){
     th{
         padding-right: 1.5rem;
