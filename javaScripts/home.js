@@ -1,50 +1,50 @@
-let first = document.querySelector('.first'),
-    bulletin = document.querySelector('#bulletin'),
-    blackCover = document.querySelector('.black-cover'),
-    loadingPage = document.querySelector('.loadingPage'),
-    welcomeAotImg = document.querySelector('.loadingPage img'),
-    eventInfo,
-    idx = 0,
-    idxImg = 5,
-    refInterval,
-    images = ['../assets/bulletinImage/first.webp', '../assets/bulletinImage/second.webp', '../assets/bulletinImage/third.webp', '../assets/bulletinImage/fourth.webp', '../assets/bulletinImage/fifth.webp', '../assets/bulletinImage/sixth.webp', '../assets/bulletinImage/seventh.webp', '../assets/bulletinImage/eighth.webp', '../assets/bulletinImage/ninth.webp'];
-let pArrow = document.querySelector('.prev-arrow'), nArrow = document.querySelector('.next-arrow');
+let first = document.querySelector('.first');
+let bulletin = document.querySelector('#bulletin');
+let blackCover = document.querySelector('.black-cover');
+let loadingPage = document.querySelector('.loadingPage');
+let welcomeAotImg = document.querySelector('.loadingPage img');
+let pArrow = document.querySelector('.prev-arrow');
+let nArrow = document.querySelector('.next-arrow');
+let eventInfo;
+let idxDynamicInfo = 0;
+let idxImg = 5;
+let refInterval;
+let imagesMobile = ['../assets/bulletinImage/first.webp', '../assets/bulletinImage/second.webp', '../assets/bulletinImage/third.webp', '../assets/bulletinImage/fourth.webp', '../assets/bulletinImage/fifth.webp', '../assets/bulletinImage/sixth.webp', '../assets/bulletinImage/seventh.webp', '../assets/bulletinImage/eighth.webp', '../assets/bulletinImage/ninth.webp'];
+let imagesDesktop = ['../assets/bulletinImage/firstBig.webp', '../assets/bulletinImage/secondBig.webp', '../assets/bulletinImage/thirdBig.webp', '../assets/bulletinImage/fourthBig.webp', '../assets/bulletinImage/fifthBig.webp', '../assets/bulletinImage/sixthBig.webp', '../assets/bulletinImage/seventhBig.webp', '../assets/bulletinImage/eighthBig.webp', '../assets/bulletinImage/ninthBig.webp'];
+
+
+let systemImage = screen.width > 480 ? imagesDesktop : imagesMobile;
+
+
 //functions
-const creation = function (head, text) {
+const displayDynamicInfo = function (head, text) {  //function to write html elements
     bulletin.innerHTML =
         `
     <h2>${head}</h2>
     <P>${text}</P>
 `;
 };
-async function getData() {
+async function getDynamicData() {   //use to fetch json data from bulletinInfo folder
     let res = await fetch('../assets/bulletinInfo/bulletinInfo.json');
     let text = await res.json();
     eventInfo = text;
-    images = images.map((val, idx) => {
-        localStorage.setItem(val, val);
-        return val;
-    })
     console.log(eventInfo);
 };
-getData().then(() => {
-    const data = eventInfo[idx];
-    creation(data.heading, data.content);
-    idx++;
-});
 
-let calInterval = () => {
+let changeDynamicPictures = () => { //function to change pictures in bulletin section
+    first.style.backgroundImage = `url('${systemImage[idxImg]}')`;
+    idxImg = (idxImg + 1) % systemImage.length;
+    blackCover.style.backgroundImage = `url('${systemImage[idxImg]}')`;
+}
+let changeDynamicInfo = () => { //function to change json info in bulletin section
     refInterval = setInterval(() => {
-        idx++;
-        if (idx >= eventInfo.length) idx = 0;
-        const data = eventInfo[idx];
-        creation(data.heading, data.content);
-        first.style.backgroundImage = `url('${localStorage.getItem(images[idxImg])}')`;
-        idxImg++;
-        if (idxImg > images.length - 1) idxImg = 0;
-        blackCover.style.backgroundImage = `url('${localStorage.getItem(images[idxImg])}')`;
+        idxDynamicInfo = (idxDynamicInfo + 1) % eventInfo.length;
+        const data = eventInfo[idxDynamicInfo];
+        displayDynamicInfo(data.heading, data.content);
+        changeDynamicPictures();
     }, 5000);
 };
+//functions to preload images
 function imageLoaded(src, alt = '') {
     return new Promise((resolve) => {
         const image = document.createElement('img');
@@ -61,40 +61,31 @@ async function preloadImages(images) {
 
 //events
 nArrow.addEventListener('click', e => {
-    idx++;
-    if (idx >= eventInfo.length) idx = 0;
-    const data = eventInfo[idx];
-    creation(data.heading, data.content);
-    first.style.backgroundImage = `url('${localStorage.getItem(images[idxImg])}')`;
-    idxImg++;
-    if (idxImg > images.length - 1) idxImg = 0;
-    blackCover.style.backgroundImage = `url('${localStorage.getItem(images[idxImg])}')`;
     clearInterval(refInterval);
-    calInterval();
+    idxDynamicInfo = (idxDynamicInfo + 1) % eventInfo.length;
+    const data = eventInfo[idxDynamicInfo];
+    displayDynamicInfo(data.heading, data.content);
+    changeDynamicPictures();
+    changeDynamicInfo();
 })
 pArrow.addEventListener('click', e => {
-    idx--;
-    if (idx < 0) idx = eventInfo.length - 1;
-    const data = eventInfo[idx];
-    creation(data.heading, data.content);
-    first.style.backgroundImage = `url('${localStorage.getItem(images[idxImg])}')`;
-    idxImg--;
-    if (idxImg < 0) idxImg = images.length - 1;
-    blackCover.style.backgroundImage = `url('${localStorage.getItem(images[idxImg])}')`;
     clearInterval(refInterval);
-    calInterval();
+    idxDynamicInfo--;
+    if (idxDynamicInfo < 0) idxDynamicInfo = eventInfo.length - 1;
+    const data = eventInfo[idxDynamicInfo];
+    displayDynamicInfo(data.heading, data.content);
+    changeDynamicPictures();
+    changeDynamicInfo();
 })
 
-function announceSeeMore() {
-    let announcementOverflow = document.querySelector('main>.content .second>.content');
-    let seeMoreAccoune = document.querySelector('.seeMore');
-    seeMoreAccoune.addEventListener('click', () => {
-        seeMoreAccoune.style.display = "none";
-        announcementOverflow.style.overflow = "auto";
-    })
-}
 
 //main content
+getDynamicData().then(() => {
+    const data = eventInfo[idxDynamicInfo];
+    displayDynamicInfo(data.heading, data.content);
+    idxDynamicInfo++;
+});
+
 body.style.overflow = "hidden";
 if (!sessionStorage.getItem('loadingPage')) {
     sessionStorage.setItem('loadingPage', 'true');
@@ -112,11 +103,23 @@ else {
     body.style.overflow = "auto";
     loadingPage.style.display = "none";
 }
-preloadImages(images)
+
+preloadImages(systemImage)
     .then((image) => {
+        changeDynamicInfo();
     })
     .catch((error) => {
         console.error("Failed to preload images:", error);
     });
-calInterval();
+
+//announcement section
+
+function announceSeeMore() {
+    let announcementOverflow = document.querySelector('main>.content .second>.content');
+    let seeMoreAccoune = document.querySelector('.seeMore');
+    seeMoreAccoune.addEventListener('click', () => {
+        seeMoreAccoune.style.display = "none";
+        announcementOverflow.style.overflow = "auto";
+    })
+}
 announceSeeMore();
