@@ -66,3 +66,11 @@ h1 {
     border: 2px solid var(--aot-color--);
     border-radius: 5px;
 }
+.parent-nav>ul li {
+    width: 100%;
+    list-style: circle;
+}
+
+.parent-nav>ul>* {
+    border-bottom: 1px dotted gray;
+}
