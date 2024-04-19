@@ -1,5 +1,5 @@
 let first = document.querySelector('.first'),
-    newsBox = document.querySelector('.newsBox'),
+    bulletin = document.querySelector('#bulletin'),
     blackCover = document.querySelector('.black-cover'),
     loadingPage = document.querySelector('.loadingPage'),
     welcomeAotImg = document.querySelector('.loadingPage img'),
@@ -11,12 +11,10 @@ let first = document.querySelector('.first'),
 let pArrow = document.querySelector('.prev-arrow'), nArrow = document.querySelector('.next-arrow');
 //functions
 const creation = function (head, text) {
-    newsBox.innerHTML =
+    bulletin.innerHTML =
         `
-<a href="" id="bulletin">
     <h2>${head}</h2>
     <P>${text}</P>
-</a>
 `;
 };
 async function getData() {
@@ -67,10 +65,10 @@ nArrow.addEventListener('click', e => {
     if (idx >= eventInfo.length) idx = 0;
     const data = eventInfo[idx];
     creation(data.heading, data.content);
-    first.style.backgroundImage = `url('${images[idxImg]}')`;
+    first.style.backgroundImage = `url('${localStorage.getItem(images[idxImg])}')`;
     idxImg++;
     if (idxImg > images.length - 1) idxImg = 0;
-    blackCover.style.backgroundImage = `url('${images[idxImg]}')`;
+    blackCover.style.backgroundImage = `url('${localStorage.getItem(images[idxImg])}')`;
     clearInterval(refInterval);
     calInterval();
 })
@@ -79,10 +77,10 @@ pArrow.addEventListener('click', e => {
     if (idx < 0) idx = eventInfo.length - 1;
     const data = eventInfo[idx];
     creation(data.heading, data.content);
-    first.style.backgroundImage = `url('${images[idxImg]}')`;
+    first.style.backgroundImage = `url('${localStorage.getItem(images[idxImg])}')`;
     idxImg--;
     if (idxImg < 0) idxImg = images.length - 1;
-    blackCover.style.backgroundImage = `url('${images[idxImg]}')`;
+    blackCover.style.backgroundImage = `url('${localStorage.getItem(images[idxImg])}')`;
     clearInterval(refInterval);
     calInterval();
 })
