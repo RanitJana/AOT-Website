@@ -29,8 +29,25 @@
     #bulletin h2 {
         zoom: 0.7;
     }
+    .third .about{
+        flex-direction: column;
+        align-items: center;
+    }
+    .third .about .story{
+        width: 100%;
+        margin: 0;
+        /* text-align: center; */
+        margin: 1.5rem 0;
+    }
+    .third .about .video{
+        width: 80%;
+    }
 }
-
+@media only screen and (max-width:655px){
+    .third .about .video{
+        width: 95%;
+    }
+}
 @media only screen and (max-width:572px) {
 
     nav .search {
@@ -46,8 +63,27 @@
     main>.content>.second {
         border-radius: 0px;
     }
+    .third{
+        margin: 0;
+        border-radius: 0;
+    }
+    .third .about .video{
+        width: 100%;
+    }
 }
-
+@media only screen and (max-width:422px){
+    .third{
+        padding: 0;
+        padding-bottom: 1rem;
+    }
+    .third .about .story{
+        padding: 1rem;
+        margin-top: -1.5rem;
+    }
+    .third>h2{
+        padding: 1rem;
+    }
+}
 @media only screen and (max-width:4226px) {
     .loadingPage img {
         scale: 0.8;

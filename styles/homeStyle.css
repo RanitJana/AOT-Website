@@ -273,3 +273,41 @@ main>.content .second>.content .sub-content {
     background-color: rgb(40, 40, 40);
     cursor: pointer;
 }
+
+/*Third section*/
+.third>h2 {
+    color: var(--aot-color--);
+    font-size: 2rem;
+}
+
+.third {
+    background-color: var(--aot-light-color--);
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 1rem;
+    position: relative;
+}
+.third .about{
+    display: flex;
+    justify-content: space-between;
+}
+.third .about .story {
+    text-wrap: pretty;
+    width: 50%;
+    text-align: left;
+    margin-right: 2rem;
+}
+
+.third .about .video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: 50%;
+}
+
+.third .about .video iframe {
+    width: 100%;
+    aspect-ratio: 560/315;
+    object-fit: cover;
+}
