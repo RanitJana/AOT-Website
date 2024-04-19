@@ -18,27 +18,27 @@ const creation = function (head, text) {
 `;
 };
 async function getData() {
-    // let res = await fetch('../assets/bulletinInfo/bulletinInfo.json');
-    // let text = await res.json();
-    // eventInfo = text;
+    let res = await fetch('../assets/bulletinInfo/bulletinInfo.json');
+    let text = await res.json();
+    eventInfo = text;
     images = images.map((val, idx) => {
         localStorage.setItem(val, val);
         return val;
     })
-    // console.log(eventInfo);
+    console.log(eventInfo);
 };
 getData().then(() => {
-    // const data = eventInfo[idx];
-   // creation(data.heading, data.content);
+    const data = eventInfo[idx];
+    creation(data.heading, data.content);
     idx++;
 });
 
 let calInterval = () => {
     refInterval = setInterval(() => {
-        // idx++;
-        // if (idx >= eventInfo.length) idx = 0;
-        // const data = eventInfo[idx];
-        // creation(data.heading, data.content);
+        idx++;
+        if (idx >= eventInfo.length) idx = 0;
+        const data = eventInfo[idx];
+        creation(data.heading, data.content);
         first.style.backgroundImage = `url('${localStorage.getItem(images[idxImg])}')`;
         idxImg++;
         if (idxImg > images.length - 1) idxImg = 0;
