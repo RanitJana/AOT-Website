@@ -1,0 +1,95 @@
+@import url('./basicStyles.css');
+
+main{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+#heading{
+    text-align: center;
+    
+}
+
+.tbl{
+    box-shadow: 0 0 30px rgba(0,0,0,0.15);
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th{
+    color: #fff;
+    padding-right: 0.1rem;
+    padding-left: 0.1rem;
+    background: var(--aot-dark-color--);
+}
+
+td{
+    padding: 0;
+    text-align: center;
+    background: var(--aot-light-color--);
+    font-weight: 5px;
+}
+
+.para{
+    grid-area: para;
+    margin: 1rem;
+    padding: 1.5rem;
+    border: 3px solid var(--aot-dark-color--);
+    border-radius: 10px;
+}
+
+p,li{
+    color: var(--aot-dark-color--);
+}
+
+@media (min-width:550px){
+    th{
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+    td{
+        padding: 0;
+        text-align: center;
+    }
+    .info{
+        display: grid;
+        grid-template-areas: 
+        'para'
+        'image';
+    }
+}
+
+@media (min-width:850px){
+    th{
+        padding-right: 4rem;
+        padding-left: 4rem;
+    }
+    td{
+        padding: 0;
+        text-align: center;
+    }
+    .info{
+        display: grid;
+        grid-template-areas: 
+        'para image image';
+    }
+}
+
+@media (min-width:1150px){
+    th{
+        padding-right: 6.5rem;
+        padding-left: 6.5rem;
+    }
+    td{
+        padding: 0;
+        text-align: center;
+    }
+    .info{
+        display: grid;
+        grid-template-areas: 
+        'para image';
+    }
+}
