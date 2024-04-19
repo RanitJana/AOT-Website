@@ -8,6 +8,10 @@
     border-radius: 5px;
 }
 
+#heading{
+    text-align: center;
+}
+
 .book{
     grid-area: book;
     padding: 2rem;
@@ -21,6 +25,7 @@
 h1,span{
     color: var(--aot-dark-color--);
 }
+
 .image{
     grid-area: image;
     padding: 1rem;
@@ -48,10 +53,7 @@ img{
 
 .member{
     display: flex;
-
 }
-
-/* for table */
 
 .tbl{
     box-shadow: 0 0 30px rgba(0,0,0,0.15);
@@ -60,7 +62,6 @@ img{
 table{
     margin-left: auto;
     margin-right: auto;
-    /* border-radius: 10px; */
 }
 th{
     color: #fff;
@@ -71,6 +72,7 @@ th{
 td{
     padding-left: 5px;
     background: var(--aot-light-color--);
+    text-align: center;
 }
 
 @media (min-width:550px){
@@ -83,6 +85,8 @@ td{
     }
     .image{
         padding: 5px;
+        padding-bottom: 5rem;
+        padding-top: 5rem;
     }
     th{
         padding-right: 5.5rem;
