@@ -5,9 +5,7 @@ let first = document.querySelector('.first'),
     welcomeAotImg = document.querySelector('.loadingPage img'),
     eventInfo,
     idx = 0,
-    idxImg = 5,
-    refInterval,
-    images = ['../assets/bulletinImage/first.webp', '../assets/bulletinImage/second.webp', '../assets/bulletinImage/third.webp', '../assets/bulletinImage/fourth.webp', '../assets/bulletinImage/fifth.webp', '../assets/bulletinImage/sixth.webp', '../assets/bulletinImage/seventh.webp', '../assets/bulletinImage/eighth.webp', '../assets/bulletinImage/ninth.webp'];
+    refInterval
 let pArrow = document.querySelector('.prev-arrow'), nArrow = document.querySelector('.next-arrow');
 //functions
 const creation = function (head, text) {
@@ -21,10 +19,6 @@ async function getData() {
     let res = await fetch('../assets/bulletinInfo/bulletinInfo.json');
     let text = await res.json();
     eventInfo = text;
-    images = images.map((val, idx) => {
-        localStorage.setItem(val, val);
-        return val;
-    })
     console.log(eventInfo);
 };
 getData().then(() => {
@@ -39,25 +33,8 @@ let calInterval = () => {
         if (idx >= eventInfo.length) idx = 0;
         const data = eventInfo[idx];
         creation(data.heading, data.content);
-        first.style.backgroundImage = `url('${localStorage.getItem(images[idxImg])}')`;
-        idxImg++;
-        if (idxImg > images.length - 1) idxImg = 0;
-        blackCover.style.backgroundImage = `url('${localStorage.getItem(images[idxImg])}')`;
     }, 5000);
 };
-function imageLoaded(src, alt = '') {
-    return new Promise((resolve) => {
-        const image = document.createElement('img');
-        image.setAttribute('src', src);
-        image.setAttribute('alt', alt);
-        image.addEventListener('load', () => resolve(image));
-    });
-}
-async function preloadImages(images) {
-    const promises = images.map(imageLoaded);
-    return await Promise.all(promises);
-}
-
 
 //events
 nArrow.addEventListener('click', e => {
@@ -65,10 +42,6 @@ nArrow.addEventListener('click', e => {
     if (idx >= eventInfo.length) idx = 0;
     const data = eventInfo[idx];
     creation(data.heading, data.content);
-    first.style.backgroundImage = `url('${localStorage.getItem(images[idxImg])}')`;
-    idxImg++;
-    if (idxImg > images.length - 1) idxImg = 0;
-    blackCover.style.backgroundImage = `url('${localStorage.getItem(images[idxImg])}')`;
     clearInterval(refInterval);
     calInterval();
 })
@@ -77,10 +50,6 @@ pArrow.addEventListener('click', e => {
     if (idx < 0) idx = eventInfo.length - 1;
     const data = eventInfo[idx];
     creation(data.heading, data.content);
-    first.style.backgroundImage = `url('${localStorage.getItem(images[idxImg])}')`;
-    idxImg--;
-    if (idxImg < 0) idxImg = images.length - 1;
-    blackCover.style.backgroundImage = `url('${localStorage.getItem(images[idxImg])}')`;
     clearInterval(refInterval);
     calInterval();
 })
@@ -112,11 +81,5 @@ else {
     body.style.overflow = "auto";
     loadingPage.style.display = "none";
 }
-preloadImages(images)
-    .then((image) => {
-    })
-    .catch((error) => {
-        console.error("Failed to preload images:", error);
-    });
 calInterval();
 announceSeeMore();
