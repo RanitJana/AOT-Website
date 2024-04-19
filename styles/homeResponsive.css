@@ -46,10 +46,6 @@
     main>.content>.second {
         border-radius: 0px;
     }
-
-    .black-cover {
-        filter: brightness(40%);
-    }
 }
 
 @media only screen and (max-width:4226px) {
