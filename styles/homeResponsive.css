@@ -3,13 +3,11 @@
         zoom: 0.8;
     }
 }
-
 @media only screen and (max-width:1229px) {
     #bulletin {
         zoom: 0.8;
     }
 }
-
 @media only screen and (max-width:949px) {
     main>.content {
         grid-template-columns: auto;
