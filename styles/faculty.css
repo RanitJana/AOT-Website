@@ -34,6 +34,7 @@ td{
 }
 
 .para{
+    grid-area: para;
     margin: 1rem;
     padding: 1.5rem;
     border: 3px solid var(--aot-dark-color--);
@@ -44,6 +45,27 @@ p,li{
     color: var(--aot-dark-color--);
 }
 
+.info{
+    display: grid;
+    grid-template-areas: 
+    'para'
+    'image';
+}
+
+.image{
+    grid-area: image;
+    padding: 1rem;  
+    border-radius: 5px;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+
 @media (min-width:550px){
     th{
         padding-right: 1.5rem;
@@ -52,6 +74,12 @@ p,li{
     td{
         padding: 0;
         text-align: center;
+    }
+    .info{
+        display: grid;
+        grid-template-areas: 
+        'para'
+        'image';
     }
 }
 
@@ -64,6 +92,11 @@ p,li{
         padding: 0;
         text-align: center;
     }
+    .info{
+        display: grid;
+        grid-template-areas: 
+        'para image image';
+    }
 }
 
 @media (min-width:1150px){
@@ -74,5 +107,10 @@ p,li{
     td{
         padding: 0;
         text-align: center;
+    }
+    .info{
+        display: grid;
+        grid-template-areas: 
+        'para image';
     }
 }
