@@ -123,3 +123,24 @@ function announceSeeMore() {
     })
 }
 announceSeeMore();
+
+//iframe on click
+let serveIframe = `<iframe src="https://www.youtube.com/embed/O_u78qBmUuo?autoplay=1&si=E3a7O0nt0ZSiUvjM&amp;start=8"
+loading="lazy" title="YouTube video player" frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<img src="./assets/images/icons8-pause-90.png" alt=""  id="pause">`;
+let savedIframe = `<iframe></iframe>
+<img src="./assets/images/icons8-youtube-96.png" alt="">
+`;
+
+let parentIframe = document.querySelector('.video');
+let playIframe = document.querySelector('#youtube');
+// let pause = document.querySelector('#pause');
+playIframe.addEventListener('click', () => {
+    parentIframe.innerHTML = `${serveIframe}`;
+
+})
+// pause.addEventListener('click', () => {
+//     parentIframe.innerHTML = `${savedIframe}`;
+// })
