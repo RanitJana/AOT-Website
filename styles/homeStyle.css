@@ -103,7 +103,7 @@ main>.content>.first {
     z-index: 5;
     font-size: 5rem;
     text-wrap: pretty;
-    animation: move1 1s ease forwards;
+    animation: move1 0.6s ease-out forwards;
 }
 
 @keyframes move1 {
@@ -129,7 +129,7 @@ main>.content>.first {
     line-height: 2.1rem;
     text-align: left;
     text-wrap: pretty;
-    animation: move2 1s ease forwards;
+    animation: move2 0.6s ease-out forwards;
 }
 
 @keyframes move2 {
@@ -328,9 +328,11 @@ main>.content .second>.content .sub-content {
 .third .about .video iframe:hover {
     cursor: pointer;
 }
-#youtube{
+
+#youtube {
     z-index: 5;
 }
-#pause{
+
+#pause {
     z-index: 4;
 }
