@@ -270,6 +270,7 @@ main {
         top: 0;
         right: -100%;
         width: 50%;
+        min-width: max-content;
         height: 100%;
         z-index: 100;
         padding: 1rem 2rem;
