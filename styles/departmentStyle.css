@@ -49,13 +49,354 @@ h1 {
     border: 2px solid var(--aot-color--);
     border-radius: 5px;
 }
+
 .parent-nav>ul li {
     width: 100%;
     /* list-style: circle; */
-    
+
 }
 
 .parent-nav>ul>* {
     border-bottom: 1px dotted gray;
 }
 
+.go-to-home a {
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (min-width:902px) {
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        z-index: 50;
+        position: sticky;
+        background-color: white;
+        top: 0;
+        z-index: 100;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .parent-nav2 a {
+        padding-right: 5.5rem;
+    }
+
+    .parent-nav2 img {
+        margin-left: 0.5rem;
+        width: 1rem;
+        aspect-ratio: 1;
+    }
+
+    .parent-nav2 ul>li>a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .parentGoback {
+        display: none;
+    }
+
+    nav .search {
+        position: relative;
+        width: 100%;
+        align-self: flex-start;
+        margin: 0.5rem 0 1rem 0;
+    }
+
+    nav .search input {
+        outline: none;
+        font-size: medium;
+        border-radius: 20px;
+        width: 100%;
+        border: 1px solid gray;
+        padding: 0.5rem 1rem;
+        padding-right: 3rem;
+    }
+
+    nav .search img {
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    nav .search {
+        display: none;
+    }
+
+    nav ul {
+        width: 100%;
+        list-style: none;
+        cursor: pointer;
+        position: relative;
+    }
+
+    nav>ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 3.5rem;
+        z-index: 60;
+        box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.08);
+    }
+
+    .parent-nav,
+    .go-to-home {
+        width: 24%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .parent-nav>ul,
+    .parent-nav2>ul {
+        border-top: 3px solid var(--aot-color--);
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        box-shadow: 0 0 5px 5px rgba(128, 128, 128, 0.122);
+        background-color: var(--aot-light-color--);
+    }
+
+    .parent-nav>ul {
+        width: 100%;
+    }
+
+    .parent-nav2>ul {
+        width: max-content;
+        min-width: 10rem;
+    }
+
+    .parent-nav>ul>li,
+    .parent-nav2>ul>li {
+        position: relative;
+        padding: 0.5rem 1rem;
+        background-color: var(--aot-light-color--);
+    }
+
+    .parent-nav2>ul {
+        position: absolute;
+        left: 100%;
+        top: 50%;
+    }
+
+    .parent-nav>.section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .parent-nav2>.section {
+        align-items: center;
+        display: flex;
+    }
+
+    .section p {
+        margin-right: 0.5rem;
+    }
+
+    .parent-nav .section img {
+        transform: rotate(90deg);
+        width: 0.8rem;
+        aspect-ratio: 1;
+    }
+
+    .parent-nav2>.section img {
+        transform: rotate(0deg);
+    }
+
+    .parent-nav2:hover>.section img {
+        transform: rotate(180deg);
+        transition: all 0.3s ease;
+    }
+
+    .parent-nav:hover>.section img {
+        transform: rotate(-90deg);
+        transition: all 0.3s ease;
+    }
+
+    .parent-nav:hover>ul,
+    .parent-nav2:hover>ul {
+
+        border-top: 3px solid var(--aot-color--);
+    }
+
+    .parent-nav>ul>li:hover,
+    .parent-nav2>ul>li:hover {
+        background-color: rgba(128, 128, 128, 0.145);
+    }
+
+    * .parent-nav:hover>ul,
+    .parent-nav2:hover>ul {
+        border-top: 3px solid var(--aot-color--);
+    }
+}
+
+@media only screen and (max-width:902px) {
+    main {
+        position: relative;
+    }
+
+    .hamberg-menu {
+        display: flex;
+    }
+
+    main nav {
+        overflow-y: scroll;
+        background-color: white;
+        box-shadow: -5px 0 15px 5px rgba(0, 0, 0, 0.246);
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 50%;
+        min-width: max-content;
+        height: 100%;
+        z-index: 100;
+        padding: 1rem 2rem;
+        transition: all 0.5s ease;
+    }
+
+    .parentGoback {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .goback {
+        color: white;
+        display: flex;
+        align-items: center;
+        background-color: var(--aot-color--);
+        border-radius: 8px;
+        width: 40%;
+        padding: 0.5rem 1rem;
+        margin: 1rem 0 1rem 0;
+    }
+
+    .goback:hover {
+        cursor: pointer;
+    }
+
+    .goback img {
+        margin-right: 0.5rem;
+        filter: invert(100%);
+        transform: rotate(180deg);
+        width: 1rem;
+    }
+
+    .parentGoback .search {
+        width: 100%;
+        position: relative;
+    }
+
+    .parentGoback .search input {
+        font-size: medium;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        outline: none;
+        border: 1px solid gray;
+    }
+
+    .parentGoback .search img {
+        position: absolute;
+        right: 4%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 1rem 0;
+    }
+
+    .go-to-home a {
+        display: flex;
+    }
+
+
+    nav ul .parent-nav,
+    .go-to-home {
+        height: fit-content;
+        position: relative;
+    }
+
+    nav ul .parent-nav>.section,
+    .go-to-home .section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #cbe5ff;
+        margin: 1rem 0;
+        font-size: medium;
+        width: 100%;
+        padding: 0.6rem 1rem;
+        border-radius: 20px;
+    }
+
+    nav ul .parent-nav>.section img {
+        width: 1rem;
+        height: 1rem;
+        aspect-ratio: 1;
+    }
+    .parent-nav>ul>li {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+        background-color: var(--aot-light-color--);
+        /* border: 1px solid gray; */
+        border-radius: 20px;
+        margin: 0.5rem 0;
+    }
+
+    .parent-nav2 {
+        display: flex;
+        flex-direction: column;
+        padding: 0rem;
+    }
+
+    .parent-nav2 .section {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 20px;
+    }
+
+    .parent-nav>ul>li img {
+        width: 1rem;
+        height: 1rem;
+        aspect-ratio: 1;
+    }
+
+    .parent-nav2 ul {
+        padding-top: 2rem;
+        /* background-color: aqua; */
+    }
+
+    .parent-nav2 ul li {
+        background-color: white;
+        border-radius: 20px;
+        padding: 0.5rem 1rem;
+        margin: 0.5rem 0;
+    }
+
+    .parent-nav ul {
+        margin:-1rem 0; 
+    }
+
+    nav ul li a {
+        width: 100%;
+        text-decoration: none;
+        color: black;
+    }
+}
