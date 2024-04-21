@@ -35,6 +35,31 @@ body {
     max-width: 100%;
 }
 
+.btn {
+    position: fixed;
+    z-index: 5;
+    padding: 0.5em;
+    margin: 0.5em;
+    bottom: 2rem;
+    right: 2rem;
+    border-radius: 8px;
+    background: var(--aot-color--);
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+}
+
+.btn a {
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: var(--aot-dark-color--);
+}
+
 .section {
     max-width: 100%;
     background-color: #f8f8ff;
@@ -88,7 +113,7 @@ body {
     justify-content: center;
     text-align: center;
     /* box-shadow: 5px 2px 5px rgba(241, 245, 249, 0.5); */
-    transition: all 0.6s;
+    transition: all 0.4s;
 }
 
 .item:hover {
@@ -164,6 +189,11 @@ body {
         font-size: 0.8rem;
     }
 
+    .btn {
+        right: 1.6rem;
+
+    }
+
 }
 
 /* 362 */
@@ -192,6 +222,11 @@ body {
 
     .section__title {
         font-size: 0.6rem;
+    }
+
+    .btn {
+        right: 1.3rem;
+
     }
 
 }
