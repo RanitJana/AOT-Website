@@ -37,6 +37,29 @@
     }
 }
 
+@media only screen and (max-width:682px) {
+    .fourth{
+        padding: 0;
+    }
+    .fourth .companies .company img {
+        width: 6rem;
+        padding: 0;
+    }
+    .fourth h2{
+        line-height: 2.5rem;
+        padding: 2rem;
+    }
+    .fourth .companies {
+        display: grid;
+        width: 100%;
+        margin: 0 -2rem;
+        grid-template-columns: auto auto;
+    }
+    .fourth .companies .company{
+        margin: 1rem 0;
+    }
+}
+
 @media only screen and (max-width:655px) {
     .third .about .video {
         width: 95%;
@@ -44,6 +67,11 @@
 }
 
 @media only screen and (max-width:630px) {
+    .fourth {
+        margin: 1rem 0;
+        border-radius: 0px;
+    }
+
     nav .search {
         display: block;
     }
@@ -69,6 +97,9 @@
 }
 
 @media only screen and (max-width:422px) {
+    .fourth h2{
+        padding: 1rem;
+    }
     .third {
         padding: 0;
         padding-bottom: 1rem;
