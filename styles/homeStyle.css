@@ -221,8 +221,9 @@ body::-webkit-scrollbar {
         align-items: center;
         background-color: var(--aot-color--);
         border-radius: 8px;
-        width: 40%;
+        width: fit-content;
         padding: 0.5rem 1rem;
+        padding-right: 2rem;
         margin: 1rem 0 1rem 0;
     }
 
@@ -243,7 +244,6 @@ body::-webkit-scrollbar {
     }
 
     .parentGoback .search input {
-        /* font-size: medium; */
         width: 100%;
         padding: 0.5rem 1rem;
         border-radius: 20px;
@@ -704,10 +704,12 @@ main>.content .second>.content .sub-content {
     width: 8rem;
     margin: 0 1rem;
 }
-.fourth .company img:hover{
- cursor: pointer;
- box-shadow: 0 0 5px 5px rgba(128, 128, 128, 0.318);
+
+.fourth .company img:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px 5px rgba(128, 128, 128, 0.318);
 }
+
 .fourth .company span {
     color: var(--aot-color--);
     font-weight: bolder;
