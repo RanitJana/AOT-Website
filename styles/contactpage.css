@@ -88,7 +88,7 @@ body {
     justify-content: center;
     text-align: center;
     /* box-shadow: 5px 2px 5px rgba(241, 245, 249, 0.5); */
-    transition: all 1.2s;
+    transition: all 0.6s;
 }
 
 .item:hover {
