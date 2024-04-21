@@ -1,0 +1,46 @@
+@import url('./basicStyles.css');
+
+h1{
+    text-align: center;
+    color: var(--aot-dark-color--);
+}
+
+h3,p{
+    color: var(--aot-dark-color--);
+}
+
+.para{
+    padding: 0.7rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+}
+
+.info1,.info2,.info3,.info4,.info5,.info6{
+    padding: 1rem;
+    background-color: var(--aot-light-color--);
+    border: 2px solid var(--aot-dark-color--);
+    border-radius: 5px;
+}
+
+.pdf-ch1{
+    padding: 1rem;
+    font-style: italic;
+    background-color: var(--aot-light-color--);
+}
+
+.pdf-ch1>p{
+    text-align: center;
+}
+
+.pdf-ch2{
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+}
+
+.pdf-ch2 a{
+    text-decoration: none;
+    font-weight: bold;
+}

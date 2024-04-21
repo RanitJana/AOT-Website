@@ -31,7 +31,7 @@ body::-webkit-scrollbar {
 }
 
 
-@media only screen and (min-width:572px) {
+@media only screen and (min-width:630px) {
     nav {
         width: 100%;
         display: flex;
@@ -184,7 +184,7 @@ body::-webkit-scrollbar {
 
 }
 
-@media only screen and (max-width:572px) {
+@media only screen and (max-width:630px) {
     main {
         position: relative;
     }
@@ -221,8 +221,9 @@ body::-webkit-scrollbar {
         align-items: center;
         background-color: var(--aot-color--);
         border-radius: 8px;
-        width: 40%;
+        width: fit-content;
         padding: 0.5rem 1rem;
+        padding-right: 2rem;
         margin: 1rem 0 1rem 0;
     }
 
@@ -243,7 +244,6 @@ body::-webkit-scrollbar {
     }
 
     .parentGoback .search input {
-        font-size: medium;
         width: 100%;
         padding: 0.5rem 1rem;
         border-radius: 20px;
@@ -274,7 +274,7 @@ body::-webkit-scrollbar {
         align-items: center;
         background-color: #cbe5ff;
         margin: 1rem 0;
-        font-size: medium;
+        /* font-size: medium; */
         width: 100%;
         padding: 0.6rem 1rem;
         border-radius: 20px;
@@ -354,6 +354,7 @@ body::-webkit-scrollbar {
 
 
 main>.content {
+    position: relative;
     margin: 2rem 0;
     padding: 0 1rem;
     display: grid;
@@ -367,6 +368,7 @@ main>.content section div a {
 }
 
 main>.content>.first {
+    position: relative;
     min-height: 500px;
     border-radius: 8px;
     padding: 1rem 3rem;
@@ -376,7 +378,6 @@ main>.content>.first {
     align-items: center;
     text-align: center;
     text-wrap: pretty;
-    position: relative;
 }
 
 .first {
@@ -523,6 +524,7 @@ main>.content>.first {
 }
 
 main>.content .second {
+    position: relative;
     padding: 1rem;
     border-radius: 8px;
     background-color: var(--aot-light-color--);
@@ -580,6 +582,10 @@ main>.content .second>.content .sub-content {
     color: purple;
 }
 
+.second .content .sub-content .updateBox a {
+    font-size: 1rem;
+}
+
 .seeMore {
     position: absolute;
     bottom: 0;
@@ -621,6 +627,10 @@ main>.content .second>.content .sub-content {
     margin-right: 2rem;
 }
 
+.third .about .story p {
+    font-size: 1rem;
+}
+
 .third .about .video {
     display: flex;
     justify-content: center;
@@ -656,4 +666,195 @@ main>.content .second>.content .sub-content {
 
 #pause {
     z-index: 4;
+}
+
+.fourth {
+    background-color: var(--aot-light-color--);
+    margin: 1rem;
+    border-radius: 8px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fourth h2 {
+    align-self: flex-start;
+    font-size: 2rem;
+    ;
+    color: var(--aot-color--);
+}
+
+.fourth .companies {
+    width: fit-content;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+}
+
+.fourth .company {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fourth .company img {
+    width: 8rem;
+    margin: 0 1rem;
+}
+
+.fourth .company img:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px 5px rgba(128, 128, 128, 0.318);
+}
+
+.fourth .company span {
+    color: var(--aot-color--);
+    font-weight: bolder;
+    font-size: 1.1rem;
+}
+
+.third {
+    margin-top: -1rem;
+}
+
+@media only screen and (max-width:1257px) {
+    main>.content {
+        grid-template-columns: auto;
+    }
+
+    main>.content .second>.content {
+        max-height: 20rem;
+    }
+
+    main>.content .first {
+        max-height: fit-content;
+        min-height: 25rem;
+    }
+
+    #bulletin h2 {
+        font-size: 3rem;
+    }
+
+    #bulletin p {
+        font-size: 1.1rem;
+    }
+
+    .third .about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .third .about .story {
+        width: 100%;
+        margin: 0;
+
+        margin: 1.5rem 0;
+    }
+
+    .third .about .video {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width:682px) {
+    .fourth {
+        padding: 0;
+    }
+
+    .fourth .companies .company img {
+        width: 6rem;
+        padding: 0;
+    }
+
+    .fourth h2 {
+        line-height: 2.5rem;
+        padding: 2rem;
+    }
+
+    .fourth .companies {
+        display: grid;
+        width: 100%;
+        margin: 0 -2rem;
+        grid-template-columns: auto auto;
+    }
+
+    .fourth .companies .company {
+        margin: 1rem 0;
+    }
+}
+
+@media only screen and (max-width:655px) {
+    .third .about .video {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width:630px) {
+    .fourth {
+        margin: 1rem 0;
+        border-radius: 0px;
+    }
+
+    nav .search {
+        display: block;
+    }
+
+    main>.content {
+        padding: 0;
+    }
+
+    main>.content>.first,
+    .black-cover,
+    main>.content>.second {
+        border-radius: 0px;
+    }
+
+    .third {
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .third .about .video {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:422px) {
+    .fourth h2 {
+        padding: 1rem;
+    }
+
+    .third {
+        padding: 0;
+        padding-bottom: 1rem;
+    }
+
+    .third .about .story {
+        padding: 1rem;
+        margin-top: -1.5rem;
+    }
+
+    .third>h2 {
+        padding: 1rem;
+    }
+}
+
+@media only screen and (max-width:4226px) {
+    .loadingPage img {
+        scale: 0.8;
+    }
+}
+
+@media only screen and (max-width:444px) {
+    #bulletin h2 {
+        font-size: 2rem;
+    }
+
+    #bulletin p {
+        font-size: 1rem;
+        line-height: 1rem;
+    }
 }

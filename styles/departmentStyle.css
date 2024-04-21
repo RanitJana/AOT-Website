@@ -187,7 +187,8 @@ h1 {
     .parent-nav2>ul {
         position: absolute;
         left: 100%;
-        top: 50%;
+        top: 30%;
+        display: none;
     }
 
     .parent-nav>.section {
@@ -209,37 +210,14 @@ h1 {
         transform: rotate(90deg);
         width: 0.8rem;
         aspect-ratio: 1;
+        transition: all 0.3s ease;
     }
 
     .parent-nav2>.section img {
+        transition: all 0.3s ease;
         transform: rotate(0deg);
     }
 
-    .parent-nav2:hover>.section img {
-        transform: rotate(180deg);
-        transition: all 0.3s ease;
-    }
-
-    .parent-nav:hover>.section img {
-        transform: rotate(-90deg);
-        transition: all 0.3s ease;
-    }
-
-    .parent-nav:hover>ul,
-    .parent-nav2:hover>ul {
-
-        border-top: 3px solid var(--aot-color--);
-    }
-
-    .parent-nav>ul>li:hover,
-    .parent-nav2>ul>li:hover {
-        background-color: rgba(128, 128, 128, 0.145);
-    }
-
-    * .parent-nav:hover>ul,
-    .parent-nav2:hover>ul {
-        border-top: 3px solid var(--aot-color--);
-    }
 }
 
 @media only screen and (max-width:902px) {
@@ -286,6 +264,7 @@ h1 {
         border-radius: 8px;
         width: 40%;
         padding: 0.5rem 1rem;
+        padding-right: 2rem;
         margin: 1rem 0 1rem 0;
     }
 
@@ -419,5 +398,47 @@ h1 {
     .parent-nav2>.section img {
         transition: all 0.3s ease;
         transform: rotate(90deg);
+    }
+}
+
+@media (max-width:500px) {
+    .sec1 {
+        display: grid;
+        padding: 1rem;
+        grid-template-areas:
+            'news notice'
+            'event notice'
+            'map notice';
+        grid-gap: 1rem;
+    }
+}
+
+@media (max-width:700px) {
+    .sec1 {
+        display: grid;
+        padding: 1rem;
+        grid-template-areas:
+            'news'
+            'event'
+            'notice'
+            'map';
+        grid-gap: 1rem;
+    }
+}
+
+@media only screen and (max-width:1100px) {
+    body>* {
+        zoom: 0.8;
+    }
+}
+
+@media only screen and (max-width:902px) {
+    .banner .right {
+        display: none;
+    }
+
+    .banner {
+        flex-direction: column;
+        padding-top: 0;
     }
 }

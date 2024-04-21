@@ -25,8 +25,8 @@ header {
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    display: none;
     z-index: 10;
+    display: none;
 }
 
 .hamberg-menu .stick {
@@ -86,4 +86,83 @@ main {
 .parent-nav2>ul {
     transition: all 0.5s ease;
     display: none;
+}
+
+@media only screen and (max-width:1100px) {
+    .banner {
+        margin-top: 2rem;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .banner .middle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        text-wrap: nowrap;
+    }
+
+    .banner .right {
+        width: 50%;
+        margin-top: 1rem;
+    }
+
+    .banner .right img {
+        transform: translate(-30%, -50%);
+    }
+
+    .banner h1 {
+        line-height: 3rem;
+    }
+}
+
+@media only screen and (max-width:630px) {
+    .banner .right {
+        display: none;
+    }
+
+    .banner {
+        flex-direction: column;
+        padding-top: 0;
+    }
+
+    .hamberg-menu {
+        display: flex;
+        z-index: 12;
+    }
+
+    .hamberg-menu:hover {
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width:582px) {
+    .banner {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media only screen and (max-width:514px) {
+    .banner .middle h1 {
+        font-size: 1.95rem;
+        line-height: 2rem;
+    }
+}
+
+@media only screen and (max-width:394px) {
+    .banner {
+        zoom: 0.9;
+    }
+}
+
+@media only screen and (max-width:357px) {
+    .banner {
+        zoom: 0.8;
+    }
 }
