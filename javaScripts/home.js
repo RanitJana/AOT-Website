@@ -136,11 +136,7 @@ let savedIframe = `<iframe title="null"></iframe>
 
 let parentIframe = document.querySelector('.video');
 let playIframe = document.querySelector('#youtube');
-// let pause = document.querySelector('#pause');
 playIframe.addEventListener('click', () => {
     parentIframe.innerHTML = `${serveIframe}`;
 
 })
-// pause.addEventListener('click', () => {
-//     parentIframe.innerHTML = `${savedIframe}`;
-// })

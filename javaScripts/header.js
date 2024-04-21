@@ -19,11 +19,13 @@ let parentNavChild = document.querySelectorAll('.parent-nav>ul');
 let parentNavChild2 = document.querySelectorAll('.parent-nav2>ul');
 
 let allchild = document.querySelectorAll('.parent-nav > ul> li');
+
 parentNav.forEach((val, idx) => {
     val.addEventListener('click', () => {
         let arrow = null;
         try {
             arrow = val.childNodes[1].childNodes[3];
+            console.log(val.childNodes);
         }
         catch (err) {
             console.log(err);
@@ -41,16 +43,45 @@ parentNav.forEach((val, idx) => {
         }
     }, false)
 })
+function editRoateImg(allchilds) {
+    allchild.forEach(val => {
+        if (val.getAttribute('class') === 'parent-nav2') {
+            let arrow = (val.childNodes[1].childNodes[3]);
+            if (screen.width <= 571) {
+                arrow.style.transform = "rotate(90deg)";
+            }
+            else {
+                arrow.style.transform = "rotate(0deg)";
+            }
+        }
+    })
+}
 allchild.forEach((allchilds, idx) => {
     allchilds.addEventListener('click', () => {
+        let arrow = null;
         try {
-            let arrow = null;
-            try {
-                arrow = allchilds.childNodes[1].childNodes[3];
+            arrow = allchilds.childNodes[1].childNodes[3];
+            editRoateImg();
+        }
+        catch (err) {
+            console.log(err);
+        }
+        console.log(parentNavChild2);
+        parentNavChild2.forEach((val, index) => {
+            if (idx - 1 != index) {
+                try {
+                    if (val.style.display == 'block') {
+                        val.style.display = "none";
+                        val.style.zIndex = '100';
+                    }
+                }
+                catch (err) {
+                    console.log(err);
+                }
             }
-            catch (err) {
-                console.log(err);
-            }
+        })
+        editRoateImg();
+        try {
             let nodeVal = parentNavChild2[idx - 1].style.display;
             if (nodeVal == 'block') {
                 parentNavChild2[idx - 1].style.display = "none";
@@ -82,5 +113,4 @@ allchild.forEach((allchilds, idx) => {
         }
         event.stopPropagation();
     }, false)
-
 })
