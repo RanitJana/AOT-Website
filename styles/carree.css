@@ -39,6 +39,7 @@ h3,p{
 }
 
 .pdf-ch2{
+    font-style: italic;
     display: flex;
     flex-direction: column;
     padding-left: 2rem;
