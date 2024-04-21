@@ -243,7 +243,7 @@ body::-webkit-scrollbar {
     }
 
     .parentGoback .search input {
-        font-size: medium;
+        /* font-size: medium; */
         width: 100%;
         padding: 0.5rem 1rem;
         border-radius: 20px;
@@ -274,7 +274,7 @@ body::-webkit-scrollbar {
         align-items: center;
         background-color: #cbe5ff;
         margin: 1rem 0;
-        font-size: medium;
+        /* font-size: medium; */
         width: 100%;
         padding: 0.6rem 1rem;
         border-radius: 20px;
@@ -422,7 +422,7 @@ main>.content>.first {
     top: 4%;
     left: 4%;
     z-index: 5;
-    font-size: 5rem;
+   font-size: 7rem;
     text-wrap: pretty;
     animation: move1 0.6s ease-out forwards;
 }
@@ -446,7 +446,7 @@ main>.content>.first {
     bottom: 10%;
     left: 4%;
     z-index: 5;
-    font-size: 1.7rem;
+    font-size: larger;
     line-height: 2.1rem;
     text-align: left;
     text-wrap: pretty;
@@ -598,7 +598,7 @@ main>.content .second>.content .sub-content {
 /*Third section*/
 .third>h2 {
     color: var(--aot-color--);
-    font-size: 2rem;
+    /* font-size: 2rem; */
 }
 
 .third {
