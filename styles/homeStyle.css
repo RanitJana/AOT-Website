@@ -354,6 +354,7 @@ body::-webkit-scrollbar {
 
 
 main>.content {
+    position: relative;
     margin: 2rem 0;
     padding: 0 1rem;
     display: grid;
@@ -367,6 +368,7 @@ main>.content section div a {
 }
 
 main>.content>.first {
+    position: relative;
     min-height: 500px;
     border-radius: 8px;
     padding: 1rem 3rem;
@@ -376,7 +378,6 @@ main>.content>.first {
     align-items: center;
     text-align: center;
     text-wrap: pretty;
-    position: relative;
 }
 
 .first {
@@ -523,6 +524,7 @@ main>.content>.first {
 }
 
 main>.content .second {
+    position: relative;
     padding: 1rem;
     border-radius: 8px;
     background-color: var(--aot-light-color--);
