@@ -615,9 +615,11 @@ main>.content .second>.content .sub-content {
 }
 
 .third .about .story {
+    font-size: 1rem;
     text-wrap: pretty;
     width: 50%;
     text-align: left;
+    /* background-color: aqua; */
     margin-right: 2rem;
 }
 
