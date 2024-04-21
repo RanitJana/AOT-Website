@@ -422,7 +422,7 @@ main>.content>.first {
     top: 4%;
     left: 4%;
     z-index: 5;
-   font-size: 7rem;
+   font-size: 5rem;
     text-wrap: pretty;
     animation: move1 0.6s ease-out forwards;
 }
@@ -446,7 +446,7 @@ main>.content>.first {
     bottom: 10%;
     left: 4%;
     z-index: 5;
-    font-size: larger;
+    font-size: 1.7rem;
     line-height: 2.1rem;
     text-align: left;
     text-wrap: pretty;
@@ -579,7 +579,9 @@ main>.content .second>.content .sub-content {
     text-decoration: underline;
     color: purple;
 }
-
+.second .content .sub-content .updateBox a{
+    font-size: 1rem;
+}
 .seeMore {
     position: absolute;
     bottom: 0;
@@ -598,7 +600,7 @@ main>.content .second>.content .sub-content {
 /*Third section*/
 .third>h2 {
     color: var(--aot-color--);
-    /* font-size: 2rem; */
+    font-size: 2rem;
 }
 
 .third {
@@ -615,14 +617,16 @@ main>.content .second>.content .sub-content {
 }
 
 .third .about .story {
-    font-size: 1rem;
+    /* font-size: 1rem; */
     text-wrap: pretty;
     width: 50%;
     text-align: left;
     /* background-color: aqua; */
     margin-right: 2rem;
 }
-
+.third .about .story p{
+    font-size: 1rem;
+}
 .third .about .video {
     display: flex;
     justify-content: center;
