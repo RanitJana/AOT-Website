@@ -36,6 +36,14 @@ function editRoateImg(allchilds) {
 
 parentNav.forEach((val, idx) => {
     val.addEventListener('click', () => {
+        parentNav.forEach((value, index) => {
+            if (value.getAttribute('class') === 'parent-nav') {
+                let arrow = (value.childNodes[1].childNodes[3]);
+                if (idx != index) {
+                    arrow.style.transform = "rotate(90deg)";
+                }
+            }
+        })
         let arrow = null;
         try {
             arrow = val.childNodes[1].childNodes[3];
