@@ -8,9 +8,7 @@
     <meta name="description" content="AOT,Academy Of Technology,engineering, college,MCA,B.Tech,Tech Fest">
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="./styles/headerStyle.css">
-    <link rel="stylesheet" href="./styles/headerResponsive.css">
     <link rel="stylesheet" href="./styles/homeStyle.css">
-    <link rel="stylesheet" href="./styles/homeResponsive.css">
     <link rel="stylesheet" href="./styles/breakingNews.css">
     <link rel="stylesheet" href="./styles/footerStyle.css">
     <title>Home</title>
@@ -28,7 +26,7 @@
         </div>
         <div class="banner">
             <div class="left">
-                <img src="./assets/images/aot-logo.webp" alt="Error">
+                <img src="./assets/images/aot-logo.webp" alt="Error" loading="lazy">
             </div>
             <div class="middle">
                 <h1>ACADEMY OF TECHNOLOGY</h1>
@@ -37,7 +35,7 @@
             <div class="right">
                 <div class="search">
                     <input type="text" name="" id="" placeholder="Search here...">
-                    <img src="./assets/video/icons8-search.gif" alt="">
+                    <img src="./assets/video/icons8-search.gif" alt="" loading="lazy">
                 </div>
             </div>
         </div>
@@ -93,7 +91,7 @@
                                 </li>
                                 <li>
                                     <a href="https://moodle.org/" target="_blank">
-                                        <span></span>Moodle</span>
+                                        <span>Moodle</span>
                                         <img src="./assets/images/icons8-link-96.webp" loading="lazy" alt="Error">
                                     </a>
                                 </li>
@@ -278,16 +276,17 @@
                 <p>Follow us on</p>
             </div>
             <div class="footerSocialMediaLinks">
-                <a href="https://www.facebook.com/www.aot.edu.in/">
+                <a href="https://www.facebook.com/www.aot.edu.in/" title="Visit AOT Facebook Page">
                     <img src="../assets/images/facebook_Logo.webp" alt="">
                 </a>
-                <a href="https://www.instagram.com/aotconnect/?igsh=MWhhcDJuY2ZqeWg1OA%3D%3D">
+                <a href="https://www.instagram.com/aotconnect/?igsh=MWhhcDJuY2ZqeWg1OA%3D%3D"
+                    title="Visit AOT Instagram Page">
                     <img src="../assets/images/instagram_Logo.webp" alt="">
                 </a>
-                <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA">
+                <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA" title="Visit AOT YouTube Page">
                     <img src="../assets/images/youtube_Logo.webp" alt="">
                 </a>
-                <a href="https://www.linkedin.com/school/academy-of-technology/">
+                <a href="https://www.linkedin.com/school/academy-of-technology/" title="Visit AOT Linkedin Page">
                     <img src="../assets/images/linkedin_Logo.webp" alt="">
                 </a>
             </div>
@@ -297,8 +296,8 @@
         </div>
     </footer>
 
-    <script src="./javaScripts/header.js"></script>
-    <script src="./javaScripts/home.js"></script>
+    <script src="./javaScripts/header.js" defer></script>
+    <script src="./javaScripts/home.js" defer></script>
 </body>
 
 </html>

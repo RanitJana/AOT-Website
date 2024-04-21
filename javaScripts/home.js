@@ -104,13 +104,15 @@ else {
     loadingPage.style.display = "none";
 }
 
-preloadImages(systemImage)
-    .then((image) => {
-        changeDynamicInfo();
-    })
-    .catch((error) => {
-        console.error("Failed to preload images:", error);
-    });
+window.addEventListener('load', () => {
+    preloadImages(systemImage)
+        .then((image) => {
+            changeDynamicInfo();
+        })
+        .catch((error) => {
+            console.error("Failed to preload images:", error);
+        });
+})
 
 //announcement section
 
