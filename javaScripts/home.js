@@ -130,7 +130,7 @@ loading="lazy" title="YouTube video player" frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 `;
-let savedIframe = `<iframe></iframe>
+let savedIframe = `<iframe title="null"></iframe>
 <img src="./assets/images/icons8-youtube-96.png" alt="">
 `;
 

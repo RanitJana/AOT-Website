@@ -20,6 +20,7 @@ body {
     font-size: 1.2rem;
     font-weight: 500;
     color: var(--aot-color--);
+    user-select: none;
 }
 
 .header__logo {
@@ -27,6 +28,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    user-select: none;
 }
 
 .header__logo img {
@@ -103,5 +105,95 @@ body {
     font-size: large;
 }
 
+/* 746 */
+@media only screen and (max-width: 746px) {
+    .header__title {
+        font-size: 1.1rem;
+    }
+
+    .section {
+        gap: 16px;
+    }
+
+    .section__items {
+        padding: 1.8em;
+        gap: 2.6rem;
+    }
+
+    .header__logo img {
+        max-width: 90%;
+    }
+
+    .section__title {
+        font-size: 0.8rem;
+    }
+
+}
+
+/* 490 */
+@media only screen and (max-width: 490px) {
+    .header__title {
+        font-size: 0.9rem;
+    }
+
+    .section {
+        gap: 12px;
+    }
+
+    .section__items {
+        padding: 1.5em;
+        gap: 2.2rem;
+    }
+
+    .header__logo img {
+        max-width: 80%;
+    }
+
+    .item {
+        width: 260px;
+        height: 220px;
+    }
+
+    .item__title {
+        position: relative;
+        bottom: 2.2em;
+        font-size: medium;
+    }
+
+    .section__title {
+        font-size: 0.8rem;
+    }
+
+}
+
+/* 362 */
+@media only screen and (max-width: 362px) {
+    .header__title {
+        font-size: 0.7rem;
+    }
+
+    .section {
+        gap: 10px;
+    }
+
+    .section__items {
+        padding: 1.3em;
+        gap: 2rem;
+    }
+
+    .header__logo img {
+        max-width: 70%;
+    }
+
+    .item {
+        width: 240px;
+        height: 200px;
+    }
+
+    .section__title {
+        font-size: 0.6rem;
+    }
+
+}
 
 /* https://www.eggradients.com/shades-of-white */
