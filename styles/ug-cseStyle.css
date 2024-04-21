@@ -1,31 +1,38 @@
 @import url(basicStyles.css);
 
-
-.intro-slide-container{
-    width: 100%;
-	height: 580px;
-    background-color: aquamarine;
-    
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.intro-slide-container .intro-slides{
+.intro-slide-container {
+    width: 100%;
+    height: 580px;
+    /* background-color: aquamarine; */
+
+}
+
+.intro-slide-container .intro-slides {
     position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    
+
 }
 
-.intro-slides img{
+.intro-slides img {
     width: 100%;
     object-fit: cover;
     position: absolute;
 }
-.intro-slides img:not(.active){
-    top:0;
+
+.intro-slides img:not(.active) {
+    top: 0;
     left: -100%;
 }
 
-.next, .prev{
+.next,
+.prev {
     position: absolute;
     top: 50%;
     transform: translateY(50%);
@@ -38,49 +45,150 @@
     z-index: 1;
 
 }
-span.next{
+
+span.next {
     right: 20px;
 }
-span.prev{
+
+span.prev {
     left: 20px;
 }
-span.next:hover, span.prev:hover{
+
+span.next:hover,
+span.prev:hover {
     background-color: #ede6d6;
     opacity: 0.8;
     color: #222;
-} 
+}
 
 
-@keyframes next1{
-    from{
+@keyframes next1 {
+    from {
         left: 0%
     }
-    to{
+
+    to {
         left: -100%;
     }
 }
-@keyframes next2{
-    from{
+
+@keyframes next2 {
+    from {
         left: 100%
     }
-    to{
+
+    to {
         left: 0%;
     }
 }
 
-@keyframes prev1{
-    from{
+@keyframes prev1 {
+    from {
         left: 0%
     }
-    to{
+
+    to {
         left: 100%;
     }
 }
-@keyframes prev2{
-    from{
+
+@keyframes prev2 {
+    from {
         left: -100%
     }
-    to{
+
+    to {
         left: 0%;
     }
 }
+
+/* ====================     infrastructure section     ============================ */
+
+.infrastructure {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.facility {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 150px;
+    width: 250px;
+    background-color: #3846a2;
+    margin: 3px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 7px;
+    
+}
+
+
+
+/* =======================    achivements and Academic Programs      =============== */
+
+.achivementsPrograms{
+    display: flex;
+    padding: 10px;
+
+    
+}
+
+.achivementsPrograms .achivements{
+    max-width: 69.999%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+
+}
+
+.achivement{
+    display: flex;
+    width: 45%;
+    min-width: 200px;
+    max-width: 300px;
+    height: 190px;
+    background-color: aquamarine;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 7px;
+    margin: 10px;
+}
+
+
+
+/* ===========================   programs   ======================== */
+.achivementsPrograms .programs{
+    width: 29.999%;
+    background-color: rgb(175, 175, 239);
+    padding: 10px 7px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.program{
+    display: flex;
+    width: 90%;
+    height: 100px;
+    background-color: #ede6d6;
+    border: 3px solid black;
+    border-radius: 7px;
+    margin: 10px 0px;
+}
+
+.program p{
+    text-align: center;
+}
+
+
+
+
+
+
