@@ -20,8 +20,6 @@ body::-webkit-scrollbar {
     background-color: rgb(0, 0, 0);
     z-index: 200;
     transition: all 1s;
-
-
     color: white;
     font-size: 5rem;
 }
@@ -176,42 +174,25 @@ body::-webkit-scrollbar {
         transform: rotate(90deg);
         width: 0.8rem;
         aspect-ratio: 1;
+        transition: all 0.3s ease;
     }
 
     .parent-nav2>.section img {
+        transition: all 0.3s ease;
         transform: rotate(0deg);
     }
 
-    .parent-nav2:hover>.section img {
-        transform: rotate(180deg);
-        transition: all 0.3s ease;
-    }
-
-    .parent-nav:hover>.section img {
-        transform: rotate(-90deg);
-        transition: all 0.3s ease;
-    }
-
-    .parent-nav:hover>ul,
-    .parent-nav2:hover>ul {
-
-        border-top: 3px solid var(--aot-color--);
-    }
-
-    .parent-nav>ul>li:hover,
-    .parent-nav2>ul>li:hover {
-        background-color: rgba(128, 128, 128, 0.145);
-    }
-
-    * .parent-nav:hover>ul,
-    .parent-nav2:hover>ul {
-        border-top: 3px solid var(--aot-color--);
-    }
 }
 
 @media only screen and (max-width:572px) {
     main {
         position: relative;
+    }
+
+    .parent-nav>ul>li,
+    .parent-nav2>ul>li,
+    .parent-nav>.section {
+        border-bottom: 1px dotted gray;
     }
 
     main nav {
@@ -356,6 +337,18 @@ body::-webkit-scrollbar {
         text-decoration: none;
         color: black;
         /* background-color: aqua; */
+    }
+
+    .parent-nav .section img {
+        transform: rotate(90deg);
+        width: 0.8rem;
+        aspect-ratio: 1;
+        transition: all 0.3s ease;
+    }
+
+    .parent-nav2>.section img {
+        transition: all 0.3s ease;
+        transform: rotate(90deg);
     }
 }
 
