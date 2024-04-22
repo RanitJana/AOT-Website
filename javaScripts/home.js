@@ -11,7 +11,7 @@ let nArrow = document.querySelector('.next-arrow');
 let eventInfo;
 let idxDynamicInfo = 0;
 let counter = 0;
-let refInterval;
+let refInterval = null;
 let images = document.querySelectorAll('.slide');
 let lessImages = ['./assets/bulletinImage/first.webp', './assets/bulletinImage/second.webp', './assets/bulletinImage/third.webp', './assets/bulletinImage/fourth.webp', './assets/bulletinImage/fifth.webp', './assets/bulletinImage/sixth.webp', './assets/bulletinImage/seventh.webp', './assets/bulletinImage/eighth.webp', './assets/bulletinImage/ninth.webp'];
 let bigImages = ['./assets/bulletinImage/firstBig.webp', './assets/bulletinImage/secondBig.webp', './assets/bulletinImage/thirdBig.webp', './assets/bulletinImage/fourthBig.webp', './assets/bulletinImage/fifthBig.webp', './assets/bulletinImage/sixthBig.webp', './assets/bulletinImage/seventhBig.webp', './assets/bulletinImage/eighthBig.webp', './assets/bulletinImage/ninthBig.webp'];
@@ -57,7 +57,6 @@ let changeDynamicInfo = () => { //function to change json info in bulletin secti
             requestAnimationFrame(() => {
                 idxDynamicInfo = (idxDynamicInfo + 1) % eventInfo.length;
                 const data = eventInfo[idxDynamicInfo];
-                bulletin.style.animation = "move2 1.2s ease forwards;"
                 displayDynamicInfo(data.heading, data.content);
                 counter = (counter + 1) % images.length;
                 slide();
@@ -79,9 +78,12 @@ function imgSize() {
         })
     }
 }
-window.addEventListener('resize', imgSize);
-window.addEventListener('load', imgSize);
-
+window.addEventListener('resize', () => {
+    requestAnimationFrame(imgSize);
+});
+window.addEventListener('load', () => {
+    requestAnimationFrame(imgSize);
+});
 nArrow.addEventListener('click', e => {
     requestAnimationFrame(() => {
         clearInterval(refInterval);
@@ -90,7 +92,7 @@ nArrow.addEventListener('click', e => {
         displayDynamicInfo(data.heading, data.content);
         counter = (counter + 1) % images.length;
         slide();
-        changeDynamicInfo();
+        refInterval = requestAnimationFrame(changeDynamicInfo);
     });
 })
 pArrow.addEventListener('click', e => {
@@ -103,7 +105,7 @@ pArrow.addEventListener('click', e => {
         counter--;
         if (counter < 0) counter = images.length - 1;
         slide();
-        changeDynamicInfo();
+        refInterval = requestAnimationFrame(changeDynamicInfo);
     });
 })
 
@@ -135,7 +137,8 @@ else {
     body.style.overflow = "auto";
     loadingPage.style.display = "none";
 }
-changeDynamicInfo();
+requestAnimationFrame(changeDynamicInfo);
+
 //announcement section
 
 function announceSeeMore() {
