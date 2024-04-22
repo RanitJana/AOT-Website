@@ -5,6 +5,7 @@ let bulletinP = document.querySelector('#bulletin p');
 let blackCover = document.querySelector('.black-cover');
 let loadingPage = document.querySelector('.loadingPage');
 let welcomeAotImg = document.querySelector('.loadingPage img');
+let imgContainer = document.querySelector('.imgContainer');
 let pArrow = document.querySelector('.prev-arrow');
 let nArrow = document.querySelector('.next-arrow');
 let eventInfo;
@@ -37,8 +38,10 @@ images.forEach((val, idx) => {
     val.style.left = `${idx * 100}%`;
 })
 let slide = () => {
-    images.forEach((val, idx) => {
-        val.style.transform = `translateX(-${counter * 100}%)`;
+    requestAnimationFrame(() => {
+        images.forEach((val, idx) => {
+            val.style.transform = `translateX(-${counter * 100}%)`;
+        })
     })
 }
 async function getDynamicData() {   //use to fetch json data from bulletinInfo folder
@@ -51,12 +54,14 @@ async function getDynamicData() {   //use to fetch json data from bulletinInfo f
 let changeDynamicInfo = () => { //function to change json info in bulletin section
     refInterval = setInterval(() => {
         if (isInViewport(first)) {
-            idxDynamicInfo = (idxDynamicInfo + 1) % eventInfo.length;
-            const data = eventInfo[idxDynamicInfo];
-            bulletin.style.animation = "move2 1.2s ease forwards;"
-            displayDynamicInfo(data.heading, data.content);
-            counter = (counter + 1) % images.length;
-            slide();
+            requestAnimationFrame(() => {
+                idxDynamicInfo = (idxDynamicInfo + 1) % eventInfo.length;
+                const data = eventInfo[idxDynamicInfo];
+                bulletin.style.animation = "move2 1.2s ease forwards;"
+                displayDynamicInfo(data.heading, data.content);
+                counter = (counter + 1) % images.length;
+                slide();
+            })
         }
     }, 5000);
 };
@@ -78,24 +83,28 @@ window.addEventListener('resize', imgSize);
 window.addEventListener('load', imgSize);
 
 nArrow.addEventListener('click', e => {
-    clearInterval(refInterval);
-    idxDynamicInfo = (idxDynamicInfo + 1) % eventInfo.length;
-    const data = eventInfo[idxDynamicInfo];
-    displayDynamicInfo(data.heading, data.content);
-    counter = (counter + 1) % images.length;
-    slide();
-    changeDynamicInfo();
+    requestAnimationFrame(() => {
+        clearInterval(refInterval);
+        idxDynamicInfo = (idxDynamicInfo + 1) % eventInfo.length;
+        const data = eventInfo[idxDynamicInfo];
+        displayDynamicInfo(data.heading, data.content);
+        counter = (counter + 1) % images.length;
+        slide();
+        changeDynamicInfo();
+    });
 })
 pArrow.addEventListener('click', e => {
-    clearInterval(refInterval);
-    idxDynamicInfo--;
-    if (idxDynamicInfo < 0) idxDynamicInfo = eventInfo.length - 1;
-    const data = eventInfo[idxDynamicInfo];
-    displayDynamicInfo(data.heading, data.content);
-    counter--;
-    if (counter < 0) counter = images.length - 1;
-    slide();
-    changeDynamicInfo();
+    requestAnimationFrame(() => {
+        clearInterval(refInterval);
+        idxDynamicInfo--;
+        if (idxDynamicInfo < 0) idxDynamicInfo = eventInfo.length - 1;
+        const data = eventInfo[idxDynamicInfo];
+        displayDynamicInfo(data.heading, data.content);
+        counter--;
+        if (counter < 0) counter = images.length - 1;
+        slide();
+        changeDynamicInfo();
+    });
 })
 
 
@@ -110,13 +119,16 @@ body.style.overflow = "hidden";
 if (!sessionStorage.getItem('loadingPage')) {
     sessionStorage.setItem('loadingPage', 'true');
     setTimeout(() => {
-        loadingPage.style.scale = "40";
-        welcomeAotImg.style.filter = "invert(100%) opacity(0%)";
-        loadingPage.style.backgroundColor = "rgb(0,0,0,0)";
-        setTimeout(() => {
-            loadingPage.style.zIndex = "-10";
-            body.style.overflow = "auto";
-        }, 1000);
+        requestAnimationFrame(() => {
+
+            loadingPage.style.scale = "40";
+            welcomeAotImg.style.filter = "invert(100%) opacity(0%)";
+            loadingPage.style.backgroundColor = "rgb(0,0,0,0)";
+            setTimeout(() => {
+                loadingPage.style.zIndex = "-10";
+                body.style.overflow = "auto";
+            }, 1000);
+        })
     }, 2000);
 }
 else {
