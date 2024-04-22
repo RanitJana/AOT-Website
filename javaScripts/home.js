@@ -1,32 +1,17 @@
 let first = document.querySelector('.first');
 let bulletin = document.querySelector('#bulletin');
-let bulletinH2 = document.querySelector('#bulletin h2');
-let bulletinP = document.querySelector('#bulletin p');
-let blackCover = document.querySelector('.black-cover');
 let loadingPage = document.querySelector('.loadingPage');
 let welcomeAotImg = document.querySelector('.loadingPage img');
-let imgContainer = document.querySelector('.imgContainer');
-let pArrow = document.querySelector('.prev-arrow');
-let nArrow = document.querySelector('.next-arrow');
+let pArrow = document.querySelector('.swiper-button-prev');
+let nArrow = document.querySelector('.swiper-button-next');
 let eventInfo;
 let idxDynamicInfo = 0;
-let counter = 0;
-let refInterval;
+let refInterval = null;
 let images = document.querySelectorAll('.slide');
 let lessImages = ['./assets/bulletinImage/first.webp', './assets/bulletinImage/second.webp', './assets/bulletinImage/third.webp', './assets/bulletinImage/fourth.webp', './assets/bulletinImage/fifth.webp', './assets/bulletinImage/sixth.webp', './assets/bulletinImage/seventh.webp', './assets/bulletinImage/eighth.webp', './assets/bulletinImage/ninth.webp'];
 let bigImages = ['./assets/bulletinImage/firstBig.webp', './assets/bulletinImage/secondBig.webp', './assets/bulletinImage/thirdBig.webp', './assets/bulletinImage/fourthBig.webp', './assets/bulletinImage/fifthBig.webp', './assets/bulletinImage/sixthBig.webp', './assets/bulletinImage/seventhBig.webp', './assets/bulletinImage/eighthBig.webp', './assets/bulletinImage/ninthBig.webp'];
 
 //functions
-function isInViewport(element) {
-    var rect = element.getBoundingClientRect();
-    return (
-        rect.top >= -1 &&
-        rect.left >= -1 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) + 1 &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth) + 1
-    );
-}
-
 const displayDynamicInfo = function (head, text) {  //function to write html elements
     bulletin.innerHTML =
         `
@@ -34,36 +19,21 @@ const displayDynamicInfo = function (head, text) {  //function to write html ele
             <P>${text}</P>
         `;
 };
-images.forEach((val, idx) => {
-    val.style.left = `${idx * 100}%`;
-})
-let slide = () => {
-    requestAnimationFrame(() => {
-        images.forEach((val, idx) => {
-            val.style.transform = `translateX(-${counter * 100}%)`;
-        })
-    })
-}
+
 async function getDynamicData() {   //use to fetch json data from bulletinInfo folder
     let res = await fetch('./assets/bulletinInfo/bulletinInfo.json');
     let text = await res.json();
-    eventInfo = text;
-    console.log(eventInfo);
+    return text;
 };
 
 let changeDynamicInfo = () => { //function to change json info in bulletin section
     refInterval = setInterval(() => {
-        if (isInViewport(first)) {
-            requestAnimationFrame(() => {
-                idxDynamicInfo = (idxDynamicInfo + 1) % eventInfo.length;
-                const data = eventInfo[idxDynamicInfo];
-                bulletin.style.animation = "move2 1.2s ease forwards;"
-                displayDynamicInfo(data.heading, data.content);
-                counter = (counter + 1) % images.length;
-                slide();
-            })
-        }
-    }, 5000);
+        requestAnimationFrame(() => {
+            idxDynamicInfo = (idxDynamicInfo + 1) % eventInfo.length;
+            const data = eventInfo[idxDynamicInfo];
+            displayDynamicInfo(data.heading, data.content);
+        })
+    }, 6000);
 };
 
 //events
@@ -79,41 +49,23 @@ function imgSize() {
         })
     }
 }
-window.addEventListener('resize', imgSize);
-window.addEventListener('load', imgSize);
-
-nArrow.addEventListener('click', e => {
-    requestAnimationFrame(() => {
-        clearInterval(refInterval);
-        idxDynamicInfo = (idxDynamicInfo + 1) % eventInfo.length;
-        const data = eventInfo[idxDynamicInfo];
-        displayDynamicInfo(data.heading, data.content);
-        counter = (counter + 1) % images.length;
-        slide();
-        changeDynamicInfo();
-    });
-})
-pArrow.addEventListener('click', e => {
-    requestAnimationFrame(() => {
-        clearInterval(refInterval);
-        idxDynamicInfo--;
-        if (idxDynamicInfo < 0) idxDynamicInfo = eventInfo.length - 1;
-        const data = eventInfo[idxDynamicInfo];
-        displayDynamicInfo(data.heading, data.content);
-        counter--;
-        if (counter < 0) counter = images.length - 1;
-        slide();
-        changeDynamicInfo();
-    });
-})
-
+window.addEventListener('resize', () => {
+    requestAnimationFrame(imgSize);
+});
+window.addEventListener('load', () => {
+    requestAnimationFrame(imgSize);
+});
 
 //main content
-getDynamicData().then(() => {
-    const data = eventInfo[idxDynamicInfo];
-    displayDynamicInfo(data.heading, data.content);
-    idxDynamicInfo++;
-});
+getDynamicData()
+    .then((res) => {
+        eventInfo = res;
+        const data = eventInfo[idxDynamicInfo];
+        displayDynamicInfo(data.heading, data.content);
+        idxDynamicInfo++;
+    }).catch(err => {
+        console.log(err);
+    })
 
 body.style.overflow = "hidden";
 if (!sessionStorage.getItem('loadingPage')) {
@@ -135,7 +87,42 @@ else {
     body.style.overflow = "auto";
     loadingPage.style.display = "none";
 }
-changeDynamicInfo();
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    speed: 1500,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+        delay: 5000,
+    },
+});
+requestAnimationFrame(changeDynamicInfo);
+
+nArrow.addEventListener('click', () => {
+    clearInterval(refInterval);
+    idxDynamicInfo = (idxDynamicInfo + 1) % eventInfo.length;
+    const data = eventInfo[idxDynamicInfo];
+    requestAnimationFrame(() => {
+        displayDynamicInfo(data.heading, data.content);
+    })
+})
+pArrow.addEventListener('click', () => {
+    clearInterval(refInterval);
+    idxDynamicInfo--;
+    if (idxDynamicInfo < 0) idxDynamicInfo = eventInfo.length - 1;
+    const data = eventInfo[idxDynamicInfo];
+    requestAnimationFrame(() => {
+        displayDynamicInfo(data.heading, data.content);
+    })
+})
 //announcement section
 
 function announceSeeMore() {

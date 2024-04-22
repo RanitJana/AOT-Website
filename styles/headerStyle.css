@@ -129,8 +129,8 @@ main {
     .banner {
         flex-direction: column;
         padding-top: 0;
+        padding-bottom: 0;
     }
-
     .hamberg-menu {
         display: flex;
         z-index: 12;
@@ -151,6 +151,9 @@ main {
 }
 
 @media only screen and (max-width:514px) {
+    .banner .left img{
+        width: 6rem;
+    }
     .banner .middle h1 {
         font-size: 1.95rem;
         line-height: 2rem;

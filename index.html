@@ -7,10 +7,13 @@
     <meta name="keywords" content="AOT,Academy Of Technology,engineering, college,MCA,B.Tech,Tech Fest">
     <meta name="description" content="AOT,Academy Of Technology,engineering, college,MCA,B.Tech,Tech Fest">
     <meta name="robots" content="index, follow">
+    <link rel="shortcut icon" href="./assets/images/favicon.jfif" type="image/x-icon">
     <link rel="stylesheet" href="./styles/headerStyle.css">
     <link rel="stylesheet" href="./styles/homeStyle.css">
     <link rel="stylesheet" href="./styles/breakingNews.css">
     <link rel="stylesheet" href="./styles/footerStyle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <title>Home</title>
 </head>
 
@@ -162,7 +165,6 @@
         </div> -->
         <section class="content">
             <section class="first">
-                <div class="black-cover"></div>
                 <div class="newsBox">
                     <a href="" id="bulletin">
                         <h2>Loading...</h2>
@@ -171,22 +173,30 @@
                         </P>
                     </a>
                 </div>
-                <div class="imgContainer">
-                    <img src="./assets/bulletinImage/first.webp" class="slide" alt="">
-                    <img src="./assets/bulletinImage/second.webp" class="slide" alt="" loading="lazy">
-                    <img src="./assets/bulletinImage/third.webp" class="slide" alt="" loading="lazy">
-                    <img src="./assets/bulletinImage/fourth.webp" class="slide" alt="" loading="lazy">
-                    <img src=" ./assets/bulletinImage/fifth.webp" class="slide" alt="" loading="lazy">
-                    <img src=" ./assets/bulletinImage/sixth.webp" class="slide" alt="" loading="lazy">
-                    <img src=" ./assets/bulletinImage/seventh.webp" class="slide" alt="" loading="lazy">
-                    <img src=" ./assets/bulletinImage/eighth.webp" class="slide" alt="" loading="lazy">
-                    <img src=" ./assets/bulletinImage/ninth.webp" class="slide" alt="" loading="lazy">
-                </div>
-                <div class=" prev-arrow">
-                    <img src="./assets/images/icons8-forward-52.webp" loading="lazy" alt="Error">
-                </div>
-                <div class="next-arrow">
-                    <img src="./assets/images/icons8-forward-52.webp" loading="lazy" alt="Error">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="./assets/bulletinImage/first.webp" class="slide" alt=""
+                                loading="eager"></div>
+                        <div class="swiper-slide"><img src="./assets/bulletinImage/second.webp" class="slide" alt=""
+                                loading="lazy"></div>
+                        <div class="swiper-slide"><img src="./assets/bulletinImage/third.webp" class="slide" alt=""
+                                loading="lazy"></div>
+                        <div class="swiper-slide"><img src="./assets/bulletinImage/fourth.webp" class="slide" alt=""
+                                loading="lazy"></div>
+                        <div class="swiper-slide"><img src=" ./assets/bulletinImage/fifth.webp" class="slide" alt=""
+                                loading="lazy"></div>
+                        <div class="swiper-slide"><img src=" ./assets/bulletinImage/sixth.webp" class="slide" alt=""
+                                loading="lazy"></div>
+                        <div class="swiper-slide"><img src=" ./assets/bulletinImage/seventh.webp" class="slide" alt=""
+                                loading="lazy"></div>
+                        <div class="swiper-slide"><img src=" ./assets/bulletinImage/eighth.webp" class="slide" alt=""
+                                loading="lazy"></div>
+                        <div class="swiper-slide"><img src=" ./assets/bulletinImage/ninth.webp" class="slide" alt=""
+                                loading="lazy"></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </section>
             <section class="second">
@@ -306,7 +316,7 @@
             </div>
         </div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./javaScripts/header.js" defer></script>
     <script src="./javaScripts/home.js" defer></script>
 </body>
