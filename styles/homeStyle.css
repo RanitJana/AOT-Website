@@ -369,7 +369,6 @@ main>.content section div a {
 
 main>.content>.first {
     position: relative;
-    min-height: 500px;
     border-radius: 8px;
     background-color: var(--aot-light-color--);
     display: flex;
@@ -390,9 +389,6 @@ main>.content>.first {
 }
 
 .swiper {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -660,7 +656,7 @@ nav a {
 /*media-query*/
 @media only screen and (min-width:1257px) {
     .first {
-        max-height: 70%;
+        max-height: 74.7%;
     }
 
     .second {
@@ -682,7 +678,7 @@ nav a {
     }
 
     main>.content .first {
-        max-height: 5rem;
+        max-height: 27rem;
     }
 
     #bulletin h2 {
@@ -773,7 +769,18 @@ nav a {
         width: 100%;
     }
 }
-
+@media only screen and (max-width:546px){
+    .first{
+        max-height: 10rem;
+        min-height: 354px;
+    }
+    #bulletin h2{
+        font-size: 2rem;
+    }
+    #bulletin p{
+        font-size: 1rem;
+    }
+} 
 @media only screen and (max-width:422px) {
     .fourth h2 {
         padding: 1rem;
