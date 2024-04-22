@@ -16,6 +16,16 @@ let lessImages = ['./assets/bulletinImage/first.webp', './assets/bulletinImage/s
 let bigImages = ['./assets/bulletinImage/firstBig.webp', './assets/bulletinImage/secondBig.webp', './assets/bulletinImage/thirdBig.webp', './assets/bulletinImage/fourthBig.webp', './assets/bulletinImage/fifthBig.webp', './assets/bulletinImage/sixthBig.webp', './assets/bulletinImage/seventhBig.webp', './assets/bulletinImage/eighthBig.webp', './assets/bulletinImage/ninthBig.webp'];
 
 //functions
+function isInViewport(element) {
+    var rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
 const displayDynamicInfo = function (head, text) {  //function to write html elements
     bulletin.innerHTML =
         `
@@ -40,12 +50,14 @@ async function getDynamicData() {   //use to fetch json data from bulletinInfo f
 
 let changeDynamicInfo = () => { //function to change json info in bulletin section
     refInterval = setInterval(() => {
-        idxDynamicInfo = (idxDynamicInfo + 1) % eventInfo.length;
-        const data = eventInfo[idxDynamicInfo];
-        bulletin.style.animation = "move2 1.2s ease forwards;"
-        displayDynamicInfo(data.heading, data.content);
-        counter = (counter + 1) % images.length;
-        slide();
+        if (isInViewport(first)) {
+            idxDynamicInfo = (idxDynamicInfo + 1) % eventInfo.length;
+            const data = eventInfo[idxDynamicInfo];
+            bulletin.style.animation = "move2 1.2s ease forwards;"
+            displayDynamicInfo(data.heading, data.content);
+            counter = (counter + 1) % images.length;
+            slide();
+        }
     }, 5000);
 };
 
