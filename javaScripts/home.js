@@ -1,5 +1,7 @@
 let first = document.querySelector('.first');
 let bulletin = document.querySelector('#bulletin');
+let bulletinH2 = document.querySelector('#bulletin h2');
+let bulletinP = document.querySelector('#bulletin p');
 let blackCover = document.querySelector('.black-cover');
 let loadingPage = document.querySelector('.loadingPage');
 let welcomeAotImg = document.querySelector('.loadingPage img');
@@ -7,23 +9,26 @@ let pArrow = document.querySelector('.prev-arrow');
 let nArrow = document.querySelector('.next-arrow');
 let eventInfo;
 let idxDynamicInfo = 0;
-let idxImg = 5;
+let counter = 0;
 let refInterval;
-let imagesMobile = ['../assets/bulletinImage/first.webp', '../assets/bulletinImage/second.webp', '../assets/bulletinImage/third.webp', '../assets/bulletinImage/fourth.webp', '../assets/bulletinImage/fifth.webp', '../assets/bulletinImage/sixth.webp', '../assets/bulletinImage/seventh.webp', '../assets/bulletinImage/eighth.webp', '../assets/bulletinImage/ninth.webp'];
-let imagesDesktop = ['../assets/bulletinImage/firstBig.webp', '../assets/bulletinImage/secondBig.webp', '../assets/bulletinImage/thirdBig.webp', '../assets/bulletinImage/fourthBig.webp', '../assets/bulletinImage/fifthBig.webp', '../assets/bulletinImage/sixthBig.webp', '../assets/bulletinImage/seventhBig.webp', '../assets/bulletinImage/eighthBig.webp', '../assets/bulletinImage/ninthBig.webp'];
-
-
-let systemImage = screen.width > 480 ? imagesDesktop : imagesMobile;
-
+let images = document.querySelectorAll('.slide');
 
 //functions
 const displayDynamicInfo = function (head, text) {  //function to write html elements
     bulletin.innerHTML =
         `
-    <h2>${head}</h2>
-    <P>${text}</P>
-`;
+            <h2>${head}</h2>
+            <P>${text}</P>
+        `;
 };
+images.forEach((val, idx) => {
+    val.style.left = `${idx * 100}%`;
+})
+let slide = () => {
+    images.forEach((val, idx) => {
+        val.style.transform = `translateX(-${counter * 100}%)`;
+    })
+}
 async function getDynamicData() {   //use to fetch json data from bulletinInfo folder
     let res = await fetch('../assets/bulletinInfo/bulletinInfo.json');
     let text = await res.json();
@@ -31,33 +36,16 @@ async function getDynamicData() {   //use to fetch json data from bulletinInfo f
     console.log(eventInfo);
 };
 
-let changeDynamicPictures = () => { //function to change pictures in bulletin section
-    first.style.backgroundImage = `url('${systemImage[idxImg]}')`;
-    idxImg = (idxImg + 1) % systemImage.length;
-    blackCover.style.backgroundImage = `url('${systemImage[idxImg]}')`;
-}
 let changeDynamicInfo = () => { //function to change json info in bulletin section
     refInterval = setInterval(() => {
         idxDynamicInfo = (idxDynamicInfo + 1) % eventInfo.length;
         const data = eventInfo[idxDynamicInfo];
+        bulletin.style.animation = "move2 1.2s ease forwards;"
         displayDynamicInfo(data.heading, data.content);
-        changeDynamicPictures();
+        counter = (counter + 1) % images.length;
+        slide();
     }, 5000);
 };
-//functions to preload images
-function imageLoaded(src, alt = '') {
-    return new Promise((resolve) => {
-        const image = document.createElement('img');
-        image.setAttribute('src', src);
-        image.setAttribute('alt', alt);
-        image.addEventListener('load', () => resolve(image));
-    });
-}
-async function preloadImages(images) {
-    const promises = images.map(imageLoaded);
-    return await Promise.all(promises);
-}
-
 
 //events
 nArrow.addEventListener('click', e => {
@@ -65,7 +53,8 @@ nArrow.addEventListener('click', e => {
     idxDynamicInfo = (idxDynamicInfo + 1) % eventInfo.length;
     const data = eventInfo[idxDynamicInfo];
     displayDynamicInfo(data.heading, data.content);
-    changeDynamicPictures();
+    counter = (counter + 1) % images.length;
+    slide();
     changeDynamicInfo();
 })
 pArrow.addEventListener('click', e => {
@@ -74,7 +63,9 @@ pArrow.addEventListener('click', e => {
     if (idxDynamicInfo < 0) idxDynamicInfo = eventInfo.length - 1;
     const data = eventInfo[idxDynamicInfo];
     displayDynamicInfo(data.heading, data.content);
-    changeDynamicPictures();
+    counter--;
+    if (counter < 0) counter = images.length - 1;
+    slide();
     changeDynamicInfo();
 })
 
@@ -103,17 +94,7 @@ else {
     body.style.overflow = "auto";
     loadingPage.style.display = "none";
 }
-
-window.addEventListener('load', () => {
-    preloadImages(systemImage)
-        .then((image) => {
-            changeDynamicInfo();
-        })
-        .catch((error) => {
-            console.error("Failed to preload images:", error);
-        });
-})
-
+changeDynamicInfo();
 //announcement section
 
 function announceSeeMore() {
