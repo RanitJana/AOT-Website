@@ -12,6 +12,8 @@ let idxDynamicInfo = 0;
 let counter = 0;
 let refInterval;
 let images = document.querySelectorAll('.slide');
+let lessImages = ['./assets/bulletinImage/first.webp', './assets/bulletinImage/second.webp', './assets/bulletinImage/third.webp', './assets/bulletinImage/fourth.webp', './assets/bulletinImage/fifth.webp', './assets/bulletinImage/sixth.webp', './assets/bulletinImage/seventh.webp', './assets/bulletinImage/eighth.webp', './assets/bulletinImage/ninth.webp'];
+let bigImages = ['./assets/bulletinImage/firstBig.webp', './assets/bulletinImage/secondBig.webp', './assets/bulletinImage/thirdBig.webp', './assets/bulletinImage/fourthBig.webp', './assets/bulletinImage/fifthBig.webp', './assets/bulletinImage/sixthBig.webp', './assets/bulletinImage/seventhBig.webp', './assets/bulletinImage/eighthBig.webp', './assets/bulletinImage/ninthBig.webp'];
 
 //functions
 const displayDynamicInfo = function (head, text) {  //function to write html elements
@@ -30,7 +32,7 @@ let slide = () => {
     })
 }
 async function getDynamicData() {   //use to fetch json data from bulletinInfo folder
-    let res = await fetch('../assets/bulletinInfo/bulletinInfo.json');
+    let res = await fetch('./assets/bulletinInfo/bulletinInfo.json');
     let text = await res.json();
     eventInfo = text;
     console.log(eventInfo);
@@ -48,6 +50,18 @@ let changeDynamicInfo = () => { //function to change json info in bulletin secti
 };
 
 //events
+window.addEventListener('resize', () => {
+    if (screen.width < 650) {
+        images.forEach((val, idx) => {
+            val.setAttribute('src', lessImages[idx]);
+        })
+    }
+    else {
+        images.forEach((val, idx) => {
+            val.setAttribute('src', bigImages[idx]);
+        })
+    }
+})
 nArrow.addEventListener('click', e => {
     clearInterval(refInterval);
     idxDynamicInfo = (idxDynamicInfo + 1) % eventInfo.length;
