@@ -50,7 +50,7 @@ let changeDynamicInfo = () => { //function to change json info in bulletin secti
 };
 
 //events
-window.addEventListener('resize', () => {
+function imgSize() {
     if (screen.width < 650) {
         images.forEach((val, idx) => {
             val.setAttribute('src', lessImages[idx]);
@@ -61,7 +61,10 @@ window.addEventListener('resize', () => {
             val.setAttribute('src', bigImages[idx]);
         })
     }
-})
+}
+window.addEventListener('resize', imgSize);
+window.addEventListener('load', imgSize);
+
 nArrow.addEventListener('click', e => {
     clearInterval(refInterval);
     idxDynamicInfo = (idxDynamicInfo + 1) % eventInfo.length;
