@@ -102,6 +102,15 @@ span.prev:hover {
     }
 }
 
+.headings{
+    background-color: #232C69;
+    color: white;
+    text-align: center;
+    padding: 8px 0px;
+    margin-top: 20px;
+    font-size: 1.7em;
+}
+
 /* ====================     infrastructure section     ============================ */
 
 .infrastructure {
@@ -149,8 +158,7 @@ span.prev:hover {
 
 .achivement{
     display: flex;
-    width: 45%;
-    min-width: 200px;
+    min-width: 45%;
     max-width: 300px;
     height: 190px;
     background-color: aquamarine;
@@ -189,6 +197,17 @@ span.prev:hover {
 
 
 
+/* =================================    curriculum    ============================= */
+
+.curriculum{
+    padding: 20px 30px;
+}
+
+.curriculum ul li{
+    font-size: 1.2em;
+}
+
+/* ======================================    research   =============================== */
 
 
 
