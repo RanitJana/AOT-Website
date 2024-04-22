@@ -137,3 +137,6 @@ allchild.forEach((allchilds, idx) => {
         event.stopPropagation();
     }, false)
 })
+hambergMenu.addEventListener('click', () => {
+    
+})
