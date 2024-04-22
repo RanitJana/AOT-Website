@@ -1,10 +1,12 @@
 @import url(basicStyles.css);
 
-.center{
+
+.center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .intro-slide-container {
     width: 100%;
     height: 580px;
@@ -102,7 +104,7 @@ span.prev:hover {
     }
 }
 
-.headings{
+.headings {
     background-color: #232C69;
     color: white;
     text-align: center;
@@ -133,30 +135,30 @@ span.prev:hover {
     align-items: center;
     color: white;
     border-radius: 7px;
-    
+
 }
 
 
 
 /* =======================    achivements and Academic Programs      =============== */
 
-.achivementsPrograms{
+.achivementsPrograms {
     display: flex;
     padding: 10px;
 
-    
+
 }
 
-.achivementsPrograms .achivements{
+.achivementsPrograms .achivements {
     max-width: 69.999%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    
+
 
 }
 
-.achivement{
+.achivement {
     display: flex;
     min-width: 45%;
     max-width: 300px;
@@ -171,17 +173,17 @@ span.prev:hover {
 
 
 /* ===========================   programs   ======================== */
-.achivementsPrograms .programs{
+.achivementsPrograms .programs {
     width: 29.999%;
     background-color: rgb(175, 175, 239);
-    padding: 10px 7px ;
+    padding: 10px 7px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 
-.program{
+.program {
     display: flex;
     width: 90%;
     height: 100px;
@@ -191,7 +193,7 @@ span.prev:hover {
     margin: 10px 0px;
 }
 
-.program p{
+.program p {
     text-align: center;
 }
 
@@ -199,15 +201,75 @@ span.prev:hover {
 
 /* =================================    curriculum    ============================= */
 
-.curriculum{
+.curriculum {
     padding: 20px 30px;
 }
 
-.curriculum ul li{
+.curriculum ul {
+    list-style-type: circle;
+}
+
+.curriculum ul li {
     font-size: 1.2em;
 }
 
 /* ======================================    research   =============================== */
+
+
+.research {
+    padding: 20px 30px;
+}
+
+.research ul {
+    list-style-type: circle;
+}
+
+.research ul li {
+    font-size: 1.2em;
+}
+.research ul li a{
+    text-decoration: none;
+    color: #222;
+}
+
+/* =================================== faq  ============================= */
+
+.faqs{
+    padding: 0px 10px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 15px;
+    text-align: left;
+}
+
+.faq{
+    padding: 10px 0px;
+}
+.faq p a{
+    text-decoration: none;
+    color: #222;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
