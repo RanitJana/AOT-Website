@@ -769,18 +769,22 @@ nav a {
         width: 100%;
     }
 }
-@media only screen and (max-width:546px){
-    .first{
+
+@media only screen and (max-width:546px) {
+    .first {
         max-height: 10rem;
         min-height: 354px;
     }
-    #bulletin h2{
+
+    #bulletin h2 {
         font-size: 2rem;
     }
-    #bulletin p{
+
+    #bulletin p {
         font-size: 1rem;
     }
-} 
+}
+
 @media only screen and (max-width:422px) {
     .fourth h2 {
         padding: 1rem;
@@ -815,5 +819,28 @@ nav a {
     #bulletin p {
         font-size: 1rem;
         line-height: 1rem;
+    }
+}
+
+@media only screen and (max-width:394px) {
+
+    .second h2 span,
+    .third>h2,
+    .fourth>h2 {
+        font-size: 1.3rem;
+    }
+
+    .second .content .sub-content .updateBox a {
+        font-size: 0.9rem;
+        line-height: 0.9rem;
+    }
+
+    .third .about .story p {
+        font-size: 0.9rem;
+    }
+
+    .fourth .companies .company span {
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
     }
 }
