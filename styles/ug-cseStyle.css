@@ -127,21 +127,20 @@ span.prev:hover {
     display: flex;
     flex-direction: column;
     text-align: center;
-    height: 150px;
-    width: 250px;
+    height: 160px;
+    width: 275px;
     /* background-color: #3846a2; */
     margin: 10px;
     justify-content: center;
     align-items: center;
     border-radius: 7px;
     transition: all 0.4s;
+    padding: 10px;
+    background-color: rgb(242, 242, 242);
+    box-shadow: -5px 5px 5px #d7d7d7;
 }
 
 .facility:hover {
-    /* background-color: #232C69;
-    box-shadow: 3px 3px 3px black, 7px 7px 5px grey;
-    transform: scalex(1.03);
-    transform: scaley(1.03); */
     background: var(--aot-color--);
     color: #fff;
     box-shadow: -3px 3px 3px rgb(56, 56, 56), -5px 7px 5px 5px rgba(35, 44, 105, 0.5);
@@ -151,7 +150,7 @@ span.prev:hover {
 
 
 
-/* =======================    achivements and Academic Programs      =============== */
+/* =======================    Achivements and Academic Programs      =============== */
 
 .achivementsPrograms {
     display: flex;
@@ -161,7 +160,7 @@ span.prev:hover {
 }
 
 .achivementsPrograms .achivements {
-    max-width: 69.999%;
+    width: 69.999%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -171,26 +170,39 @@ span.prev:hover {
 
 .achivement {
     display: flex;
-    min-width: 45%;
-    max-width: 300px;
+    min-width: 47%;
+    max-width: 340px;
     height: 190px;
-    background-color: aquamarine;
+    background-color: rgb(188, 255, 233);
     flex-direction: column;
     text-align: center;
     border-radius: 7px;
     margin: 10px;
+    border: 2px solid black;
+    box-shadow: -5px 5px 5px #d7d7d7;
+    transition: all 0.4s;
+}
+.achivement:hover{
+    box-shadow: -3px 3px 3px rgb(56, 56, 56), -5px 7px 5px 5px rgba(35, 44, 105, 0.5);
+    transform: translate(5px, -10px);
 }
 
 
-
 /* ===========================   programs   ======================== */
+
+
 .achivementsPrograms .programs {
     width: 29.999%;
-    background-color: rgb(175, 175, 239);
-    padding: 10px 7px;
+    padding: 10px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 8px;
+}
+
+.programList{
+    width: 100%;
+    flex-direction: column;
 }
 
 
@@ -202,12 +214,55 @@ span.prev:hover {
     border: 3px solid black;
     border-radius: 7px;
     margin: 10px 0px;
+    flex-direction: column;
+    padding: 5px;
+    transition: all 0.4s;
+}
+.program:hover{
+    box-shadow: -3px 3px 3px rgb(56, 56, 56), -5px 7px 5px 5px rgba(35, 44, 105, 0.5);
+    transform: translate(5px, -10px);
 }
 
 .program p {
     text-align: center;
 }
 
+@media only screen and (max-width: 1000px) and (min-width: 600px) {
+    .achivementsPrograms .achivements{
+        width: 59.99%;
+    }
+    .achivementsPrograms .programs {
+        width: 39.99%;
+    }    
+}
+@media only screen and (max-width: 650px){
+    .achivementsPrograms{
+        display: flex;
+        flex-direction: column;
+    }
+    .achivementsPrograms .achivements{
+        width: 100%;
+    }
+    .achivementsPrograms .programs {
+        width: 100%;
+    }   
+    .program{
+        min-width: 47%;
+        max-width: 340px;
+    }
+    .programHeading h2{
+        width: 100dvw;
+        background-color: #232C69;
+        color: white;
+        text-align: center;
+        padding: 8px 0px;
+        margin-top: 20px;
+        font-size: 1.7em;
+
+    }
+    
+
+}
 
 
 /* =================================    curriculum    ============================= */
@@ -221,7 +276,7 @@ span.prev:hover {
 }
 
 .curriculum ul li {
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 /* ======================================    research   =============================== */
@@ -236,7 +291,7 @@ span.prev:hover {
 }
 
 .research ul li {
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 .research ul li a {
