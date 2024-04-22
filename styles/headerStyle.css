@@ -11,6 +11,7 @@ header {
     flex-direction: column;
     z-index: 99;
     position: relative;
+    background-color: white;
 }
 
 .hamberg-menu {
