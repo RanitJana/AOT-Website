@@ -21,7 +21,7 @@ h3{
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
 }
 
-.info1,.info2,.info3,.info4,.info5,.info6{
+.info1,.info2,.info3,.info4,.info5,.info6,.info7{
     /* position: relative; */
     padding: 1rem;
     background-color: var(--aot-light-color--);
@@ -31,6 +31,12 @@ h3{
     grid-template-areas: 
     'box '
     'image';
+}
+
+#singer{
+    width: 100%;
+    padding: 2rem;
+    /* padding: 10px; */
 }
 
 .box{
@@ -52,6 +58,7 @@ img{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    /* position: fixed; */
     border-radius: 10px;
     opacity: 0.9;
 }
@@ -68,7 +75,7 @@ img{
     .box{
         width: 80%;
     }
-    .info1,.info2{
+    .info1,.info2,.info7{
         display: grid;
         grid-template-areas: 
         'box image';
@@ -82,5 +89,8 @@ img{
     h3{
         margin-left: auto;
         margin-right: auto;
+    }
+    #wp3 img{
+        width: 100%;
     }
 }
