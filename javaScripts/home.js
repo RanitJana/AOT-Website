@@ -4,6 +4,7 @@ let loadingPage = document.querySelector('.loadingPage');
 let welcomeAotImg = document.querySelector('.loadingPage img');
 let pArrow = document.querySelector('.swiper-button-prev');
 let nArrow = document.querySelector('.swiper-button-next');
+let images = document.querySelectorAll('.slide');
 let eventInfo;
 let refInterval = null;
 let lessImages = ['./assets/bulletinImage/first.webp', './assets/bulletinImage/second.webp', './assets/bulletinImage/third.webp', './assets/bulletinImage/fourth.webp', './assets/bulletinImage/fifth.webp', './assets/bulletinImage/sixth.webp', './assets/bulletinImage/seventh.webp', './assets/bulletinImage/eighth.webp', './assets/bulletinImage/ninth.webp'];
