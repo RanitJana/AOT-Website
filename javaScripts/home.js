@@ -74,7 +74,7 @@ getDynamicData()
     .then((res) => {
         eventInfo = res;
         const data = eventInfo[idxDynamicInfo];
-        // displayDynamicInfo(data.heading, data.content);
+        displayDynamicInfo(data.heading, data.content);
         idxDynamicInfo++;
     }).catch(err => {
         console.log(err);
@@ -104,7 +104,7 @@ var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 0,
     loop: true,
-    speed: 1000,
+    speed: 1500,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -124,7 +124,7 @@ nArrow.addEventListener('click', () => {
     idxDynamicInfo = (idxDynamicInfo + 1) % eventInfo.length;
     const data = eventInfo[idxDynamicInfo];
     requestAnimationFrame(() => {
-        // displayDynamicInfo(data.heading, data.content);
+        displayDynamicInfo(data.heading, data.content);
     })
 })
 pArrow.addEventListener('click', () => {
@@ -133,7 +133,7 @@ pArrow.addEventListener('click', () => {
     if (idxDynamicInfo < 0) idxDynamicInfo = eventInfo.length - 1;
     const data = eventInfo[idxDynamicInfo];
     requestAnimationFrame(() => {
-        // displayDynamicInfo(data.heading, data.content);
+        displayDynamicInfo(data.heading, data.content);
     })
 })
 //announcement section
