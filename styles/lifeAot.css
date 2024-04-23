@@ -33,9 +33,10 @@ h3{
     'image';
 }
 
-#singer{
+#singer img{
     width: 100%;
     padding: 2rem;
+    object-fit: contain;
     /* padding: 10px; */
 }
 
