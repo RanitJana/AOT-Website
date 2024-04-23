@@ -1,55 +1,15 @@
 let first = document.querySelector('.first');
-let bulletin = document.querySelector('#bulletin');
+let bulletin = document.querySelectorAll('#bulletin');
 let loadingPage = document.querySelector('.loadingPage');
 let welcomeAotImg = document.querySelector('.loadingPage img');
 let pArrow = document.querySelector('.swiper-button-prev');
 let nArrow = document.querySelector('.swiper-button-next');
 let eventInfo;
-let idxDynamicInfo = 0;
 let refInterval = null;
-let images = document.querySelectorAll('.slide');
 let lessImages = ['./assets/bulletinImage/first.webp', './assets/bulletinImage/second.webp', './assets/bulletinImage/third.webp', './assets/bulletinImage/fourth.webp', './assets/bulletinImage/fifth.webp', './assets/bulletinImage/sixth.webp', './assets/bulletinImage/seventh.webp', './assets/bulletinImage/eighth.webp', './assets/bulletinImage/ninth.webp'];
 let bigImages = ['./assets/bulletinImage/firstBig.webp', './assets/bulletinImage/secondBig.webp', './assets/bulletinImage/thirdBig.webp', './assets/bulletinImage/fourthBig.webp', './assets/bulletinImage/fifthBig.webp', './assets/bulletinImage/sixthBig.webp', './assets/bulletinImage/seventhBig.webp', './assets/bulletinImage/eighthBig.webp', './assets/bulletinImage/ninthBig.webp'];
 
 //functions
-/*
-const displayDynamicInfo = function (head, text) {  //function to write html elements
-    bulletin.innerHTML =
-        `
-            <h2>${head}</h2>
-            <P>${text}</P>
-        `;
-};*/
-
-const displayDynamicInfo = function (head, text) {  
-    bulletin.innerHTML = '';  // Clear previous content
-    const heading = document.createElement('h2');
-    heading.textContent = head;
-    bulletin.appendChild(heading);
-
-    const paragraph = document.createElement('p');
-    paragraph.textContent = text;
-    bulletin.appendChild(paragraph);
-};
-
-
-async function getDynamicData() {   //use to fetch json data from bulletinInfo folder
-    let res = await fetch('./assets/bulletinInfo/bulletinInfo.json');
-    let text = await res.json();
-    return text;
-};
-
-let changeDynamicInfo = () => { //function to change json info in bulletin section
-    refInterval = setInterval(() => {
-        requestAnimationFrame(() => {
-            idxDynamicInfo = (idxDynamicInfo + 1) % eventInfo.length;
-            const data = eventInfo[idxDynamicInfo];
-            displayDynamicInfo(data.heading, data.content);
-        })
-    }, 6000);
-};
-
-//events
 function imgSize() {
     if (screen.width < 650) {
         images.forEach((val, idx) => {
@@ -63,19 +23,51 @@ function imgSize() {
     }
 }
 window.addEventListener('resize', () => {
-    requestAnimationFrame(imgSize);
+    imgSize();
 });
 window.addEventListener('load', () => {
-    requestAnimationFrame(imgSize);
+    imgSize();
 });
+const displayDynamicInfo = function (res) {
+    bulletin.forEach((data, idx) => {
+        const heading = document.createElement('h2');
+        heading.textContent = res[idx % res.length].heading;
+        data.appendChild(heading);
+        const paragraph = document.createElement('p');
+        paragraph.textContent = res[idx % res.length].content;
+        data.appendChild(paragraph);
+    })
+};
 
+async function getDynamicData() {   //use to fetch json data from bulletinInfo folder
+    let res = await fetch('./assets/bulletinInfo/bulletinInfo.json');
+    let text = await res.json();
+    return text;
+};
+requestAnimationFrame(() => {
+
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: true,
+        speed: 1500,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+            delay: 6000,
+        },
+    });
+});
 //main content
 getDynamicData()
     .then((res) => {
-        eventInfo = res;
-        const data = eventInfo[idxDynamicInfo];
-        displayDynamicInfo(data.heading, data.content);
-        idxDynamicInfo++;
+        displayDynamicInfo(res);
     }).catch(err => {
         console.log(err);
     })
@@ -85,7 +77,6 @@ if (!sessionStorage.getItem('loadingPage')) {
     sessionStorage.setItem('loadingPage', 'true');
     setTimeout(() => {
         requestAnimationFrame(() => {
-
             loadingPage.style.scale = "40";
             welcomeAotImg.style.filter = "invert(100%) opacity(0%)";
             loadingPage.style.backgroundColor = "rgb(0,0,0,0)";
@@ -100,42 +91,7 @@ else {
     body.style.overflow = "auto";
     loadingPage.style.display = "none";
 }
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 0,
-    loop: true,
-    speed: 1500,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    autoplay: {
-        delay: 5000,
-    },
-});
-requestAnimationFrame(changeDynamicInfo);
 
-nArrow.addEventListener('click', () => {
-    clearInterval(refInterval);
-    idxDynamicInfo = (idxDynamicInfo + 1) % eventInfo.length;
-    const data = eventInfo[idxDynamicInfo];
-    requestAnimationFrame(() => {
-        displayDynamicInfo(data.heading, data.content);
-    })
-})
-pArrow.addEventListener('click', () => {
-    clearInterval(refInterval);
-    idxDynamicInfo--;
-    if (idxDynamicInfo < 0) idxDynamicInfo = eventInfo.length - 1;
-    const data = eventInfo[idxDynamicInfo];
-    requestAnimationFrame(() => {
-        displayDynamicInfo(data.heading, data.content);
-    })
-})
 //announcement section
 
 function announceSeeMore() {
