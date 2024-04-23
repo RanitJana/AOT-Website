@@ -12,13 +12,26 @@ let lessImages = ['./assets/bulletinImage/first.webp', './assets/bulletinImage/s
 let bigImages = ['./assets/bulletinImage/firstBig.webp', './assets/bulletinImage/secondBig.webp', './assets/bulletinImage/thirdBig.webp', './assets/bulletinImage/fourthBig.webp', './assets/bulletinImage/fifthBig.webp', './assets/bulletinImage/sixthBig.webp', './assets/bulletinImage/seventhBig.webp', './assets/bulletinImage/eighthBig.webp', './assets/bulletinImage/ninthBig.webp'];
 
 //functions
+/*
 const displayDynamicInfo = function (head, text) {  //function to write html elements
     bulletin.innerHTML =
         `
             <h2>${head}</h2>
             <P>${text}</P>
         `;
+};*/
+
+const displayDynamicInfo = function (head, text) {  
+    bulletin.innerHTML = '';  // Clear previous content
+    const heading = document.createElement('h2');
+    heading.textContent = head;
+    bulletin.appendChild(heading);
+
+    const paragraph = document.createElement('p');
+    paragraph.textContent = text;
+    bulletin.appendChild(paragraph);
 };
+
 
 async function getDynamicData() {   //use to fetch json data from bulletinInfo folder
     let res = await fetch('./assets/bulletinInfo/bulletinInfo.json');
