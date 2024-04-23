@@ -24,9 +24,9 @@ h3{
 .info1,.info2,.info3,.info4,.info5,.info6,.info7{
     padding: 1rem;
     background-color: var(--aot-light-color--);
-    border: 2px solid var(--aot-dark-color--);
     border-radius: 5px;
     display: grid;
+    box-shadow: -10px 10px 10px rgba(0,0,0,0.15);
     grid-template-areas: 
     'box '
     'image';
