@@ -1207,6 +1207,10 @@ nav a {
         font-size: 1.4rem;
     }
 
+    .sixth {
+        padding: 1rem;
+    }
+
     .seventh h2 {
         padding: 1rem;
         padding-bottom: 0;
@@ -1260,12 +1264,14 @@ nav a {
         line-height: 1rem;
     }
 }
+
 @media only screen and (max-width:400px) {
     .fifth>.content>.left ul {
         display: grid;
         grid-template-columns: auto auto auto;
     }
 }
+
 @media only screen and (max-width:394px) {
 
     .second h2 span,
