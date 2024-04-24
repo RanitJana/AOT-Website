@@ -19,7 +19,7 @@
     border: 2px solid var(--aot-color--);
     border-radius: 5px;
     color: var(--aot-dark-color--);
-
+    background-color: var(--aot-light-color--);
 }
 
 p,
@@ -34,6 +34,7 @@ h1 {
     grid-area: event;
     border: 2px solid var(--aot-color--);
     border-radius: 5px;
+    background-color: var(--aot-light-color--);
 }
 
 .map {
@@ -41,6 +42,7 @@ h1 {
     grid-area: map;
     border: 2px solid var(--aot-color--);
     border-radius: 5px;
+    background-color: var(--aot-light-color--);
 }
 
 .notice {
@@ -48,6 +50,7 @@ h1 {
     grid-area: notice;
     border: 2px solid var(--aot-color--);
     border-radius: 5px;
+    background-color: var(--aot-light-color--);
 }
 
 .parent-nav>ul li {
