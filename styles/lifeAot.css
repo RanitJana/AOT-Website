@@ -1,0 +1,105 @@
+@import url('./basicStyles.css');
+
+h1{
+    text-align: center;
+    color: var(--aot-dark-color--);
+}
+
+h3,p{
+    text-align: center;
+    color: var(--aot-dark-color--);
+}
+
+h3{
+    text-align: center;
+}
+
+.para,.para2{
+    padding: 0.7rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+
+.info1,.info2,.info3,.info4,.info5,.info6,.info7{
+    padding: 1rem;
+    background-color: var(--aot-light-color--);
+    border-radius: 5px;
+    display: grid;
+    box-shadow: -10px 10px 10px rgba(0,0,0,0.15);
+    grid-template-areas: 
+    'box '
+    'image';
+}
+
+#singer img{
+    width: 100%;
+    padding: 2rem;
+    object-fit: contain;
+}
+
+.box{
+    grid-area: box;
+    display: flex;
+    flex-direction: column;
+}
+
+.image{
+    grid-area: image;
+    padding-top: 1rem;
+    background: var(--aot-light-color--);
+    border-radius: 5px;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+
+@media (min-width:700px){
+    .para{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit,minmax(700px,1fr));
+    }
+
+    .image{
+        width: 90%;
+    }
+
+    .box{
+        width: 80%;
+    }
+
+    .info1,.info2,.info7{
+        display: grid;
+        grid-template-areas: 
+        'box image';
+    }
+
+    #wp2{
+        padding-left: 5rem;
+        display: grid;
+        grid-template-areas: 
+        'image box';
+    }
+
+    h3{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #wp3 img{
+        width: 100%;
+    }
+}
+
+@media (min-width:1400px){
+    .para{
+        display: flex;
+        flex-direction: column;
+    }
+}
