@@ -848,6 +848,9 @@ nav a {
     padding: 1rem;
     font-size: 1.1rem;
 }
+.fifth p span{
+    user-select:text;
+}
 
 /*media-query*/
 @media only screen and (max-width:1257px) {
@@ -1062,6 +1065,9 @@ nav a {
 
     .eventInfo {
         width: 500px;
+    }
+    .fifth{
+        padding: 1rem;
     }
 }
 
