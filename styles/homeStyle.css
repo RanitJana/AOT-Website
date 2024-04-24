@@ -621,7 +621,14 @@ main>.content>.first {
     text-decoration: underline;
     color: purple;
 }
-
+.updateBox p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.updateBox a p img{
+    margin-left: 0.5rem;
+}
 .second .content .sub-content .updateBox a {
     font-size: 1rem;
 }
