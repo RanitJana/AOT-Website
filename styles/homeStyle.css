@@ -847,8 +847,10 @@ nav a {
     }
 
     .fourth h2 {
-        line-height: 2.5rem;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
         padding: 2rem;
+        padding-bottom: 0;
     }
 
     .fourth .companies {
@@ -894,6 +896,9 @@ nav a {
         margin-top: -1rem;
         border-radius: 0;
     }
+    .third h2{
+        font-size: 1.5rem;
+    }
 
     .third .about .video {
         width: 100%;
@@ -931,6 +936,7 @@ nav a {
 @media only screen and (max-width:422px) {
     .fourth h2 {
         padding: 1rem;
+        padding-bottom: 0;
     }
 
     .third {
@@ -945,6 +951,7 @@ nav a {
 
     .third>h2 {
         padding: 1rem;
+        font-size: 1.5rem;
     }
 
     .eventContainer {
