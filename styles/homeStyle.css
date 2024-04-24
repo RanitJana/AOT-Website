@@ -12,7 +12,7 @@ body::-webkit-scrollbar {
 .second,
 .event,
 .third,
-.fifth {
+.sixth {
     box-shadow: var(--normal-shadow--);
 }
 
@@ -480,7 +480,6 @@ main>.content>.first {
     flex-direction: column;
     padding: 1rem;
     padding-top: 0.5rem;
-    font-size: 1.2rem;
     color: var(--aot-color--);
     border-radius: 8px;
     background-color: var(--aot-light-color--);
@@ -697,7 +696,6 @@ main>.content>.first {
 /*Third section*/
 .third>h2 {
     color: var(--aot-color--);
-    font-size: 2rem;
 }
 
 .third {
@@ -786,7 +784,8 @@ main>.content>.first {
     margin-bottom: 1rem;
 }
 
-.fourth>div ul {
+.fourth>div ul,
+.fifth>.content>div ul {
     background-color: white;
     text-decoration: none;
     width: 100%;
@@ -798,17 +797,63 @@ main>.content>.first {
     list-style: none;
 }
 
-.fourth>div ul li{
+.fourth>div ul li {
     border-bottom: 0.5px solid rgba(128, 128, 128, 0.439);
     width: 100%;
     padding: 0.5rem;
     text-align: center;
     text-decoration: none;
 }
-.fourth>div ul li a{
+
+.fourth>div ul li a {
     text-decoration: none;
 }
+
 .fifth {
+    margin: 1rem;
+    background-color: var(--aot-light-color--);
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    box-shadow: var(--normal-shadow--);
+}
+
+.fifth h2 {
+    color: var(--aot-color--);
+    margin-bottom: 0.5rem;
+}
+
+.fifth>.content {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 50% auto;
+}
+
+.fifth>.content>div {
+    border-radius: 8px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: var(--normal-shadow--) inset;
+}
+
+.fifth>.content>div ul {
+    flex-direction: row;
+    ;
+    justify-content: center;
+    border-radius: 0;
+    box-shadow: var(--normal-shadow--) inset;
+}
+
+.fifth>.content>div>h3 {
+    padding: 1rem;
+}
+
+.fifth>.content>div ul li {
+    padding: 0.5rem 1rem;
+}
+
+.sixth {
     background-color: var(--aot-light-color--);
     margin: 1rem;
     border-radius: 8px;
@@ -819,14 +864,12 @@ main>.content>.first {
     align-items: center;
 }
 
-.fifth h2 {
+.sixth h2 {
     align-self: flex-start;
-    font-size: 2rem;
-    ;
     color: var(--aot-color--);
 }
 
-.fifth .companies {
+.sixth .companies {
     width: fit-content;
     display: flex;
     justify-content: space-around;
@@ -834,23 +877,23 @@ main>.content>.first {
     padding: 1rem;
 }
 
-.fifth .company {
+.sixth .company {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.fifth .company img {
+.sixth .company img {
     width: 8rem;
     margin: 0 1rem;
 }
 
-.fifth .company img:hover {
+.sixth .company img:hover {
     cursor: pointer;
     box-shadow: 0 0 5px 5px rgba(128, 128, 128, 0.318);
 }
 
-.fifth .company span {
+.sixth .company span {
     color: var(--aot-color--);
     font-weight: bolder;
     font-size: 1.1rem;
@@ -864,7 +907,7 @@ nav a {
     display: flex;
 }
 
-.sixth {
+.seventh {
     background-color: var(--aot-light-color--);
     box-shadow: var(--normal-shadow--);
     margin: 1rem;
@@ -876,19 +919,18 @@ nav a {
     padding: 1rem 2rem;
 }
 
-.sixth h2 {
+.seventh h2 {
     color: var(--aot-color--);
     margin-bottom: 0.5rem;
-    font-size: 2rem;
     align-self: flex-start;
 }
 
-.sixth iframe {
+.seventh iframe {
     width: 80%;
     height: 20rem;
 }
 
-.sixth p {
+.seventh p {
     width: 80%;
     text-wrap: pretty;
     text-align: center;
@@ -896,7 +938,7 @@ nav a {
     font-size: 1.1rem;
 }
 
-.sixth p span {
+.seventh p span {
     user-select: text;
 }
 
@@ -960,39 +1002,45 @@ nav a {
     }
 }
 
+@media only screen and (max-width:1060px) {
+    .fifth>.content {
+        grid-template-columns: auto;
+    }
+}
+
 @media only screen and (max-width:682px) {
-    .fifth {
+    .sixth {
         padding: 0;
     }
 
-    .fifth .companies .company img {
+    .sixth .companies .company img {
         width: 6rem;
         padding: 0;
     }
 
-    .fifth h2 {
+    .sixth h2 {
         font-size: 1.5rem;
         line-height: 1.5rem;
         padding: 2rem;
         padding-bottom: 0;
     }
 
-    .fifth .companies {
+    .sixth .companies {
         display: grid;
         width: 100%;
         margin: 0 -2rem;
         grid-template-columns: auto auto;
     }
 
-    .sixth h2 {
+    .seventh h2 {
         font-size: 1.5rem;
     }
 
-    .sixth p {
+    .seventh p {
         font-size: 0.9rem;
     }
 
-    .fifth .companies .company {
+    .sixth .companies .company {
         margin: 1rem 0;
     }
 }
@@ -1009,24 +1057,31 @@ nav a {
 }
 
 @media only screen and (max-width:630px) {
-    .fourth{
+    .fourth {
         margin: 1rem 0;
         grid-template-columns: auto;
     }
-    .fourth>div{
+
+    .fourth>div {
         border-radius: 0;
     }
+
     .fifth {
+        margin: 1rem 0;
+        border-radius: 0;
+    }
+
+    .sixth {
         margin: 1rem 0;
         border-radius: 0px;
     }
 
-    .sixth {
+    .seventh {
         margin: 0;
         border-radius: 0;
     }
 
-    .sixth iframe {
+    .seventh iframe {
         width: 100%;
     }
 
@@ -1073,6 +1128,17 @@ nav a {
     }
 }
 
+@media only screen and (max-width:560px) {
+    .fifth>.content>.left ul{
+        display: grid;
+        grid-template-columns: 25% 25% 25% auto;
+    }
+    .fifth>.content>.right ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
 @media only screen and (max-width:546px) {
     .first {
         max-height: 10rem;
@@ -1090,10 +1156,11 @@ nav a {
 
 
 @media only screen and (max-width:422px) {
-    .fourth div h2{
+    .fourth div h2 {
         font-size: 1.4rem;
     }
-    .fifth h2 {
+
+    .sixth h2 {
         padding: 1rem;
         padding-bottom: 0;
     }
@@ -1125,7 +1192,7 @@ nav a {
         width: 500px;
     }
 
-    .sixth {
+    .seventh {
         padding: 1rem;
     }
 }
@@ -1151,7 +1218,7 @@ nav a {
 
     .second h2 span,
     .third>h2,
-    .fifth>h2 {
+    .sixth>h2 {
         font-size: 1.3rem;
     }
 
@@ -1163,10 +1230,14 @@ nav a {
     .third .about .story p {
         font-size: 0.9rem;
     }
-    .fourth>div>ul>li a{
+
+    .fourth>div>ul>li a {
         font-size: 0.9rem;
     }
-    .fifth .companies .company span {
+    .fifth h2{
+        font-size: 1.4rem;
+    }
+    .sixth .companies .company span {
         margin-top: 0.5rem;
         font-size: 0.9rem;
     }
