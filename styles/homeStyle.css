@@ -434,6 +434,7 @@ main>.content>.first {
     align-items: center;
     flex-direction: column;
     padding: 1rem;
+    padding-top: 0.5rem;
     font-size: 1.2rem;
     color: var(--aot-color--);
     border-radius: 8px;
@@ -903,7 +904,9 @@ nav a {
         padding: 0;
         border-radius: 0;
     }
-
+    .event h2{
+        padding: 0.5rem;
+    }
     .eventContainer {
         border-radius: 0;
     }
