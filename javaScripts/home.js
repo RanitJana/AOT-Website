@@ -201,7 +201,3 @@ function visibility() {
 }
 window.addEventListener('scroll', visibility)
 window.addEventListener('load', visibility)
-scrollToTop.addEventListener('touchmove', e => {
-    scrollToTop.style.left = `${e.x}px`;
-    scrollToTop.style.top = `${e.y}px`;
-})
