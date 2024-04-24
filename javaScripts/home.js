@@ -188,10 +188,12 @@ getFutureEventData().then(() => {
             }
         }, 3000);
     })
+    document.querySelectorAll('.eventInfo').forEach(val => {
+        val.addEventListener('click', () => {
+            window.open("./pages/event.html", '_blank');
+        });
+    })
 })
-eventContainer.addEventListener('click',()=>{
-    window.location.assign("./pages/event.html");
-});
 //scroll to top
 let scrollToTop = document.querySelector('.scrollTo');
 function visibility() {
