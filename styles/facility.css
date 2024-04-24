@@ -1,2 +1,27 @@
 @import url('./basicStyles.css');
 
+h1,h3{
+    text-align: center;
+    color: var(--aot-dark-color--);
+}
+
+h3{
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.para{
+    display: flex;
+    flex-direction: column;
+}
+
+.info{
+    margin: 0.5rem;
+    padding: 1rem;
+    background-color: var(--aot-light-color--);
+    border-radius: 5px;
+    box-shadow: -10px 10px 10px rgba(0,0,0,0.15);
+}
+ul{
+    padding: 1rem;
+}
