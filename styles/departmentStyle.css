@@ -74,6 +74,22 @@ h1 {
     display: block;
 }
 
+.map iframe {
+    width: 100%;
+    height: 20rem;
+}
+
+.map p {
+    width: 80%;
+    text-wrap: pretty;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+.map p span{
+    user-select:text;
+}
+
 
 @media only screen and (min-width:902px) {
     nav {
