@@ -31,7 +31,7 @@ body::-webkit-scrollbar {
 }
 
 .scrollTo img {
-    width: 80%;
+    width: 60%;
 }
 
 .scrollTo a {
@@ -851,6 +851,9 @@ main>.content>.first {
 
 .fifth>.content>div ul li {
     padding: 0.5rem 1rem;
+}
+.fifth>.content>div ul li a{
+    text-decoration: none;
 }
 
 .sixth {

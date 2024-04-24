@@ -189,3 +189,13 @@ getFutureEventData().then(() => {
         }, 3000);
     })
 })
+//scroll to top
+let scrollToTop = document.querySelector('.scrollTo');
+window.addEventListener('scroll', e => {
+    if (Math.floor(window.scrollY) >= 190) {
+        scrollToTop.style.scale = '1';
+    }
+    else {
+        scrollToTop.style.scale = '0';
+    }
+})
