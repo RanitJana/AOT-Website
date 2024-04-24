@@ -327,12 +327,14 @@ td:nth-child(2) {
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.293);
     transition: all 0.3s ease;
     opacity: 0;
+    display: none;
 }
 .to-top:active{
     scale: 1.1;
 }
 
 .active-btn {
+    display: block;
     opacity: 1;
 }
 
