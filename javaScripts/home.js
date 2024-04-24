@@ -191,11 +191,17 @@ getFutureEventData().then(() => {
 })
 //scroll to top
 let scrollToTop = document.querySelector('.scrollTo');
-window.addEventListener('scroll', e => {
+function visibility() {
     if (Math.floor(window.scrollY) >= 190) {
         scrollToTop.style.scale = '1';
     }
     else {
         scrollToTop.style.scale = '0';
     }
+}
+window.addEventListener('scroll', visibility)
+window.addEventListener('load', visibility)
+scrollToTop.addEventListener('touchmove', e => {
+    scrollToTop.style.left = `${e.x}px`;
+    scrollToTop.style.top = `${e.y}px`;
 })
