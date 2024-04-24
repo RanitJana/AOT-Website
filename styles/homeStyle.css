@@ -12,7 +12,7 @@ body::-webkit-scrollbar {
 .second,
 .event,
 .third,
-.fourth {
+.fifth {
     box-shadow: var(--normal-shadow--);
 }
 
@@ -762,6 +762,53 @@ main>.content>.first {
 }
 
 .fourth {
+    display: grid;
+    grid-template-columns: 50% auto;
+    margin: 1rem;
+    gap: 1rem;
+}
+
+.fourth>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: var(--aot-light-color--);
+    box-shadow: var(--normal-shadow--);
+}
+
+.fourth>div>h2 {
+    color: var(--aot-color--);
+    margin-bottom: 1rem;
+}
+
+.fourth>div ul {
+    background-color: white;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}
+
+.fourth>div ul li{
+    border-bottom: 0.5px solid rgba(128, 128, 128, 0.439);
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+}
+.fourth>div ul li a{
+    text-decoration: none;
+}
+.fifth {
     background-color: var(--aot-light-color--);
     margin: 1rem;
     border-radius: 8px;
@@ -772,14 +819,14 @@ main>.content>.first {
     align-items: center;
 }
 
-.fourth h2 {
+.fifth h2 {
     align-self: flex-start;
     font-size: 2rem;
     ;
     color: var(--aot-color--);
 }
 
-.fourth .companies {
+.fifth .companies {
     width: fit-content;
     display: flex;
     justify-content: space-around;
@@ -787,23 +834,23 @@ main>.content>.first {
     padding: 1rem;
 }
 
-.fourth .company {
+.fifth .company {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.fourth .company img {
+.fifth .company img {
     width: 8rem;
     margin: 0 1rem;
 }
 
-.fourth .company img:hover {
+.fifth .company img:hover {
     cursor: pointer;
     box-shadow: 0 0 5px 5px rgba(128, 128, 128, 0.318);
 }
 
-.fourth .company span {
+.fifth .company span {
     color: var(--aot-color--);
     font-weight: bolder;
     font-size: 1.1rem;
@@ -817,7 +864,7 @@ nav a {
     display: flex;
 }
 
-.fifth {
+.sixth {
     background-color: var(--aot-light-color--);
     box-shadow: var(--normal-shadow--);
     margin: 1rem;
@@ -829,27 +876,28 @@ nav a {
     padding: 1rem 2rem;
 }
 
-.fifth h2 {
+.sixth h2 {
     color: var(--aot-color--);
     margin-bottom: 0.5rem;
     font-size: 2rem;
     align-self: flex-start;
 }
 
-.fifth iframe {
+.sixth iframe {
     width: 80%;
     height: 20rem;
 }
 
-.fifth p {
+.sixth p {
     width: 80%;
     text-wrap: pretty;
     text-align: center;
     padding: 1rem;
     font-size: 1.1rem;
 }
-.fifth p span{
-    user-select:text;
+
+.sixth p span {
+    user-select: text;
 }
 
 /*media-query*/
@@ -913,38 +961,38 @@ nav a {
 }
 
 @media only screen and (max-width:682px) {
-    .fourth {
+    .fifth {
         padding: 0;
     }
 
-    .fourth .companies .company img {
+    .fifth .companies .company img {
         width: 6rem;
         padding: 0;
     }
 
-    .fourth h2 {
+    .fifth h2 {
         font-size: 1.5rem;
         line-height: 1.5rem;
         padding: 2rem;
         padding-bottom: 0;
     }
 
-    .fourth .companies {
+    .fifth .companies {
         display: grid;
         width: 100%;
         margin: 0 -2rem;
         grid-template-columns: auto auto;
     }
 
-    .fifth h2 {
+    .sixth h2 {
         font-size: 1.5rem;
     }
 
-    .fifth p {
+    .sixth p {
         font-size: 0.9rem;
     }
 
-    .fourth .companies .company {
+    .fifth .companies .company {
         margin: 1rem 0;
     }
 }
@@ -961,17 +1009,24 @@ nav a {
 }
 
 @media only screen and (max-width:630px) {
-    .fourth {
+    .fourth{
+        margin: 1rem 0;
+        grid-template-columns: auto;
+    }
+    .fourth>div{
+        border-radius: 0;
+    }
+    .fifth {
         margin: 1rem 0;
         border-radius: 0px;
     }
 
-    .fifth {
+    .sixth {
         margin: 0;
         border-radius: 0;
     }
 
-    .fifth iframe {
+    .sixth iframe {
         width: 100%;
     }
 
@@ -1035,7 +1090,10 @@ nav a {
 
 
 @media only screen and (max-width:422px) {
-    .fourth h2 {
+    .fourth div h2{
+        font-size: 1.4rem;
+    }
+    .fifth h2 {
         padding: 1rem;
         padding-bottom: 0;
     }
@@ -1066,7 +1124,8 @@ nav a {
     .eventInfo {
         width: 500px;
     }
-    .fifth{
+
+    .sixth {
         padding: 1rem;
     }
 }
@@ -1092,7 +1151,7 @@ nav a {
 
     .second h2 span,
     .third>h2,
-    .fourth>h2 {
+    .fifth>h2 {
         font-size: 1.3rem;
     }
 
@@ -1104,8 +1163,10 @@ nav a {
     .third .about .story p {
         font-size: 0.9rem;
     }
-
-    .fourth .companies .company span {
+    .fourth>div>ul>li a{
+        font-size: 0.9rem;
+    }
+    .fifth .companies .company span {
         margin-top: 0.5rem;
         font-size: 0.9rem;
     }
