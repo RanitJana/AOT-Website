@@ -761,6 +761,53 @@ main>.content>.first {
     z-index: 4;
 }
 
+.fourth {
+    display: grid;
+    grid-template-columns: 50% auto;
+    margin: 1rem;
+    gap: 1rem;
+}
+
+.fourth>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: var(--aot-light-color--);
+    box-shadow: var(--normal-shadow--);
+}
+
+.fourth>div>h2 {
+    color: var(--aot-color--);
+    margin-bottom: 1rem;
+}
+
+.fourth>div ul {
+    background-color: white;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}
+
+.fourth>div ul li{
+    border-bottom: 0.5px solid rgba(128, 128, 128, 0.439);
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+}
+.fourth>div ul li a{
+    text-decoration: none;
+}
 .fifth {
     background-color: var(--aot-light-color--);
     margin: 1rem;
@@ -848,8 +895,9 @@ nav a {
     padding: 1rem;
     font-size: 1.1rem;
 }
-.sixth p span{
-    user-select:text;
+
+.sixth p span {
+    user-select: text;
 }
 
 /*media-query*/
@@ -961,6 +1009,13 @@ nav a {
 }
 
 @media only screen and (max-width:630px) {
+    .fourth{
+        margin: 1rem 0;
+        grid-template-columns: auto;
+    }
+    .fourth>div{
+        border-radius: 0;
+    }
     .fifth {
         margin: 1rem 0;
         border-radius: 0px;
@@ -1035,6 +1090,9 @@ nav a {
 
 
 @media only screen and (max-width:422px) {
+    .fourth div h2{
+        font-size: 1.4rem;
+    }
     .fifth h2 {
         padding: 1rem;
         padding-bottom: 0;
@@ -1066,7 +1124,8 @@ nav a {
     .eventInfo {
         width: 500px;
     }
-    .sixth{
+
+    .sixth {
         padding: 1rem;
     }
 }
@@ -1104,7 +1163,9 @@ nav a {
     .third .about .story p {
         font-size: 0.9rem;
     }
-
+    .fourth>div>ul>li a{
+        font-size: 0.9rem;
+    }
     .fifth .companies .company span {
         margin-top: 0.5rem;
         font-size: 0.9rem;
