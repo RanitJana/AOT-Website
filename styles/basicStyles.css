@@ -8,6 +8,10 @@
     text-size-adjust: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     height: 100dvh;
     width: 100%;
@@ -18,7 +22,7 @@ body {
     --aot-color--: #232C69;
     --aot-dark-color--: #161c43;
     --aot-light-color--: #f1f5f9;
-    --normal-shadow--:-5px 5px 5px #d7d7d7;
+    --normal-shadow--: -5px 5px 5px #d7d7d7;
     --hover-shadow--: -3px 3px 3px rgb(56, 56, 56), -5px 7px 5px 5px rgba(35, 44, 105, 0.5);
 }
 
