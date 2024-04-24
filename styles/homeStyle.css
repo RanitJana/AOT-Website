@@ -558,6 +558,7 @@ main>.content>.first {
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
 }
+
 #bulletin {
     color: white;
     background-color: rgba(0, 0, 0, 0.475);
@@ -841,7 +842,6 @@ main>.content>.first {
 
 .fifth>.content>div ul {
     flex-direction: row;
-    ;
     justify-content: center;
     border-radius: 0;
     box-shadow: var(--normal-shadow--) inset;
@@ -856,16 +856,22 @@ main>.content>.first {
     display: flex;
 }
 
-.fifth>.content>div ul li a {
+.fifth>.content>div ul li a,
+.fourth>div ul li a {
     text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.fifth>.content>div ul li a img {
+.fifth>.content>div ul li a img,
+.fourth>div ul li a img {
     width: 1rem;
     margin-right: 0.3rem;
+}
+.online ul li a img{
+    margin: 0;
+    margin-left: 0.3rem;
 }
 
 .sixth>.content .right {
