@@ -15,7 +15,7 @@ function slideNext() {
         count++;
     }
     slideImage[count].style.animation = 'next2 0.5s ease-in forwards';
-    indicators();
+    
 }
 
 prev.addEventListener('click', slidePrev);
@@ -28,7 +28,6 @@ function slidePrev() {
         count--;
     }
     slideImage[count].style.animation = 'prev2 0.5s ease-in forwards';
-    indicators();
 }
 
 // Auto slideing
