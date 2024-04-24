@@ -7,7 +7,9 @@ body {
 body::-webkit-scrollbar {
     display: none;
 }
-
+.first,.second,.event,.third,.fourth{
+    box-shadow: var(--normal-shadow--);
+}
 .loadingPage {
     width: 100%;
     height: 100dvh;
