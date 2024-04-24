@@ -167,6 +167,10 @@ body {
     .overlay {
         height: 360px;
     }
+
+    .additional-info {
+        padding: 22px;
+    }
 }
 
 @media only screen and (max-width : 846px) {
@@ -183,6 +187,10 @@ body {
     .page-title h1 {
         font-size: 1.6rem;
     }
+
+    .additional-info {
+        padding: 18px;
+    }
 }
 
 @media only screen and (max-width : 513px) {
@@ -192,6 +200,10 @@ body {
 
     .overlay {
         height: 300px;
+    }
+
+    .additional-info {
+        padding: 15px;
     }
 }
 
@@ -205,6 +217,10 @@ body {
     .overlay {
         height: 280px;
     }
+
+    .additional-info {
+        padding: 10px;
+    }
 }
 
 @media only screen and (max-width : 311px) {
@@ -216,5 +232,9 @@ body {
 
     .overlay {
         height: 280px;
+    }
+
+    .additional-info {
+        padding: 8px;
     }
 }
