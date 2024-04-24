@@ -189,6 +189,9 @@ getFutureEventData().then(() => {
         }, 3000);
     })
 })
+eventContainer.addEventListener('click',()=>{
+    window.location.assign("./pages/event.html");
+});
 //scroll to top
 let scrollToTop = document.querySelector('.scrollTo');
 function visibility() {
