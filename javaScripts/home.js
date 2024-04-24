@@ -121,3 +121,71 @@ playIframe.addEventListener('click', () => {
     parentIframe.innerHTML = `${serveIframe}`;
 
 })
+
+//event slider
+let eventContainer = document.querySelector('.eventContainer');
+async function getFutureEventData() {
+    let res = await fetch('../assets/upcomingEvent/futureEvent.json');
+    let data = await res.json();
+    console.log(data);
+    data.forEach((val) => {
+        let h3 = val.eventName, span = val.shortInfo, srcImg = val.link;
+        let newNode = document.createElement('div');
+        newNode.classList.add('eventPar');
+        newNode.innerHTML =
+            `
+            <div class="eventInfo">
+                <div class="writingContent">
+                    <h3>${h3}</h3>
+                    <span>${span}</span>
+                </div>
+            </div>
+        `;
+        newNode.childNodes[1].style.background = `url('${srcImg}') center no-repeat`;
+        newNode.childNodes[1].style.backgroundSize = "cover";
+        eventContainer.appendChild(newNode);
+    })
+    console.log(eventContainer);
+}
+getFutureEventData().then(() => {
+    let eventPar = document.querySelectorAll('.eventPar');
+    eventPar.forEach((val, idx) => {
+        val.style.left = `${idx * 100}%`;
+    })
+    let counter = 0;
+    let rightMove = true;
+    requestAnimationFrame(() => {
+        setInterval(() => {
+            if (rightMove) {
+                if (counter == eventPar.length - 1) {
+                    rightMove = false;
+                    eventPar.forEach((val, idx) => {
+                        val.style.transform = `translateX(-${counter * 100}%)`;
+                    })
+                    counter--;
+                }
+                else {
+                    eventPar.forEach((val, idx) => {
+                        val.style.transform = `translateX(-${counter * 100}%)`;
+                    })
+                    counter++;
+                }
+            }
+            else {
+                if (counter == 0) {
+                    rightMove = true;
+                    eventPar.forEach((val, idx) => {
+                        val.style.transform = `translateX(-${counter * 100}%)`;
+                    })
+                    counter++;
+                }
+                else {
+                    eventPar.forEach((val, idx) => {
+                        val.style.transform = `translateX(-${counter * 100}%)`;
+                    })
+                    counter--;
+                }
+            }
+        }, 3000);
+    })
+})
