@@ -416,3 +416,22 @@ td:nth-child(2) {
     position: relative;
     top: 13%;
 }
+
+.intro-slide-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.intro-slide-container .intro-btn{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+}
+
+.next{
+    right: 30px;
+}
+.prev{
+    left: 30px;
+}
