@@ -12,7 +12,7 @@ body::-webkit-scrollbar {
 .second,
 .event,
 .third,
-.seventh {
+.eighth {
     box-shadow: var(--normal-shadow--);
 }
 
@@ -694,16 +694,20 @@ main>.content>.first {
 }
 
 /*Third section*/
-.third>h2 {
+.third>h2,
+.fourth>h2 {
     color: var(--aot-color--);
+    margin-bottom: 0.5rem;
 }
 
-.third {
+.third,
+.fourth {
     background-color: var(--aot-light-color--);
     border-radius: 8px;
     padding: 2rem;
     margin: 1rem;
     position: relative;
+    box-shadow: var(--normal-shadow--);
 }
 
 .third .about {
@@ -758,15 +762,66 @@ main>.content>.first {
 #pause {
     z-index: 4;
 }
+.fourth>.info{
+    display: flex;
+    flex-direction: column;
+}
 
-.fourth {
+.fourth>.info>.rankInfo{
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    margin: 0.1rem 0;
+    border-left: 0.3rem solid gray;
+    background-color: white;
+    box-shadow: var(--normal-shadow--);
+}
+.fourth>.info>.topImage{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 1rem;
+}
+.fourth>.info>.topImage>img{
+    width: 100%;
+    max-width: 40rem;
+}
+.fourth>.info>.rankInfo>.year{
+    width: min-content;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--aot-color--);
+    color: white;
+    font-weight: bold;
+    margin-right: 0.3rem;
+    height: 11rem;
+    padding: 1rem;
+}
+.fourth>.info>.rankInfo> img{
+    aspect-ratio: 1;
+    width: 11rem;
+}
+.fourth>.info>.rankInfo>.writing{
+    width: 100%;
+    background-color: var(--aot-light-color--);
+    padding: 1rem;
+    text-align: center;
+    text-wrap: pretty;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1rem;
+}
+.fifth {
     display: grid;
     grid-template-columns: 50% auto;
     margin: 1rem;
     gap: 1rem;
 }
 
-.fourth>div {
+.fifth>div {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -779,13 +834,13 @@ main>.content>.first {
     box-shadow: var(--normal-shadow--);
 }
 
-.fourth>div>h2 {
+.fifth>div>h2 {
     color: var(--aot-color--);
     margin-bottom: 1rem;
 }
 
-.fourth>div ul,
-.fifth>.content>div ul {
+.fifth>div ul,
+.sixth>.content>div ul {
     background-color: white;
     text-decoration: none;
     width: 100%;
@@ -797,7 +852,7 @@ main>.content>.first {
     list-style: none;
 }
 
-.fourth>div ul li {
+.fifth>div ul li {
     border-bottom: 0.5px solid rgba(128, 128, 128, 0.439);
     width: 100%;
     padding: 0.5rem;
@@ -805,12 +860,12 @@ main>.content>.first {
     text-decoration: none;
 }
 
-.fourth>div ul li a {
+.fifth>div ul li a {
     text-decoration: none;
 }
 
-.fifth,
-.sixth {
+.sixth,
+.seventh {
     margin: 1rem;
     background-color: var(--aot-light-color--);
     border-radius: 8px;
@@ -818,20 +873,20 @@ main>.content>.first {
     box-shadow: var(--normal-shadow--);
 }
 
-.fifth h2,
-.sixth h2 {
+.sixth h2,
+.seventh h2 {
     color: var(--aot-color--);
     margin-bottom: 0.5rem;
 }
 
-.fifth>.content,
-.sixth>.content {
+.sixth>.content,
+.seventh>.content {
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: 50% auto;
 }
 
-.fifth>.content>div {
+.sixth>.content>div {
     border-radius: 8px;
     height: fit-content;
     display: flex;
@@ -840,47 +895,48 @@ main>.content>.first {
     box-shadow: var(--normal-shadow--) inset;
 }
 
-.fifth>.content>div ul {
+.sixth>.content>div ul {
     flex-direction: row;
     justify-content: center;
     border-radius: 0;
     box-shadow: var(--normal-shadow--) inset;
 }
 
-.fifth>.content>div>h3 {
+.sixth>.content>div>h3 {
     padding: 1rem;
 }
 
-.fifth>.content>div ul li {
+.sixth>.content>div ul li {
     padding: 0.5rem 1rem;
     display: flex;
 }
 
-.fifth>.content>div ul li a,
-.fourth>div ul li a {
+.sixth>.content>div ul li a,
+.fifth>div ul li a {
     text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.fifth>.content>div ul li a img,
-.fourth>div ul li a img {
+.sixth>.content>div ul li a img,
+.fifth>div ul li a img {
     width: 1rem;
     margin-right: 0.3rem;
 }
-.online ul li a img{
+
+.online ul li a img {
     margin: 0;
     margin-left: 0.3rem;
 }
 
-.sixth>.content .right {
+.seventh>.content .right {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.sixth>.content .right img {
+.seventh>.content .right img {
     width: 100%;
 }
 
@@ -896,7 +952,7 @@ main>.content>.first {
     margin-right: 0.3rem;
 }
 
-.seventh {
+.eighth {
     background-color: var(--aot-light-color--);
     margin: 1rem;
     border-radius: 8px;
@@ -907,12 +963,12 @@ main>.content>.first {
     align-items: center;
 }
 
-.seventh h2 {
+.eighth h2 {
     align-self: flex-start;
     color: var(--aot-color--);
 }
 
-.seventh .companies {
+.eighth .companies {
     width: fit-content;
     display: flex;
     justify-content: space-around;
@@ -920,23 +976,23 @@ main>.content>.first {
     padding: 1rem;
 }
 
-.seventh .company {
+.eighth .company {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.seventh .company img {
+.eighth .company img {
     width: 8rem;
     margin: 0 1rem;
 }
 
-.seventh .company img:hover {
+.eighth .company img:hover {
     cursor: pointer;
     box-shadow: 0 0 5px 5px rgba(128, 128, 128, 0.318);
 }
 
-.seventh .company span {
+.eighth .company span {
     color: var(--aot-color--);
     font-weight: bolder;
     font-size: 1.1rem;
@@ -950,7 +1006,7 @@ nav a {
     display: flex;
 }
 
-.eighth {
+.ninth {
     background-color: var(--aot-light-color--);
     box-shadow: var(--normal-shadow--);
     margin: 1rem;
@@ -962,18 +1018,18 @@ nav a {
     padding: 1rem 2rem;
 }
 
-.eighth h2 {
+.ninth h2 {
     color: var(--aot-color--);
     margin-bottom: 0.5rem;
     align-self: flex-start;
 }
 
-.eighth iframe {
+.ninth iframe {
     width: 80%;
     height: 20rem;
 }
 
-.eighth p {
+.ninth p {
     width: 80%;
     text-wrap: pretty;
     text-align: center;
@@ -981,14 +1037,14 @@ nav a {
     font-size: 1.1rem;
 }
 
-.eighth p span {
+.ninth p span {
     user-select: text;
 }
 
 /*media-query*/
 
 @media only screen and (max-width:1264px) {
-    .fifth>.content {
+    .sixth>.content {
         grid-template-columns: auto;
     }
 }
@@ -1022,7 +1078,7 @@ nav a {
 }
 
 @media only screen and (max-width:1200px) {
-    .sixth>.content {
+    .seventh>.content {
         grid-template-columns: auto;
     }
 }
@@ -1057,52 +1113,71 @@ nav a {
         font-size: 1.5rem;
     }
 }
-
+@media only screen and (max-width:770px){
+    .fourth>.info>.rankInfo{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .fourth>.info>.rankInfo>.year{
+        flex-direction: row;
+        width: 100%;
+        height: fit-content;
+        padding: 0.5rem 1rem;
+    }
+    .fourth>.info>.rankInfo>img{
+        padding-top: 0.5rem;
+        /* align-self: flex-start; */
+    }
+    .fourth>.info>.rankInfo>.writing{
+        margin: 0;
+        margin-top: 0.5rem;
+    }
+}
 @media only screen and (max-width:722px) {
-    .fifth>.content>.left ul {
+    .sixth>.content>.left ul {
         display: grid;
         grid-template-columns: 25% 25% 25% auto;
     }
 
-    .fifth>.content>.right ul {
+    .sixth>.content>.right ul {
         display: flex;
         flex-wrap: wrap;
     }
 }
 
 @media only screen and (max-width:682px) {
-    .seventh {
+    .eighth {
         padding: 0;
     }
 
-    .seventh .companies .company img {
+    .eighth .companies .company img {
         width: 6rem;
         padding: 0;
     }
 
-    .seventh h2 {
+    .eighth h2 {
         font-size: 1.5rem;
         line-height: 1.5rem;
         padding: 2rem;
         padding-bottom: 0;
     }
 
-    .seventh .companies {
+    .eighth .companies {
         display: grid;
         width: 100%;
         margin: 0 -2rem;
         grid-template-columns: auto auto;
     }
 
-    .eighth h2 {
+    .ninth h2 {
         font-size: 1.5rem;
     }
 
-    .eighth p {
+    .ninth p {
         font-size: 0.9rem;
     }
 
-    .seventh .companies .company {
+    .eighth .companies .company {
         margin: 1rem 0;
     }
 }
@@ -1119,32 +1194,36 @@ nav a {
 }
 
 @media only screen and (max-width:630px) {
-    .fourth {
+    .fourth{
+        margin: 1rem 0;
+        border-radius: 0;
+    }
+    .fifth {
         margin: 1rem 0;
         grid-template-columns: auto;
     }
 
-    .fourth>div {
+    .fifth>div {
         border-radius: 0;
     }
 
-    .fifth,
-    .sixth {
+    .sixth,
+    .seventh {
         margin: 1rem 0;
         border-radius: 0;
     }
 
-    .seventh {
+    .eighth {
         margin: 1rem 0;
         border-radius: 0px;
     }
 
-    .eighth {
+    .ninth {
         margin: 0;
         border-radius: 0;
     }
 
-    .eighth iframe {
+    .ninth iframe {
         width: 100%;
     }
 
@@ -1208,15 +1287,18 @@ nav a {
 
 
 @media only screen and (max-width:422px) {
-    .fourth div h2 {
+    .fourth{
+        padding: 1rem;
+    }
+    .fifth div h2 {
         font-size: 1.4rem;
     }
 
-    .sixth {
+    .seventh {
         padding: 1rem;
     }
 
-    .seventh h2 {
+    .eighth h2 {
         padding: 1rem;
         padding-bottom: 0;
     }
@@ -1248,7 +1330,7 @@ nav a {
         width: 500px;
     }
 
-    .eighth {
+    .ninth {
         padding: 1rem;
     }
 }
@@ -1271,7 +1353,7 @@ nav a {
 }
 
 @media only screen and (max-width:400px) {
-    .fifth>.content>.left ul {
+    .sixth>.content>.left ul {
         display: grid;
         grid-template-columns: auto auto auto;
     }
@@ -1281,8 +1363,9 @@ nav a {
 
     .second h2 span,
     .third>h2,
-    .seventh>h2,
-    .sixth h2 {
+    .fourth>h2,
+    .eighth>h2,
+    .seventh h2 {
         font-size: 1.3rem;
     }
 
@@ -1291,19 +1374,19 @@ nav a {
         line-height: 0.9rem;
     }
 
-    .third .about .story p {
+    .third .about .story p,.fourth>.info>.rankInfo>.writing {
         font-size: 0.9rem;
     }
 
-    .fourth>div>ul>li a {
+    .fifth>div>ul>li a {
         font-size: 0.9rem;
     }
 
-    .fifth h2 {
+    .sixth h2 {
         font-size: 1.4rem;
     }
 
-    .seventh .companies .company span {
+    .eighth .companies .company span {
         margin-top: 0.5rem;
         font-size: 0.9rem;
     }
