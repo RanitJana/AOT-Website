@@ -88,15 +88,17 @@ allchild.forEach((allchilds, idx) => {
             console.log(err);
         }
         parentNavChild2.forEach((val, index) => {
-            if (idx - 1 != index) {
-                try {
-                    if (val.style.display == 'block') {
-                        val.style.display = "none";
-                        val.style.zIndex = '100';
+            if (allchilds.childNodes[3]) {
+                if (val != allchilds.childNodes[3]) {
+                    try {
+                        if (val.style.display == 'block') {
+                            val.style.display = "none";
+                            val.style.zIndex = '100';
+                        }
                     }
-                }
-                catch (err) {
-                    console.log(err);
+                    catch (err) {
+                        console.log(err);
+                    }
                 }
             }
         })
