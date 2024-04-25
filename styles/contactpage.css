@@ -10,30 +10,6 @@ body {
     overflow-x: hidden;
 }
 
-.btn {
-    position: fixed;
-    z-index: 5;
-    padding: 0.5em;
-    margin: 0.5em;
-    bottom: 2rem;
-    right: 2rem;
-    border-radius: 8px;
-    background: var(--aot-color--);
-    outline: none;
-    border: none;
-    cursor: pointer;
-
-}
-
-.btn a {
-    color: #fff;
-    font-size: 1rem;
-    text-decoration: none;
-}
-
-.btn:hover {
-    background: var(--aot-dark-color--);
-}
 
 .section {
     max-width: 100%;
@@ -48,6 +24,7 @@ body {
 }
 
 .section__title {
+    position: relative;
     padding: 0.3em;
     min-width: 100%;
     margin-top: 1rem;
@@ -58,6 +35,23 @@ body {
     justify-content: center;
     overflow: hidden;
 }
+
+.logo {
+    position: absolute;
+    margin: 0;
+    padding: 0.55em;
+    width: 70px;
+    background-color: #e5e4e2;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* .logo img {
+    max-width: 80%;
+} */
 
 .section__title h1 {
     background: var(--aot-color--);
@@ -120,6 +114,15 @@ body {
         font-size: 0.8rem;
     }
 
+    .logo {
+        width: 60px;
+    }
+
+    .logo img {
+        width: 28px;
+        height: 28px;
+    }
+
 }
 
 /* 490 */
@@ -154,6 +157,15 @@ body {
 
     }
 
+    .logo {
+        width: 50px;
+    }
+
+    .logo img {
+        width: 24px;
+        height: 24px;
+    }
+
 }
 
 /* 362 */
@@ -179,6 +191,15 @@ body {
     .btn {
         right: 1.3rem;
 
+    }
+
+    .logo {
+        width: 40px;
+    }
+
+    .logo img {
+        width: 22px;
+        height: 22px;
     }
 
 }
