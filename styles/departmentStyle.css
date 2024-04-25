@@ -225,8 +225,7 @@
     .parent-nav2>ul {
         position: absolute;
         left: 100%;
-        top: 30%;
-        display: none;
+        top: 0%;
     }
 
     .parent-nav>.section {
