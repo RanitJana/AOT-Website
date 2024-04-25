@@ -467,6 +467,22 @@
     }
 }
 
+@media only screen and (max-width:682px) {
+    .sec1 h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width:630px) {
+    .sec1 {
+        padding: 1rem 0;
+    }
+
+    .sec1>div {
+        border-radius: 0;
+    }
+}
+
 @media only screen and (max-width:902px) {
     .banner .right {
         display: none;
@@ -477,7 +493,22 @@
         padding-top: 0;
     }
 }
+@media only screen and (max-width:750px) {
+    .banner{
+        margin: 1rem 0;
+        margin-top: 2rem;
+    }
+}
+@media only screen and (max-width:658px) {
+    .banner .left img {
+        width: 6rem;
+    }
 
+    .banner .middle h1 {
+        font-size: 1.95rem;
+        line-height: 2rem;
+    }
+}
 @media only screen and (max-width:394px) {
 
     .sec1>div p,
