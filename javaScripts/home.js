@@ -188,4 +188,21 @@ getFutureEventData().then(() => {
             }
         }, 3000);
     })
+    document.querySelectorAll('.eventInfo').forEach(val => {
+        val.addEventListener('click', () => {
+            window.open("./pages/event.html", '_blank');
+        });
+    })
 })
+//scroll to top
+let scrollToTop = document.querySelector('.scrollTo');
+function visibility() {
+    if (Math.floor(window.scrollY) >= 190) {
+        scrollToTop.style.scale = '1';
+    }
+    else {
+        scrollToTop.style.scale = '0';
+    }
+}
+window.addEventListener('scroll', visibility)
+window.addEventListener('load', visibility)

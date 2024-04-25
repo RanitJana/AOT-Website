@@ -12,7 +12,7 @@ body::-webkit-scrollbar {
 .second,
 .event,
 .third,
-.sixth {
+.seventh {
     box-shadow: var(--normal-shadow--);
 }
 
@@ -31,7 +31,7 @@ body::-webkit-scrollbar {
 }
 
 .scrollTo img {
-    width: 80%;
+    width: 60%;
 }
 
 .scrollTo a {
@@ -809,7 +809,8 @@ main>.content>.first {
     text-decoration: none;
 }
 
-.fifth {
+.fifth,
+.sixth {
     margin: 1rem;
     background-color: var(--aot-light-color--);
     border-radius: 8px;
@@ -817,12 +818,14 @@ main>.content>.first {
     box-shadow: var(--normal-shadow--);
 }
 
-.fifth h2 {
+.fifth h2,
+.sixth h2 {
     color: var(--aot-color--);
     margin-bottom: 0.5rem;
 }
 
-.fifth>.content {
+.fifth>.content,
+.sixth>.content {
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: 50% auto;
@@ -839,7 +842,6 @@ main>.content>.first {
 
 .fifth>.content>div ul {
     flex-direction: row;
-    ;
     justify-content: center;
     border-radius: 0;
     box-shadow: var(--normal-shadow--) inset;
@@ -851,9 +853,50 @@ main>.content>.first {
 
 .fifth>.content>div ul li {
     padding: 0.5rem 1rem;
+    display: flex;
 }
 
-.sixth {
+.fifth>.content>div ul li a,
+.fourth>div ul li a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fifth>.content>div ul li a img,
+.fourth>div ul li a img {
+    width: 1rem;
+    margin-right: 0.3rem;
+}
+.online ul li a img{
+    margin: 0;
+    margin-left: 0.3rem;
+}
+
+.sixth>.content .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sixth>.content .right img {
+    width: 100%;
+}
+
+.placementBook {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.placementBook img {
+    width: 2rem;
+    margin-right: 0.3rem;
+}
+
+.seventh {
     background-color: var(--aot-light-color--);
     margin: 1rem;
     border-radius: 8px;
@@ -864,12 +907,12 @@ main>.content>.first {
     align-items: center;
 }
 
-.sixth h2 {
+.seventh h2 {
     align-self: flex-start;
     color: var(--aot-color--);
 }
 
-.sixth .companies {
+.seventh .companies {
     width: fit-content;
     display: flex;
     justify-content: space-around;
@@ -877,23 +920,23 @@ main>.content>.first {
     padding: 1rem;
 }
 
-.sixth .company {
+.seventh .company {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.sixth .company img {
+.seventh .company img {
     width: 8rem;
     margin: 0 1rem;
 }
 
-.sixth .company img:hover {
+.seventh .company img:hover {
     cursor: pointer;
     box-shadow: 0 0 5px 5px rgba(128, 128, 128, 0.318);
 }
 
-.sixth .company span {
+.seventh .company span {
     color: var(--aot-color--);
     font-weight: bolder;
     font-size: 1.1rem;
@@ -907,7 +950,7 @@ nav a {
     display: flex;
 }
 
-.seventh {
+.eighth {
     background-color: var(--aot-light-color--);
     box-shadow: var(--normal-shadow--);
     margin: 1rem;
@@ -919,18 +962,18 @@ nav a {
     padding: 1rem 2rem;
 }
 
-.seventh h2 {
+.eighth h2 {
     color: var(--aot-color--);
     margin-bottom: 0.5rem;
     align-self: flex-start;
 }
 
-.seventh iframe {
+.eighth iframe {
     width: 80%;
     height: 20rem;
 }
 
-.seventh p {
+.eighth p {
     width: 80%;
     text-wrap: pretty;
     text-align: center;
@@ -938,11 +981,18 @@ nav a {
     font-size: 1.1rem;
 }
 
-.seventh p span {
+.eighth p span {
     user-select: text;
 }
 
 /*media-query*/
+
+@media only screen and (max-width:1264px) {
+    .fifth>.content {
+        grid-template-columns: auto;
+    }
+}
+
 @media only screen and (max-width:1257px) {
 
 
@@ -968,6 +1018,12 @@ nav a {
 
     .third .about .video {
         width: 80%;
+    }
+}
+
+@media only screen and (max-width:1200px) {
+    .sixth>.content {
+        grid-template-columns: auto;
     }
 }
 
@@ -1002,45 +1058,51 @@ nav a {
     }
 }
 
-@media only screen and (max-width:1060px) {
-    .fifth>.content {
-        grid-template-columns: auto;
+@media only screen and (max-width:722px) {
+    .fifth>.content>.left ul {
+        display: grid;
+        grid-template-columns: 25% 25% 25% auto;
+    }
+
+    .fifth>.content>.right ul {
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
 @media only screen and (max-width:682px) {
-    .sixth {
+    .seventh {
         padding: 0;
     }
 
-    .sixth .companies .company img {
+    .seventh .companies .company img {
         width: 6rem;
         padding: 0;
     }
 
-    .sixth h2 {
+    .seventh h2 {
         font-size: 1.5rem;
         line-height: 1.5rem;
         padding: 2rem;
         padding-bottom: 0;
     }
 
-    .sixth .companies {
+    .seventh .companies {
         display: grid;
         width: 100%;
         margin: 0 -2rem;
         grid-template-columns: auto auto;
     }
 
-    .seventh h2 {
+    .eighth h2 {
         font-size: 1.5rem;
     }
 
-    .seventh p {
+    .eighth p {
         font-size: 0.9rem;
     }
 
-    .sixth .companies .company {
+    .seventh .companies .company {
         margin: 1rem 0;
     }
 }
@@ -1066,22 +1128,23 @@ nav a {
         border-radius: 0;
     }
 
-    .fifth {
+    .fifth,
+    .sixth {
         margin: 1rem 0;
         border-radius: 0;
     }
 
-    .sixth {
+    .seventh {
         margin: 1rem 0;
         border-radius: 0px;
     }
 
-    .seventh {
+    .eighth {
         margin: 0;
         border-radius: 0;
     }
 
-    .seventh iframe {
+    .eighth iframe {
         width: 100%;
     }
 
@@ -1128,17 +1191,6 @@ nav a {
     }
 }
 
-@media only screen and (max-width:560px) {
-    .fifth>.content>.left ul{
-        display: grid;
-        grid-template-columns: 25% 25% 25% auto;
-    }
-    .fifth>.content>.right ul{
-        display: flex;
-        flex-wrap: wrap;
-    }
-}
-
 @media only screen and (max-width:546px) {
     .first {
         max-height: 10rem;
@@ -1160,7 +1212,11 @@ nav a {
         font-size: 1.4rem;
     }
 
-    .sixth h2 {
+    .sixth {
+        padding: 1rem;
+    }
+
+    .seventh h2 {
         padding: 1rem;
         padding-bottom: 0;
     }
@@ -1192,7 +1248,7 @@ nav a {
         width: 500px;
     }
 
-    .seventh {
+    .eighth {
         padding: 1rem;
     }
 }
@@ -1214,11 +1270,19 @@ nav a {
     }
 }
 
+@media only screen and (max-width:400px) {
+    .fifth>.content>.left ul {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+}
+
 @media only screen and (max-width:394px) {
 
     .second h2 span,
     .third>h2,
-    .sixth>h2 {
+    .seventh>h2,
+    .sixth h2 {
         font-size: 1.3rem;
     }
 
@@ -1234,10 +1298,12 @@ nav a {
     .fourth>div>ul>li a {
         font-size: 0.9rem;
     }
-    .fifth h2{
+
+    .fifth h2 {
         font-size: 1.4rem;
     }
-    .sixth .companies .company span {
+
+    .seventh .companies .company span {
         margin-top: 0.5rem;
         font-size: 0.9rem;
     }
