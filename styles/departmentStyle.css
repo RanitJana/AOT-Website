@@ -262,6 +262,12 @@
 
 }
 
+@media only screen and (max-width:956px) {
+    .map iframe {
+        width: 100%;
+    }
+}
+
 @media only screen and (max-width:902px) {
     main {
         position: relative;
@@ -493,12 +499,14 @@
         padding-top: 0;
     }
 }
+
 @media only screen and (max-width:750px) {
-    .banner{
+    .banner {
         margin: 1rem 0;
         margin-top: 2rem;
     }
 }
+
 @media only screen and (max-width:658px) {
     .banner .left img {
         width: 6rem;
@@ -509,6 +517,7 @@
         line-height: 2rem;
     }
 }
+
 @media only screen and (max-width:394px) {
 
     .sec1>div p,
