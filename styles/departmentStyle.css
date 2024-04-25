@@ -232,7 +232,9 @@ h1 {
     .section p {
         margin-right: 0.5rem;
     }
-
+    .parent-nav .section p{
+        text-align: center;
+    }
     .parent-nav .section img {
         transform: rotate(90deg);
         width: 0.8rem;
@@ -289,7 +291,7 @@ h1 {
         align-items: center;
         background-color: var(--aot-color--);
         border-radius: 8px;
-        width: 40%;
+        width: fit-content;
         padding: 0.5rem 1rem;
         padding-right: 2rem;
         margin: 1rem 0 1rem 0;
@@ -394,7 +396,6 @@ h1 {
 
     .parent-nav2 ul {
         padding-top: 2rem;
-        /* background-color: aqua; */
     }
 
     .parent-nav2 ul li {

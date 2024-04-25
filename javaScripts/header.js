@@ -137,6 +137,9 @@ allchild.forEach((allchilds, idx) => {
         event.stopPropagation();
     }, false)
 })
-hambergMenu.addEventListener('click', () => {
-
+let parentNav2Child = document.querySelectorAll('.parent-nav2 > ul > li');
+parentNav2Child.forEach(val => {
+    val.addEventListener('click', () => {
+        event.stopPropagation();
+    }, false)
 })
