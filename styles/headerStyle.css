@@ -118,7 +118,7 @@ main {
     }
 }
 
-@media only screen and (max-width:630px) {
+@media only screen and (max-width:750px) {
     .banner .right {
         display: none;
     }
@@ -127,11 +127,6 @@ main {
         flex-direction: column;
         padding-top: 0;
         padding-bottom: 0;
-    }
-
-    .hamberg-menu {
-        display: flex;
-        z-index: 12;
     }
 
     .hamberg-menu:hover {

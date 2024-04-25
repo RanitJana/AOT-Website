@@ -39,7 +39,7 @@ parentNav.forEach((val, idx) => {
         parentNav.forEach((value, index) => {
             if (value.getAttribute('class') === 'parent-nav') {
                 let arrow = (value.childNodes[1].childNodes[3]);
-                if (idx != index) {
+                if (idx != index && arrow) {
                     arrow.style.transform = "rotate(90deg)";
                 }
             }
@@ -138,5 +138,5 @@ allchild.forEach((allchilds, idx) => {
     }, false)
 })
 hambergMenu.addEventListener('click', () => {
-    
+
 })

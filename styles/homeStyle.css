@@ -76,7 +76,7 @@ body::-webkit-scrollbar {
 }
 
 
-@media only screen and (min-width:630px) {
+@media only screen and (min-width:750px) {
     nav {
         width: 100%;
         display: flex;
@@ -229,9 +229,14 @@ body::-webkit-scrollbar {
 
 }
 
-@media only screen and (max-width:630px) {
+@media only screen and (max-width:750px) {
     main {
         position: relative;
+    }
+
+    .hamberg-menu {
+        display: flex;
+        z-index: 12;
     }
 
     .parent-nav>ul>li,
@@ -762,12 +767,13 @@ main>.content>.first {
 #pause {
     z-index: 4;
 }
-.fourth>.info{
+
+.fourth>.info {
     display: flex;
     flex-direction: column;
 }
 
-.fourth>.info>.rankInfo{
+.fourth>.info>.rankInfo {
     border-radius: 8px;
     padding: 1rem;
     display: flex;
@@ -777,18 +783,21 @@ main>.content>.first {
     background-color: white;
     box-shadow: var(--normal-shadow--);
 }
-.fourth>.info>.topImage{
+
+.fourth>.info>.topImage {
     width: 100%;
     display: flex;
     justify-content: center;
     align-self: center;
     margin-bottom: 1rem;
 }
-.fourth>.info>.topImage>img{
+
+.fourth>.info>.topImage>img {
     width: 100%;
     max-width: 40rem;
 }
-.fourth>.info>.rankInfo>.year{
+
+.fourth>.info>.rankInfo>.year {
     width: min-content;
     display: flex;
     flex-direction: column;
@@ -799,11 +808,13 @@ main>.content>.first {
     height: 11rem;
     padding: 1rem;
 }
-.fourth>.info>.rankInfo> img{
+
+.fourth>.info>.rankInfo>img {
     aspect-ratio: 1;
     width: 11rem;
 }
-.fourth>.info>.rankInfo>.writing{
+
+.fourth>.info>.rankInfo>.writing {
     width: 100%;
     background-color: var(--aot-light-color--);
     padding: 1rem;
@@ -814,6 +825,7 @@ main>.content>.first {
     justify-content: center;
     margin-left: 1rem;
 }
+
 .fifth {
     display: grid;
     grid-template-columns: 50% auto;
@@ -1042,15 +1054,17 @@ nav a {
 }
 
 /*media-query*/
-@media only screen and (min-width:1519px){
-    body{
+@media only screen and (min-width:1519px) {
+    body {
         width: 1519px;
     }
-    html{
+
+    html {
         display: flex;
         justify-content: center;
     }
 }
+
 @media only screen and (max-width:1264px) {
     .sixth>.content {
         grid-template-columns: auto;
@@ -1121,26 +1135,31 @@ nav a {
         font-size: 1.5rem;
     }
 }
-@media only screen and (max-width:770px){
-    .fourth>.info>.rankInfo{
+
+@media only screen and (max-width:770px) {
+    .fourth>.info>.rankInfo {
         flex-direction: column;
         flex-wrap: wrap;
     }
-    .fourth>.info>.rankInfo>.year{
+
+    .fourth>.info>.rankInfo>.year {
         flex-direction: row;
         width: 100%;
         height: fit-content;
         padding: 0.5rem 1rem;
     }
-    .fourth>.info>.rankInfo>img{
+
+    .fourth>.info>.rankInfo>img {
         padding-top: 0.5rem;
         /* align-self: flex-start; */
     }
-    .fourth>.info>.rankInfo>.writing{
+
+    .fourth>.info>.rankInfo>.writing {
         margin: 0;
         margin-top: 0.5rem;
     }
 }
+
 @media only screen and (max-width:722px) {
     .sixth>.content>.left ul {
         display: grid;
@@ -1202,10 +1221,11 @@ nav a {
 }
 
 @media only screen and (max-width:630px) {
-    .fourth{
+    .fourth {
         margin: 1rem 0;
         border-radius: 0;
     }
+
     .fifth {
         margin: 1rem 0;
         grid-template-columns: auto;
@@ -1295,9 +1315,10 @@ nav a {
 
 
 @media only screen and (max-width:422px) {
-    .fourth{
+    .fourth {
         padding: 1rem;
     }
+
     .fifth div h2 {
         font-size: 1.4rem;
     }
@@ -1382,7 +1403,8 @@ nav a {
         line-height: 0.9rem;
     }
 
-    .third .about .story p,.fourth>.info>.rankInfo>.writing {
+    .third .about .story p,
+    .fourth>.info>.rankInfo>.writing {
         font-size: 0.9rem;
     }
 
