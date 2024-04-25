@@ -6,9 +6,29 @@ body {
 }
 
 .page-title {
-    width: 100%;
+    position: relative;
+    padding: 0.15em;
+    min-width: 100%;
+    margin-top: 1rem;
     background: var(--aot-color--);
     color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.logo {
+    position: absolute;
+    margin: 0;
+    padding: 0.55em;
+    width: 70px;
+    background-color: #e5e4e2;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .page-title h1 {
@@ -184,6 +204,10 @@ body {
         height: 320px;
     }
 
+    .page-title {
+        padding: 0.12em;
+    }
+
     .page-title h1 {
         font-size: 1.6rem;
     }
@@ -205,6 +229,19 @@ body {
     .additional-info {
         padding: 15px;
     }
+
+    .page-title {
+        padding: 0.1em;
+    }
+
+    .logo {
+        width: 55px;
+    }
+
+    .logo img {
+        width: 28px;
+        height: 28px;
+    }
 }
 
 @media only screen and (max-width : 434px) {
@@ -221,6 +258,19 @@ body {
     .additional-info {
         padding: 10px;
     }
+
+    .page-title {
+        padding: 0.1em;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    .logo img {
+        width: 26px;
+        height: 26px;
+    }
 }
 
 @media only screen and (max-width : 311px) {
@@ -236,5 +286,18 @@ body {
 
     .additional-info {
         padding: 8px;
+    }
+
+    .page-title {
+        padding: 0.08em;
+    }
+
+    .logo {
+        width: 45px;
+    }
+
+    .logo img {
+        width: 22px;
+        height: 22px;
     }
 }
