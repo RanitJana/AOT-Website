@@ -145,6 +145,7 @@ span.prev:hover {
     font-size: 1.7em;
 }
 
+
 /* ====================     infrastructure section     ============================ */
 
 .infrastructure {
@@ -482,4 +483,23 @@ td:nth-child(2) {
     .banner .middle h1{
         font-size: 1.8em;
     }
+}
+
+@media only screen and (max-width:950px) {
+    .intro-slide-container{
+        height: 245px;
+    }
+
+    .intro-slide-container .intro-btn {
+        top: 25%;
+    }
+    .headings{
+        padding: 5px 0px;
+        margin-top: 10px;
+        font-size: 1.5em;
+    }
+    .beforeIntro img {
+        padding: 0.6em;
+    }
+
 }
