@@ -1054,16 +1054,6 @@ nav a {
 }
 
 /*media-query*/
-@media only screen and (min-width:1519px) {
-    body {
-        width: 1519px;
-    }
-
-    html {
-        display: flex;
-        justify-content: center;
-    }
-}
 
 @media only screen and (max-width:1264px) {
     .sixth>.content {
