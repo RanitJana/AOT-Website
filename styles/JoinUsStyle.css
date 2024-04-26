@@ -1,0 +1,27 @@
+@import url(basicStyles.css);
+
+.outer{
+    padding: 20px 10px;
+    font-size: 1.1em;
+}
+.inner{
+    padding: 0px 1em;
+}
+
+.whyJoin-inner ul{
+    padding: 0px 1.3em;
+}
+.whyJoin-inner ul li{
+    list-style-type: circle;
+}
+
+/* ====================     courses offered    ===================*/
+
+ li a{
+    text-decoration: none;
+    color: #222;
+}
+ li a:hover{
+    text-decoration: underline;
+    color: rgb(63, 20, 116);
+}
