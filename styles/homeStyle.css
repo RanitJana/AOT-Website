@@ -1329,7 +1329,11 @@ section {
     }
 }
 
-
+@media only screen and (max-width:490px){
+    .first{
+        margin-bottom: 1rem;
+    }
+}
 @media only screen and (max-width:422px) {
     .fourth {
         padding: 1rem;
