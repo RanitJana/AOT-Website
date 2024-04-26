@@ -43,7 +43,6 @@ td{
     grid-area: para;
     margin: 1rem;
     padding-left: 1.5rem;
-    /* border: 3px solid var(--aot-dark-color--); */
     box-shadow: -10px 10px 10px rgba(0,0,0,0.15);
     border-radius: 10px;
 }
@@ -52,7 +51,6 @@ td{
     grid-area: para2;
     margin: 1rem;
     padding: 1.5rem;
-    /* border: 3px solid var(--aot-dark-color--); */
     box-shadow: -10px 10px 10px rgba(0,0,0,0.15);
     border-radius: 10px;
 }
@@ -112,11 +110,9 @@ img{
         display: grid;
         grid-template-areas: 
         'para image image';
-        /* 'para2 para2 para2'; */
     }
     .para{
         box-shadow: -10px -10px 10px rgba(0,0,0,0.15);
-        /* box-shadow: none; */
     }
     .parent{
         display: flex;
