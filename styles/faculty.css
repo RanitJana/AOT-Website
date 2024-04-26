@@ -5,9 +5,10 @@ main{
     margin-bottom: 3rem;
 }
 
-#heading{
+h1{
     text-align: center;
-    
+    color: var(--aot-dark-color--);
+    font-size: 1.7rem;
 }
 
 .tbl{
@@ -57,6 +58,7 @@ td{
 
 p,li{
     color: var(--aot-dark-color--);
+    font-size: 1rem;
 }
 
 .info{
