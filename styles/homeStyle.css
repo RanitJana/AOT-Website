@@ -402,6 +402,12 @@ body::-webkit-scrollbar {
         transition: all 0.3s ease;
         transform: rotate(90deg);
     }
+    .banner{
+        padding-bottom: 1rem;
+    }
+    .first{
+        margin-top: -1rem;
+    }
 }
 
 
@@ -1053,6 +1059,10 @@ nav a {
 
 .ninth p span {
     user-select: text;
+}
+
+section {
+    background-color: transparent;
 }
 
 /*media-query*/
