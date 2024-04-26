@@ -4,10 +4,6 @@ body {
     position: relative;
 }
 
-body::-webkit-scrollbar {
-    display: none;
-}
-
 .first,
 .second,
 .event,
@@ -921,6 +917,7 @@ main>.content>.first {
 }
 
 .sixth>.content>div ul {
+    min-height: 5rem;
     flex-direction: row;
     justify-content: center;
     border-radius: 0;

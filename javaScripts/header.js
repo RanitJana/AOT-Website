@@ -2,11 +2,18 @@ let hambergMenu = document.querySelector('.hamberg-menu');
 let body = document.querySelector('body');
 let nav = document.querySelector('nav');
 let goback = document.querySelector('.goback');
+let deny = document.querySelector('.deny');
 goback.addEventListener('click', () => {
     nav.style.right = "-100%";
+    body.style.overflowY = "auto";
+    deny.style.right = '-100%';
+    deny.style.backgroundColor = "transparent";
 })
 hambergMenu.addEventListener('click', e => {
     nav.style.right = "0%";
+    body.style.overflowY = "hidden";
+    deny.style.right = '0%';
+    deny.style.backgroundColor = "rgba(0, 0, 0, 0.649)";
 })
 window.addEventListener('click', e => {
     if (e.x <= screen.width - nav.clientWidth) {
