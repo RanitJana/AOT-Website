@@ -83,7 +83,7 @@ body {
 }
 
 .item-container:hover {
-    overflow: auto;
+    overflow-y: scroll;
 }
 
 .item-container:hover .overlay {
