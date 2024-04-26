@@ -43,3 +43,13 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--aot-dark-color--)
 }
+@media only screen and (min-width:1519px) {
+    body {
+        width: 1519px;
+    }
+
+    html {
+        display: flex;
+        justify-content: center;
+    }
+}
