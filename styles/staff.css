@@ -7,7 +7,7 @@ main{
 
 #heading{
     text-align: center;
-    
+    font-size: 1.7rem;
 }
 
 .tbl{
@@ -35,6 +35,7 @@ td{
 
 p,li{
     color: var(--aot-dark-color--);
+    font-size: 1rem;
 }
 
 @media (min-width:550px){

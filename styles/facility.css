@@ -1,17 +1,21 @@
 @import url('./basicStyles.css');
 
-h1,h3{
+h1{
     text-align: center;
     color: var(--aot-dark-color--);
+    font-size: 1.7rem;
 }
 
 h3{
+    text-align: center;
     text-transform: uppercase;
     text-decoration: underline;
+    font-size: 1.5rem;
 }
 
 p{
     color: var(--aot-dark-color--);
+    font-size: 1rem
 }
 
 span{

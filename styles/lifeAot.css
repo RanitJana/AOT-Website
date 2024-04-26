@@ -3,15 +3,19 @@
 h1{
     text-align: center;
     color: var(--aot-dark-color--);
+    font-size: 1.7rem;
 }
 
-h3,p{
+p{
     text-align: center;
     color: var(--aot-dark-color--);
+    font-size: 1rem;
 }
 
 h3{
     text-align: center;
+    color: var(--aot-dark-color--);
+    font-size: 1.5rem;
 }
 
 .para,.para2{

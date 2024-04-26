@@ -3,10 +3,17 @@
 h1{
     text-align: center;
     color: var(--aot-dark-color--);
+    font-size: 1.7rem;
 }
 
-h3,p{
+h3{
     color: var(--aot-dark-color--);
+    font-size: 1.5rem;
+}
+
+p{
+    color: var(--aot-dark-color--);
+    font-size: 1rem;
 }
 
 .para{
