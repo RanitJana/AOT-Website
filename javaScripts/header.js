@@ -18,6 +18,8 @@ hambergMenu.addEventListener('click', e => {
 window.addEventListener('click', e => {
     if (e.x <= screen.width - nav.clientWidth) {
         nav.style.right = "-100%";
+        deny.style.right = '-100%';
+        deny.style.backgroundColor = "transparent";
     }
 })
 
