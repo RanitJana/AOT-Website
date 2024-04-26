@@ -8,6 +8,7 @@
         'event event notice'
         'map map notice';
     grid-gap: 1rem;
+    margin-top: -1rem;
 }
 
 .news {
@@ -68,7 +69,8 @@
     display: block;
 }
 
-.map {
+.map,
+.first {
     background-color: var(--aot-light-color--);
     box-shadow: var(--normal-shadow--);
     border-radius: 8px;
@@ -82,7 +84,8 @@
 .map h2,
 .news h2,
 .event h2,
-.notice h2 {
+.notice h2,
+.first h2 {
     color: var(--aot-color--);
     margin-bottom: 0.5rem;
     align-self: flex-start;
@@ -116,6 +119,151 @@ nav>ul>li>div>a {
     align-items: center;
 }
 
+.first {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    flex-direction: column;
+    padding: 1rem 2rem;
+}
+
+.firstContainer {
+    display:grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    padding-right: 1rem;
+}
+
+.first .departmentBox {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-weight: bolder;
+    line-height: 1.2rem;
+    height: 20rem;
+}
+
+.first .departmentBox>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.first .departmentBox>.top {
+    padding: 1rem;
+    height: 6rem;
+    transition: all 0.3s ease;
+    position: relative;
+    text-align: left;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.first .departmentBox>.top>span {
+    height: max-content;
+    width: max-content;
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    z-index: 5;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.first .departmentBox>.top>.back {
+    height: 200%;
+    width: 200%;
+    position: absolute;
+    top: -100%;
+    left: -50%;
+    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: rotate(-5deg);
+}
+
+.first .departmentBox>.details {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    transition: all 0.8s ease;
+    scale: 0;
+}
+
+.first .departmentBox>.details>span {
+    color: white;
+    padding: 1rem;
+    font-weight: normal;
+}
+
+.first .departmentBox>.details a:first-child {
+    border-top: 2px solid yellow;
+    border-bottom: 2px solid yellow;
+    width: 100%;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    text-align: center;
+    color: white;
+}
+
+.first .departmentBox>.details a:last-child button {
+    padding: 0.3rem 1.2rem;
+    background-color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--aot-color--);
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+
+.first .departmentBox>.details a:last-child button:hover {
+    cursor: pointer;
+}
+
+.first .departmentBox>.details a:last-child button:active {
+    background-color: rgb(177, 177, 177);
+}
+
+.first .departmentBox:hover .details {
+    scale: 1;
+}
+
+.first .departmentBox:hover .top {
+    transform: translateY(-150%);
+}
+
+@media only screen and (max-width:736px) {
+    .first .departmentBox {
+        width: 100%;
+        aspect-ratio: 1;
+        height: 20rem;
+        margin: 0.5rem;
+    }
+}
+@media only screen and (max-width:737px){
+    .firstContainer{
+        grid-template-columns: auto;
+        gap: 0;
+    }
+}
 @media only screen and (min-width:1077px) {
     nav {
         width: 100%;
@@ -470,7 +618,6 @@ nav>ul>li>div>a {
             'news notice'
             'event notice'
             'map notice';
-        grid-gap: 1rem;
     }
 }
 
@@ -483,12 +630,13 @@ nav>ul>li>div>a {
             'event'
             'notice'
             'map';
-        grid-gap: 1rem;
     }
 }
 
 @media only screen and (max-width:682px) {
-    .sec1 h2 {
+
+    .sec1 h2,
+    .first>h2 {
         font-size: 1.5rem;
     }
 }
@@ -500,6 +648,22 @@ nav>ul>li>div>a {
 
     .sec1>div {
         border-radius: 0;
+    }
+    .first h2{
+        padding-left: 1rem;
+    }
+    .first {
+        margin: 1rem 0;
+        margin-top: 2rem;
+        border-radius: 0;
+        padding: 1rem 0;
+    }
+    .firstContainer{
+        padding: 0;
+    }
+    .firstContainer .departmentBox{
+        margin: 0.5rem 0;
+        width: 100%;
     }
 }
 
