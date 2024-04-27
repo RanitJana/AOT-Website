@@ -227,10 +227,10 @@ window.addEventListener('scroll', (e) => {
             function updateCount() {
                 const target = parseInt(value.getAttribute('data'));
                 if (count < target) {
-                    count += parseInt(target / 200)+1;
+                    count += parseInt(target / 100);
                     if (count >= target) count = target;
                     value.childNodes[0].textContent = count + '+';
-                    setTimeout(updateCount, 15);
+                    setTimeout(updateCount, 40);
                 }
                 else {
                     value.childNodes[0].textContent = target + '+';
