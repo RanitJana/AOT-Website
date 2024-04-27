@@ -11,6 +11,14 @@
     margin-top: -1rem;
 }
 
+#rd{
+    text-decoration: none;
+}
+
+p{
+    text-align: justify;
+}
+
 .news {
     padding: 1rem;
     grid-area: news;
