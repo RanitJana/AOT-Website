@@ -30,7 +30,8 @@ window.addEventListener('resize', () => {
         deny.style.right = '-100%';
         deny.style.backgroundColor = "transparent";
     }
-    if (value == 'flex' && window.getComputedStyle(nav).display == 'block') {
+    // console.log(value, window.getComputedStyle(nav).right, window.getComputedStyle(nav).display);
+    if (value == 'flex' && window.getComputedStyle(nav).right == '0px' && window.getComputedStyle(nav).display == 'block') {
         body.style.overflowY = "hidden";
         deny.style.right = '0%';
         deny.style.backgroundColor = "rgba(0, 0, 0, 0.649)";
