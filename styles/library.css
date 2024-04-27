@@ -47,8 +47,8 @@ img{
     display: grid;
     grid-template-areas: 
     'rules'
-    'book'
-    'image';
+    'image'
+    'book';
     gap: 2em;
 }
 
