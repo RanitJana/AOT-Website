@@ -1,7 +1,5 @@
 @import url('./basicStyles.css');
 @import url('./headerStyle.css');
-@import url('./headerResponsive.css');
-
 
 body {
 
@@ -13,8 +11,6 @@ body {
 
 .section {
     max-width: 100%;
-    background-color: #f8f8ff;
-    /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
     align-items: center;
