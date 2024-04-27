@@ -1601,4 +1601,7 @@ section {
     .writingContent h3 {
         font-size: 1.1rem;
     }
+    .ninth> span{
+        font-size: 0.9rem;
+    }
 }
