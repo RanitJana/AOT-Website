@@ -93,7 +93,12 @@ body {
     position: relative;
     bottom: 3em;
     font-size: large;
+    /* border: 1px solid red; */
 }
+
+/* .item__details {
+    border: 1px solid red;
+} */
 
 /* 746 */
 @media only screen and (max-width: 746px) {
@@ -133,10 +138,10 @@ body {
         gap: 2.2rem;
     }
 
-    .item {
+    /* .item {
         width: 260px;
         height: 220px;
-    }
+    } */
 
     .item__title {
         position: relative;
