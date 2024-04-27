@@ -1190,6 +1190,7 @@ nav a {
 .workshop>h2 {
     color: var(--aot-color--);
     padding: 1rem 0;
+    padding-top: 0;
 }
 
 .antiRagging>.info,
@@ -1605,11 +1606,13 @@ section {
         font-size: 1rem;
     }
 }
-@media only screen and (max-width:488px){
-    .workshop>.info>img{
+
+@media only screen and (max-width:488px) {
+    .workshop>.info>img {
         width: 100%;
     }
 }
+
 @media only screen and (max-width:490px) {
     .first {
         margin-bottom: 1rem;
@@ -1732,7 +1735,10 @@ section {
     .third>h2,
     .fourth>h2,
     .eighth>h2,
-    .seventh h2 {
+    .seventh h2,
+    .ninth h2,
+    .antiRagging>h2,
+    .workshop>h2 {
         font-size: 1.3rem;
     }
 
@@ -1775,7 +1781,8 @@ section {
         font-size: 0.9rem;
     }
 
-    .antiRagging p,.workshop p {
+    .antiRagging p,
+    .workshop p {
         font-size: 0.9rem;
     }
 
