@@ -1775,7 +1775,7 @@ section {
         font-size: 0.9rem;
     }
 
-    .antiRagging p {
+    .antiRagging p,.workshop p {
         font-size: 0.9rem;
     }
 
