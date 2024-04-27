@@ -223,13 +223,15 @@ body {
         transition: all 0.3s ease;
         transform: rotate(0deg);
     }
+
     nav>ul>li>ul>li,
-    nav>ul>li>ul>li>ul>li{
+    nav>ul>li>ul>li>ul>li {
         border-bottom: 1px dotted gray;
     }
+
     nav>ul>li:hover,
     nav>ul>li>ul>li:hover,
-    nav>ul>li>ul>li>ul>li:hover{
+    nav>ul>li>ul>li>ul>li:hover {
         background-color: rgba(128, 128, 128, 0.247);
     }
 
@@ -841,7 +843,8 @@ main>.content>.first {
     font-weight: bolder;
     border-bottom: 5px solid white;
 }
-.allignments{
+
+.allignments {
     background-color: var(--aot-light-color--);
     margin: 1rem;
     padding: 1rem 2rem;
@@ -851,10 +854,12 @@ main>.content>.first {
     /* display: flex;
     flex-direction: column; */
 }
-.allignments h2{
+
+.allignments h2 {
     color: var(--aot-color--);
 }
-.allignments >.pics{
+
+.allignments>.pics {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -864,23 +869,27 @@ main>.content>.first {
     padding: 1rem 0;
     min-height: 10rem;
 }
-.allignments>.pics>.images{
+
+.allignments>.pics>.images {
     background-color: aqua;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 5rem;
     width: 10rem;
-    mix-blend-mode:multiply;
+    mix-blend-mode: multiply;
 }
-.allignments>.pics>.images:hover{
+
+.allignments>.pics>.images:hover {
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.295);
 }
-.allignments>.pics>.images img{
+
+.allignments>.pics>.images img {
     width: 100%;
     height: 100%;
     object-fit: fill;
 }
+
 .fourth>.info {
     display: flex;
     flex-direction: column;
@@ -908,7 +917,7 @@ main>.content>.first {
 .fourth>.info>.topImage>img {
     width: 100%;
     max-width: 40rem;
-    mix-blend-mode:multiply;
+    mix-blend-mode: multiply;
 }
 
 .fourth>.info>.rankInfo>.year {
@@ -1000,10 +1009,12 @@ main>.content>.first {
     padding: 1rem 2rem;
     box-shadow: var(--normal-shadow--);
 }
-.sixth{
+
+.sixth {
     margin-top: -1rem;
     margin-bottom: 2rem;
 }
+
 .sixth h2,
 .seventh h2 {
     color: var(--aot-color--);
@@ -1117,7 +1128,7 @@ main>.content>.first {
 .eighth .company img {
     width: 8rem;
     margin: 0 1rem;
-    mix-blend-mode:multiply;
+    mix-blend-mode: multiply;
 }
 
 .eighth .company img:hover {
@@ -1137,6 +1148,87 @@ main>.content>.first {
 
 nav a {
     display: flex;
+}
+
+.glance {
+    /* background-color: aqua; */
+    text-align: center;
+    overflow: hidden;
+}
+
+@keyframes move {
+    0% {
+        scale: 0.95;
+    }
+
+    50% {
+        scale: 1;
+    }
+
+    100% {
+        scale: 0.95;
+    }
+}
+
+.glance h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: red;
+    animation: move 2s ease infinite;
+}
+
+.antiRagging,
+.workshop {
+    margin: 1rem;
+    padding: 1rem 2rem;
+    box-shadow: var(--normal-shadow--);
+    border-radius: 8px;
+    background-color: var(--aot-light-color--);
+}
+
+.antiRagging>h2,
+.workshop>h2 {
+    color: var(--aot-color--);
+    padding: 1rem 0;
+}
+
+.antiRagging>.info,
+.workshop>.info {
+    text-wrap: pretty;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.workshop {
+    padding-bottom: 2rem;
+    /* flex-direction: column; */
+}
+
+.workshop>.info {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.antiRagging>.info img,
+.workshop>.info img {
+    mix-blend-mode: multiply;
+    width: 20rem;
+}
+
+.workshop>.info img {
+    width: 25rem;
+}
+
+.antiRagging>.info button,
+.workshop>.info button {
+    background-color: var(--aot-color--);
+    color: white;
+    padding: 0.3rem 0.5rem;
+    border: none;
+    border-radius: 5px;
+    margin-top: 0.5rem;
 }
 
 .ninth {
@@ -1250,17 +1342,31 @@ section {
         font-size: 1.5rem;
     }
 }
-@media only screen and (min-width:1001px){
-    main>.content>.first{
+
+@media only screen and (min-width:1001px) {
+    main>.content>.first {
         max-height: 32rem;
         background: transparent;
     }
 }
+
 @media only screen and (max-width:780px) {
     .exp>.blackCover>.content {
         width: 100%;
         display: grid;
         grid-template-columns: 50% 50%;
+    }
+}
+
+@media only screen and (max-width:913px) {
+    .antiRagging>.info img {
+        width: 20rem;
+    }
+
+    .antiRagging>.info {
+        gap: 0;
+        margin-bottom: 2rem;
+        flex-direction: column;
     }
 }
 
@@ -1362,9 +1468,20 @@ section {
 }
 
 @media only screen and (max-width:630px) {
-    .allignments{
+    .allignments {
         margin: 1rem 0;
     }
+
+    .antiRagging,
+    .workshop {
+        margin: 1rem 0;
+        border-radius: 0;
+    }
+
+    .antiRagging>.info img {
+        width: 17rem;
+    }
+
     .fourth {
         margin: 1rem 0;
         border-radius: 0;
@@ -1383,7 +1500,8 @@ section {
         margin: 1rem 0;
         border-radius: 0;
     }
-    .sixth{
+
+    .sixth {
         border-radius: 0;
         margin: 0;
         margin-top: -1rem;
@@ -1487,7 +1605,11 @@ section {
         font-size: 1rem;
     }
 }
-
+@media only screen and (max-width:488px){
+    .workshop>.info>img{
+        width: 100%;
+    }
+}
 @media only screen and (max-width:490px) {
     .first {
         margin-bottom: 1rem;
@@ -1495,25 +1617,42 @@ section {
 }
 
 @media only screen and (max-width:422px) {
-    .allignments{
+
+    .allignments,
+    .workshop {
         padding: 1rem;
     }
-    .allignments h2{
+
+    .allignments h2,
+    .antiRagging h2 {
         font-size: 1.5rem;
     }
-    .allignments>.pics>.images{
+
+    .allignments>.pics>.images {
         width: 8rem;
         height: 4rem;
     }
-    .third>h2{
+
+    .antiRagging {
+        padding: 1rem;
+    }
+
+    .antiRagging>.info h2 {
+        font-size: 1.5rem;
+    }
+
+    .third>h2 {
         margin-bottom: 0rem;
     }
+
     .third>.vision {
         margin-bottom: 2rem;
     }
-    .third>.vision h2{
+
+    .third>.vision h2 {
         font-size: 1.5rem;
     }
+
     .fourth {
         padding: 1rem;
     }
@@ -1596,9 +1735,11 @@ section {
     .seventh h2 {
         font-size: 1.3rem;
     }
-    .third>.vision p{
+
+    .third>.vision p {
         font-size: 0.9rem;
     }
+
     .second .content .sub-content .updateBox a {
         font-size: 0.9rem;
         line-height: 0.9rem;
@@ -1629,7 +1770,16 @@ section {
     .writingContent h3 {
         font-size: 1.1rem;
     }
-    .ninth> span{
+
+    .ninth>span {
         font-size: 0.9rem;
+    }
+
+    .antiRagging p {
+        font-size: 0.9rem;
+    }
+
+    .antiRagging>.info>img {
+        width: 15rem;
     }
 }
