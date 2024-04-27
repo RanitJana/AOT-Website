@@ -101,8 +101,9 @@ body {
     }
 
     .parent-nav2 ul>li>a {
+        /* background-color: aqua; */
         display: flex;
-        justify-content: center;
+        /* justify-content: center; */
         align-items: center;
     }
 
