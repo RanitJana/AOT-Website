@@ -4,37 +4,48 @@ let nav = document.querySelector('nav');
 let goback = document.querySelector('.goback');
 let deny = document.querySelector('.deny');
 goback.addEventListener('click', () => {
-    nav.style.right = "-100%";
-    body.style.overflowY = "auto";
-    deny.style.right = '-100%';
-    deny.style.backgroundColor = "transparent";
-})
-hambergMenu.addEventListener('click', e => {
-    nav.style.right = "0%";
-    body.style.overflowY = "hidden";
-    deny.style.right = '0%';
-    deny.style.backgroundColor = "rgba(0, 0, 0, 0.649)";
-})
-window.addEventListener('click', e => {
-    if (e.x <= screen.width - nav.clientWidth) {
+    requestAnimationFrame(() => {
         nav.style.right = "-100%";
         body.style.overflowY = "auto";
         deny.style.right = '-100%';
         deny.style.backgroundColor = "transparent";
-    }
+    })
+})
+hambergMenu.addEventListener('click', e => {
+    requestAnimationFrame(() => {
+        nav.style.right = "0%";
+        body.style.overflowY = "hidden";
+        deny.style.right = '0%';
+        deny.style.backgroundColor = "rgba(0, 0, 0, 0.649)";
+    })
+})
+window.addEventListener('click', e => {
+    requestAnimationFrame(() => {
+        if (e.x <= screen.width - nav.clientWidth) {
+            nav.style.right = "-100%";
+            body.style.overflowY = "auto";
+            deny.style.right = '-100%';
+            deny.style.backgroundColor = "transparent";
+
+        }
+    })
 })
 window.addEventListener('resize', () => {
     let value = window.getComputedStyle(hambergMenu).display;
     if (value == "none") {
-        body.style.overflowY = "auto";
-        deny.style.right = '-100%';
-        deny.style.backgroundColor = "transparent";
+        requestAnimationFrame(() => {
+            body.style.overflowY = "auto";
+            deny.style.right = '-100%';
+            deny.style.backgroundColor = "transparent";
+        })
     }
     // console.log(value, window.getComputedStyle(nav).right, window.getComputedStyle(nav).display);
     if (value == 'flex' && window.getComputedStyle(nav).right == '0px' && window.getComputedStyle(nav).display == 'block') {
-        body.style.overflowY = "hidden";
-        deny.style.right = '0%';
-        deny.style.backgroundColor = "rgba(0, 0, 0, 0.649)";
+        requestAnimationFrame(() => {
+            body.style.overflowY = "hidden";
+            deny.style.right = '0%';
+            deny.style.backgroundColor = "rgba(0, 0, 0, 0.649)";
+        })
     }
 
 })
