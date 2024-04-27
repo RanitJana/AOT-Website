@@ -145,7 +145,6 @@ async function getFutureEventData() {
         newNode.childNodes[1].style.backgroundSize = "cover";
         eventContainer.appendChild(newNode);
     })
-    console.log(eventContainer);
 }
 getFutureEventData().then(() => {
     let eventPar = document.querySelectorAll('.eventPar');
@@ -206,3 +205,38 @@ function visibility() {
 }
 window.addEventListener('scroll', visibility)
 window.addEventListener('load', visibility)
+
+//display faculty members numbers
+const elementIsVisibleInViewport = (el,) => {
+    const { top, left, bottom, right } = el.getBoundingClientRect();
+    const { innerHeight, innerWidth } = window;
+    return (top > 0 && top < innerHeight + 200) || (bottom > 0 && bottom < innerHeight - 200);
+};
+
+// console.log(elementIsVisibleInViewport(el, true))
+let numbers = document.querySelectorAll('.exp>.blackCover>.content>div');
+let exp = document.querySelector('.exp');
+let again = false;
+window.addEventListener('scroll', (e) => {
+    console.log(elementIsVisibleInViewport(exp, true));
+    if (elementIsVisibleInViewport(exp, true) && !again) {
+        again = true
+        numbers.forEach(value => {
+            value.childNodes[0].textContent = 0;
+            let count = 0;
+            function updateCount() {
+                const target = parseInt(value.getAttribute('data'));
+                if (count < target) {
+                    count += parseInt(target / 200)+1;
+                    if (count >= target) count = target;
+                    value.childNodes[0].textContent = count + '+';
+                    setTimeout(updateCount, 15);
+                }
+                else {
+                    value.childNodes[0].textContent = target + '+';
+                }
+            }
+            updateCount();
+        })
+    }
+})
