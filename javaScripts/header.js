@@ -155,3 +155,44 @@ parentNav2Child.forEach(val => {
         event.stopPropagation();
     }, false)
 })
+
+let parentNav3 = document.querySelectorAll('.parent-nav3');
+parentNav3.forEach(child => {
+    child.childNodes[3].style.display = 'none';
+    child.childNodes[1].addEventListener('click', () => {
+        parentNav3.forEach(child2 => {
+            if (child.childNodes[1] != child2.childNodes[1]) {
+                if (child2.childNodes[3].style.display == 'block') {
+                    child2.childNodes[3].style.display = 'none';
+                    let arrow = child2.childNodes[1].childNodes[3];
+                    if (screen.width <= 571) {
+                        arrow.style.transform = "rotate(90deg)";
+                    }
+                    else {
+                        arrow.style.transform = "rotate(0deg)";
+                    }
+                }
+            }
+        })
+        let val = child.childNodes[3].style.display;
+        let arrow = child.childNodes[1].childNodes[3];
+        if (val == 'block') {
+            child.childNodes[3].style.display = 'none';
+            if (screen.width <= 571) {
+                arrow.style.transform = "rotate(90deg)";
+            }
+            else {
+                arrow.style.transform = "rotate(0deg)";
+            }
+
+        } else {
+            child.childNodes[3].style.display = 'block';
+            if (screen.width <= 571) {
+                arrow.style.transform = "rotate(-90deg)";
+            }
+            else {
+                arrow.style.transform = "rotate(-180deg)";
+            }
+        }
+    })
+})
