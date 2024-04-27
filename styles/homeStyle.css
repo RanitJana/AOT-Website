@@ -223,6 +223,15 @@ body {
         transition: all 0.3s ease;
         transform: rotate(0deg);
     }
+    nav>ul>li>ul>li,
+    nav>ul>li>ul>li>ul>li{
+        border-bottom: 1px dotted gray;
+    }
+    nav>ul>li:hover,
+    nav>ul>li>ul>li:hover,
+    nav>ul>li>ul>li>ul>li:hover{
+        background-color: rgba(128, 128, 128, 0.247);
+    }
 
 }
 
