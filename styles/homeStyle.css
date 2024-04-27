@@ -1240,7 +1240,12 @@ section {
         font-size: 1.5rem;
     }
 }
-
+@media only screen and (min-width:1001px){
+    main>.content>.first{
+        max-height: 32rem;
+        background: transparent;
+    }
+}
 @media only screen and (max-width:780px) {
     .exp>.blackCover>.content {
         width: 100%;

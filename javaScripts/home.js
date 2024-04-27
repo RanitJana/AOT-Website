@@ -1,5 +1,4 @@
 let first = document.querySelector('.first');
-let bulletin = document.querySelectorAll('#bulletin');
 let loadingPage = document.querySelector('.loadingPage');
 let welcomeAotImg = document.querySelector('.loadingPage img');
 let pArrow = document.querySelector('.swiper-button-prev');
@@ -7,37 +6,42 @@ let nArrow = document.querySelector('.swiper-button-next');
 let images = document.querySelectorAll('.slide');
 let eventInfo;
 let refInterval = null;
-let lessImages = ['./assets/bulletinImage/first.webp', './assets/bulletinImage/second.webp', './assets/bulletinImage/third.webp', './assets/bulletinImage/fourth.webp', './assets/bulletinImage/fifth.webp', './assets/bulletinImage/sixth.webp', './assets/bulletinImage/seventh.webp', './assets/bulletinImage/eighth.webp', './assets/bulletinImage/ninth.webp'];
-let bigImages = ['./assets/bulletinImage/firstBig.webp', './assets/bulletinImage/secondBig.webp', './assets/bulletinImage/thirdBig.webp', './assets/bulletinImage/fourthBig.webp', './assets/bulletinImage/fifthBig.webp', './assets/bulletinImage/sixthBig.webp', './assets/bulletinImage/seventhBig.webp', './assets/bulletinImage/eighthBig.webp', './assets/bulletinImage/ninthBig.webp'];
 
-//functions
-function imgSize() {
-    if (screen.width < 650) {
-        images.forEach((val, idx) => {
-            val.setAttribute('src', lessImages[idx]);
-        })
-    }
-    else {
-        images.forEach((val, idx) => {
-            val.setAttribute('src', bigImages[idx]);
-        })
-    }
-}
-window.addEventListener('resize', () => {
-    imgSize();
-});
-window.addEventListener('load', () => {
-    imgSize();
-});
+let swiperImage = document.querySelector('.swiper-wrapper');
+
 const displayDynamicInfo = function (res) {
-    bulletin.forEach((data, idx) => {
-        const heading = document.createElement('h2');
-        heading.textContent = res[idx % res.length].heading;
-        data.appendChild(heading);
-        const paragraph = document.createElement('p');
-        paragraph.textContent = res[idx % res.length].content;
-        data.appendChild(paragraph);
+    res.forEach(val => {
+        let newNode = document.createElement('div');
+        newNode.classList.add('swiper-slide');
+        newNode.innerHTML =
+            `
+        <div href="" id="bulletin">
+            <h2>${val.heading}</h2>
+            <p>${val.content}</p>
+        </div>
+        <img src="${val.image}" class="slide" alt="Error" loading="eager">
+        `;
+        swiperImage.appendChild(newNode);
     })
+    requestAnimationFrame(() => {
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loop: true,
+            speed: 900,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            autoplay: {
+                delay: 6000,
+            },
+        });
+    });
 };
 
 async function getDynamicData() {   //use to fetch json data from bulletinInfo folder
@@ -45,26 +49,7 @@ async function getDynamicData() {   //use to fetch json data from bulletinInfo f
     let text = await res.json();
     return text;
 };
-requestAnimationFrame(() => {
 
-    var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
-        spaceBetween: 0,
-        loop: true,
-        speed: 1500,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        autoplay: {
-            delay: 6000,
-        },
-    });
-});
 //main content
 getDynamicData()
     .then((res) => {
@@ -127,7 +112,6 @@ let eventContainer = document.querySelector('.eventContainer');
 async function getFutureEventData() {
     let res = await fetch('../assets/upcomingEvent/futureEvent.json');
     let data = await res.json();
-    console.log(data);
     data.forEach((val) => {
         let h3 = val.eventName, span = val.shortInfo, srcImg = val.link;
         let newNode = document.createElement('div');
@@ -213,12 +197,10 @@ const elementIsVisibleInViewport = (el,) => {
     return (top > 0 && top < innerHeight + 200) || (bottom > 0 && bottom < innerHeight - 200);
 };
 
-// console.log(elementIsVisibleInViewport(el, true))
 let numbers = document.querySelectorAll('.exp>.blackCover>.content>div');
 let exp = document.querySelector('.exp');
 let again = false;
 window.addEventListener('scroll', (e) => {
-    console.log(elementIsVisibleInViewport(exp, true));
     if (elementIsVisibleInViewport(exp, true) && !again) {
         again = true
         numbers.forEach(value => {
