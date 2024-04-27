@@ -1151,10 +1151,11 @@ nav a {
 }
 
 .glance {
-    /* background-color: aqua; */
     text-align: center;
     overflow: hidden;
+    position: relative;
 }
+
 
 @keyframes move {
     0% {
@@ -1173,7 +1174,8 @@ nav a {
 .glance h2 {
     font-size: 2rem;
     text-transform: uppercase;
-    color: red;
+    color: var(--aot-color--);
+    font-weight: bolder;
     animation: move 2s ease infinite;
 }
 
@@ -1456,8 +1458,8 @@ section {
     }
 
     .scrollTo {
-        height: 30px;
-        width: 30px;
+        right: 30px;
+        bottom: 30px;
     }
 
     .fifth {
@@ -1629,6 +1631,10 @@ section {
     .allignments h2,
     .antiRagging h2 {
         font-size: 1.5rem;
+    }
+
+    .workshop>.info {
+        padding-bottom: 1rem;
     }
 
     .allignments>.pics>.images {
