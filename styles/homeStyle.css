@@ -1337,7 +1337,9 @@ section {
 
     .fifth {
         /* margin: 1rem 0; */
-        grid-template-columns: auto;
+        /* grid-template-columns: auto; */
+        display: flex;
+        flex-wrap: wrap-reverse;
     }
 }
 
