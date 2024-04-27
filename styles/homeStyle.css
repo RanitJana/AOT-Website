@@ -706,6 +706,14 @@ main>.content>.first {
 }
 
 /*Third section*/
+.third>.vision {
+    background-color: var(--aot-color--);
+    padding: 1rem 2rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
 .third>h2,
 .fourth>h2 {
     color: var(--aot-color--);
@@ -808,12 +816,14 @@ main>.content>.first {
 .exp>.blackCover>h2 {
     font-size: 2.5rem;
 }
-.exp>.blackCover>.content>div>span{
+
+.exp>.blackCover>.content>div>span {
     background: linear-gradient(to right, #f32170,
             #ff6b08, #cf23cf, #eedd44);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
+
 .exp>.blackCover>.content>div {
     font-size: 1.2rem;
     padding: 1rem 0;
@@ -1186,13 +1196,15 @@ section {
         font-size: 1.5rem;
     }
 }
-@media only screen and (max-width:780px){
-    .exp>.blackCover>.content{
+
+@media only screen and (max-width:780px) {
+    .exp>.blackCover>.content {
         width: 100%;
         display: grid;
         grid-template-columns: 50% 50%;
     }
 }
+
 @media only screen and (max-width:770px) {
     .fourth>.info>.rankInfo {
         flex-direction: column;
@@ -1365,27 +1377,33 @@ section {
         border-radius: 0;
     }
 }
-@media only screen and (max-width:544px){
-    .exp{
+
+@media only screen and (max-width:544px) {
+    .exp {
         height: 38rem;
     }
-    .exp>.blackCover{
+
+    .exp>.blackCover {
         padding: 1rem;
     }
-    .exp>.blackCover>h2{
+
+    .exp>.blackCover>h2 {
         font-size: 2rem;
     }
-    .exp>.blackCover>.content{
+
+    .exp>.blackCover>.content {
         font-size: 0.9rem;
         width: 100%;
         display: grid;
         grid-template-columns: 100%;
     }
-    .exp>.blackCover>.content>div{
+
+    .exp>.blackCover>.content>div {
         margin: 0;
         border-bottom-width: 3px;
     }
 }
+
 @media only screen and (max-width:546px) {
     .first {
         max-height: 10rem;
@@ -1408,6 +1426,15 @@ section {
 }
 
 @media only screen and (max-width:422px) {
+    .third>h2{
+        margin-bottom: 0rem;
+    }
+    .third>.vision {
+        margin-bottom: 2rem;
+    }
+    .third>.vision h2{
+        font-size: 1.5rem;
+    }
     .fourth {
         padding: 1rem;
     }
@@ -1490,7 +1517,9 @@ section {
     .seventh h2 {
         font-size: 1.3rem;
     }
-
+    .third>.vision p{
+        font-size: 0.9rem;
+    }
     .second .content .sub-content .updateBox a {
         font-size: 0.9rem;
         line-height: 0.9rem;
