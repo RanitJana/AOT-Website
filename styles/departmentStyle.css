@@ -487,6 +487,16 @@ nav>ul>li>div>a {
         transform: rotate(0deg);
     }
 
+    nav>ul>li>ul>li,
+    nav>ul>li>ul>li>ul>li {
+        border-bottom: 1px dotted gray;
+    }
+
+    nav>ul>li:hover,
+    nav>ul>li>ul>li:hover,
+    nav>ul>li>ul>li>ul>li:hover {
+        background-color: rgba(128, 128, 128, 0.247);
+    }
 }
 
 @media only screen and (max-width:956px) {
