@@ -23,7 +23,20 @@ window.addEventListener('click', e => {
         deny.style.backgroundColor = "transparent";
     }
 })
+window.addEventListener('resize', () => {
+    let value = window.getComputedStyle(hambergMenu).display;
+    if (value == "none") {
+        body.style.overflowY = "auto";
+        deny.style.right = '-100%';
+        deny.style.backgroundColor = "transparent";
+    }
+    if (value == 'flex' && window.getComputedStyle(nav).display == 'block') {
+        body.style.overflowY = "hidden";
+        deny.style.right = '0%';
+        deny.style.backgroundColor = "rgba(0, 0, 0, 0.649)";
+    }
 
+})
 let parentNav = document.querySelectorAll('.parent-nav');
 let parentNavChild = document.querySelectorAll('.parent-nav>ul');
 let parentNavChild2 = document.querySelectorAll('.parent-nav2>ul');
