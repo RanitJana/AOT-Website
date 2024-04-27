@@ -45,9 +45,6 @@ body {
     cursor: pointer;
 }
 
-/* .logo img {
-    max-width: 80%;
-} */
 
 .section__title h1 {
     background: var(--aot-color--);

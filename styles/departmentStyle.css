@@ -13,9 +13,10 @@
 
 #rd{
     text-decoration: none;
+    font-weight: bold;
 }
 
-p{
+p,#mp{
     text-align: justify;
 }
 
