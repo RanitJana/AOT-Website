@@ -861,6 +861,7 @@ main>.content>.first {
     align-items: center;
     height: 5rem;
     width: 10rem;
+    mix-blend-mode:multiply;
 }
 .allignments>.pics>.images:hover{
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.295);
@@ -897,6 +898,7 @@ main>.content>.first {
 .fourth>.info>.topImage>img {
     width: 100%;
     max-width: 40rem;
+    mix-blend-mode:multiply;
 }
 
 .fourth>.info>.rankInfo>.year {
@@ -1105,6 +1107,7 @@ main>.content>.first {
 .eighth .company img {
     width: 8rem;
     margin: 0 1rem;
+    mix-blend-mode:multiply;
 }
 
 .eighth .company img:hover {
