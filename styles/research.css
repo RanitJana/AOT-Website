@@ -41,15 +41,16 @@ body {
 
 .link {
     background-color: #f4f4f4;
-    padding: 10px 0;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .link a {
     font-size: 1.2rem;
     text-decoration: none;
     color: #333;
-    padding: 10px 20px;
+    padding: 7px 12px;
     margin: 6px;
 }
 
@@ -71,9 +72,18 @@ h2 {
     /* max-width: 960px; */
     max-width: 90%;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 10px 10px #aaa2a2;
 }
 
 .container>h2 {
+    width: 100%;
+    text-align: center;
     background-color: #aaa2a2;
 }
 
