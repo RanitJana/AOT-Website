@@ -2,16 +2,16 @@
     {
         "eventName": "Party",
         "shortInfo": "Enjoy your day",
-        "link": "../assets/upcomingEvent/eventImage/1_ydhn1QPAKsrbt6UWfn3YnA.jpg"
+        "link": "../assets/upcomingEvent/eventImage/1_ydhn1QPAKsrbt6UWfn3YnA.webp"
     },
     {
         "eventName": "Random",
         "shortInfo": "Random Competition",
-        "link": "../assets/upcomingEvent/eventImage/3-Bowling___1_.jpg"
+        "link": "../assets/upcomingEvent/eventImage/3-Bowling___1_.webp"
     },
     {
         "eventName": "ARTISTIX",
         "shortInfo": "Drawing Competition",
-        "link": "../assets/upcomingEvent/eventImage/How-to-Create-an-Event-Page-That-Attendees-Love.jpg"
+        "link": "../assets/upcomingEvent/eventImage/How-to-Create-an-Event-Page-That-Attendees-Love.webp"
     }
 ]

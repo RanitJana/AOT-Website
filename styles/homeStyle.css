@@ -877,13 +877,11 @@ main>.content>.first {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    /* background-color: aqua; */
     padding: 1rem 0;
     min-height: 10rem;
 }
 
 .allignments>.pics>.images {
-    background-color: aqua;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -988,8 +986,8 @@ main>.content>.first {
     margin-bottom: 1rem;
 }
 
-.fifth>div ul,
-.sixth>.content>div ul {
+/* .sixth>.content>div ul, */
+.fifth>div ul {
     background-color: white;
     text-decoration: none;
     width: 100%;
@@ -1013,7 +1011,7 @@ main>.content>.first {
     text-decoration: none;
 }
 
-.sixth,
+/* .sixth, */
 .seventh {
     margin: 1rem;
     background-color: var(--aot-light-color--);
@@ -1022,24 +1020,25 @@ main>.content>.first {
     box-shadow: var(--normal-shadow--);
 }
 
-.sixth {
+/* .sixth {
     margin-top: -1rem;
     margin-bottom: 2rem;
 }
 
-.sixth h2,
+.sixth h2, */
 .seventh h2 {
     color: var(--aot-color--);
     margin-bottom: 0.5rem;
 }
 
-.sixth>.content,
+/* .sixth>.content, */
 .seventh>.content {
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: 50% auto;
 }
 
+/* 
 .sixth>.content>div {
     border-radius: 8px;
     height: fit-content;
@@ -1065,8 +1064,8 @@ main>.content>.first {
     padding: 0.5rem 1rem;
     display: flex;
 }
-
-.sixth>.content>div ul li a,
+ */
+/* .sixth>.content>div ul li a, */
 .fifth>div ul li a {
     text-decoration: none;
     display: flex;
@@ -1074,7 +1073,7 @@ main>.content>.first {
     align-items: center;
 }
 
-.sixth>.content>div ul li a img,
+/* .sixth>.content>div ul li a img, */
 .fifth>div ul li a img {
     width: 1rem;
     margin-right: 0.3rem;
