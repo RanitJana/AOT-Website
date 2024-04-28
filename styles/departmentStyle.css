@@ -126,7 +126,7 @@ p,#mp{
     display: flex;
     /* flex-direction: column; */
     align-items: center;
-    /* box-shadow: var(--normal-shadow--) inset; */
+    box-shadow: var(--normal-shadow--) inset;
 }
 
 .syllabus>.content>div ul {
