@@ -1,0 +1,100 @@
+@import url('../styles/basicStyles.css');
+@import url('../styles/headerStyle.css');
+@import url('../styles/footerStyle.css');
+
+body {
+
+    width: 100dvw;
+    height: 100dvh;
+    overflow-x: hidden;
+}
+
+
+.page-title {
+    position: relative;
+    padding: 0.15em;
+    min-width: 100%;
+    /* margin-top: 1rem; */
+    background: var(--aot-color--);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.logo {
+    position: absolute;
+    margin: 0;
+    padding: 0.55em;
+    width: 70px;
+    background-color: #e5e4e2;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.link {
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #333;
+    padding: 7px 12px;
+    margin: 6px;
+}
+
+nav a:hover {
+    background-color: #ddd;
+}
+
+section {
+    padding: 10px;
+    border: 1px solid red;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    color: #333;
+}
+
+.container {
+    /* max-width: 960px; */
+    max-width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.35);
+    /* backdrop-filter: blur(10px); */
+    box-shadow: -10px 10px 10px #aaa2a2,
+        3px 0 5px #aaa2a2;
+    border-radius: 5px;
+}
+
+.container>h2 {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    background-color: #aaa2a2;
+}
+
+.research-item {
+    margin-bottom: 30px;
+}
+
+.research-item h3 {
+    color: #333;
+}
+
+.research-item p {
+    color: #666;
+}
