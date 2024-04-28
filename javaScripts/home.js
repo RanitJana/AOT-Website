@@ -6,22 +6,31 @@ let nArrow = document.querySelector('.swiper-button-next');
 let images = document.querySelectorAll('.slide');
 let eventInfo;
 let refInterval = null;
-
+let bulletinh2 = document.querySelector('#bulletin>h2');
+let bulletinp = document.querySelector('#bulletin>p');
+let bulletinimg = document.querySelector('#bulletin + img');
 let swiperImage = document.querySelector('.swiper-wrapper');
 
 const displayDynamicInfo = function (res) {
-    res.forEach(val => {
-        let newNode = document.createElement('div');
-        newNode.classList.add('swiper-slide');
-        newNode.innerHTML =
-            `
-        <div href="" id="bulletin">
+    res.forEach((val, idx) => {
+        if (idx == 0) {
+            bulletinh2.textContent = val.heading;
+            bulletinp.textContent = val.content;
+            bulletinimg.setAttribute('src', val.image);
+        }
+        else {
+            let newNode = document.createElement('div');
+            newNode.classList.add('swiper-slide');
+            newNode.innerHTML =
+                `
+            <div href="" id="bulletin">
             <h2>${val.heading}</h2>
             <p>${val.content}</p>
-        </div>
-        <img src="${val.image}" class="slide" alt="Error" loading="eager">
-        `;
-        swiperImage.appendChild(newNode);
+            </div>
+            <img src="${val.image}" class="slide" alt="Error" loading="eager">
+            `;
+            swiperImage.appendChild(newNode);
+        }
     })
     requestAnimationFrame(() => {
         var swiper = new Swiper(".mySwiper", {
