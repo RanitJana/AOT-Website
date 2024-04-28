@@ -64,7 +64,6 @@
         width: 500px;
     }
 
-    .event h2 {}
 }
 
 @media only screen and (min-width:1001px) {
@@ -159,7 +158,6 @@
         grid-template-columns: auto auto;
     }
 
-    .ninth h2 {}
 
     .ninth p {
         font-size: 0.9rem;
@@ -263,8 +261,6 @@
         border-radius: 0;
     }
 
-    .third h2 {}
-
     .third .about .video {
         width: 100%;
     }
@@ -344,9 +340,6 @@
         padding: 1rem;
     }
 
-    .allignments h2,
-    .antiRagging h2 {}
-
     .workshop>.info {
         padding-bottom: 1rem;
     }
@@ -360,8 +353,6 @@
         padding: 1rem;
     }
 
-    .antiRagging>.info h2 {}
-
     .third>h2 {
         margin-bottom: 0rem;
     }
@@ -369,8 +360,6 @@
     .third>.vision {
         margin-bottom: 2rem;
     }
-
-    .third>.vision h2 {}
 
     .fourth {
         padding: 1rem;
