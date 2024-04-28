@@ -69,9 +69,9 @@ if (!sessionStorage.getItem('loadingPage')) {
             setTimeout(() => {
                 loadingPage.style.zIndex = "-10";
                 body.style.overflow = "auto";
-            }, 1000);
+            }, 500);
         })
-    }, 2000);
+    }, 1000);
 }
 else {
     body.style.overflow = "auto";
