@@ -57,8 +57,9 @@ nav a:hover {
 
 section {
     padding: 10px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin-bottom: 1rem;
+    width: 100%;
 }
 
 h2 {
@@ -78,6 +79,7 @@ h2 {
     box-shadow: -10px 10px 10px #aaa2a2,
         3px 0 5px #aaa2a2;
     border-radius: 5px;
+    /* padding: 10px; */
 }
 
 .container>h2 {
@@ -89,6 +91,25 @@ h2 {
 
 .research-item {
     margin-bottom: 30px;
+    /* border: 1px solid red; */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.research-item img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.mark {
+    border: 2px solid var(--aot-color--);
+    width: 50%;
 }
 
 .research-item h3 {
