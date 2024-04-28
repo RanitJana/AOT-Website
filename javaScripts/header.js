@@ -23,8 +23,9 @@ hambergMenu.addEventListener('click', e => {
     })
 })
 window.addEventListener('click', e => {
+    let value = window.getComputedStyle(hambergMenu).display;
     requestAnimationFrame(() => {
-        if (e.x <= screen.width - nav.clientWidth) {
+        if (e.x <= screen.width - nav.clientWidth && value=='flex') {
             isNavOpen = false;
             nav.style.transform = "translateX(100%)";
             body.style.overflowY = "auto";
