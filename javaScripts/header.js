@@ -3,8 +3,10 @@ let body = document.querySelector('body');
 let nav = document.querySelector('nav');
 let goback = document.querySelector('.goback');
 let deny = document.querySelector('.deny');
+let isNavOpen = false;
 goback.addEventListener('click', () => {
     requestAnimationFrame(() => {
+        isNavOpen = false;
         nav.style.transform = "translateX(100%)";
         body.style.overflowY = "auto";
         deny.style.right = '-100%';
@@ -13,6 +15,7 @@ goback.addEventListener('click', () => {
 })
 hambergMenu.addEventListener('click', e => {
     requestAnimationFrame(() => {
+        isNavOpen = true;
         nav.style.transform = "translateX(0%)";
         body.style.overflowY = "hidden";
         deny.style.right = '0%';
@@ -22,6 +25,7 @@ hambergMenu.addEventListener('click', e => {
 window.addEventListener('click', e => {
     requestAnimationFrame(() => {
         if (e.x <= screen.width - nav.clientWidth) {
+            isNavOpen = false;
             nav.style.transform = "translateX(100%)";
             body.style.overflowY = "auto";
             deny.style.right = '-100%';
@@ -32,20 +36,23 @@ window.addEventListener('click', e => {
 })
 window.addEventListener('resize', () => {
     let value = window.getComputedStyle(hambergMenu).display;
+    if (value == 'flex' && !isNavOpen) {
+        nav.style.transform = "translateX(100%)";
+    }
+    if (value == 'flex' && isNavOpen && window.getComputedStyle(nav).display == 'block') {
+        requestAnimationFrame(() => {
+            nav.style.transform = "translateX(0%)";
+            body.style.overflowY = "hidden";
+            deny.style.right = '0%';
+            deny.style.backgroundColor = "rgba(0, 0, 0, 0.649)";
+        })
+    }
     if (value == "none") {
         requestAnimationFrame(() => {
             nav.style.transform = "translateX(0%)";
             body.style.overflowY = "auto";
             deny.style.right = '-100%';
             deny.style.backgroundColor = "transparent";
-        })
-    }
-    // console.log(value, window.getComputedStyle(nav).right, window.getComputedStyle(nav).display);
-    if (value == 'flex' && window.getComputedStyle(nav).right == '0px' && window.getComputedStyle(nav).display == 'block') {
-        requestAnimationFrame(() => {
-            body.style.overflowY = "hidden";
-            deny.style.right = '0%';
-            deny.style.backgroundColor = "rgba(0, 0, 0, 0.649)";
         })
     }
 
