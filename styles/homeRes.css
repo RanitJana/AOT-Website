@@ -64,9 +64,7 @@
         width: 500px;
     }
 
-    .event h2 {
-        font-size: 1.5rem;
-    }
+    .event h2 {}
 }
 
 @media only screen and (min-width:1001px) {
@@ -149,7 +147,6 @@
     }
 
     .eighth h2 {
-        font-size: 1.5rem;
         line-height: 1.5rem;
         padding: 2rem;
         padding-bottom: 0;
@@ -162,9 +159,7 @@
         grid-template-columns: auto auto;
     }
 
-    .ninth h2 {
-        font-size: 1.5rem;
-    }
+    .ninth h2 {}
 
     .ninth p {
         font-size: 0.9rem;
@@ -268,9 +263,7 @@
         border-radius: 0;
     }
 
-    .third h2 {
-        font-size: 1.5rem;
-    }
+    .third h2 {}
 
     .third .about .video {
         width: 100%;
@@ -352,9 +345,7 @@
     }
 
     .allignments h2,
-    .antiRagging h2 {
-        font-size: 1.5rem;
-    }
+    .antiRagging h2 {}
 
     .workshop>.info {
         padding-bottom: 1rem;
@@ -369,9 +360,7 @@
         padding: 1rem;
     }
 
-    .antiRagging>.info h2 {
-        font-size: 1.5rem;
-    }
+    .antiRagging>.info h2 {}
 
     .third>h2 {
         margin-bottom: 0rem;
@@ -381,9 +370,7 @@
         margin-bottom: 2rem;
     }
 
-    .third>.vision h2 {
-        font-size: 1.5rem;
-    }
+    .third>.vision h2 {}
 
     .fourth {
         padding: 1rem;
@@ -414,7 +401,6 @@
 
     .third>h2 {
         padding: 1rem;
-        font-size: 1.5rem;
     }
 
     .eventContainer {
@@ -460,18 +446,15 @@
 
 @media only screen and (max-width:394px) {
 
-    .second h2 span,
-    .third>h2,
-    .fourth>h2,
-    .eighth>h2,
-    .seventh h2,
-    .ninth h2,
-    .antiRagging>h2,
-    .workshop>h2 {
-        font-size: 1.3rem;
-    }
-
-    .third>.vision p {
+    .third>.vision p,
+    .third .about .story p,
+    .fourth>.info>.rankInfo>.writing,
+    .fifth>div>ul>li a,
+    .writingContent span,
+    .ninth>span,
+    .antiRagging p,
+    .workshop p,
+    .seventh>.content>.left {
         font-size: 0.9rem;
     }
 
@@ -480,38 +463,8 @@
         line-height: 0.9rem;
     }
 
-    .third .about .story p,
-    .fourth>.info>.rankInfo>.writing {
-        font-size: 0.9rem;
-    }
-
-    .fifth>div>ul>li a {
-        font-size: 0.9rem;
-    }
-
-    .sixth h2 {
-        font-size: 1.4rem;
-    }
-
     .eighth .companies .company span {
         margin-top: 0.5rem;
-        font-size: 0.9rem;
-    }
-
-    .writingContent span {
-        font-size: 0.9rem;
-    }
-
-    .writingContent h3 {
-        font-size: 1.1rem;
-    }
-
-    .ninth>span {
-        font-size: 0.9rem;
-    }
-
-    .antiRagging p,
-    .workshop p {
         font-size: 0.9rem;
     }
 
