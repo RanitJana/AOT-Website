@@ -803,7 +803,7 @@ main>.content>.first {
     left: 4%;
     font-size: 5rem;
     text-wrap: nowrap;
-    animation: move 3s linear forwards infinite;
+    /* animation: move 3s linear forwards infinite; */
 }
 
 #bulletin p {
@@ -816,11 +816,11 @@ main>.content>.first {
     line-height: 2.1rem;
     text-align: left;
     text-wrap: pretty;
-    animation: move 3s linear forwards infinite;
+    /* animation: move 3s linear forwards infinite; */
 }
 
 
-@keyframes move {
+/* @keyframes move {
     0% {
         scale: 0.97;
     }
@@ -832,7 +832,7 @@ main>.content>.first {
     100% {
         scale: 0.97;
     }
-}
+} */
 
 .second {
     position: relative;

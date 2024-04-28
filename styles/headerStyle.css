@@ -1,5 +1,3 @@
-@import url('./basicStyles.css');
-
 header {
     user-select: none;
     display: flex;
