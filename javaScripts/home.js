@@ -58,25 +58,25 @@ getDynamicData()
         console.log(err);
     })
 
-// body.style.overflow = "hidden";
-// if (!sessionStorage.getItem('loadingPage')) {
-//     sessionStorage.setItem('loadingPage', 'true');
-//     setTimeout(() => {
-//         requestAnimationFrame(() => {
-//             loadingPage.style.scale = "40";
-//             welcomeAotImg.style.filter = "invert(100%) opacity(0%)";
-//             loadingPage.style.backgroundColor = "rgb(0,0,0,0)";
-//             setTimeout(() => {
-//                 loadingPage.style.zIndex = "-10";
-//                 body.style.overflow = "auto";
-//             }, 500);
-//         })
-//     }, 1000);
-// }
-// else {
-//     body.style.overflow = "auto";
-//     loadingPage.style.display = "none";
-// }
+body.style.overflow = "hidden";
+if (!sessionStorage.getItem('loadingPage')) {
+    sessionStorage.setItem('loadingPage', 'true');
+    setTimeout(() => {
+        requestAnimationFrame(() => {
+            loadingPage.style.scale = "40";
+            welcomeAotImg.style.filter = "invert(100%) opacity(0%)";
+            loadingPage.style.backgroundColor = "rgb(0,0,0,0)";
+            setTimeout(() => {
+                loadingPage.style.zIndex = "-10";
+                body.style.overflow = "auto";
+            }, 500);
+        })
+    }, 1000);
+}
+else {
+    body.style.overflow = "auto";
+    loadingPage.style.display = "none";
+}
 
 //announcement section
 
