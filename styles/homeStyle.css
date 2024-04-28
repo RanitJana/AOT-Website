@@ -92,7 +92,6 @@ main {
     height: 100dvh;
     background-color: transparent;
     transition: background-color 1s ease;
-    filter: blur(2px);
     z-index: 100;
 }
 
@@ -439,10 +438,10 @@ body {
     main nav {
         overflow-y: scroll;
         background-color: white;
-        box-shadow: -5px 0 15px 5px rgba(0, 0, 0, 0.246);
         position: fixed;
         top: 0;
-        right: -100%;
+        right: 0%;
+        transform: translateX(100%);
         width: 50%;
         min-width: max-content;
         height: 100%;
