@@ -34,6 +34,7 @@ window.addEventListener('resize', () => {
     let value = window.getComputedStyle(hambergMenu).display;
     if (value == "none") {
         requestAnimationFrame(() => {
+            nav.style.transform = "translateX(0%)";
             body.style.overflowY = "auto";
             deny.style.right = '-100%';
             deny.style.backgroundColor = "transparent";
