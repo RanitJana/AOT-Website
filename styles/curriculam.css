@@ -1,0 +1,37 @@
+@import url(./basicStyles.css);
+
+.basic-intro{
+    padding: 1em 1.5em;
+}
+
+.basic-intro :last-child{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.curriculam-content{
+    padding: 1em 1.5em;
+}
+.sub-count{
+    padding: 0px 7px;
+}
+
+.syllabus{
+    text-align: center;
+}
+p img{
+    width: 2rem;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width:600px) {
+    .basic-intro, curriculam-content{
+        padding: 1em ;
+    }
+}
