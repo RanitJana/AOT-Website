@@ -15,15 +15,11 @@ searches.forEach(search => {
         })
         a.forEach(p => {
             if (p.innerHTML.toLowerCase().includes(val.toLowerCase())) {
-                // console.log(p);
-                let newNode = p;
-                newNode.setAttribute('href', './pages' + newNode.getAttribute('href').slice(1));
-                console.log(newNode);
-                encodedMessage += (encodeURIComponent(newNode.outerHTML));
+                encodedMessage += (encodeURIComponent(p.outerHTML));
                 encodedMessage += 'TEAM_BUG';
             }
         })
         sessionStorage.setItem('res', encodedMessage);
-        window.location.href = "../search.html";
+        window.location.href = "./search.html";
     })
 })
