@@ -602,6 +602,13 @@ nav>ul>li>div>a {
     nav>ul>li>ul>li>ul>li>ul>Li:hover {
         background-color: rgba(128, 128, 128, 0.247);
     }
+
+    #achivement p {
+        margin-left: -1rem;
+        margin-right: 1rem;
+        width: 60%;
+        text-wrap: wrap;
+    }
 }
 
 @media only screen and (max-width:956px) {
@@ -619,6 +626,14 @@ nav>ul>li>div>a {
         display: flex;
     }
 
+    .section {
+        position: relative;
+    }
+
+    #achivement {
+        min-height: 3rem;
+    }
+
     main nav {
         overflow-y: scroll;
         background-color: white;
@@ -627,7 +642,7 @@ nav>ul>li>div>a {
         right: 0%;
         transform: translateX(100%);
         width: 50%;
-        min-width: 16.5rem;
+        min-width: 18rem;
         height: 100%;
         z-index: 100;
         padding: 1rem 1.5rem;
@@ -647,7 +662,7 @@ nav>ul>li>div>a {
         border-bottom: 1px dotted gray;
     }
 
-    .parent-nav>.section p{
+    .parent-nav>.section p {
         text-align: center;
     }
 
