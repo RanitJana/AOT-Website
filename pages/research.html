@@ -35,12 +35,30 @@
         </div>
         <h1>Research</h1>
     </nav>
-    <nav class="link">
+
+    <nav class="link hideOnMobile">
         <a href="#current-research">Current Research</a>
         <a href="#past-research">Past Research</a>
         <a href="#research-facilities">Research Facilities</a>
         <!-- Add more links as needed -->
     </nav>
+    <div class="hamburger-logo" onclick="showsidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="28"
+            viewBox="0 -960 960 960" width="28">
+            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+        </svg></div>
+    <div class="hamburger">
+        <ul>
+            <li onclick="hidesidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24"
+                        viewBox="0 -960 960 960" width="24">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg></a></li>
+
+            <li onclick="hidesidebar()"><a href="#current-research">current research</a></li>
+            <li onclick="hidesidebar()"><a href="#past-research">past research</a></li>
+            <li onclick="hidesidebar()"><a href="#research-facilities">research facility</a></li>
+        </ul>
+    </div>
     <div class="scrollTo">
         <a href="#destination">
             <img src="../assets/images/icons8-up-arrow-50.png" alt="Error">
@@ -266,6 +284,18 @@
         </div>
     </footer>
 
+
+    <script>
+        function hidesidebar() {
+            let bar = document.querySelector('.hamburger');
+            bar.style.right = '-150px';
+        }
+
+        function showsidebar() {
+            let bar = document.querySelector('.hamburger');
+            bar.style.right = '0';
+        }
+    </script>
 </body>
 
 </html>
