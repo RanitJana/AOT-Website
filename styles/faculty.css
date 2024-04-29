@@ -1,21 +1,10 @@
 @import url('./basicStyles.css');
 
-main{
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-}
 
-#heading{
-    text-align: center;
-    color: var(--aot-dark-color--);
-    font-size: 1.7rem;
-}
-
-.section__title {
+.page-title {
     position: relative;
-    padding: 0.3em;
+    padding: 0.15em;
     min-width: 100%;
-    margin-top: 1rem;
     background: var(--aot-color--);
     color: #fff;
     display: flex;
@@ -37,72 +26,86 @@ main{
     cursor: pointer;
 }
 
-.tbl{
-    box-shadow: 0 0 30px rgba(0,0,0,0.15);
+main {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
-table{
+#heading {
+    text-align: center;
+    color: var(--aot-dark-color--);
+    font-size: 1.7rem;
+}
+
+
+
+.tbl {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+}
+
+table {
     margin-left: auto;
     margin-right: auto;
 }
 
-th{
+th {
     color: #fff;
     padding-right: 0.1rem;
     padding-left: 0.1rem;
     background: var(--aot-dark-color--);
 }
 
-td{
+td {
     padding: 0;
     text-align: center;
     background: var(--aot-light-color--);
     font-weight: 5px;
 }
 
-.parent{
+.parent {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.para{
+.para {
     grid-area: para;
     margin: 1rem;
     padding-left: 1.5rem;
-    box-shadow: -10px 10px 10px rgba(0,0,0,0.15);
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
     background-color: var(--aot-light-color--);
 }
 
-.para2{
+.para2 {
     grid-area: para2;
     margin: 1rem;
     padding: 1.5rem;
-    box-shadow: -10px 10px 10px rgba(0,0,0,0.15);
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
     background-color: var(--aot-light-color--);
 }
 
-p,li{
+p,
+li {
     color: var(--aot-dark-color--);
     font-size: 1rem;
 }
 
-.info{
+.info {
     display: grid;
-    grid-template-areas: 
-    'para'
-    'image';
+    grid-template-areas:
+        'para'
+        'image';
 }
 
-.image{
+.image {
     grid-area: image;
-    padding: 1rem;  
+    padding: 1rem;
     border-radius: 5px;
 }
 
-img{
+img {
     height: 100%;
     width: 100%;
     object-fit: contain;
@@ -110,62 +113,71 @@ img{
     opacity: 0.9;
 }
 
-@media (min-width:550px){
-    th{
+@media (min-width:550px) {
+    th {
         padding-right: 1.5rem;
         padding-left: 1.5rem;
     }
-    td{
+
+    td {
         padding: 0;
         text-align: center;
     }
-    .info{
+
+    .info {
         display: grid;
-        grid-template-areas: 
-        'para'
-        'image';
+        grid-template-areas:
+            'para'
+            'image';
     }
 }
 
-@media (min-width:850px){
-    th{
+@media (min-width:850px) {
+    th {
         padding-right: 4rem;
         padding-left: 4rem;
     }
-    td{
+
+    td {
         padding: 0;
         text-align: center;
     }
-    .info{
+
+    .info {
         display: grid;
-        grid-template-areas: 
-        'para image image';
+        grid-template-areas:
+            'para image image';
     }
-    .para{
-        box-shadow: -10px -10px 10px rgba(0,0,0,0.15);
+
+    .para {
+        box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.15);
     }
-    .parent{
+
+    .parent {
         display: flex;
         flex-direction: column;
         gap: 2rem;
     }
 }
 
-@media (min-width:1150px){
-    th{
+@media (min-width:1150px) {
+    th {
         padding-right: 6.5rem;
         padding-left: 6.5rem;
     }
-    td{
+
+    td {
         padding: 0;
         text-align: center;
     }
-    .para{
-        box-shadow: -10px 10px 10px rgba(0,0,0,0.15);
+
+    .para {
+        box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.15);
     }
-    .info{
+
+    .info {
         display: grid;
-        grid-template-areas: 
-        'para image';
+        grid-template-areas:
+            'para image';
     }
 }
