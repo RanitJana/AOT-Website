@@ -70,9 +70,9 @@ nav a:hover {
 .hamburger {
     position: fixed;
     z-index: 999;
-    top: 25px;
-    right: -150px;
-    width: 150px;
+    top: 0;
+    right: -220px;
+    width: 220px;
     min-height: 100vh;
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.2);
@@ -90,6 +90,7 @@ nav a:hover {
     align-items: flex-start;
     justify-content: flex-start;
     gap: 8px;
+    padding-top: 25px;
 }
 
 .hamburger>ul>li {
@@ -99,6 +100,9 @@ nav a:hover {
     /* border: 1px solid red; */
 }
 
+li a {
+    padding: 8px;
+}
 
 li:hover {
     background-color: #ddd;
