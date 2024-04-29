@@ -1,0 +1,86 @@
+header {
+    margin-top: -1.2rem;
+    padding-bottom: 0.5rem;
+}
+
+.back {
+    display: flex;
+}
+
+.back .backImg {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: white;
+}
+
+.back h1 {
+    background-color: var(--aot-color--);
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.first {
+    box-shadow: var(--normal-shadow--);
+    padding: 1rem 2rem;
+    margin: 1rem;
+    border-radius: 8px;
+    background-color: var(--aot-light-color--);
+}
+.first p{
+    text-wrap:pretty;
+}
+@media only screen and (min-width:1097px) {
+    .banner {
+        justify-content: center;
+    }
+
+}
+
+@media only screen and (max-width:1097px) {
+
+    .back h1 {
+        font-size: 1.5rem;
+    }
+
+    .back img {
+        width: 2.5rem;
+    }
+}
+
+@media only screen and (max-width:750px) {
+    header {
+        margin-top: 0rem;
+    }
+}
+
+@media only screen and (max-width:514px) {
+    .first {
+        margin: 1rem 0;
+        border-radius: 0px;
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .back {
+        height: 3rem;
+    }
+
+    .back h1 {
+        font-size: 1.2rem;
+    }
+
+    .back .backImg img {
+        width: 1.5rem;
+    }
+}
+@media only screen and (max-width:357px) {
+    .back h1{
+        font-size: 1rem;
+    }
+}
