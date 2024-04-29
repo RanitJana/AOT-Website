@@ -15,7 +15,11 @@ searches.forEach(search => {
         })
         a.forEach(p => {
             if (p.innerHTML.toLowerCase().includes(val.toLowerCase())) {
-                encodedMessage += (encodeURIComponent(p.outerHTML));
+                // console.log(p);
+                let newNode = p;
+                newNode.setAttribute('href', './pages' + newNode.getAttribute('href').slice(1));
+                console.log(newNode);
+                encodedMessage += (encodeURIComponent(newNode.outerHTML));
                 encodedMessage += 'TEAM_BUG';
             }
         })
