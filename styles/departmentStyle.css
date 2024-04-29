@@ -102,10 +102,8 @@ p,
 
 .syllabus {
     grid-area: syllabus;
-    /* margin-top: -1rem;
-    margin-bottom: 2rem; */
     margin: 1rem;
-    padding: 0.5rem;
+    padding: 1rem 2rem;
 }
 
 .syllabus h2 {
@@ -120,19 +118,24 @@ p,
         'right';
 }
 
-.syllabus>.content>div {
-    border-radius: 8px;
-    height: fit-content;
-    display: flex;
-    align-items: center;
-    box-shadow: var(--normal-shadow--) inset;
+.syllabus>.content>div>h3 {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+    border-bottom: 1px dotted gray;
+
 }
 
 .syllabus>.content>div {
+    background-color: white;
+    border-radius: 8px;
     min-height: 5rem;
+    height: fit-content;
     display: flex;
     justify-content: center;
+    align-items: center;
     border-radius: 0;
+    z-index: 5;
     box-shadow: var(--normal-shadow--) inset;
 }
 
@@ -144,6 +147,7 @@ p,
     padding: 0.5rem 1rem;
     display: flex;
     flex-wrap: wrap;
+    padding: 0.5rem 1rem;
 }
 
 .syllabus>.content>div .item a {
@@ -228,44 +232,25 @@ nav>ul>li>div>a {
 }
 
 .firstContainer {
-    display: grid;
-    grid-template-columns: auto auto auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     width: 100%;
-    gap: 1rem;
-    padding-right: 1rem;
-    max-width: 70rem;
+    gap: 2rem;
+    padding: 1rem 0;
 }
 
 .first .departmentBox {
-    width: 100%;
+    width: 18rem;
     position: relative;
     overflow: hidden;
     text-transform: uppercase;
     font-weight: bolder;
     line-height: 1.2rem;
     height: 20rem;
-    animation: rotation 2s ease infinite;
-}
-
-@keyframes rotation {
-    0% {
-        border-radius: 0;
-        border-top-right-radius: 50px;
-        border-bottom-left-radius: 50px;
-    }
-
-    50% {
-        border-radius: 0;
-        border-top-left-radius: 50px;
-        border-bottom-right-radius: 50px;
-    }
-
-    100% {
-        border-radius: 0;
-        border-top-right-radius: 50px;
-        border-bottom-left-radius: 50px;
-    }
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.288);
 }
 
 .first .departmentBox>img {
@@ -894,6 +879,16 @@ nav>ul>li>div>a {
         padding: 1rem 0;
     }
 
+    .syllabus {
+        padding: 1rem;
+        border-radius: 0;
+        margin: 1rem 0;
+    }
+
+    .syllabus>.content>div {
+        margin: 1rem;
+    }
+
     .firstContainer {
         /* padding: 0; */
         padding: 1rem;
@@ -913,6 +908,18 @@ nav>ul>li>div>a {
     }
 }
 
+@media only screen and (max-width:695px) {
+    .syllabus>.content>.left>.rt {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+
+    .syllabus>.content>.right>.rt {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}
+
 @media only screen and (max-width:658px) {
     .banner .left img {
         width: 6rem;
@@ -921,6 +928,15 @@ nav>ul>li>div>a {
     .banner .middle h1 {
         font-size: 1.95rem;
         line-height: 2rem;
+    }
+}
+
+@media only screen and (max-width:403px) {
+    .syllabus>.content>div {
+        margin: 1rem 0;
+    }
+    .syllabus>.content>.left>.rt{
+        grid-template-columns: auto auto auto;
     }
 }
 
