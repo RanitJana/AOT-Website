@@ -32,9 +32,22 @@ header {
     border-radius: 8px;
     background-color: var(--aot-light-color--);
 }
-.first p{
-    text-wrap:pretty;
+
+.first p {
+    text-wrap: pretty;
 }
+
+.first ol>li {
+    margin: 1rem;
+    margin-left: 2rem;
+}
+
+.first span {
+   font-weight: bold;
+   text-decoration:underline;
+    margin: 5rem 0;
+}
+
 @media only screen and (min-width:1097px) {
     .banner {
         justify-content: center;
@@ -79,8 +92,9 @@ header {
         width: 1.5rem;
     }
 }
+
 @media only screen and (max-width:357px) {
-    .back h1{
+    .back h1 {
         font-size: 1rem;
     }
 }
