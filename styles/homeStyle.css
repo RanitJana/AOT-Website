@@ -640,7 +640,9 @@ main>.content>.first {
     text-align: center;
     text-wrap: pretty;
 }
-
+.banner .right .search img{
+    z-index: 10;
+}
 .first {
     position: absolute;
     overflow: hidden;
