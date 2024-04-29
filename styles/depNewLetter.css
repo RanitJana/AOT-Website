@@ -2,9 +2,14 @@ header {
     margin-top: -1.2rem;
     padding-bottom: 0.5rem;
 }
-
+main{
+    position: relative;
+}
 .back {
     display: flex;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px 5px rgba(0, 0, 0, 0.203);
 }
 
 .back .backImg {
@@ -14,17 +19,24 @@ header {
     align-items: center;
     padding: 0.5rem;
     background-color: white;
+    background-color: var(--aot-light-color--);
 }
-
+.back .backImg:hover{
+    cursor: pointer;
+}
 .back h1 {
     background-color: var(--aot-color--);
     color: white;
     width: 100%;
+    font-size: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
+.backImg img{
+    width: 2rem;
+    mix-blend-mode: multiply;
+}
 .first {
     box-shadow: var(--normal-shadow--);
     padding: 1rem 2rem;
@@ -53,17 +65,6 @@ header {
         justify-content: center;
     }
 
-}
-
-@media only screen and (max-width:1097px) {
-
-    .back h1 {
-        font-size: 1.5rem;
-    }
-
-    .back img {
-        width: 2.5rem;
-    }
 }
 
 @media only screen and (max-width:750px) {
