@@ -232,44 +232,25 @@ nav>ul>li>div>a {
 }
 
 .firstContainer {
-    display: grid;
-    grid-template-columns: auto auto auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     width: 100%;
-    gap: 1rem;
-    padding-right: 1rem;
-    max-width: 70rem;
+    gap: 2rem;
+    padding: 1rem 0;
 }
 
 .first .departmentBox {
-    width: 100%;
+    width: 18rem;
     position: relative;
     overflow: hidden;
     text-transform: uppercase;
     font-weight: bolder;
     line-height: 1.2rem;
     height: 20rem;
-    animation: rotation 2s ease infinite;
-}
-
-@keyframes rotation {
-    0% {
-        border-radius: 0;
-        border-top-right-radius: 50px;
-        border-bottom-left-radius: 50px;
-    }
-
-    50% {
-        border-radius: 0;
-        border-top-left-radius: 50px;
-        border-bottom-right-radius: 50px;
-    }
-
-    100% {
-        border-radius: 0;
-        border-top-right-radius: 50px;
-        border-bottom-left-radius: 50px;
-    }
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.288);
 }
 
 .first .departmentBox>img {
