@@ -1,27 +1,22 @@
 [
   {
-    "heading": "Ranit's Note",
-    "content": "Hello!! I am Ranit from CSE2. Love to solve DSA problems and MERN stack and boyzz. Hates college life so much!! It sucks!",
+    "heading": "Library",
+    "content": "A sanctuary of knowledge, where silence speaks volumes and every book holds a world within.",
     "image": "../assets/bulletinImage/first.webp"
   },
   {
-    "heading": "Ranajit's Note",
-    "content": "Hello!! I am Ranajit from CSE2.Vai college e khub gorom!!",
-    "image": "../assets/bulletinImage/second.webp"
+    "heading": "Labratory",
+    "content": "A haven of experimentation, where theories meet reality, and mistakes are the stepping stones to breakthroughs.",
+    "image": "../assets/bulletinImage/lab.jpg"
   },
   {
-    "heading": "Dipanjan's Note",
-    "content": "Hello!! I am dipanjan from CSE2.I am a very very good boy",
-    "image": "../assets/bulletinImage/third.webp"
+    "heading": "Classroom",
+    "content": "A dynamic space where curiosity is the compass, learning is an adventure, and every question leads to discovery.",
+    "image": "../assets/bulletinImage/classroom.jpg"
   },
   {
-    "heading": "Salman's Note",
-    "content": "Hello!! I am Salman from CSE2.Sob e soja vaii!! 30 diner skrike venge galo amar.",
+    "heading": "CSE Department",
+    "content": "A realm of bytes and bits, where creativity meets logic, and every line of code tells a story.",
     "image": "../assets/bulletinImage/fourth.webp"
-  },
-  {
-    "heading": "Shreya's Note",
-    "content": "Hello!! I am Shreya from CSE2.People call me didi.",
-    "image": "../assets/bulletinImage/fifth.webp"
   }
 ]
