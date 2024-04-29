@@ -35,12 +35,30 @@
         </div>
         <h1>Research</h1>
     </nav>
-    <nav class="link">
+
+    <nav class="link hideOnMobile">
         <a href="#current-research">Current Research</a>
         <a href="#past-research">Past Research</a>
         <a href="#research-facilities">Research Facilities</a>
         <!-- Add more links as needed -->
     </nav>
+    <div class="hamburger-logo" onclick="showsidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="28"
+            viewBox="0 -960 960 960" width="28">
+            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+        </svg></div>
+    <div class="hamburger">
+        <ul>
+            <li onclick="hidesidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24"
+                        viewBox="0 -960 960 960" width="24">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg></a></li>
+
+            <li onclick="hidesidebar()"><a href="#current-research">current research</a></li>
+            <li onclick="hidesidebar()"><a href="#past-research">past research</a></li>
+            <li onclick="hidesidebar()"><a href="#research-facilities">research facility</a></li>
+        </ul>
+    </div>
     <div class="scrollTo">
         <a href="#destination">
             <img src="../assets/images/icons8-up-arrow-50.png" alt="Error">
@@ -198,7 +216,7 @@
             <div class="research-item">
                 <h3>Advanced Materials Laboratory</h3>
                 <div class="mark"></div>
-                <img src="" alt="">
+                <img src="../assets/images/research9 (1).jpg" alt="">
                 <p><b>Description:</b> Equipped with state-of-the-art instruments and specialized equipment, the
                     Advanced Materials Laboratory facilitates research in the development and characterization of
                     advanced materials for various applications, including nanotechnology, energy storage, and
@@ -212,7 +230,7 @@
             <div class="research-item">
                 <h3>Biomedical Imaging Center</h3>
                 <div class="mark"></div>
-                <img src="" alt="">
+                <img src="../assets/images/research10 (1).jpg" alt="">
                 <p><b>Description:</b> The Biomedical Imaging Center houses advanced imaging technologies for
                     non-invasive visualization and analysis of biological systems at the cellular and molecular level.
                     Researchers utilize cutting-edge imaging modalities such as confocal microscopy, magnetic resonance
@@ -226,7 +244,7 @@
             <div class="research-item">
                 <h3>Environmental Monitoring Station</h3>
                 <div class="mark"></div>
-                <img src="" alt="">
+                <img src="../assets/images/research11 (1).jpg" alt="">
                 <p><b>Description:</b> The Environmental Monitoring Station is equipped with a comprehensive array of
                     sensors and monitoring instruments for real-time environmental data collection and analysis.
                     Researchers use this facility to study air quality, water pollution, soil contamination, and
@@ -266,6 +284,18 @@
         </div>
     </footer>
 
+
+    <script>
+        function hidesidebar() {
+            let bar = document.querySelector('.hamburger');
+            bar.style.right = '-220px';
+        }
+
+        function showsidebar() {
+            let bar = document.querySelector('.hamburger');
+            bar.style.right = '0';
+        }
+    </script>
 </body>
 
 </html>

@@ -7,6 +7,7 @@ body {
     width: 100dvw;
     height: 100dvh;
     overflow-x: hidden;
+    position: relative;
 }
 
 
@@ -36,6 +37,11 @@ body {
     cursor: pointer;
 }
 
+a {
+    text-decoration: none;
+    color: #333;
+}
+
 .link {
     background-color: #f4f4f4;
     display: flex;
@@ -45,13 +51,62 @@ body {
 
 .link a {
     font-size: 1.2rem;
-    text-decoration: none;
-    color: #333;
     padding: 7px 12px;
     margin: 6px;
 }
 
 nav a:hover {
+    background-color: #ddd;
+}
+
+.hamburger-logo {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    z-index: 100;
+    display: none;
+}
+
+.hamburger {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: -220px;
+    width: 220px;
+    min-height: 100vh;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.2);
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.hamburger ul {
+    width: 100%;
+    min-height: 100vh;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+    padding-top: 25px;
+}
+
+.hamburger>ul>li {
+    width: 100%;
+    margin-top: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* border: 1px solid red; */
+}
+
+li a {
+    width: 100%;
+    padding: 8px;
+}
+
+li:hover {
     background-color: #ddd;
 }
 
@@ -74,8 +129,9 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.35);
-    /* backdrop-filter: blur(10px); */
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.2);
+
     box-shadow: -10px 10px 10px #aaa2a2,
         3px 0 5px #aaa2a2;
     border-radius: 5px;
@@ -174,14 +230,15 @@ h2 {
     }
 }
 
-@media only screen and (max-width : 740px) {
+@media only screen and (max-width : 749px) {
 
-    .page-title {
-        padding: 0.1em;
+
+    .hideOnMobile {
+        display: none;
     }
 
-    .link a {
-        font-size: 1rem;
+    .hamburger-logo {
+        display: flex;
     }
 
     .research-item img {
