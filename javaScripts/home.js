@@ -240,8 +240,7 @@ let a = document.querySelectorAll('a');
 let section = document.querySelectorAll('section');
 searches.forEach(search => {
     search.childNodes[3].addEventListener('click', e => {
-        console.log(45);
-        let val = search.childNodes[1].value;
+        let val = search.childNodes[1].value.trim();
         if (val == '') return;
         var encodedMessage = "";
         para.forEach(p => {

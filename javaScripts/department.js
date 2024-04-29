@@ -4,7 +4,7 @@ let para = document.querySelectorAll('p');
 let a = document.querySelectorAll('a');
 searches.forEach(search => {
     search.childNodes[3].addEventListener('click', e => {
-        let val = search.childNodes[1].value;
+        let val = search.childNodes[1].value.trim();
         if (val == '') return;
         var encodedMessage = "";
         para.forEach(p => {
