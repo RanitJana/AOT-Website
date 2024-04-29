@@ -1,0 +1,25 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+main .content {
+    background-color: var(--aot-light-color--);
+    height: fit-content;
+    width: fit-content;
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: left;
+    margin: 0.5rem;
+    border-radius: 5px;
+}
+
+main>.content img {
+    display: none;
+}
+
+header,
+.content {
+    box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.144);
+}

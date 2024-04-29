@@ -1,15 +1,23 @@
-let hambergMenu = document.querySelector('.dept-hamberg-menu');
-let body = document.querySelector('body');
-let nav = document.querySelector('nav');
-let goback = document.querySelector('.goback');
-goback.addEventListener('click', () => {
-    nav.style.right = "-100%";
-})
-hambergMenu.addEventListener('click', e => {
-    nav.style.right = "0%"
-})
-window.addEventListener('click', e => {
-    if (e.x < screen.width - 285) {
-        nav.style.right = "-100%"
-    }
+//search funcitons
+let search = document.querySelector('.search');
+let para = document.querySelectorAll('p');
+let a = document.querySelectorAll('a');
+search.childNodes[3].addEventListener('click', e => {
+    let val = search.childNodes[1].value;
+    if (val == '') return;
+    var encodedMessage = "";
+    para.forEach(p => {
+        if (p.innerHTML.toLowerCase().includes(val.toLowerCase())) {
+            encodedMessage += (encodeURIComponent(p.outerHTML));
+            encodedMessage += 'TEAM_BUG';
+        }
+    })
+    a.forEach(p => {
+        if (p.innerHTML.toLowerCase().includes(val.toLowerCase())) {
+            encodedMessage += (encodeURIComponent(p.outerHTML));
+            encodedMessage += 'TEAM_BUG';
+        }
+    })
+    sessionStorage.setItem('res', encodedMessage);
+    window.location.href = "../search.html";
 })

@@ -25,7 +25,7 @@ hambergMenu.addEventListener('click', e => {
 window.addEventListener('click', e => {
     let value = window.getComputedStyle(hambergMenu).display;
     requestAnimationFrame(() => {
-        if (e.x <= screen.width - nav.clientWidth && value=='flex') {
+        if (e.x <= screen.width - nav.clientWidth && value == 'flex') {
             isNavOpen = false;
             nav.style.transform = "translateX(100%)";
             body.style.overflowY = "auto";
@@ -68,7 +68,8 @@ function editRoateImg(allchilds) {
     allchild.forEach(val => {
         if (val.getAttribute('class') === 'parent-nav2') {
             let arrow = (val.childNodes[1].childNodes[3]);
-            if (screen.width <= 571) {
+            let value = window.getComputedStyle(hambergMenu).display;
+            if (value == 'flex') {
                 arrow.style.transform = "rotate(90deg)";
             }
             else {
@@ -154,8 +155,9 @@ allchild.forEach((allchilds, idx) => {
                 if (nodeVal == 'block') {
                     values[3].style.display = "none";
                     values[3].style.zIndex = '100';
+                    let value = window.getComputedStyle(hambergMenu).display;
                     if (arrow) {
-                        if (screen.width <= 571) {
+                        if (value == 'flex') {
                             arrow.style.transform = "rotate(90deg)";
                         }
                         else {
@@ -166,8 +168,9 @@ allchild.forEach((allchilds, idx) => {
                 else {
                     values[3].style.display = "block";
                     values[3].style.zIndex = '100';
+                    let value = window.getComputedStyle(hambergMenu).display;
                     if (arrow) {
-                        if (screen.width <= 571) {
+                        if (value == 'flex') {
                             arrow.style.transform = "rotate(-90deg)";
                         }
                         else {
@@ -212,7 +215,8 @@ parentNav3.forEach(child => {
         let arrow = child.childNodes[1].childNodes[3];
         if (val == 'block') {
             child.childNodes[3].style.display = 'none';
-            if (screen.width <= 571) {
+            let value = window.getComputedStyle(hambergMenu).display;
+            if (value == 'flex') {
                 arrow.style.transform = "rotate(90deg)";
             }
             else {
@@ -221,7 +225,8 @@ parentNav3.forEach(child => {
 
         } else {
             child.childNodes[3].style.display = 'block';
-            if (screen.width <= 571) {
+            let value = window.getComputedStyle(hambergMenu).display;
+            if (value == 'flex') {
                 arrow.style.transform = "rotate(-90deg)";
             }
             else {
