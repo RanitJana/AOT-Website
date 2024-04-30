@@ -25,7 +25,7 @@
 .beforeIntro img{
     position: relative;
     margin: 0;
-    padding: 0.9em;
+    padding: 0.6em;
     height: 100%;
     width: auto;
     background-color: #e5e4e2;
@@ -146,7 +146,7 @@ span.prev:hover {
     background-color: #232C69;
     color: white;
     text-align: center;
-    padding: 8px 0px;
+    padding: 4px 0px;
     margin-top: 20px;
     font-size: 1.7em;
 }
@@ -385,11 +385,14 @@ td:nth-child(2) {
 .question{
     padding: 10px 5px;
     cursor: pointer;
+    text-align: center;
+    font-size: 1.1rem;
 }
 
 .answer{
     padding: 10px 5px;
     display: none;
+    text-align: center;
 }
 
 

@@ -1,7 +1,11 @@
 @import url(./basicStyles.css);
 
 .basic-intro{
-    padding: 1em 1.5em;
+    padding: 1rem;
+    margin:1rem 0.5rem;
+    border-radius: 5px;
+    background-color: var(--aot-light-color--);
+    box-shadow: -10px 10px 10px rgba(0,0,0,0.15);
 }
 
 .basic-intro :last-child{
@@ -10,7 +14,7 @@
 }
 
 .curriculam-content{
-    padding: 1em 1.5em;
+   
 }
 .sub-count{
     padding: 0px 7px;
@@ -23,8 +27,18 @@ p img{
     width: 2rem;
 }
 
+.sem-count>li{
+    padding: 1rem;
+    margin:1rem 0.5rem;
+    border-radius: 5px;
+    background-color: var(--aot-light-color--);
+    box-shadow: -10px 10px 10px rgba(0,0,0,0.15);
+}
 
-
+.year{
+    text-align: center;
+    text-decoration: underline;
+}
 
 
 
