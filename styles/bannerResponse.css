@@ -4,6 +4,10 @@
     z-index: 1000;
 }
 
+#heading{
+    color: #fff;
+}
+
 @media (min-width:310px){
     .section__title .logo{
         height: 3rem;
