@@ -800,6 +800,18 @@ nav>ul>li>div>a {
     }
 }
 
+nav ul {
+    transition: all 0.5s ease;
+}
+
+@starting-style {
+
+    nav ul {
+        opacity: 0;
+        scale: 0;
+    }
+}
+
 @media (max-width:500px) {
     .sec1 {
         display: grid;
@@ -935,7 +947,8 @@ nav>ul>li>div>a {
     .syllabus>.content>div {
         margin: 1rem 0;
     }
-    .syllabus>.content>.left>.rt{
+
+    .syllabus>.content>.left>.rt {
         grid-template-columns: auto auto auto;
     }
 }
