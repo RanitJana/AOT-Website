@@ -1,6 +1,12 @@
 @import url(basicStyles.css);
 
 
+.thin-line {
+    border: none;
+    border-top: 1px solid #000; /* Adjust color as needed */
+    margin: 10px 0; /* Adjust margin as needed */
+}
+
 .center {
     display: flex;
     justify-content: center;
@@ -351,18 +357,62 @@ td:nth-child(2) {
 }
 
 .faqs ul {
-    list-style-type: circle;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
 }
 
 .faq {
-    padding: 10px 0px;
+    padding: 10px 10px;
+    margin: 10px 0px;
+    background-color: rgb(261, 261, 261);
+    box-shadow: var(--normal-shadow--);
+    border-radius: 4px;
+    width: 900px;
+}
+
+.faq:hover{
+    box-shadow: -3px 3px 3px rgb(134, 134, 134), -5px 5px 5px 4px rgba(55, 63, 116, 0.5);
 }
 
 .faq p a {
     text-decoration: none;
     color: #222;
 }
+.question{
+    padding: 10px 5px;
+    cursor: pointer;
+}
+
+.answer{
+    padding: 10px 5px;
+    display: none;
+}
+
+
+
+
+
+@media only screen and (max-width:950px) {
+    .faqs ul{
+        width: 100%;
+    }
+    .faqs ul li{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .faq{
+        width: 90%;
+    }
+}
+
+
+
 
 /* =================================== scroll to top  =============================== */
 
