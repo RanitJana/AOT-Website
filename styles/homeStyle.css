@@ -80,7 +80,7 @@ main {
 
 .parent-nav>ul,
 .parent-nav2>ul {
-    transition: all 0.5s ease;
+    /* transition: all 0.5s ease; */
     display: none;
 }
 
@@ -352,11 +352,7 @@ body {
         top: 100%;
         box-shadow: 0 0 5px 5px rgba(128, 128, 128, 0.122);
         background-color: var(--aot-light-color--);
-        display: none;
-    }
-
-    .parent-nav>ul {
-        width: 100%;
+        /* display: none; */
     }
 
     .parent-nav2>ul,
@@ -418,7 +414,7 @@ body {
     nav>ul>li:hover,
     nav>ul>li>ul>li:hover,
     nav>ul>li>ul>li>ul>li:hover,
-    nav>ul>li>ul>li>ul>li>ul>Li:hover {
+    nav>ul>li>ul>li>ul>li>ul>li:hover {
         background-color: rgba(128, 128, 128, 0.247);
     }
 
@@ -612,6 +608,18 @@ body {
     }
 }
 
+nav ul {
+    transition: all 0.3s ease;
+    scale: 1;
+}
+
+@starting-style {
+
+    nav ul {
+        opacity: 0;
+        scale: 0;
+    }
+}
 
 main>.content {
     position: relative;
@@ -991,7 +999,7 @@ main>.content>.first {
     padding: 1rem;
     text-align: center;
     text-transform: uppercase;
-    background: url('../assets/images/exp.avif')center no-repeat;
+    background: url('../assets/images/college_outside.webp') center no-repeat;
     background-size: cover;
     min-height: 25rem;
     position: relative;
