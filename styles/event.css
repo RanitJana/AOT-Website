@@ -254,6 +254,11 @@ body {
         margin: 16px;
     }
 
+    .scrollTo {
+        height: 35px;
+        width: 35px;
+    }
+
     .overlay {
         height: 320px;
     }
