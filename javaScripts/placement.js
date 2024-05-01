@@ -1,6 +1,6 @@
 let back = document.querySelector('.backImg');
 back.addEventListener('click', e => {
-    window.location.href = ('./department.html');
+    window.history.back();
 })
 
 
