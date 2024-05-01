@@ -91,34 +91,6 @@ async function fetchExcelData(path) {
     ans = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName]);
 }
 
-//row number changer
-let select = document.querySelector('select');
-select.addEventListener('change', e => {
-    currentRow = +select.value; //conver into number
-    displayAns(currentRow);
-})
-
-
-//left right data movement
-let right = document.querySelector('#right');
-let left = document.querySelector('#left');
-
-right.addEventListener('click', () => {
-    if (startIdx + currentRow < ans.length) {
-        startIdx += currentRow;
-        pageNumber++;
-    }
-    displayAns(currentRow)
-});
-left.addEventListener('click', () => {
-    if (startIdx > 0) {
-        startIdx -= currentRow;
-        if (startIdx < 0) startIdx = 0;
-        pageNumber--;
-    }
-    displayAns(currentRow)
-});
-
 //store path of excel files
 let studentPlacementInfo = [], recInfo = [];
 //use to store excel pathes in prev arry
@@ -161,7 +133,7 @@ function displayPlacementInfo(path) {
         })
         .catch(err => console.log(err));
 }
-
+let savePath;
 //listens click event
 getPlacementInfoParas.forEach(val => {
     val.addEventListener('click', e => {
@@ -169,11 +141,13 @@ getPlacementInfoParas.forEach(val => {
         if (id.includes('s20')) {
             let idx = studentPlacementInfo.indexOf('./student' + id.slice(1) + '.xlsx');
             if (idx == -1) return;
+            savePath = studentPlacementInfo[idx];
             displayPlacementInfo(studentPlacementInfo[idx]);
         }
         else if (id.includes('r20')) {
             let idx = recInfo.indexOf('./rec' + id.slice(1) + '.xlsx');
             if (idx == -1) return;
+            savePath = recInfo[idx];
             displayPlacementInfo(recInfo[idx]);
         }
         else {
@@ -181,3 +155,43 @@ getPlacementInfoParas.forEach(val => {
         }
     })
 })
+
+let select = document.querySelector('select');
+select.addEventListener('change', e => {
+    currentRow = +select.value; //conver into number
+    if (savePath.includes('student')) {
+        displayPlacementInfo(savePath);
+    }
+    else if (savePath.includes('rec')) {
+        displayPlacementInfo(savePath);
+    }
+})
+//left right data movement
+let right = document.querySelector('#right');
+let left = document.querySelector('#left');
+
+right.addEventListener('click', () => {
+    if (startIdx + currentRow < ans.length) {
+        startIdx += currentRow;
+        pageNumber++;
+    }
+    if (savePath.includes('student')) {
+        displayPlacementInfo(savePath);
+    }
+    else if (savePath.includes('rec')) {
+        displayPlacementInfo(savePath);
+    }
+});
+left.addEventListener('click', () => {
+    if (startIdx > 0) {
+        startIdx -= currentRow;
+        if (startIdx < 0) startIdx = 0;
+        pageNumber--;
+    }
+    if (savePath.includes('student')) {
+        displayPlacementInfo(savePath);
+    }
+    else if (savePath.includes('rec')) {
+        displayPlacementInfo(savePath);
+    }
+});
