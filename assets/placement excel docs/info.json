@@ -1,0 +1,16 @@
+[
+    {
+        "student": [
+            "./student2021.xlsx",
+            "./student2022.xlsx",
+            "./student2023.xlsx"
+        ]
+    },
+    {
+        "recruiter":[
+            "./rec2021.xlsx",
+            "./rec2022.xlsx",
+            "./rec2023.xlsx"
+        ]
+    }
+]
