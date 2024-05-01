@@ -229,8 +229,8 @@ h2 {
 /* media query */
 @media only screen and (max-width : 1246px) {
     .scrollTo {
-        height: 30px;
-        width: 30px;
+        height: 35px;
+        width: 35px;
         right: 1.5%;
     }
 }
