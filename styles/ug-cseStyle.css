@@ -3,8 +3,8 @@
 
 .thin-line {
     border: none;
-    border-top: 1px solid #000; /* Adjust color as needed */
-    margin: 10px 0; /* Adjust margin as needed */
+    border-top: 1px solid #000; 
+    margin: 10px 0;
 }
 
 .center {
@@ -28,7 +28,7 @@
     padding: 0.6em;
     height: 100%;
     width: auto;
-    background-color: #e5e4e2;
+    background-color: var(--aot-light-color--);
     left: 0;
     display: flex;
     align-items: center;
@@ -96,7 +96,7 @@ span.prev {
 
 span.next:hover,
 span.prev:hover {
-    background-color: #ede6d6;
+    background-color: var(--aot-light-color--);
     opacity: 0.8;
     color: #222;
 }
@@ -160,6 +160,7 @@ span.prev:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding: 0px 1rem;
 }
 
 .facility {
@@ -175,7 +176,7 @@ span.prev:hover {
     border-radius: 7px;
     transition: all 0.4s;
     padding: 10px;
-    background-color: rgb(261, 261, 261);
+    background-color: var(--aot-light-color--);
     box-shadow: -5px 5px 5px #d7d7d7;
 }
 
@@ -212,7 +213,7 @@ span.prev:hover {
     min-width: 47%;
     max-width: 340px;
     min-height: 190px;
-    background-color: rgb(261, 261, 261);;
+    background-color: var(--aot-light-color--);
     flex-direction: column;
     text-align: center;
     border-radius: 7px;
@@ -221,6 +222,12 @@ span.prev:hover {
     box-shadow: -5px 5px 5px #d7d7d7;
     transition: all 0.4s;
     padding: 10px;
+}
+@media only screen and (max-width:1050px) {
+    .achivement {
+        min-width: none;
+        width: 100%;
+    }
 }
 
 .achivement:hover {
@@ -253,7 +260,7 @@ span.prev:hover {
     width: 90%;
     min-height: 180px;
     height: auto;
-    background-color: rgb(261, 261, 261);
+    background-color: var(--aot-light-color--);
     /* border: 3px solid black; */
     border-radius: 7px;
     margin: 10px 0px;
@@ -293,9 +300,9 @@ span.prev:hover {
 /* =================================    curriculum    ============================= */
 
 .curriculum {
-    margin: 20px ;
+    margin: 1.5rem 1rem ;
     padding: 20px;
-    background-color: rgb(261, 261, 261);
+    background-color: var(--aot-light-color--);
     box-shadow: var(--normal-shadow--);
     border-radius: 5px;
 }
@@ -316,14 +323,12 @@ span.prev:hover {
 
 
 .research {
-    margin: 20px ;
+    margin: 1.5rem 1rem ;
     padding: 20px;
     background-color: var(--aot-light-color--);
     box-shadow: var(--normal-shadow--);
     border-radius: 5px;
 }
-
-
 
 
 .research ul {
@@ -334,15 +339,15 @@ span.prev:hover {
     font-size: 1em;
 }
 
-.research ul li a {
+a{
     text-decoration: none;
-    color: #222;
+    color: purple;
 }
 
 /* ===================================   faq    ============================= */
 
 .faqs {
-    padding: 20px 0px;
+    padding: 20px 1rem;
 }
 
 table {
@@ -403,12 +408,12 @@ td:nth-child(2) {
 }
 
 .question>img{
-    width: 1.7em;
+    width: 1.6rem;
     margin-left: 10px;
 }
 
 .answer{
-    padding: 10px 5px;
+    padding: 10px 13px;
     display: none;
 }
 
@@ -453,26 +458,6 @@ td:nth-child(2) {
 }
 
 
-
-
-@media only screen and (max-width:950px) {
-    .faqs ul{
-        width: 100%;
-    }
-    .faqs ul li{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        
-    }
-    .faq{
-        width: 90%;
-    }
-}
-
-
-
-
 /* =================================== scroll to top  =============================== */
 
 .to-top {
@@ -494,9 +479,25 @@ td:nth-child(2) {
     scale: 1.1;
 }
 
+
+@keyframes to-top-pop-up {
+    from{
+        scale: 0;
+    }
+    to{
+        scale: 1;
+    }
+}
+
+.deactive-btn{
+   animation: to-top-pop-up 0.3s ease reverse ;
+}
+
+
 .active-btn {
     display: block;
     opacity: 1;
+    animation: to-top-pop-up 0.3s ease ;
 }
 
 .to-top a {
@@ -570,10 +571,20 @@ td:nth-child(2) {
     .achivementsPrograms .programs {
         width: 100%;
     }   
-    .program{
-        min-width: 47%;
-        max-width: 340px;
+    .achivement{
+        max-width: none;
+        width: 100%;
+        padding: 10px;
     }
+    .program{
+        max-width: none;
+        width: 100%;
+        padding: 10px;
+    }
+    #program1{
+        margin-top: 1rem;
+    }
+
     .programHeading h2{
         width: 100dvw;
         background-color: #232C69;
@@ -613,8 +624,23 @@ td:nth-child(2) {
 
 }
 
-@media only screen and (max-width:591px) {
+@media only screen and (max-width:650px) {
     .facility{
-        width: 90%;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:950px) {
+    .faqs ul{
+        width: 100%;
+    }
+    .faqs ul li{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .faq{
+        width: 100%;
     }
 }

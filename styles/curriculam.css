@@ -28,7 +28,7 @@ p img{
 }
 
 .sem-count>li{
-    padding: 1rem;
+    padding: 1rem 1.4rem;
     margin:1rem 0.5rem;
     border-radius: 5px;
     background-color: var(--aot-light-color--);
