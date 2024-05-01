@@ -134,7 +134,7 @@ function displayPlacementInfo(path, year) {
         })
         .catch(err => console.log(err));
 }
-let savePath;
+let savePath, year;
 //listens click event
 getPlacementInfoParas.forEach(val => {
     val.addEventListener('click', e => {
@@ -143,12 +143,14 @@ getPlacementInfoParas.forEach(val => {
             let idx = studentPlacementInfo.indexOf('./student' + id.slice(1) + '.xlsx');
             if (idx == -1) return;
             savePath = studentPlacementInfo[idx];
+            year = id.slice(1);
             displayPlacementInfo(studentPlacementInfo[idx], id.slice(1));
         }
         else if (id.includes('r20')) {
             let idx = recInfo.indexOf('./rec' + id.slice(1) + '.xlsx');
             if (idx == -1) return;
             savePath = recInfo[idx];
+            year = id.slice(1);
             displayPlacementInfo(recInfo[idx], id.slice(1));
         }
         else {
@@ -161,10 +163,10 @@ let select = document.querySelector('select');
 select.addEventListener('change', e => {
     currentRow = +select.value; //conver into number
     if (savePath.includes('student')) {
-        displayPlacementInfo(savePath);
+        displayPlacementInfo(savePath, year);
     }
     else if (savePath.includes('rec')) {
-        displayPlacementInfo(savePath);
+        displayPlacementInfo(savePath, year);
     }
 })
 //left right data movement
@@ -177,10 +179,10 @@ right.addEventListener('click', () => {
         pageNumber++;
     }
     if (savePath.includes('student')) {
-        displayPlacementInfo(savePath);
+        displayPlacementInfo(savePath, year);
     }
     else if (savePath.includes('rec')) {
-        displayPlacementInfo(savePath);
+        displayPlacementInfo(savePath, year);
     }
 });
 left.addEventListener('click', () => {
@@ -190,9 +192,9 @@ left.addEventListener('click', () => {
         pageNumber--;
     }
     if (savePath.includes('student')) {
-        displayPlacementInfo(savePath);
+        displayPlacementInfo(savePath, year);
     }
     else if (savePath.includes('rec')) {
-        displayPlacementInfo(savePath);
+        displayPlacementInfo(savePath, year);
     }
 });
