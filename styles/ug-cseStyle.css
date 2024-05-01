@@ -301,7 +301,7 @@ span.prev:hover {
 
 .curriculum {
     margin: 1.5rem 1rem ;
-    padding: 20px;
+    padding: 1rem 1.5rem;
     background-color: var(--aot-light-color--);
     box-shadow: var(--normal-shadow--);
     border-radius: 5px;
@@ -324,7 +324,7 @@ span.prev:hover {
 
 .research {
     margin: 1.5rem 1rem ;
-    padding: 20px;
+    padding: 1rem 1rem 1rem 1.5rem;
     background-color: var(--aot-light-color--);
     box-shadow: var(--normal-shadow--);
     border-radius: 5px;
