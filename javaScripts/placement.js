@@ -65,13 +65,13 @@ function displayRec(currentRow) {
                 `
             <td>${ans[i]["COMPANY"]}</td>
             <td>${ans[i]["DATE OF INTERVIEW"]}</td>
-            <td>${ans[i]["MCA"]}</td>
-            <td>${ans[i]["CSE"]}</td>
-            <td>${ans[i]["ECE"]}</td>
-            <td>${ans[i]["EIE"]}</td>
-            <td>${ans[i]["EE"]}</td>
-            <td>${ans[i]["IT"]}</td>
-            <td>${ans[i]["ME"]}</td>
+            <td>${ans[i]["MCA"] ? '✔' : ''}</td>
+            <td>${ans[i]["CSE"] ? '✔' : ''}</td>
+            <td>${ans[i]["ECE"] ? '✔' : ''}</td>
+            <td>${ans[i]["EIE"] ? '✔' : ''}</td>
+            <td>${ans[i]["EE"] ? '✔' : ''}</td>
+            <td>${ans[i]["IT"] ? '✔' : ''}</td>
+            <td>${ans[i]["ME"] ? '✔' : ''}</td>
             `;
             tbody.appendChild(newNode);
         }
