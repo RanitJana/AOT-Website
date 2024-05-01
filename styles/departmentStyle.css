@@ -804,6 +804,15 @@ nav ul {
     transition: all 0.3s ease;
 }
 
+.parent-nav ul>li {
+    display: flex;
+    width: 100%;
+}
+
+.parent-nav ul>li a {
+    width: 100%;
+}
+
 @starting-style {
 
     nav ul {
