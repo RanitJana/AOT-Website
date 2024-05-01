@@ -1,0 +1,398 @@
+@import url('../styles/basicStyles.css');
+@import url('../styles/headerStyle.css');
+@import url('../styles/footerStyle.css');
+
+body {
+
+    width: 100dvw;
+    height: 100dvh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+.page-title {
+    position: relative;
+    padding: 0.15em;
+    min-width: 100%;
+    /* margin-top: 1rem; */
+    background: var(--aot-color--);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.logo {
+    position: absolute;
+    margin: 0;
+    padding: 0.55em;
+    width: 70px;
+    background-color: #e5e4e2;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.link {
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link a {
+    font-size: 1.2rem;
+    padding: 7px 12px;
+    margin: 6px;
+}
+
+nav a:hover {
+    background-color: #ddd;
+}
+
+.hamburger-logo {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    z-index: 100;
+    display: none;
+}
+
+.hamburger {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: -220px;
+    width: 220px;
+    min-height: 100vh;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.2);
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.hamburger ul {
+    width: 100%;
+    min-height: 100vh;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+    padding-top: 25px;
+}
+
+.hamburger>ul>li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* text-align: center; */
+    margin-top: 5px;
+}
+
+.hamburger>ul>li>a {
+    min-width: 100%;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: auto;
+    /* border: 1px solid red; */
+}
+
+.hamburger li:hover {
+    background-color: #ddd;
+}
+
+section {
+    padding: 10px;
+    /* border: 1px solid red; */
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+h2 {
+    color: #333;
+}
+
+.container {
+    /* max-width: 960px; */
+    max-width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.2);
+
+    box-shadow: -10px 10px 10px #aaa2a2,
+        3px 0 5px #aaa2a2;
+    border-radius: 5px;
+    padding-bottom: 2em;
+}
+
+.container>h2 {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    background-color: #aaa2a2;
+}
+
+.container>ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.component {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2em;
+    gap: 1rem;
+}
+
+.research-item {
+    margin-bottom: 30px;
+    /* border: 1px solid red; */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.research-item img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.research-item a {
+    color: #FF0065;
+}
+
+.mark {
+    border: 2px solid var(--aot-color--);
+    width: 50%;
+}
+
+.research-item h3 {
+    color: #333;
+}
+
+.research-item p {
+    color: #666;
+}
+
+
+
+/* scroll to */
+.scrollTo {
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    right: 2%;
+    bottom: 3%;
+    z-index: 10;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.293);
+    transition: all 0.3s ease;
+}
+
+.scrollTo img {
+    width: 60%;
+}
+
+.scrollTo a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scrollTo:hover {
+    cursor: pointer;
+}
+
+.scrollTo:active {
+    scale: 1.1;
+}
+
+
+
+/* ===================================   faq    ============================= */
+
+.faqs {
+    width: 100%;
+    /* padding: 20px; */
+}
+
+.faq-section .headings {
+    text-align: center;
+    /* border: 1px solid red; */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 15px;
+    text-align: center;
+}
+
+th:first-child,
+td:first-child {
+    width: 25%;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 75%;
+}
+
+.faqs ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.faq {
+    padding: 10px 10px;
+    margin: 10px 0px;
+    background-color: rgb(261, 261, 261);
+    box-shadow: var(--normal-shadow--);
+    border-radius: 4px;
+    width: 900px;
+}
+
+.faq:hover {
+    box-shadow: -3px 3px 3px rgb(134, 134, 134), -5px 5px 5px 4px rgba(55, 63, 116, 0.5);
+}
+
+.faq p a {
+    text-decoration: none;
+    color: #222;
+}
+
+.question {
+    padding: 10px 5px;
+    cursor: pointer;
+}
+
+.answer {
+    padding: 10px 5px;
+    display: none;
+}
+
+
+
+
+/* 950 */
+@media only screen and (max-width:1072px) {
+    .faqs ul {
+        width: 100%;
+    }
+
+    .faqs ul li {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .faq {
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+
+/* media query */
+@media only screen and (max-width : 1246px) {
+    .scrollTo {
+        height: 30px;
+        width: 30px;
+        right: 1.5%;
+    }
+}
+
+/* 749px */
+
+@media only screen and (max-width : 749px) {
+
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    .hamburger-logo {
+        display: flex;
+    }
+
+    .research-item img {
+        height: 320px;
+    }
+
+    .scrollTo {
+        height: 25px;
+        width: 25px;
+        right: 1%;
+    }
+
+    .faqs ul {
+        width: 100%;
+    }
+
+    .faqs ul li {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .faq {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 441px) {
+    .research-item img {
+        height: 240px;
+    }
+}

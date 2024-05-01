@@ -3,8 +3,10 @@
 
 .thin-line {
     border: none;
-    border-top: 1px solid #000; /* Adjust color as needed */
-    margin: 10px 0; /* Adjust margin as needed */
+    border-top: 1px solid #000;
+    /* Adjust color as needed */
+    margin: 10px 0;
+    /* Adjust margin as needed */
 }
 
 .center {
@@ -13,16 +15,18 @@
     align-items: center;
 }
 
-.beforeIntro{
+.beforeIntro {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.beforeIntro a{
-   height: 100%;
-   width: auto;
+
+.beforeIntro a {
+    height: 100%;
+    width: auto;
 }
-.beforeIntro img{
+
+.beforeIntro img {
     position: relative;
     margin: 0;
     padding: 0.6em;
@@ -36,7 +40,8 @@
     cursor: pointer;
     /* top: 18%; */
 }
-.beforeIntro h1{
+
+.beforeIntro h1 {
     width: 100%;
     height: 100%;
     margin: 0;
@@ -212,7 +217,8 @@ span.prev:hover {
     min-width: 47%;
     max-width: 340px;
     min-height: 190px;
-    background-color: rgb(261, 261, 261);;
+    background-color: rgb(261, 261, 261);
+    ;
     flex-direction: column;
     text-align: center;
     border-radius: 7px;
@@ -275,9 +281,11 @@ span.prev:hover {
     transform: translate(5px, -10px);
 }
 
-.program a p, .program a h3 {
+.program a p,
+.program a h3 {
     text-align: center;
 }
+
 .program a {
     text-decoration: none;
     color: #222;
@@ -307,7 +315,8 @@ span.prev:hover {
 .curriculum ul li {
     font-size: 1em;
 }
-.curriculum ul li a{
+
+.curriculum ul li a {
     text-decoration: none;
     color: #222;
 }
@@ -344,6 +353,7 @@ span.prev:hover {
 .faqs {
     padding: 20px 0px;
 }
+
 
 table {
     width: 100%;
@@ -385,7 +395,7 @@ td:nth-child(2) {
     width: 900px;
 }
 
-.faq:hover{
+.faq:hover {
     box-shadow: -3px 3px 3px rgb(134, 134, 134), -5px 5px 5px 4px rgba(55, 63, 116, 0.5);
 }
 
@@ -393,8 +403,14 @@ td:nth-child(2) {
     text-decoration: none;
     color: #222;
 }
+<<<<<<< HEAD
+
+.question {
+    padding: 10px 5px;
+=======
 .question{
     padding: 10px 13px;
+>>>>>>> 607435f922ff2aebfccf494c2f262f4375abeef0
     cursor: pointer;
     font-size: 1.1rem;
     display: flex;
@@ -407,11 +423,17 @@ td:nth-child(2) {
     margin-left: 10px;
 }
 
-.answer{
+.answer {
     padding: 10px 5px;
     display: none;
 }
 
+<<<<<<< HEAD
+.question:active .answer {
+    display: block;
+}
+
+=======
 @keyframes showAnswer{
     from{
         scale: 0;
@@ -451,21 +473,24 @@ td:nth-child(2) {
 .reverseRotate{
     animation:  reverseRotateIcon 0.3s ease forwards;;
 }
+>>>>>>> 607435f922ff2aebfccf494c2f262f4375abeef0
 
 
 
 
 @media only screen and (max-width:950px) {
-    .faqs ul{
+    .faqs ul {
         width: 100%;
     }
-    .faqs ul li{
+
+    .faqs ul li {
         width: 100%;
         display: flex;
         justify-content: center;
-        
+
     }
-    .faq{
+
+    .faq {
         width: 90%;
     }
 }
@@ -484,13 +509,14 @@ td:nth-child(2) {
     position: fixed;
     right: 3%;
     bottom: 3%;
-    z-index:10;
+    z-index: 10;
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.293);
     transition: all 0.3s ease;
     opacity: 0;
     display: none;
 }
-.to-top:active{
+
+.to-top:active {
     scale: 1.1;
 }
 
@@ -520,29 +546,31 @@ td:nth-child(2) {
 /* ================================================================== */
 
 
-.link-img{
+.link-img {
     width: 1rem;
     margin-left: 0.3rem;
     position: relative;
     top: 13%;
 }
 
-.intro-slide-container{
+.intro-slide-container {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
-.intro-slide-container .intro-btn{
+
+.intro-slide-container .intro-btn {
     position: absolute;
     width: 100%;
     top: 50%;
 }
 
-.next{
+.next {
     right: 30px;
 }
-.prev{
+
+.prev {
     left: 30px;
 }
 
@@ -552,29 +580,35 @@ td:nth-child(2) {
 
 
 @media only screen and (max-width: 1000px) and (min-width: 600px) {
-    .achivementsPrograms .achivements{
+    .achivementsPrograms .achivements {
         width: 59.99%;
     }
+
     .achivementsPrograms .programs {
         width: 39.99%;
-    }    
+    }
 }
-@media only screen and (max-width: 650px){
-    .achivementsPrograms{
+
+@media only screen and (max-width: 650px) {
+    .achivementsPrograms {
         display: flex;
         flex-direction: column;
     }
-    .achivementsPrograms .achivements{
+
+    .achivementsPrograms .achivements {
         width: 100%;
     }
+
     .achivementsPrograms .programs {
         width: 100%;
-    }   
-    .program{
+    }
+
+    .program {
         min-width: 47%;
         max-width: 340px;
     }
-    .programHeading h2{
+
+    .programHeading h2 {
         width: 100dvw;
         background-color: #232C69;
         color: white;
@@ -584,29 +618,31 @@ td:nth-child(2) {
         font-size: 1.7em;
 
     }
-    
+
 
 }
 
 @media only screen and (max-width:400px) {
-    .banner .middle h1{
+    .banner .middle h1 {
         font-size: 1.8em;
     }
 }
 
 @media only screen and (max-width:950px) {
-    .intro-slide-container{
+    .intro-slide-container {
         height: 245px;
     }
 
     .intro-slide-container .intro-btn {
         top: 25%;
     }
-    .headings{
+
+    .headings {
         padding: 5px 0px;
         margin-top: 10px;
         font-size: 1.5em;
     }
+
     .beforeIntro img {
         padding: 0.6em;
     }
@@ -614,7 +650,7 @@ td:nth-child(2) {
 }
 
 @media only screen and (max-width:591px) {
-    .facility{
+    .facility {
         width: 90%;
     }
 }
