@@ -307,8 +307,22 @@ td:nth-child(2) {
 }
 
 .question {
+
     padding: 10px 5px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.answer {
+    display: flex;
+    flex-direction: column;
+}
+
+.rotate-icon {
+    height: 26px;
+    width: 26px;
 }
 
 .answer {
@@ -316,6 +330,52 @@ td:nth-child(2) {
     display: none;
 }
 
+
+@keyframes showAnswer {
+    from {
+        scale: 0;
+    }
+
+    to {
+        scale: 1;
+    }
+}
+
+.displayAnswer {
+    display: block;
+    animation: showAnswer 0.3s ease;
+}
+
+
+@keyframes rotateIcon {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(90deg);
+    }
+}
+
+/* Apply the animation to the 'rotate' class */
+.rotate {
+    animation: rotateIcon 0.3s ease forwards;
+}
+
+@keyframes reverseRotateIcon {
+    from {
+        transform: rotate(90deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.reverseRotate {
+    animation: reverseRotateIcon 0.3s ease forwards;
+    ;
+}
 
 
 
@@ -346,8 +406,8 @@ td:nth-child(2) {
 /* media query */
 @media only screen and (max-width : 1246px) {
     .scrollTo {
-        height: 30px;
-        width: 30px;
+        height: 35px;
+        width: 35px;
         right: 1.5%;
     }
 }
@@ -369,11 +429,6 @@ td:nth-child(2) {
         height: 320px;
     }
 
-    .scrollTo {
-        height: 25px;
-        width: 25px;
-        right: 1%;
-    }
 
     .faqs ul {
         width: 100%;
