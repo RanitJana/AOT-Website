@@ -95,15 +95,20 @@ nav a:hover {
 
 .hamburger>ul>li {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* text-align: center; */
     margin-top: 5px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    /* border: 1px solid red; */
 }
 
-li a {
-    width: 100%;
-    padding: 8px;
+.hamburger>ul>li>a {
+    min-width: 100%;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: auto;
+    /* border: 1px solid red; */
 }
 
 li:hover {
