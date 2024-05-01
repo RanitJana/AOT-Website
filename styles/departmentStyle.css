@@ -584,7 +584,7 @@ nav>ul>li>div>a {
     nav>ul>li:hover,
     nav>ul>li>ul>li:hover,
     nav>ul>li>ul>li>ul>li:hover,
-    nav>ul>li>ul>li>ul>li>ul>Li:hover {
+    nav>ul>li>ul>li>ul>li>ul>li:hover {
         background-color: rgba(128, 128, 128, 0.247);
     }
 
@@ -801,7 +801,16 @@ nav>ul>li>div>a {
 }
 
 nav ul {
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
+}
+
+.parent-nav ul>li {
+    display: flex;
+    width: 100%;
+}
+
+.parent-nav ul>li a {
+    width: 100%;
 }
 
 @starting-style {
