@@ -28,6 +28,28 @@
         </div>
 
     </header>
+    <nav class="link hideOnMobile">
+        <a href="#corporate">Corporate Relation Office</a>
+        <a href="#ion">ion Digital Zone</a>
+        <!-- Add more links as needed -->
+    </nav>
+    <div class="hamburger-logo" onclick="showsidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="28"
+            viewBox="0 -960 960 960" width="28">
+            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+        </svg></div>
+    <div class="hamburger">
+        <ul>
+            <li onclick="hidesidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24"
+                        viewBox="0 -960 960 960" width="24">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg></a></li>
+
+            <li onclick="hidesidebar()"><a href="#corporate">Corporate Relation Office</a></li>
+            <li onclick="hidesidebar()"><a href="#ion">ion Digital Zone</a></li>
+
+        </ul>
+    </div>
     <div class="scrollTo">
         <a href="#destination">
             <img src="../assets/images/icons8-up-arrow-50.png" alt="Error">
@@ -44,8 +66,9 @@
         <div class="section__items">
             <div class="item">
                 <div class="item__title">
-                    <h3>Admin Dept</h3>
+                    <h3 style="border-bottom: 3px solid var(--aot-color--);">Admin Dept</h3>
                 </div>
+
                 <div class="item__details">
                     <p><b>Tel. : </b>+91-9830161441</p>
                     <p><b>Email: </b>admin@aot.edu.in</p>
@@ -53,7 +76,7 @@
             </div>
             <div class="item">
                 <div class="item__title">
-                    <h3>Director/ Principal Office</h3>
+                    <h3 style="border-bottom: 3px solid var(--aot-color--);">Director/ Principal Office</h3>
                 </div>
                 <div class="item__details">
                     <p><b>Tel. : </b>+91-9830196317</p>
@@ -62,7 +85,7 @@
             </div>
             <div class="item">
                 <div class="item__title">
-                    <h3>Academic & Exam. Dept</h3>
+                    <h3 style="border-bottom: 3px solid var(--aot-color--);">Academic & Exam. Dept</h3>
                 </div>
                 <div class="item__details">
                     <p><b>Tel. : </b>+91-9073360791</p>
@@ -71,7 +94,7 @@
             </div>
             <div class="item">
                 <div class="item__title">
-                    <h3>Admission Office</h3>
+                    <h3 style="border-bottom: 3px solid var(--aot-color--);">Admission Office</h3>
                 </div>
                 <div class="item__details">
                     <p><b>Tel. : </b>+91-98310-21706/ 98310-21641/ 98310-19536/ 98310-20853/ 98310-20654/ 98310-24851
@@ -81,7 +104,7 @@
             </div>
             <div class="item">
                 <div class="item__title">
-                    <h3>Account Section</h3>
+                    <h3 style="border-bottom: 3px solid var(--aot-color--);">Account Section</h3>
                 </div>
                 <div class="item__details">
                     <p><b>Tel. : </b>+91-9073360790</p>
@@ -90,7 +113,7 @@
             </div>
             <div class="item">
                 <div class="item__title">
-                    <h3>Training Dept.</h3>
+                    <h3 style="border-bottom: 3px solid var(--aot-color--);">Training Dept.</h3>
                 </div>
                 <div class="item__details">
                     <p><b>Tel. : </b>+91-9073360792</p>
@@ -99,30 +122,31 @@
             </div>
         </div>
     </section>
-    <section class="section">
+    <section class="section" id="corporate">
         <div class="section__title">
             <h1>CORPORATE RELATION OFFICE</h1>
         </div>
         <div class="section__items">
             <div class="item">
                 <div class="item__title">
-                    <h3>Address</h3>
-                    <p>CA-150, SALT LAKE, SECTOR-1, KOLKATA-700 064</p>
+                    <h3 style="border-bottom: 3px solid var(--aot-color--);">Address</h3>
                 </div>
-                <div class="item__details">
+                <p>CA-150, SALT LAKE, SECTOR-1, KOLKATA-700 064</p>
+                <div class="item__details" style="display: flex; align-items: center; justify-content: flex-start;">
                     <p><b>Tel. : </b>+91-9830161441</p>
                     <p><b>Email: </b>admin@aot.edu.in</p>
                 </div>
             </div>
         </div>
     </section>
-    <section class="section">
+    <section class="section" id="ion">
         <div class="section__title">
             <h1>iON DIGITAL ZONE</h1>
         </div>
         <div class="section__items">
             <div class="item">
                 <div class="item__title">
+                    <h3 style="border-bottom: 3px solid var(--aot-color--);">Address</h3>
                 </div>
                 <div class="item__details">
                     <p><b>Address: </b>G.T.ROAD (ADISAPTAGRAM), AEDCONAGAR
@@ -158,6 +182,17 @@
         </div>
     </footer>
 
+    <script>
+        function hidesidebar() {
+            let bar = document.querySelector('.hamburger');
+            bar.style.right = '-220px';
+        }
+
+        function showsidebar() {
+            let bar = document.querySelector('.hamburger');
+            bar.style.right = '0';
+        }
+    </script>
 </body>
 
 </html>
