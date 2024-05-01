@@ -111,7 +111,7 @@ nav a:hover {
     /* border: 1px solid red; */
 }
 
-li:hover {
+.hamburger li:hover {
     background-color: #ddd;
 }
 
@@ -140,7 +140,7 @@ h2 {
     box-shadow: -10px 10px 10px #aaa2a2,
         3px 0 5px #aaa2a2;
     border-radius: 5px;
-    /* padding: 10px; */
+    padding-bottom: 2em;
 }
 
 .container>h2 {
@@ -148,6 +148,23 @@ h2 {
     border-radius: 5px 5px 0 0;
     text-align: center;
     background-color: #aaa2a2;
+}
+
+.container>ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.component {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2em;
+    gap: 1rem;
 }
 
 .research-item {
@@ -226,6 +243,106 @@ h2 {
     scale: 1.1;
 }
 
+
+
+/* ===================================   faq    ============================= */
+
+.faqs {
+    width: 100%;
+    /* padding: 20px; */
+}
+
+.faq-section .headings {
+    text-align: center;
+    /* border: 1px solid red; */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 15px;
+    text-align: center;
+}
+
+th:first-child,
+td:first-child {
+    width: 25%;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 75%;
+}
+
+.faqs ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.faq {
+    padding: 10px 10px;
+    margin: 10px 0px;
+    background-color: rgb(261, 261, 261);
+    box-shadow: var(--normal-shadow--);
+    border-radius: 4px;
+    width: 900px;
+}
+
+.faq:hover {
+    box-shadow: -3px 3px 3px rgb(134, 134, 134), -5px 5px 5px 4px rgba(55, 63, 116, 0.5);
+}
+
+.faq p a {
+    text-decoration: none;
+    color: #222;
+}
+
+.question {
+    padding: 10px 5px;
+    cursor: pointer;
+}
+
+.answer {
+    padding: 10px 5px;
+    display: none;
+}
+
+
+
+
+/* 950 */
+@media only screen and (max-width:1072px) {
+    .faqs ul {
+        width: 100%;
+    }
+
+    .faqs ul li {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .faq {
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+
 /* media query */
 @media only screen and (max-width : 1246px) {
     .scrollTo {
@@ -234,6 +351,8 @@ h2 {
         right: 1.5%;
     }
 }
+
+/* 749px */
 
 @media only screen and (max-width : 749px) {
 
@@ -254,6 +373,21 @@ h2 {
         height: 25px;
         width: 25px;
         right: 1%;
+    }
+
+    .faqs ul {
+        width: 100%;
+    }
+
+    .faqs ul li {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .faq {
+        width: 90%;
     }
 }
 
