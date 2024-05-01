@@ -3,10 +3,9 @@ const toTopbtn=document.querySelector('.to-top');
 
 window.addEventListener('scroll',()=>{
     if(window.scrollY>100){
-        toTopbtn.classList.add("active-btn");
+        toTopbtn.style.scale=1;
     }
-    else{
-        toTopbtn.classList.add('deactive-btn')
-        toTopbtn.classList.remove('active-btn')  
+    else{ 
+        toTopbtn.style.scale=0;
     }
 });
