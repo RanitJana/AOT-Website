@@ -249,7 +249,7 @@ body {
 
 @media only screen and (max-width : 846px) {
     .item-container {
-        width: 300px;
+        width: 340px;
         height: 500px;
         margin: 16px;
     }
@@ -276,13 +276,31 @@ body {
     }
 }
 
+@media only screen and (max-width: 743px) {
+    .item-container {
+        width: 440px;
+        height: 600px;
+        margin: 16px;
+    }
+
+    .overlay {
+        height: 420px;
+    }
+}
+
 @media only screen and (max-width : 513px) {
     .page-title h1 {
         font-size: 1.4em;
     }
 
+    .item-container {
+        width: 410px;
+        height: 600px;
+        margin: 16px;
+    }
+
     .overlay {
-        height: 300px;
+        height: 398px;
     }
 
     .additional-info {
@@ -305,7 +323,7 @@ body {
 
 @media only screen and (max-width : 434px) {
     .item-container {
-        width: 280px;
+        width: 300px;
         height: 360px;
         margin: 16px;
     }
