@@ -114,17 +114,18 @@ let results = document.querySelector('.results');
 let getPlacementInfoParas = document.querySelectorAll('.getPlacementInfo p');
 
 //intermidiate function or middleware to fetch data before print in html
-function displayPlacementInfo(path) {
+function displayPlacementInfo(path, year) {
     console.log(path);
     results.style.display = "flex";
-    h2.innerHTML = `Placed Student Details in 2023 Batch`;
     thead.innerHTML = studentHeader;
     fetchExcelData('../assets/placement excel docs' + path.slice(1))
         .then(res => {
             if (path.includes('rec')) {
+                h2.innerHTML = `Valued Recruiters @${year} Batch`;
                 displayRec(currentRow);
             }
             else if (path.includes('student')) {
+                h2.innerHTML = `Placed Student Details in ${year} Batch`;
                 displayStudent(currentRow);
             }
             else {
@@ -142,13 +143,13 @@ getPlacementInfoParas.forEach(val => {
             let idx = studentPlacementInfo.indexOf('./student' + id.slice(1) + '.xlsx');
             if (idx == -1) return;
             savePath = studentPlacementInfo[idx];
-            displayPlacementInfo(studentPlacementInfo[idx]);
+            displayPlacementInfo(studentPlacementInfo[idx], id.slice(1));
         }
         else if (id.includes('r20')) {
             let idx = recInfo.indexOf('./rec' + id.slice(1) + '.xlsx');
             if (idx == -1) return;
             savePath = recInfo[idx];
-            displayPlacementInfo(recInfo[idx]);
+            displayPlacementInfo(recInfo[idx], id.slice(1));
         }
         else {
             //wait
