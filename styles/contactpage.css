@@ -205,6 +205,11 @@ body {
         height: 24px;
     }
 
+    .scrollTo {
+        height: 35px;
+        width: 35px;
+    }
+
 }
 
 /* 362 */
