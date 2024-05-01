@@ -147,12 +147,7 @@ body {
     word-break: break-word;
 }
 
-@media only screen and (max-width: 698px) {
-    .item {
-        width: 450px;
-        height: 390px;
-    }
-}
+
 
 /* 746 */
 @media only screen and (max-width: 746px) {
@@ -178,6 +173,20 @@ body {
         height: 28px;
     }
 
+}
+
+@media only screen and (max-width: 698px) {
+    .item {
+        width: 450px;
+        height: 390px;
+    }
+}
+
+@media only screen and (max-width: 506px) {
+    .item {
+        width: 410px;
+        height: 340px;
+    }
 }
 
 /* 490 */
@@ -233,8 +242,8 @@ body {
     }
 
     .item {
-        width: 250px;
-        height: 240px;
+        width: 290px;
+        height: 250px;
     }
 
     .item__title {
