@@ -1,0 +1,247 @@
+header {
+    margin-top: -1.2rem;
+    padding-bottom: 0.5rem;
+}
+
+main {
+    position: relative;
+}
+
+.back {
+    display: flex;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px 5px rgba(0, 0, 0, 0.203);
+}
+
+.back .backImg {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: white;
+    background-color: var(--aot-light-color--);
+}
+
+.back .backImg:hover {
+    cursor: pointer;
+}
+
+.back h1 {
+    background-color: var(--aot-color--);
+    color: white;
+    width: 100%;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.backImg img {
+    width: 2rem;
+    mix-blend-mode: multiply;
+}
+
+.content,
+.parcent,
+.results {
+    padding: 1rem 2rem;
+    margin: 1rem;
+    background-color: var(--aot-light-color--);
+    border-radius: 8px;
+    box-shadow: var(--normal-shadow--);
+}
+
+.parcent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.getPlacementInfo {
+    text-align: center;
+    width: 27rem;
+    height: 240px;
+    overflow: auto;
+    box-shadow: var(--normal-shadow--);
+}
+
+.getPlacementInfo p {
+    padding: 1rem;
+    text-decoration: underline;
+}
+
+.getPlacementInfo p:hover {
+    color: purple;
+    cursor: pointer;
+}
+
+.getPlacementInfo p:nth-child(odd) {
+    background-color: white;
+    width: 100%;
+}
+
+.getPlacementInfo p:nth-child(even) {
+    background-color: #BEF2F5;
+    width: 100%;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+}
+
+.results h2 {
+    color: var(--aot-color--);
+    padding: 1rem 0;
+}
+
+.results .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.results .buttons button {
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    border: none;
+    background-color: rgb(0, 0, 159);
+    border-radius: 5px;
+    color: white;
+}
+
+.results .buttons button:hover {
+    cursor: pointer;
+    background-color: blue;
+}
+
+thead th {
+    background-color: skyblue;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+table td {
+    padding: 1rem;
+}
+
+table th,
+table td {
+    text-align: center;
+}
+
+table tr:nth-child(even) {
+    background-color: #BEF2F5
+}
+
+table tr:nth-child(odd) {
+    background-color: white
+}
+
+.tableContainer {
+    width: 100%;
+    overflow: auto;
+}
+
+.tableContainer::-webkit-scrollbar-thumb {
+    height: 2px;
+}
+
+.results table {
+    width: 100%;
+    min-width: 817px;
+    box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.246);
+}
+
+.results table thead th {
+    font-size: 1rem;
+}
+
+select {
+    background-color: var(--aot-light-color--);
+    font-weight: bolder;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    text-align: center;
+    width: fit-content;
+    padding: 0.5rem 2rem;
+    margin-bottom: 0.5rem;
+    align-self: flex-end;
+    outline: none;
+}
+
+option {
+    border-radius: 8px;
+    border: none;
+}
+
+.results {
+    display: none;
+}
+
+option:nth-child(even) {
+    background-color: var(--aot-light-color--);
+}
+
+@media only screen and (min-width:1097px) {
+    .banner {
+        justify-content: center;
+    }
+
+}
+
+@media only screen and (max-width:974px) {
+    .parcent {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .parcent .getPlacementInfo {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:750px) {
+    header {
+        margin-top: 0rem;
+    }
+}
+
+@media only screen and (max-width:514px) {
+
+    .content,
+    .parcent,
+    .results {
+        margin: 1rem 0;
+        border-radius: 0px;
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .back {
+        height: 3rem;
+    }
+
+    .back h1 {
+        font-size: 1.2rem;
+    }
+
+    .back .backImg img {
+        width: 1.5rem;
+    }
+}
+
+@media only screen and (max-width:443px) {
+    table thead th {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width:357px) {
+    .back h1 {
+        font-size: 1rem;
+    }
+}
