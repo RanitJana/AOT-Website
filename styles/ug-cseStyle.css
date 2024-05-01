@@ -29,7 +29,7 @@
 .beforeIntro img {
     position: relative;
     margin: 0;
-    padding: 0.9em;
+    padding: 0.6em;
     height: 100%;
     width: auto;
     background-color: #e5e4e2;
@@ -151,7 +151,7 @@ span.prev:hover {
     background-color: #232C69;
     color: white;
     text-align: center;
-    padding: 8px 0px;
+    padding: 4px 0px;
     margin-top: 20px;
     font-size: 1.7em;
 }
@@ -301,7 +301,11 @@ span.prev:hover {
 /* =================================    curriculum    ============================= */
 
 .curriculum {
-    padding: 20px 30px;
+    margin: 20px ;
+    padding: 20px;
+    background-color: rgb(261, 261, 261);
+    box-shadow: var(--normal-shadow--);
+    border-radius: 5px;
 }
 
 .curriculum ul {
@@ -321,8 +325,15 @@ span.prev:hover {
 
 
 .research {
-    padding: 20px 30px;
+    margin: 20px ;
+    padding: 20px;
+    background-color: var(--aot-light-color--);
+    box-shadow: var(--normal-shadow--);
+    border-radius: 5px;
 }
+
+
+
 
 .research ul {
     list-style-type: circle;
@@ -340,7 +351,7 @@ span.prev:hover {
 /* ===================================   faq    ============================= */
 
 .faqs {
-    padding: 20px 30px;
+    padding: 20px 0px;
 }
 
 
@@ -378,7 +389,7 @@ td:nth-child(2) {
 .faq {
     padding: 10px 10px;
     margin: 10px 0px;
-    background-color: rgb(261, 261, 261);
+    background-color: var(--aot-light-color--);
     box-shadow: var(--normal-shadow--);
     border-radius: 4px;
     width: 900px;
@@ -392,10 +403,24 @@ td:nth-child(2) {
     text-decoration: none;
     color: #222;
 }
+<<<<<<< HEAD
 
 .question {
     padding: 10px 5px;
+=======
+.question{
+    padding: 10px 13px;
+>>>>>>> 607435f922ff2aebfccf494c2f262f4375abeef0
     cursor: pointer;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question>img{
+    width: 1.7em;
+    margin-left: 10px;
 }
 
 .answer {
@@ -403,10 +428,52 @@ td:nth-child(2) {
     display: none;
 }
 
+<<<<<<< HEAD
 .question:active .answer {
     display: block;
 }
 
+=======
+@keyframes showAnswer{
+    from{
+        scale: 0;
+    }
+    to{
+        scale: 1;
+    }
+}
+.displayAnswer{
+    display: block;
+    animation: showAnswer 0.3s ease;
+}
+
+
+@keyframes rotateIcon {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(90deg);
+    }
+}
+
+/* Apply the animation to the 'rotate' class */
+.rotate {
+    animation: rotateIcon 0.3s ease forwards;
+}
+
+@keyframes reverseRotateIcon {
+    from {
+        transform: rotate(90deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+.reverseRotate{
+    animation:  reverseRotateIcon 0.3s ease forwards;;
+}
+>>>>>>> 607435f922ff2aebfccf494c2f262f4375abeef0
 
 
 
