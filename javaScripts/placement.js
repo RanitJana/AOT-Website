@@ -10,6 +10,7 @@ let pageNumber = 1;
 let ans = [];
 let tbody = document.querySelector(".results tbody");
 let thead = document.querySelector(".results thead");
+let results = document.querySelector('.results');
 let h2 = document.querySelector('.results h2');
 
 let studentHeader = `
@@ -52,6 +53,7 @@ function displayStudent(currentRow) {
             console.log(err);
         }
     }
+    results.scrollIntoView();
 }
 
 //function to insert table row or rec info in html
@@ -79,6 +81,7 @@ function displayRec(currentRow) {
             console.log(err);
         }
     }
+    results.scrollIntoView();
 }
 
 //function to retreive json from excel 
@@ -110,7 +113,6 @@ fetch('../assets/placement excel docs/info.json')
 
 
 
-let results = document.querySelector('.results');
 let getPlacementInfoParas = document.querySelectorAll('.getPlacementInfo p');
 
 //intermidiate function or middleware to fetch data before print in html
