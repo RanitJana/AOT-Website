@@ -260,7 +260,7 @@ function resetTimeout() {
             back.style.transform = 'translate(0,-100%)';
         }
     }, 3000);
-    console.log(Math.floor(window.scrollY), Math.floor(header.offsetHeight + back.offsetHeight));
+   // console.log(Math.floor(window.scrollY), Math.floor(header.offsetHeight + back.offsetHeight));
 }
 
 window.addEventListener('scroll', resetTimeout);
