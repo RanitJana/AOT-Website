@@ -198,3 +198,47 @@ left.addEventListener('click', () => {
         displayPlacementInfo(savePath, year);
     }
 });
+
+
+
+//show more in companies
+
+let images = document.querySelectorAll('.company .name');
+let showMore = document.querySelector('.company .box');
+let showMoreTEXT = document.querySelector('.company .box span');
+let showMoreIMG = document.querySelector('.company .box img');
+window.addEventListener('resize', e => {
+    if (screen.width < 918) {
+        images.forEach((val, idx) => {
+            if (idx > 5)
+                val.style.display = 'none';
+        })
+    }
+    else {
+        images.forEach((val, idx) => {
+            if (idx > 5)
+                val.style.display = 'grid';
+        })
+        showMoreTEXT.textContent = "Show More";
+        showMoreIMG.style.transform = "rotate(180deg)";
+    }
+})
+showMore.addEventListener('click', () => {
+    if (showMoreTEXT.textContent == 'Show More') {
+        images.forEach((val, idx) => {
+            if (idx > 5) {
+                val.style.display = 'grid';
+            }
+        })
+        showMoreTEXT.textContent = "Show Less";
+        showMoreIMG.style.transform = "rotate(0deg)";
+    }
+    else {
+        images.forEach((val, idx) => {
+            if (idx > 5)
+                val.style.display = 'none';
+        })
+        showMoreTEXT.textContent = "Show More";
+        showMoreIMG.style.transform = "rotate(180deg)";
+    }
+})
