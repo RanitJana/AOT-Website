@@ -36,6 +36,7 @@ let companyHeader = `
 function displayStudent(currentRow) {
     thead.innerHTML = studentHeader;
     tbody.innerHTML = '';
+    console.log(ans);
     for (let i = startIdx; i < Math.min(startIdx + currentRow, ans.length); i++) {
         try {
             let newNode = document.createElement('tr');
@@ -117,9 +118,7 @@ let getPlacementInfoParas = document.querySelectorAll('.getPlacementInfo p');
 
 //intermidiate function or middleware to fetch data before print in html
 function displayPlacementInfo(path, year) {
-    console.log(path);
     results.style.display = "flex";
-    thead.innerHTML = studentHeader;
     fetchExcelData('../assets/placement excel docs' + path.slice(1))
         .then(res => {
             if (path.includes('rec')) {
@@ -253,7 +252,6 @@ let stickyMove;
 function resetTimeout() {
     back.style.transition = "all 0.5s ease";
     back.style.transform = 'translate(0,0%)';
-    console.log(window.scrollY);
     clearTimeout(stickyMove);
     stickyMove = setTimeout(() => {
         if (Math.floor(window.scrollY) > Math.floor(header.offsetHeight + back.offsetHeight)) {
