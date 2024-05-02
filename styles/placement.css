@@ -52,7 +52,9 @@ main {
     border-radius: 8px;
     box-shadow: var(--normal-shadow--);
 }
-
+.content{
+    padding-top: 2rem;
+}
 .parcent {
     display: flex;
     justify-content: center;
