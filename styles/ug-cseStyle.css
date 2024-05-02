@@ -29,16 +29,15 @@
 .beforeIntro img{
     position: relative;
     margin: 0;
-    padding: 0.6em;
+    padding: 0.5em;
     height: 100%;
-    width: auto;
+    width: 3.3rem;
     background-color: var(--aot-light-color--);
     left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    /* top: 18%; */
 }
 .beforeIntro h1{
     width: 100%;
@@ -607,10 +606,10 @@ td:nth-child(2) {
     }
 }
 
-@media only screen and (max-width:950px) {
+@media only screen  and (max-width:950px) {
     .intro-slide-container{
         height: 245px;
-    }
+    }    
 
     .intro-slide-container .intro-btn {
         top: 25%;
@@ -621,7 +620,8 @@ td:nth-child(2) {
         font-size: 1.5em;
     }
     .beforeIntro img {
-        padding: 0.6em;
+        padding: 0.5em;
+        width: 3.1rem;
     }
 
 }
@@ -630,6 +630,13 @@ td:nth-child(2) {
     .facility{
         width: 100%;
     }
+    .headings{
+        padding: 3px 0px;
+    }
+    .beforeIntro img {
+        width: 2.86rem;
+    }
+
 }
 
 @media only screen and (max-width:950px) {
