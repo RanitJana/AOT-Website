@@ -1,5 +1,5 @@
-let back = document.querySelector('.backImg');
-back.addEventListener('click', e => {
+let backImg = document.querySelector('.backImg');
+backImg.addEventListener('click', e => {
     window.history.back();
 })
 
@@ -53,7 +53,7 @@ function displayStudent(currentRow) {
             console.log(err);
         }
     }
-    results.scrollIntoView();
+    results.scrollIntoView(true);
 }
 
 //function to insert table row or rec info in html
@@ -81,7 +81,7 @@ function displayRec(currentRow) {
             console.log(err);
         }
     }
-    results.scrollIntoView();
+    results.scrollIntoView(true);
 }
 
 //function to retreive json from excel 
@@ -244,3 +244,24 @@ showMore.addEventListener('click', () => {
         showMoreIMG.style.transform = "rotate(180deg)";
     }
 })
+
+//move sticky to top
+let header = document.querySelector('header');
+let back = document.querySelector('.back');
+let stickyMove;
+
+function resetTimeout() {
+    back.style.transition = "all 0.5s ease";
+    back.style.transform = 'translate(0,0%)';
+    console.log(window.scrollY);
+    clearTimeout(stickyMove);
+    stickyMove = setTimeout(() => {
+        if (Math.floor(window.scrollY) > Math.floor(header.offsetHeight + back.offsetHeight)) {
+            back.style.transform = 'translate(0,-100%)';
+        }
+    }, 3000);
+    console.log(Math.floor(window.scrollY), Math.floor(header.offsetHeight + back.offsetHeight));
+}
+
+window.addEventListener('scroll', resetTimeout);
+window.addEventListener('touchstart', resetTimeout);
