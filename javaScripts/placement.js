@@ -1,6 +1,6 @@
 let back = document.querySelector('.backImg');
 back.addEventListener('click', e => {
-    window.location.href = ('./department.html');
+    window.history.back();
 })
 
 
@@ -65,13 +65,13 @@ function displayRec(currentRow) {
                 `
             <td>${ans[i]["COMPANY"]}</td>
             <td>${ans[i]["DATE OF INTERVIEW"]}</td>
-            <td>${ans[i]["MCA"]}</td>
-            <td>${ans[i]["CSE"]}</td>
-            <td>${ans[i]["ECE"]}</td>
-            <td>${ans[i]["EIE"]}</td>
-            <td>${ans[i]["EE"]}</td>
-            <td>${ans[i]["IT"]}</td>
-            <td>${ans[i]["ME"]}</td>
+            <td>${ans[i]["MCA"] ? '✔' : ''}</td>
+            <td>${ans[i]["CSE"] ? '✔' : ''}</td>
+            <td>${ans[i]["ECE"] ? '✔' : ''}</td>
+            <td>${ans[i]["EIE"] ? '✔' : ''}</td>
+            <td>${ans[i]["EE"] ? '✔' : ''}</td>
+            <td>${ans[i]["IT"] ? '✔' : ''}</td>
+            <td>${ans[i]["ME"] ? '✔' : ''}</td>
             `;
             tbody.appendChild(newNode);
         }
@@ -134,7 +134,7 @@ function displayPlacementInfo(path, year) {
         })
         .catch(err => console.log(err));
 }
-let savePath;
+let savePath, year;
 //listens click event
 getPlacementInfoParas.forEach(val => {
     val.addEventListener('click', e => {
@@ -143,12 +143,14 @@ getPlacementInfoParas.forEach(val => {
             let idx = studentPlacementInfo.indexOf('./student' + id.slice(1) + '.xlsx');
             if (idx == -1) return;
             savePath = studentPlacementInfo[idx];
+            year = id.slice(1);
             displayPlacementInfo(studentPlacementInfo[idx], id.slice(1));
         }
         else if (id.includes('r20')) {
             let idx = recInfo.indexOf('./rec' + id.slice(1) + '.xlsx');
             if (idx == -1) return;
             savePath = recInfo[idx];
+            year = id.slice(1);
             displayPlacementInfo(recInfo[idx], id.slice(1));
         }
         else {
@@ -161,10 +163,10 @@ let select = document.querySelector('select');
 select.addEventListener('change', e => {
     currentRow = +select.value; //conver into number
     if (savePath.includes('student')) {
-        displayPlacementInfo(savePath);
+        displayPlacementInfo(savePath, year);
     }
     else if (savePath.includes('rec')) {
-        displayPlacementInfo(savePath);
+        displayPlacementInfo(savePath, year);
     }
 })
 //left right data movement
@@ -177,10 +179,10 @@ right.addEventListener('click', () => {
         pageNumber++;
     }
     if (savePath.includes('student')) {
-        displayPlacementInfo(savePath);
+        displayPlacementInfo(savePath, year);
     }
     else if (savePath.includes('rec')) {
-        displayPlacementInfo(savePath);
+        displayPlacementInfo(savePath, year);
     }
 });
 left.addEventListener('click', () => {
@@ -190,9 +192,9 @@ left.addEventListener('click', () => {
         pageNumber--;
     }
     if (savePath.includes('student')) {
-        displayPlacementInfo(savePath);
+        displayPlacementInfo(savePath, year);
     }
     else if (savePath.includes('rec')) {
-        displayPlacementInfo(savePath);
+        displayPlacementInfo(savePath, year);
     }
 });
