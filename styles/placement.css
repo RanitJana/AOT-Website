@@ -12,6 +12,9 @@ main {
     position: sticky;
     top: 0;
     box-shadow: 0 2px 5px 5px rgba(0, 0, 0, 0.203);
+    z-index: 5;
+    transition: all 0.5s ease;
+    transform: none;
 }
 
 .back .backImg {
@@ -45,16 +48,89 @@ main {
 
 .content,
 .parcent,
-.results {
+.results,
+.company {
     padding: 1rem 2rem;
     margin: 1rem;
     background-color: var(--aot-light-color--);
     border-radius: 8px;
     box-shadow: var(--normal-shadow--);
 }
-.content{
+
+.company h2 {
+    color: var(--aot-color--);
+    padding: 1rem 0;
+}
+
+.company>.images {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 2rem;
+}
+
+.company>.images>.name {
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.company>.images>.name>img {
+    mix-blend-mode: multiply;
+    aspect-ratio: 180/80;
+    width: 60%;
+}
+
+.company>.images>.name:last-child img {
+    width: 40%;
+    aspect-ratio: 1/1;
+}
+
+.company>.images>.name>span {
+    color: var(--aot-color--);
+    font-weight: bolder;
+}
+
+.content {
     padding-top: 2rem;
 }
+
+.company>.showMore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    margin-top: 1rem;
+}
+
+.company .box {
+    padding: 0.25rem 1rem;
+    background-color: orange;
+    border-radius: 50px;
+    box-shadow: var(--normal-shadow--);
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.company .box:hover {
+    cursor: pointer;
+}
+
+.company .box:active {
+    background-color: rgb(165, 107, 0);
+}
+
+.company .box img {
+    transform: rotate(180deg);
+    width: 1.2rem;
+    background-color: white;
+    border-radius: 50%;
+    padding: 0.3rem;
+    margin: 0 0.5rem 0 0;
+}
+
 .parcent {
     display: flex;
     justify-content: center;
@@ -97,7 +173,9 @@ main {
 
 .results h2 {
     color: var(--aot-color--);
-    padding: 1rem 0;
+    padding-top: 1rem;
+    /* background-color: orange; */
+
 }
 
 .results .buttons {
@@ -206,9 +284,26 @@ option:nth-child(even) {
     }
 }
 
+@media only screen and (max-width:918px) {
+    .company>.images {
+        grid-template-columns: auto auto auto;
+    }
+
+    .company>.showMore {
+        display: flex;
+    }
+
+}
+
 @media only screen and (max-width:750px) {
     header {
         margin-top: 0rem;
+    }
+}
+
+@media only screen and (max-width:664px) {
+    .company>.images {
+        grid-template-columns: auto auto;
     }
 }
 
@@ -216,7 +311,8 @@ option:nth-child(even) {
 
     .content,
     .parcent,
-    .results {
+    .results,
+    .company {
         margin: 1rem 0;
         border-radius: 0px;
         padding: 1rem;
@@ -233,6 +329,12 @@ option:nth-child(even) {
 
     .back .backImg img {
         width: 1.5rem;
+    }
+}
+
+@media only screen and (max-width:489px) {
+    .company>.images>.name span {
+        font-size: 0.7rem;
     }
 }
 

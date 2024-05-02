@@ -1,5 +1,5 @@
-let back = document.querySelector('.backImg');
-back.addEventListener('click', e => {
+let backImg = document.querySelector('.backImg');
+backImg.addEventListener('click', e => {
     window.history.back();
 })
 
@@ -10,6 +10,7 @@ let pageNumber = 1;
 let ans = [];
 let tbody = document.querySelector(".results tbody");
 let thead = document.querySelector(".results thead");
+let results = document.querySelector('.results');
 let h2 = document.querySelector('.results h2');
 
 let studentHeader = `
@@ -52,6 +53,7 @@ function displayStudent(currentRow) {
             console.log(err);
         }
     }
+    results.scrollIntoView(true);
 }
 
 //function to insert table row or rec info in html
@@ -79,6 +81,7 @@ function displayRec(currentRow) {
             console.log(err);
         }
     }
+    results.scrollIntoView(true);
 }
 
 //function to retreive json from excel 
@@ -110,7 +113,6 @@ fetch('../assets/placement excel docs/info.json')
 
 
 
-let results = document.querySelector('.results');
 let getPlacementInfoParas = document.querySelectorAll('.getPlacementInfo p');
 
 //intermidiate function or middleware to fetch data before print in html
@@ -198,3 +200,68 @@ left.addEventListener('click', () => {
         displayPlacementInfo(savePath, year);
     }
 });
+
+
+
+//show more in companies
+
+let images = document.querySelectorAll('.company .name');
+let showMore = document.querySelector('.company .box');
+let showMoreTEXT = document.querySelector('.company .box span');
+let showMoreIMG = document.querySelector('.company .box img');
+window.addEventListener('load', e => {
+    if (screen.width < 918) {
+        images.forEach((val, idx) => {
+            if (idx > 5)
+                val.style.display = 'none';
+        })
+    }
+    else {
+        images.forEach((val, idx) => {
+            if (idx > 5)
+                val.style.display = 'grid';
+        })
+        showMoreTEXT.textContent = "Show More";
+        showMoreIMG.style.transform = "rotate(180deg)";
+    }
+})
+showMore.addEventListener('click', () => {
+    if (showMoreTEXT.textContent == 'Show More') {
+        images.forEach((val, idx) => {
+            if (idx > 5) {
+                val.style.display = 'grid';
+            }
+        })
+        showMoreTEXT.textContent = "Show Less";
+        showMoreIMG.style.transform = "rotate(0deg)";
+    }
+    else {
+        images.forEach((val, idx) => {
+            if (idx > 5)
+                val.style.display = 'none';
+        })
+        showMoreTEXT.textContent = "Show More";
+        showMoreIMG.style.transform = "rotate(180deg)";
+    }
+})
+
+//move sticky to top
+let header = document.querySelector('header');
+let back = document.querySelector('.back');
+let stickyMove;
+
+function resetTimeout() {
+    back.style.transition = "all 0.5s ease";
+    back.style.transform = 'translate(0,0%)';
+    console.log(window.scrollY);
+    clearTimeout(stickyMove);
+    stickyMove = setTimeout(() => {
+        if (Math.floor(window.scrollY) > Math.floor(header.offsetHeight + back.offsetHeight)) {
+            back.style.transform = 'translate(0,-100%)';
+        }
+    }, 3000);
+   // console.log(Math.floor(window.scrollY), Math.floor(header.offsetHeight + back.offsetHeight));
+}
+
+window.addEventListener('scroll', resetTimeout);
+window.addEventListener('touchstart', resetTimeout);
