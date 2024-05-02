@@ -2,26 +2,26 @@
   {
     "heading": "Library",
     "content": "A sanctuary of knowledge, where silence speaks volumes and every book holds a world within.",
-    "image": "../assets/bulletinImage/library.jpg"
+    "image": "../assets/bulletinImage/library"
   },
   {
     "heading": "Labratory",
     "content": "A haven of experimentation, where theories meet reality, and mistakes are the stepping stones to breakthroughs.",
-    "image": "../assets/bulletinImage/lab.jpg"
+    "image": "../assets/bulletinImage/lab"
   },
   {
     "heading": "Classroom",
     "content": "A dynamic space where curiosity is the compass, learning is an adventure, and every question leads to discovery.",
-    "image": "../assets/bulletinImage/classroom.jpg"
+    "image": "../assets/bulletinImage/classroom"
   },
   {
     "heading": "Basketball Court",
     "content": "A spacious basketball court, vibrant with college colors, beckons players to spike and dive under the sunny skies of campus.",
-    "image": "../assets/bulletinImage/basketball.jpg"
+    "image": "../assets/bulletinImage/basketball"
   },
   {
     "heading": "Playground",
     "content": "A vibrant hub of activity, where students unwind, collaborate, and embrace the joy of shared moments amidst swings, green spaces, and endless conversations.",
-    "image": "../assets/bulletinImage/playground.jpg"
+    "image": "../assets/bulletinImage/playground"
   }
 ]
