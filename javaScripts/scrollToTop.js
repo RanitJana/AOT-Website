@@ -9,3 +9,7 @@ window.addEventListener('scroll',()=>{
         toTopbtn.style.scale=0;
     }
 });
+
+//=======================  logic for back button  =============================
+const backbtn=document.querySelector('.back-btn');
+backbtn.addEventListener('click',()=>window.history.back());
