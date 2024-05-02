@@ -744,7 +744,9 @@ nav>ul>li>div>a {
         border-radius: 20px;
         margin: 0.5rem 0;
     }
-
+    .parent-nav>ul>li:last-child{
+        margin-bottom: -0.5rem;
+    }
     .parent-nav2 {
         display: flex;
         flex-direction: column;

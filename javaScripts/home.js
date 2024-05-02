@@ -66,7 +66,6 @@ getDynamicData()
     }).catch(err => {
         console.log(err);
     })
-
 body.style.overflow = "hidden";
 if (!sessionStorage.getItem('loadingPage')) {
     sessionStorage.setItem('loadingPage', 'true');
@@ -261,25 +260,3 @@ searches.forEach(search => {
         window.location.href = "./pages/search.html";
     })
 })
-
-//move sticky to top
-let header = document.querySelector('header');
-let stickyMove;
-
-function resetTimeout() {
-    if (screen.width > 750) {
-        nav.style.transition = "all 0.5s ease";
-        nav.style.transform = 'translate(0,0%)';
-        clearTimeout(stickyMove);
-        stickyMove = setTimeout(() => {
-            if (Math.floor(window.scrollY) > Math.floor(header.offsetHeight + nav.offsetHeight)) {
-
-                nav.style.transform = 'translate(0,-100%)';
-            }
-        }, 3000);
-    }
-
-}
-
-window.addEventListener('scroll', resetTimeout);
-window.addEventListener('touchstart', resetTimeout);
