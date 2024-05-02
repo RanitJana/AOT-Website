@@ -48,7 +48,8 @@
 .intro-slide-container {
     width: 100%;
     height: 580px;
-    /* background-color: aquamarine; */
+    padding: 0px 1rem;
+    border-radius: 5px;
 
 }
 
@@ -58,6 +59,7 @@
     height: 100%;
     overflow: hidden;
     margin-top: 0.6rem;
+    border-radius: 6px;
 }
 
 .intro-slides img {
@@ -534,6 +536,7 @@ td:nth-child(2) {
     justify-content: center;
     align-items: center;
     position: relative;
+    margin-top: 1rem;
 }
 .intro-slide-container .intro-btn{
     position: absolute;
@@ -652,4 +655,35 @@ td:nth-child(2) {
     .faq{
         width: 100%;
     }
+}
+
+@media only screen and (max-width:630px){
+    .intro-slide-container{
+        padding: 0;
+    }
+    .intro-slides{
+        border-radius: 0px;
+    }
+    .infrastructure{
+        padding: 0;
+    }
+    .facility{
+        margin: 10px 0;
+    }
+    .achivementsPrograms{
+        padding: 10px 0;
+    }
+    .achivement{
+        margin: 10px 0;
+    }
+    .curriculum{
+        margin: 1.5rem 0;
+    }
+    .research{
+        margin: 1.5rem 0;
+    }
+    .faqs{
+        padding: 20px 0;
+    }
+
 }
