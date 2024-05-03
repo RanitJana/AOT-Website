@@ -352,7 +352,6 @@ body {
         top: 100%;
         box-shadow: 0 0 5px 5px rgba(128, 128, 128, 0.122);
         background-color: var(--aot-light-color--);
-        /* display: none; */
     }
 
     .parent-nav2>ul,
@@ -1230,6 +1229,17 @@ main>.content>.first {
     aspect-ratio: 1/1;
 }
 
+.fifth ul:hover>:not(:hover) {
+    transition: all 0.5s ease;
+    background-color: rgba(128, 128, 128, 0.219);
+}
+
+.fifth ul li:hover {
+    transition: all 0.5s ease;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+}
+
 /* .sixth, */
 .seventh {
     margin: 1rem;
@@ -1500,9 +1510,6 @@ nav a {
     user-select: text;
 }
 
-section {
-    background-color: transparent;
-}
 
 /*media-query*/
 @media only screen and (max-width:1264px) {
@@ -2007,4 +2014,10 @@ footer {
 
 .footerSocialMediaLinks a img {
     width: 1.5em;
+}
+
+body,
+main,
+header{
+    overflow: hidden;
 }
