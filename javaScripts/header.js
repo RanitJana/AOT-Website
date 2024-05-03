@@ -238,7 +238,7 @@ parentNav3.forEach(child => {
 
 //move sticky to top
 let header = document.querySelector('header');
-let stickyMove;
+let stickyMove, isMouseEnter = false;
 
 function isUserWorkingInNav() {
     let ans = false;
@@ -247,6 +247,8 @@ function isUserWorkingInNav() {
             ans = true;
         }
     })
+    ans |= isMouseEnter;
+    console.log(isMouseEnter);
     return ans;
 }
 
@@ -277,4 +279,12 @@ parentNav.forEach((val, idx) => {
     val.addEventListener('click', () => {
         resetTimeout();
     })
+})
+nav.addEventListener('mouseover', e => {
+    isMouseEnter = true;
+    resetTimeout();
+})
+nav.addEventListener('mouseleave', e => {
+    isMouseEnter = false;
+    resetTimeout();
 })

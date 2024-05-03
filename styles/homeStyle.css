@@ -553,12 +553,15 @@ body {
         border-radius: 20px;
         margin: 0.5rem 0;
     }
-    .parent-nav>ul>li:last-child{
+
+    .parent-nav>ul>li:last-child {
         margin-bottom: -1.5rem;
     }
-    .parent-nav>ul>li:first-child{
+
+    .parent-nav>ul>li:first-child {
         margin-top: -0.125rem;
     }
+
     .parent-nav2 {
         display: flex;
         flex-direction: column;
@@ -1263,11 +1266,13 @@ main>.content>.first {
     margin: 0;
     margin-left: 0.3rem;
 }
-.seventh>.content>.left{
+
+.seventh>.content>.left {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .seventh>.content .right {
     display: flex;
     justify-content: center;
