@@ -267,68 +267,68 @@ searches.forEach(search => {
 window.addEventListener('load', e => {
 
     gsap.from('.banner', {
-        duration: 1,
+        duration: 1.5,
         opacity: '0',
         scale: 2,
     });
     gsap.from('.parent-nav', {
         x: 500,
         opacity: '0',
-        duration: 1,
+        duration: 1.5,
         scrollTrigger: ".parent-nav"
     })
     gsap.from('section .first', {
         opacity: '0',
         x: -500,
-        duration: 1,
+        duration: 1.5,
         scrollTrigger: "section .first"
     })
     gsap.from('.online', {
         opacity: '0',
         x: -500,
-        duration: 1,
+        duration: 1.5,
         scrollTrigger: ".online"
     })
     gsap.from('.enquiry', {
         opacity: '0',
         x: 500,
-        duration: 1,
+        duration: 1.5,
         scrollTrigger: '.enquiry'
     })
     gsap.from('.third', {
         opacity: '0',
         x: 500,
-        duration: 1,
+        duration: 1.5,
         scrollTrigger: ".third"
     })
     gsap.from('.event', {
         opacity: '0',
         x: -500,
-        duration: 1,
+        duration: 1.5,
         scrollTrigger: ".event"
     })
     gsap.from('.second', {
         opacity: '0',
         x: 500,
-        duration: 1,
+        duration: 1.5,
         scrollTrigger: ".second"
     })
     gsap.from('.exp', {
         opacity: '0',
         x: -500,
-        duration: 1,
+        duration: 1.5,
         scrollTrigger: ".exp"
     })
     gsap.from('.allignments', {
         opacity: '0',
         x: 500,
-        duration: 1,
+        duration: 1.5,
         scrollTrigger: ".allignments"
     })
     gsap.from('.fourth', {
         opacity: '0',
         x: -500,
-        duration: 1,
+        duration: 1.5,
         scrollTrigger: ".fourth"
     })
     let ranks = document.querySelectorAll('.fourth .rankInfo');
@@ -337,7 +337,7 @@ window.addEventListener('load', e => {
         gsap.from(val, {
             opacity: '0',
             x: -500 * opp,
-            duration: 1,
+            duration: 1.5,
             scrollTrigger: val
         })
         opp *= -1;
@@ -345,43 +345,43 @@ window.addEventListener('load', e => {
     gsap.from('.seventh', {
         opacity: '0',
         x: -500,
-        duration: 1,
+        duration: 1.5,
         scrollTrigger: ".seventh"
     })
     gsap.from('.eighth', {
         opacity: '0',
         x: 500,
-        duration: 1,
+        duration: 1.5,
         scrollTrigger: ".eighth"
     })
     gsap.from('.glance', {
         opacity: '0',
         scale: 2,
-        duration: 1,
+        duration: 1.5,
         scrollTrigger: ".glance"
     })
     gsap.from('.antiRagging', {
         opacity: '0',
         x: -500,
-        duration: 1,
+        duration: 1.5,
         scrollTrigger: ".antiRagging"
     })
     gsap.from('.workshop', {
         opacity: '0',
         x: 500,
-        duration: 1,
+        duration: 1.5,
         scrollTrigger: ".workshop"
     })
     gsap.from('.ninth', {
         opacity: '0',
         x: -500,
-        duration: 1,
+        duration: 1.5,
         scrollTrigger: ".ninth"
     })
     gsap.from('.ninth iframe', {
         opacity: '0',
         scale: 2,
-        duration: 2,
+        duration: 1.5,
         scrollTrigger: ".ninth iframe"
     })
 });;
