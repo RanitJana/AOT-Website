@@ -426,7 +426,24 @@ td:nth-child(2) {
 }
 
 @media only screen and (max-width: 441px) {
-    .research-item img {
-        height: 240px;
+    .section {
+        padding-left: 0;
+        padding-right: 0;
+        border: 1px solid red;
+        min-width: 100%;
+    }
+
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+        border: 1px solid red;
+        min-width: 100%;
+    }
+
+    .component {
+
+        border: 1px solid red;
+        min-width: 100%;
+        padding: 0.5em;
     }
 }
