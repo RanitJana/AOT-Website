@@ -268,152 +268,77 @@ window.addEventListener('load', e => {
 
     gsap.from('.banner', {
         duration: 1,
-        delay: 0.2,
-        opacity: 0,
+        opacity: '0',
         scale: 2,
-        scrollTrigger: {
-            trigger: '.banner',
-            scroller: 'body',
-            start: 'top 60%'
-        }
     });
     gsap.from('.parent-nav', {
-        y: 100,
-        opacity: 0,
-        delay: 0.2,
+        x: 500,
+        opacity: '0',
         duration: 1,
-        scrollTrigger: {
-            trigger: '.parent-nav',
-            scroller: 'body',
-            start: 'top 60%'
-        }
+        scrollTrigger: ".parent-nav"
     })
     gsap.from('section .first', {
-        opacity: 0,
-        y: 200,
+        opacity: '0',
+        x: -500,
         duration: 1,
-        delay: 0.2,
+        scrollTrigger: "section .first"
     })
     gsap.from('.online', {
         opacity: '0',
         x: -500,
         duration: 1,
-        scrollTrigger: {
-            trigger: ".online",
-            scroller: 'body',
-            start: "top 90%",
-            end: "top 30%",
-            markers: true,
-            scrub: 2
-        }
+        scrollTrigger: ".online"
     })
     gsap.from('.enquiry', {
         opacity: '0',
         x: 500,
         duration: 1,
-        scrollTrigger: {
-            trigger: '.enquiry',
-            scroller: 'body',
-            start: "top 90%",
-            end: "top 30%",
-            markers: true,
-            scrub: 2
-        }
+        scrollTrigger: '.enquiry'
     })
     gsap.from('.third', {
         opacity: '0',
         x: 500,
         duration: 1,
-        scrollTrigger: {
-            trigger: ".third",
-            scroller: 'body',
-            start: "top 90%",
-            end: "top 30%",
-            markers: true,
-            scrub: 2
-        }
+        scrollTrigger: ".third"
     })
     gsap.from('.event', {
         opacity: '0',
         x: -500,
         duration: 1,
-        scrollTrigger: {
-            trigger: ".event",
-            scroller: 'body',
-            start: "top 90%",
-            end: "top 30%",
-            markers: true,
-            scrub: 2
-        }
+        scrollTrigger: ".event"
     })
     gsap.from('.second', {
         opacity: '0',
         x: 500,
         duration: 1,
-        scrollTrigger: {
-            trigger: ".second",
-            scroller: 'body',
-            start: "top 90%",
-            end: "top 30%",
-            markers: true,
-            scrub: 2
-        }
+        scrollTrigger: ".second"
     })
     gsap.from('.exp', {
         opacity: '0',
         x: -500,
         duration: 1,
-        scrollTrigger: {
-            trigger: ".exp",
-            scroller: 'body',
-            start: "top 90%",
-            end: "top 30%",
-            markers: true,
-            scrub: 2
-        }
+        scrollTrigger: ".exp"
     })
     gsap.from('.allignments', {
         opacity: '0',
         x: 500,
         duration: 1,
-        scrollTrigger: {
-            trigger: ".allignments",
-            scroller: 'body',
-            start: "top 90%",
-            end: "top 30%",
-            markers: true,
-            scrub: 2
-        }
+        scrollTrigger: ".allignments"
     })
-    let rank = gsap.timeline();
-    rank.from('.fourth', {
+    gsap.from('.fourth', {
         opacity: '0',
         x: -500,
         duration: 1,
-        scrollTrigger: {
-            trigger: ".fourth",
-            scroller: 'body',
-            start: "top 90%",
-            end: "top 30%",
-            markers: true,
-            scrub: 2
-        }
+        scrollTrigger: ".fourth"
     })
     let ranks = document.querySelectorAll('.fourth .rankInfo');
     let opp = -1;
     ranks.forEach(val => {
-        rank.from(val, {
+        gsap.from(val, {
             opacity: '0',
             x: -500 * opp,
             duration: 1,
-            scrollTrigger: {
-                trigger: val,
-                scroller: 'body',
-                start: "top 90%",
-                end: "top 30%",
-                markers: true,
-                scrub: 2
-            }
+            scrollTrigger: val
         })
         opp *= -1;
     })
@@ -421,78 +346,42 @@ window.addEventListener('load', e => {
         opacity: '0',
         x: -500,
         duration: 1,
-        scrollTrigger: {
-            trigger: ".seventh",
-            scroller: 'body',
-            start: "top 80%",
-            end: "top 30%",
-            markers: true,
-            scrub: 2
-        }
+        scrollTrigger: ".seventh"
     })
     gsap.from('.eighth', {
         opacity: '0',
         x: 500,
         duration: 1,
-        scrollTrigger: {
-            trigger: ".eighth",
-            scroller: 'body',
-            start: "top 90%",
-            end: "top 30%",
-            markers: true,
-            scrub: 2
-        }
+        scrollTrigger: ".eighth"
     })
     gsap.from('.glance', {
         opacity: '0',
-        scale:2,
+        scale: 2,
         duration: 1,
-        scrollTrigger: {
-            trigger: ".glance",
-            scroller: 'body',
-            start: "top 90%",
-            end: "top 30%",
-            markers: true,
-            scrub: 2
-        }
+        scrollTrigger: ".glance"
     })
     gsap.from('.antiRagging', {
         opacity: '0',
         x: -500,
         duration: 1,
-        scrollTrigger: {
-            trigger: ".antiRagging",
-            scroller: 'body',
-            start: "top 90%",
-            end: "top 30%",
-            markers: true,
-            scrub: 2
-        }
+        scrollTrigger: ".antiRagging"
     })
     gsap.from('.workshop', {
         opacity: '0',
         x: 500,
         duration: 1,
-        scrollTrigger: {
-            trigger: ".workshop",
-            scroller: 'body',
-            start: "top 90%",
-            end: "top 30%",
-            markers: true,
-            scrub: 2
-        }
+        scrollTrigger: ".workshop"
     })
     gsap.from('.ninth', {
         opacity: '0',
         x: -500,
         duration: 1,
-        scrollTrigger: {
-            trigger: ".ninth",
-            scroller: 'body',
-            start: "top 90%",
-            end: "top 30%",
-            markers: true,
-            scrub: 2
-        }
+        scrollTrigger: ".ninth"
+    })
+    gsap.from('.ninth iframe', {
+        opacity: '0',
+        scale: 2,
+        duration: 2,
+        scrollTrigger: ".ninth iframe"
     })
 });;
