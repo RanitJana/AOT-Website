@@ -629,7 +629,7 @@ body {
     }
 }
 
-/* nav ul {
+nav ul {
     transition: all 0.3s ease;
     scale: 1;
 }
@@ -640,7 +640,7 @@ body {
         opacity: 0;
         scale: 0;
     }
-} */
+}
 
 main>.content {
     position: relative;
@@ -2015,4 +2015,3 @@ footer {
 .footerSocialMediaLinks a img {
     width: 1.5em;
 }
-
