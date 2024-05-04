@@ -120,7 +120,7 @@ parentNav.forEach((val, idx) => {
             parentNavChild[idx].style.zIndex = '100';
             if (arrow) arrow.style.transform = "rotate(-90deg)";
         }
-    }, false)
+    }, false);
 })
 
 allchild.forEach((allchilds, idx) => {
@@ -248,7 +248,6 @@ function isUserWorkingInNav() {
         }
     })
     ans |= isMouseEnter;
-    console.log(isMouseEnter);
     return ans;
 }
 
