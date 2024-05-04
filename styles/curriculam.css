@@ -37,7 +37,7 @@ p img{
     text-align: center;
     text-decoration: underline;
 }
-
+ 
 
 
 
@@ -50,9 +50,13 @@ p img{
 
 @media only screen and (max-width:630px){
     .basic-intro {
-        margin: 1rem 0;
+        margin: 0.7rem 0;
     }
     .sem-count > li {
-        margin: 1rem 0;
+        margin: 0.7rem 0;
+    }
+    .syllabus{
+        margin-bottom: 0.5rem;
+        margin-top: -0.4rem;  
     }
 }
