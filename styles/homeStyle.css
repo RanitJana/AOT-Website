@@ -2018,7 +2018,6 @@ footer {
 
 body,
 header,
-main,
-section {
+main {
     overflow: hidden;
 }
