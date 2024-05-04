@@ -1536,8 +1536,6 @@ nav a {
 }
 
 aside {
-    background-color: var(--aot-light-color--);
-    border-radius: 8px;
     position: fixed;
     top: 50%;
     left: 50%;
