@@ -76,8 +76,13 @@ main section h2 {
 .corporate .info img,
 .ion .info img {
     mix-blend-mode: multiply;
-    width: 1.1rem;
-    margin-right: 0.5rem;
+    width: 1.3rem;
+    margin-right: 0.3rem;
+}
+
+.aot .child p:last-child img,
+.corporate p:last-child img {
+    margin-top: -0.4rem;
 }
 
 .corporate .info p,
@@ -160,6 +165,20 @@ main section h2 {
         background-color: var(--aot-light-color--);
         border-radius: 8px;
         border: 1px dotted gray;
+    }
+
+    .corporate .info p strong,
+    .ion .info p strong {
+        padding: 0.5rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px dotted gray;
+    }
+
+    .corporate .info p>span,
+    .ion .info p>span {
+        padding: 1rem 0.5rem;
     }
 }
 
