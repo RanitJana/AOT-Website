@@ -111,14 +111,19 @@ parentNav.forEach((val, idx) => {
         })
         let nodeVal = parentNavChild[idx].style.display;
         if (nodeVal == 'block') {
+            if (arrow) arrow.style.transform = "rotate(90deg)";
             parentNavChild[idx].style.display = "none";
             parentNavChild[idx].style.zIndex = '50';
-            if (arrow) arrow.style.transform = "rotate(90deg)";
         }
         else {
             parentNavChild[idx].style.display = "block";
             parentNavChild[idx].style.zIndex = '100';
             if (arrow) arrow.style.transform = "rotate(-90deg)";
+            gsap.from(parentNavChild[idx], {
+                transform: 'translateY(100%)',
+                opacity: 0,
+                duration: 0.2
+            })
         }
     }, false);
 })
@@ -177,6 +182,11 @@ allchild.forEach((allchilds, idx) => {
                             arrow.style.transform = "rotate(-180deg)";
                         }
                     }
+                    gsap.from(values[3], {
+                        transform: 'translateY(100%)',
+                        opacity: 0,
+                        duration: 0.2
+                    })
                 }
             }
             catch (err) {
@@ -232,6 +242,11 @@ parentNav3.forEach(child => {
             else {
                 arrow.style.transform = "rotate(-180deg)";
             }
+            gsap.from(child.childNodes[3], {
+                transform: 'translateY(100%)',
+                opacity: 0,
+                duration: 0.2
+            })
         }
     })
 })
