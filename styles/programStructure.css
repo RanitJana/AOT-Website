@@ -447,6 +447,14 @@ td:nth-child(2) {
 
         /* border: 1px solid red; */
         min-width: 100%;
-        padding: 0.5em;
+        padding: 0.7em;
+    }
+
+    .exam>li {
+        margin-left: 1.7rem;
+    }
+
+    .mark {
+        display: none;
     }
 }
