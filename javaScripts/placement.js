@@ -224,7 +224,6 @@ function decideShowMoreOrNot() {
         showMoreIMG.style.transform = "rotate(180deg)";
     }
 }
-window.addEventListener('resize', decideShowMoreOrNot);
 window.addEventListener('load', decideShowMoreOrNot);
 showMore.addEventListener('click', () => {
     if (showMoreTEXT.textContent == 'Show More') {
