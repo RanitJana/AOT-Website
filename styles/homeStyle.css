@@ -84,17 +84,6 @@ main {
     display: none;
 }
 
-.deny {
-    position: fixed;
-    top: 0%;
-    right: -100%;
-    width: 100dvw;
-    height: 100dvh;
-    background-color: transparent;
-    transition: background-color 1s ease;
-    z-index: 100;
-}
-
 @media only screen and (max-width:1100px) {
     .banner {
         margin-top: 2rem;
@@ -261,7 +250,7 @@ body {
         position: sticky;
         background-color: white;
         top: 0;
-        z-index: 100;
+        z-index: 99;
     }
 
     nav a {
@@ -627,6 +616,17 @@ body {
     .first {
         margin-top: -1rem;
     }
+}
+
+.deny {
+    position: fixed;
+    top: 0%;
+    right: -100%;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: transparent;
+    transition: background-color 1s ease;
+    z-index: 100;
 }
 
 nav ul {
@@ -1513,13 +1513,16 @@ nav a {
     width: 80%;
     height: 20rem;
 }
-.ninth>span{
+
+.ninth>span {
     background-color: white;
     padding: 1rem;
 }
-.ninth>span li{
+
+.ninth>span li {
     margin-left: 1rem;
 }
+
 .ninth p {
     width: 80%;
     text-wrap: pretty;
@@ -1532,6 +1535,52 @@ nav a {
     user-select: text;
 }
 
+aside {
+    background-color: var(--aot-light-color--);
+    border-radius: 8px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 150;
+    width: fit-content;
+    height: fit-content;
+    display: none;
+}
+
+aside>img {
+    width: 2rem;
+    height: 2rem;
+    padding: 0.3rem;
+    background-color: white;
+    box-shadow: 0 0 5px 5px rgba(68, 68, 68, 0.708);
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+aside>img:hover {
+    cursor: pointer;
+}
+
+aside .content>img {
+    max-height: 30rem;
+    min-height: 20rem;
+    height: 100%;
+    object-fit: contain;
+}
+
+@keyframes vanish {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
 
 /*media-query*/
 @media only screen and (max-width:1264px) {
@@ -1888,7 +1937,8 @@ nav a {
     .seventh {
         padding: 1rem;
     }
-    .eighth{
+
+    .eighth {
         padding: 1rem;
         padding-top: 2rem;
     }
@@ -1939,6 +1989,14 @@ nav a {
     #bulletin p {
         font-size: 1rem;
         line-height: 1rem;
+    }
+}
+
+@media only screen and (max-width:435px) {
+    aside .content>img {
+        min-height: 15rem;
+        min-width: 0;
+        width: 15rem;
     }
 }
 
