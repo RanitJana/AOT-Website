@@ -59,7 +59,10 @@ main{
    text-decoration:underline;
     margin: 5rem 0;
 }
-
+.contain{
+    background-color: white;
+    padding: 1rem;
+}
 @media only screen and (min-width:1097px) {
     .banner {
         justify-content: center;
@@ -78,7 +81,7 @@ main{
         margin: 1rem 0;
         border-radius: 0px;
         padding: 1rem;
-        font-size: 0.9rem;
+        /* font-size: 0.9rem; */
     }
 
     .back {
