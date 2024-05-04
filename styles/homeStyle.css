@@ -1230,12 +1230,12 @@ main>.content>.first {
 }
 
 .fifth ul:hover>:not(:hover) {
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
     background-color: rgba(128, 128, 128, 0.219);
 }
 
 .fifth ul li:hover {
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
     font-weight: bold;
     letter-spacing: 0.2rem;
 }
@@ -2017,7 +2017,8 @@ footer {
 }
 
 body,
+header,
 main,
-header{
+section {
     overflow: hidden;
 }
