@@ -25,49 +25,50 @@ searches.forEach(search => {
 })
 
 
-// =============================== club details sliding logic  ==============================
+    // =============================== club details sliding logic  ==============================
+    //   Initialize Swiper
 var swiper;
 
-        function autosliding() {
-            swiper = new Swiper(".my_Swiper", {
+function autosliding() {
+    swiper = new Swiper(".my_Swiper", {
+        slidesPerView: 3,
+        loop: true,
+        spaceBetween: 30,
+        speed: 1000,
+        autoplay: {
+            delay: 2000,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            300: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            750: {
+                slidesPerView: 2,
+                spaceBetween: 40,
+            },
+            1246: {
                 slidesPerView: 3,
-                loop: true,
-                spaceBetween: 30,
-                speed: 1000,
-                autoplay: {
-                    delay: 2000,
-                },
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-                breakpoints: {
-                    300: {
-                        slidesPerView: 1,
-                        spaceBetween: 20,
-                    },
-                    750: {
-                        slidesPerView: 2,
-                        spaceBetween: 40,
-                    },
-                    1246: {
-                        slidesPerView: 3,
-                        spaceBetween: 50,
-                    },
-                },
-            });
+                spaceBetween: 50,
+            },
+        },
+    });
 
-        }
-        autosliding();
-        
-        document.querySelector('.my_Swiper').addEventListener('mouseenter', () => {
-            swiper.autoplay.stop();
-        });
+}
+autosliding();
 
-        document.querySelector('.my_Swiper').addEventListener('mouseleave', () => {
-            swiper.autoplay.start();
-        });
+document.querySelector('.my_Swiper').addEventListener('mouseover', () => {
+    swiper.autoplay.stop();
+});
+
+document.querySelector('.my_Swiper').addEventListener('mouseout', () => {
+    swiper.autoplay.start();
+});
