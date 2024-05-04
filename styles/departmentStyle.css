@@ -64,24 +64,7 @@ p,
 .item-container{
     border-radius: 0.6rem;
 }
-@media only screen and (max-width:400px) {
-    .price{
-        font-size: 1.1rem;
-    }
-    .additional-info p{
-        font-size: 1rem;
-    }
-}
-@media only screen  and (max-width:530px) {
-    .item-container{
-        height: 500px;
-    }    
-}
-@media only screen  and (max-width:434px) {
-    .item-container{
-        height: 380px;
-    }    
-}
+
 
 
 .map {
@@ -1018,4 +1001,24 @@ nav ul {
     .sec1>div span {
         font-size: 0.9rem;
     }
+}
+
+/* ==============================  club section  ============================= */
+@media only screen and (max-width:400px) {
+    .price{
+        font-size: 1.1rem;
+    }
+    .additional-info p{
+        font-size: 1rem;
+    }
+}
+@media only screen  and (max-width:530px) {
+    .item-container{
+        height: 500px;
+    }    
+}
+@media only screen  and (max-width:434px) {
+    .item-container{
+        height: 380px;
+    }    
 }
