@@ -1233,15 +1233,10 @@ main>.content>.first {
     aspect-ratio: 1/1;
 }
 
-.fifth ul:hover>:not(:hover) {
-    transition: all 0.3s ease;
-    background-color: rgba(128, 128, 128, 0.219);
-}
 
 .fifth ul li:hover {
     transition: all 0.3s ease;
-    font-weight: bold;
-    letter-spacing: 0.2rem;
+    background-color: rgba(128, 128, 128, 0.498);
 }
 
 /* .sixth, */

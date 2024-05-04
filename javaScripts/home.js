@@ -67,25 +67,6 @@ getDynamicData()
     }).catch(err => {
         console.log(err);
     })
-body.style.overflow = "hidden";
-if (!sessionStorage.getItem('loadingPage')) {
-    sessionStorage.setItem('loadingPage', 'true');
-    setTimeout(() => {
-        requestAnimationFrame(() => {
-            loadingPage.style.scale = "40";
-            welcomeAotImg.style.filter = "invert(100%) opacity(0%)";
-            loadingPage.style.backgroundColor = "rgb(0,0,0,0)";
-            setTimeout(() => {
-                loadingPage.style.zIndex = "-10";
-                body.style.overflow = "auto";
-            }, 500);
-        })
-    }, 1000);
-}
-else {
-    body.style.overflow = "auto";
-    loadingPage.style.display = "none";
-}
 
 //announcement section
 
@@ -262,27 +243,47 @@ searches.forEach(search => {
     })
 })
 
-//aside news
+//aside news and loading page
 let isAsideOpen = false;
 let aside = document.querySelector('aside');
 let asideImg = document.querySelector('aside>.content >img');
-fetch('../assets/aside news/info.json')
-    .then(res => {
-        if (!res) {
-            aside.style.display = 'none';
-            return;
-        }
-        return res.json();
-    })
-    .then(data => {
-        isAsideOpen = true;
-        body.style.overflowY = "hidden";
-        deny.style.right = '0%';
-        deny.style.backgroundColor = "rgba(0, 0, 0, 0.649)";
-        aside.style.display = 'block';
-        asideImg.setAttribute('src', '../assets/aside news' + data.path);
-    })
-    .catch(err => console.log(err));
+
+body.style.overflow = "hidden";
+if (!sessionStorage.getItem('loadingPage')) {
+    sessionStorage.setItem('loadingPage', 'true');
+    setTimeout(() => {
+        requestAnimationFrame(() => {
+            loadingPage.style.scale = "40";
+            welcomeAotImg.style.filter = "invert(100%) opacity(0%)";
+            loadingPage.style.backgroundColor = "rgb(0,0,0,0)";
+            setTimeout(() => {
+                loadingPage.style.zIndex = "-10";
+            }, 500);
+        })
+    }, 1000);
+
+    fetch('../assets/aside news/info.json')
+        .then(res => {
+            if (!res) {
+                aside.style.display = 'none';
+                return;
+            }
+            return res.json();
+        })
+        .then(data => {
+            isAsideOpen = true;
+            body.style.overflowY = "hidden";
+            deny.style.right = '0%';
+            deny.style.backgroundColor = "rgba(0, 0, 0, 0.649)";
+            aside.style.display = 'block';
+            asideImg.setAttribute('src', '../assets/aside news' + data.path);
+        })
+        .catch(err => console.log(err));
+}
+else {
+    body.style.overflow = "auto";
+    loadingPage.style.display = "none";
+}
 
 document.querySelector('aside >img').addEventListener('click', e => {
     isAsideOpen = false;
