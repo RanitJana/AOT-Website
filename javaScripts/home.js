@@ -16,7 +16,7 @@ const displayDynamicInfo = function (res) {
         if (idx == 0) {
             bulletinh2.textContent = val.heading;
             bulletinp.textContent = val.content;
-            bulletinimg.setAttribute('src', val.image + '.webp');
+            bulletinimg.setAttribute('src', val.image + '.jpg');
             bulletinimg.setAttribute('alt', val.image + '.jpg');
         }
         else {
@@ -28,7 +28,7 @@ const displayDynamicInfo = function (res) {
             <h2>${val.heading}</h2>
             <p>${val.content}</p>
             </div>
-            <img src="${val.image + '.webp'}" class="slide" alt="${val.image + '.jpg'}" loading="eager">
+            <img src="${val.image + '.jpg'}" class="slide"  loading="eager">
             `;
             swiperImage.appendChild(newNode);
         }
