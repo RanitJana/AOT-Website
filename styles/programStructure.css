@@ -429,20 +429,23 @@ td:nth-child(2) {
     .section {
         padding-left: 0;
         padding-right: 0;
-        border: 1px solid red;
+        /* border: 1px solid red; */
         min-width: 100%;
+
     }
 
     .container {
         padding-left: 0;
         padding-right: 0;
-        border: 1px solid red;
+        /* border: 1px solid red; */
         min-width: 100%;
+        backdrop-filter: none;
+        background-color: rgba(255, 255, 255, 0.6);
     }
 
     .component {
 
-        border: 1px solid red;
+        /* border: 1px solid red; */
         min-width: 100%;
         padding: 0.5em;
     }
