@@ -111,9 +111,9 @@ parentNav.forEach((val, idx) => {
         })
         let nodeVal = parentNavChild[idx].style.display;
         if (nodeVal == 'block') {
+            if (arrow) arrow.style.transform = "rotate(90deg)";
             parentNavChild[idx].style.display = "none";
             parentNavChild[idx].style.zIndex = '50';
-            if (arrow) arrow.style.transform = "rotate(90deg)";
         }
         else {
             parentNavChild[idx].style.display = "block";

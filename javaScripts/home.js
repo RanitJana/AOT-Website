@@ -261,3 +261,43 @@ searches.forEach(search => {
         window.location.href = "./pages/search.html";
     })
 })
+
+//aside news
+let isAsideOpen = false;
+let aside = document.querySelector('aside');
+let asideImg = document.querySelector('aside>.content >img');
+fetch('../assets/aside news/info.json')
+    .then(res => {
+        if (!res) {
+            aside.style.display = 'none';
+            return;
+        }
+        return res.json();
+    })
+    .then(data => {
+        isAsideOpen = true;
+        body.style.overflowY = "hidden";
+        deny.style.right = '0%';
+        deny.style.backgroundColor = "rgba(0, 0, 0, 0.649)";
+        aside.style.display = 'block';
+        asideImg.setAttribute('src', '../assets/aside news' + data.path);
+    })
+    .catch(err => console.log(err));
+
+document.querySelector('aside >img').addEventListener('click', e => {
+    isAsideOpen = false;
+    aside.style.animation = "vanish 0.3s linear forwards";
+    body.style.overflowY = "auto";
+    deny.style.right = '-100%';
+    deny.style.backgroundColor = "transparent";
+})
+window.addEventListener('resize', e => {
+    if (isAsideOpen) {
+        console.log('history');
+        requestAnimationFrame(() => {
+            body.style.overflowY = "hidden";
+            deny.style.right = '0%';
+            deny.style.backgroundColor = "rgba(0, 0, 0, 0.649)";
+        })
+    }
+})

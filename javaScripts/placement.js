@@ -208,7 +208,7 @@ let images = document.querySelectorAll('.company .name');
 let showMore = document.querySelector('.company .box');
 let showMoreTEXT = document.querySelector('.company .box span');
 let showMoreIMG = document.querySelector('.company .box img');
-window.addEventListener('load', e => {
+function decideShowMoreOrNot() {
     if (screen.width < 918) {
         images.forEach((val, idx) => {
             if (idx > 5)
@@ -223,7 +223,8 @@ window.addEventListener('load', e => {
         showMoreTEXT.textContent = "Show More";
         showMoreIMG.style.transform = "rotate(180deg)";
     }
-})
+}
+window.addEventListener('load', decideShowMoreOrNot);
 showMore.addEventListener('click', () => {
     if (showMoreTEXT.textContent == 'Show More') {
         images.forEach((val, idx) => {
@@ -258,7 +259,7 @@ function resetTimeout() {
             back.style.transform = 'translate(0,-100%)';
         }
     }, 3000);
-   // console.log(Math.floor(window.scrollY), Math.floor(header.offsetHeight + back.offsetHeight));
+    // console.log(Math.floor(window.scrollY), Math.floor(header.offsetHeight + back.offsetHeight));
 }
 
 window.addEventListener('scroll', resetTimeout);

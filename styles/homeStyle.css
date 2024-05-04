@@ -84,17 +84,6 @@ main {
     display: none;
 }
 
-.deny {
-    position: fixed;
-    top: 0%;
-    right: -100%;
-    width: 100dvw;
-    height: 100dvh;
-    background-color: transparent;
-    transition: background-color 1s ease;
-    z-index: 100;
-}
-
 @media only screen and (max-width:1100px) {
     .banner {
         margin-top: 2rem;
@@ -261,7 +250,7 @@ body {
         position: sticky;
         background-color: white;
         top: 0;
-        z-index: 100;
+        z-index: 99;
     }
 
     nav a {
@@ -629,6 +618,17 @@ body {
     }
 }
 
+.deny {
+    position: fixed;
+    top: 0%;
+    right: -100%;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: transparent;
+    transition: background-color 1s ease;
+    z-index: 100;
+}
+
 nav ul {
     transition: all 0.3s ease;
     scale: 1;
@@ -944,8 +944,9 @@ main>.content>.first {
 
 .third>h2,
 .fourth>h2 {
+    margin-top: -1rem;
     color: var(--aot-color--);
-    margin-bottom: 0.5rem;
+    padding-bottom: 1rem;
 }
 
 .third>.vision>p {
@@ -965,16 +966,16 @@ main>.content>.first {
 .third .about {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .third .about .story {
     text-wrap: pretty;
     width: 50%;
     text-align: left;
-    margin-right: 2rem;
-}
-
-.third .about .story p {
+    margin-right: 1rem;
+    padding: 1rem;
+    background-color: white;
     font-size: 1rem;
 }
 
@@ -1077,6 +1078,7 @@ main>.content>.first {
 
 .allignments h2 {
     color: var(--aot-color--);
+    padding-bottom: 1rem;
 }
 
 .allignments>.pics {
@@ -1085,8 +1087,10 @@ main>.content>.first {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    margin-bottom: 1rem;
     padding: 1rem 0;
     min-height: 10rem;
+    background-color: white;
 }
 
 .allignments>.pics>.images {
@@ -1278,6 +1282,8 @@ main>.content>.first {
 }
 
 .seventh>.content>.left {
+    background-color: white;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1303,6 +1309,10 @@ main>.content>.first {
 .placementBook img {
     width: 2rem;
     margin-right: 0.3rem;
+}
+
+table {
+    border: 1px solid gray;
 }
 
 thead th {
@@ -1341,14 +1351,18 @@ table tr:nth-child(odd) {
 .eighth h2 {
     align-self: flex-start;
     color: var(--aot-color--);
+    margin-top: -1rem;
+    padding-bottom: 1rem;
 }
 
 .eighth .companies {
-    width: fit-content;
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
+    background-color: white;
 }
 
 .eighth .company {
@@ -1436,6 +1450,8 @@ nav a {
     display: flex;
     align-items: center;
     gap: 1rem;
+    background-color: white;
+    padding: 1rem;
 }
 
 .workshop {
@@ -1498,6 +1514,15 @@ nav a {
     height: 20rem;
 }
 
+.ninth>span {
+    background-color: white;
+    padding: 1rem;
+}
+
+.ninth>span li {
+    margin-left: 1rem;
+}
+
 .ninth p {
     width: 80%;
     text-wrap: pretty;
@@ -1510,6 +1535,50 @@ nav a {
     user-select: text;
 }
 
+aside {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 150;
+    width: fit-content;
+    height: fit-content;
+    display: none;
+}
+
+aside>img {
+    width: 2rem;
+    height: 2rem;
+    padding: 0.3rem;
+    background-color: white;
+    box-shadow: 0 0 5px 5px rgba(68, 68, 68, 0.708);
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+aside>img:hover {
+    cursor: pointer;
+}
+
+aside .content>img {
+    max-height: 30rem;
+    min-height: 20rem;
+    height: 100%;
+    object-fit: contain;
+}
+
+@keyframes vanish {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
 
 /*media-query*/
 @media only screen and (max-width:1264px) {
@@ -1649,26 +1718,10 @@ nav a {
 }
 
 @media only screen and (max-width:682px) {
-    .eighth {
-        padding: 0;
-    }
 
     .eighth .companies .company img {
         width: 6rem;
         padding: 0;
-    }
-
-    .eighth h2 {
-        line-height: 1.5rem;
-        padding: 2rem;
-        padding-bottom: 0;
-    }
-
-    .eighth .companies {
-        display: grid;
-        width: 100%;
-        margin: 0 -2rem;
-        grid-template-columns: auto auto;
     }
 
     .ninth p {
@@ -1883,19 +1936,20 @@ nav a {
         padding: 1rem;
     }
 
-    .eighth h2 {
+    .eighth {
         padding: 1rem;
-        padding-bottom: 0;
+        padding-top: 2rem;
     }
 
     .third {
-        padding: 0;
+        padding: 1rem;
         padding-bottom: 1rem;
     }
 
     .third .about .story {
         padding: 1rem;
-        margin-top: -1.5rem;
+        margin: 1rem;
+        margin-top: -1rem;
     }
 
     .third>h2 {
@@ -1933,6 +1987,14 @@ nav a {
     #bulletin p {
         font-size: 1rem;
         line-height: 1rem;
+    }
+}
+
+@media only screen and (max-width:435px) {
+    aside .content>img {
+        min-height: 15rem;
+        min-width: 0;
+        width: 15rem;
     }
 }
 
