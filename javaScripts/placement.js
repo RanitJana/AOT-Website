@@ -208,7 +208,7 @@ let images = document.querySelectorAll('.company .name');
 let showMore = document.querySelector('.company .box');
 let showMoreTEXT = document.querySelector('.company .box span');
 let showMoreIMG = document.querySelector('.company .box img');
-window.addEventListener('load', e => {
+window.addEventListener('resize', e => {
     if (screen.width < 918) {
         images.forEach((val, idx) => {
             if (idx > 5)

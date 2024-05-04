@@ -50,19 +50,25 @@ main {
 .parcent,
 .results,
 .company {
-    padding: 1rem 2rem;
+    padding:2rem;
     margin: 1rem;
     background-color: var(--aot-light-color--);
     border-radius: 8px;
     box-shadow: var(--normal-shadow--);
 }
-
+.subcontent{
+    background-color: white;
+    padding: 1rem;
+}
 .company h2 {
     color: var(--aot-color--);
-    padding: 1rem 0;
+    padding: 1rem;
+    margin-top: -2rem;  
 }
 
 .company>.images {
+    background-color: white;
+    padding: 1rem;
     width: 100%;
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -318,7 +324,9 @@ option:nth-child(even) {
         padding: 1rem;
         font-size: 0.9rem;
     }
-
+    .company{
+        padding-top: 2rem;
+    }
     .back {
         height: 3rem;
     }
