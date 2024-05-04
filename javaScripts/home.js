@@ -8,29 +8,45 @@ let eventInfo;
 let refInterval = null;
 let bulletinh2 = document.querySelector('#bulletin>h2');
 let bulletinp = document.querySelector('#bulletin>p');
-let bulletinimg = document.querySelector('#bulletin + img');
+let swiperSlide = document.querySelector('.swiper-slide');
+let bulletinimg = document.querySelectorAll('.swiper-slide img');
 let swiperImage = document.querySelector('.swiper-wrapper');
+
+
+function loadImg(actualImage, blurImage) {
+    var img = new Image();
+    img.onload = function () {
+        actualImage.src = this.src;
+        actualImage.classList.remove("hidden");
+        blurImage.classList.add("hidden");
+    };
+    img.src = actualImage.src;
+}
 
 const displayDynamicInfo = function (res) {
     res.forEach((val, idx) => {
         if (idx == 0) {
             bulletinh2.textContent = val.heading;
             bulletinp.textContent = val.content;
-            bulletinimg.setAttribute('src', val.image + '.jpg');
-            bulletinimg.setAttribute('alt', val.image + '.jpg');
+            loadImg(bulletinimg[1], bulletinimg[0]);
         }
         else {
             let newNode = document.createElement('div');
             newNode.classList.add('swiper-slide');
             newNode.innerHTML =
                 `
-            <div href="" id="bulletin">
-            <h2>${val.heading}</h2>
-            <p>${val.content}</p>
-            </div>
-            <img src="${val.image + '.jpg'}" class="slide"  loading="eager">
+                <div id="bulletin">
+                    <h2>${val.heading}</h2>
+                    <p>${val.content}</p>
+                </div>
+                <img src="./assets/bulletinImage/${val.image}-blur.jpg" class="slide blury">
+                <img src="./assets/bulletinImage/${val.image}.jpg" class="slide hidden"">
             `;
             swiperImage.appendChild(newNode);
+            bulletinimg = document.querySelectorAll('.swiper-slide img');
+            for (let i = 0; i < bulletinimg.length - 1; i += 2) {
+                loadImg(bulletinimg[i + 1], bulletinimg[i]);
+            }
         }
     })
     requestAnimationFrame(() => {
