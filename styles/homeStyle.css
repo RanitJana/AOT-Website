@@ -1575,6 +1575,17 @@ aside .content>img {
     }
 }
 
+/* image blur */
+
+.hidden {
+    display: none;
+}
+
+.blury {
+    filter: blur(2px);
+    transition: all 0.3s ease;
+}
+
 /*media-query*/
 @media only screen and (max-width:1264px) {
     .sixth>.content {
