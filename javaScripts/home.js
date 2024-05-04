@@ -264,7 +264,8 @@ searches.forEach(search => {
 
 
 //<----     GSAP    ----->
-window.addEventListener('load', e => {
+
+requestAnimationFrame(() => {
 
     gsap.from('.banner', {
         duration: 1.5,
@@ -384,4 +385,4 @@ window.addEventListener('load', e => {
         duration: 1.5,
         scrollTrigger: ".ninth iframe"
     })
-});;
+});
