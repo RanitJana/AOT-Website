@@ -39,8 +39,8 @@ const displayDynamicInfo = function (res) {
                     <h2>${val.heading}</h2>
                     <p>${val.content}</p>
                 </div>
-                <img src="./assets/bulletinImage/${val.image}-blur.jpg" class="slide blury">
-                <img src="./assets/bulletinImage/${val.image}.jpg" class="slide hidden"">
+                <img src="./assets/bulletinImage/${val.image}-blur.jpg" class="slide blury" alt ="">
+                <img src="./assets/bulletinImage/${val.image}.jpg" class="slide hidden" alt = "" loading="lazy">
             `;
             swiperImage.appendChild(newNode);
             bulletinimg = document.querySelectorAll('.swiper-slide img');
