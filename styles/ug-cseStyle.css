@@ -199,7 +199,7 @@ span.prev:hover {
 
 .achivementsPrograms {
     display: flex;
-    padding: 10px;
+    padding: 0px 10px;
 
 
 }
@@ -247,7 +247,7 @@ span.prev:hover {
 
 .achivementsPrograms .programs {
     width: 29.999%;
-    padding: 10px 0;
+    padding:  0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -660,30 +660,38 @@ td:nth-child(2) {
 @media only screen and (max-width:630px){
     .intro-slide-container{
         padding: 0;
+        margin-top: 0;
     }
     .intro-slides{
         border-radius: 0px;
     }
     .infrastructure{
         padding: 0;
+        margin: 10px 0;
     }
     .facility{
-        margin: 10px 0;
+        margin: 5px 0;
     }
     .achivementsPrograms{
-        padding: 10px 0;
+        padding: 5px 0;
     }
     .achivement{
-        margin: 10px 0;
+        margin: 5px 0;
+    }
+    .programHeading h2 {
+        margin-top: 3px;
+    }
+    .program{
+        margin: 5px 0;
     }
     .curriculum{
-        margin: 1.5rem 0;
+        margin: 0.5rem 0;
     }
     .research{
-        margin: 1.5rem 0;
+        margin: 0.5rem 0;
     }
     .faqs{
-        padding: 20px 0;
+        padding:  0;
     }
 
 }
