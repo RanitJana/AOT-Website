@@ -2002,7 +2002,7 @@ aside .content>img {
 
 @media only screen and (max-width:394px) {
 
-    .third>.vision p,
+    /* .third>.vision p,
     .third .about .story p,
     .fourth>.info>.rankInfo>.writing,
     .fifth>div>ul>li a,
@@ -2012,16 +2012,16 @@ aside .content>img {
     .workshop p,
     .seventh>.content>.left {
         font-size: 0.9rem;
-    }
+    } */
 
     .second .content .sub-content .updateBox a {
-        font-size: 0.9rem;
-        line-height: 0.9rem;
+        /* font-size: 0.9rem; */
+        /* line-height: 0.9rem; */
     }
 
     .eighth .companies .company span {
         margin-top: 0.5rem;
-        font-size: 0.9rem;
+        /* font-size: 0.9rem; */
     }
 
     .antiRagging>.info>img {
