@@ -39,6 +39,34 @@ p,
     background-color: var(--aot-light-color--);
 }
 
+.club-container{
+    padding: 1rem;
+    background-color: var(--aot-light-color--);
+    margin: 1rem;
+    border-radius: 5px;
+    box-shadow: var(--normal-shadow--);
+}
+
+.swiper-wrapper{
+    margin: 1.5rem ;
+}
+.club-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-horizontal {
+    touch-action:pan-y;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item-container{
+    border-radius: 0.6rem;
+}
+
+
+
 .map {
     padding: 1rem;
     grid-area: map;
@@ -883,6 +911,9 @@ nav ul {
 }
 
 @media only screen and (max-width:630px) {
+    .club-container{
+        margin: 1rem 0;
+    }
     .sec1 {
         padding: 1rem 0;
     }
@@ -970,4 +1001,24 @@ nav ul {
     .sec1>div span {
         font-size: 0.9rem;
     }
+}
+
+/* ==============================  club section  ============================= */
+@media only screen and (max-width:400px) {
+    .price{
+        font-size: 1.1rem;
+    }
+    .additional-info p{
+        font-size: 1rem;
+    }
+}
+@media only screen  and (max-width:530px) {
+    .item-container{
+        height: 500px;
+    }    
+}
+@media only screen  and (max-width:434px) {
+    .item-container{
+        height: 380px;
+    }    
 }
