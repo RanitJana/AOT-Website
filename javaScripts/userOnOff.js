@@ -1,10 +1,11 @@
 let box = document.querySelector('.onOrOff');
 let p = document.querySelector('.onOrOff p');
-let boxImg = document.querySelector('.onOrOff img');
+let boxImg = document.querySelectorAll('.onOrOff img');
 window.addEventListener('load', function (e) {
     if (!navigator.onLine) {
         box.style.backgroundColor = "rgb(255, 106, 106)";
-        boxImg.setAttribute('src', "../assets/images/icons8-no-connection.gif")
+        boxImg[0].style.display = 'block';
+        boxImg[1].style.display = "none";
         p.innerHTML = "Poor Connection!!";
         box.style.transform = "translate(-50%,20%)";
         setTimeout(() => {
@@ -14,7 +15,8 @@ window.addEventListener('load', function (e) {
 }, false);
 window.addEventListener('online', function (e) {
     box.style.backgroundColor = "rgb(81, 254, 81)";
-    boxImg.setAttribute('src', "../assets/images/icons8-online.gif")
+    boxImg[0].style.display = 'none';
+    boxImg[1].style.display = 'block';
     p.innerHTML = "Welcome Back !!";
     box.style.transform = "translate(-50%,20%)";
     setTimeout(() => {
@@ -23,8 +25,9 @@ window.addEventListener('online', function (e) {
 }, false);
 
 window.addEventListener('offline', function (e) {
-    box.style.backgroundColor = "rgb(255, 106, 106)";
-    boxImg.setAttribute('src', "../assets/images/icons8-no-connection.gif")
+    box.style.backgroundColor = "rgb(255, 106, 106)"
+    boxImg[0].style.display = 'block';
+    boxImg[1].style.display = "none";
     p.innerHTML = "Poor Connection!!";
     box.style.transform = "translate(-50%,20%)";
     setTimeout(() => {
