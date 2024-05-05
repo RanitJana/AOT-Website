@@ -729,9 +729,11 @@ main>.content>.first {
     font-size: 5rem;
     text-wrap: nowrap;
 }
-.fromTop{
-    animation: fromTop 1.2s ease ;
+
+.fromTop {
+    animation: fromTop 1.2s ease;
 }
+
 @keyframes fromTop {
     from {
         top: 0%;
@@ -755,9 +757,11 @@ main>.content>.first {
     text-align: left;
     text-wrap: pretty;
 }
-.fromRight{
-    animation: fromright 1.2s ease ;
+
+.fromRight {
+    animation: fromright 1.2s ease;
 }
+
 @keyframes fromright {
     from {
         left: 100%;
