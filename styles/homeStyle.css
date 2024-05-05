@@ -689,7 +689,7 @@ main>.content>.first {
     border-radius: 8px;
 }
 
-.swiper {
+.mySwiper1 {
     width: 100%;
     height: 100%;
     margin: 0;
@@ -697,116 +697,20 @@ main>.content>.first {
     object-fit: cover;
 }
 
-.swiper-wrapper {
+.mySwiper1 .swiper-wrapper {
     width: 100%;
     height: 100%;
 }
 
-.swiper-slide {
+.mySwiper1 .swiper-slide {
     width: 100%;
     height: 100%;
 }
 
-.swiper-slide img {
+.mySwiper1 .swiper-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.secondParSec {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 26.5rem;
-    gap: 1rem;
-    margin: -1rem 0;
-}
-
-.event {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 1rem;
-    padding-top: 0.5rem;
-    color: var(--aot-color--);
-    border-radius: 8px;
-    background-color: var(--aot-light-color--);
-    height: 100%;
-    width: 50%;
-}
-
-.event h2 {
-    margin-bottom: 0.5rem;
-}
-
-.blur {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('../assets/images/college.webp') center;
-    background-size: cover;
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
-}
-
-.eventContainer {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-.eventPar {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 1s ease;
-    border-radius: 8px;
-}
-
-.eventInfo {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    flex-direction: column;
-    max-width: 100%;
-    width: 70%;
-    height: fit-content;
-    aspect-ratio: 4/3;
-    border-radius: 8px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    scale: 0.9;
-    transition: all 0.5s ease;
-}
-
-.eventInfo:hover {
-    cursor: pointer;
-    scale: 0.95;
-    transform: rotate(3deg);
-    z-index: 5;
-}
-
-.writingContent {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.674);
-    padding: 0.5rem 1rem;
-    width: 100%;
-    max-height: 40%;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
 }
 
 #bulletin {
@@ -838,6 +742,90 @@ main>.content>.first {
     text-wrap: pretty;
 }
 
+* {
+    /* border: 1px solid green; */
+}
+
+.secondParSec {
+    display: grid;
+    grid-template-columns: 50% auto;
+    /* height: 26.5rem; */
+    grid-gap: 1rem;
+    margin: 1rem;
+}
+
+.secondParSec .event {
+    height: 100%;
+    border-radius: 8px;
+    background-color: var(--aot-light-color--);
+    padding: 1rem;
+    box-shadow: var(--normal-shadow--);
+}
+
+.secondParSec .event h2 {
+    padding: 1rem;
+    margin-top: -1rem;
+    text-align: center;
+    color: var(--aot-color--);
+}
+
+.secondParSec>section {
+    height: 25.1rem;
+}
+
+.mySwiper2 {
+    border-radius: 8px;
+    height: 85%;
+    width: 100%;
+    background: url('../assets/images/collegeblur.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.mySwiper2 .swiper-wrapper {
+    width: 100%;
+}
+
+.mySwiper2 .swiper-slide {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eventBox {
+    position: relative;
+    height: 80%;
+    aspect-ratio: 4/3;
+    background-color: orange;
+    border-radius: 8px;
+    background: url('../assets/images/college.webp') no-repeat center;
+    transition: all 0.3s ease;
+    background-size: cover;
+    box-shadow: -5px 5px 10px 5px rgba(0, 0, 0, 0.384);
+}
+
+.eventBox:hover {
+    cursor: pointer;
+    scale: 1.1;
+    transform: rotate(3deg);
+}
+
+.writingContent {
+    position: absolute;
+    bottom: 0;
+    height: fit-content;
+    color: white;
+    padding: 0.5rem 1rem;
+    background-color: rgba(0, 0, 0, 0.557);
+    width: 100%;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+
 
 .second {
     position: relative;
@@ -849,7 +837,6 @@ main>.content>.first {
     align-items: center;
     flex-direction: column;
     height: fit-content;
-    width: 50%;
 }
 
 .second>h2 {
@@ -871,6 +858,7 @@ main>.content>.first {
     position: relative;
     background-color: #fff;
     margin: 1rem;
+    margin-bottom: 0;
     border-radius: 8px;
     text-align: center;
     display: flex;
@@ -1630,30 +1618,14 @@ aside .content>img {
 
 @media only screen and (max-width:1129px) {
     .secondParSec {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-        height: fit-content;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-gap: 1rem;
     }
 
-    .event {
-        width: 100%;
+    .secondParSec>.event {
+        height: 27rem;
     }
-
-    .eventContainer {
-        height: 400px;
-    }
-
-    .second {
-        width: 100%;
-    }
-
-    .eventInfo {
-        width: 500px;
-    }
-
 }
 
 @media only screen and (min-width:1001px) {
@@ -1757,6 +1729,20 @@ aside .content>img {
 }
 
 @media only screen and (max-width:630px) {
+    .secondParSec {
+        margin: 1rem 0;
+    }
+
+    .secondParSec .event {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .secondParSec>section {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
     .allignments {
         margin: 1rem 0;
     }
@@ -1850,6 +1836,12 @@ aside .content>img {
     }
 }
 
+@media only screen and (max-width:556px) {
+    .eventBox {
+        height: 70%;
+    }
+}
+
 @media only screen and (max-width:544px) {
     .exp {
         height: 38rem;
@@ -1891,19 +1883,16 @@ aside .content>img {
     }
 }
 
-@media only screen and (max-width:488px) {
-    .workshop>.info>img {
-        width: 100%;
-    }
-}
 
-@media only screen and (max-width:490px) {
-    .first {
-        margin-bottom: 1rem;
-    }
-}
 
-@media only screen and (max-width:422px) {
+@media only screen and (max-width:501px) {
+    .secondParSec .event {
+        padding: 1rem;
+    }
+
+    .secondParSec>section {
+        padding: 1rem;
+    }
 
     .allignments,
     .workshop {
@@ -1980,6 +1969,18 @@ aside .content>img {
     }
 }
 
+@media only screen and (max-width:488px) {
+    .workshop>.info>img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:490px) {
+    .first {
+        margin-bottom: 1rem;
+    }
+}
+
 @media only screen and (max-width:4226px) {
     .loadingPage img {
         scale: 0.8;
@@ -1998,6 +1999,20 @@ aside .content>img {
 }
 
 @media only screen and (max-width:435px) {
+    .eventBox {
+        height: 80%;
+        width: 75%;
+    }
+
+    .secondParSec .event {
+        padding: 1rem 0;
+        border-radius: 0;
+    }
+
+    .mySwiper2 {
+        border-radius: 0;
+    }
+
     aside .content>img {
         min-height: 15rem;
         min-width: 0;

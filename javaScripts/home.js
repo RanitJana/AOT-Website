@@ -8,9 +8,9 @@ let eventInfo;
 let refInterval = null;
 let bulletinh2 = document.querySelector('#bulletin>h2');
 let bulletinp = document.querySelector('#bulletin>p');
-let swiperSlide = document.querySelector('.swiper-slide');
-let bulletinimg = document.querySelectorAll('.swiper-slide img');
-let swiperImage = document.querySelector('.swiper-wrapper');
+let swiperSlide = document.querySelector('.mySwiper1 .swiper-slide');
+let bulletinimg = document.querySelectorAll('.mySwiper1 .swiper-slide img');
+let swiperImage = document.querySelector('.mySwiper1 .swiper-wrapper');
 
 
 function loadImg(actualImage, blurImage) {
@@ -50,7 +50,7 @@ const displayDynamicInfo = function (res) {
         }
     })
     requestAnimationFrame(() => {
-        var swiper = new Swiper(".mySwiper", {
+        var swiper1 = new Swiper(".mySwiper1", {
             slidesPerView: 1,
             spaceBetween: 0,
             loop: true,
@@ -87,7 +87,7 @@ getDynamicData()
 //announcement section
 
 function announceSeeMore() {
-    let announcementOverflow = document.querySelector('main>.content .second>.content');
+    let announcementOverflow = document.querySelector('main>.secondParSec .second>.content');
     let seeMoreAccoune = document.querySelector('.seeMore');
     seeMoreAccoune.addEventListener('click', () => {
         seeMoreAccoune.style.display = "none";
@@ -114,75 +114,58 @@ playIframe.addEventListener('click', () => {
 })
 
 //event slider
-let eventContainer = document.querySelector('.eventContainer');
+let secondSwiper = document.querySelector('.mySwiper2 .swiper-wrapper');
 async function getFutureEventData() {
     let res = await fetch('../assets/upcomingEvent/futureEvent.json');
     let data = await res.json();
     data.forEach((val) => {
         let h3 = val.eventName, span = val.shortInfo, srcImg = "../assets/upcomingEvent/eventImage/" + val.link;
         let newNode = document.createElement('div');
-        newNode.classList.add('eventPar');
+        newNode.classList.add('swiper-slide');
         newNode.innerHTML =
             `
-            <div class="eventInfo">
+            <div class="eventBox">
                 <div class="writingContent">
                     <h3>${h3}</h3>
-                    <span>${span}</span>
+                    <p>${span}</p>
                 </div>
             </div>
-        `;
+         `;
         newNode.childNodes[1].style.background = `url('${srcImg}') center no-repeat`;
         newNode.childNodes[1].style.backgroundSize = "cover";
-        eventContainer.appendChild(newNode);
+        secondSwiper.appendChild(newNode);
     })
 }
 getFutureEventData().then(() => {
-    let eventPar = document.querySelectorAll('.eventPar');
-    eventPar.forEach((val, idx) => {
-        val.style.left = `${idx * 100}%`;
-    })
-    let counter = 0;
-    let rightMove = true;
     requestAnimationFrame(() => {
-        setInterval(() => {
-            if (rightMove) {
-                if (counter == eventPar.length - 1) {
-                    rightMove = false;
-                    eventPar.forEach((val, idx) => {
-                        val.style.transform = `translateX(-${counter * 100}%)`;
-                    })
-                    counter--;
-                }
-                else {
-                    eventPar.forEach((val, idx) => {
-                        val.style.transform = `translateX(-${counter * 100}%)`;
-                    })
-                    counter++;
-                }
-            }
-            else {
-                if (counter == 0) {
-                    rightMove = true;
-                    eventPar.forEach((val, idx) => {
-                        val.style.transform = `translateX(-${counter * 100}%)`;
-                    })
-                    counter++;
-                }
-                else {
-                    eventPar.forEach((val, idx) => {
-                        val.style.transform = `translateX(-${counter * 100}%)`;
-                    })
-                    counter--;
-                }
-            }
-        }, 3000);
+        var swiper2 = new Swiper(".mySwiper2", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loop: true,
+            speed: 500,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            autoplay: {
+                delay: 2000,
+            },
+        });
     })
-    document.querySelectorAll('.eventInfo').forEach(val => {
+    document.querySelectorAll('.eventBox').forEach(val => {
         val.addEventListener('click', () => {
             window.open("./pages/event.html", '_blank');
         });
     })
 })
+
+
+
+
 //scroll to top
 let scrollToTop = document.querySelector('.scrollTo');
 function visibility() {
