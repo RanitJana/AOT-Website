@@ -729,6 +729,20 @@ main>.content>.first {
     font-size: 5rem;
     text-wrap: nowrap;
 }
+.fromTop{
+    animation: fromTop 1.2s ease ;
+}
+@keyframes fromTop {
+    from {
+        top: 0%;
+        transform: translateY(-100%);
+    }
+
+    to {
+
+        top: 4%;
+    }
+}
 
 #bulletin p {
     position: absolute;
@@ -740,6 +754,19 @@ main>.content>.first {
     line-height: 2.1rem;
     text-align: left;
     text-wrap: pretty;
+}
+.fromRight{
+    animation: fromright 1.2s ease ;
+}
+@keyframes fromright {
+    from {
+        left: 100%;
+        /* transform: translateY(100%); */
+    }
+
+    to {
+        left: 4%;
+    }
 }
 
 .secondParSec {
@@ -1482,7 +1509,7 @@ nav a {
 }
 
 .workshop>.info {
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
 }
@@ -1681,7 +1708,7 @@ aside .content>img {
     }
 }
 
-@media only screen and (max-width:913px) {
+@media only screen and (max-width:1067px) {
     .antiRagging>.info img {
         width: 20rem;
     }
@@ -1690,6 +1717,10 @@ aside .content>img {
         gap: 0;
         margin-bottom: 2rem;
         flex-direction: column;
+    }
+
+    .workshop>.info {
+        flex-direction: column-reverse;
     }
 }
 

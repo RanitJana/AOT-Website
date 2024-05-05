@@ -12,6 +12,10 @@ let swiperSlide = document.querySelector('.mySwiper1 .swiper-slide');
 let bulletinimg = document.querySelectorAll('.mySwiper1 .swiper-slide img');
 let swiperImage = document.querySelector('.mySwiper1 .swiper-wrapper');
 
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (rect.top >= 0 && rect.left >= 0);
+}
 
 function loadImg(actualImage, blurImage) {
     var img = new Image();
@@ -65,6 +69,26 @@ const displayDynamicInfo = function (res) {
             },
             autoplay: {
                 delay: 6000,
+            },
+            on: {
+                slideChange: function () {
+                    // Get active slide
+                    var activeSlide = this.slides[this.activeIndex];
+                    // Find the element with class animate-on-slide inside the active slide
+                    var animatedElement1 = activeSlide.querySelector('#bulletin h2');
+                    var animatedElement2 = activeSlide.querySelector('#bulletin p');
+                    // Add active class to trigger animation
+                    animatedElement1.classList.add('fromTop');
+                    animatedElement2.classList.add('fromRight');
+                },
+                slideChangeTransitionEnd: function () {
+                    // Reset animation after transition ends
+                    var previousSlide = this.slides[this.previousIndex];
+                    var animatedElement1 = previousSlide.querySelector('#bulletin h2');
+                    var animatedElement2 = previousSlide.querySelector('#bulletin p');
+                    animatedElement1.classList.remove('fromTop');
+                    animatedElement2.classList.remove('fromRight');
+                },
             },
         });
     });
