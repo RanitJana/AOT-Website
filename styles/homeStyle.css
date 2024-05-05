@@ -779,6 +779,42 @@ main>.content>.first {
     width: 100%;
     background: url('../assets/images/collegeblur.jpg') no-repeat center;
     background-size: cover;
+    position: relative;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: rgba(0, 255, 229, 0.63);
+    border-radius: 50%;
+    color: white;
+    height: 40px;
+    width: 40px;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.swiper-button-next:active,
+.swiper-button-prev:active {
+    scale: 0.9;
+}
+
+.secondBtn {
+    position: absolute;
+    top: 90%;
+    z-index: 3;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+.swiper-pagination {
+    width: 80%;
+    z-index: 2;
 }
 
 .mySwiper2 .swiper-wrapper {
@@ -1694,6 +1730,11 @@ aside .content>img {
         display: flex;
         flex-wrap: wrap;
     }
+
+    #bulletin p {
+        font-size: 1rem;
+        line-height: 1rem;
+    }
 }
 
 @media only screen and (max-width:682px) {
@@ -1836,9 +1877,30 @@ aside .content>img {
     }
 }
 
+@media only screen and (max-width:1129px) and (min-width:700px) {
+    .secondBtn {
+        top: 50%;
+        scale: 1.5;
+        margin: 0 2rem;
+        transform: translateY(-50%);
+    }
+}
+
 @media only screen and (max-width:556px) {
+    .secondParSec .event {
+        /* height: fit-content; */
+        min-height: fit-content;
+        height: 28rem;
+    }
+
     .eventBox {
-        height: 70%;
+        /* max-height: 15rem;
+        height: 80%;
+        width: 80%; */
+        height: 75%;
+        width: 95%;
+        margin-top: 3rem;
+        margin-bottom: 6rem;
     }
 }
 
@@ -1999,10 +2061,6 @@ aside .content>img {
 }
 
 @media only screen and (max-width:435px) {
-    .eventBox {
-        height: 80%;
-        width: 75%;
-    }
 
     .secondParSec .event {
         padding: 1rem 0;
