@@ -520,7 +520,6 @@ body {
         align-items: center;
         background-color: #cbe5ff;
         margin: 1rem 0;
-        /* font-size: medium; */
         width: 100%;
         padding: 0.6rem 1rem;
         border-radius: 20px;
@@ -589,7 +588,6 @@ body {
         width: 100%;
         text-decoration: none;
         color: black;
-        /* background-color: aqua; */
     }
 
     .parent-nav .section img {
@@ -765,7 +763,6 @@ main>.content>.first {
 @keyframes fromright {
     from {
         left: 100%;
-        /* transform: translateY(100%); */
     }
 
     to {
@@ -811,7 +808,6 @@ main>.content>.first {
 .swiper-button-next,
 .swiper-button-prev {
     background-color: rgba(0, 0, 0, 0.336);
-    /* border-radius: 50%; */
     color: white;
     padding: 1rem;
     border: none;
@@ -1130,8 +1126,6 @@ main>.content>.first {
     border-radius: 8px;
     box-shadow: var(--normal-shadow--);
     min-height: 15rem;
-    /* display: flex;
-    flex-direction: column; */
 }
 
 .allignments h2 {
@@ -1261,7 +1255,6 @@ main>.content>.first {
     margin-bottom: 1rem;
 }
 
-/* .sixth>.content>div ul, */
 .fifth>div ul {
     background-color: white;
     text-decoration: none;
@@ -1509,11 +1502,9 @@ nav a {
 
 .workshop {
     padding-bottom: 2rem;
-    /* flex-direction: column; */
 }
 
 .workshop>.info {
-    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
 }
@@ -1925,15 +1916,11 @@ aside .content>img {
 
 @media only screen and (max-width:556px) {
     .secondParSec .event {
-        /* height: fit-content; */
         min-height: fit-content;
         height: 28rem;
     }
 
     .eventBox {
-        /* max-height: 15rem;
-        height: 80%;
-        width: 80%; */
         height: 75%;
         width: 95%;
         margin-top: 3rem;
@@ -2124,26 +2111,8 @@ aside .content>img {
 
 @media only screen and (max-width:394px) {
 
-    /* .third>.vision p,
-    .third .about .story p,
-    .fourth>.info>.rankInfo>.writing,
-    .fifth>div>ul>li a,
-    .writingContent span,
-    .ninth>span,
-    .antiRagging p,
-    .workshop p,
-    .seventh>.content>.left {
-        font-size: 0.9rem;
-    } */
-
-    .second .content .sub-content .updateBox a {
-        /* font-size: 0.9rem; */
-        /* line-height: 0.9rem; */
-    }
-
     .eighth .companies .company span {
         margin-top: 0.5rem;
-        /* font-size: 0.9rem; */
     }
 
     .antiRagging>.info>img {
