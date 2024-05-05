@@ -742,14 +742,9 @@ main>.content>.first {
     text-wrap: pretty;
 }
 
-* {
-    /* border: 1px solid green; */
-}
-
 .secondParSec {
     display: grid;
     grid-template-columns: 50% auto;
-    /* height: 26.5rem; */
     grid-gap: 1rem;
     margin: 1rem;
 }
@@ -784,11 +779,9 @@ main>.content>.first {
 
 .swiper-button-next,
 .swiper-button-prev {
-    background-color: rgba(0, 255, 229, 0.63);
-    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.336);
+    /* border-radius: 50%; */
     color: white;
-    height: 40px;
-    width: 40px;
     padding: 1rem;
     border: none;
     outline: none;
@@ -800,14 +793,21 @@ main>.content>.first {
     scale: 0.9;
 }
 
+.firstBtn {
+    width: 3rem;
+    height: 3rem;
+}
+
 .secondBtn {
+    height: 40px;
+    width: 40px;
     position: absolute;
     top: 90%;
     z-index: 3;
 }
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
+.secondBtn::after,
+.firstBtn::after {
     font-size: 1.2rem;
     font-weight: bolder;
 }
