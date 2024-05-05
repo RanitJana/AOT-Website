@@ -11,3 +11,8 @@ let workshopBlur = document.querySelector('#workshopBlur');
 let workshopMain = document.querySelector('#workshopMain');
 
 workshopBlur.onload = loadImg(workshopMain, workshopBlur);
+
+let placementBlur = document.querySelector('#placementBlur');
+let placementMain = document.querySelector('#placementMain');
+
+placementBlur.onload = loadImg(placementMain, placementBlur);
