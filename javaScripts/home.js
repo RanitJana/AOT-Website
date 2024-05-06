@@ -37,10 +37,10 @@ const displayDynamicInfo = function (res) {
                     <h2>${val.heading}</h2>
                     <p>${val.content}</p>
                 </div>
-                <img src="./assets/bulletinImage/${val.image}" alt = "" loading="lazy" id='makeBlur'>
-                <img src="./assets/bulletinImage/${val.image}" alt = "" loading="lazy" class='mainImg1'>
-                <img src="./assets/bulletinImage/${val.image}" alt = "" loading="lazy" class='mainImg2'>
-                <img src="./assets/bulletinImage/${val.image}" alt = "" loading="lazy" class='mainImg3'>
+                <img src="./assets/bulletinImage/${val.image}" alt = "" id='makeBlur'>
+                <img src="./assets/bulletinImage/${val.image}" alt = "" class='mainImg1'>
+                <img src="./assets/bulletinImage/${val.image}" alt = "" class='mainImg2'>
+                <img src="./assets/bulletinImage/${val.image}" alt = "" class='mainImg3'>
             `;
         swiperImage.appendChild(newNode);
     })
@@ -257,7 +257,30 @@ searches.forEach(search => {
     })
 })
 
-//aside news and loading page
+let swiper3 = new Swiper(".mySwiper3", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    speed: 900,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+        delay: 3000,
+    },
+    breakpoints: {
+        // when window width is <= 1000px
+        1065: {
+            slidesPerView: 2, // Change to 1 slide per view
+        }
+    },
+});
+
 let isAsideOpen = false;
 let aside = document.querySelector('aside');
 let asideImg = document.querySelector('aside>.content >img');
