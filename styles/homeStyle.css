@@ -649,8 +649,9 @@ main>.content {
     grid-template-columns: auto;
 }
 
-main>.content .second>.content {
-    max-height: 20rem;
+main>.contentx {
+    /* max-height: 20rem; */
+    /* min-height: 30rem; */
 }
 
 main>.content .first {
@@ -669,8 +670,6 @@ main>.content>.first {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    text-align: justify;
 }
 
 .banner .right .search img {
@@ -693,27 +692,63 @@ main>.content>.first {
     margin: 0;
     background-color: var(--aot-light-color--);
     object-fit: cover;
+    overflow: hidden;
 }
 
 .mySwiper1 .swiper-wrapper {
     width: 100%;
     height: 100%;
+
 }
 
 .mySwiper1 .swiper-slide {
+    background-size: cover;
     width: 100%;
-    height: 100%;
+
+    position: relative;
+    perspective: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-.mySwiper1 .swiper-slide img {
+.mainImg1,
+.mainImg2,
+.mainImg3 {
+    height: 80%;
+    object-fit: contain;
+    transform: rotateY(0deg);
+}
+
+.mainImg1 {
+    height: 70%;
+    transform: rotateY(-10deg);
+}
+
+.mainImg2 {
+    margin: 0;
+}
+
+.mainImg3 {
+    height: 70%;
+    transform: rotateY(10deg);
+}
+
+#makeBlur {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: blur(8px);
 }
 
 #bulletin {
     color: white;
-    background-color: rgba(0, 0, 0, 0.298);
+    background-color: rgba(0, 0, 0, 0.456);
     position: absolute;
     width: 100%;
     height: 100%;
@@ -722,10 +757,13 @@ main>.content>.first {
 
 #bulletin h2 {
     position: absolute;
-    top: 4%;
+    width: 90%;
+    top: 5%;
     left: 4%;
-    font-size: 5rem;
-    text-wrap: nowrap;
+    font-size: 4rem;
+    text-wrap: pretty;
+
+    line-height: 2.3rem;
 }
 
 .fromTop {
@@ -740,7 +778,7 @@ main>.content>.first {
 
     to {
 
-        top: 4%;
+        top: 5%;
     }
 }
 
@@ -748,7 +786,7 @@ main>.content>.first {
     position: absolute;
     width: 80%;
     height: fit-content;
-    bottom: 10%;
+    bottom: 8%;
     left: 4%;
     font-size: 1.7rem;
     line-height: 2.1rem;
@@ -1650,7 +1688,7 @@ aside .content>img {
     }
 
     #bulletin p {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     .third .about {
@@ -1688,7 +1726,7 @@ aside .content>img {
     }
 }
 
-@media only screen and (min-width:1001px) {
+@media only screen and (min-width:100px) {
     main>.content>.first {
         max-height: 32rem;
         background: transparent;
@@ -2054,7 +2092,12 @@ aside .content>img {
         padding: 1rem;
     }
 }
-
+@media only screen and (max-width:476px) {
+    main>.content>.first {
+        max-height: 25rem;
+        background: transparent;
+    }
+}
 @media only screen and (max-width:488px) {
     .workshop>.info>img {
         width: 100%;

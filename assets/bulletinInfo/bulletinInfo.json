@@ -1,27 +1,17 @@
 [
   {
-    "heading": "Library",
-    "content": "A sanctuary of knowledge, where silence speaks volumes and every book holds a world within.",
-    "image": "library.jpg"
+    "heading": "AICTE SIH 2023",
+    "content": "AOT (Team : Buzz 6) bagged the first rank in the AICTE SIH 2023!!",
+    "image": "SIH_2023.jpg"
   },
   {
-    "heading": "Labratory",
-    "content": "A haven of experimentation, where theories meet reality, and mistakes are the stepping stones to breakthroughs.",
-    "image": "lab.jpg"
+    "heading": "Princeton Award",
+    "content": "Student Start-Up Wins Princeton Award in Asia's biggest Entrepreneurship Summit st IITB!!",
+    "image": "StartUps.jpg"
   },
   {
-    "heading": "Classroom",
-    "content": "A dynamic space where curiosity is the compass, learning is an adventure, and every question leads to discovery.",
-    "image": "classroom.jpg"
-  },
-  {
-    "heading": "Basketball Court",
-    "content": "A spacious basketball court, vibrant with college colors, beckons players to spike and dive under the sunny skies of campus.",
-    "image": "basketball.jpg"
-  },
-  {
-    "heading": "Playground",
-    "content": "A vibrant hub of activity, where students unwind, collaborate, and embrace the joy of shared moments amidst swings, green spaces, and endless conversations.",
-    "image": "playground.jpg"
+    "heading": "Certificate of Appreciation",
+    "content": "AOT has received Certificate of Appreciation from TCS in recognition of an exemplary partnership and collaboration.",
+    "image": "trophy.jpg"
   }
 ]

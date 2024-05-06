@@ -29,29 +29,20 @@ function loadImg(actualImage, blurImage) {
 
 const displayDynamicInfo = function (res) {
     res.forEach((val, idx) => {
-        if (idx == 0) {
-            bulletinh2.textContent = val.heading;
-            bulletinp.textContent = val.content;
-            loadImg(bulletinimg[1], bulletinimg[0]);
-        }
-        else {
-            let newNode = document.createElement('div');
-            newNode.classList.add('swiper-slide');
-            newNode.innerHTML =
-                `
+        let newNode = document.createElement('div');
+        newNode.classList.add('swiper-slide');
+        newNode.innerHTML =
+            `
                 <div id="bulletin">
                     <h2>${val.heading}</h2>
                     <p>${val.content}</p>
                 </div>
-                <img src="./assets/bulletinImage/2${val.image}" class="slide blury" alt ="">
-                <img src="./assets/bulletinImage/${val.image}" class="slide hidden" alt = "" loading="lazy">
+                <img src="./assets/bulletinImage/${val.image}" alt = "" loading="lazy" id='makeBlur'>
+                <img src="./assets/bulletinImage/${val.image}" alt = "" loading="lazy" class='mainImg1'>
+                <img src="./assets/bulletinImage/${val.image}" alt = "" loading="lazy" class='mainImg2'>
+                <img src="./assets/bulletinImage/${val.image}" alt = "" loading="lazy" class='mainImg3'>
             `;
-            swiperImage.appendChild(newNode);
-            bulletinimg = document.querySelectorAll('.swiper-slide img');
-            for (let i = 0; i < bulletinimg.length - 1; i += 2) {
-                loadImg(bulletinimg[i + 1], bulletinimg[i]);
-            }
-        }
+        swiperImage.appendChild(newNode);
     })
     requestAnimationFrame(() => {
         var swiper1 = new Swiper(".mySwiper1", {
