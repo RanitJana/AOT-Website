@@ -84,6 +84,11 @@ main {
     display: none;
 }
 
+nav img,
+.fifth img {
+    mix-blend-mode: multiply;
+}
+
 @media only screen and (max-width:1100px) {
     .banner {
         margin-top: 2rem;
@@ -649,11 +654,6 @@ main>.content {
     grid-template-columns: auto;
 }
 
-main>.contentx {
-    /* max-height: 20rem; */
-    /* min-height: 30rem; */
-}
-
 main>.content .first {
     max-height: 27rem;
 }
@@ -738,6 +738,7 @@ main>.content>.first {
     height: 70%;
     transform: translateX(-50%) rotate(5deg);
     filter: brightness(80%);
+    z-index: 1;
 }
 
 .increase {
@@ -922,7 +923,7 @@ main>.content>.first {
     aspect-ratio: 4/3;
     background-color: orange;
     border-radius: 8px;
-    background: url('../assets/images/college.webp') no-repeat center;
+    background: url('../assets/images/college.jpg') no-repeat center;
     transition: all 0.3s ease;
     background-size: cover;
     box-shadow: -5px 5px 10px 5px rgba(0, 0, 0, 0.384);
@@ -1100,7 +1101,7 @@ main>.content>.first {
 .third .about .video iframe {
     width: 100%;
     aspect-ratio: 560/315;
-    background: url('../assets/images/sddefault.webp') center;
+    background: url('../assets/images/sddefault.jpg') center;
     background-color: black;
     background-size: cover;
 }
@@ -1225,7 +1226,7 @@ main>.content>.first {
     padding: 1rem;
     text-align: center;
     text-transform: uppercase;
-    background: url('../assets/images/college_outside.webp') center no-repeat;
+    background: url('../assets/images/college_outside.jpg') center no-repeat;
     background-size: cover;
     min-height: 25rem;
     position: relative;

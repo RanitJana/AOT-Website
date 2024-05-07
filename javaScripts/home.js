@@ -12,38 +12,35 @@ function loadImg(actualImage, blurImage) {
     img.src = actualImage.src;
 }
 
+function getInnerHtmlForBulletin(val) {
+    console.log(val.image);
+    let str =
+        `
+    <div class="swiper-slide">
+        <div id="bulletin">
+        <h2>${val.heading}</h2>
+        <p>${val.content}</p>
+    </div>
+        <img src="./assets/bulletinImage/${val.image}.jpg" alt = "${val.image}" decoding="async" id='makeBlur'>
+        <img src="./assets/bulletinImage/${val.image}.jpg" alt = "${val.image}" decoding="async" class="mainImg1">
+        <img src="./assets/bulletinImage/${val.image}.jpg" alt = "${val.image}" decoding="async" class="mainImg2">
+        <img src="./assets/bulletinImage/${val.image}.jpg" alt = "${val.image}" decoding="async" class="mainImg3">
+        
+        `;
+    return str;
+}
+
 const displayDynamicInfo = function (res) {
     res.forEach((val, idx) => {
         if (idx == 0) {
-            swiperWrapper1.innerHTML =
-                `
-                <div class="swiper-slide">
-                    <div id="bulletin">
-                    <h2>${val.heading}</h2>
-                    <p>${val.content}</p>
-                </div>
-                <img src="./assets/bulletinImage/${val.image}" alt = "${val.image}" decoding="async" id='makeBlur'>
-                <img src="./assets/bulletinImage/${val.image}" alt = "${val.image}" decoding="async" class='mainImg1'>
-                <img src="./assets/bulletinImage/${val.image}" alt = "${val.image}" decoding="async" class='mainImg2'>
-                <img src="./assets/bulletinImage/${val.image}" alt = "${val.image}" decoding="async" class='mainImg3'>
-                </div>
-            `;
+            swiperWrapper1.innerHTML = `${getInnerHtmlForBulletin(val)}`;
+            console.log(swiperWrapper1.innerHTML);
         }
         else {
 
             let newNode = document.createElement('div');
             newNode.classList.add('swiper-slide');
-            newNode.innerHTML =
-                `
-            <div id="bulletin">
-                <h2>${val.heading}</h2>
-                <p>${val.content}</p>
-            </div>
-            <img src="./assets/bulletinImage/${val.image}" alt = "${val.image}" decoding="async" id='makeBlur'>
-            <img src="./assets/bulletinImage/${val.image}" alt = "${val.image}" decoding="async" class='mainImg1'>
-            <img src="./assets/bulletinImage/${val.image}" alt = "${val.image}" decoding="async" class='mainImg2' id='mid'>
-            <img src="./assets/bulletinImage/${val.image}" alt = "${val.image}" decoding="async" class='mainImg3'>
-            `;
+            newNode.innerHTML = `${getInnerHtmlForBulletin(val)}`;
             swiperWrapper1.appendChild(newNode);
         }
     })
