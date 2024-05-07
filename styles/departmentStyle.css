@@ -31,12 +31,13 @@ p,
 }
 
 
-.event {
+.events {
     padding: 1rem;
     grid-area: event;
     box-shadow: var(--normal-shadow--);
     border-radius: 8px;
     background-color: var(--aot-light-color--);
+    width: 100%;
 }
 
 .club-container{
@@ -213,7 +214,7 @@ p,
 
 .map h2,
 .news h2,
-.event h2,
+.events h2,
 .notice h2,
 .first h2 {
     color: var(--aot-color--);
@@ -860,6 +861,9 @@ nav ul {
             'event notice'
             'map notice';
     }
+    .events{
+        width: 100dvw;
+    }
 }
 
 @media only screen and (max-width:985px) {
@@ -887,7 +891,7 @@ nav ul {
     }
 }
 
-@media only screen and (max-width:736px) {
+@media only screen and (max-width:760px) {
     .firstContainer {
         grid-template-columns: auto;
     }
@@ -952,6 +956,12 @@ nav ul {
     .firstContainer .departmentBox {
         margin: 0.25rem 0;
         /* width: 100%; */
+    }
+    .events{
+        padding: 0 ;
+    }
+    .pastEvent{
+        padding: 0px 1rem;
     }
 }
 
@@ -1021,4 +1031,126 @@ nav ul {
     .item-container{
         height: 380px;
     }    
+}
+/* CSS for Upcoming Event Section */
+.upcomingEvent {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+
+.upcoming-event-container {
+    max-width: 34rem;
+    margin: auto;
+}
+@media only screen  and (max-width:1200px){
+    .upcoming-event-container {
+        max-width: 24rem;
+        margin: auto;
+    }
+}
+@media only screen  and (max-width:500px){
+    .upcoming-event-container {
+        max-width: auto;
+        margin: auto;
+    }
+}
+
+.event h2 {
+    color: #333;
+    text-align: center;
+    /* margin-bottom: 20px; */
+}
+
+.mySwiper2 {
+    position: relative;
+}
+
+.mySwiper2-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.eventBox {
+    transition: transform 0.3s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    height: 300px; /* Adjust the height as needed */
+    position: relative;
+    border-radius: 0.7rem;
+}
+
+.eventBox:hover {
+    transform: scale(1.05);
+}
+
+.writingContent {
+    padding: 15px;
+    background-color:rgba(0, 0, 0, 0.557);
+    backdrop-filter: blur(1px);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-radius:0 0  0.7rem 0.7rem ;
+}
+
+.writingContent h3 {
+    margin: 0;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+
+.writingContent p {
+    margin: 10px 0 0;
+    text-align: center;
+    color: white;
+}
+
+.secondBtn {
+    height: 50px;
+    width: 40px;
+    position: absolute;
+    top: 85%;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.336);
+    color: white;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.swiper-pagination {
+    bottom: 10px;
+}
+
+.swiper-pagination-bullet {
+    background-color: #007bff;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #333;
+}
+
+.upcomingEvent-swiper-wrapper{
+    margin: 0.5rem;
 }
