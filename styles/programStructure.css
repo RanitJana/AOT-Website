@@ -29,7 +29,7 @@ body {
     margin: 0;
     padding: 0.55em;
     width: 70px;
-    background-color: #e5e4e2;
+    background-color: #fff;
     left: 0;
     display: flex;
     align-items: center;
@@ -464,5 +464,14 @@ td:nth-child(2) {
 
     .mark {
         display: none;
+    }
+
+    .logo {
+        width: 60px;
+    }
+
+    .logo>a>img {
+        width: 28px;
+        height: 28px;
     }
 }
