@@ -1,6 +1,7 @@
 @import url('../styles/basicStyles.css');
 @import url('../styles/headerStyle.css');
 @import url('../styles/footerStyle.css');
+@import url('../styles/ug-cseStyle.css');
 
 body {
 
@@ -121,8 +122,8 @@ li:hover {
 }
 
 section {
-    padding: 10px;
-    /* border: 1px solid red; */
+    /* padding: 10px; */
+    padding: 1rem;
     margin-bottom: 1rem;
     width: 100%;
 }
@@ -133,14 +134,14 @@ h2 {
 
 .container {
     /* max-width: 960px; */
-    max-width: 90%;
-    margin: auto;
+    /* max-width: 90%; */
+    /* margin: auto; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(2px);
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--aot-light-color--);
 
     box-shadow: -10px 10px 10px #aaa2a2,
         3px 0 5px #aaa2a2;
@@ -158,7 +159,7 @@ h2 {
 .research-item {
     margin-bottom: 30px;
     /* border: 1px solid red; */
-    padding: 20px;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -172,6 +173,7 @@ h2 {
     width: 100%;
     object-fit: cover;
     object-position: center;
+    border-radius: 5px;
 }
 
 .research-item a {
@@ -263,6 +265,7 @@ h2 {
         height: 240px;
     }
 
+
     .logo {
         width: 60px;
     }
@@ -270,5 +273,18 @@ h2 {
     .logo>a>img {
         width: 28px;
         height: 28px;
+
+}
+
+@media only screen and (max-width : 749px) {
+    section{
+        padding:  0;
+    }
+    .container{
+        border-radius: 0;
+    }
+    .container h2{
+        border-radius: 0;
+
     }
 }
