@@ -32,14 +32,17 @@ p,
 
 
 .events {
+    /* padding: 1rem; */
+    grid-area: event;    
+    width: 100%;
+}
+.pastEvent{
     padding: 1rem;
-    grid-area: event;
     box-shadow: var(--normal-shadow--);
     border-radius: 8px;
     background-color: var(--aot-light-color--);
-    width: 100%;
+    margin-bottom: 1rem;
 }
-
 .club-container{
     padding: 1rem;
     background-color: var(--aot-light-color--);
@@ -1036,9 +1039,10 @@ nav ul {
 .upcomingEvent {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
-    padding: 20px;
+    padding: 1rem;
+    box-shadow: var(--normal-shadow--);
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    background-color: var(--aot-light-color--);
 }
 
 
