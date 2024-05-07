@@ -72,7 +72,6 @@ const displayDynamicInfo = function (res) {
                     var animatedElement1 = activeSlide.querySelector('#bulletin h2');
                     var animatedElement2 = activeSlide.querySelector('#bulletin p');
                     var midImg = activeSlide.querySelectorAll('img');
-                    console.log(activeSlide);
                     // Add active class to trigger animation
                     animatedElement1.classList.add('fromTop');
                     animatedElement2.classList.add('fromRight');
