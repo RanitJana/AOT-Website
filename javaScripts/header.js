@@ -35,14 +35,7 @@ function drag() {
     try {
 
         deltaX = event.touches[0].screenX - initialX;
-        if (Math.floor(deltaX) > Math.floor(nav.offsetWidth / 2)) {
-            isNavOpen = false;
-            nav.style.transform = "translateX(100%)";
-            body.style.overflowY = "auto";
-            deny.style.right = '-100%';
-            deny.style.backgroundColor = "transparent";
-            close();
-        } else if (Math.floor(deltaX) >= 0) {
+        if (Math.floor(deltaX) >= 0) {
             nav.style.transform = `translateX(${Math.floor(deltaX / Math.floor(nav.offsetWidth) * 100)}%)`;
         }
     }
@@ -50,6 +43,14 @@ function drag() {
 }
 
 function restoreNav() {
+    if (Math.floor(deltaX) > Math.floor(nav.offsetWidth / 2)) {
+        isNavOpen = false;
+        nav.style.transform = "translateX(100%)";
+        body.style.overflowY = "auto";
+        deny.style.right = '-100%';
+        deny.style.backgroundColor = "transparent";
+        close();
+    }
     if (isNavOpen) {
         nav.style.transform = "translateX(0%)";
     }
