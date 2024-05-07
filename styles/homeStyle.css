@@ -2233,8 +2233,11 @@ aside .content>img {
 }
 
 @media only screen and (max-width:476px) {
-    main>.content>.first {
-        max-height: 25rem;
+
+    .mainImg1,
+    .mainImg2,
+    .mainImg3 {
+        max-height: 70%;
         background: transparent;
     }
 }
