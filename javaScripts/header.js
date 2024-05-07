@@ -1,18 +1,67 @@
 let hambergMenu = document.querySelector('.hamberg-menu');
 let body = document.querySelector('body');
 let nav = document.querySelector('nav');
-let goback = document.querySelector('.goback');
 let deny = document.querySelector('.deny');
 let isNavOpen = false;
-goback.addEventListener('click', () => {
-    requestAnimationFrame(() => {
-        isNavOpen = false;
-        nav.style.transform = "translateX(100%)";
-        body.style.overflowY = "auto";
-        deny.style.right = '-100%';
-        deny.style.backgroundColor = "transparent";
-    })
-})
+
+//drag to close
+
+let initialX;
+let deltaX;
+
+function initialPos() {
+    // event.preventDefault();
+    try {
+        initialX = event.touches[0].screenX;
+        deltaX = 0;
+    }
+    catch (err) { }
+}
+
+function close() {
+    try {
+        initialX = null;
+    }
+    catch (err) { }
+}
+
+function drag() {
+    if (window.getComputedStyle(hambergMenu).display != 'flex') {
+        close();
+        return;
+    }
+    if (!initialX) return;
+    event.preventDefault();
+    try {
+
+        deltaX = event.touches[0].screenX - initialX;
+        if (Math.floor(deltaX) > Math.floor(nav.offsetWidth / 2)) {
+            isNavOpen = false;
+            nav.style.transform = "translateX(100%)";
+            body.style.overflowY = "auto";
+            deny.style.right = '-100%';
+            deny.style.backgroundColor = "transparent";
+            close();
+        } else if (Math.floor(deltaX) >= 0) {
+            nav.style.transform = `translateX(${Math.floor(deltaX / Math.floor(nav.offsetWidth) * 100)}%)`;
+        }
+    }
+    catch (err) { }
+}
+
+function restoreNav() {
+    if (isNavOpen) {
+        nav.style.transform = "translateX(0%)";
+    }
+}
+nav.addEventListener('touchstart', initialPos);
+nav.addEventListener('touchmove', drag)
+nav.addEventListener('touchend', restoreNav)
+nav.addEventListener('mousedown', initialPos);
+nav.addEventListener('mousemove', drag)
+nav.addEventListener('mouseup', restoreNav);
+
+
 hambergMenu.addEventListener('click', e => {
     requestAnimationFrame(() => {
         isNavOpen = true;
