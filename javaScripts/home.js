@@ -22,10 +22,10 @@ const displayDynamicInfo = function (res) {
                     <h2>${val.heading}</h2>
                     <p>${val.content}</p>
                 </div>
-                <img src="./assets/bulletinImage/${val.image}" alt = "" id='makeBlur'>
-                <img src="./assets/bulletinImage/${val.image}" alt = "" class='mainImg1'>
-                <img src="./assets/bulletinImage/${val.image}" alt = "" class='mainImg2'>
-                <img src="./assets/bulletinImage/${val.image}" alt = "" class='mainImg3'>
+                <img src="./assets/bulletinImage/${val.image}" alt = "" decoding="async" id='makeBlur'>
+                <img src="./assets/bulletinImage/${val.image}" alt = "" decoding="async" class='mainImg1'>
+                <img src="./assets/bulletinImage/${val.image}" alt = "" decoding="async" class='mainImg2'>
+                <img src="./assets/bulletinImage/${val.image}" alt = "" decoding="async" class='mainImg3'>
                 </div>
             `;
         }
@@ -39,10 +39,10 @@ const displayDynamicInfo = function (res) {
                 <h2>${val.heading}</h2>
                 <p>${val.content}</p>
             </div>
-            <img src="./assets/bulletinImage/${val.image}" alt = "" id='makeBlur'>
-            <img src="./assets/bulletinImage/${val.image}" alt = "" class='mainImg1'>
-            <img src="./assets/bulletinImage/${val.image}" alt = "" class='mainImg2' id='mid'>
-            <img src="./assets/bulletinImage/${val.image}" alt = "" class='mainImg3'>
+            <img src="./assets/bulletinImage/${val.image}" alt = "" decoding="async" id='makeBlur'>
+            <img src="./assets/bulletinImage/${val.image}" alt = "" decoding="async" class='mainImg1'>
+            <img src="./assets/bulletinImage/${val.image}" alt = "" decoding="async" class='mainImg2' id='mid'>
+            <img src="./assets/bulletinImage/${val.image}" alt = "" decoding="async" class='mainImg3'>
             `;
             swiperWrapper1.appendChild(newNode);
         }
