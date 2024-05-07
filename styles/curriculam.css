@@ -39,9 +39,6 @@ p img{
 }
  
 
-
-
-
 @media only screen and (max-width:600px) {
     .basic-intro, curriculam-content{
         padding: 1em ;

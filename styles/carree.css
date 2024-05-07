@@ -2,14 +2,11 @@
 
 h1{
     text-align: center;
-    /* color: var(--aot-dark-color--); */
     font-size: 1.7rem;
 }
 
 .section__title {
     position: relative;
-    /* position: sticky; */
-    /* top: 0; */
     padding: 0.3em;
     min-width: 100%;
     margin-top: 1rem;
