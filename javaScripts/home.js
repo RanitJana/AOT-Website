@@ -22,10 +22,10 @@ const displayDynamicInfo = function (res) {
                     <h2>${val.heading}</h2>
                     <p>${val.content}</p>
                 </div>
-                <img src="./assets/bulletinImage/${val.image}" alt = "" decoding="async" id='makeBlur'>
-                <img src="./assets/bulletinImage/${val.image}" alt = "" decoding="async" class='mainImg1'>
-                <img src="./assets/bulletinImage/${val.image}" alt = "" decoding="async" class='mainImg2'>
-                <img src="./assets/bulletinImage/${val.image}" alt = "" decoding="async" class='mainImg3'>
+                <img src="./assets/bulletinImage/${val.image}" alt = "${val.image}" decoding="async" id='makeBlur'>
+                <img src="./assets/bulletinImage/${val.image}" alt = "${val.image}" decoding="async" class='mainImg1'>
+                <img src="./assets/bulletinImage/${val.image}" alt = "${val.image}" decoding="async" class='mainImg2'>
+                <img src="./assets/bulletinImage/${val.image}" alt = "${val.image}" decoding="async" class='mainImg3'>
                 </div>
             `;
         }
@@ -39,10 +39,10 @@ const displayDynamicInfo = function (res) {
                 <h2>${val.heading}</h2>
                 <p>${val.content}</p>
             </div>
-            <img src="./assets/bulletinImage/${val.image}" alt = "" decoding="async" id='makeBlur'>
-            <img src="./assets/bulletinImage/${val.image}" alt = "" decoding="async" class='mainImg1'>
-            <img src="./assets/bulletinImage/${val.image}" alt = "" decoding="async" class='mainImg2' id='mid'>
-            <img src="./assets/bulletinImage/${val.image}" alt = "" decoding="async" class='mainImg3'>
+            <img src="./assets/bulletinImage/${val.image}" alt = "${val.image}" decoding="async" id='makeBlur'>
+            <img src="./assets/bulletinImage/${val.image}" alt = "${val.image}" decoding="async" class='mainImg1'>
+            <img src="./assets/bulletinImage/${val.image}" alt = "${val.image}" decoding="async" class='mainImg2' id='mid'>
+            <img src="./assets/bulletinImage/${val.image}" alt = "${val.image}" decoding="async" class='mainImg3'>
             `;
             swiperWrapper1.appendChild(newNode);
         }
@@ -298,7 +298,7 @@ let swiper3 = new Swiper(".mySwiper3", {
 
 let isAsideOpen = false;
 let aside = document.querySelector('aside');
-let asideImg = document.querySelector('aside>.content >img');
+let asideContent = document.querySelector('aside>.content');
 
 body.style.overflow = "hidden";
 if (!sessionStorage.getItem('loadingPage')) {
@@ -328,7 +328,7 @@ if (!sessionStorage.getItem('loadingPage')) {
             deny.style.right = '0%';
             deny.style.backgroundColor = "rgba(0, 0, 0, 0.649)";
             aside.style.display = 'block';
-            asideImg.setAttribute('src', '../assets/aside news' + data.path);
+            asideContent.innerHTML = `<img decoding="async" src="../assets/aside news${data.path}" alt="">`;
         })
         .catch(err => console.log(err));
 }
