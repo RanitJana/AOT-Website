@@ -1,7 +1,7 @@
 @import url('../styles/basicStyles.css');
 @import url('../styles/headerStyle.css');
 @import url('../styles/footerStyle.css');
-@import url('../styles/ug-cseStyle.css');
+/* @import url('../styles/ug-cseStyle.css'); */
 
 body {
 
@@ -273,17 +273,20 @@ h2 {
     .logo>a>img {
         width: 28px;
         height: 28px;
+    }
 
 }
 
 @media only screen and (max-width : 749px) {
-    section{
-        padding:  0;
+    section {
+        padding: 0;
     }
-    .container{
+
+    .container {
         border-radius: 0;
     }
-    .container h2{
+
+    .container h2 {
         border-radius: 0;
 
     }
