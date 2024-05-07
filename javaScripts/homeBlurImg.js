@@ -16,3 +16,8 @@ let placementBlur = document.querySelector('#placementBlur');
 let placementMain = document.querySelector('#placementMain');
 
 placementBlur.onload = loadImg(placementMain, placementBlur);
+
+let swiper3Images = document.querySelectorAll('.mySwiper3 img');
+for (let i = 1; i < swiper3Images.length; i += 2) {
+    loadImg(swiper3Images[i], swiper3Images[i - 1]);
+}

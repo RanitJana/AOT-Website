@@ -259,9 +259,9 @@ searches.forEach(search => {
 
 let swiper3 = new Swiper(".mySwiper3", {
     slidesPerView: 1,
-    spaceBetween: 0,
+    spaceBetween: 3,
     loop: true,
-    speed: 900,
+    speed: 500,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,

@@ -1119,21 +1119,48 @@ main>.content>.first {
 
 .gallary h2 {
     color: var(--aot-color--);
-    margin-bottom: 1rem;
+}
+
+.gallary p {
+    color: var(--aot-color--);
+    width: fit-content;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallary P::after {
+    content: "";
+    width: 100%;
+    height: 0.1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--aot-color--);
+    transition: all 0.5s ease;
+    transform: translateX(-100%)
+}
+
+.gallary:hover p::after {
+    transform: translateX(0%);
 }
 
 .mySwiper3 {
     width: 100%;
-    height: fit-content;
+    height: 100%;
+    object-fit: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    margin-bottom: 1rem;
 }
 
 .mySwiper3 .swiper-wrapper {
     width: 100%;
-    height: fit-content;
+    height: 100%;
+    object-fit: contain;
 }
 
 .mySwiper3 .firstBtn {
@@ -1142,19 +1169,26 @@ main>.content>.first {
     background-color: rgba(0, 0, 0, 0.787);
 }
 
-/* .mySwiper3 .swiper-pagination-bullet {
+.swiper-pagination-bullet {
     width: 12px;
     height: 12px;
     text-align: center;
     line-height: 20px;
-    border-radius: 0;
-    transform: translateY(50%);
-    background: var(--aot-color--);
-} */
+    border-radius: 50%;
+    background: white
+}
+
+.mySwiper3 .swiper-pagination {
+    background-color: rgba(0, 0, 0, 0.688);
+    bottom: 0%;
+}
+
+.mySwiper3 .swiper-pagination-bullet {
+    background: white;
+}
 
 .mySwiper3 .swiper-slide {
-    padding: 0.2rem;
-    padding-bottom: 1rem;
+    object-fit: cover;
     width: 100%;
     height: 100%;
     display: flex;
@@ -1165,7 +1199,7 @@ main>.content>.first {
 .mySwiper3 .swiper-wrapper img {
     width: 100%;
     aspect-ratio: 3/2;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .exp {
@@ -1873,6 +1907,14 @@ aside .content>img {
     }
 }
 
+@media only screen and (max-width:693px) {
+    .mySwiper3 {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
 @media only screen and (max-width:682px) {
 
     .eighth .companies .company img {
@@ -1938,11 +1980,7 @@ aside .content>img {
         margin: 1rem 0;
         border-radius: 0;
     }
-    .mySwiper3{
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-    }
+
     .fourth {
         margin: 1rem 0;
         border-radius: 0;
@@ -2216,9 +2254,15 @@ aside .content>img {
     .gallary {
         padding: 1rem 0;
     }
-    .gallary h2{
+
+    .gallary h2 {
         padding-left: 1rem;
     }
+
+    .gallary p {
+        margin-left: 1rem;
+    }
+
     .mySwiper3 .swiper-slide {
         padding: 0;
     }
