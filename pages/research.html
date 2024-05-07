@@ -33,12 +33,11 @@
                 </div>
             </div>
 
-        </header>
-        <div class="beforeIntro">
-            <div class="back-btn">
-                <img src="../assets/video/icons8-home.gif" alt="home" />
-            </div>
-            <h1 class="headings">Research</h1>
+
+    </header>
+    <nav class="page-title">
+        <div class="logo">
+            <a href="../index.html"><img width="32" height="32" src="../assets/video/icons8-home.gif" alt="home" /></a>
         </div>
 
         <nav class="link hideOnMobile">
@@ -59,19 +58,19 @@
                                 d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                         </svg></a></li>
 
-                <li onclick="hidesidebar()"><a href="#current-research">current research</a></li>
-                <li onclick="hidesidebar()"><a href="#past-research">past research</a></li>
-                <li onclick="hidesidebar()"><a href="#research-facilities">research facility</a></li>
-            </ul>
-        </div>
-        <div class="scrollTo">
-            <a href="#destination">
-                <img src="../assets/images/icons8-up-arrow-50.png" alt="Error">
-            </a>
-        </div>
-        <section id="current-research">
-            <div class="container">
-                <h2>Current Research</h2>
+            <li onclick="hidesidebar()" class="option"><a href="#current-research">current research</a></li>
+            <li onclick="hidesidebar()" class="option"><a href="#past-research">past research</a></li>
+            <li onclick="hidesidebar()" class="option"><a href="#research-facilities">research facility</a></li>
+        </ul>
+    </div>
+    <div class="scrollTo">
+        <a href="#destination">
+            <img src="../assets/images/icons8-up-arrow-50.png" alt="Error">
+        </a>
+    </div>
+    <section id="current-research">
+        <div class="container">
+            <h2>Current Research</h2>
 
                 <div class="research-item">
                     <h3> Development of Sustainable Energy Solutions</h3>
@@ -322,6 +321,29 @@
 </script>
 <script src="../javaScripts/userOnOff.js"></script>
 <script src="../javaScripts/scrollToTop.js"></script>
+
+        function showsidebar() {
+            let bar = document.querySelector('.hamburger');
+            bar.style.right = '0';
+        }
+        const icon = document.querySelector('.scrollTo');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > window.innerHeight) {
+                icon.style.display = "block";
+                setTimeout(() => {
+                    icon.style.transform = "scale(1)";
+                }, 300);
+            }
+            else {
+                icon.style.transform = "scale(0)";
+                setTimeout(() => {
+                    icon.style.display = "none";
+                }, 200);
+            }
+        })
+    </script>
+    <script src="../javaScripts/userOnOff.js"></script>
+</body>
 
 
 </html>

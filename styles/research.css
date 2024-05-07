@@ -30,7 +30,7 @@ body {
     margin: 0;
     padding: 0.55em;
     width: 70px;
-    background-color: #e5e4e2;
+    background-color: #fff;
     left: 0;
     display: flex;
     align-items: center;
@@ -75,8 +75,8 @@ nav a:hover {
     right: -220px;
     width: 220px;
     min-height: 100vh;
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.2);
+    /* backdrop-filter: blur(10px); */
+    background-color: #fff;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
@@ -101,6 +101,11 @@ nav a:hover {
     justify-content: center;
     /* text-align: center; */
     margin-top: 5px;
+
+}
+
+.option {
+    background-color: #ddd;
 }
 
 .hamburger>ul>li>a {
@@ -192,6 +197,7 @@ h2 {
 
 /* scroll to */
 .scrollTo {
+    display: none;
     height: 40px;
     width: 40px;
     padding: 5px;
@@ -258,6 +264,16 @@ h2 {
     .research-item img {
         height: 240px;
     }
+
+
+    .logo {
+        width: 60px;
+    }
+
+    .logo>a>img {
+        width: 28px;
+        height: 28px;
+
 }
 
 @media only screen and (max-width : 749px) {
@@ -269,5 +285,6 @@ h2 {
     }
     .container h2{
         border-radius: 0;
+
     }
 }
