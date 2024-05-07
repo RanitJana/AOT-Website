@@ -35,8 +35,7 @@
     </header>
     <nav class="page-title">
         <div class="logo">
-            <a href="../index.html"><img width="32" height="32" src="https://img.icons8.com/windows/32/home.png"
-                    alt="home" /></a>
+            <a href="../index.html"><img width="32" height="32" src="../assets/video/icons8-home.gif" alt="home" /></a>
         </div>
         <h1>Research</h1>
     </nav>
@@ -59,9 +58,9 @@
                             d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                     </svg></a></li>
 
-            <li onclick="hidesidebar()"><a href="#current-research">current research</a></li>
-            <li onclick="hidesidebar()"><a href="#past-research">past research</a></li>
-            <li onclick="hidesidebar()"><a href="#research-facilities">research facility</a></li>
+            <li onclick="hidesidebar()" class="option"><a href="#current-research">current research</a></li>
+            <li onclick="hidesidebar()" class="option"><a href="#past-research">past research</a></li>
+            <li onclick="hidesidebar()" class="option"><a href="#research-facilities">research facility</a></li>
         </ul>
     </div>
     <div class="scrollTo">
@@ -300,6 +299,21 @@
             let bar = document.querySelector('.hamburger');
             bar.style.right = '0';
         }
+        const icon = document.querySelector('.scrollTo');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > window.innerHeight) {
+                icon.style.display = "block";
+                setTimeout(() => {
+                    icon.style.transform = "scale(1)";
+                }, 300);
+            }
+            else {
+                icon.style.transform = "scale(0)";
+                setTimeout(() => {
+                    icon.style.display = "none";
+                }, 200);
+            }
+        })
     </script>
     <script src="../javaScripts/userOnOff.js"></script>
 </body>
