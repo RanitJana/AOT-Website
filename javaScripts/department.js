@@ -72,3 +72,55 @@ document.querySelector('.my_Swiper').addEventListener('mouseover', () => {
 document.querySelector('.my_Swiper').addEventListener('mouseout', () => {
     swiper.autoplay.start();
 });
+
+
+
+//event slider
+let secondSwiper = document.querySelector('.mySwiper2 .swiper-wrapper');
+async function getFutureEventData() {
+    let res = await fetch('../assets/upcomingEvent/futureEvent.json');
+    let data = await res.json();
+    data.forEach((val) => {
+        let h3 = val.eventName, span = val.shortInfo, srcImg = "../assets/upcomingEvent/eventImage/" + val.link;
+        let newNode = document.createElement('div');
+        newNode.classList.add('swiper-slide');
+        newNode.innerHTML =
+            `
+            <div class="eventBox">
+                <div class="writingContent">
+                    <h3>${h3}</h3>
+                    <p>${span}</p>
+                </div>
+            </div>
+         `;
+        newNode.childNodes[1].style.background = `url('${srcImg}') center no-repeat`;
+        newNode.childNodes[1].style.backgroundSize = "cover";
+        secondSwiper.appendChild(newNode);
+    })
+}
+getFutureEventData().then(() => {
+    requestAnimationFrame(() => {
+        var swiper2 = new Swiper(".mySwiper2", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loop: true,
+            speed: 500,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            // autoplay: {
+            //     delay: 2000,
+            // },
+        });
+    })
+    document.querySelectorAll('.eventBox').forEach(val => {
+        val.addEventListener('click', () => {
+            window.open("./pages/event.html", '_blank');
+        });
+    })
+})

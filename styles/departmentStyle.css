@@ -31,7 +31,7 @@ p,
 }
 
 
-.event {
+.events {
     padding: 1rem;
     grid-area: event;
     box-shadow: var(--normal-shadow--);
@@ -213,7 +213,7 @@ p,
 
 .map h2,
 .news h2,
-.event h2,
+.events h2,
 .notice h2,
 .first h2 {
     color: var(--aot-color--);
@@ -887,7 +887,7 @@ nav ul {
     }
 }
 
-@media only screen and (max-width:736px) {
+@media only screen and (max-width:760px) {
     .firstContainer {
         grid-template-columns: auto;
     }
@@ -952,6 +952,12 @@ nav ul {
     .firstContainer .departmentBox {
         margin: 0.25rem 0;
         /* width: 100%; */
+    }
+    .events{
+        padding: 0 ;
+    }
+    .pastEvent{
+        padding: 0px 1rem;
     }
 }
 
@@ -1021,4 +1027,116 @@ nav ul {
     .item-container{
         height: 380px;
     }    
+}
+/* CSS for Upcoming Event Section */
+.upcomingEvent {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+
+.upcoming-event-container {
+    max-width: 34rem;
+    margin: auto;
+}
+@media only screen  and (max-width:1200px){
+    .upcoming-event-container {
+        max-width: 24rem;
+        margin: auto;
+    }
+}
+@media only screen  and (max-width:500px){
+    .upcoming-event-container {
+        max-width: auto;
+        margin: auto;
+    }
+}
+
+.event h2 {
+    color: #333;
+    text-align: center;
+    /* margin-bottom: 20px; */
+}
+
+.mySwiper2 {
+    position: relative;
+}
+
+.mySwiper2-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.eventBox {
+    transition: transform 0.3s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    height: 300px; /* Adjust the height as needed */
+}
+
+.eventBox:hover {
+    transform: scale(1.05);
+}
+
+.writingContent {
+    padding: 15px;
+    /* background-color: rgba(255, 255, 255, 0.9); */
+    /* backdrop-filter: blur(5px); */
+}
+
+.writingContent h3 {
+    margin: 0;
+    color: #007bff;
+    font-size: 24px;
+}
+
+.writingContent p {
+    margin: 10px 0 0;
+    color: #555;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: #007bff;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: 10;
+}
+
+.swiper-pagination {
+    bottom: 10px;
+}
+
+.swiper-pagination-bullet {
+    background-color: #007bff;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #333;
+}
+
+.upcomingEvent-swiper-wrapper{
+    margin: 0.5rem;
 }
