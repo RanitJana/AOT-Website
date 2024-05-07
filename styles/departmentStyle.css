@@ -1125,14 +1125,11 @@ nav ul {
 }
 
 .secondBtn {
-    height: 40px;
+    height: 50px;
     width: 40px;
     position: absolute;
     top: 85%;
     z-index: 3;
-}
-
-.swiper-button-next, .swiper-button-prev {
     background-color: rgba(0, 0, 0, 0.336);
     color: white;
     padding: 1rem;

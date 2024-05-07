@@ -113,9 +113,9 @@ getFutureEventData().then(() => {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
-            // autoplay: {
-            //     delay: 2000,
-            // },
+            autoplay: {
+                delay: 2000,
+            }, 
         });
     })
     document.querySelectorAll('.eventBox').forEach(val => {
