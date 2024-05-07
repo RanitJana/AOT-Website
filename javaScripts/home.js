@@ -1,21 +1,6 @@
-let first = document.querySelector('.first');
 let loadingPage = document.querySelector('.loadingPage');
 let welcomeAotImg = document.querySelector('.loadingPage img');
-let pArrow = document.querySelector('.swiper-button-prev');
-let nArrow = document.querySelector('.swiper-button-next');
-let images = document.querySelectorAll('.slide');
-let eventInfo;
-let refInterval = null;
-let bulletinh2 = document.querySelector('#bulletin>h2');
-let bulletinp = document.querySelector('#bulletin>p');
-let swiperSlide = document.querySelector('.mySwiper1 .swiper-slide');
-let bulletinimg = document.querySelectorAll('.mySwiper1 .swiper-slide img');
-let swiperImage = document.querySelector('.mySwiper1 .swiper-wrapper');
-
-function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (rect.top >= 0 && rect.left >= 0);
-}
+let swiperWrapper1 = document.querySelector('.mySwiper1 .swiper-wrapper');
 
 function loadImg(actualImage, blurImage) {
     var img = new Image();
@@ -29,11 +14,11 @@ function loadImg(actualImage, blurImage) {
 
 const displayDynamicInfo = function (res) {
     res.forEach((val, idx) => {
-        let newNode = document.createElement('div');
-        newNode.classList.add('swiper-slide');
-        newNode.innerHTML =
-            `
-                <div id="bulletin">
+        if (idx == 0) {
+            swiperWrapper1.innerHTML =
+                `
+                <div class="swiper-slide">
+                    <div id="bulletin">
                     <h2>${val.heading}</h2>
                     <p>${val.content}</p>
                 </div>
@@ -41,8 +26,26 @@ const displayDynamicInfo = function (res) {
                 <img src="./assets/bulletinImage/${val.image}" alt = "" class='mainImg1'>
                 <img src="./assets/bulletinImage/${val.image}" alt = "" class='mainImg2'>
                 <img src="./assets/bulletinImage/${val.image}" alt = "" class='mainImg3'>
+                </div>
             `;
-        swiperImage.appendChild(newNode);
+        }
+        else {
+
+            let newNode = document.createElement('div');
+            newNode.classList.add('swiper-slide');
+            newNode.innerHTML =
+                `
+            <div id="bulletin">
+                <h2>${val.heading}</h2>
+                <p>${val.content}</p>
+            </div>
+            <img src="./assets/bulletinImage/${val.image}" alt = "" id='makeBlur'>
+            <img src="./assets/bulletinImage/${val.image}" alt = "" class='mainImg1'>
+            <img src="./assets/bulletinImage/${val.image}" alt = "" class='mainImg2'>
+            <img src="./assets/bulletinImage/${val.image}" alt = "" class='mainImg3'>
+            `;
+            swiperWrapper1.appendChild(newNode);
+        }
     })
     requestAnimationFrame(() => {
         var swiper1 = new Swiper(".mySwiper1", {
