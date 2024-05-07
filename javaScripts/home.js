@@ -41,7 +41,7 @@ const displayDynamicInfo = function (res) {
             </div>
             <img src="./assets/bulletinImage/${val.image}" alt = "" id='makeBlur'>
             <img src="./assets/bulletinImage/${val.image}" alt = "" class='mainImg1'>
-            <img src="./assets/bulletinImage/${val.image}" alt = "" class='mainImg2'>
+            <img src="./assets/bulletinImage/${val.image}" alt = "" class='mainImg2' id='mid'>
             <img src="./assets/bulletinImage/${val.image}" alt = "" class='mainImg3'>
             `;
             swiperWrapper1.appendChild(newNode);
@@ -71,17 +71,29 @@ const displayDynamicInfo = function (res) {
                     // Find the element with class animate-on-slide inside the active slide
                     var animatedElement1 = activeSlide.querySelector('#bulletin h2');
                     var animatedElement2 = activeSlide.querySelector('#bulletin p');
+                    var midImg = activeSlide.querySelectorAll('img');
+                    console.log(activeSlide);
                     // Add active class to trigger animation
                     animatedElement1.classList.add('fromTop');
                     animatedElement2.classList.add('fromRight');
+                    midImg.forEach((val, idx) => {
+                        if (idx != 0)
+                            val.classList.add('increase');
+                    })
                 },
                 slideChangeTransitionEnd: function () {
                     // Reset animation after transition ends
                     var previousSlide = this.slides[this.previousIndex];
                     var animatedElement1 = previousSlide.querySelector('#bulletin h2');
                     var animatedElement2 = previousSlide.querySelector('#bulletin p');
+                    var midImg = previousSlide.querySelectorAll('img');
+
                     animatedElement1.classList.remove('fromTop');
                     animatedElement2.classList.remove('fromRight');
+                    midImg.forEach((val, idx) => {
+                        if (idx != 0)
+                            val.classList.remove('increase');
+                    })
                 },
             },
         });

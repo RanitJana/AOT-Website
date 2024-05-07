@@ -706,7 +706,6 @@ main>.content>.first {
     width: 100%;
 
     position: relative;
-    perspective: 200px;
 
     display: flex;
     justify-content: center;
@@ -724,16 +723,35 @@ main>.content>.first {
 
 .mainImg1 {
     height: 70%;
-    transform: rotateY(-10deg);
+    transform: rotate(-10deg);
+    filter: blur(2px) brightness(80%);
 }
 
 .mainImg2 {
     margin: 0;
+    z-index: 2;
+    filter: brightness(120%) drop-shadow(35%);
+    scale: 1;
 }
 
 .mainImg3 {
     height: 70%;
-    transform: rotateY(10deg);
+    transform: translateX(-50%) rotate(5deg);
+    filter: brightness(80%);
+}
+
+.increase {
+    animation: zooming 8s ease;
+}
+
+@keyframes zooming {
+    from {
+        scale: 0.9;
+    }
+
+    to {
+        scale: 1;
+    }
 }
 
 #makeBlur {
