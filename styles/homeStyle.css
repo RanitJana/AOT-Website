@@ -520,7 +520,6 @@ body {
         align-items: center;
         background-color: #cbe5ff;
         margin: 1rem 0;
-        /* font-size: medium; */
         width: 100%;
         padding: 0.6rem 1rem;
         border-radius: 20px;
@@ -589,7 +588,6 @@ body {
         width: 100%;
         text-decoration: none;
         color: black;
-        /* background-color: aqua; */
     }
 
     .parent-nav .section img {
@@ -651,8 +649,9 @@ main>.content {
     grid-template-columns: auto;
 }
 
-main>.content .second>.content {
-    max-height: 20rem;
+main>.contentx {
+    /* max-height: 20rem; */
+    /* min-height: 30rem; */
 }
 
 main>.content .first {
@@ -671,8 +670,6 @@ main>.content>.first {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    text-align: justify;
 }
 
 .banner .right .search img {
@@ -695,27 +692,63 @@ main>.content>.first {
     margin: 0;
     background-color: var(--aot-light-color--);
     object-fit: cover;
+    overflow: hidden;
 }
 
 .mySwiper1 .swiper-wrapper {
     width: 100%;
     height: 100%;
+
 }
 
 .mySwiper1 .swiper-slide {
+    background-size: cover;
     width: 100%;
-    height: 100%;
+
+    position: relative;
+    perspective: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-.mySwiper1 .swiper-slide img {
+.mainImg1,
+.mainImg2,
+.mainImg3 {
+    height: 80%;
+    object-fit: contain;
+    transform: rotateY(0deg);
+}
+
+.mainImg1 {
+    height: 70%;
+    transform: rotateY(-10deg);
+}
+
+.mainImg2 {
+    margin: 0;
+}
+
+.mainImg3 {
+    height: 70%;
+    transform: rotateY(10deg);
+}
+
+#makeBlur {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: blur(8px);
 }
 
 #bulletin {
     color: white;
-    background-color: rgba(0, 0, 0, 0.298);
+    background-color: rgba(0, 0, 0, 0.456);
     position: absolute;
     width: 100%;
     height: 100%;
@@ -724,22 +757,55 @@ main>.content>.first {
 
 #bulletin h2 {
     position: absolute;
-    top: 4%;
+    width: 90%;
+    top: 5%;
     left: 4%;
-    font-size: 5rem;
-    text-wrap: nowrap;
+    font-size: 4rem;
+    text-wrap: pretty;
+
+    line-height: 2.3rem;
+}
+
+.fromTop {
+    animation: fromTop 1.2s ease;
+}
+
+@keyframes fromTop {
+    from {
+        top: 0%;
+        transform: translateY(-100%);
+    }
+
+    to {
+
+        top: 5%;
+    }
 }
 
 #bulletin p {
     position: absolute;
     width: 80%;
     height: fit-content;
-    bottom: 10%;
+    bottom: 8%;
     left: 4%;
     font-size: 1.7rem;
     line-height: 2.1rem;
     text-align: left;
     text-wrap: pretty;
+}
+
+.fromRight {
+    animation: fromright 1.2s ease;
+}
+
+@keyframes fromright {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: 4%;
+    }
 }
 
 .secondParSec {
@@ -780,7 +846,6 @@ main>.content>.first {
 .swiper-button-next,
 .swiper-button-prev {
     background-color: rgba(0, 0, 0, 0.336);
-    /* border-radius: 50%; */
     color: white;
     padding: 1rem;
     border: none;
@@ -1043,6 +1108,66 @@ main>.content>.first {
     z-index: 4;
 }
 
+.gallary {
+    border-radius: 8px;
+    box-shadow: var(--normal-shadow--);
+    margin: 1rem;
+    height: fit-content;
+    padding: 1rem 2rem;
+    background-color: var(--aot-light-color--);
+}
+
+.gallary h2 {
+    color: var(--aot-color--);
+    margin-bottom: 1rem;
+}
+
+.mySwiper3 {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.mySwiper3 .swiper-wrapper {
+    width: 100%;
+    height: fit-content;
+}
+
+.mySwiper3 .firstBtn {
+    border-radius: 0;
+    width: 20px;
+    background-color: rgba(0, 0, 0, 0.787);
+}
+
+/* .mySwiper3 .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 0;
+    transform: translateY(50%);
+    background: var(--aot-color--);
+} */
+
+.mySwiper3 .swiper-slide {
+    padding: 0.2rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mySwiper3 .swiper-wrapper img {
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+}
+
 .exp {
     background-color: var(--aot-light-color--);
     padding: 1rem;
@@ -1099,8 +1224,6 @@ main>.content>.first {
     border-radius: 8px;
     box-shadow: var(--normal-shadow--);
     min-height: 15rem;
-    /* display: flex;
-    flex-direction: column; */
 }
 
 .allignments h2 {
@@ -1230,7 +1353,6 @@ main>.content>.first {
     margin-bottom: 1rem;
 }
 
-/* .sixth>.content>div ul, */
 .fifth>div ul {
     background-color: white;
     text-decoration: none;
@@ -1478,11 +1600,9 @@ nav a {
 
 .workshop {
     padding-bottom: 2rem;
-    /* flex-direction: column; */
 }
 
 .workshop>.info {
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -1628,7 +1748,7 @@ aside .content>img {
     }
 
     #bulletin p {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     .third .about {
@@ -1666,7 +1786,7 @@ aside .content>img {
     }
 }
 
-@media only screen and (min-width:1001px) {
+@media only screen and (min-width:100px) {
     main>.content>.first {
         max-height: 32rem;
         background: transparent;
@@ -1681,7 +1801,7 @@ aside .content>img {
     }
 }
 
-@media only screen and (max-width:913px) {
+@media only screen and (max-width:1067px) {
     .antiRagging>.info img {
         width: 20rem;
     }
@@ -1690,6 +1810,20 @@ aside .content>img {
         gap: 0;
         margin-bottom: 2rem;
         flex-direction: column;
+    }
+
+    .workshop>.info {
+        flex-direction: column-reverse;
+    }
+}
+
+@media only screen and (max-width:1067px) {
+    .mySwiper3 {
+        height: 25rem;
+    }
+
+    .mySwiper3 .swiper-slide img {
+        object-fit: contain;
     }
 }
 
@@ -1800,6 +1934,15 @@ aside .content>img {
         width: 17rem;
     }
 
+    .gallary {
+        margin: 1rem 0;
+        border-radius: 0;
+    }
+    .mySwiper3{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
     .fourth {
         margin: 1rem 0;
         border-radius: 0;
@@ -1890,15 +2033,11 @@ aside .content>img {
 
 @media only screen and (max-width:556px) {
     .secondParSec .event {
-        /* height: fit-content; */
         min-height: fit-content;
         height: 28rem;
     }
 
     .eventBox {
-        /* max-height: 15rem;
-        height: 80%;
-        width: 80%; */
         height: 75%;
         width: 95%;
         margin-top: 3rem;
@@ -1960,6 +2099,10 @@ aside .content>img {
 
     .allignments,
     .workshop {
+        padding: 1rem;
+    }
+
+    .gallary {
         padding: 1rem;
     }
 
@@ -2033,6 +2176,13 @@ aside .content>img {
     }
 }
 
+@media only screen and (max-width:476px) {
+    main>.content>.first {
+        max-height: 25rem;
+        background: transparent;
+    }
+}
+
 @media only screen and (max-width:488px) {
     .workshop>.info>img {
         width: 100%;
@@ -2063,6 +2213,15 @@ aside .content>img {
 }
 
 @media only screen and (max-width:435px) {
+    .gallary {
+        padding: 1rem 0;
+    }
+    .gallary h2{
+        padding-left: 1rem;
+    }
+    .mySwiper3 .swiper-slide {
+        padding: 0;
+    }
 
     .secondParSec .event {
         padding: 1rem 0;
@@ -2089,26 +2248,8 @@ aside .content>img {
 
 @media only screen and (max-width:394px) {
 
-    /* .third>.vision p,
-    .third .about .story p,
-    .fourth>.info>.rankInfo>.writing,
-    .fifth>div>ul>li a,
-    .writingContent span,
-    .ninth>span,
-    .antiRagging p,
-    .workshop p,
-    .seventh>.content>.left {
-        font-size: 0.9rem;
-    } */
-
-    .second .content .sub-content .updateBox a {
-        /* font-size: 0.9rem; */
-        /* line-height: 0.9rem; */
-    }
-
     .eighth .companies .company span {
         margin-top: 0.5rem;
-        /* font-size: 0.9rem; */
     }
 
     .antiRagging>.info>img {

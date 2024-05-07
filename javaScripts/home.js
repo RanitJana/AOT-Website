@@ -12,6 +12,10 @@ let swiperSlide = document.querySelector('.mySwiper1 .swiper-slide');
 let bulletinimg = document.querySelectorAll('.mySwiper1 .swiper-slide img');
 let swiperImage = document.querySelector('.mySwiper1 .swiper-wrapper');
 
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (rect.top >= 0 && rect.left >= 0);
+}
 
 function loadImg(actualImage, blurImage) {
     var img = new Image();
@@ -25,29 +29,20 @@ function loadImg(actualImage, blurImage) {
 
 const displayDynamicInfo = function (res) {
     res.forEach((val, idx) => {
-        if (idx == 0) {
-            bulletinh2.textContent = val.heading;
-            bulletinp.textContent = val.content;
-            loadImg(bulletinimg[1], bulletinimg[0]);
-        }
-        else {
-            let newNode = document.createElement('div');
-            newNode.classList.add('swiper-slide');
-            newNode.innerHTML =
-                `
+        let newNode = document.createElement('div');
+        newNode.classList.add('swiper-slide');
+        newNode.innerHTML =
+            `
                 <div id="bulletin">
                     <h2>${val.heading}</h2>
                     <p>${val.content}</p>
                 </div>
-                <img src="./assets/bulletinImage/2${val.image}" class="slide blury" alt ="">
-                <img src="./assets/bulletinImage/${val.image}" class="slide hidden" alt = "" loading="lazy">
+                <img src="./assets/bulletinImage/${val.image}" alt = "" id='makeBlur'>
+                <img src="./assets/bulletinImage/${val.image}" alt = "" class='mainImg1'>
+                <img src="./assets/bulletinImage/${val.image}" alt = "" class='mainImg2'>
+                <img src="./assets/bulletinImage/${val.image}" alt = "" class='mainImg3'>
             `;
-            swiperImage.appendChild(newNode);
-            bulletinimg = document.querySelectorAll('.swiper-slide img');
-            for (let i = 0; i < bulletinimg.length - 1; i += 2) {
-                loadImg(bulletinimg[i + 1], bulletinimg[i]);
-            }
-        }
+        swiperImage.appendChild(newNode);
     })
     requestAnimationFrame(() => {
         var swiper1 = new Swiper(".mySwiper1", {
@@ -65,6 +60,26 @@ const displayDynamicInfo = function (res) {
             },
             autoplay: {
                 delay: 6000,
+            },
+            on: {
+                slideChange: function () {
+                    // Get active slide
+                    var activeSlide = this.slides[this.activeIndex];
+                    // Find the element with class animate-on-slide inside the active slide
+                    var animatedElement1 = activeSlide.querySelector('#bulletin h2');
+                    var animatedElement2 = activeSlide.querySelector('#bulletin p');
+                    // Add active class to trigger animation
+                    animatedElement1.classList.add('fromTop');
+                    animatedElement2.classList.add('fromRight');
+                },
+                slideChangeTransitionEnd: function () {
+                    // Reset animation after transition ends
+                    var previousSlide = this.slides[this.previousIndex];
+                    var animatedElement1 = previousSlide.querySelector('#bulletin h2');
+                    var animatedElement2 = previousSlide.querySelector('#bulletin p');
+                    animatedElement1.classList.remove('fromTop');
+                    animatedElement2.classList.remove('fromRight');
+                },
             },
         });
     });
@@ -242,7 +257,30 @@ searches.forEach(search => {
     })
 })
 
-//aside news and loading page
+let swiper3 = new Swiper(".mySwiper3", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    speed: 900,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+        delay: 3000,
+    },
+    breakpoints: {
+        // when window width is <= 1000px
+        1065: {
+            slidesPerView: 2, // Change to 1 slide per view
+        }
+    },
+});
+
 let isAsideOpen = false;
 let aside = document.querySelector('aside');
 let asideImg = document.querySelector('aside>.content >img');

@@ -16,6 +16,11 @@
 </head>
 
 <body>
+    <div class="onOrOff">
+        <img src="./assets/images/icons8-no-connection.gif" alt="./assets/images/icons8-no-connection.gif">
+        <img src="./assets/images/icons8-online.gif" alt="./assets/images/icons8-online.gif">
+        <p>We are online</p>
+    </div>
     <div class="deny"></div>
     <div class="loadingPage">
         <img src="./assets/images/aot-logo.svg" loading="lazy" alt="Error">
@@ -184,14 +189,14 @@
             <section class="first">
                 <div class="swiper mySwiper1">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div id="bulletin">
-                                <h2>Loading...</h2>
-                                <p>Loading...</p>
-                            </div>
-                            <img src="./assets/bulletinImage/2library.jpg" class="slide blury" alt="">
-                            <img src="./assets/bulletinImage/library.jpg" class="slide hidden" alt="" loading="lazy">
+                        <!-- <div id="bulletin">
+                            <h2>${val.heading}</h2>
+                            <p>${val.content}</p>
                         </div>
+                        <img src="./assets/bulletinImage/${val.image}" alt = "" id='makeBlur'>
+                        <img src="./assets/bulletinImage/${val.image}" alt = "" class='mainImg1'>
+                        <img src="./assets/bulletinImage/${val.image}" alt = "" class='mainImg2'>
+                        <img src="./assets/bulletinImage/${val.image}" alt = "" class='mainImg3'> -->
                     </div>
                     <div class="swiper-button-next firstBtn"></div>
                     <div class="swiper-button-prev firstBtn"></div>
@@ -590,6 +595,31 @@
                 </div>
             </div>
         </section>
+        <section class="gallary">
+            <h2>Gallary</h2>
+            <div class="swiper mySwiper3">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./assets/gallary/classroom.jpg" alt="" loading="lazy">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/gallary/basketball.jpg" alt="" loading="lazy">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/gallary/lab.jpg" alt="" loading="lazy">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/gallary/library.jpg" alt="" loading="lazy">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/gallary/playground.jpg" alt="" loading="lazy">
+                    </div>
+                </div>
+                <!-- <img src="./assets/images/activity_techfesta.JPG" alt=""> -->
+                <div class="swiper-button-next firstBtn"></div>
+                <div class="swiper-button-prev firstBtn"></div>
+            </div>
+        </section>
         <div class="glance">
             <h2>At a Glance</h2>
         </div>
@@ -626,8 +656,6 @@
                 Workshops and Seminers
             </h2>
             <div class="info">
-                <img src="./assets/images/seminer-blur.webp" id="workshopBlur" class="blury" alt="Error">
-                <img src="./assets/images/seminer.webp" id="workshopMain" alt="Error" class="hidden">
                 <p>
                     <strong> Academy of Technology regularly organizes seminars and workshops to enrich the learning
                         experience
@@ -639,16 +667,13 @@
                     their knowledge
                     and experiences with students, inspiring them to think innovatively and stay updated with the latest
                     developments in their respective fields.
-                    Workshops are hands-on sessions where students get practical exposure to concepts learned in the
-                    classroom.
-                    Through seminars and workshops, Academy of Technology aims to foster a culture of lifelong learning,
-                    equipping students with the skills and knowledge they need to succeed in their academic and
-                    professional endeavors.
                     <br>
                     <a href="#" target="_blank">
                         <button>Know More</button>
                     </a>
                 </p>
+                <img src="./assets/images/seminer-blur.webp" id="workshopBlur" class="blury" alt="Error">
+                <img src="./assets/images/seminer.webp" id="workshopMain" alt="Error" class="hidden">
             </div>
         </section>
         <section class="ninth">
@@ -728,6 +753,7 @@
     <script src="./javaScripts/header.js"></script>
     <script src="./javaScripts/home.js"></script>
     <script src="./javaScripts/homeBlurImg.js"></script>
+    <script src="./javaScripts/userOnOff.js"></script>
 </body>
 
 </html>
