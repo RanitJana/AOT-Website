@@ -474,19 +474,14 @@ body {
         border-radius: 8px;
         width: fit-content;
         padding: 0.5rem 1rem;
-        padding-right: 2rem;
         margin: 1rem 0 1rem 0;
     }
 
     .goback:hover {
         cursor: pointer;
     }
-
-    .goback img {
-        margin-right: 0.5rem;
-        filter: invert(100%);
-        transform: rotate(180deg);
-        width: 1rem;
+    .goback:active{
+        background-color: #5a6294;
     }
 
     .parentGoback .search {
