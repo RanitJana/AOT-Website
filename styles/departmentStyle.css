@@ -37,6 +37,7 @@ p,
     box-shadow: var(--normal-shadow--);
     border-radius: 8px;
     background-color: var(--aot-light-color--);
+    width: 100%;
 }
 
 .club-container{
@@ -860,6 +861,9 @@ nav ul {
             'event notice'
             'map notice';
     }
+    .events{
+        width: 100dvw;
+    }
 }
 
 @media only screen and (max-width:985px) {
@@ -1089,6 +1093,8 @@ nav ul {
     background-size: cover;
     background-position: center;
     height: 300px; /* Adjust the height as needed */
+    position: relative;
+    border-radius: 0.7rem;
 }
 
 .eventBox:hover {
@@ -1097,31 +1103,42 @@ nav ul {
 
 .writingContent {
     padding: 15px;
-    /* background-color: rgba(255, 255, 255, 0.9); */
-    /* backdrop-filter: blur(5px); */
+    background-color:rgba(0, 0, 0, 0.557);
+    backdrop-filter: blur(1px);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-radius:0 0  0.7rem 0.7rem ;
 }
 
 .writingContent h3 {
     margin: 0;
-    color: #007bff;
+    color: white;
     font-size: 24px;
+    text-align: center;
 }
 
 .writingContent p {
     margin: 10px 0 0;
-    color: #555;
+    text-align: center;
+    color: white;
+}
+
+.secondBtn {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 85%;
+    z-index: 3;
 }
 
 .swiper-button-next, .swiper-button-prev {
-    color: #007bff;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    top: 50%;
-    transform: translateY(-50%);
-    position: absolute;
-    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.336);
+    color: white;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
 }
 
 .swiper-pagination {
