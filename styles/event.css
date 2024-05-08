@@ -7,7 +7,9 @@ body {
 }
 
 .page-title {
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 20;
     padding: 0.15em;
     min-width: 100%;
     /* margin-top: 1rem; */
@@ -24,7 +26,7 @@ body {
     margin: 0;
     padding: 0.55em;
     width: 70px;
-    background-color: #e5e4e2;
+    background-color: #fff;
     left: 0;
     display: flex;
     align-items: center;
