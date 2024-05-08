@@ -464,15 +464,15 @@ body {
     .parentGoback {
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: flex-start;
         margin-bottom: -1rem;
     }
 
     .goback {
         width: fit-content;
         display: flex;
-        justify-content: flex-end;
-        padding: 0.2rem 1rem;
+        padding: 0.5rem 1rem;
+        padding-bottom: 0;
         margin-bottom: 0.5rem;
         border-radius: 8px;
     }

@@ -6,13 +6,14 @@ let isNavOpen = false;
 
 //drag to close
 
-let initialX;
-let deltaX;
+let initialX, initialY;
+let deltaX, deltaY;
 let initialDirection = 1;   //1 means y direction
 let changeDirectionPossible = true;
 function initialPos() {
     try {
         initialX = event.touches[0].screenX;
+        initialY = event.touches[0].screenY;
         deltaX = 0;
     }
     catch (err) { }
@@ -34,12 +35,14 @@ function drag() {
     try {
 
         deltaX = event.touches[0].screenX - initialX;
+        deltaY = event.touches[0].screenY - initialY;
         if (changeDirectionPossible) {
-            if (Math.floor(deltaX) > 0) initialDirection = 0;   // x direction;
+            if (Math.abs(deltaX) > Math.abs(deltaY))    //means trying ro scroll horizontally
+                if (Math.floor(deltaX) > 0) initialDirection = 0;   // x direction;
             changeDirectionPossible = false;
         }
         if (!initialDirection) {    //shoudl be in x direction
-            event.preventDefault();
+            event.defaultPrevented = true;
             if (Math.floor(deltaX) > 0)
                 nav.style.transform = `translateX(${Math.floor(deltaX / Math.floor(nav.offsetWidth) * 100)}%)`;
         }
