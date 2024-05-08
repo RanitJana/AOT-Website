@@ -1,11 +1,5 @@
 @import url('./basicStyles.css');
 
-/* h1{
-    text-align: center;
-    color: var(--aot-dark-color--);
-    font-size: 1.7rem;
-} */
-
 .section__title {
     position: relative;
     padding: 0.3em;

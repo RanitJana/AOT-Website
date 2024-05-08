@@ -1,25 +1,87 @@
 let hambergMenu = document.querySelector('.hamberg-menu');
 let body = document.querySelector('body');
 let nav = document.querySelector('nav');
-let goback = document.querySelector('.goback');
 let deny = document.querySelector('.deny');
 let isNavOpen = false;
-goback.addEventListener('click', () => {
-    requestAnimationFrame(() => {
+
+//drag to close
+
+let initialX, initialY;
+let deltaX, deltaY;
+let initialDirection = 1;   //1 means y direction
+let changeDirectionPossible = true;
+function initialPos() {
+    try {
+        initialX = event.touches[0].screenX;
+        initialY = event.touches[0].screenY;
+        deltaX = 0;
+    }
+    catch (err) { }
+}
+function close() {
+    try {
+        initialX = null;
+    }
+    catch (err) { }
+}
+
+function drag() {
+    if (window.getComputedStyle(hambergMenu).display != 'flex') {
+        close();
+        return;
+    }
+    if (!initialX) return;
+    try {
+
+        deltaX = event.touches[0].screenX - initialX;
+        deltaY = event.touches[0].screenY - initialY;
+        if (changeDirectionPossible) {
+            if (Math.abs(deltaX) > Math.abs(deltaY))    //means trying ro scroll horizontally
+                if (Math.floor(deltaX) > 0) initialDirection = 0;   // x direction;
+            changeDirectionPossible = false;
+        }
+        if (!initialDirection) {    //shoudl be in x direction
+            event.defaultPrevented = true;
+            if (Math.floor(deltaX) > 0)
+                nav.style.transform = `translateX(${Math.floor(deltaX / Math.floor(nav.offsetWidth) * 100)}%)`;
+        }
+        else {
+            event.defaultPrevented = false;
+        }
+    }
+    catch (err) { }
+}
+
+function restoreNav() {
+    initialDirection = 1;
+    changeDirectionPossible = true;
+    if (Math.floor(deltaX) > Math.floor(nav.offsetWidth / 2)) {
         isNavOpen = false;
         nav.style.transform = "translateX(100%)";
         body.style.overflowY = "auto";
-        deny.style.right = '-100%';
-        deny.style.backgroundColor = "transparent";
-    })
-})
+        deny.classList.add('leave');
+        deny.classList.remove('arrival');
+        close();
+    }
+    if (isNavOpen) {
+        nav.style.transform = "translateX(0%)";
+    }
+}
+nav.addEventListener('touchstart', initialPos);
+nav.addEventListener('touchmove', drag)
+nav.addEventListener('touchend', restoreNav)
+nav.addEventListener('mousedown', initialPos);
+nav.addEventListener('mousemove', drag)
+nav.addEventListener('mouseup', restoreNav);
+
+
 hambergMenu.addEventListener('click', e => {
     requestAnimationFrame(() => {
         isNavOpen = true;
         nav.style.transform = "translateX(0%)";
         body.style.overflowY = "hidden";
-        deny.style.right = '0%';
-        deny.style.backgroundColor = "rgba(0, 0, 0, 0.649)";
+        deny.classList.add('arrival');
+        deny.classList.remove('leave');
     })
 })
 window.addEventListener('click', e => {
@@ -29,8 +91,8 @@ window.addEventListener('click', e => {
             isNavOpen = false;
             nav.style.transform = "translateX(100%)";
             body.style.overflowY = "auto";
-            deny.style.right = '-100%';
-            deny.style.backgroundColor = "transparent";
+            deny.classList.add('leave');
+            deny.classList.remove('arrival');
 
         }
     })
@@ -44,16 +106,16 @@ window.addEventListener('resize', () => {
         requestAnimationFrame(() => {
             nav.style.transform = "translateX(0%)";
             body.style.overflowY = "hidden";
-            deny.style.right = '0%';
-            deny.style.backgroundColor = "rgba(0, 0, 0, 0.649)";
+            deny.classList.remove('leave');
+            deny.classList.add('arrival');
         })
     }
     if (value == "none") {
         requestAnimationFrame(() => {
             nav.style.transform = "translateX(0%)";
             body.style.overflowY = "auto";
-            deny.style.right = '-100%';
-            deny.style.backgroundColor = "transparent";
+            deny.classList.add('leave');
+            deny.classList.remove('arrival');
         })
     }
 

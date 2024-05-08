@@ -12,38 +12,35 @@ function loadImg(actualImage, blurImage) {
     img.src = actualImage.src;
 }
 
+function getInnerHtmlForBulletin(val) {
+    console.log(val.image);
+    let str =
+        `
+    <div class="swiper-slide">
+        <div id="bulletin">
+        <h2>${val.heading}</h2>
+        <p>${val.content}</p>
+    </div>
+        <img src="./assets/bulletinImage/${val.image}.jpg" alt = "${val.image}" decoding="async" id='makeBlur'>
+        <img src="./assets/bulletinImage/${val.image}.jpg" alt = "${val.image}" decoding="async" class="mainImg1">
+        <img src="./assets/bulletinImage/${val.image}.jpg" alt = "${val.image}" decoding="async" class="mainImg2">
+        <img src="./assets/bulletinImage/${val.image}.jpg" alt = "${val.image}" decoding="async" class="mainImg3">
+        
+        `;
+    return str;
+}
+
 const displayDynamicInfo = function (res) {
     res.forEach((val, idx) => {
         if (idx == 0) {
-            swiperWrapper1.innerHTML =
-                `
-                <div class="swiper-slide">
-                    <div id="bulletin">
-                    <h2>${val.heading}</h2>
-                    <p>${val.content}</p>
-                </div>
-                <img src="./assets/bulletinImage/${val.image}" alt = "${val.image}" decoding="async" id='makeBlur'>
-                <img src="./assets/bulletinImage/${val.image}" alt = "${val.image}" decoding="async" class='mainImg1'>
-                <img src="./assets/bulletinImage/${val.image}" alt = "${val.image}" decoding="async" class='mainImg2'>
-                <img src="./assets/bulletinImage/${val.image}" alt = "${val.image}" decoding="async" class='mainImg3'>
-                </div>
-            `;
+            swiperWrapper1.innerHTML = `${getInnerHtmlForBulletin(val)}`;
+            console.log(swiperWrapper1.innerHTML);
         }
         else {
 
             let newNode = document.createElement('div');
             newNode.classList.add('swiper-slide');
-            newNode.innerHTML =
-                `
-            <div id="bulletin">
-                <h2>${val.heading}</h2>
-                <p>${val.content}</p>
-            </div>
-            <img src="./assets/bulletinImage/${val.image}" alt = "${val.image}" decoding="async" id='makeBlur'>
-            <img src="./assets/bulletinImage/${val.image}" alt = "${val.image}" decoding="async" class='mainImg1'>
-            <img src="./assets/bulletinImage/${val.image}" alt = "${val.image}" decoding="async" class='mainImg2' id='mid'>
-            <img src="./assets/bulletinImage/${val.image}" alt = "${val.image}" decoding="async" class='mainImg3'>
-            `;
+            newNode.innerHTML = `${getInnerHtmlForBulletin(val)}`;
             swiperWrapper1.appendChild(newNode);
         }
     })
@@ -324,8 +321,8 @@ if (!sessionStorage.getItem('loadingPage')) {
         .then(data => {
             isAsideOpen = true;
             body.style.overflowY = "hidden";
-            deny.style.right = '0%';
-            deny.style.backgroundColor = "rgba(0, 0, 0, 0.649)";
+            deny.classList.add('arrival');
+            deny.classList.remove('leave');
             aside.style.display = 'block';
             asideContent.innerHTML = `<img decoding="async" src="../assets/aside news${data.path}" alt="">`;
         })
@@ -340,16 +337,15 @@ document.querySelector('aside >img').addEventListener('click', e => {
     isAsideOpen = false;
     aside.style.animation = "vanish 0.3s linear forwards";
     body.style.overflowY = "auto";
-    deny.style.right = '-100%';
-    deny.style.backgroundColor = "transparent";
+    deny.classList.add('leave');
+    deny.classList.remove('arrival');
 })
 window.addEventListener('resize', e => {
     if (isAsideOpen) {
         console.log('history');
         requestAnimationFrame(() => {
             body.style.overflowY = "hidden";
-            deny.style.right = '0%';
-            deny.style.backgroundColor = "rgba(0, 0, 0, 0.649)";
+            deny.classList.add('arrival');
         })
     }
 })
