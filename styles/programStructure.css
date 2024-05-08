@@ -12,7 +12,9 @@ body {
 
 
 .page-title {
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 20;
     padding: 0.15em;
     min-width: 100%;
     /* margin-top: 1rem; */
@@ -23,6 +25,7 @@ body {
     justify-content: center;
     overflow: hidden;
 }
+
 
 .logo {
     position: absolute;
@@ -61,7 +64,7 @@ nav a:hover {
 
 .hamburger-logo {
     position: absolute;
-    top: 30px;
+    top: -140px;
     right: 20px;
     z-index: 100;
     display: none;
@@ -366,6 +369,23 @@ td:nth-child(2) {
 
 
 
+
+
+
+
+
+
+
+
+/* media query */
+@media only screen and (max-width : 1246px) {
+    .scrollTo {
+        height: 35px;
+        width: 35px;
+        right: 1.5%;
+    }
+}
+
 /* 950 */
 @media only screen and (max-width:1072px) {
     .faqs ul {
@@ -381,21 +401,6 @@ td:nth-child(2) {
 
     .faq {
         width: 90%;
-    }
-}
-
-
-
-
-
-
-
-/* media query */
-@media only screen and (max-width : 1246px) {
-    .scrollTo {
-        height: 35px;
-        width: 35px;
-        right: 1.5%;
     }
 }
 
@@ -430,6 +435,12 @@ td:nth-child(2) {
 
     .faq {
         width: 90%;
+    }
+}
+
+@media only screen and (max-width:513px) {
+    .hamburger-logo {
+        top: -100px;
     }
 }
 
@@ -473,5 +484,20 @@ td:nth-child(2) {
     .logo>a>img {
         width: 28px;
         height: 28px;
+    }
+}
+
+@media only screen and (max-width:356px) {
+    .hamburger-logo {
+        top: -90px;
+    }
+
+    .logo {
+        width: 45px;
+    }
+
+    .logo>a>img {
+        width: 24px;
+        height: 24px;
     }
 }
