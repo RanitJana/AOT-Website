@@ -613,9 +613,18 @@ body {
         margin-top: -1rem;
     }
 }
-nav{
+
+nav {
+    -webkit-user-select: none;
+    /* For older versions of WebKit browsers */
+    -moz-user-select: none;
+    /* For Firefox */
+    -ms-user-select: none;
+    /* For Internet Explorer/Edge */
     user-select: none;
+    /* Standard syntax */
 }
+
 .deny {
     position: fixed;
     top: 0;
@@ -661,9 +670,11 @@ nav ul {
     transition: all 0.3s ease;
     scale: 1;
 }
-nav li{
+
+nav li {
     cursor: pointer;
 }
+
 @starting-style {
 
     nav ul {

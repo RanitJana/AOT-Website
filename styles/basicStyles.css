@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: "Mukta", sans-serif;
     text-size-adjust: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -46,7 +47,8 @@ body {
     box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.4);
     transform: translate(-50%, -120%);
 }
-.onOrOff img{
+
+.onOrOff img {
     mix-blend-mode: multiply;
     width: 1.3rem;
     margin-right: 0.5rem;
