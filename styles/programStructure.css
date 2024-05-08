@@ -20,6 +20,7 @@ body {
     /* margin-top: 1rem; */
     background: var(--aot-color--);
     color: #fff;
+
     display: flex;
     align-items: center;
     justify-content: center;
