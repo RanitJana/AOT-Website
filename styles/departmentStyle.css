@@ -31,11 +31,11 @@ p,
 }
 
 .arrival {
-    animation: arrive 1s ease forwards;
+    animation: arrive 0.5s ease forwards;
 }
 
 .leave {
-    animation: revArrive 1s ease forwards;
+    animation: revArrive 0.5s ease forwards;
 }
 
 @keyframes arrive {

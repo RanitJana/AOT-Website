@@ -18,7 +18,6 @@ function initialPos() {
     }
     catch (err) { }
 }
-
 function close() {
     try {
         initialX = null;
