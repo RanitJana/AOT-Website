@@ -12,8 +12,8 @@ let initialDirection = 1;   //1 means y direction
 let changeDirectionPossible = true;
 function initialPos() {
     try {
-        initialX = event.touches[0].screenX;
-        initialY = event.touches[0].screenY;
+        initialX = event.clientX || event.touches[0].screenX;
+        initialY = event.clientY || event.touches[0].screenY;
         deltaX = 0;
     }
     catch (err) { }
@@ -33,8 +33,8 @@ function drag() {
     if (!initialX) return;
     try {
 
-        deltaX = event.touches[0].screenX - initialX;
-        deltaY = event.touches[0].screenY - initialY;
+        deltaX = (event.clientX || event.touches[0].screenX) - initialX;
+        deltaY = (event.clientY || event.touches[0].screenY) - initialY;
         if (changeDirectionPossible) {
             if (Math.abs(deltaX) > Math.abs(deltaY))    //means trying ro scroll horizontally
                 if (Math.floor(deltaX) > 0) initialDirection = 0;   // x direction;
@@ -61,18 +61,18 @@ function restoreNav() {
         body.style.overflowY = "auto";
         deny.classList.add('leave');
         deny.classList.remove('arrival');
-        close();
     }
     if (isNavOpen) {
         nav.style.transform = "translateX(0%)";
     }
+    close();
 }
 nav.addEventListener('touchstart', initialPos);
 nav.addEventListener('touchmove', drag)
 nav.addEventListener('touchend', restoreNav)
 nav.addEventListener('mousedown', initialPos);
-nav.addEventListener('mousemove', drag)
-nav.addEventListener('mouseup', restoreNav);
+document.addEventListener('mousemove', drag)
+document.addEventListener('mouseup', restoreNav);
 
 
 hambergMenu.addEventListener('click', e => {
@@ -87,7 +87,7 @@ hambergMenu.addEventListener('click', e => {
 window.addEventListener('click', e => {
     let value = window.getComputedStyle(hambergMenu).display;
     requestAnimationFrame(() => {
-        if (e.x <= screen.width - nav.clientWidth && value == 'flex') {
+        if (e.x <= Math.min(window.innerWidth / 2, window.innerWidth - nav.clientWidth) && value == 'flex') {
             isNavOpen = false;
             nav.style.transform = "translateX(100%)";
             body.style.overflowY = "auto";
@@ -171,7 +171,7 @@ parentNav.forEach((val, idx) => {
                 }
             }
         })
-        let nodeVal = parentNavChild[idx].style.display;
+        let nodeVal = window.getComputedStyle(parentNavChild[idx]).display;
         if (nodeVal == 'block') {
             if (arrow) arrow.style.transform = "rotate(90deg)";
             parentNavChild[idx].style.display = "none";
