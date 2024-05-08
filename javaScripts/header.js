@@ -8,9 +8,9 @@ let isNavOpen = false;
 
 let initialX;
 let deltaX;
-
+let initialDirection = 1;   //1 means y direction
+let changeDirectionPossible = true;
 function initialPos() {
-    // event.preventDefault();
     try {
         initialX = event.touches[0].screenX;
         deltaX = 0;
@@ -31,18 +31,28 @@ function drag() {
         return;
     }
     if (!initialX) return;
-    event.preventDefault();
     try {
 
         deltaX = event.touches[0].screenX - initialX;
-        if (Math.floor(deltaX) >= 0) {
-            nav.style.transform = `translateX(${Math.floor(deltaX / Math.floor(nav.offsetWidth) * 100)}%)`;
+        if (changeDirectionPossible) {
+            if (Math.floor(deltaX) > 0) initialDirection = 0;   // x direction;
+            changeDirectionPossible = false;
+        }
+        if (!initialDirection) {    //shoudl be in x direction
+            event.preventDefault();
+            if (Math.floor(deltaX) > 0)
+                nav.style.transform = `translateX(${Math.floor(deltaX / Math.floor(nav.offsetWidth) * 100)}%)`;
+        }
+        else {
+            event.defaultPrevented = false;
         }
     }
     catch (err) { }
 }
 
 function restoreNav() {
+    initialDirection = 1;
+    changeDirectionPossible = true;
     if (Math.floor(deltaX) > Math.floor(nav.offsetWidth / 2)) {
         isNavOpen = false;
         nav.style.transform = "translateX(100%)";
