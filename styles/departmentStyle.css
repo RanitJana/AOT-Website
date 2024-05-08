@@ -21,6 +21,47 @@ p,
     text-align: justify;
 }
 
+.deny {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    z-index: 100;
+}
+
+.arrival {
+    animation: arrive 1s ease forwards;
+}
+
+.leave {
+    animation: revArrive 1s ease forwards;
+}
+
+@keyframes arrive {
+    0% {
+        display: block;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        background-color: rgba(0, 0, 0, 0.65);
+    }
+
+}
+
+@keyframes revArrive {
+    0% {
+        background-color: rgba(0, 0, 0, 0.65);
+    }
+
+    100% {
+        background-color: rgba(0, 0, 0, 0);
+        display: none;
+    }
+
+}
+
 .news {
     padding: 1rem;
     grid-area: news;
@@ -33,17 +74,19 @@ p,
 
 .events {
     /* padding: 1rem; */
-    grid-area: event;    
+    grid-area: event;
     width: 100%;
 }
-.pastEvent{
+
+.pastEvent {
     padding: 1rem;
     box-shadow: var(--normal-shadow--);
     border-radius: 8px;
     background-color: var(--aot-light-color--);
     margin-bottom: 1rem;
 }
-.club-container{
+
+.club-container {
     padding: 1rem;
     background-color: var(--aot-light-color--);
     margin: 1rem;
@@ -51,21 +94,24 @@ p,
     box-shadow: var(--normal-shadow--);
 }
 
-.swiper-wrapper{
-    margin: 1.5rem ;
+.swiper-wrapper {
+    margin: 1.5rem;
 }
-.club-details{
+
+.club-details {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .swiper-horizontal {
-    touch-action:pan-y;
+    touch-action: pan-y;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.item-container{
+
+.item-container {
     border-radius: 0.6rem;
 }
 
@@ -768,9 +814,11 @@ nav>ul>li>div>a {
         border-radius: 20px;
         margin: 0.5rem 0;
     }
-    .parent-nav>ul>li:last-child{
+
+    .parent-nav>ul>li:last-child {
         margin-bottom: -0.5rem;
     }
+
     .parent-nav2 {
         display: flex;
         flex-direction: column;
@@ -856,7 +904,8 @@ nav ul {
             'event notice'
             'map notice';
     }
-    .events{
+
+    .events {
         width: 100dvw;
     }
 }
@@ -910,9 +959,10 @@ nav ul {
 }
 
 @media only screen and (max-width:630px) {
-    .club-container{
+    .club-container {
         margin: 1rem 0;
     }
+
     .sec1 {
         padding: 1rem 0;
     }
@@ -952,10 +1002,12 @@ nav ul {
         margin: 0.25rem 0;
         /* width: 100%; */
     }
-    .events{
-        padding: 0 ;
+
+    .events {
+        padding: 0;
     }
-    .pastEvent{
+
+    .pastEvent {
         padding: 0px 1rem;
     }
 }
@@ -1010,23 +1062,27 @@ nav ul {
 
 /* ==============================  club section  ============================= */
 @media only screen and (max-width:400px) {
-    .price{
+    .price {
         font-size: 1.1rem;
     }
-    .additional-info p{
+
+    .additional-info p {
         font-size: 1rem;
     }
 }
-@media only screen  and (max-width:530px) {
-    .item-container{
+
+@media only screen and (max-width:530px) {
+    .item-container {
         height: 500px;
-    }    
+    }
 }
-@media only screen  and (max-width:434px) {
-    .item-container{
+
+@media only screen and (max-width:434px) {
+    .item-container {
         height: 380px;
-    }    
+    }
 }
+
 /* CSS for Upcoming Event Section */
 .upcomingEvent {
     font-family: 'Arial', sans-serif;
@@ -1042,13 +1098,15 @@ nav ul {
     max-width: 34rem;
     margin: auto;
 }
-@media only screen  and (max-width:1200px){
+
+@media only screen and (max-width:1200px) {
     .upcoming-event-container {
         max-width: 24rem;
         margin: auto;
     }
 }
-@media only screen  and (max-width:500px){
+
+@media only screen and (max-width:500px) {
     .upcoming-event-container {
         max-width: auto;
         margin: auto;
@@ -1088,7 +1146,8 @@ nav ul {
     transition: transform 0.3s ease-in-out;
     background-size: cover;
     background-position: center;
-    height: 300px; /* Adjust the height as needed */
+    height: 300px;
+    /* Adjust the height as needed */
     position: relative;
     border-radius: 0.7rem;
 }
@@ -1099,12 +1158,12 @@ nav ul {
 
 .writingContent {
     padding: 15px;
-    background-color:rgba(0, 0, 0, 0.557);
+    background-color: rgba(0, 0, 0, 0.557);
     backdrop-filter: blur(1px);
     position: absolute;
     bottom: 0;
     width: 100%;
-    border-radius:0 0  0.7rem 0.7rem ;
+    border-radius: 0 0 0.7rem 0.7rem;
 }
 
 .writingContent h3 {
@@ -1147,6 +1206,6 @@ nav ul {
     background-color: #333;
 }
 
-.upcomingEvent-swiper-wrapper{
+.upcomingEvent-swiper-wrapper {
     margin: 0.5rem;
 }

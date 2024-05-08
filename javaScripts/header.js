@@ -60,8 +60,8 @@ function restoreNav() {
         isNavOpen = false;
         nav.style.transform = "translateX(100%)";
         body.style.overflowY = "auto";
-        deny.style.right = '-100%';
-        deny.style.backgroundColor = "transparent";
+        deny.classList.add('leave');
+        deny.classList.remove('arrival');
         close();
     }
     if (isNavOpen) {
@@ -81,8 +81,8 @@ hambergMenu.addEventListener('click', e => {
         isNavOpen = true;
         nav.style.transform = "translateX(0%)";
         body.style.overflowY = "hidden";
-        deny.style.right = '0%';
-        deny.style.backgroundColor = "rgba(0, 0, 0, 0.649)";
+        deny.classList.add('arrival');
+        deny.classList.remove('leave');
     })
 })
 window.addEventListener('click', e => {
@@ -92,8 +92,8 @@ window.addEventListener('click', e => {
             isNavOpen = false;
             nav.style.transform = "translateX(100%)";
             body.style.overflowY = "auto";
-            deny.style.right = '-100%';
-            deny.style.backgroundColor = "transparent";
+            deny.classList.add('leave');
+            deny.classList.remove('arrival');
 
         }
     })
@@ -107,16 +107,16 @@ window.addEventListener('resize', () => {
         requestAnimationFrame(() => {
             nav.style.transform = "translateX(0%)";
             body.style.overflowY = "hidden";
-            deny.style.right = '0%';
-            deny.style.backgroundColor = "rgba(0, 0, 0, 0.649)";
+            deny.classList.remove('leave');
+            deny.classList.add('arrival');
         })
     }
     if (value == "none") {
         requestAnimationFrame(() => {
             nav.style.transform = "translateX(0%)";
             body.style.overflowY = "auto";
-            deny.style.right = '-100%';
-            deny.style.backgroundColor = "transparent";
+            deny.classList.add('leave');
+            deny.classList.remove('arrival');
         })
     }
 

@@ -321,8 +321,8 @@ if (!sessionStorage.getItem('loadingPage')) {
         .then(data => {
             isAsideOpen = true;
             body.style.overflowY = "hidden";
-            deny.style.right = '0%';
-            deny.style.backgroundColor = "rgba(0, 0, 0, 0.649)";
+            deny.classList.add('arrival');
+            deny.classList.remove('leave');
             aside.style.display = 'block';
             asideContent.innerHTML = `<img decoding="async" src="../assets/aside news${data.path}" alt="">`;
         })
@@ -337,16 +337,15 @@ document.querySelector('aside >img').addEventListener('click', e => {
     isAsideOpen = false;
     aside.style.animation = "vanish 0.3s linear forwards";
     body.style.overflowY = "auto";
-    deny.style.right = '-100%';
-    deny.style.backgroundColor = "transparent";
+    deny.classList.add('leave');
+    deny.classList.remove('arrival');
 })
 window.addEventListener('resize', e => {
     if (isAsideOpen) {
         console.log('history');
         requestAnimationFrame(() => {
             body.style.overflowY = "hidden";
-            deny.style.right = '0%';
-            deny.style.backgroundColor = "rgba(0, 0, 0, 0.649)";
+            deny.classList.add('arrival');
         })
     }
 })

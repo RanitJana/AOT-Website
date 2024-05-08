@@ -616,13 +616,43 @@ body {
 
 .deny {
     position: fixed;
-    top: 0%;
-    right: -100%;
+    top: 0;
+    left: 0;
     width: 100dvw;
     height: 100dvh;
-    background-color: transparent;
-    transition: background-color 1s ease;
     z-index: 100;
+}
+
+.arrival {
+    animation: arrive 1s ease forwards;
+}
+
+.leave {
+    animation: revArrive 1s ease forwards;
+}
+
+@keyframes arrive {
+    0% {
+        display: block;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        background-color: rgba(0, 0, 0, 0.65);
+    }
+
+}
+
+@keyframes revArrive {
+    0% {
+        background-color: rgba(0, 0, 0, 0.65);
+    }
+
+    100% {
+        background-color: rgba(0, 0, 0, 0);
+        display: none;
+    }
+
 }
 
 nav ul {
