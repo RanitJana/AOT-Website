@@ -13,7 +13,9 @@ body {
 
 
 .page-title {
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 20;
     padding: 0.15em;
     min-width: 100%;
     /* margin-top: 1rem; */
@@ -62,7 +64,7 @@ nav a:hover {
 
 .hamburger-logo {
     position: absolute;
-    top: 30px;
+    top: -140px;
     right: 20px;
     z-index: 100;
     display: none;
@@ -258,6 +260,25 @@ h2 {
         height: 320px;
     }
 
+    section {
+        padding: 0;
+    }
+
+    .container {
+        border-radius: 0;
+    }
+
+    .container h2 {
+        border-radius: 0;
+
+    }
+
+}
+
+@media only screen and (max-width:513px) {
+    .hamburger-logo {
+        top: -100px;
+    }
 }
 
 @media only screen and (max-width: 441px) {
@@ -277,17 +298,17 @@ h2 {
 
 }
 
-@media only screen and (max-width : 749px) {
-    section {
-        padding: 0;
+@media only screen and (max-width:356px) {
+    .hamburger-logo {
+        top: -90px;
     }
 
-    .container {
-        border-radius: 0;
+    .logo {
+        width: 45px;
     }
 
-    .container h2 {
-        border-radius: 0;
-
+    .logo>a>img {
+        width: 24px;
+        height: 24px;
     }
 }
