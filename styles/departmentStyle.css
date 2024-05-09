@@ -11,6 +11,32 @@
     margin-top: -1rem;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: rgba(0, 0, 0, 0.336);
+    color: white;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+    /* border-radius: 50%; */
+
+}
+
+.swiper-button-next:active,
+.swiper-button-prev:active {
+    scale: 0.9;
+}
+.firstBtn {
+    background-color: rgb(143 143 143 / 19%);
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+}
+.firstBtn:hover {
+    background-color: rgb(143 143 143 / 30%);
+}
+
 #rd {
     text-decoration: none;
     font-weight: bold;
@@ -1180,17 +1206,23 @@ nav ul {
 }
 
 .secondBtn {
-    height: 50px;
-    width: 40px;
+    height: 45px;
+    width: 45px;
     position: absolute;
     top: 85%;
     z-index: 3;
-    background-color: rgba(0, 0, 0, 0.336);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     padding: 1rem;
     border: none;
     outline: none;
     transition: all 0.3s ease;
+    border-radius: 50%;
+}
+.secondBtn::after,
+.firstBtn::after {
+    font-size: 1.2rem;
+    font-weight: bolder;
 }
 
 .swiper-pagination {
