@@ -692,9 +692,6 @@ main>.content {
     grid-template-columns: auto;
 }
 
-main>.content .first {
-    max-height: 27rem;
-}
 
 main>.content section div a {
     color: black;
@@ -704,7 +701,6 @@ main>.content section div a {
 main>.content>.first {
     position: relative;
     border-radius: 8px;
-    background-color: var(--aot-light-color--);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -720,6 +716,7 @@ main>.content>.first {
     top: 0%;
     left: 0%;
     width: 100%;
+    min-height: 32rem;
     height: 100%;
     border-radius: 8px;
 }
