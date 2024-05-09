@@ -1690,7 +1690,7 @@ nav a {
     position: absolute;
     left: 0;
     margin: 0.5rem;
-
+    will-change: transform;
     animation: marquee 30s linear infinite;
 }
 
@@ -1713,9 +1713,11 @@ nav a {
     border: 5px solid rgb(255, 255, 255);
     transition: all 0.3s ease;
 }
-.comImgChild>.child:first-child{
+
+.comImgChild>.child:first-child {
     margin-left: 100dvw;
 }
+
 .comImgChild .child img {
     width: 100%;
     object-fit: contain;
