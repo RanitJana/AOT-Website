@@ -1674,7 +1674,7 @@ nav a {
 
 @keyframes move {
     0% {
-        transform: translate(65%, -50%);
+        transform: translate(62%, -50%);
     }
 
     50% {
@@ -1682,7 +1682,7 @@ nav a {
     }
 
     100% {
-        transform: translate(65%, -50%);
+        transform: translate(62%, -50%);
 
     }
 }
