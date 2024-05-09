@@ -1641,36 +1641,64 @@ nav a {
     display: flex;
 }
 
+.glance {
+    position: relative;
+    padding: 1rem;
+    width: fit-content;
+}
+
+.glance::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(0, -50%);
+    width: 0.7rem;
+    height: 50%;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.glance::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 50px solid var(--aot-color--);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    animation: move 1s ease infinite;
+}
+
 @keyframes move {
     0% {
-        scale: 0.95;
+        transform: translate(65%, -50%);
     }
 
     50% {
-        scale: 1;
+        transform: translate(50%, -50%);
     }
 
     100% {
-        scale: 0.95;
-    }
-}
+        transform: translate(65%, -50%);
 
-.glance {
-    text-align: center;
-    overflow: hidden;
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.556);
-    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.197);
-    padding: 1rem;
+    }
 }
 
 .glance h2 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 2rem;
     text-transform: uppercase;
-    color: var(--aot-color--);
+    color: white;
     font-weight: bolder;
-    animation: move 2s ease infinite;
+    width: fit-content;
+    padding: 1rem;
+    padding-left: 2.5rem;
+    background-color: var(--aot-color--);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .communityImages {
@@ -2166,6 +2194,28 @@ aside .content>img {
     .eventContainer {
         border-radius: 0;
     }
+
+    .glance {
+        display: flex;
+        align-items: center;
+    }
+
+    .glance::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 45px solid transparent;
+        border-bottom: 45px solid transparent;
+        border-left: 45px solid var(--aot-color--);
+        position: absolute;
+        right: 0;
+        top: 50%;
+        animation: move 1s ease infinite;
+    }
+
+    .glance h2 {
+        font-size: 1.5rem;
+    }
 }
 
 @media only screen and (max-width:1129px) and (min-width:700px) {
@@ -2363,7 +2413,7 @@ aside .content>img {
 }
 
 @media only screen and (max-width:442px) {
-    .comImgChild{
+    .comImgChild {
         justify-content: space-evenly;
     }
 }
