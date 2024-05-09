@@ -347,13 +347,3 @@ window.addEventListener('resize', e => {
         })
     }
 })
-
-//marquee edit
-let communityImages = document.querySelector('.communityImages');
-let comImgChild = document.querySelector('.comImgChild');
-communityImages.addEventListener('mouseenter', e => {
-    comImgChild.style.animationPlayState = 'paused';
-})
-communityImages.addEventListener('mouseleave', e => {
-    comImgChild.style.animationPlayState = 'running';
-})

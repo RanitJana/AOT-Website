@@ -1676,35 +1676,23 @@ nav a {
 .communityImages {
     background-color: white;
     margin-top: 1rem;
+    padding: 0.5rem;
     position: relative;
-    height: 9rem;
-    overflow: hidden;
 }
 
 .comImgChild {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 8rem;
-    width: fit-content;
-    position: absolute;
-    left: 0;
-    margin: 0.5rem;
-    will-change: transform;
-    animation: marquee 30s linear infinite;
+    flex-wrap: wrap;
 }
 
-@keyframes marquee {
-    100% {
-        transform: translateX(-100%);
-    }
-}
 
 .comImgChild>.child {
-    padding: 0.5rem 1rem;
-    margin: 0 0.2rem;
-    height: 8rem;
-    width: 9rem;
+    border-radius: 8px;
+    padding: 1rem;
+    height: 8.2rem;
+    aspect-ratio: 1;
     background-color: black;
     display: flex;
     justify-content: center;
@@ -1712,10 +1700,6 @@ nav a {
     border-radius: 8px;
     border: 5px solid rgb(255, 255, 255);
     transition: all 0.3s ease;
-}
-
-.comImgChild>.child:first-child {
-    margin-left: 100dvw;
 }
 
 .comImgChild .child img {
@@ -2375,6 +2359,12 @@ aside .content>img {
     #bulletin p {
         font-size: 1rem;
         line-height: 1rem;
+    }
+}
+
+@media only screen and (max-width:442px) {
+    .comImgChild{
+        justify-content: space-evenly;
     }
 }
 
