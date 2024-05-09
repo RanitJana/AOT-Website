@@ -13,7 +13,6 @@ function loadImg(actualImage, blurImage) {
 }
 
 function getInnerHtmlForBulletin(val) {
-    console.log(val.image);
     let str =
         `
     <div class="swiper-slide">
@@ -34,7 +33,6 @@ const displayDynamicInfo = function (res) {
     res.forEach((val, idx) => {
         if (idx == 0) {
             swiperWrapper1.innerHTML = `${getInnerHtmlForBulletin(val)}`;
-            console.log(swiperWrapper1.innerHTML);
         }
         else {
 
@@ -348,4 +346,14 @@ window.addEventListener('resize', e => {
             deny.classList.add('arrival');
         })
     }
+})
+
+//marquee edit
+let communityImages = document.querySelector('.communityImages');
+let comImgChild = document.querySelector('.comImgChild');
+communityImages.addEventListener('mouseenter', e => {
+    comImgChild.style.animationPlayState = 'paused';
+})
+communityImages.addEventListener('mouseleave', e => {
+    comImgChild.style.animationPlayState = 'running';
 })
