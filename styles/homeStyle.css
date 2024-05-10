@@ -1532,9 +1532,6 @@ main>.content>.first {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('../assets/images/picture-loading-failed-1.png') no-repeat center;
-    background-size: contain;
-    min-height: 32em;
 }
 
 .seventh>.content .right img {
