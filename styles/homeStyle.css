@@ -1035,11 +1035,6 @@ main>.content>.first {
     width: 100%;
 }
 
-.second .updateBox img {
-    width: 2rem;
-    aspect-ratio: 2/1;
-}
-
 .sub-content>div {
     text-wrap: pretty;
     width: 100%;
@@ -1061,6 +1056,8 @@ main>.content>.first {
 
 .updateBox a p img {
     margin-left: 0.5rem;
+    width: 2rem;
+    aspect-ratio: 7/4;
 }
 
 .second .content .sub-content .updateBox a {
