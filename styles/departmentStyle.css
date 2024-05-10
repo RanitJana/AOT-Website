@@ -6,7 +6,7 @@
     grid-template-areas:
         'news news notice'
         'event event notice'
-        'map map notice';
+        'map map map';
     grid-gap: 1rem;
     margin-top: -1rem;
 }
