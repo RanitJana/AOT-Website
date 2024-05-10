@@ -12,7 +12,6 @@ body {
     z-index: 20;
     padding: 0.15em;
     min-width: 100%;
-    /* margin-top: 1rem; */
     background: var(--aot-color--);
     color: #fff;
     display: flex;
