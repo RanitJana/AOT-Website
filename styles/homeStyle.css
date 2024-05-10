@@ -80,7 +80,6 @@ main {
 
 .parent-nav>ul,
 .parent-nav2>ul {
-    /* transition: all 0.5s ease; */
     display: none;
 }
 
@@ -534,7 +533,6 @@ body {
         justify-content: space-between;
         padding: 0.5rem 1rem;
         background-color: var(--aot-light-color--);
-        /* border: 1px solid gray; */
         border-radius: 20px;
         margin: 0.5rem 0;
     }
@@ -923,7 +921,6 @@ main>.content>.first {
     height: 40px;
     width: 40px;
     position: absolute;
-    /* top: 90%; */
     margin: 0 0.4rem;
     transform: translateY(-50%);
     z-index: 3;
@@ -937,7 +934,7 @@ main>.content>.first {
 }
 
 .swiper-pagination {
-    width: 80%;
+    width: 30px;
     z-index: 2;
 }
 
@@ -1219,8 +1216,6 @@ main>.content>.first {
 }
 
 .mySwiper3 .firstBtn {
-    /* border-radius: 0; */
-    /* width: 20px; */
     background-color: rgba(0, 0, 0, 0.522);
 }
 
@@ -1230,7 +1225,7 @@ main>.content>.first {
     text-align: center;
     line-height: 20px;
     border-radius: 50%;
-    background: white
+    background: white;
 }
 
 .mySwiper3 .swiper-pagination {
@@ -1239,9 +1234,6 @@ main>.content>.first {
     bottom: 0%;
 }
 
-.mySwiper3 .swiper-pagination-bullet {
-    background: white;
-}
 
 .mySwiper3 .swiper-slide {
     object-fit: cover;
