@@ -200,6 +200,9 @@ function visibility() {
         scrollToTop.style.scale = '0';
     }
 }
+scrollToTop.addEventListener('click', e => {
+    window.scrollTo(0, 0);
+})
 window.addEventListener('scroll', visibility)
 window.addEventListener('load', visibility)
 
@@ -295,6 +298,7 @@ let asideContent = document.querySelector('aside>.content');
 body.style.overflow = "hidden";
 if (!sessionStorage.getItem('loadingPage')) {
     sessionStorage.setItem('loadingPage', 'true');
+    window.scrollTo(0,0);
     setTimeout(() => {
         requestAnimationFrame(() => {
             loadingPage.style.scale = "40";
