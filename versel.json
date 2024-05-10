@@ -1,13 +1,14 @@
 {
-    "rewrites": [
+    "headers": [
       {
-        "source": "/(.*)",
-        "destination": "/$1",
-        "headers": {
-          "Content-Type": "text/html; charset=utf-8",
-          "Cache-Control": "public, max-age=0, must-revalidate",
-          "Content-Encoding": "gzip"
-        }
+        "method" : "POST",
+        "source": "**/*.@(js|css|html)",
+        "headers": [
+          {
+            "key": "Content-Encoding",
+            "value": "gzip"
+          }
+        ]
       }
     ]
   }
