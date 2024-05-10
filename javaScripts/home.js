@@ -204,22 +204,16 @@ window.addEventListener('scroll', visibility)
 window.addEventListener('load', visibility)
 
 let numbers = document.querySelectorAll('.exp > .blackCover > .content > div > span');
-let allignments = document.querySelector('.allignments');
-let isReset = false;
 
 window.addEventListener('scroll', () => {
-    if (elementIsVisibleInViewport(numbers[0], true) && !isReset) {
+    if (elementIsVisibleInViewport(numbers[0], true) || elementIsVisibleInViewport(numbers[numbers.length - 1], true)) {
         numbers.forEach(val => {
-            val.innerHTML = '0';
             let ans = new Odometer({
                 el: val,
                 duration: 2000
             });
             ans.update(val.getAttribute('data'));
         });
-        isReset = true;
-    } else if (!elementIsVisibleInViewport(allignments, true)) {
-        isReset = false;
     }
 });
 
