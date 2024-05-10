@@ -67,12 +67,12 @@ function restoreNav() {
     }
     close();
 }
-nav.addEventListener('touchstart', initialPos);
-nav.addEventListener('touchmove', drag)
-nav.addEventListener('touchend', restoreNav)
-nav.addEventListener('mousedown', initialPos);
-document.addEventListener('mousemove', drag)
-document.addEventListener('mouseup', restoreNav);
+nav.addEventListener('touchstart', initialPos, { passive: true });
+nav.addEventListener('touchmove', drag, { passive: true });
+nav.addEventListener('touchend', restoreNav, { passive: true })
+nav.addEventListener('mousedown', initialPos, { passive: true });
+document.addEventListener('mousemove', drag, { passive: true })
+document.addEventListener('mouseup', restoreNav, { passive: true });
 
 
 hambergMenu.addEventListener('click', e => {

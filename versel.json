@@ -1,3 +1,15 @@
 {
-    "compression": "brotli"
-}
+    "headers": [
+      {
+        "method" : "POST",
+        "source": "**/*.@(js|css|html)",
+        "headers": [
+          {
+            "key": "Content-Encoding",
+            "value": "gzip"
+          }
+        ]
+      }
+    ]
+  }
+  
