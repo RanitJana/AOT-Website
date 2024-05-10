@@ -203,38 +203,42 @@ function visibility() {
 window.addEventListener('scroll', visibility)
 window.addEventListener('load', visibility)
 
-//display faculty members numbers
-const elementIsVisibleInViewport = (el,) => {
-    const { top, left, bottom, right } = el.getBoundingClientRect();
-    const { innerHeight, innerWidth } = window;
-    return (top > 0 && top < innerHeight + 200) || (bottom > 0 && bottom < innerHeight - 200);
-};
+let numbers = document.querySelectorAll('.exp > .blackCover > .content > div > span');
+let allignments = document.querySelector('.allignments');
+let isReset = false;
 
-let numbers = document.querySelectorAll('.exp>.blackCover>.content>div');
-let exp = document.querySelector('.exp');
-let again = false;
-window.addEventListener('scroll', (e) => {
-    if (elementIsVisibleInViewport(exp, true) && !again) {
-        again = true
-        numbers.forEach(value => {
-            value.childNodes[0].textContent = 0;
-            let count = 0;
-            function updateCount() {
-                const target = parseInt(value.getAttribute('data'));
-                if (count < target) {
-                    count += parseInt(target / 100);
-                    if (count >= target) count = target;
-                    value.childNodes[0].textContent = count + '+';
-                    setTimeout(updateCount, 40);
-                }
-                else {
-                    value.childNodes[0].textContent = target + '+';
-                }
-            }
-            updateCount();
-        })
+window.addEventListener('scroll', () => {
+    if (elementIsVisibleInViewport(numbers[0], true) && !isReset) {
+        numbers.forEach(val => {
+            val.innerHTML = '0';
+            let ans = new Odometer({
+                el: val,
+                duration: 2000
+            });
+            ans.update(val.getAttribute('data'));
+        });
+        isReset = true;
+    } else if (!elementIsVisibleInViewport(allignments, true)) {
+        isReset = false;
     }
-})
+});
+
+function elementIsVisibleInViewport(el, partiallyVisible = false) {
+    const rect = el.getBoundingClientRect();
+    const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+    const windowWidth = (window.innerWidth || document.documentElement.clientWidth);
+
+    const verticallyVisible = partiallyVisible
+        ? (rect.top < windowHeight && rect.bottom >= 0) || (rect.bottom > 0 && rect.top <= windowHeight)
+        : (rect.top >= 0 && rect.bottom <= windowHeight) || (rect.bottom >= 0 && rect.top <= windowHeight);
+
+    const horizontallyVisible = partiallyVisible
+        ? (rect.left < windowWidth && rect.right >= 0) || (rect.right > 0 && rect.left <= windowWidth)
+        : (rect.left >= 0 && rect.right <= windowWidth) || (rect.right >= 0 && rect.left <= windowWidth);
+
+    return verticallyVisible && horizontallyVisible;
+}
+
 
 //search funcitons
 let searches = document.querySelectorAll('.search');

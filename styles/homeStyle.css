@@ -1172,7 +1172,9 @@ main>.content>.first {
 }
 
 .gallary .swiper-slide {
+    min-height: 15vw;
     background: white url('../assets/images/picture-loading-failed-1.png') no-repeat center;
+    background-color: rgba(0, 0, 0, 0.522);
     background-size: contain;
 }
 
@@ -1208,7 +1210,7 @@ main>.content>.first {
 
 .mySwiper3 {
     width: 100%;
-    height: 27em;
+    height: 100%;
     object-fit: cover;
     display: flex;
     justify-content: center;
@@ -1243,9 +1245,9 @@ main>.content>.first {
 
 
 .mySwiper3 .swiper-slide {
-    object-fit: cover;
     width: 100%;
     height: 100%;
+    object-fit: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1297,10 +1299,9 @@ main>.content>.first {
 }
 
 .exp>.blackCover>.content>div>span {
-    background: linear-gradient(to right, #f32170,
-            #ff6b08, #cf23cf, #eedd44);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+    font-size: 1.5rem;
+    color: yellow;
+    letter-spacing: 0.1rem;
 }
 
 .exp>.blackCover>.content>div {
@@ -1651,8 +1652,8 @@ nav a {
     top: 50%;
     left: 10%;
     transform: translate(0, -50%);
-    width: 0.7rem;
-    height: 50%;
+    width: 0.5rem;
+    height: 40%;
     border-radius: 5px;
     background-color: white;
 }
@@ -1661,9 +1662,9 @@ nav a {
     content: "";
     width: 0;
     height: 0;
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid transparent;
-    border-left: 50px solid var(--aot-color--);
+    border-top: 42px solid transparent;
+    border-bottom: 42px solid transparent;
+    border-left: 42px solid var(--aot-color--);
     position: absolute;
     right: 0;
     top: 50%;
@@ -1672,31 +1673,32 @@ nav a {
 
 @keyframes move {
     0% {
-        transform: translate(62%, -50%);
+        transform: translate(45%, -50%);
     }
 
     50% {
-        transform: translate(50%, -50%);
+        transform: translate(40%, -50%);
     }
 
     100% {
-        transform: translate(62%, -50%);
+        transform: translate(45%, -50%);
 
     }
 }
 
 .glance h2 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     color: white;
     font-weight: bolder;
     width: fit-content;
-    padding: 1rem;
-    padding-left: 2.5rem;
+    padding: 0.8rem 1rem;
+    padding-left: 2.1rem;
     background-color: var(--aot-color--);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    
 }
 
 .communityImages {
