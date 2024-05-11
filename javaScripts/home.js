@@ -103,7 +103,7 @@ async function getDynamicData() {   //use to fetch json data from bulletinInfo f
 //main content
 getDynamicData()
     .then((res) => {
-        displayDynamicInfo(res);
+         displayDynamicInfo(res);
     }).catch(err => {
         console.log(err);
     })
@@ -285,7 +285,7 @@ let swiper3 = new Swiper(".mySwiper3", {
     },
     breakpoints: {
         // when window width is <= 1000px
-        1065: {
+        1067: {
             slidesPerView: 2, // Change to 1 slide per view
         }
     },
