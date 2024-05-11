@@ -1376,6 +1376,7 @@ main>.content>.first {
 .fourth>.info>.topImage>img {
     width: 100%;
     max-width: 40rem;
+    aspect-ratio: 584/188;
     mix-blend-mode: multiply;
 }
 
