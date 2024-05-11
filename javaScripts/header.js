@@ -264,7 +264,8 @@ parentNav3.forEach(child => {
                 if (child2.childNodes[3].style.display == 'block') {
                     child2.childNodes[3].style.display = 'none';
                     let arrow = child2.childNodes[1].childNodes[3];
-                    if (screen.width <= 571) {
+                    let value = window.getComputedStyle(hambergMenu).display;
+                    if (value == 'flex') {
                         arrow.style.transform = "rotate(90deg)";
                     }
                     else {
@@ -297,6 +298,8 @@ parentNav3.forEach(child => {
         }
     })
 })
+
+//close nav when click outside of it
 
 //move sticky to top
 let header = document.querySelector('header');

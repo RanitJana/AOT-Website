@@ -2392,9 +2392,10 @@ aside .content>img {
     .community,
     .gallary,
     .seventh,
-    .ninth{
+    .ninth {
         padding: 1rem;
     }
+
     .third>h2,
     .fourth>h2 {
         padding-top: 1rem;

@@ -103,7 +103,7 @@ async function getDynamicData() {   //use to fetch json data from bulletinInfo f
 //main content
 getDynamicData()
     .then((res) => {
-         displayDynamicInfo(res);
+        displayDynamicInfo(res);
     }).catch(err => {
         console.log(err);
     })
@@ -243,27 +243,38 @@ let para = document.querySelectorAll('p');
 let h2 = document.querySelectorAll('h2');
 let a = document.querySelectorAll('a');
 let section = document.querySelectorAll('section');
+function goSearch(val) {
+    if (val == '') return;
+    var encodedMessage = "";
+    para.forEach(p => {
+        if (p.innerHTML.toLowerCase().includes(val.toLowerCase())) {
+            encodedMessage += (encodeURIComponent(p.outerHTML));
+            encodedMessage += 'TEAM_BUG';
+        }
+    })
+    a.forEach(p => {
+        if (p.innerHTML.toLowerCase().includes(val.toLowerCase())) {
+            let newNode = p;
+            newNode.setAttribute('href', '.' + newNode.getAttribute('href').slice(7));
+            encodedMessage += (encodeURIComponent(newNode.outerHTML));
+            encodedMessage += 'TEAM_BUG';
+        }
+    })
+    sessionStorage.setItem('res', encodedMessage);
+    window.location.href = "./pages/search.html";
+}
 searches.forEach(search => {
-    search.childNodes[3].addEventListener('click', e => {
+    search.childNodes[3].addEventListener('click', () => {
         let val = search.childNodes[1].value.trim();
-        if (val == '') return;
-        var encodedMessage = "";
-        para.forEach(p => {
-            if (p.innerHTML.toLowerCase().includes(val.toLowerCase())) {
-                encodedMessage += (encodeURIComponent(p.outerHTML));
-                encodedMessage += 'TEAM_BUG';
-            }
-        })
-        a.forEach(p => {
-            if (p.innerHTML.toLowerCase().includes(val.toLowerCase())) {
-                let newNode = p;
-                newNode.setAttribute('href', '.' + newNode.getAttribute('href').slice(7));
-                encodedMessage += (encodeURIComponent(newNode.outerHTML));
-                encodedMessage += 'TEAM_BUG';
-            }
-        })
-        sessionStorage.setItem('res', encodedMessage);
-        window.location.href = "./pages/search.html";
+        goSearch(val);
+    })
+})
+let searchAny = document.querySelectorAll('.search input');
+searchAny.forEach(val => {
+    val.addEventListener('keydown', e => {
+        if (e.keyCode === 13) {
+            goSearch(val.value.trim());
+        }
     })
 })
 

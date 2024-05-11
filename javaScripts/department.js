@@ -2,31 +2,44 @@
 let searches = document.querySelectorAll('.search');
 let para = document.querySelectorAll('p');
 let a = document.querySelectorAll('a');
+function goSearch(val) {
+    if (val == '') return;
+    var encodedMessage = "";
+    para.forEach(p => {
+        if (p.innerHTML.toLowerCase().includes(val.toLowerCase())) {
+            encodedMessage += (encodeURIComponent(p.outerHTML));
+            encodedMessage += 'TEAM_BUG';
+        }
+    })
+    a.forEach(p => {
+        if (p.innerHTML.toLowerCase().includes(val.toLowerCase())) {
+            let newNode = p;
+            newNode.setAttribute('href', '.' + newNode.getAttribute('href').slice(7));
+            encodedMessage += (encodeURIComponent(newNode.outerHTML));
+            encodedMessage += 'TEAM_BUG';
+        }
+    })
+    sessionStorage.setItem('res', encodedMessage);
+    window.location.href = "../pages/search.html";
+}
 searches.forEach(search => {
-    search.childNodes[3].addEventListener('click', e => {
+    search.childNodes[3].addEventListener('click', () => {
         let val = search.childNodes[1].value.trim();
-        if (val == '') return;
-        var encodedMessage = "";
-        para.forEach(p => {
-            if (p.innerHTML.toLowerCase().includes(val.toLowerCase())) {
-                encodedMessage += (encodeURIComponent(p.outerHTML));
-                encodedMessage += 'TEAM_BUG';
-            }
-        })
-        a.forEach(p => {
-            if (p.innerHTML.toLowerCase().includes(val.toLowerCase())) {
-                encodedMessage += (encodeURIComponent(p.outerHTML));
-                encodedMessage += 'TEAM_BUG';
-            }
-        })
-        sessionStorage.setItem('res', encodedMessage);
-        window.location.href = "./search.html";
+        goSearch(val);
+    })
+})
+let searchAny = document.querySelectorAll('.search input');
+searchAny.forEach(val => {
+    val.addEventListener('keydown', e => {
+        if (e.keyCode === 13) {
+            goSearch(val.value.trim());
+        }
     })
 })
 
 
-    // =============================== club details sliding logic  ==============================
-    //   Initialize Swiper
+// =============================== club details sliding logic  ==============================
+//   Initialize Swiper
 var swiper;
 
 function autosliding() {
@@ -115,7 +128,7 @@ getFutureEventData().then(() => {
             },
             autoplay: {
                 delay: 2000,
-            }, 
+            },
         });
     })
     document.querySelectorAll('.eventBox').forEach(val => {
