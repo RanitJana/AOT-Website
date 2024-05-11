@@ -20,7 +20,7 @@ function getInnerHtmlForBulletin(val) {
         <h2>${val.heading}</h2>
         <p>${val.content}</p>
     </div>
-        <img src="./assets/bulletinImage/${val.image}.jpg" alt = "${val.image}" decoding="async" loading='lazy' id='makeBlur'>
+        <img src="./assets/bulletinImage/${val.image}.jpg" alt = "${val.image}" decoding="async" loading='eager' id='makeBlur'>
         <img src="./assets/bulletinImage/${val.image}.jpg" alt = "${val.image}" decoding="async" loading='lazy' class="mainImg1">
         <img src="./assets/bulletinImage/${val.image}.jpg" alt = "${val.image}" decoding="async" loading='lazy' class="mainImg2">
         <img src="./assets/bulletinImage/${val.image}.jpg" alt = "${val.image}" decoding="async" loading='lazy' class="mainImg3">
@@ -298,7 +298,7 @@ let asideContent = document.querySelector('aside>.content');
 body.style.overflow = "hidden";
 if (!sessionStorage.getItem('loadingPage')) {
     sessionStorage.setItem('loadingPage', 'true');
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
     setTimeout(() => {
         requestAnimationFrame(() => {
             loadingPage.style.scale = "40";
