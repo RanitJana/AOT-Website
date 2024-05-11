@@ -2382,22 +2382,22 @@ aside .content>img {
 
 
 @media only screen and (max-width:501px) {
-    .secondParSec .event {
-        padding: 1rem;
-    }
 
-    .secondParSec>section {
-        padding: 1rem;
-    }
-
+    .secondParSec .event,
+    .secondParSec>section,
+    .fourth,
     .allignments,
+    .antiRagging,
     .workshop,
-    .community {
+    .community,
+    .gallary,
+    .seventh,
+    .ninth{
         padding: 1rem;
     }
-
-    .gallary {
-        padding: 1rem;
+    .third>h2,
+    .fourth>h2 {
+        padding-top: 1rem;
     }
 
     .workshop>.info {
@@ -2409,10 +2409,6 @@ aside .content>img {
         height: 4rem;
     }
 
-    .antiRagging {
-        padding: 1rem;
-    }
-
     .third>h2 {
         margin-bottom: 0rem;
     }
@@ -2421,16 +2417,8 @@ aside .content>img {
         margin-bottom: 2rem;
     }
 
-    .fourth {
-        padding: 1rem;
-    }
-
     .fifth div h2 {
         font-size: 1.4rem;
-    }
-
-    .seventh {
-        padding: 1rem;
     }
 
     .eighth {
@@ -2449,10 +2437,6 @@ aside .content>img {
         margin-top: -1rem;
     }
 
-    .third>h2 {
-        padding: 1rem;
-    }
-
     .eventContainer {
         height: 300px;
     }
@@ -2465,9 +2449,6 @@ aside .content>img {
         width: 500px;
     }
 
-    .ninth {
-        padding: 1rem;
-    }
 }
 
 @media only screen and (max-width:476px) {
