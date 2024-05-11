@@ -6,11 +6,11 @@ Welcome to the official website of **Academy of Technology College**! Our websit
 ## Features
 
 ### 1. Home Page
-- The home page introduces visitors to Acme College. It features a hero section with a captivating image and a brief welcome message.
+- The home page introduces visitors to Academy of Technology College. It features a hero section with a captivating image and a brief welcome message.
 - Visitors can easily navigate to other sections of the website using the top navigation menu.
 
 ### 2. About Us
-- Learn about the history, mission, and values of Acme College.
+- Learn about the history, mission, and values of Academy of Technology College.
 - Meet our leadership team and faculty members.
 - Explore our campus facilities through high-quality images.
 
@@ -23,7 +23,7 @@ Welcome to the official website of **Academy of Technology College**! Our websit
 - A contact form allows interested students to get in touch with our admissions team.
 
 ### 5. Campus Life
-- Explore student life at Acme College.
+- Explore student life at Academy of Technology College.
 - View images of campus events, student clubs, and recreational activities.
 - Learn about housing options and student support services.
 
@@ -37,11 +37,11 @@ Welcome to the official website of **Academy of Technology College**! Our websit
 - Use the contact form to send inquiries or feedback.
 
 ### 8. Research center
-- Discover the cutting-edge research centers and institutes at Acme College.
+- Discover the cutting-edge research centers and institutes at Academy of Technology College.
 - Learn about ongoing research projects, faculty expertise, and collaboration opportunities.
 
 ### 9. News and Events
-- Stay up-to-date with the latest news, announcements, and events happening at Acme College.
+- Stay up-to-date with the latest news, announcements, and events happening at Academy of Technology College.
 - Browse through event calendars, webinars, and guest lectures.
 
 ### 10. Student resources
