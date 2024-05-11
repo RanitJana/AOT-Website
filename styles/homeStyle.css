@@ -1554,15 +1554,17 @@ main>.content>.first {
     justify-content: center;
     align-items: center;
 }
-.seventh>.content .right picture{
+
+.seventh>.content .right picture {
     width: 100%;
     height: 100%;
     animation: skeleton-animation2 1s linear infinite alternate;
 }
+
 .seventh>.content .right img {
     width: 100%;
     height: 100%;
-    
+
     object-fit: cover;
 }
 
@@ -1799,14 +1801,20 @@ nav a {
     justify-content: center;
 }
 
-.antiRagging>.info img,
-.workshop>.info img {
+.antiRagging>.info img {
+    min-width: 20rem;
+    max-width: 20rem;
+    aspect-ratio: 400/320;
+    animation: skeleton-animation 1s linear infinite alternate;
     mix-blend-mode: multiply;
-    width: 20rem;
 }
 
 .workshop>.info img {
-    width: 25rem;
+    min-width: 20rem;
+    max-width: 30rem;
+    aspect-ratio: 3071/1727;
+    animation: skeleton-animation 1s linear infinite alternate;
+    mix-blend-mode: multiply;
 }
 
 .antiRagging>.info button,
@@ -1867,6 +1875,10 @@ nav a {
 
 .ninth p span {
     user-select: text;
+}
+
+.ninth iframe {
+    animation: skeleton-animation 1s linear alternate;
 }
 
 aside {
@@ -1960,14 +1972,16 @@ aside .content>img {
     }
 }
 
-@media only screen and (max-width:1435px) {
+@media only screen and (max-width:1200px) {
     .seventh>.content {
         grid-template-columns: auto;
     }
-    .seventh .right{
+
+    .seventh .right {
         max-height: 40rem;
     }
-    .seventh .right img{
+
+    .seventh .right img {
         height: 100%;
         width: 100%;
         object-fit: contain;
@@ -2415,7 +2429,7 @@ aside .content>img {
     }
 }
 
-@media only screen and (max-width:488px) {
+@media only screen and (max-width:578px) {
     .workshop>.info>img {
         width: 100%;
     }
@@ -2500,7 +2514,14 @@ aside .content>img {
         width: 15rem;
     }
 }
-
+@media only screen and (max-width:385px) {
+    .workshop>.info>img {
+        min-width: 10rem;
+    }
+    .antiRagging >.info img{
+        min-width: 10rem;
+    }
+}
 
 /*footer*/
 footer {
