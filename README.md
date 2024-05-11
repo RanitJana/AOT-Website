@@ -36,6 +36,18 @@ Welcome to the official website of **Academy of Technology College**! Our websit
 - Find our contact details, including phone numbers and email addresses.
 - Use the contact form to send inquiries or feedback.
 
+### 8. Research center
+- Discover the cutting-edge research centers and institutes at Acme College.
+- Learn about ongoing research projects, faculty expertise, and collaboration opportunities.
+
+### 9. News and Events
+- Stay up-to-date with the latest news, announcements, and events happening at Acme College.
+- Browse through event calendars, webinars, and guest lectures.
+
+### 10. Student resources
+- Access essential resources for students, including academic calendars, course schedules, and study materials.
+- Find links to the library, career services, and student organizations.
+
 ## Technologies Used
 - The website is built using **JavaScript**, a popular programming language for server-rendered applications.
 - Deployment is handled by **Vercel**, which ensures fast and reliable hosting.
