@@ -9,42 +9,46 @@ Welcome to the official website of **Academy of Technology College**! Our websit
 - The home page introduces visitors to Academy of Technology College. It features a hero section with a captivating image and a brief welcome message.
 - Visitors can easily navigate to other sections of the website using the top navigation menu.
 
-### 2. About Us
+### 2. Department Page
+- Explore our academic departments.
+- Each department has its own page with faculty profiles, research areas, and course offerings.
+
+### 3. About Us
 - Learn about the history, mission, and values of Academy of Technology College.
 - Meet our leadership team and faculty members.
 - Explore our campus facilities through high-quality images.
 
-### 3. Academic Programs
+### 4. Academic Programs
 - Discover the diverse range of academic programs we offer.
 - Each program has its own dedicated page with detailed information, including admission requirements, curriculum, and career prospects.
 
-### 4. Admissions
+### 5. Admissions
 - Prospective students can find information about the admission process, application deadlines, and required documents.
 - A contact form allows interested students to get in touch with our admissions team.
 
-### 5. Campus Life
+### 6. Campus Life
 - Explore student life at Academy of Technology College.
 - View images of campus events, student clubs, and recreational activities.
 - Learn about housing options and student support services.
 
-### 6. Alumni
+### 7. Alumni
 - Connect with fellow alumni.
 - Read success stories and testimonials from our graduates.
 - Stay informed about alumni events and networking opportunities.
 
-### 7. Contact Us
+### 8. Contact Us
 - Find our contact details, including phone numbers and email addresses.
 - Use the contact form to send inquiries or feedback.
 
-### 8. Research center
+### 9. Research center
 - Discover the cutting-edge research centers and institutes at Academy of Technology College.
 - Learn about ongoing research projects, faculty expertise, and collaboration opportunities.
 
-### 9. News and Events
+### 10. News and Events
 - Stay up-to-date with the latest news, announcements, and events happening at Academy of Technology College.
 - Browse through event calendars, webinars, and guest lectures.
 
-### 10. Student resources
+### 11. Student resources
 - Access essential resources for students, including academic calendars, course schedules, and study materials.
 - Find links to the library, career services, and student organizations.
 
