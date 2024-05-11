@@ -213,7 +213,7 @@ window.addEventListener('scroll', () => {
         numbers.forEach(val => {
             let ans = new Odometer({
                 el: val,
-                duration: 2000
+                duration: 2500
             });
             ans.update(val.getAttribute('data'));
         });

@@ -1782,7 +1782,7 @@ nav a {
 .workshop>.info button {
     background-color: var(--aot-color--);
     color: white;
-    padding: 0.3rem 0.5rem;
+    padding: 0.5rem;
     border: none;
     border-radius: 5px;
     margin-top: 0.5rem;

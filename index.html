@@ -8,10 +8,21 @@
     <meta name="description" content="AOT,Academy Of Technology,engineering, college,MCA,B.Tech,Tech Fest">
     <meta name="robots" content="index, follow">
     <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet';">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    </noscript>
+    
     <link rel="stylesheet" href="./styles/basicStyles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./styles/odometer.css">
     <link rel="stylesheet" href="./styles/homeStyle.css">
+
+    <link rel="preload" href="./styles/odometer.css" as="style" onload="this.onload=null;this.rel='stylesheet';">
+    <noscript>
+        <link rel="stylesheet" href="./styles/odometer.css">
+    </noscript>
+
 
     <title>Home</title>
 </head>
@@ -858,11 +869,11 @@
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./javaScripts/header.js"></script>
-    <script src="./javaScripts/odometer.js"></script>
-    <script src="./javaScripts/home.js"></script>
-    <script src="./javaScripts/userOnOff.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="./javaScripts/header.js" defer></script>
+    <script src="./javaScripts/odometer.js" defer></script>
+    <script src="./javaScripts/home.js" defer></script>
+    <script src="./javaScripts/userOnOff.js" defer></script>
 </body>
 
 </html>
