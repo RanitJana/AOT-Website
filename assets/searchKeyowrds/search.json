@@ -17,7 +17,7 @@
             "content": "For any inquiries, feedback, or assistance, you can reach out to us through the contact section. Find our contact details and get in touch with us. Our dedicated team is available to address your queries regarding admissions, academics, events, or any other matter."
         }
     },
-    "departments ug pg admission": {
+    "departments ug pg admission academy": {
         "Department": {
             "link": "./department.html",
             "content": "Explore the various departments at our college, each offering specialized courses and programs. Learn about the faculty, courses offered, research areas, and departmental activities. Get insights into the department's vision, mission, and its contributions to academic excellence."
@@ -113,7 +113,7 @@
             "content": "The student section highlights the various activities and initiatives taken by students at the college. From academic clubs and student councils to cultural events and community service projects, discover the vibrant student life. Get involved in extracurricular activities and unleash your potential."
         }
     },
-    "cse computer science and engineering": {
+    "cse computer science engineering": {
         "CSE": {
             "link": "./CSE.html",
             "content": "The Computer Science and Engineering department offers cutting-edge courses and research opportunities in computer science, software engineering, artificial intelligence, and related fields. It covers topics such as programming, algorithms, data structures, and emerging technologies."

@@ -58,8 +58,8 @@ header {
 }
 
 .banner .right input {
-    padding: 0.3rem 1rem;
-    border: 1px solid gray;
+    padding: 0.5rem 1rem;
+    border: 2px solid rgba(128, 128, 128, 0.337);
     border-radius: 10rem;
     font-size: 1rem;
     outline: none;
@@ -281,16 +281,6 @@ body {
         margin: 0.5rem 0 1rem 0;
     }
 
-    nav .search input {
-        outline: none;
-        font-size: medium;
-        border-radius: 20px;
-        width: 100%;
-        border: 1px solid gray;
-        padding: 0.5rem 1rem;
-        padding-right: 3rem;
-    }
-
     nav .search img {
         position: absolute;
         right: 5%;
@@ -456,7 +446,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        margin-bottom: -1rem;
+        /* margin-bottom: -1rem; */
     }
 
     .goback {
@@ -481,9 +471,9 @@ body {
     .parentGoback .search input {
         width: 100%;
         padding: 0.5rem 1rem;
-        border-radius: 20px;
         outline: none;
-        border: 1px solid gray;
+        border-radius: 20px;
+        border: 2px solid rgba(128, 128, 128, 0.337);
     }
 
     .parentGoback .search img {
@@ -514,6 +504,10 @@ body {
         border-radius: 20px;
     }
 
+    nav ul .parent-nav:first-child .section {
+        margin-top: 0;
+    }
+
     nav ul .parent-nav>.section img {
         width: 1rem;
         height: 1rem;
@@ -534,7 +528,7 @@ body {
     }
 
     .parent-nav>ul>li:first-child {
-        margin-top: -0.125rem;
+        margin-top: -0.025rem;
     }
 
     .parent-nav2 {
@@ -557,7 +551,7 @@ body {
         aspect-ratio: 1;
     }
 
-    .parent-nav2 ul {
+    .parent-nav2>ul {
         padding-top: 2rem;
     }
 
@@ -589,7 +583,10 @@ body {
         transition: all 0.3s ease;
         transform: rotate(90deg);
     }
-
+    .parent-nav3>ul{
+        padding-top: 0;
+        margin-top: 1rem;
+    }
     .parent-nav3>ul>li {
         background-color: var(--aot-light-color--);
         border-bottom: 1px dotted gray;
@@ -603,6 +600,12 @@ body {
         margin-top: -1rem;
         margin-bottom: 1rem;
     }
+}
+
+.search input:active,
+.search input:focus,
+.search input:valid {
+    border-color: var(--aot-color--);
 }
 
 nav {
@@ -1789,22 +1792,12 @@ nav a {
 .comImgChild .child:hover {
     cursor: pointer;
     z-index: 2;
+    scale: 1.2;
     box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.469);
-    animation: communityAni 0.7s ease forwards;
 }
 
-@keyframes communityAni {
-    0% {
-        scale: 1;
-    }
-
-    50% {
-        scale: 0.8;
-    }
-
-    100% {
-        scale: 1.2;
-    }
+.comImgChild .child:not(:hover) {
+    z-index: 1;
 }
 
 .antiRagging,
