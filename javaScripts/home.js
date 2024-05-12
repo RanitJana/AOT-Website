@@ -239,28 +239,9 @@ function elementIsVisibleInViewport(el, partiallyVisible = false) {
 
 //search funcitons
 let searches = document.querySelectorAll('.search');
-let para = document.querySelectorAll('p');
-let h2 = document.querySelectorAll('h2');
-let a = document.querySelectorAll('a');
-let section = document.querySelectorAll('section');
 function goSearch(val) {
     if (val == '') return;
-    var encodedMessage = "";
-    para.forEach(p => {
-        if (p.innerHTML.toLowerCase().includes(val.toLowerCase())) {
-            encodedMessage += (encodeURIComponent(p.outerHTML));
-            encodedMessage += 'TEAM_BUG';
-        }
-    })
-    a.forEach(p => {
-        if (p.innerHTML.toLowerCase().includes(val.toLowerCase())) {
-            let newNode = p;
-            newNode.setAttribute('href', '.' + newNode.getAttribute('href').slice(7));
-            encodedMessage += (encodeURIComponent(newNode.outerHTML));
-            encodedMessage += 'TEAM_BUG';
-        }
-    })
-    sessionStorage.setItem('res', encodedMessage);
+    sessionStorage.setItem('res', val);
     window.location.href = "./pages/search.html";
 }
 searches.forEach(search => {

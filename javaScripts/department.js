@@ -4,22 +4,7 @@ let para = document.querySelectorAll('p');
 let a = document.querySelectorAll('a');
 function goSearch(val) {
     if (val == '') return;
-    var encodedMessage = "";
-    para.forEach(p => {
-        if (p.innerHTML.toLowerCase().includes(val.toLowerCase())) {
-            encodedMessage += (encodeURIComponent(p.outerHTML));
-            encodedMessage += 'TEAM_BUG';
-        }
-    })
-    a.forEach(p => {
-        if (p.innerHTML.toLowerCase().includes(val.toLowerCase())) {
-            let newNode = p;
-            newNode.setAttribute('href', '.' + newNode.getAttribute('href').slice(7));
-            encodedMessage += (encodeURIComponent(newNode.outerHTML));
-            encodedMessage += 'TEAM_BUG';
-        }
-    })
-    sessionStorage.setItem('res', encodedMessage);
+    sessionStorage.setItem('res', val);
     window.location.href = "../pages/search.html";
 }
 searches.forEach(search => {

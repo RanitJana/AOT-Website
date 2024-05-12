@@ -1,0 +1,124 @@
+{
+    "achievement": {
+        "Achievement": {
+            "link": "./achievement.html",
+            "content": "This section showcases various achievements of the college such as awards, recognitions, and notable accomplishments by students and faculty members. It includes details about academic achievements, research publications, participation in competitions, and other accolades."
+        }
+    },
+    "career": {
+        "Career": {
+            "link": "./career.html",
+            "content": "The career section provides information about career opportunities, internships, and placement assistance offered by the college to its students. It features guidance on career planning, skill development workshops, industry interactions, and internship programs."
+        }
+    },
+    "contact": {
+        "Contact": {
+            "link": "./contact.html",
+            "content": "For any inquiries, feedback, or assistance, you can reach out to us through the contact section. Find our contact details and get in touch with us. Our dedicated team is available to address your queries regarding admissions, academics, events, or any other matter."
+        }
+    },
+    "department": {
+        "Department": {
+            "link": "./department.html",
+            "content": "Explore the various departments at our college, each offering specialized courses and programs. Learn about the faculty, courses offered, research areas, and departmental activities. Get insights into the department's vision, mission, and its contributions to academic excellence."
+        },
+        "CSE": {
+            "link": "./CSE.html",
+            "content": "The Computer Science and Engineering department offers cutting-edge courses and research opportunities in computer science, software engineering, artificial intelligence, and related fields. It covers topics such as programming, algorithms, data structures, and emerging technologies."
+        },
+        "MBA": {
+            "link": "./MBA.html",
+            "content": "The MBA department provides a comprehensive education in business administration, offering courses in management, finance, marketing, human resources, and more. It emphasizes practical learning through case studies, industry projects, and internships, preparing students for leadership roles."
+        }
+    },
+    "curriculum": {
+        "Curriculum": {
+            "link": "./curriculum.html",
+            "content": "The curriculum section outlines the academic structure, courses, and programs offered by the college. Discover the academic requirements, course syllabi, and program outcomes. Explore the flexibility in choosing electives, specializations, and interdisciplinary courses."
+        }
+    },
+    "event": {
+        "Events": {
+            "link": "./event.html",
+            "content": "Stay updated with the latest events happening at the college. From seminars and workshops to cultural events and sports tournaments, find all event details here. Get information about guest lectures, industry visits, academic conferences, and student-led activities."
+        }
+    },
+    "facility": {
+        "Facility": {
+            "link": "./facility.html",
+            "content": "Explore the facilities available at our college, including libraries, laboratories, sports complexes, and student accommodation. Discover a conducive learning environment with state-of-the-art infrastructure and amenities. Learn about our commitment to providing a safe and comfortable campus."
+        }
+    },
+    "faculty": {
+        "Faculty": {
+            "link": "./faculty.html",
+            "content": "Meet our esteemed faculty members who are experts in their fields. Learn about their qualifications, research interests, publications, and industry experience. Get insights into their teaching methodologies, mentorship, and involvement in student development activities."
+        }
+    },
+    "joinus": {
+        "Join Us": {
+            "link": "./joinus.html",
+            "content": "Interested in joining our college? Find information about admission procedures, eligibility criteria, scholarships, and application deadlines in the join us section. Explore the benefits of studying at our institution and take the first step towards a rewarding academic journey."
+        }
+    },
+    "library": {
+        "Library": {
+            "link": "./library.html",
+            "content": "Our library is a treasure trove of knowledge, housing a vast collection of books, journals, e-books, and digital resources. Explore our library facilities, including study areas, research assistance, and online databases. Discover a hub for intellectual exploration and academic support."
+        }
+    },
+    "lifeatcollege": {
+        "Life at College": {
+            "link": "./lifeatcollege.html",
+            "content": "Discover what life at our college is like. From student clubs and extracurricular activities to campus events and cultural festivals, experience the vibrant college life. Learn about student initiatives, peer support networks, and opportunities for personal and professional growth."
+        }
+    },
+    "placement": {
+        "Placement": {
+            "link": "./placement.html",
+            "content": "The placement section provides information about placement opportunities and assistance provided by the college. Learn about the placement process, company profiles, campus recruitment drives, and alumni success stories. Explore career guidance and skill development programs."
+        }
+    },
+    "programme": {
+        "Programme": {
+            "link": "./programmeStructure.html",
+            "content": "Explore our academic programs and courses offered across various disciplines. Find detailed information about course structure, duration, eligibility criteria, and learning outcomes. Get insights into industry collaborations, internships, and global exchange programs."
+        }
+    },
+    "regulation": {
+        "Regulation": {
+            "link": "./regulation.html",
+            "content": "The regulation section contains the rules and regulations governing various aspects of academic and non-academic life at the college. Stay informed about college policies, academic regulations, examination procedures, and disciplinary guidelines."
+        }
+    },
+    "research": {
+        "Research": {
+            "link": "./research.html",
+            "content": "Our college is committed to fostering research and innovation. Explore our research initiatives, ongoing projects, collaborations with industry and academia, and research facilities. Discover opportunities for funding, grants, and participation in national and international conferences."
+        }
+    },
+    "staff": {
+        "Staff": {
+            "link": "./staff.html",
+            "content": "Meet the administrative and support staff who work behind the scenes to ensure the smooth functioning of the college. Learn about their roles in admissions, academics, infrastructure maintenance, and student services. Discover our commitment to providing a supportive work environment."
+        }
+    },
+    "student": {
+        "Student": {
+            "link": "./StudentActivity.html",
+            "content": "The student section highlights the various activities and initiatives taken by students at the college. From academic clubs and student councils to cultural events and community service projects, discover the vibrant student life. Get involved in extracurricular activities and unleash your potential."
+        }
+    },
+    "cse": {
+        "CSE": {
+            "link": "./CSE.html",
+            "content": "The Computer Science and Engineering department offers cutting-edge courses and research opportunities in computer science, software engineering, artificial intelligence, and related fields. It covers topics such as programming, algorithms, data structures, and emerging technologies."
+        }
+    },
+    "mba": {
+        "MBA": {
+            "link": "./MBA.html",
+            "content": "The MBA department provides a comprehensive education in business administration, offering courses in management, finance, marketing, human resources, and more. It emphasizes practical learning through case studies, industry projects, and internships, preparing students for leadership roles."
+        }
+    }
+}
