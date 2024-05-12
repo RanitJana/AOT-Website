@@ -68,9 +68,3 @@ if (sessionKey) {
 else {
     createFailedNode();
 }
-
-//back logic
-let home = document.querySelector('.response img');
-home.addEventListener('click', e => {
-    window.history.back();
-})
