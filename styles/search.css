@@ -1,8 +1,25 @@
-main {
+.main {
     display: grid;
     grid-template-columns: auto;
-    padding: 1rem;
     grid-gap: 1rem;
+    padding: 1rem;
+    position: relative;
+}
+.response{
+    background-color: var(--aot-light-color--);
+    box-shadow: 0 0 5px 2.5px rgba(0, 0, 0, 0.144);
+    padding: 1rem;
+    position: sticky;
+    text-align: center;
+    top: 0;
+    background-color: var(--aot-color--);
+    color: white;
+    font-size: 1.5rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
 }
 
 .card,
@@ -11,11 +28,14 @@ main {
     border-radius: 8px;
     box-shadow: var(--normal-shadow--);
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .card p {
     background-color: white;
     padding: 1rem;
+    height: 100%;
 }
 
 .fail {
@@ -30,13 +50,13 @@ main {
 
 header {
     margin-top: -1rem;
-    padding-bottom: 1rem;
-    box-shadow: 0 5px 5px 2.5px rgba(0, 0, 0, 0.144);
 }
-
 @media only screen and (max-width:514px){
-    main{
+    .main{
         padding: 1rem 0;
+    }
+    #id{
+        font-size: 0.9rem;
     }
     .fail,.card{
         border-radius: 0;

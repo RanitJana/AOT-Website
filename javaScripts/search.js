@@ -1,6 +1,6 @@
 let sessionKey = sessionStorage.getItem('res').toLowerCase().trim();
-let main = document.querySelector('main');
-
+let main = document.querySelector('.main');
+let res = document.querySelector('#res');
 function createSuccessNode(objKey, objLink, objContent) {
     let newNode = document.createElement('div');
     newNode.classList.add('card');
@@ -16,8 +16,8 @@ function createFailedNode() {
     newNode.classList.add('fail');
     newNode.innerHTML =
         `
-            <span>No Result is Found For: </span>
-            <span>${sessionKey?sessionKey:'EMPTY!!'}</span>
+            <span>No Result Is Found For: </span>
+            <span>${sessionKey ? sessionKey : 'EMPTY!!'}</span>
     `;
     main.appendChild(newNode);
 }
@@ -33,7 +33,7 @@ function searchKey(obj) {
 if (sessionKey) {
     (
         async function () {
-            console.log(sessionKey)
+            res.innerHTML = `Result : ${sessionKey}`;
             let response = await fetch('../assets/searchKeyowrds/search.json');
             let data = await response.json();
             let firstKey = searchKey(data);

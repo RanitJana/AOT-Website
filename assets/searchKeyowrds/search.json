@@ -17,7 +17,7 @@
             "content": "For any inquiries, feedback, or assistance, you can reach out to us through the contact section. Find our contact details and get in touch with us. Our dedicated team is available to address your queries regarding admissions, academics, events, or any other matter."
         }
     },
-    "departments": {
+    "departments ug pg admission": {
         "Department": {
             "link": "./department.html",
             "content": "Explore the various departments at our college, each offering specialized courses and programs. Learn about the faculty, courses offered, research areas, and departmental activities. Get insights into the department's vision, mission, and its contributions to academic excellence."
@@ -101,7 +101,7 @@
             "content": "Our college is committed to fostering research and innovation. Explore our research initiatives, ongoing projects, collaborations with industry and academia, and research facilities. Discover opportunities for funding, grants, and participation in national and international conferences."
         }
     },
-    "staff teachers": {
+    "staff teachers members": {
         "Staff": {
             "link": "./staff.html",
             "content": "Meet the administrative and support staff who work behind the scenes to ensure the smooth functioning of the college. Learn about their roles in admissions, academics, infrastructure maintenance, and student services. Discover our commitment to providing a supportive work environment."
@@ -159,6 +159,18 @@
         "Campus": {
             "link": "../index.html#imageGallary",
             "content": "The 'Campus Gallery' section offers a visual tour of our college campus. Explore stunning images showcasing our state-of-the-art facilities, beautiful surroundings, vibrant student life, and engaging campus events. Whether you're a prospective student, alumni, or just curious about our campus, this section provides a glimpse into life at our institution. From modern classrooms and laboratories to green spaces and recreational areas, discover the essence of our campus through captivating photographs."
+        }
+    },
+    "ug admission": {
+        "Undergraduate Departments": {
+            "link": "./department.html#ug",
+            "content": "The 'Undergraduate Departments' section provides detailed information about the undergraduate programs offered by our college. Explore the academic structure, courses, and programs available in various departments. Learn about the curriculum, academic requirements, course syllabi, and program outcomes tailored for undergraduate students. Discover opportunities for specialization, internships, and hands-on learning experiences that prepare you for a successful career."
+        }
+    },
+    "pg admission": {
+        "Postgraduate Departments": {
+            "link": "./department.html#pg",
+            "content": "The 'Postgraduate Departments' section offers comprehensive information about the postgraduate programs offered by our college. Explore the academic structure, courses, and programs available in various departments for postgraduate students. Learn about the curriculum, academic requirements, course syllabi, and program outcomes designed to advance your knowledge and expertise in your chosen field. Discover opportunities for research, specialization, and professional development to excel in your career."
         }
     }
 }
