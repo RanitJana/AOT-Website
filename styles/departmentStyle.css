@@ -120,6 +120,12 @@ p,
     border-radius: 5px;
     box-shadow: var(--normal-shadow--);
 }
+.club-intro{
+    color: var(--aot-color--);
+    margin-bottom: 0.5rem;
+    margin-left: 1.2rem;
+    align-self: flex-start;
+}
 
 .swiper-wrapper {
     margin: 1.5rem;
