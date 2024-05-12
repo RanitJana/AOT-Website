@@ -438,7 +438,7 @@ body {
         height: 100%;
         z-index: 100;
         padding: 1rem 1.5rem;
-        transition: all 0.3s ease;
+        transition: all 0.3s ease-out;
     }
 
     .parentGoback {
@@ -618,6 +618,20 @@ nav {
     /* For Internet Explorer/Edge */
     user-select: none;
     /* Standard syntax */
+}
+
+nav {
+    overflow-y: scroll;
+    /* Enable vertical scrolling */
+    scrollbar-width: none;
+    /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none;
+    /* Hide scrollbar for Internet Explorer and Edge */
+}
+
+/* Hide scrollbar for WebKit based browsers */
+nav::-webkit-scrollbar {
+    display: none;
 }
 
 .deny {
