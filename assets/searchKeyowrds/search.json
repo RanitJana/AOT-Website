@@ -71,7 +71,7 @@
             "content": "Our library is a treasure trove of knowledge, housing a vast collection of books, journals, e-books, and digital resources. Explore our library facilities, including study areas, research assistance, and online databases. Discover a hub for intellectual exploration and academic support."
         }
     },
-    "lifeatcollege aot about": {
+    "lifeatcollege aot about campus": {
         "Life at College": {
             "link": "./LifeAOT.html",
             "content": "Discover what life at our college is like. From student clubs and extracurricular activities to campus events and cultural festivals, experience the vibrant college life. Learn about student initiatives, peer support networks, and opportunities for personal and professional growth."
@@ -147,6 +147,18 @@
         "Rankings": {
             "link": "../index.html#collegeRanking",
             "content": "Our college has consistently ranked among the top institutions in [field or region]. This section provides details about our rankings and recognition in various academic and research domains. Explore our achievements, awards, and accolades that showcase our commitment to excellence in education and innovation. Whether you're a prospective student, researcher, or industry partner, our rankings reflect our dedication to providing quality education and fostering a culture of academic excellence."
+        }
+    },
+    "documents admission": {
+        "Documents": {
+            "link": "../index.html#admissionEnquiry",
+            "content": "Important information regarding the admission process at our college. Here you can find details about the documents required for admission, such as academic transcripts, certificates, identity proofs, etc. We understand that the admission process can be daunting, so this section aims to simplify it by providing a comprehensive list of necessary documents and guidelines. Whether you're a prospective student or have already been accepted, make sure to check this section for all the necessary paperwork."
+        }
+    },
+    "campus gallary": {
+        "Campus": {
+            "link": "../index.html#imageGallary",
+            "content": "The 'Campus Gallery' section offers a visual tour of our college campus. Explore stunning images showcasing our state-of-the-art facilities, beautiful surroundings, vibrant student life, and engaging campus events. Whether you're a prospective student, alumni, or just curious about our campus, this section provides a glimpse into life at our institution. From modern classrooms and laboratories to green spaces and recreational areas, discover the essence of our campus through captivating photographs."
         }
     }
 }
