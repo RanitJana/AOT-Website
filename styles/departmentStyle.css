@@ -920,15 +920,10 @@ nav {
 }
 
 nav {
-    overflow-y: scroll;
-    /* Enable vertical scrolling */
     scrollbar-width: none;
-    /* Hide scrollbar for Firefox */
     -ms-overflow-style: none;
-    /* Hide scrollbar for Internet Explorer and Edge */
 }
 
-/* Hide scrollbar for WebKit based browsers */
 nav::-webkit-scrollbar {
     display: none;
 }
