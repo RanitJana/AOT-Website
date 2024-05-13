@@ -900,12 +900,21 @@
         function hidesidebar() {
             let bar = document.querySelector('.hamburger');
             bar.style.right = '-220px';
+            document.body.style.overflow = ' ';
         }
 
         function showsidebar() {
             let bar = document.querySelector('.hamburger');
             bar.style.right = '0';
+            document.body.style.overflow = 'hidden';
         }
+
+        window.addEventListener('click', e => {
+            let bar = document.querySelector('.hamburger');
+            if (e.x <= window.innerWidth - bar.clientWidth) {
+                hidesidebar();
+            }
+        });
 
 
         const questions = document.querySelectorAll('.question');

@@ -320,9 +320,9 @@
             bar.style.right = '0';
             document.body.style.overflow = 'hidden';
         }
-        document.body.addEventListener('click', function (event) {
+        window.addEventListener('click', e => {
             let bar = document.querySelector('.hamburger');
-            if (!hamburger.contains(event.target)) {
+            if (e.x <= window.innerWidth - bar.clientWidth) {
                 hidesidebar();
             }
         });
