@@ -1,5 +1,5 @@
 let userInp = sessionStorage.getItem('res');
-let sessionKey = sessionStorage.getItem('res').toLowerCase().trim().split(' ');
+let sessionKey = sessionStorage.getItem('res')?.toLowerCase().trim().split(' ');
 
 let main = document.querySelector('.main');
 let res = document.querySelector('#res');
@@ -40,10 +40,10 @@ function searchKey(obj) {
     return ans;
 }
 
+res.innerHTML = `Result : ${userInp?userInp:'Empty'}`;
 if (sessionKey) {
     (
         async function () {
-            res.innerHTML = `Result : ${userInp}`;
             let response = await fetch('../assets/searchKeyowrds/search.json');
             let data = await response.json();
             let firstKey = searchKey(data);

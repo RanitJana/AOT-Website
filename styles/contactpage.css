@@ -135,6 +135,19 @@ main section h2 {
     mix-blend-mode: multiply;
 }
 
+.content{
+    display: flex;
+    align-items: center;
+}
+.copyBtn{
+    transition: all 0.3s ease;
+    width: 1.2rem;
+    margin-left: 0.5rem;
+}
+.copyBtn:hover{
+    cursor: pointer;
+}
+
 @media only screen and (min-width:1097px) {
     .banner {
         justify-content: center;

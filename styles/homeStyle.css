@@ -999,8 +999,7 @@ main>.content>.first {
 
 .eventBox:hover {
     cursor: pointer;
-    scale: 1.01;
-    transform: rotate(3deg);
+    scale: 1.02;
 }
 
 .writingContent {
@@ -1051,10 +1050,6 @@ main>.content>.first {
     margin-bottom: 0;
     border-radius: 8px;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     overflow: hidden;
 }
 
@@ -1073,9 +1068,11 @@ main>.content>.first {
     line-height: 1.5rem;
 }
 
-.updateBox a:hover {
+.updateBox:hover {
+    cursor: pointer;
     text-decoration: underline;
     color: purple;
+    background-color: rgba(128, 128, 128, 0.272);
 }
 
 .updateBox p {
@@ -1912,13 +1909,36 @@ nav a {
 .ninth p {
     width: 80%;
     text-wrap: pretty;
-    text-align: center;
+    text-align: right;
     padding: 1rem;
     font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ninth p strong {
+    margin-right: 0.5rem;
 }
 
 .ninth p span {
     user-select: text;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ninth p span img {
+    transition: all 0.3s ease;
+    width: 1.2rem;
+    margin-left: 0.5rem;
+}
+
+.ninth p span img:hover {
+    cursor: pointer;
 }
 
 .ninth iframe {
