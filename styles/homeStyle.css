@@ -1909,12 +1909,12 @@ nav a {
 .ninth p {
     width: 80%;
     text-wrap: pretty;
-    text-align: right;
     padding: 1rem;
     font-size: 1.1rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .ninth p strong {
@@ -1922,22 +1922,26 @@ nav a {
 }
 
 .ninth p span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.addressText{
     user-select: text;
     background-color: white;
     padding: 0.5rem;
     border-radius: 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.ninth p span img {
+}
+.ninth img {
     transition: all 0.3s ease;
     width: 1.2rem;
     margin-left: 0.5rem;
+    margin-bottom: -0.25rem;
 }
 
-.ninth p span img:hover {
+.ninth img:hover {
     cursor: pointer;
 }
 
@@ -2189,10 +2193,6 @@ aside .content>img {
     .eighth .companies .company img {
         width: 6rem;
         padding: 0;
-    }
-
-    .ninth p {
-        font-size: 0.9rem;
     }
 
     .eighth .companies .company {
