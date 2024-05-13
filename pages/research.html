@@ -312,16 +312,21 @@
         function hidesidebar() {
             let bar = document.querySelector('.hamburger');
             bar.style.right = '-220px';
+            document.body.style.overflow = '';
         }
 
         function showsidebar() {
             let bar = document.querySelector('.hamburger');
             bar.style.right = '0';
+            document.body.style.overflow = 'hidden';
         }
-        function showsidebar() {
+        document.body.addEventListener('click', function (event) {
             let bar = document.querySelector('.hamburger');
-            bar.style.right = '0';
-        }
+            if (!hamburger.contains(event.target)) {
+                hidesidebar();
+            }
+        });
+
         const icon = document.querySelector('.scrollTo');
         window.addEventListener('scroll', () => {
             if (window.scrollY > window.innerHeight) {
