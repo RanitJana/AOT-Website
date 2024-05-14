@@ -1239,8 +1239,8 @@ nav ul {
     color: white;
 }
 
-.event p{
-    /* text-align: start; */
+.event h2{
+    color: var(--aot-dark-color--);
 }
 
 .secondBtn {
