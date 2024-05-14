@@ -3,7 +3,7 @@
 
 .thin-line {
     border: none;
-    border-top: 1px solid #000; 
+    border-top: 1px solid #000;
     margin: 10px 0;
 }
 
@@ -13,7 +13,7 @@
     align-items: center;
 }
 
-.beforeIntro{
+.beforeIntro {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,7 +22,8 @@
     box-shadow: 0 2px 5px 5px rgba(0, 0, 0, 0.203);
     z-index: 5;
 }
-.back-btn{
+
+.back-btn {
     height: 100%;
     display: flex;
     justify-content: center;
@@ -34,7 +35,7 @@
 }
 
 
-.back-btn img{
+.back-btn img {
     position: relative;
     margin: 0;
     padding: 0.5rem;
@@ -42,10 +43,11 @@
     width: 3.3rem;
     mix-blend-mode: multiply;
     left: 0;
-    
+
     cursor: pointer;
 }
-.beforeIntro h1{
+
+.beforeIntro h1 {
     width: 100%;
     height: 100%;
     margin: 0;
@@ -234,6 +236,7 @@ span.prev:hover {
     transition: all 0.4s;
     padding: 10px;
 }
+
 @media only screen and (max-width:1050px) {
     .achivement {
         min-width: none;
@@ -253,7 +256,7 @@ span.prev:hover {
 
 .achivementsPrograms .programs {
     width: 29.999%;
-    padding:  0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -293,9 +296,11 @@ span.prev:hover {
     transform: translate(5px, -10px);
 }
 
-.program a p, .program a h3 {
+.program a p,
+.program a h3 {
     text-align: center;
 }
+
 .program a {
     text-decoration: none;
     color: #222;
@@ -311,7 +316,7 @@ span.prev:hover {
 /* =================================    curriculum    ============================= */
 
 .curriculum {
-    margin: 1.5rem 1rem ;
+    margin: 1.5rem 1rem;
     padding: 1rem 1.5rem;
     background-color: var(--aot-light-color--);
     box-shadow: var(--normal-shadow--);
@@ -325,7 +330,8 @@ span.prev:hover {
 .curriculum ul li {
     font-size: 1em;
 }
-.curriculum ul li a{
+
+.curriculum ul li a {
     text-decoration: none;
     color: #222;
 }
@@ -334,7 +340,7 @@ span.prev:hover {
 
 
 .research {
-    margin: 1.5rem 1rem ;
+    margin: 1.5rem 1rem;
     padding: 1rem 1rem 1rem 1.5rem;
     background-color: var(--aot-light-color--);
     box-shadow: var(--normal-shadow--);
@@ -350,7 +356,7 @@ span.prev:hover {
     font-size: 1em;
 }
 
-a{
+a {
     text-decoration: none;
     color: purple;
 }
@@ -397,19 +403,21 @@ td:nth-child(2) {
     margin: 10px 0px;
     background-color: var(--aot-light-color--);
     box-shadow: var(--normal-shadow--);
-    border-radius: 4px;
+    border-radius: 20px;
     width: 900px;
+    transition: all 0.3s ease;
 }
 
-.faq:hover{
-    box-shadow: -3px 3px 3px rgb(134, 134, 134), -5px 5px 5px 4px rgba(55, 63, 116, 0.5);
+.faq:hover {
+    background-color: rgb(234, 234, 234);
 }
 
 .faq p a {
     text-decoration: none;
     color: #222;
 }
-.question{
+
+.question {
     padding: 10px 13px;
     cursor: pointer;
     font-size: 1.1rem;
@@ -418,34 +426,56 @@ td:nth-child(2) {
     align-items: center;
 }
 
-.question>img{
+.question>img {
     width: 1.6rem;
     margin-left: 10px;
 }
 
-.answer{
-    padding: 10px 13px;
-    display: none;
+.answer {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-@keyframes showAnswer{
-    from{
-        scale: 0;
+@keyframes revealHeight {
+    0% {
+        max-height: 0;
+        padding: 0 13px;
     }
-    to{
-        scale: 1;
+
+    100% {
+        max-height: 20rem;
+        padding: 10px 13px;
     }
 }
-.displayAnswer{
-    display: block;
-    animation: showAnswer 0.3s ease;
+
+@keyframes hideHeight {
+    0% {
+        max-height: 20rem;
+        padding: 10px 13px;
+    }
+
+    100% {
+        max-height: 0;
+        padding: 0 13px;
+    }
 }
+
+.displayAnswer {
+    animation: revealHeight 0.5s ease forwards;
+}
+
+.hideAnswer {
+    animation: hideHeight 0.5s ease forwards;
+}
+
 
 
 @keyframes rotateIcon {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(90deg);
     }
@@ -460,12 +490,15 @@ td:nth-child(2) {
     from {
         transform: rotate(90deg);
     }
+
     to {
         transform: rotate(0deg);
     }
 }
-.reverseRotate{
-    animation:  reverseRotateIcon 0.3s ease forwards;;
+
+.reverseRotate {
+    animation: reverseRotateIcon 0.3s ease forwards;
+    ;
 }
 
 
@@ -480,33 +513,35 @@ td:nth-child(2) {
     position: fixed;
     right: 3%;
     bottom: 3%;
-    z-index:10;
+    z-index: 10;
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.293);
     transition: all 0.3s ease;
 }
-.to-top:active{
+
+.to-top:active {
     scale: 1.1;
 }
 
 
 @keyframes to-top-pop-up {
-    from{
+    from {
         scale: 0;
     }
-    to{
+
+    to {
         scale: 1;
     }
 }
 
-.deactive-btn{
-   animation: to-top-pop-up 0.3s ease reverse ;
+.deactive-btn {
+    animation: to-top-pop-up 0.3s ease reverse;
 }
 
 
 .active-btn {
     display: block;
     opacity: 1;
-    animation: to-top-pop-up 0.3s ease ;
+    animation: to-top-pop-up 0.3s ease;
 }
 
 .to-top a {
@@ -530,30 +565,32 @@ td:nth-child(2) {
 /* ================================================================== */
 
 
-.link-img{
+.link-img {
     width: 1rem;
     margin-left: 0.3rem;
     position: relative;
     top: 13%;
 }
 
-.intro-slide-container{
+.intro-slide-container {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     margin-top: 1rem;
 }
-.intro-slide-container .intro-btn{
+
+.intro-slide-container .intro-btn {
     position: absolute;
     width: 100%;
     top: 50%;
 }
 
-.next{
+.next {
     right: 30px;
 }
-.prev{
+
+.prev {
     left: 30px;
 }
 
@@ -563,39 +600,46 @@ td:nth-child(2) {
 
 
 @media only screen and (max-width: 1000px) and (min-width: 600px) {
-    .achivementsPrograms .achivements{
+    .achivementsPrograms .achivements {
         width: 59.99%;
     }
+
     .achivementsPrograms .programs {
         width: 39.99%;
-    }    
+    }
 }
-@media only screen and (max-width: 650px){
-    .achivementsPrograms{
+
+@media only screen and (max-width: 650px) {
+    .achivementsPrograms {
         display: flex;
         flex-direction: column;
     }
-    .achivementsPrograms .achivements{
+
+    .achivementsPrograms .achivements {
         width: 100%;
     }
+
     .achivementsPrograms .programs {
         width: 100%;
-    }   
-    .achivement{
+    }
+
+    .achivement {
         max-width: none;
         width: 100%;
         padding: 10px;
     }
-    .program{
+
+    .program {
         max-width: none;
         width: 100%;
         padding: 10px;
     }
-    #program1{
+
+    #program1 {
         margin-top: 1rem;
     }
 
-    .programHeading h2{
+    .programHeading h2 {
         width: 100dvw;
         background-color: #232C69;
         color: white;
@@ -605,29 +649,31 @@ td:nth-child(2) {
         font-size: 1.7em;
 
     }
-    
+
 
 }
 
 @media only screen and (max-width:400px) {
-    .banner .middle h1{
+    .banner .middle h1 {
         font-size: 1.8em;
     }
 }
 
-@media only screen  and (max-width:950px) {
-    .intro-slide-container{
+@media only screen and (max-width:950px) {
+    .intro-slide-container {
         height: 245px;
-    }    
+    }
 
     .intro-slide-container .intro-btn {
         top: 25%;
     }
-    .headings{
+
+    .headings {
         padding: 5px 0px;
         margin-top: 10px;
         font-size: 1.5em;
     }
+
     .beforeIntro img {
         padding: 0.5em;
         width: 3.1rem;
@@ -636,12 +682,14 @@ td:nth-child(2) {
 }
 
 @media only screen and (max-width:650px) {
-    .facility{
+    .facility {
         width: 100%;
     }
-    .headings{
+
+    .headings {
         padding: 3px 0px;
     }
+
     .beforeIntro img {
         width: 2.86rem;
     }
@@ -649,55 +697,67 @@ td:nth-child(2) {
 }
 
 @media only screen and (max-width:950px) {
-    .faqs ul{
+    .faqs ul {
         width: 100%;
     }
-    .faqs ul li{
+
+    .faqs ul li {
         width: 100%;
         display: flex;
         justify-content: center;
-        
+
     }
-    .faq{
+
+    .faq {
         width: 100%;
     }
 }
 
-@media only screen and (max-width:630px){
-    .intro-slide-container{
+@media only screen and (max-width:630px) {
+    .intro-slide-container {
         padding: 0;
         margin-top: 0;
     }
-    .intro-slides{
+
+    .intro-slides {
         border-radius: 0px;
     }
-    .infrastructure{
+
+    .infrastructure {
         padding: 0;
         margin: 10px 0;
     }
-    .facility{
+
+    .facility {
         margin: 5px 0;
     }
-    .achivementsPrograms{
+
+    .achivementsPrograms {
         padding: 5px 0;
     }
-    .achivement{
+
+    .achivement {
         margin: 5px 0;
     }
+
     .programHeading h2 {
         margin-top: 3px;
     }
-    .program{
+
+    .program {
         margin: 5px 0;
     }
-    .curriculum{
+
+    .curriculum {
         margin: 0.5rem 0;
     }
-    .research{
+
+    .research {
         margin: 0.5rem 0;
     }
-    .faqs{
-        padding:  0;
+
+    .faqs {
+        padding: 0;
     }
 
 }
