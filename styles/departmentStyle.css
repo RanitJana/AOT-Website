@@ -1239,6 +1239,10 @@ nav ul {
     color: white;
 }
 
+.event p{
+    /* text-align: start; */
+}
+
 .secondBtn {
     height: 45px;
     width: 45px;
