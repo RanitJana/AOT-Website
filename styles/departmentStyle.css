@@ -107,6 +107,18 @@ p,
     width: 100%;
 }
 
+/* .upcomingEvent{
+    width: 100%;
+}
+
+.upcoming-event-container{
+    width: 100%;
+}
+
+.event{
+    width: 100%;
+} */
+
 .pastEvent {
     padding: 1rem;
     box-shadow: var(--normal-shadow--);
@@ -1173,11 +1185,7 @@ nav ul {
     }
 }
 
-.event h2 {
-    color: #333;
-    text-align: center;
-    /* margin-bottom: 20px; */
-}
+
 
 .mySwiper2 {
     position: relative;
@@ -1241,6 +1249,11 @@ nav ul {
 
 .event h2{
     color: var(--aot-dark-color--);
+    text-align: start;
+}
+
+.event .lekha {
+    width: 90%;
 }
 
 .secondBtn {
@@ -1280,3 +1293,15 @@ nav ul {
 .upcomingEvent-swiper-wrapper {
     margin: 0.5rem;
 }
+
+/* .upcomingEvent{
+    width: 100%;
+}
+
+.upcoming-event-container{
+    width: 100%;
+}
+
+.event{
+    width: 100%;
+} */
