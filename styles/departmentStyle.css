@@ -1239,6 +1239,10 @@ nav ul {
     color: white;
 }
 
+.event h2{
+    color: var(--aot-dark-color--);
+}
+
 .secondBtn {
     height: 45px;
     width: 45px;
