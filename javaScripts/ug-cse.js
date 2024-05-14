@@ -15,13 +15,13 @@ function slideNext() {
         count++;
     }
     slideImage[count].style.animation = 'next2 0.5s ease-in forwards';
-    
+
 }
 
 prev.addEventListener('click', slidePrev);
 function slidePrev() {
     slideImage[count].style.animation = 'prev1 0.5s ease-in forwards';
-    if (count==0) {
+    if (count == 0) {
         count = slideImage.length - 1;
     }
     else {
@@ -31,16 +31,16 @@ function slidePrev() {
 }
 
 // Auto slideing
-function autoSliding(){
-    deletInterval=setInterval(()=>{
+function autoSliding() {
+    deletInterval = setInterval(() => {
         slideNext();
-    },4000)
+    }, 4000)
 }
 autoSliding();
 
 // Stop auto sliding when mouse is over
 const container = document.querySelector('.intro-slide-container');
-container.addEventListener('mouseover', function(){
+container.addEventListener('mouseover', function () {
     clearInterval(deletInterval);
 });
 
@@ -64,6 +64,7 @@ questions.forEach(question => {
             imgElement.classList.remove('rotate', 'reverseRotate'); // Remove previous rotation classes
             if (otherAnswer !== question.nextElementSibling && otherAnswer.classList.contains('displayAnswer')) {
                 otherAnswer.classList.remove('displayAnswer');
+                otherAnswer.classList.add('hideAnswer');
                 const imgElement = question.querySelector('.rotate-icon');
                 imgElement.classList.toggle('reverseRotate');
             }
@@ -72,6 +73,7 @@ questions.forEach(question => {
         // Toggle the display of the clicked answer section
         const answer = question.nextElementSibling;
         answer.classList.toggle('displayAnswer');
+        answer.classList.toggle('hideAnswer');
 
         // Toggle the rotation of the clicked question's icon
         const imgElement = question.querySelector('.rotate-icon');
