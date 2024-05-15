@@ -92,7 +92,7 @@ p,
 }
 
 .news {
-    padding: 1rem;
+    padding: 1rem 2rem;
     grid-area: news;
     box-shadow: var(--normal-shadow--);
     border-radius: 8px;
@@ -100,24 +100,27 @@ p,
     background-color: var(--aot-light-color--);
 }
 
+.news .content,
+.upcomingEvent .content {
+    width: 100%;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+}
 
 .events {
-    /* padding: 1rem; */
     grid-area: event;
     width: 100%;
 }
 
-/* .upcomingEvent{
-    width: 100%;
+.upcomingEvent {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    padding: 1rem 2rem;
+    box-shadow: var(--normal-shadow--);
+    border-radius: 8px;
+    background-color: var(--aot-light-color--);
 }
-
-.upcoming-event-container{
-    width: 100%;
-}
-
-.event{
-    width: 100%;
-} */
 
 .pastEvent {
     padding: 1rem;
@@ -232,6 +235,7 @@ p,
 
 .syllabus h2 {
     color: var(--aot-color--);
+    padding-bottom: 1rem;
 }
 
 .syllabus>.content {
@@ -1067,6 +1071,18 @@ nav ul {
     }
 }
 
+@media only screen and (max-width:1052px) {
+    .sec1 {
+        display: grid;
+        padding: 1rem;
+        grid-template-areas:
+            'news'
+            'event'
+            'notice'
+            'map';
+    }
+}
+
 @media only screen and (max-width:760px) {
     .firstContainer {
         grid-template-columns: auto;
@@ -1079,15 +1095,6 @@ nav ul {
         margin: 0.25rem;
     }
 
-    .sec1 {
-        display: grid;
-        padding: 1rem;
-        grid-template-areas:
-            'news'
-            'event'
-            'notice'
-            'map';
-    }
 }
 
 @media only screen and (max-width:630px) {
@@ -1115,24 +1122,18 @@ nav ul {
     }
 
     .syllabus {
-        padding: 1rem;
         border-radius: 0;
         margin: 1rem 0;
     }
 
-    .syllabus>.content>div {
-        margin: 1rem;
-    }
 
     .firstContainer {
-        /* padding: 0; */
         padding: 1rem;
         padding-top: 0;
     }
 
     .firstContainer .departmentBox {
         margin: 0.25rem 0;
-        /* width: 100%; */
     }
 
     .events {
@@ -1143,7 +1144,9 @@ nav ul {
         padding: 0px 1rem;
     }
 
-    .ninth {
+    .ninth,
+    .upcomingEvent,
+    .news {
         margin: 0;
         border-radius: 0;
     }
@@ -1183,8 +1186,13 @@ nav ul {
     }
 }
 
+
 @media only screen and (max-width:501px) {
-    .ninth {
+
+    .syllabus,
+    .ninth,
+    .news,
+    .upcomingEvent {
         padding: 1rem;
     }
 }
@@ -1231,14 +1239,7 @@ nav ul {
 }
 
 /* CSS for Upcoming Event Section */
-.upcomingEvent {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    padding: 1rem;
-    box-shadow: var(--normal-shadow--);
-    border-radius: 8px;
-    background-color: var(--aot-light-color--);
-}
+
 
 
 .upcoming-event-container {
@@ -1328,7 +1329,8 @@ nav ul {
 }
 
 .event .lekha {
-    width: 90%;
+    width: 100%;
+    margin-bottom: 1rem;
 }
 
 .secondBtn {
