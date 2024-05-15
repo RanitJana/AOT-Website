@@ -317,20 +317,80 @@ p,
     align-self: flex-start;
 }
 
-.map iframe {
+.ninth {
+    background-color: var(--aot-light-color--);
+    box-shadow: var(--normal-shadow--);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 2rem;
+}
+
+.ninth h2 {
+    color: var(--aot-color--);
+    margin-bottom: 0.5rem;
+    align-self: flex-start;
+}
+
+.ninth iframe {
     width: 80%;
     height: 20rem;
 }
 
-.map p {
-    width: 80%;
-    text-wrap: pretty;
-    text-align: center;
+.ninth>span {
+    background-color: white;
     padding: 1rem;
 }
 
-.map p span {
+.ninth>span li {
+    margin-left: 1rem;
+}
+
+.ninth p {
+    width: 80%;
+    text-wrap: pretty;
+    padding: 1rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.ninth p strong {
+    margin-right: 0.5rem;
+}
+
+.ninth p span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.addressText {
     user-select: text;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 2px;
+
+}
+
+.ninth img {
+    transition: all 0.3s ease;
+    width: 1.2rem;
+    margin-left: 0.5rem;
+    margin-bottom: -0.25rem;
+}
+
+.ninth img:hover {
+    cursor: pointer;
+}
+
+.ninth iframe {
+    animation: skeleton-animation 1s linear alternate;
 }
 
 nav>ul>li>div {
@@ -1082,6 +1142,15 @@ nav ul {
     .pastEvent {
         padding: 0px 1rem;
     }
+
+    .ninth {
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .ninth iframe {
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width:750px) {
@@ -1111,6 +1180,12 @@ nav ul {
     .banner .middle h1 {
         font-size: 1.95rem;
         line-height: 2rem;
+    }
+}
+
+@media only screen and (max-width:501px) {
+    .ninth {
+        padding: 1rem;
     }
 }
 
@@ -1247,7 +1322,7 @@ nav ul {
     color: white;
 }
 
-.event h2{
+.event h2 {
     color: var(--aot-dark-color--);
     text-align: start;
 }

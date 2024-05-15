@@ -122,3 +122,16 @@ getFutureEventData().then(() => {
         });
     })
 })
+
+//copy text
+let copyAddress = document.querySelector('.copyAddress');
+let addressText = document.querySelector('.addressText');
+copyAddress.addEventListener('click', () => {
+    let text = addressText.textContent;
+    navigator.clipboard.writeText(text);
+    copyAddress.style.scale = '0';
+    setTimeout(()=>{
+        copyAddress.setAttribute('src','../assets/images/icons8-double-tick-24.png');
+        copyAddress.style.scale = '1';
+    },100)
+})
