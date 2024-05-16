@@ -1295,7 +1295,7 @@ nav ul {
 
 .eventBox:hover {
     cursor: pointer;
-    scale: 1.1;
+    scale: 1.01;
 }
 
 .event h2 {
