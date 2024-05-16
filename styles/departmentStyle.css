@@ -1242,13 +1242,18 @@ nav ul {
 
 
 .upcoming-event-container {
+    background:url('../assets/images/collegeblur.jpg') no-repeat center;
+    background-size: cover;
+    border-radius: 8px;
     max-width: 34rem;
+    height: 25rem;
     margin: auto;
 }
 
-@media only screen and (max-width:1200px) {
+
+@media only screen and (max-width:663px) {
     .upcoming-event-container {
-        max-width: 24rem;
+        max-width: 25rem;
         margin: auto;
     }
 }
@@ -1264,62 +1269,33 @@ nav ul {
 
 .mySwiper2 {
     position: relative;
+    height: 25rem;
+    border-radius: 8px;
 }
 
 .mySwiper2-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
+    border-radius: 8px;
+    position: relative;
 }
 
 .eventBox {
-    transition: transform 0.3s ease-in-out;
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    /* Adjust the height as needed */
-    position: relative;
-    border-radius: 0.7rem;
+    animation: skeleton-animation2 1s linear infinite alternate;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 85%;
+    height: auto;
+    max-height: 80%;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: -5px 5px 10px 5px rgba(0, 0, 0, 0.384);
 }
 
 .eventBox:hover {
-    transform: scale(1.05);
-}
-
-.writingContent {
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.557);
-    backdrop-filter: blur(1px);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    border-radius: 0 0 0.7rem 0.7rem;
-}
-
-.writingContent h3 {
-    margin: 0;
-    color: white;
-    font-size: 24px;
-    text-align: center;
-}
-
-.writingContent p {
-    margin: 10px 0 0;
-    text-align: center;
-    color: white;
+    cursor: pointer;
+    scale: 1.1;
 }
 
 .event h2 {
@@ -1369,15 +1345,3 @@ nav ul {
 .upcomingEvent-swiper-wrapper {
     margin: 0.5rem;
 }
-
-/* .upcomingEvent{
-    width: 100%;
-}
-
-.upcoming-event-container{
-    width: 100%;
-}
-
-.event{
-    width: 100%;
-} */

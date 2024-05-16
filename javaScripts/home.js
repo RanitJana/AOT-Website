@@ -148,15 +148,8 @@ async function getFutureEventData() {
         newNode.classList.add('swiper-slide');
         newNode.innerHTML =
             `
-            <div class="eventBox">
-                <div class="writingContent">
-                    <h3>${h3}</h3>
-                    <p>${span}</p>
-                </div>
-            </div>
-         `;
-        newNode.childNodes[1].style.background = `url('${srcImg}') center no-repeat`;
-        newNode.childNodes[1].style.backgroundSize = "cover";
+            <img src='${srcImg}' loading='lazy' class="eventBox">
+            `;
         secondSwiper.appendChild(newNode);
     })
 }
@@ -176,8 +169,8 @@ getFutureEventData().then(() => {
                 prevEl: ".swiper-button-prev",
             },
             autoplay: {
-                delay: 2000,
-            },
+                delay: 3000,
+            }
         });
     })
     document.querySelectorAll('.eventBox').forEach(val => {
