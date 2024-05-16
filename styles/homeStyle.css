@@ -1949,6 +1949,8 @@ aside {
     width: fit-content;
     height: fit-content;
     display: none;
+    width: fit-content;
+    max-width: 20rem;
 }
 
 aside>img {
@@ -1962,15 +1964,15 @@ aside>img {
     right: 0;
     transform: translate(50%, -50%);
 }
-
+aside .content{
+    display: flex;
+}
 aside>img:hover {
     cursor: pointer;
 }
 
 aside .content>img {
-    max-height: 30rem;
-    min-height: 20rem;
-    height: 100%;
+    width: 100%;
     object-fit: contain;
 }
 
