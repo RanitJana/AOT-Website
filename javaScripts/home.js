@@ -148,7 +148,7 @@ async function getFutureEventData() {
         newNode.classList.add('swiper-slide');
         newNode.innerHTML =
             `
-            <img src='${srcImg}' loading='lazy' class="eventBox" decoding="async">
+            <img src='${srcImg}' loading='lazy' class="eventBox" decoding="async" alt="Event">
             `;
         secondSwiper.appendChild(newNode);
     })
@@ -309,7 +309,7 @@ if (!sessionStorage.getItem('loadingPage')) {
             deny.classList.add('arrival');
             deny.classList.remove('leave');
             aside.style.display = 'block';
-            asideContent.innerHTML = `<img decoding="async" src="../assets/aside news${data.path}" alt="">`;
+            asideContent.innerHTML = `<img decoding="async" src="../assets/aside news${data.path}" alt="news">`;
         })
         .catch(err => console.log(err));
 }
