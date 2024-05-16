@@ -84,7 +84,7 @@ async function getFutureEventData() {
         newNode.classList.add('swiper-slide');
         newNode.innerHTML =
         `
-        <img src='${srcImg}' loading='lazy' class="eventBox">
+        <img src='${srcImg}' loading='lazy' class="eventBox" decoding="async">
         `;
         secondSwiper.appendChild(newNode);
     })
