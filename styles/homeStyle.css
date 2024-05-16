@@ -1331,6 +1331,10 @@ main>.content>.first {
     color: yellow;
     letter-spacing: 0.1rem;
 }
+.exp>.blackCover>.content>div>span:nth-child(2n){
+    color: orange;
+    margin-left: 0.2rem;
+}
 
 .exp>.blackCover>.content>div {
     font-size: 1.2rem;

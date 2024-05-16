@@ -199,7 +199,7 @@ scrollToTop.addEventListener('click', e => {
 window.addEventListener('scroll', visibility)
 window.addEventListener('load', visibility)
 
-let numbers = document.querySelectorAll('.exp > .blackCover > .content > div > span');
+let numbers = document.querySelectorAll('.exp > .blackCover > .content > div > span:first-child');
 
 window.addEventListener('scroll', () => {
     if (elementIsVisibleInViewport(numbers[0], true) || elementIsVisibleInViewport(numbers[numbers.length - 1], true)) {
