@@ -1,0 +1,172 @@
+{
+    "achievement rankings": {
+        "Achievement": {
+            "link": "./achivemant",
+            "content": "This section showcases various achievements of the college such as awards, recognitions, and notable accomplishments by students and faculty members. It includes details about academic achievements, research publications, participation in competitions, and other accolades."
+        }
+    },
+    "career": {
+        "Career": {
+            "link": "./career",
+            "content": "The career section provides information about career opportunities, internships, and placement assistance offered by the college to its students. It features guidance on career planning, skill development workshops, industry interactions, and internship programs."
+        }
+    },
+    "contacts call mail email phone number": {
+        "Contact": {
+            "link": "./contact",
+            "content": "For any inquiries, feedback, or assistance, you can reach out to us through the contact section. Find our contact details and get in touch with us. Our dedicated team is available to address your queries regarding admissions, academics, events, or any other matter."
+        }
+    },
+    "departments ug pg admission academy": {
+        "Department": {
+            "link": "./department",
+            "content": "Explore the various departments at our college, each offering specialized courses and programs. Learn about the faculty, courses offered, research areas, and departmental activities. Get insights into the department's vision, mission, and its contributions to academic excellence."
+        },
+        "CSE": {
+            "link": "./CSE",
+            "content": "The Computer Science and Engineering department offers cutting-edge courses and research opportunities in computer science, software engineering, artificial intelligence, and related fields. It covers topics such as programming, algorithms, data structures, and emerging technologies."
+        },
+        "MBA": {
+            "link": "./MBA",
+            "content": "The MBA department provides a comprehensive education in business administration, offering courses in management, finance, marketing, human resources, and more. It emphasizes practical learning through case studies, industry projects, and internships, preparing students for leadership roles."
+        }
+    },
+    "curriculum": {
+        "Curriculum": {
+            "link": "./curriculam",
+            "content": "The curriculum section outlines the academic structure, courses, and programs offered by the college. Discover the academic requirements, course syllabi, and program outcomes. Explore the flexibility in choosing electives, specializations, and interdisciplinary courses."
+        }
+    },
+    "events upcoming": {
+        "Events": {
+            "link": "./event",
+            "content": "Stay updated with the latest events happening at the college. From seminars and workshops to cultural events and sports tournaments, find all event details here. Get information about guest lectures, industry visits, academic conferences, and student-led activities."
+        }
+    },
+    "facility": {
+        "Facility": {
+            "link": "./facility",
+            "content": "Explore the facilities available at our college, including libraries, laboratories, sports complexes, and student accommodation. Discover a conducive learning environment with state-of-the-art infrastructure and amenities. Learn about our commitment to providing a safe and comfortable campus."
+        }
+    },
+    "faculty": {
+        "Faculty": {
+            "link": "./faculty",
+            "content": "Meet our esteemed faculty members who are experts in their fields. Learn about their qualifications, research interests, publications, and industry experience. Get insights into their teaching methodologies, mentorship, and involvement in student development activities."
+        }
+    },
+    "joinus connect": {
+        "Join Us": {
+            "link": "./JoinUs",
+            "content": "Interested in joining our college? Find information about admission procedures, eligibility criteria, scholarships, and application deadlines in the join us section. Explore the benefits of studying at our institution and take the first step towards a rewarding academic journey."
+        }
+    },
+    "library": {
+        "Library": {
+            "link": "./library",
+            "content": "Our library is a treasure trove of knowledge, housing a vast collection of books, journals, e-books, and digital resources. Explore our library facilities, including study areas, research assistance, and online databases. Discover a hub for intellectual exploration and academic support."
+        }
+    },
+    "lifeatcollege aot about campus": {
+        "Life at College": {
+            "link": "./LifeAOT",
+            "content": "Discover what life at our college is like. From student clubs and extracurricular activities to campus events and cultural festivals, experience the vibrant college life. Learn about student initiatives, peer support networks, and opportunities for personal and professional growth."
+        }
+    },
+    "placement record": {
+        "Placement": {
+            "link": "./placement",
+            "content": "The placement section provides information about placement opportunities and assistance provided by the college. Learn about the placement process, company profiles, campus recruitment drives, and alumni success stories. Explore career guidance and skill development programs."
+        }
+    },
+    "programme": {
+        "Programme": {
+            "link": "./programStructure",
+            "content": "Explore our academic programs and courses offered across various disciplines. Find detailed information about course structure, duration, eligibility criteria, and learning outcomes. Get insights into industry collaborations, internships, and global exchange programs."
+        }
+    },
+    "regulations rules": {
+        "Regulation": {
+            "link": "./regulation",
+            "content": "The regulation section contains the rules and regulations governing various aspects of academic and non-academic life at the college. Stay informed about college policies, academic regulations, examination procedures, and disciplinary guidelines."
+        }
+    },
+    "research": {
+        "Research": {
+            "link": "./research",
+            "content": "Our college is committed to fostering research and innovation. Explore our research initiatives, ongoing projects, collaborations with industry and academia, and research facilities. Discover opportunities for funding, grants, and participation in national and international conferences."
+        }
+    },
+    "staff teachers members": {
+        "Staff": {
+            "link": "./staff",
+            "content": "Meet the administrative and support staff who work behind the scenes to ensure the smooth functioning of the college. Learn about their roles in admissions, academics, infrastructure maintenance, and student services. Discover our commitment to providing a supportive work environment."
+        }
+    },
+    "students": {
+        "Student": {
+            "link": "./StudentActivity",
+            "content": "The student section highlights the various activities and initiatives taken by students at the college. From academic clubs and student councils to cultural events and community service projects, discover the vibrant student life. Get involved in extracurricular activities and unleash your potential."
+        }
+    },
+    "cse computer science engineering": {
+        "CSE": {
+            "link": "./CSE",
+            "content": "The Computer Science and Engineering department offers cutting-edge courses and research opportunities in computer science, software engineering, artificial intelligence, and related fields. It covers topics such as programming, algorithms, data structures, and emerging technologies."
+        }
+    },
+    "mba masters of bachelor arts": {
+        "MBA": {
+            "link": "./MBA",
+            "content": "The MBA department provides a comprehensive education in business administration, offering courses in management, finance, marketing, human resources, and more. It emphasizes practical learning through case studies, industry projects, and internships, preparing students for leadership roles."
+        }
+    },
+    "department news letter": {
+        "Department News Letter": {
+            "link": "./departmentNewsLetter",
+            "content": "The Department News Letter section provides access to newsletters published by the department. Stay updated with the latest news, events, research highlights, and achievements within the department. Explore articles written by faculty members, student contributors, and industry experts. Get insights into departmental activities, initiatives, and collaborations. Dive into engaging content that showcases the department's academic excellence, innovation, and contributions to the field.."
+        }
+    },
+    "home": {
+        "Home": {
+            "link": "../index",
+            "content": "Welcome to our college's home page! This is the gateway to our institution's digital presence. Explore our website to discover a wealth of information about our academic programs, faculty, facilities, events, and much more. Whether you're a prospective student, current student, faculty member, or visitor, our home page is designed to provide easy access to relevant information and resources. Stay connected with the latest updates, announcements, and news from our college community. Start your journey with us here!"
+        }
+    },
+    "location address": {
+        "Location": {
+            "link": "../index#location",
+            "content": "This section provides information about our campus location, including address, map, and directions. Explore our vibrant campus environment and discover the facilities available for students, faculty, and visitors. Whether you're planning a visit or just curious about our location, this section offers all the information you need to find us easily."
+        }
+    },
+    "rankings": {
+        "Rankings": {
+            "link": "../index#collegeRanking",
+            "content": "Our college has consistently ranked among the top institutions in [field or region]. This section provides details about our rankings and recognition in various academic and research domains. Explore our achievements, awards, and accolades that showcase our commitment to excellence in education and innovation. Whether you're a prospective student, researcher, or industry partner, our rankings reflect our dedication to providing quality education and fostering a culture of academic excellence."
+        }
+    },
+    "documents admission": {
+        "Documents": {
+            "link": "../index#admissionEnquiry",
+            "content": "Important information regarding the admission process at our college. Here you can find details about the documents required for admission, such as academic transcripts, certificates, identity proofs, etc. We understand that the admission process can be daunting, so this section aims to simplify it by providing a comprehensive list of necessary documents and guidelines. Whether you're a prospective student or have already been accepted, make sure to check this section for all the necessary paperwork."
+        }
+    },
+    "campus gallary": {
+        "Campus": {
+            "link": "../index#imageGallary",
+            "content": "The 'Campus Gallery' section offers a visual tour of our college campus. Explore stunning images showcasing our state-of-the-art facilities, beautiful surroundings, vibrant student life, and engaging campus events. Whether you're a prospective student, alumni, or just curious about our campus, this section provides a glimpse into life at our institution. From modern classrooms and laboratories to green spaces and recreational areas, discover the essence of our campus through captivating photographs."
+        }
+    },
+    "ug admission": {
+        "Undergraduate Departments": {
+            "link": "./department#ug",
+            "content": "The 'Undergraduate Departments' section provides detailed information about the undergraduate programs offered by our college. Explore the academic structure, courses, and programs available in various departments. Learn about the curriculum, academic requirements, course syllabi, and program outcomes tailored for undergraduate students. Discover opportunities for specialization, internships, and hands-on learning experiences that prepare you for a successful career."
+        }
+    },
+    "pg admission": {
+        "Postgraduate Departments": {
+            "link": "./department#pg",
+            "content": "The 'Postgraduate Departments' section offers comprehensive information about the postgraduate programs offered by our college. Explore the academic structure, courses, and programs available in various departments for postgraduate students. Learn about the curriculum, academic requirements, course syllabi, and program outcomes designed to advance your knowledge and expertise in your chosen field. Discover opportunities for research, specialization, and professional development to excel in your career."
+        }
+    }
+}

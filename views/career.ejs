@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/basicStyles.css">
+    <link rel="stylesheet" href="/styles/footerStyle.css">
+    <link rel="stylesheet" href="/styles/headerStyle.css">
+    <link rel="stylesheet" href="/styles/headerResponsive.css">
+    <link rel="stylesheet" href="/styles/carree.css">
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/bannerResponse.css">
+    <link rel="stylesheet" href="/styles/chatbot.css">
+    <title>Career Services</title>
+    <style>
+        /* Style for chatbot icon */
+        #chatbot-icon {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            z-index: 9999;
+            cursor: pointer;
+        }
+
+        /* Style for chatbot window */
+        .chat-container {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 35%;
+            height: 85%;
+            background: white;
+            z-index: 9998;
+
+        }
+
+        /* Style for back icon */
+        #back-icon {
+            cursor: pointer;
+        }
+
+        /* Hidden class */
+        .hidden {
+            display: none;
+        }
+
+        @media only screen and (max-width:1000px) {
+            .chat-container {
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+            }
+
+            .chat-header,
+            button,
+            input {
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Chatbot Icon -->
+    <div id="chatbot-icon" class="icon">
+        <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/chatbot.png" alt="chatbot" />
+    </div>
+
+    <!-- Chatbot Window -->
+    <div class="chat-container hidden">
+        <div class="chat-header">
+            <div id="back-icon" class="icon">
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/multiply.png"
+                    alt="multiply" />
+            </div>
+            <h2>College Chatbot</h2>
+            <button id="clear-chat">Clear Chat</button>
+        </div>
+        <div id="chatbox" class="chatbox"></div>
+        <div class="input-container">
+            <input type="text" id="input" placeholder="Type a message.">
+            <button id="send">Send</button>
+        </div>
+    </div>
+    <!-- chatbot window end here -->
+    <div class="onOrOff">
+        <img src="/assets/images/icons8-no-connection.gif" alt="./assets/images/icons8-no-connection.gif">
+        <img src="/assets/images/icons8-online.gif" alt="./assets/images/icons8-online.gif">
+        <p>We are online</p>
+    </div>
+    <header>
+        <div class="hamberg-menu">
+            <div class="stick"></div>
+            <div class="stick"></div>
+            <div class="stick"></div>
+        </div>
+        <div class="banner">
+            <div class="left">
+                <img src="/assets/images/aot-logo.webp" loading="lazy" alt="Error">
+            </div>
+            <div class="middle">
+                <h1>ACADEMY OF TECHNOLOGY</h1>
+                <span>.translate your vision into reality</span>
+            </div>
+        </div>
+
+    </header>
+    <hr>
+    <main>
+        <div class="section__title">
+            <div class="logo">
+                <a href="/"><img width="32" height="32" src="https://img.icons8.com/windows/32/home.png"
+                        alt="home" /></a>
+            </div>
+            <h1 id="heading">Career @AOT</h1>
+        </div>
+        <br>
+        <div class="para">
+            <div class="info1">
+                <h3>Flexible working hours:</h3>
+                <p>Retired Professors recruited from premier institutes/ senior professionals from R & D organizations/
+                    corporates may be considered for flexible working hours, i.e. 45 to 60 working days in a semester, @
+                    3 to 4 days per week considering 15 teaching weeks in a semester. Partially online teaching options
+                    may also be considered.</p>
+            </div>
+            <div class="info2">
+                <h3>Career development opportunity:</h3>
+                <p>Ample scope provided to engage in innovation and research in a vibrant and collaborative environment.
+                    Conducive atmosphere to develop your potential to the fullest and performance-based incentives.
+                    Mentoring by experiences academicians/ industry experts for new faculty.</p>
+            </div>
+            <div class="info3">
+                <h3>360 degree support for research and publication:</h3>
+                <p>For all teaching posts, in addition to salary, incentives will be paid for career development,
+                    publication, patent, work on Govt. & industry sponsored project, attending conferences, faculty
+                    development programs, etc. as per institute norms. Dedicated research labs on Industry 4.0
+                    technologies in the pipeline.</p>
+            </div>
+            <div class="info4">
+                <h3>Higher scale of pay:</h3>
+                <p>AOT provides competitive pay packages that exceed those for same positions in peer institutes.
+                    Assistant Professors with 6yrs of full time teaching/ research experience after M.Tech and
+                    registered for PhD, will be eligible for post of Assistant Professor [Senior Scale], compared to the
+                    10yrs requirement in AICTE norms. Assistant Professors with 10yrs of full time teaching and research
+                    experience after M.Tech, already registered for PhD & with at least one publication in SCI indexed
+                    journals will be eligible for post of Assistant Professor [Selection Grade], which is highly
+                    flexible compared to AICTE norms.</p>
+            </div>
+            <div class="info5">
+                <h3>Avarage packages</h3>
+                <p>Engineers’ salary averages are higher than the average salary of many other professionals. INR 4.1
+                    LPA is the average annual salary of an engineer whereas the salary ranges between INR 2.4 LPA to INR
+                    7.1 LPA. However, the average salary of senior engineers with an experience less than 3 years to 12
+                    years ranges from INR 3.6 LPA to INR 16.5 LPA with an average annual salary of INR 6.5 LPA.</p>
+            </div>
+            <div class="info6">
+                <h3>Get lucrative jobs</h3>
+                <p>Cities have attracted job seekers and firms for a long time now. With rapid urbanization, factors
+                    such as more job opportunities, higher wages, larger manufacturing units, business sectors, and
+                    greater innovation set large cities apart from smaller cities. While considering a job opportunity,
+                    a candidate shall also look after the place/ city they are moving to as it would provide them better
+                    opportunities to grow. More opportunities mean a vibrant and prosperous landscape and the diversity
+                    involved in the ecosystem of work.</p>
+            </div>
+
+        </div>
+        <div class="pdf">
+            <div class="pdf-ch1">
+                <p>We are looking for dynamic faculty members who are ready to join our quest for excellence. Please
+                    email your CV indicating the post applied for to career@aot.edu.in</p>
+            </div>
+            <div class="pdf-ch2">
+                <span><a href="/assets/pdf/Add_12_12_23.pdf" download="">Recruitment Advertisement May,
+                        2023&nbsp;&nbsp;&nbsp;</a>(Publishedin The Telegraph on 05.05.23)</span>
+                <span><a href="/assets/pdf/AOT-Recruitment-Kajer-Bazar-AD-for-10.01-1.pdf" download="">Recruitment
+                        Advertisement January, 2023&nbsp;&nbsp;&nbsp;</a>(Published in Anandabazar Patrika on
+                    10.01.23)</span>
+                <span><a href="/assets/pdf/Telegraph_05_05_23.pdf" download="">Recruitment Advertisement
+                        December,2023&nbsp;&nbsp;&nbsp;</a>(Published in Anandabazar Patrika & Telegraph on 12.12.23)
+                </span>
+                <a href="/assets/pdf/AOT-Application-Format-2021.pdf" download="">AOT Application Format</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footerContainer">
+            <div class="footerTalk">
+                <p>Follow us on</p>
+            </div>
+            <div class="footerSocialMediaLinks">
+                <a href="https://www.facebook.com/www.aot.edu.in/" title="Visit AOT Facebook Page">
+                    <img src="/assets/images/facebook_Logo.webp" alt="">
+                </a>
+                <a href="https://www.instagram.com/aotconnect/?igsh=MWhhcDJuY2ZqeWg1OA%3D%3D"
+                    title="Visit AOT Instagram Page">
+                    <img src="/assets/images/instagram_Logo.webp" alt="">
+                </a>
+                <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA" title="Visit AOT YouTube Page">
+                    <img src="/assets/images/youtube_Logo.webp" alt="">
+                </a>
+                <a href="https://www.linkedin.com/school/academy-of-technology/" title="Visit AOT Linkedin Page">
+                    <img src="/assets/images/linkedin_Logo.webp" alt="">
+                </a>
+            </div>
+            <div class="footerTalk">
+                <p>Copyright &copy 2024 all rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/javaScripts/chatbot.js"></script>
+    <script src="/javaScripts/userOnOff.js"></script>
+</body>
+
+</html>

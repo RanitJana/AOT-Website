@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/headerStyle.css">
+    <link rel="stylesheet" href="/styles/basicStyles.css">
+    <link rel="stylesheet" href="/styles/footerStyle.css">
+    <link rel="stylesheet" href="/styles/depNewLetter.css">
+    <link rel="stylesheet" href="/styles/chatbot.css">
+    <title>Newsletter</title>
+    <style>
+        /* Style for chatbot icon */
+        #chatbot-icon {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            z-index: 9999;
+            cursor: pointer;
+        }
+
+        /* Style for chatbot window */
+        .chat-container {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 35%;
+            height: 85%;
+            background: white;
+            z-index: 9998;
+
+        }
+
+        /* Style for back icon */
+        #back-icon {
+            cursor: pointer;
+        }
+
+        /* Hidden class */
+        .hidden {
+            display: none;
+        }
+
+        @media only screen and (max-width:1000px) {
+            .chat-container {
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+            }
+
+            .chat-header,
+            button,
+            input {
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Chatbot Icon -->
+    <div id="chatbot-icon" class="icon">
+        <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/chatbot.png" alt="chatbot" />
+    </div>
+
+    <!-- Chatbot Window -->
+    <div class="chat-container hidden">
+        <div class="chat-header">
+            <div id="back-icon" class="icon">
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/multiply.png"
+                    alt="multiply" />
+            </div>
+            <h2>College Chatbot</h2>
+            <button id="clear-chat">Clear Chat</button>
+        </div>
+        <div id="chatbox" class="chatbox"></div>
+        <div class="input-container">
+            <input type="text" id="input" placeholder="Type a message...">
+            <button id="send">Send</button>
+        </div>
+    </div>
+    <!-- chatbot window end here -->
+    <div class="onOrOff">
+        <img src="/assets/images/icons8-no-connection.gif" alt="./assets/images/icons8-no-connection.gif">
+        <img src="/assets/images/icons8-online.gif" alt="./assets/images/icons8-online.gif">
+        <p>We are online</p>
+    </div>
+    <header>
+        <div class="hamberg-menu">
+            <div class="stick"></div>
+            <div class="stick"></div>
+            <div class="stick"></div>
+        </div>
+        <div class="banner">
+            <div class="left">
+                <img src="/assets/images/aot-logo.webp" loading="lazy" alt="Error">
+            </div>
+            <div class="middle">
+                <h1>ACADEMY OF TECHNOLOGY</h1>
+                <span>...translate your vision into reality</span>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <div class="back">
+            <div class="backImg">
+                <img src="/assets/video/icons8-home.gif" alt="Back Icon">
+            </div>
+            <h1>What is Department Newsletter?</h1>
+        </div>
+        <section class="first">
+            <div class="contain">
+
+                <p>
+                    <strong>
+                        A department newsletter is a communication tool used by organizations to distribute information,
+                        updates,
+                        and announcements to their workforce. It is typically distributed on a regular basis, such as
+                        monthly or
+                        quarterly.
+                    </strong>
+                    <br><br>
+                    <span>
+                        Here are some key objectives of a department newsletter:
+                    </span>
+                <ol>
+                    <li><u>To Inform:</u> Newsletters are used to distribute information intended for affected
+                        employees.
+                        The
+                        information included is relevant and useful for targeted departments and employees.</li>
+                    <li><u>To Break Down Silos:</u> Newsletters can encourage camaraderie among employees, who might be
+                        separated
+                        by
+                        cubicles, team designations, or departmental assignments.</li>
+                    <li><u>Reduce Email Overload:</u> Instead of sending multiple notices, announcements, or
+                        acknowledgments
+                        to
+                        various departments and employee groups, a company can make use of the company newsletter as a
+                        more
+                        efficient
+                        distribution of information.</li>
+                    <li><u>Work Together with Other Communication Channels:</u> Your newsletter can present company
+                        information as
+                        a
+                        reference alongside other channels.</li>
+                    <li><u>Foster Company Culture:</u> By sharing stories, employee spotlights, and highlighting company
+                        achievements, newsletters help employees feel connected and aligned with the organization’s
+                        vision.
+                    </li>
+                    <li><u>Recognize Employees:</u> Newsletters offer an opportunity to recognize and appreciate
+                        employee
+                        achievements, milestones, and contributions.</li>
+                    <li><u>Encourage Feedback and Dialogue:</u> By including sections for employee feedback, surveys, or
+                        Q&A
+                        sessions, newsletters facilitate two-way communication.</li>
+                    <li><u>Assist in Change Management:</u> During periods of change, newsletters can be used to explain
+                        the
+                        reasons, benefits, and impacts of the change.</li>
+                    <li><u>Drive Transparency:</u> Newsletters promote transparency by sharing information about company
+                        performance,
+                        goals, and challenges.</li>
+                </ol>
+                In essence, a department newsletter is a powerful tool for internal communication, fostering
+                a sense of community, and keeping employees informed and engaged. It can be a vital part of an
+                organization’s communication strategy.
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footerContainer">
+            <div class="footerTalk">
+                <p>Follow us on</p>
+            </div>
+            <div class="footerSocialMediaLinks">
+                <a href="https://www.facebook.com/www.aot.edu.in/" title="Visit AOT Facebook Page">
+                    <img src="/assets/images/facebook_Logo.webp" alt="">
+                </a>
+                <a href="https://www.instagram.com/aotconnect/?igsh=MWhhcDJuY2ZqeWg1OA%3D%3D"
+                    title="Visit AOT Instagram Page">
+                    <img src="/assets/images/instagram_Logo.webp" alt="">
+                </a>
+                <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA" title="Visit AOT YouTube Page">
+                    <img src="/assets/images/youtube_Logo.webp" alt="">
+                </a>
+                <a href="https://www.linkedin.com/school/academy-of-technology/" title="Visit AOT Linkedin Page">
+                    <img src="/assets/images/linkedin_Logo.webp" alt="">
+                </a>
+            </div>
+            <div class="footerTalk">
+                <p>Copyright &copy 2024 all rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        let back = document.querySelector('.backImg');
+        back.addEventListener('click', e => {
+            window.history.back();
+        })
+    </script>
+    <script src="/javaScripts/chatbot.js"></script>
+    <script src="/javaScripts/userOnOff.js"></script>
+</body>
+
+</html>

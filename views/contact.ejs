@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/styles/basicStyles.css">
+    <link rel="stylesheet" href="/styles/headerStyle.css">
+    <link rel="stylesheet" href="/styles/contactpage.css">
+    <link rel="stylesheet" href="/styles/footerStyle.css">
+    <link rel="stylesheet" href="/styles/chatbot.css">
+    <style>
+        /* Style for chatbot icon */
+        #chatbot-icon {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            z-index: 9999;
+            cursor: pointer;
+        }
+
+        /* Style for chatbot window */
+        .chat-container {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 35%;
+            height: 85%;
+            background: white;
+            z-index: 9998;
+
+        }
+
+        /* Style for back icon */
+        #back-icon {
+            cursor: pointer;
+        }
+
+        /* Hidden class */
+        .hidden {
+            display: none;
+        }
+
+        @media only screen and (max-width:1000px) {
+            .chat-container {
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+            }
+
+            .chat-header,
+            button,
+            input {
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Chatbot Icon -->
+    <div id="chatbot-icon" class="icon">
+        <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/chatbot.png" alt="chatbot" />
+    </div>
+
+    <!-- Chatbot Window -->
+    <div class="chat-container hidden">
+        <div class="chat-header">
+            <div id="back-icon" class="icon">
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/multiply.png"
+                    alt="multiply" />
+            </div>
+            <h2>College Chatbot</h2>
+            <button id="clear-chat">Clear Chat</button>
+        </div>
+        <div id="chatbox" class="chatbox"></div>
+        <div class="input-container">
+            <input type="text" id="input" placeholder="Type a message...">
+            <button id="send">Send</button>
+        </div>
+    </div>
+    <!-- chatbot window end here -->
+    <div class="onOrOff">
+        <img src="/assets/images/icons8-no-connection.gif" alt="./assets/images/icons8-no-connection.gif">
+        <img src="/assets/images/icons8-online.gif" alt="./assets/images/icons8-online.gif">
+        <p>We are online</p>
+    </div>
+    <header id="destination">
+        <div class="banner">
+            <div class="left">
+                <img src="/assets/images/aot-logo.webp" alt="Error" loading="lazy">
+            </div>
+            <div class="middle">
+                <h1>ACADEMY OF TECHNOLOGY</h1>
+                <span>...translate your vision into reality</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="back">
+            <div class="backImg">
+                <img src="/assets/video/icons8-home.gif" alt="Back Icon">
+            </div>
+            <h1>Contact Us</h1>
+        </div>
+        <section class="aot">
+            <h2>Academy Of Technology</h2>
+            <div class="info">
+                <div class="child">
+                    <strong>Admission Office</strong>
+                    <br>
+                    <p>
+                        <strong>
+                            <img src="/assets/video/icons8-phone.gif" alt="">
+                            <span>Telephone :</span>
+                        </strong>
+                        <span class="content">+91-98310-21706/ 98310-21641
+                            <img src="/assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                                title="Copy Text">
+                        </span>
+                    </p>
+                    <p>
+                        <strong>
+                            <img src="/assets/video/icons8-mail.gif" alt="">
+                            <span>Email :</span>
+                        </strong>
+                        <span class="content">admission@aot.edu.in
+                            <img src="/assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                                title="Copy Text">
+                        </span>
+                    </p>
+                </div>
+                <div class="child">
+                    <strong>Director/ Principal Office</strong>
+                    <br>
+                    <p>
+                        <strong>
+                            <img src="/assets/video/icons8-phone.gif" alt="">
+                            <span>Telephone :</span>
+                        </strong>
+                        <span class="content">+91-9830196317/ +91-9073360791
+                            <img src="/assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                                title="Copy Text">
+                        </span>
+                    </p>
+                    <p>
+                        <strong>
+                            <img src="/assets/video/icons8-mail.gif" alt="">
+                            <span>Email :</span>
+                        </strong>
+                        <span class="content">academy@aot.edu.in/ principal@aot.edu.in
+                            <img src="/assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                                title="Copy Text">
+                        </span>
+                    </p>
+                </div>
+                <div class="child">
+                    <strong>Academic & Exam Department</strong>
+                    <br>
+                    <p>
+                        <strong>
+                            <img src="/assets/video/icons8-phone.gif" alt="">
+                            <span>Telephone :</span>
+                        </strong>
+                        <span class="content">+91-9073360791
+                            <img src="/assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                                title="Copy Text">
+                        </span>
+                    </p>
+                    <p>
+                        <strong>
+                            <img src="/assets/video/icons8-mail.gif" alt="">
+                            <span>Email :</span>
+                        </strong>
+                        <span class="content"> oicexam@aot.edu.in
+                            <img src="/assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                                title="Copy Text">
+                        </span>
+                    </p>
+                </div>
+                <div class="child">
+                    <strong>Admin Department</strong>
+                    <br>
+                    <p>
+                        <strong>
+                            <img src="/assets/video/icons8-phone.gif" alt="">
+                            <span>Telephone :</span>
+                        </strong>
+                        <span class="content"> +91-9830161441
+                            <img src="/assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                                title="Copy Text">
+                        </span>
+                    </p>
+                    <p>
+                        <strong>
+                            <img src="/assets/video/icons8-mail.gif" alt="">
+                            <span>Email :</span>
+                        </strong>
+                        <span class="content"> admin@aot.edu.in
+                            <img src="/assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                                title="Copy Text">
+                        </span>
+                    </p>
+                </div>
+                <div class="child">
+                    <strong>Account Section</strong>
+                    <br>
+                    <p>
+                        <strong>
+                            <img src="/assets/video/icons8-phone.gif" alt="">
+                            <span>Telephone :</span>
+                        </strong>
+                        <span class="content">+91-9073360790
+                            <img src="/assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                                title="Copy Text">
+                        </span>
+                    </p>
+                    <p>
+                        <strong>
+                            <img src="/assets/video/icons8-mail.gif" alt="">
+                            <span>Email :</span>
+                        </strong>
+                        <span class="content">accounts@aot.edu.in
+                            <img src="/assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                                title="Copy Text">
+                        </span>
+                    </p>
+                </div>
+                <div class="child">
+                    <strong>Training Department</strong>
+                    <br>
+                    <p>
+                        <strong>
+                            <img src="/assets/video/icons8-phone.gif" alt="">
+                            <span>Telephone :</span>
+                        </strong>
+                        <span class="content">+91-9073360792
+                            <img src="/assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                                title="Copy Text">
+                        </span>
+                    </p>
+                    <p>
+                        <strong>
+                            <img src="/assets/video/icons8-mail.gif" alt="">
+                            <span>Email :</span>
+                        </strong>
+                        <span class="content">training@aot.edu.in
+                            <img src="/assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                                title="Copy Text">
+                        </span>
+                    </p>
+                </div>
+        </section>
+        <section class="corporate">
+            <h2>Corporate Relation Office</h2>
+            <div class="info">
+                <P>
+                    <strong>
+                        <img src="/assets/video/icons8-location.gif" alt="">
+                        <span>
+                            Location:
+                        </span>
+                    </strong>
+                    <span class="content">CA-150, SALT LAKE, SECTOR-1, KOLKATA-700 064
+                        <img src="/assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                            title="Copy Text">
+                    </span>
+                </P>
+                <P>
+                    <strong>
+                        <img src="/assets/video/icons8-phone.gif" alt="">
+                        <span>
+                            Telephone :
+                        </span>
+                    </strong>
+                    <span class="content">+91-9830156906/ 9830156907
+                        <img src="/assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                            title="Copy Text">
+                    </span>
+                </P>
+                <P>
+                    <strong>
+                        <img src="/assets/video/icons8-mail.gif" alt="">
+                        <span>
+                            Email :
+                        </span>
+                    </strong>
+                    <span class="content">placement@aot.edu.in, corporaterelations@aot.edu.in
+                        <img src="/assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                            title="Copy Text">
+                    </span>
+                </P>
+            </div>
+        </section>
+        <section class="ion">
+            <h2>Ion Digital Zone</h2>
+            <div class="info">
+                <p>
+                    <strong>
+                        <img src="/assets/video/icons8-location.gif" alt="">
+                        <span>Location : </span>
+                    </strong>
+                    <span class="content">G.T.ROAD (ADISAPTAGRAM), AEDCONAGAR
+                        HOOGHLY-712121 WEST BENGAL, INDIA
+                        <img src="/assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                            title="Copy Text"></span>
+                </p>
+                <p>
+                    <strong>
+                        <img src="/assets/video/icons8-phone.gif" alt="">
+                        <span>Telephone : </span>
+                    </strong>
+                    <span class="content">+91-9007556186/ 9830210962
+                        <img src="/assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                            title="Copy Text">
+                    </span>
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footerContainer">
+            <div class="footerTalk">
+                <p>Follow us on</p>
+            </div>
+            <div class="footerSocialMediaLinks">
+                <a href="https://www.facebook.com/www.aot.edu.in/" title="Visit AOT Facebook Page">
+                    <img src="/assets/images/facebook_Logo.webp" alt="">
+                </a>
+                <a href="https://www.instagram.com/aotconnect/?igsh=MWhhcDJuY2ZqeWg1OA%3D%3D"
+                    title="Visit AOT Instagram Page">
+                    <img src="/assets/images/instagram_Logo.webp" alt="">
+                </a>
+                <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA" title="Visit AOT YouTube Page">
+                    <img src="/assets/images/youtube_Logo.webp" alt="">
+                </a>
+                <a href="https://www.linkedin.com/school/academy-of-technology/" title="Visit AOT Linkedin Page">
+                    <img src="/assets/images/linkedin_Logo.webp" alt="">
+                </a>
+            </div>
+            <div class="footerTalk">
+                <p>Copyright &copy 2024 all rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/javaScripts/chatbot.js"></script>
+    <script src="/javaScripts/contact.js"></script>
+    <script src="/javaScripts/userOnOff.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+    <title>Program Structure</title>
+    <link rel="stylesheet" href="/styles/programStructure.css">
+    <link rel="stylesheet" href="/styles/bannerResponse.css">
+    <link rel="stylesheet" href="/styles/chatbot.css">
+    <style>
+        /* Style for chatbot icon */
+        #chatbot-icon {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            z-index: 9999;
+            cursor: pointer;
+        }
+
+        /* Style for chatbot window */
+        .chat-container {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 35%;
+            height: 85%;
+            background: white;
+            z-index: 9998;
+
+        }
+
+        /* Style for back icon */
+        #back-icon {
+            cursor: pointer;
+        }
+
+        /* Hidden class */
+        .hidden {
+            display: none;
+        }
+
+        @media only screen and (max-width:1000px) {
+            .chat-container {
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+            }
+
+            .chat-header,
+            button,
+            input {
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Chatbot Icon -->
+    <div id="chatbot-icon" class="icon">
+        <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/chatbot.png" alt="chatbot" />
+    </div>
+
+    <!-- Chatbot Window -->
+    <div class="chat-container hidden">
+        <div class="chat-header">
+            <div id="back-icon" class="icon">
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/multiply.png"
+                    alt="multiply" />
+            </div>
+            <h2>College Chatbot</h2>
+            <button id="clear-chat">Clear Chat</button>
+        </div>
+        <div id="chatbox" class="chatbox"></div>
+        <div class="input-container">
+            <input type="text" id="input" placeholder="Type a message...">
+            <button id="send">Send</button>
+        </div>
+    </div>
+    <!-- chatbot window end here -->
+    <div class="onOrOff">
+        <img src="/assets/images/icons8-no-connection.gif" alt="./assets/images/icons8-no-connection.gif">
+        <img src="/assets/images/icons8-online.gif" alt="./assets/images/icons8-online.gif">
+        <p>We are online</p>
+    </div>
+    <header id="destination">
+        <div class="banner">
+            <div class="left">
+                <img src="/assets/images/aot-logo.webp" alt="Error" loading="lazy">
+            </div>
+            <div class="middle">
+                <h1>ACADEMY OF TECHNOLOGY</h1>
+                <span>...translate your vision into reality</span>
+            </div>
+            <div class="right">
+                <div class="search">
+                    <input type="text" name="" id="" placeholder="Search here...">
+                    <img src="/assets/video/icons8-search.gif" alt="" loading="lazy">
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <main>
+
+        <nav class="page-title">
+            <!-- "https://img.icons8.com/windows/32/home.png" -->
+            <div class="logo">
+                <a href="/"><img width="32" height="32" src="/assets/video/icons8-home.gif"
+                        alt="home" /></a>
+            </div>
+            <h1 id="heading">Program Structure</h1>
+        </nav>
+
+        <nav class="link hideOnMobile">
+            <a href="#UG-Admission">UG admission</a>
+            <a href="#PG-Admission">PG admission</a>
+            <!-- Add more links as needed -->
+        </nav>
+        <div class="hamburger-logo" onclick="showsidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="28"
+                viewBox="0 -960 960 960" width="28">
+                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+            </svg></div>
+        <div class="hamburger">
+            <ul>
+                <li onclick="hidesidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24"
+                            viewBox="0 -960 960 960" width="24">
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg></a></li>
+
+                <li onclick="hidesidebar()" class="option"><a href="#UG-Admission">UG admission</a></li>
+                <li onclick="hidesidebar()" class="option"><a href="#PG-Admission">PG admission</a></li>
+            </ul>
+        </div>
+        <div class="scrollTo">
+            <a href="#destination">
+                <img src="/assets/images/icons8-up-arrow-50.png" alt="Error">
+            </a>
+        </div>
+        <section id="Overview">
+            <div class="container">
+                <h2>Overview</h2>
+                <div class="component">
+
+                    <p><b>Welcome to our college's "Program Structure" page,</b> your gateway to exploring the diverse
+                        range
+                        of
+                        academic offerings we provide. Whether you're interested in pursuing undergraduate or
+                        postgraduate
+                        studies, this page serves as a comprehensive guide to understanding the structure, curriculum,
+                        and
+                        admission process for our programs.
+                    </p>
+                    <p>Discover our array of undergraduate programs, including Computer Science and Engineering,
+                        Electrical
+                        and
+                        Electronics Engineering, Electronics and Communication Engineering, Mechanical Engineering, and
+                        Computer
+                        Science and Business Systems. Each program is meticulously crafted to provide students with a
+                        solid
+                        foundation in their chosen field, preparing them for successful careers in the ever-evolving
+                        technological landscape.
+                    </p>
+                    <p>
+                        For those seeking advanced studies, explore our postgraduate programs, such as Master of
+                        Computer
+                        Applications (MCA) and Master of Business Administration (MBA). These programs offer specialized
+                        training and advanced coursework to equip students with the skills and knowledge needed to excel
+                        in
+                        their respective industries.
+                    </p>
+                    <p>
+                        Learn about our admission process, which may include entrance examinations conducted at the
+                        state or
+                        national level. We provide detailed information on eligibility criteria, application procedures,
+                        and
+                        important dates to help you navigate the admissions journey seamlessly.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="admission-process">
+            <div class="container">
+                <h2>Admission guide</h2>
+                <div class="component">
+
+                    <h3>The score obtained in Class 12th</h3>
+                    <div class="mark"></div>
+                    <ul class="exam">
+                        <li>Students need to score good marks in the 12th final year examination.
+                        </li>
+                        <li>A minimum of 45% of marks are required to get in 12th to become eligible for appearing in
+                            the
+                            entrance examination.</li>
+                        <li>
+                            SC/ST students need to get a minimum of 40% of marks in the 12th examination.
+                        </li>
+                    </ul>
+
+                    <h3>Clear the cut-offs for the entrance examinations</h3>
+                    <div class="mark"></div>
+                    <ul class="exam">
+                        <li>AOT conduct the admission process based on the scores obtained in the entrance examination.
+                        </li>
+                        <li>So, apart from scoring good marks in the 12th examination,
+                            clearing cut-offs of the entrance examination is most essential for admission.</li>
+                    </ul>
+
+                    <h3>Final Selection for B. Tech Course</h3>
+                    <div class="mark"></div>
+                    <ul class="exam">
+                        <li>Final selection of the students based on the marks
+                            obtained in the 12th examination, scores obtained in the entrance examination, and personal
+                            interview round.
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="procedure">
+            <div class="container">
+                <h2>How to Apply?</h2>
+                <div class="component">
+                    <h3>The process of admission is as follows: -</h3>
+                    <div class="mark"></div>
+                    <ul class="exam">
+                        <li>
+                            First, students need to register their names.
+                        </li>
+                        <li>
+                            After completing the registration process, students will receive an OTP in their registered
+                            mobile
+                            number.
+                        </li>
+                        <li>
+                            Students need to log in again and then fill the complete application form.
+                        </li>
+                        <li>
+                            The admission fees need to be paid online.
+                        </li>
+                        <li>
+                            After the admission process completes successfully, students will get a confirmation
+                            receipt.
+                        </li>
+                        <li>
+                            Take a printout of the receipt for future use.
+                        </li>
+                    </ul>
+
+                </div>
+                <h4>Quick links</h4>
+                <hr>
+                <hr>
+
+                <a href="https://aot.edu.in/b-tech-fees-structure/" style="text-decoration: none;color: red;">Fees &
+                    Deposits</a>
+                <a href="/assets/pdf/PR-after-2nd-round-JECA.pdf" target="_blank" style="
+                text-decoration: none; color: red;">
+                    <img src="/assets/video/icons8-pdf.gif" alt="Error" style="height: 22px;width: 22px;">
+                    Documents for Admission
+                </a>
+                <a href="https://collegedunia.com/courses/bachelor-of-technology-btech/west-bengal-btech-admission#f"
+                    style="text-decoration: none;color: red;">
+                    Joint entrance exam updates
+                </a>
+            </div>
+        </section>
+
+        <section id="UG-Admission">
+            <div class="container">
+                <h2>UG Admission</h2>
+                <div class="component">
+
+                    <ul class="exam">
+                        <h2>WBJEE</h2>
+                        <div class="mark"></div>
+                        <li>
+                            West Bengal conducts the JEE entrance exam every year.
+                        </li>
+                        <li>
+                            Students must complete the 12th examination from any recognized board with a minimum of 45%
+                            of
+                            aggregate marks.
+                        </li>
+                        <li>
+                            The nationality of the students must be Indian.
+                        </li>
+                        <li>
+                            Entrance exams are conducted online.
+                        </li>
+                    </ul>
+
+                    <ul class="exam">
+                        <h2>JEE Main</h2>
+                        <div class="mark"></div>
+                        <li>
+                            JEE is conducted four times a year. In February, March, April, and May JEE Main is conducted
+                            every
+                            year.
+                        </li>
+                        <li>
+                            Students must complete the 12th examination from any recognized board a minimum of 45% of
+                            aggregate
+                            marks in graduation.
+                        </li>
+                        <li>
+                            The nationality of the students must be Indian.
+                        </li>
+                        <li>
+                            Entrance exams are conducted online.
+                        </li>
+                    </ul>
+
+                </div>
+                <section class="faq-section">
+                    <h1 class="headings">Frequently Asked Questions</h1>
+
+                    <div class="faqs">
+                        <ul>
+                            <li>
+                                <div class="faq faq-1">
+                                    <div class="question">
+                                        <h3>What is the fee structure</h3>
+                                        <img class="rotate-icon" src="/assets/images/plus-48.png" alt="">
+                                    </div>
+
+                                    <div class="answer">
+                                        <hr class="thin-line">
+                                        <table>
+                                            <tr>
+                                                <th>Year</th>
+                                                <th>Fee</th>
+                                            </tr>
+                                            <tr>
+                                                <td>1st Year</td>
+                                                <td>1,50,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2nd Year</td>
+                                                <td>1,30,000 ( 75,000 extra reqd for lateral students )</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3rd Year</td>
+                                                <td>1,40,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4th Year</td>
+                                                <td>1,50,000</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="faq faq-2">
+                                    <div class="question">
+                                        <h3> What is the total duration of the West Bengal B. Tech Course?</h3>
+                                        <img class="rotate-icon" src="/assets/images/plus-48.png" alt="">
+                                    </div>
+
+                                    <div class="answer">
+                                        <hr class="thin-line">
+                                        <p>The total duration of the West Bengal B. Tech Course is 4 years.</p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="faq faq-3">
+                                    <div class="question">
+                                        <h3>What B. Tech course is all about?</h3>
+                                        <img class="rotate-icon" src="/assets/images/plus-48.png" alt="">
+                                    </div>
+                                    <div class="answer">
+                                        <hr class="thin-line">
+                                        <p>B.Tech is a four-year full-time engineering course of
+                                            bachelor level. This course can be pursued after clearing the 12th
+                                            examination
+                                            in the Science stream.</p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="faq faq-4">
+                                    <div class="question">
+                                        <h3>What is the average annual salary of a Civil Engineer after completing a
+                                            B.Tech
+                                            course from West Bengal?</h3>
+                                        <img class="rotate-icon" src="/assets/images/plus-48.png" alt="">
+                                    </div>
+                                    <div class="answer">
+                                        <hr class="thin-line">
+                                        <p>The average annual salary of a Civil Engineer after completing a B.Tech
+                                            course
+                                            from West Bengal is around INR 4, 00,000-INR 5, 00,000 per annum.</p>
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li>
+                                <div class="faq faq-5">
+                                    <div class="question">
+                                        <h3>What is the minimum percentage required in 12th for pursuing admission in a
+                                            B.Tech course from West Bengal?</h3>
+                                        <img class="rotate-icon" src="/assets/images/plus-48.png" alt="">
+                                    </div>
+                                    <div class="answer">
+                                        <hr class="thin-line">
+                                        <p>An aggregate 45% of marks in 12th is required for pursuing admission in the
+                                            B.Tech course from West Bengal.</p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="faq faq-6">
+                                    <div class="question">
+                                        <h3>What are the basic eligibility criteria for pursuing a B.Tech Course?</h3>
+                                        <img class="rotate-icon" src="/assets/images/plus-48.png" alt="">
+                                    </div>
+                                    <div class="answer">
+                                        <hr class="thin-line">
+                                        <p>
+                                            A student must complete 12th in Science stream from any recognized board for
+                                            pursuing admission in the B.Tech course.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+
+
+                            <li>
+                                <div class="faq faq-7">
+                                    <div class="question">
+                                        <h3> Should I appear for any entrance exams for pursuing the B.Tech courses?
+                                        </h3>
+                                        <img class="rotate-icon" src="/assets/images/plus-48.png" alt="">
+                                    </div>
+                                    <div class="answer">
+                                        <hr class="thin-line">
+                                        <p>
+                                            Yes, for pursuing admission in the B.Tech courses students must appear in
+                                            entrance examinations.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section id="PG-Admission">
+            <div class="container">
+                <h2>PG Admission</h2>
+                <div class="component">
+
+                    <h2>MCA</h2>
+                    <div class="mark"></div>
+                    <p>
+                        <b>Master of Computer Applications or MCA</b> is a specialised and professional course offered
+                        in
+                        the
+                        postgraduate-level. This course is an advanced learning program which introduces candidates to
+                        the
+                        advanced field of Computer Applications. The course deals with the principles of Business
+                        Programming through Computer programs, Programming & Data Structure and Management Support
+                        System.
+                        It is a highly popular course especially amongst candidates who wish to make a career in the
+                        field
+                        of Information Technology. After BTech in CS and IT and BCA this course is highly in demand
+                        amongst
+                        students who have completed BCA or B.Sc Hons. in Computer Applications. This course is offered
+                        by
+                        most of the private and government colleges in India. Computer Applications is offered across
+                        various levels such as <b>Diploma(PGDCA), Undergraduate(BCA) or Postgraduate(MCA) and
+                            Doctoral(Ph.D).</b>
+
+                    </p>
+                    <p>
+                        Admissions to this course is either done on the basis of marks scored in the qualifying exam
+                        which
+                        is graduate-level examination or various state-level entrance examination which is conducted
+                        across
+                        India. These colleges conduct their own separate entrance examination and admit students on the
+                        basis of marks scored and counselling process. Other universities open applications after the
+                        declaration of the central and state board examination results. There are more than 2000
+                        colleges,
+                        both private and government colleges which offer MCA courses in a variety of specialisations.
+                        Some
+                        of these colleges offer full-time or part-time courses in MCA. Admissions to part-time courses
+                        are
+                        done on the basis of centralised application process of the concerned university such as IGNOU
+                        through Samarth Portal.
+
+                    </p>
+                    <span><b>Some of the popular entrance examinations which are conducted for admissions to MCA
+                            are-</b></span>
+
+                    <ul class="exam">
+                        <li>
+                            <a href="https://www.shiksha.com/it-software/nimcet-exam"
+                                style="text-decoration:none; color: red;" target="_blank">NIMCET</a>
+                        </li>
+                        <li>
+                            <a href="https://www.shiksha.com/it-software/mah-mca-cet-exam"
+                                style="text-decoration:none; color: red;" target="_blank">MAH MCA CET</a>
+                        </li>
+                        <li>
+                            <a href="https://www.shiksha.com/mba/ojee-exam/mca-mca-lateral-entry-1027"
+                                style="text-decoration:none; color: red;" target="_blank">OJEE</a>
+                        </li>
+                        <li>
+                            <a href="https://www.shiksha.com/mba/tancet-exam/mca-mca-le-1091"
+                                style="text-decoration:none; color: red;" target="_blank">TANSET</a>
+                        </li>
+                        <li>
+                            <a href="https://www.shiksha.com/university/maulana-abul-kalam-azad-university-of-technology/makaut-cet-exam"
+                                style="text-decoration:none; color: red;" target="_blank">MAKAUT CET</a>
+                        </li>
+                        <li>
+                            <a href="https://www.shiksha.com/it-software/bit-mca-entrance-exam"
+                                style="text-decoration:none; color: red;" target="_blank">BIT MCA Entrance Exam</a>
+                        </li>
+                        <li>
+                            <a href="https://www.shiksha.com/mba/apicet-exam/mca-451"
+                                style="text-decoration:none; color: red;" target="_blank">APCET</a>
+                        </li>
+                        <li>
+                            <a href="https://www.shiksha.com/mba/tsicet-exam/mca-992"
+                                style="text-decoration:none; color: red;" target="_blank">TSICET</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <section class="faq-section">
+                    <h1 class="headings">Frequently Asked Questions</h1>
+
+                    <div class="faqs">
+                        <ul>
+                            <li>
+                                <div class="faq faq-1">
+                                    <div class="question">
+                                        <h3>What is the fee structure</h3>
+                                        <img class="rotate-icon" src="/assets/images/plus-48.png" alt="">
+                                    </div>
+
+                                    <div class="answer">
+                                        <hr class="thin-line">
+                                        <table>
+                                            <tr>
+                                                <th>Year</th>
+                                                <th>Fee</th>
+                                            </tr>
+                                            <tr>
+                                                <td>1st Year</td>
+                                                <td>1,50,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2nd Year</td>
+                                                <td>1,30,000 ( 75,000 extra reqd for lateral students )</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3rd Year</td>
+                                                <td>1,40,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4th Year</td>
+                                                <td>1,50,000</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="faq faq-2">
+                                    <div class="question">
+                                        <h3> What are the benefits of pursuing MCA course?</h3>
+                                        <img class="rotate-icon" src="/assets/images/plus-48.png" alt="">
+                                    </div>
+
+                                    <div class="answer">
+                                        <hr class="thin-line">
+                                        <p> MCA or Master of Computer Application is a two-year advanced degree which is
+                                            pursued in postgraduation level. The biggest advantage of this course is
+                                            that
+                                            candidates can enter into the field of technical research and advanced
+                                            application of principles of computer application. Candidates also get
+                                            higher
+                                            salary as compared to BCA graduates and they possess more technical
+                                            expertise on
+                                            the concepts of Computer Applications. They also learn certain
+                                            specialisations
+                                            of Computer Applications such as Machine Learning and Software Development.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="faq faq-3">
+                                    <div class="question">
+                                        <h3>What is the difference between PGDCA and MCA?</h3>
+                                        <img class="rotate-icon" src="/assets/images/plus-48.png" alt="">
+                                    </div>
+                                    <div class="answer">
+                                        <hr class="thin-line">
+                                        <p>B.Tech is a four-year full-time engineering course of
+                                            bachelor level. This course can be pursued after clearing the 12th
+                                            examination
+                                            in the Science stream.</p>
+
+                                        <table>
+                                            <tr>
+                                                <th>MCA</th>
+                                                <th>PGDCA</th>
+                                            </tr>
+                                            <tr>
+                                                <td>It is of 2 years duration.</td>
+                                                <td>It is of one year duration.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>It is a master's level course.</td>
+                                                <td>It is a post graduation diploma level course.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Offered by various NITs</td>
+                                                <td>Offered only across other government and private institutions. </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="faq faq-4">
+                                    <div class="question">
+                                        <h3>Can one pursue MCA after completing PGDCA?</h3>
+                                        <img class="rotate-icon" src="/assets/images/plus-48.png" alt="">
+                                    </div>
+                                    <div class="answer">
+                                        <hr class="thin-line">
+                                        <p>Definitely,one can pursue MCA after completion of PGDCA since PGDCA is
+                                            diploma
+                                            level course which can be pursued only after completing BCA. It is suggested
+                                            to
+                                            candidates that if they want to specialise in a particular branch of
+                                            computer
+                                            applications, then they must surely pursue MCA directly and not waste their
+                                            time
+                                            in PGDCA. Hence candidates can maximise their knowledge and improve their
+                                            skills
+                                            by pursuing MCA</p>
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li>
+                                <div class="faq faq-5">
+                                    <div class="question">
+                                        <h3>What are the eligibility requirements to pursue MCA in AOT colleges?</h3>
+                                        <img class="rotate-icon" src="/assets/images/plus-48.png" alt="">
+                                    </div>
+                                    <div class="answer">
+                                        <hr class="thin-line">
+                                        <p>
+                                            To pursue MCA from top colleges, candidates must ensure that they meet the
+                                            following eligibility criteria:
+
+                                        </p>
+                                        <ul style="list-style: decimal;">
+                                            <li>Candidates must have completed graduation in BSc(Computer Science) or
+                                                BCA
+                                                from
+                                                recognised university with minimum 55% marks.</li>
+                                            <li>
+                                                For admissions based on entrance examinations, candidates must possess a
+                                                valid
+                                                score and must have secured marks above the cut-off for being eligible
+                                                for
+                                                admission process.
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="faq faq-6">
+                                    <div class="question">
+                                        <h3> What are the popular entrance examinations one can appear for admissions to
+                                            MCA?</h3>
+                                        <img class="rotate-icon" src="/assets/images/plus-48.png" alt="">
+                                    </div>
+                                    <div class="answer">
+                                        <hr class="thin-line">
+                                        <p>
+                                            To pursue MCA, candidates must prepare for MCA entrance examinations which
+                                            are
+                                            either national-level or state-level entrance examinations. Some of these
+                                            entrance examinations are as follows:
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                <a href="https://www.shiksha.com/it-software/nimcet-exam"
+                                                    style="text-decoration:none; color: red;" target="_blank">NIMCET</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.shiksha.com/it-software/mah-mca-cet-exam"
+                                                    style="text-decoration:none; color: red;" target="_blank">MAH MCA
+                                                    CET</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.shiksha.com/mba/ojee-exam/mca-mca-lateral-entry-1027"
+                                                    style="text-decoration:none; color: red;" target="_blank">OJEE</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.shiksha.com/mba/tancet-exam/mca-mca-le-1091"
+                                                    style="text-decoration:none; color: red;" target="_blank">TANSET</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.shiksha.com/university/maulana-abul-kalam-azad-university-of-technology/makaut-cet-exam"
+                                                    style="text-decoration:none; color: red;" target="_blank">MAKAUT
+                                                    CET</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.shiksha.com/it-software/bit-mca-entrance-exam"
+                                                    style="text-decoration:none; color: red;" target="_blank">BIT MCA
+                                                    Entrance Exam</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.shiksha.com/mba/apicet-exam/mca-451"
+                                                    style="text-decoration:none; color: red;" target="_blank">APCET</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.shiksha.com/mba/tsicet-exam/mca-992"
+                                                    style="text-decoration:none; color: red;" target="_blank">TSICET</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+
+                            <li>
+                                <div class="faq faq-7">
+                                    <div class="question">
+                                        <h3> What is the process for MCA Admission 2023?</h3>
+                                        <img class="rotate-icon" src="/assets/images/plus-48.png" alt="">
+                                    </div>
+                                    <div class="answer">
+                                        <hr class="thin-line">
+                                        <p>
+                                            Candidates who wish to pursue MCA courses must ensure that they fulfil the
+                                            basic
+                                            educational requirements which make them eligible to appear for the entrance
+                                            examinations. One of the most essential criteria is to score passing marks
+                                            in
+                                            graduation or undergraduate program. They must also thoroughly prepare for
+                                            the
+                                            entrance examinations in order to secure admissions in top private and
+                                            government colleges. They must regularly visit the official colleges as well
+                                            as
+                                            entrance examinations website to keep themselves updated about their
+                                            admission
+                                            procedure.
+                                        </p>
+                                        <span><b>Steps for MCA Admission 2024</b></span>
+                                        <p>
+                                            The procedure for admission to various colleges offering MCA courses is
+                                            almost
+                                            the same across all colleges. Since the basic eligibility criteria is
+                                            passing
+                                            marks in graduation level, the admission process is also same. Some colleges
+                                            also conduct their own interview or counselling process after declaring
+                                            entrance
+                                            examination results. For colleges admitting students through entrance
+                                            examinations, the syllabus as well as the pattern is also very similar and
+                                            candidates must be prepared in order to secure a seat in colleges.
+                                        </p>
+                                        <ul style="list-style: circle;">
+                                            <li style="margin-left: 10px;">
+                                                They must fulfil the criteria for entrance examinations. They must
+                                                score
+                                                passing marks in graduation degree and must have studied either BSc
+                                                (Computer Applications Hons) or BCA or PGDCA in graduation level.
+                                            </li>
+                                            <li style="margin-left: 10px;">
+                                                Candidates must have studied Computer
+                                                Applications or Computer
+                                                Science as a
+                                                main subject or honors subject in regular B.Sc course.
+                                            </li>
+                                            <li style="margin-left: 10px;">
+                                                Candidates must have secured a minimum of
+                                                55% aggregate in the
+                                                graduation
+                                                course. The aggregate marks for SC, ST and PWD marks should be at least
+                                                50%
+                                                in order to be eligible for entrance examinations.
+                                            </li>
+                                            <li style="margin-left: 10px;">
+                                                Candidates must apply for the entrance
+                                                examinations by thoroughly
+                                                filling
+                                                the application form and must appear for the entrance examination by
+                                                preparing religiously for it.
+                                            </li>
+                                            <li style="margin-left: 10px;">
+                                                Institutions which admit students through
+                                                entrance examinations will
+                                                declare
+                                                the results and based on the performance in the written test, they are
+                                                selected for counselling process.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="faq faq-8">
+                                    <div class="question">
+                                        <h3> What is the syllabus for MCA Admission?</h3>
+                                        <img class="rotate-icon" src="/assets/images/plus-48.png" alt="">
+                                    </div>
+                                    <div class="answer">
+                                        <hr class="thin-line">
+                                        <p>
+                                            A majority of government and private collegs admit candidates for MCA purely
+                                            on
+                                            the basis of performance in the entrance examinations, few colleges also
+                                            conduct
+                                            their own entrance examinations. Some of the popular entrance exams are
+                                            TANCET,
+                                            NIMCET, OJEE, CUET-PG, TSICET, APICET etc. These examinations are highly
+                                            competitive and due to similarity in their syllabus, candidates can easily
+                                            prepare for them simultaneously.
+                                        </p>
+
+                                        <p>
+                                            The syllabus for various entrance exams for MCA are given in the table
+                                            below.
+                                            Candidates can see that most of the examinations require candidates to be
+                                            strong
+                                            in Verbal Ability, Logical Reasoning and Quantitative Aptitude.
+                                        </p>
+                                        <table>
+                                            <tr>
+                                                <th>Entrance Exam</th>
+                                                <th>Details</th>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="https://www.shiksha.com/it-software/nimcet-exam"
+                                                        style="text-decoration:none; color: red;"
+                                                        target="_blank">NIMCET</a>
+                                                </td>
+                                                <td>The syllabus for NIMCET consists of the following sections, namely:
+                                                    General English, Logical Reasoning, Mathematics, Computer Awareness
+                                                    and
+                                                    Analytical Ability. Candidates must prepare 12th level Mathematics
+                                                    along
+                                                    with Mathematics for Engineering Entrance Exams. General English
+                                                    tests a
+                                                    candidate's command over English langauge. Computer Awareness
+                                                    consists
+                                                    of the basics of computer applications and data representation.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="https://www.shiksha.com/it-software/mah-mca-cet-exam"
+                                                        style="text-decoration:none; color: red;" target="_blank">MAH
+                                                        MCA
+                                                        CET</a></td>
+                                                <td>The syllabus for this entrance is divided into four sections:
+                                                    General
+                                                    English comprehension and Verbal Ability, Computer Concepts, Logical
+                                                    Reasoning and Mathematics. Candidates must prepare topics such as
+                                                    Algebra, Trigonometry, Basic Set theory and function for Mathematics
+                                                    segment. Computer concepts includes topics such as basics of
+                                                    Operating
+                                                    Systems, Computer Architecture, Computer Language and Data
+                                                    Representation.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="https://www.shiksha.com/mba/tancet-exam/mca-mca-le-1091"
+                                                        style="text-decoration:none; color: red;"
+                                                        target="_blank">TANSET</a>
+                                                </td>
+                                                <td>The entrance exam consists of questions from Quantitative Aptitude
+                                                    which
+                                                    is of 10th and 12th level. It also tests the mathematical skills of
+                                                    candidates through Data sufficiency questions and it also consists
+                                                    of
+                                                    Computer Awareness Section to test candidates' knowledge on
+                                                    computers.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="https://www.shiksha.com/mba/ojee-exam/mca-mca-lateral-entry-1027"
+                                                        style="text-decoration:none; color: red;"
+                                                        target="_blank">OJEE</a>
+                                                </td>
+                                                <td>The syllabus for OJEE consists of Mathematics and Computer Awareness
+                                                    sections. Some important topics for Mathematics include: Algebra of
+                                                    Sets, Logic, Trigonometry,Sequence and Series, Co-ordinate geometry
+                                                    of
+                                                    two dimensions, Coordinate geometry of three dimensions and
+                                                    Probability
+                                                    and Statistics. Some important topics from Computer Applications
+                                                    include: Data Communication, Data Structuring, Computer Arithmetic,
+                                                    Arithmetic and Logical Expressions, Concepts of functions in C,
+                                                    Terminals, Networking etc. </td>
+                                            </tr>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="footerContainer">
+            <div class="footerTalk">
+                <p>Follow us on</p>
+            </div>
+            <div class="footerSocialMediaLinks">
+                <a href="https://www.facebook.com/www.aot.edu.in/" title="Visit AOT Facebook Page">
+                    <img src="/assets/images/facebook_Logo.webp" alt="">
+                </a>
+                <a href="https://www.instagram.com/aotconnect/?igsh=MWhhcDJuY2ZqeWg1OA%3D%3D"
+                    title="Visit AOT Instagram Page">
+                    <img src="/assets/images/instagram_Logo.webp" alt="">
+                </a>
+                <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA" title="Visit AOT YouTube Page">
+                    <img src="/assets/images/youtube_Logo.webp" alt="">
+                </a>
+                <a href="https://www.linkedin.com/school/academy-of-technology/" title="Visit AOT Linkedin Page">
+                    <img src="/assets/images/linkedin_Logo.webp" alt="">
+                </a>
+            </div>
+            <div class="footerTalk">
+                <p>Copyright &copy 2024 all rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        function hidesidebar() {
+            let bar = document.querySelector('.hamburger');
+            bar.style.right = '-220px';
+            document.body.style.overflow = ' ';
+        }
+
+        function showsidebar() {
+            let bar = document.querySelector('.hamburger');
+            bar.style.right = '0';
+            document.body.style.overflow = 'hidden';
+        }
+
+        window.addEventListener('click', e => {
+            let bar = document.querySelector('.hamburger');
+            if (e.x <= window.innerWidth - bar.clientWidth) {
+                hidesidebar();
+            }
+        });
+
+
+        const questions = document.querySelectorAll('.question');
+
+        questions.forEach(question => {
+            question.addEventListener('click', () => {
+                // Close all other answer sections except the one clicked
+                const otherAnswers = document.querySelectorAll('.answer');
+                otherAnswers.forEach(otherAnswer => {
+                    const imgElement = question.querySelector('.rotate-icon');
+                    imgElement.classList.remove('rotate', 'reverseRotate'); // Remove previous rotation classes
+                    if (otherAnswer !== question.nextElementSibling && otherAnswer.classList.contains('displayAnswer')) {
+                        otherAnswer.classList.remove('displayAnswer');
+                        const imgElement = question.querySelector('.rotate-icon');
+                        imgElement.classList.toggle('reverseRotate');
+                    }
+                });
+
+                // Toggle the display of the clicked answer section
+                const answer = question.nextElementSibling;
+                answer.classList.toggle('displayAnswer');
+
+                // Toggle the rotation of the clicked question's icon
+                const imgElement = question.querySelector('.rotate-icon');
+                imgElement.classList.toggle('rotate');
+
+                // Toggle the reverse rotation of the clicked question's icon when closing the answer
+                if (!answer.classList.contains('displayAnswer')) {
+                    imgElement.classList.toggle('reverseRotate');
+                }
+            });
+        });
+
+    </script>
+    <script src="/javaScripts/chatbot.js"></script>
+    <script src="/javaScripts/userOnOff.js"></script>
+    <script src="/javaScripts/programStructure.js"></script>
+</body>
+
+</html>

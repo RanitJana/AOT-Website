@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/headerStyle.css">
+    <link rel="stylesheet" href="/styles/faculty.css">
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/bannerResponse.css">
+    <link rel="stylesheet" href="/styles/footerStyle.css">
+    <link rel="stylesheet" href="/styles/chatbot.css">
+    <title>Faculty Profile</title>
+    <style>
+        /* Style for chatbot icon */
+        #chatbot-icon {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            z-index: 9999;
+            cursor: pointer;
+        }
+
+        /* Style for chatbot window */
+        .chat-container {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 35%;
+            height: 85%;
+            background: white;
+            z-index: 9998;
+
+        }
+
+        /* Style for back icon */
+        #back-icon {
+            cursor: pointer;
+        }
+
+        /* Hidden class */
+        .hidden {
+            display: none;
+        }
+
+        @media only screen and (max-width:1000px) {
+            .chat-container {
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+            }
+
+            .chat-header,
+            button,
+            input {
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Chatbot Icon -->
+    <div id="chatbot-icon" class="icon">
+        <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/chatbot.png" alt="chatbot" />
+    </div>
+
+    <!-- Chatbot Window -->
+    <div class="chat-container hidden">
+        <div class="chat-header">
+            <div id="back-icon" class="icon">
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/multiply.png"
+                    alt="multiply" />
+            </div>
+            <h2>College Chatbot</h2>
+            <button id="clear-chat">Clear Chat</button>
+        </div>
+        <div id="chatbox" class="chatbox"></div>
+        <div class="input-container">
+            <input type="text" id="input" placeholder="Type a message...">
+            <button id="send">Send</button>
+        </div>
+    </div>
+    <!-- chatbot window end here -->
+    <div class="onOrOff">
+        <img src="/assets/images/icons8-no-connection.gif" alt="./assets/images/icons8-no-connection.gif">
+        <img src="/assets/images/icons8-online.gif" alt="./assets/images/icons8-online.gif">
+        <p>We are online</p>
+    </div>
+    <header>
+        <div class="hamberg-menu">
+            <div class="stick"></div>
+            <div class="stick"></div>
+            <div class="stick"></div>
+        </div>
+        <div class="banner">
+            <div class="left">
+                <img src="/assets/images/aot-logo.webp" loading="lazy" alt="Error">
+            </div>
+            <div class="middle">
+                <h1>ACADEMY OF TECHNOLOGY</h1>
+                <span>...translate your vision into reality</span>
+            </div>
+        </div>
+
+    </header>
+
+    <nav class="page-title">
+        <div class="logo">
+            <a href="/"><img width="32" height="32" src="https://img.icons8.com/windows/32/home.png" alt="home" /></a>
+        </div>
+        <h1 id="heading">AOT Faculty Members</h1>
+    </nav>
+    <main>
+
+        <div class="paraent">
+            <div class="info">
+                <div class="para">
+                    <p>
+                        &nbsp; &nbsp; &nbsp;AOT believes in creating an environment that helps the students to enhance
+                        their
+                        intellectual, emotional and physical development.
+                        Prof. (Dr.) Dilip Bhattacharya, renowned Professor of Electronics & Electrical Communication
+                        Engineering from IIT Kharagpur and the Director of Academy of Technology, leads a team of 111
+                        qualified and experienced faculty members conforming to AICTE stipulated teacher-student ratio.
+                        <br><br>
+                    </p>
+
+                </div>
+                <div class="image">
+                    <img src="/assets/images/All-FAC.jpg" alt="">
+                </div>
+            </div>
+            <div class="para2">
+                <ul>
+                    <li>81 regular faculty members are having specialization in Industry 4.0 Technologies, e.g.,
+                        Internet of Things (IOT), 3D Technology, Machine Learning, Data Science, Cloud Computing, Cyber
+                        Security, Renewable Energy & Energy Management.</li>
+                    <li>Average teaching experience of faculty members is 11 years 8 months</li>
+                    <li> Faculty members of AOT have published 84 papers in various International & National Journals.
+                    </li>
+                    <li> Existing faculty members of AOT have authored 11 books.</li>
+                </ul>
+            </div>
+        </div>
+        <h1 id="heading">Profile of The Faculty Members</h1>
+        <div class="member">
+            <table class="tbl">
+                <thead>
+                    <tr>
+                        <th>Name of the Faculty</th>
+                        <th>Designation</th>
+                        <th>Highest Qualification</th>
+                        <th>Experience</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Prof.Dilip Kumar Maity</td>
+                        <td>Professor & Principal</td>
+                        <td>Ph.D</td>
+                        <td>20 yrs</td>
+                    </tr>
+                    <tr>
+                        <td>Prof.Partha Dey</td>
+                        <td>Professor</td>
+                        <td>Ph.D</td>
+                        <td>24 yrs</td>
+                    </tr>
+                    <tr>
+                        <td>Nupur Chhaule</td>
+                        <td>Assistant Professor</td>
+                        <td>M.Tech</td>
+                        <td>12 yrs 7 mts</td>
+                    </tr>
+                    <tr>
+                        <td>Prof.Abhijit Banerjee</td>
+                        <td>Professor</td>
+                        <td>Ph.D</td>
+                        <td>18 yrs 9 mts</td>
+                    </tr>
+                    <tr>
+                        <td>Krishna Bhowal</td>
+                        <td>Associate Professor & Registrar </td>
+                        <td>Ph.D</td>
+                        <td>17 yrs 8 mts</td>
+                    </tr>
+                    <tr>
+                        <td>Suman Bhattacharya</td>
+                        <td>Assistant Professor</td>
+                        <td>M.Tech</td>
+                        <td>14 yrs 8 mts</td>
+                    </tr>
+                    <tr>
+                        <td>Arindrajit Pal</td>
+                        <td>Associate Professor</td>
+                        <td>Ph.D</td>
+                        <td>18 yrs 7 mts</td>
+                    </tr>
+                    <tr>
+                        <td>K.M.Priti</td>
+                        <td>Assistant Professor</td>
+                        <td>MCA</td>
+                        <td>4 yrs 4 mts</td>
+                    </tr>
+                    <tr>
+                        <td>Sarjita Soo</td>
+                        <td>Assistant Professor</td>
+                        <td>MCA, M.Tech</td>
+                        <td>4 yrs</td>
+                    </tr>
+                    <tr>
+                        <td>Shaoli Mukherjee</td>
+                        <td>Assistant Professor</td>
+                        <td>MBA</td>
+                        <td>3 yrs 2 mts</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footerContainer">
+            <div class="footerTalk">
+                <p>Follow us on</p>
+            </div>
+            <div class="footerSocialMediaLinks">
+                <a href="https://www.facebook.com/www.aot.edu.in/" title="Visit AOT Facebook Page">
+                    <img src="/assets/images/facebook_Logo.webp" alt="">
+                </a>
+                <a href="https://www.instagram.com/aotconnect/?igsh=MWhhcDJuY2ZqeWg1OA%3D%3D"
+                    title="Visit AOT Instagram Page">
+                    <img src="/assets/images/instagram_Logo.webp" alt="">
+                </a>
+                <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA" title="Visit AOT YouTube Page">
+                    <img src="/assets/images/youtube_Logo.webp" alt="">
+                </a>
+                <a href="https://www.linkedin.com/school/academy-of-technology/" title="Visit AOT Linkedin Page">
+                    <img src="/assets/images/linkedin_Logo.webp" alt="">
+                </a>
+            </div>
+            <div class="footerTalk">
+                <p>Copyright &copy 2024 all rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/javaScripts/chatbot.js"></script>
+    <script src="/javaScripts/userOnOff.js"></script>
+</body>
+
+</html>

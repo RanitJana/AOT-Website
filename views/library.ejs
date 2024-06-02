@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Section</title>
+    <link rel="stylesheet" href="/styles/basicStyles.css">
+    <link rel="stylesheet" href="/styles/library.css">
+    <link rel="stylesheet" href="/styles/headerStyle.css">
+    <link rel="stylesheet" href="/styles/footerStyle.css">
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/bannerResponse.css">
+    <link rel="stylesheet" href="/styles/chatbot.css">
+    <style>
+        /* Style for chatbot icon */
+        #chatbot-icon {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            z-index: 9999;
+            cursor: pointer;
+        }
+
+        /* Style for chatbot window */
+        .chat-container {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 35%;
+            height: 85%;
+            background: white;
+            z-index: 9998;
+
+        }
+
+        /* Style for back icon */
+        #back-icon {
+            cursor: pointer;
+        }
+
+        /* Hidden class */
+        .hidden {
+            display: none;
+        }
+
+        @media only screen and (max-width:1000px) {
+            .chat-container {
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+            }
+
+            .chat-header,
+            button,
+            input {
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Chatbot Icon -->
+    <div id="chatbot-icon" class="icon">
+        <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/chatbot.png" alt="chatbot" />
+    </div>
+
+    <!-- Chatbot Window -->
+    <div class="chat-container hidden">
+        <div class="chat-header">
+            <div id="back-icon" class="icon">
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/multiply.png"
+                    alt="multiply" />
+            </div>
+            <h2>College Chatbot</h2>
+            <button id="clear-chat">Clear Chat</button>
+        </div>
+        <div id="chatbox" class="chatbox"></div>
+        <div class="input-container">
+            <input type="text" id="input" placeholder="Type a message...">
+            <button id="send">Send</button>
+        </div>
+    </div>
+    <!-- chatbot window end here -->
+    <div class="onOrOff">
+        <img src="/assets/images/icons8-no-connection.gif" alt="./assets/images/icons8-no-connection.gif">
+        <img src="/assets/images/icons8-online.gif" alt="./assets/images/icons8-online.gif">
+        <p>We are online</p>
+    </div>
+    <header>
+        <div class="hamberg-menu">
+            <div class="stick"></div>
+            <div class="stick"></div>
+            <div class="stick"></div>
+        </div>
+        <div class="banner">
+            <div class="left">
+                <img src="/assets/images/aot-logo.webp" loading="lazy" alt="Error">
+            </div>
+            <div class="middle">
+                <h1>ACADEMY OF TECHNOLOGY</h1>
+                <span>...translate your vision into reality</span>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <hr>
+        <div class="section__title">
+            <div class="logo">
+                <a href="/"><img width="32" height="32" src="https://img.icons8.com/windows/32/home.png"
+                        alt="home" /></a>
+            </div>
+            <h1 id="heading">AOT Library Information</h1>
+        </div>
+
+        <br>
+        <div class="member">
+
+            <table class="tbl">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Qualification</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mr. Dinesh Das</td>
+                        <td>Honours In English</td>
+                    </tr>
+                    <tr>
+                        <td>Mr. Dhiren kumar</td>
+                        <td>BSC </td>
+                    </tr>
+                    <tr>
+                        <td>Ms. Salmoni Farsee</td>
+                        <td>Bcom</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="parent">
+            <div class="rules">
+                <h1>Rules</h1>
+                <span>
+                    1. Each student must carry his/ her Reference card or Lending card to the library. Without these
+                    cards student will not be allowed to avail the various services of Central Library.
+                </span>
+                <span>
+                    2. Students can use reading room. Reading rrom is open form 10 am to 2 pm and 3 pm to 5pm.
+                </span>
+                <span>
+                    3. Student can borrow book only for 2 weeks. After 2 weeks, Rs 1 per day should be charge as fine.
+                </span>
+                <span>
+                    4. Book issue time is at 9 am to 11am and student can collect their book from 12 pm to 5 pm.
+                </span>
+                <span>
+                    5. Only present students, teachers and staff of the college can avail the library services. Ex
+                    students or outsiders are not allowed inside the Library.
+                </span>
+                <span>
+                    6. Library cards are non transferable. If lost, student has to pay Rs 20/- as fine and can issue
+                    duplicate Library card.
+                </span>
+                <span>
+                    7. Please inform the college if you lost the card and make a FIR nearest Police Station.
+                </span>
+                <span>
+                    8. Students must return all books before form fill up for the University examination and get the no
+                    due certificate from the Central Library.
+                </span>
+                <span>
+                    9. If books are lost or damaged, borrower must replace a copy of the book or the latest edition
+                    available in the market.
+                </span>
+                <span>
+                    10. Damaging library property is a serious offence.
+                </span>
+
+            </div>
+            <div class="image">
+                <img src="/assets/images/library-pic.jpg" alt="">
+            </div>
+            <div class="book">
+                <h1>Types Books</h1>
+                <span>
+                    1. All types of coding books (C++, C Language,JAVA , Python etc. )
+                </span>
+                <span>
+                    2. Database , ALogorithms , Programming , Machine Leaning , HArdware ,Cloud Computing Books for CSE
+                    and CSBS students.
+                </span>
+                <span>
+                    3. Mechanics , Machinery , CAD , Fluid Dynamics ,System & Cintrols , Robotics for ME students.
+                </span>
+                <span>
+                    4. Circuits , Digital Design , INstrumentation , Signals , Fiber Optics, Networking books for ECE &
+                    EEE students.
+                </span>
+                <span>
+                    5. Mass Transfer , Reaction Engineering , Energy ,Fuel Engineering , Process & Design , Biochemical
+                    books for MCA.
+                </span>
+                <span>
+                    6. Many types of Journals , Magazine and others.
+                </span>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footerContainer">
+            <div class="footerTalk">
+                <p>Follow us on</p>
+            </div>
+            <div class="footerSocialMediaLinks">
+                <a href="https://www.facebook.com/www.aot.edu.in/" title="Visit AOT Facebook Page">
+                    <img src="/assets/images/facebook_Logo.webp" alt="">
+                </a>
+                <a href="https://www.instagram.com/aotconnect/?igsh=MWhhcDJuY2ZqeWg1OA%3D%3D"
+                    title="Visit AOT Instagram Page">
+                    <img src="/assets/images/instagram_Logo.webp" alt="">
+                </a>
+                <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA" title="Visit AOT YouTube Page">
+                    <img src="/assets/images/youtube_Logo.webp" alt="">
+                </a>
+                <a href="https://www.linkedin.com/school/academy-of-technology/" title="Visit AOT Linkedin Page">
+                    <img src="/assets/images/linkedin_Logo.webp" alt="">
+                </a>
+            </div>
+            <div class="footerTalk">
+                <p>Copyright &copy 2024 all rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/javaScripts/chatbot.js"></script>
+    <script src="/javaScripts/userOnOff.js"></script>
+</body>
+
+</html>

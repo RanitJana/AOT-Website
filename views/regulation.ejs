@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/basicStyles.css">
+    <link rel="stylesheet" href="/styles/footerStyle.css">
+    <link rel="stylesheet" href="/styles/headerStyle.css">
+    <link rel="stylesheet" href="/styles/regulation.css">
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/bannerResponse.css">
+    <link rel="stylesheet" href="/styles/chatbot.css">
+    <title>Rules and Regulations</title>
+    <style>
+        /* Style for chatbot icon */
+        #chatbot-icon {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            z-index: 9999;
+            cursor: pointer;
+        }
+
+        /* Style for chatbot window */
+        .chat-container {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 35%;
+            height: 85%;
+            background: white;
+            z-index: 9998;
+
+        }
+
+        /* Style for back icon */
+        #back-icon {
+            cursor: pointer;
+        }
+
+        /* Hidden class */
+        .hidden {
+            display: none;
+        }
+
+        @media only screen and (max-width:1000px) {
+            .chat-container {
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+            }
+
+            .chat-header,
+            button,
+            input {
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Chatbot Icon -->
+    <div id="chatbot-icon" class="icon">
+        <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/chatbot.png" alt="chatbot" />
+    </div>
+
+    <!-- Chatbot Window -->
+    <div class="chat-container hidden">
+        <div class="chat-header">
+            <div id="back-icon" class="icon">
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/multiply.png"
+                    alt="multiply" />
+            </div>
+            <h2>College Chatbot</h2>
+            <button id="clear-chat">Clear Chat</button>
+        </div>
+        <div id="chatbox" class="chatbox"></div>
+        <div class="input-container">
+            <input type="text" id="input" placeholder="Type a message...">
+            <button id="send">Send</button>
+        </div>
+    </div>
+    <!-- chatbot window end here -->
+    <div class="onOrOff">
+        <img src="/assets/images/icons8-no-connection.gif" alt="./assets/images/icons8-no-connection.gif">
+        <img src="/assets/images/icons8-online.gif" alt="./assets/images/icons8-online.gif">
+        <p>We are online</p>
+    </div>
+    <header>
+        <div class="hamberg-menu">
+            <div class="stick"></div>
+            <div class="stick"></div>
+            <div class="stick"></div>
+        </div>
+        <div class="banner">
+            <div class="left">
+                <img src="/assets/images/aot-logo.webp" loading="lazy" alt="Error">
+            </div>
+            <div class="middle">
+                <h1>ACADEMY OF TECHNOLOGY</h1>
+                <span>...translate your vision into reality</span>
+            </div>
+        </div>
+
+    </header>
+    <hr>
+    <main>
+        <div class="section__title">
+            <div class="logo">
+                <a href="/"><img width="32" height="32" src="https://img.icons8.com/windows/32/home.png"
+                        alt="home" /></a>
+            </div>
+            <h1 id="heading">Rules and Regulations</h1>
+        </div>
+        <!-- <br> -->
+        <div class="box">
+            <p>&nbsp;&nbsp;&nbsp; Students should not communicate any information or write anything about the college to
+                the press without
+                written permission from the Principal. Students are liable to lose their term for disobedience ,
+                misconduct, misbehavior or for any act of indiscipline. Students must take proper care of all the
+                college property.</p>
+            <div class="info1">
+                <h2>CODE OF CONDUCT</h2>
+
+                <span>1. &nbsp;Love the motherland and the people.Study well and make progress every day.</span>
+                <span>2. &nbsp;Attend the classes on time, and ask for leave only when you must.</span>
+                <span>3. &nbsp;Listen to teachers attentively and do the homework conscientiously.</span>
+                <span>4. &nbsp;Pay attention to personal hygiene, keep cloths clean & tidy; refrain from spitting in
+                    public
+                    plac &nbsp;es.</span>
+                <span>5. &nbsp;Persist in physical training and take an active part in recreational activities.</span>
+                <span>6. &nbsp;Love labour and learn to be independent.</span>
+                <span>7. &nbsp;Observe college discipline and public order.</span>
+                <span>8. &nbsp;Respect teachers; get along with classmates; be polite to others and refrain from
+                    swearing or
+                    scuffling.</span>
+                <span>9. &nbsp;Show concern for the society, protect public property and turn in everything found, lost
+                    by
+                    others.</span>
+                <span>10. &nbsp;Be honest and apologize for any mistake you have committed.</span>
+            </div>
+
+            <div class="info2">
+                <h2>DISCIPLINE: NORMS AND REGULATIONS</h2>
+                <br>
+                <p>The Collegeattaches great importance to discipline and the same must be scrupulously observed by all
+                    students. Failure to comply with any of the rule, regulations or requirements notified from time to
+                    time will lead to strict disciplinary action .</p>
+                <br>
+                <span>
+                    1. Students must always wear the valid Identity Card issued by the college with their recent
+                    photograph affixed, bearing the signature of the Principal, around the neck. They must present it
+                    for inspection / verificationwhenever demanded by the college authorities and / or Security Staff.
+                </span>
+                <span>
+                    2. No student shall be allowed to attend Lectures, Practical etc; unless he /she has his/ her
+                    Identity Card with him/ her.
+                </span>
+                <span>
+                    3. Students must not attend lectures other than their own without the special permission of the
+                    Professor concerned.
+                </span>
+                <span>
+                    4. Students must attend Lectures / Tutorials/ Practical regularly. Defaulters may face Disciplinary
+                    Action. Minimum 75% attendance per term is necessary as per H.S.C Board regulation.
+                </span>
+                <span>
+                    5. Students should make use of College Library and must not loiter in the college premises whenever
+                    they have a free period.
+                </span>
+                <span>
+                    6. Students must be in their classes on time. Late comers may not be allowed to enter the classes.
+                </span>
+                <span>
+                    7. Students must not do anything inside or outside the college that will in any way interfere with
+                    it orderly administration and discipline. They should not communicate any information or write
+                    anything about the college to the press without written permission from the Principal.
+                </span>
+                <span>
+                    8. Students are liable to lose their term for disobedience , misconduct, misbehavior or for any act
+                    of indiscipline. Students must take proper care of all the college property. Any damage done to the
+                    property of the college by disfiguring walls, doors, windows, fittings, furniture and such other
+                    things is breach of discipline and will be considered a punishable offence.
+                </span>
+                <span>
+                    9. Smoking, Tobacco-Chewing, use of Drugsetcare strictly prohibited in the college premises.
+                </span>
+                <span>
+                    10. Use of Mobile Phones, I-pods, I-pad, Laptops etc in college premises is strictly prohibited.
+                </span>
+                <span>
+                    11. No association or organization shall be formed, no meeting shall be held, no person will be
+                    invited to address the students in the college without the prior written permission of the
+                    Principal.
+                </span>
+                <span>
+                    12. No picnics, socials, excursion or tours shall be arranged without the prior written permission
+                    of principal.
+                </span>
+                <span>
+                    13. The Principal. If students join an unofficial picnic or tour, the College shall not be
+                    responsible for anything that happens in the picnic or tour.
+                </span>
+                <span>
+                    14. No students shall collect money as contribution to picnic, trip, educational visit,
+                    get-together, study notes, charity or any other activity without the prior written permission of the
+                    Principal.
+                </span>
+                <span>
+                    15. While conducting debates or meetings in the College a responsible staff member approved by the
+                    Principal will chair the session and subject of debates or lectures must have the prior approval of
+                    the Principal.
+                </span>
+                <span>
+                    16. Students joining the College should observe all the Rules and Regulations of the College laid
+                    down from time to time.
+                </span>
+                <span>
+                    17. Matters not covered by the existing rules will be at the discretion of the Principal.
+                </span>
+            </div>
+            <div class="info3">
+                <h2>ANTIRAGGING</h2>
+                <span>
+                    Ragging is strictly prohibited in the college premises and outside. Students indulging in ragging
+                    will be punished as per “The Maharashtra Prohibition of Ragging Act, 1999- (Mah.XXXIII of 1999)
+                    Published in Maharashtra Govt. Gazette on 15th May, 1999”. Such students will also be expelled from
+                    the college and F.I.R will be lodged with police against them.
+                    <br>
+                    Moreover, it will be mentioned in the college leaving certificate of such students that they are
+                    expelled because of their indulgence in ragging.
+                </span>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footerContainer">
+            <div class="footerTalk">
+                <p>Follow us on</p>
+            </div>
+            <div class="footerSocialMediaLinks">
+                <a href="https://www.facebook.com/www.aot.edu.in/" title="Visit AOT Facebook Page">
+                    <img src="/assets/images/facebook_Logo.webp" alt="">
+                </a>
+                <a href="https://www.instagram.com/aotconnect/?igsh=MWhhcDJuY2ZqeWg1OA%3D%3D"
+                    title="Visit AOT Instagram Page">
+                    <img src="/assets/images/instagram_Logo.webp" alt="">
+                </a>
+                <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA" title="Visit AOT YouTube Page">
+                    <img src="/assets/images/youtube_Logo.webp" alt="">
+                </a>
+                <a href="https://www.linkedin.com/school/academy-of-technology/" title="Visit AOT Linkedin Page">
+                    <img src="/assets/images/linkedin_Logo.webp" alt="">
+                </a>
+            </div>
+            <div class="footerTalk">
+                <p>Copyright &copy 2024 all rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/javaScripts/chatbot.js"></script>
+    <script src="/javaScripts/userOnOff.js"></script>
+</body>
+
+</html>

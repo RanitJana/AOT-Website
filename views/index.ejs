@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="AOT,Academy Of Technology,engineering, college,MCA,B.Tech,Tech Fest">
+    <meta name="description" content="AOT,Academy Of Technology,engineering, college,MCA,B.Tech,Tech Fest">
+    <meta name="robots" content="index, follow">
+    <link rel="preload" href="/assets/images/favicon.png" as="image" type="image/png">
+    <link rel="icon" href="/assets/images/favicon.png" type="image/png">
+
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet';">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    </noscript>
+
+    <link rel="stylesheet" href="/styles/basicStyles.css">
+    <link rel="stylesheet" href="/styles/homeStyle.css">
+
+    <link rel="preload" href="/styles/odometer.css" as="style" onload="this.onload=null;this.rel='stylesheet';">
+
+    <noscript>
+        <link rel="stylesheet" href="/styles/odometer.css">
+    </noscript>
+    <link rel="stylesheet" href="/styles/chatbot.css">
+    <style>
+        /* Style for chatbot icon */
+        #chatbot-icon {
+            position: fixed;
+            bottom: 80px;
+            right: 33px;
+            z-index: 9999;
+            cursor: pointer;
+        }
+
+        /* Style for chatbot window */
+        .chat-container {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 35%;
+            height: 85%;
+            background: white;
+            z-index: 9998;
+
+        }
+
+        /* Style for back icon */
+        #back-icon {
+            cursor: pointer;
+        }
+
+        /* Hidden class */
+        .hidden {
+            display: none;
+        }
+
+        @media only screen and (max-width:1000px) {
+            .chat-container {
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+            }
+
+            .chat-header,
+            button,
+            input {
+                border-radius: 0;
+            }
+        }
+    </style>
+
+
+    <title>Home</title>
+</head>
+
+<body>
+    <!-- Chatbot Icon -->
+    <div id="chatbot-icon" class="icon">
+        <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/chatbot.png" alt="chatbot" />
+    </div>
+
+    <!-- Chatbot Window -->
+    <div class="chat-container hidden">
+        <div class="chat-header">
+            <div id="back-icon" class="icon">
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/multiply.png"
+                    alt="multiply" />
+            </div>
+            <h2>College Chatbot</h2>
+            <button id="clear-chat">Clear Chat</button>
+        </div>
+        <div id="chatbox" class="chatbox"></div>
+        <div class="input-container">
+            <input type="text" id="input" placeholder="Type a message...">
+            <button id="send">Send</button>
+        </div>
+    </div>
+    <!-- chatbot window end here -->
+    <div class="onOrOff">
+        <img src="/assets/images/icons8-no-connection.gif" alt="/assets/images/icons8-no-connection.gif">
+        <img src="/assets/images/icons8-online.gif" alt="/assets/images/icons8-online.gif">
+        <p>We are online</p>
+    </div>
+    <div class="deny leave"></div>
+    <div class="loadingPage">
+        <img src="/assets/images/aot-logo.svg" loading="lazy" alt="Error">
+    </div>
+    <div class="scrollTo">
+        <img src="/assets/images/icons8-up-arrow-50.png" alt="Error">
+    </div>
+    <header id="destination">
+        <div class="hamberg-menu">
+            <div class="stick"></div>
+            <div class="stick"></div>
+            <div class="stick"></div>
+        </div>
+        <div class="banner">
+            <div class="left">
+                <img src="/assets/images/aot-logo.jpg" alt="Error" loading="lazy">
+            </div>
+            <div class="middle">
+                <h1>ACADEMY OF TECHNOLOGY</h1>
+                <span>...translate your vision into reality</span>
+            </div>
+            <div class="right">
+                <div class="search">
+                    <input type="text" name="" class="searchAny" placeholder="Search here..." required>
+                    <img src="/assets/video/icons8-search.gif" alt="Error" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <nav>
+            <div class="parentGoback">
+                <div class="goback">
+                    <img src="/assets/images/aot-logo.jpg" alt="Aot Logo" decoding="async" loading="lazy">
+                </div>
+                <div class="search">
+                    <input type="text" name="searchInp" id="searchInp" class="searchAny" placeholder="Search here..."
+                        required>
+                    <img src="/assets/video/icons8-search.gif" alt="Error" loading="lazy" id="searchBtn"
+                        style="z-index: 10;">
+                </div>
+            </div>
+            <ul>
+                <li class="parent-nav">
+                    <div class="section">
+                        <p>Academics</p>
+                        <img src="/assets/images/icons8-forward-52.jpg" loading="lazy" alt="Error">
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="/department">
+                                <p>Department</p>
+                            </a>
+                        </li>
+                        <li class="parent-nav2">
+                            <div class="section">
+                                <p>Programs</p>
+                                <img src="/assets/images/icons8-forward-52.jpg" loading="lazy" alt="Error">
+                            </div>
+                            <ul>
+                                <li class="parent-nav3">
+                                    <div class="section">
+                                        <p>UG Programs</p>
+                                        <img src="/assets/images/icons8-forward-52.jpg" alt="Error">
+                                    </div>
+                                    <ul>
+                                        <li><a href="/CSE">CSE</a></li>
+                                        <li><a href="#">CSBS</a></li>
+                                        <li><a href="#">ECE</a></li>
+                                        <li><a href="#">EE</a></li>
+                                        <li><a href="#">EEE</a></li>
+                                        <li><a href="#">ME</a></li>
+                                    </ul>
+                                </li>
+                                <li class="parent-nav3">
+                                    <div class="section">
+                                        <p>PG Programs</p>
+                                        <img src="/assets/images/icons8-forward-52.jpg" alt="Error">
+                                    </div>
+                                    <ul>
+                                        <li><a href="/MBA">MBA</a></li>
+                                        <li><a href="#">MCA</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/programStructure">Program Structure</a></li>
+                                <li><a href="/regulation">Regulations</a></li>
+                                <li><a href="/curriculam">Curriculam</a></li>
+                            </ul>
+                        </li>
+                        <li class="parent-nav2">
+                            <div class="section">
+                                <p>Resources</p>
+                                <img src="/assets/images/icons8-forward-52.jpg" loading="lazy" alt="Error">
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="/library" target="_blank">
+                                        <span>Library</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://moodle.org/" target="_blank">
+                                        <span>Moodle</span>
+                                        <img src="/assets/images/icons8-link-96.jpg" loading="lazy" alt="Error">
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="parent-nav2">
+                            <div class="section">
+                                <p>Admissions</p>
+                                <img src="/assets/images/icons8-forward-52.jpg" loading="lazy" alt="Error">
+                            </div>
+                            <ul>
+                                <li><a href="/programStructure#UG-Admission">UG Admission</a></li>
+                                <li><a href="/programStructure#PG-Admission">PG Admission</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="parent-nav">
+                    <div class="section">
+                        <p>Research</p>
+                        <img src="/assets/images/icons8-forward-52.jpg" loading="lazy" alt="Error">
+                    </div>
+                    <ul>
+                        <li><a href="/research#current-research">Current Research</a></li>
+                        <li><a href="/research#past-research">Past Research</a></li>
+                        <li><a href="/research#research-facilities">Research Facilities</a></li>
+                    </ul>
+                </li>
+                <li class="parent-nav">
+                    <div class="section">
+                        <p>Students</p>
+                        <img src="/assets/images/icons8-forward-52.jpg" loading="lazy" alt="Error">
+                    </div>
+                    <ul>
+                        <li><a href="/placement">Placement</a></li>
+                        <li><a href="/LifeAOT">Life@AOT</a></li>
+                        <li><a href="/facility">Campus Facilities</a></li>
+                        <li><a href="/career">Career Services</a></li>
+                        <li><a href="/event">Events</a></li>
+                    </ul>
+                </li>
+                <li class="parent-nav">
+                    <div class="section">
+                        <p>Faculty</p>
+                        <img src="/assets/images/icons8-forward-52.jpg" loading="lazy" alt="Error">
+                    </div>
+                    <ul>
+                        <li><a href="/faculty">Faculty List</a></li>
+                        <li><a href="/faculty">Faculty Positions</a></li>
+                        <li><a href="/career">Career Benefits@AOT</a></li>
+                    </ul>
+                </li>
+                <li class="parent-nav">
+                    <div class="section">
+                        <a href="/contact">Contact Us</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <section class="content">
+            <section class="first">
+                <div class="swiper mySwiper1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div id="bulletin">
+                                <h2>Loading...</h2>
+                                <p>Loading...</p>
+                            </div>
+                            <!-- <img src="/assets/images/picture-loading-failed-1.png" alt="Failed to load iamge"
+                                loading="lazy" decoding="async" id="mainImg2"> -->
+                        </div>
+                    </div>
+                    <div class="swiper-button-next firstBtn"></div>
+                    <div class="swiper-button-prev firstBtn"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+            <!-- place -->
+        </section>
+        <section class="fifth">
+            <div class="online">
+                <h2>AOT Online</h2>
+                <ul>
+                    <li>
+                        <a href="https://aot.edu.in/industry-4-0-2/" target="_blank">
+                            Industry 4.0 Center @AOT
+                            <img src="/assets/images/icons8-link-96.jpg" loading="lazy" alt="Error">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://aot.edu.in/portal/" target="_blank">
+                            <span>
+                                <a href="/studentPortal">AOT Student Portal<img src="/assets/images/icons8-link-96.jpg"
+                                        loading="lazy" alt="Error"> </a>
+                            </span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.aotingenium.com/" target="_blank">
+                            <span>
+                                AOT Web Magazine
+                            </span>
+                            <img src="/assets/images/icons8-link-96.jpg" loading="lazy" alt="Error">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://gic.aot.edu.in/index" target="_blank">
+                            <span>
+                                Google Innovation Centre
+                            </span>
+                            <img src="/assets/images/icons8-link-96.jpg" loading="lazy" alt="Error">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://182.74.215.202:8001/" target="_blank">
+                            <span>
+                                AOT Digital Library
+                            </span>
+                            <img src="/assets/images/icons8-link-96.jpg" loading="lazy" alt="Error">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://182.74.215.198/moodle/" target="_blank">
+                            <span>
+                                Moodle Portal Login
+                            </span>
+                            <img src="/assets/images/icons8-link-96.jpg" loading="lazy" alt="Error">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfht1zbppg8GZW0ZMjuAWo5YU62QJtVl1fZF1ih8QTRS_9Jmg/viewform"
+                            target="_blank">
+                            <span>
+                                AOT Grievance Redressal/Feedback
+                            </span>
+                            <img src="/assets/images/icons8-link-96.jpg" loading="lazy" alt="Error">
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="enquiry" id="admissionEnquiry">
+                <h2>Admission Enquiry</h2>
+                <ul>
+                    <li><a href="https://aot.edu.in/b-tech-fees-structure/" target="_blank">Fees & Deposits</a></li>
+                    <li><a href="/assets/pdf/PR-after-2nd-round-JECA.pdf" target="_blank">
+                            <img src="/assets/video/icons8-pdf.gif" alt="Error">
+                            Documents for Admission
+                        </a>
+                    </li>
+                    <li><a href="#" target="_blank">Documents for Physical Reporting</a></li>
+                </ul>
+
+            </div>
+        </section>
+        <section class="third">
+            <h2>About AOT</h2>
+            <div class="vision">
+                <h2>Vision</h2>
+                <p>“Aspires to be a pre-eminent deemed university of national standing in education and innovation”.</p>
+            </div>
+            <div class="about">
+                <div class="story">
+                    <p>
+                        Established in 2003, Academy of Technology is one of the most acclaimed self-financed
+                        engineering colleges in West Bengal. It has been established by Ananda Educational
+                        Development & Charitable Organisation (AEDCO), a trust known for its deep sense of social
+                        commitment and dedicated to the promotion of education by inculcating appropriate ethics and
+                        attitude.In a metamorphosis of over 18 years, Academy of Technology has been reinventing itself
+                        constantly to explore the infinite possibilities of engineering and technology – an academy
+                        that inspires everyone to think differently. It is now the preferred career destination for
+                        meritorious students due to its academic integrity and standard as well as its attractive
+                        campus placement.
+                        <br>
+                        <br>
+                        All academic programmes are approved by AICTE, recognized by Department of Higher
+
+                        Education, Government of West Bengal and affiliated to Maulana Abul Kalam Azad University of
+                        Technology, West Bengal (formerly West Bengal University of Technology) .
+                        <br>
+                        <a href="/assets/pdf/15-Mandatory-Disclosure.pdf" target="_blank"
+                            style="text-decoration: none;">Mandatory Disclosure</a>
+                    </p>
+                </div>
+                <div class="video">
+                    <iframe title="null"></iframe>
+                    <img decoding="async" src="/assets/images/icons8-youtube-96.png" loading="lazy" alt="YouTube"
+                        title="YouTube logo" id="youtube">
+                </div>
+            </div>
+        </section>
+
+        <div class="secondParSec">
+            <section class="event">
+                <h2>Upcoming Events</h2>
+                <div class="swiper mySwiper2">
+                    <div class="swiper-wrapper">
+                        <!-- <div class="swiper-slide">
+                            <div class="eventBox">
+                                <div class="writingContent">
+                                    <h3>Hello</h3>
+                                    <p>YoYO</p>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="swiper-button-next secondBtn"></div>
+                    <div class="swiper-button-prev secondBtn"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+
+            <section class="second">
+                <h2>
+                    <img src="/assets/video/icons8-announcement.gif" alt="Error" loading="lazy" decoding="async">
+                    <span>
+                        Announcements
+                    </span>
+
+                </h2>
+                <div class="content">
+                    <div class="sub-content">
+                        <!-- <div class="updateBox">
+                            <a href="https://aotfiesta24.tech/" target="_blank">
+                                <p>
+                                    Techfiesta || Games Meet || Humatronics-2024
+                                    <img src="/assets/video/new.gif" alt="Error" loading="lazy" decoding="async">
+                                </p>
+                            </a>
+                        </div> -->
+                    </div>
+                    <div class="seeMore">See more...</div>
+                </div>
+            </section>
+        </div>
+        <!-- exp -->
+        <section class="exp">
+            <div class="blackCover">
+                <h2>the experience</h2>
+                <P>Celebrating 21+ glorious years of excellence in academia</P>
+                <div class="content">
+                    <div class="1"><span data="200">0</span><span>+</span><br>Teachers</div>
+                    <div class="2"><span data="43500">0</span><span>+</span><br>SQ.METER BUILT-Up area</div>
+                    <div class="3"><span data="5000">0</span><span>+</span><br>alumini</div>
+                    <div class="4"><span data="3000">0</span><span>+</span><br> student base</div>
+                </div>
+            </div>
+        </section>
+        <section class="allignments">
+            <h2>Accreditation & Alliances</h2>
+            <div class="pics">
+                <div class="images"><img decoding="async" src="/assets/images/capgemini.jpg" alt="capgemini logo"
+                        title="capgemini logo" loading="lazy"></div>
+                <div class="images"><img decoding="async" src="/assets/images/accre_cisco.jpg" alt="cisco logo"
+                        title="cisco logo" loading="lazy"></div>
+                <div class="images"><img decoding="async" src="/assets/images/accre_cyient.jpg" alt="cyient logo"
+                        title="cyient logo" loading="lazy"></div>
+                <div class="images"><img decoding="async" src="/assets/images/accre_google.jpg" alt="google logo"
+                        title="google logo" loading="lazy"></div>
+                <div class="images"><img decoding="async" src="/assets/images/tcs.jpg" alt="tcs logo" title="tcs logo"
+                        loading="lazy">
+                </div>
+                <div class="images"><img decoding="async" src="/assets/images/accre_techmahindra.jpg"
+                        alt="techmahindra logo" title="techmahindra logo" loading="lazy"></div>
+                <div class="images"><img decoding="async" src="/assets/images/wipro.jpg" alt="wipro logo"
+                        title="wipro logo" loading="lazy">
+                </div>
+            </div>
+        </section>
+        <section class="fourth" id="collegeRanking">
+            <h2>Ranking</h2>
+            <div class="info">
+                <div class="topImage">
+                    <img decoding="async" src="/assets/images/Ranking-Image.jpg" alt="Ranking Newspaper"
+                        title="Ranking Newspaper" loading="lazy">
+                </div>
+                <div class="rankInfo">
+                    <div class="year">
+                        <span>2</span><span>0</span><span>0</span><span>9</span>
+                    </div>
+                    <img decoding="async" src="/assets/images/telegraph (1).jpg" loading="lazy" alt="telegraph"
+                        title="telegraph">
+                    <div class="writing">
+                        “… but the one that comes out on top is the Academy of Technology, Adisaptagram, Hooghly, not
+                        only because of its infrastructure and placement record but also the steady rise in the opening
+                        and closing rankings in the matrix and a growing reputation among students”. The Telegraph.
+                        <br>
+                        <a href="https://www.telegraphindia.com/" target="_blank">Ranking</a>
+
+                    </div>
+                </div>
+                <div class="rankInfo">
+                    <div class="year">
+                        <span>2</span><span>0</span><span>1</span><span>0</span>
+                    </div>
+                    <img decoding="async" src="/assets/images/telegraph_2010 (1).jpg" loading="lazy" alt="telegraph"
+                        title="telegraph">
+                    <div class="writing">
+                        “…Academy of Technology (AOT) at Adisaptagram in Hooghly district has joined the top league of
+                        tech schools in Bengal…”. The Telegraph.
+                        <br>
+                        <a href="https://www.telegraphindia.com/" target="_blank">Ranking</a>
+
+                    </div>
+                </div>
+                <div class="rankInfo">
+                    <div class="year">
+                        <span>2</span><span>0</span><span>1</span><span>7</span>
+                    </div>
+                    <img decoding="async" src="/assets/images/mhrd (2).jpg" loading="lazy" alt="NIRF" title="NIRF">
+                    <div class="writing">
+                        Academy of Technology makes its place with premier institutes of West Bengal in MHRD National
+                        Institutional Ranking Framework for Engineering Institutions in India, 2017.
+
+                        The State Ranking of AOT is 8th, where IIT Kharagpur is 1st, Jadavpur University is 2nd and
+                        IIEST Shibpur is 3rd.
+
+                        Academy of Technology adjudged 152nd in the country.
+                        <br>
+                        <a href="https://www.nirfindia.org/EngineeringRanking200" target="_blank">Ranking</a>
+
+                    </div>
+                </div>
+                <div class="rankInfo">
+                    <div class="year">
+                        <span>2</span><span>0</span><span>1</span><span>7</span>
+                    </div>
+                    <img decoding="async" src="/assets/images/times (1).jpg" loading="lazy" alt="telegraph"
+                        title="telegraph">
+                    <div class="writing">
+                        Academy of Technology acknowledged as 3rd among the list of "Best Individual Private Engineering
+                        Colleges" - Report from the MAKAUT Educational Conclave - TIMES OF INDIA (28th March 2017)
+                        <br>
+                        <a href="http://epaperbeta.timesofindia.com//Article.aspx?eid=31812&articlexml=Desperation-for-engg-job-shows-Milan-Mela-hosts-28032017002027&Mode=1"
+                            target="_blank">Ranking</a>
+
+                    </div>
+                </div>
+                <div class="rankInfo">
+                    <div class="year">
+                        <span>2</span><span>0</span><span>1</span><span>8</span>
+                    </div>
+                    <img decoding="async" src="/assets/images/mhrd (2).jpg" loading="lazy" alt="NIRF" title="NIRF">
+                    <div class="writing">
+                        Once again Academy of Technology makes its place with premier institutes of West Bengal in MHRD
+                        National Institutional Ranking Framework for Engineering Institutions in India, 2018.
+
+                        The State Ranking of AOT is 8th, where IIT Kharagpur is 1st, Jadavpur University is 2nd and
+                        IIEST Shibpur is 3rd.
+
+                        Academy of Technology adjudged 152nd in the country.
+                        <br>
+                        <a href="https://www.nirfindia.org/2018/EngineeringRanking200" target="_blank">Ranking</a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="seventh" id="gotoPlacement">
+            <h2>Placement</h2>
+            <div class="content">
+                <div class="left">
+                    <strong>
+                        Consistent Performance in Campus Placement
+                    </strong>
+                    <br>
+                    <P>
+                        AOT has been accredited by Capgemini, Cyient, Tata Consultancy Services, Tech Mahindra and Wipro
+                        Technologies for campus placement. In the last 3 years, an enviable percentage of AOT’s students
+                        have been recruited by more than 100 renowned corporate houses during campus placement. With
+                        103.49%
+                        placement offers in 2021 and 191.49% placement offers in 2022, our students have proven to be
+                        consistent performers. Even in this year 2023, AOT’s students, eligible for campus interview
+                        have
+                        already attained 147.36% placement offers till now.....
+                        <a href="/placement">Know More.</a>
+                    </P>
+                    <br>
+                </div>
+                <div class="middle">
+                    <div class="parcent">
+                        <table>
+                            <thead>
+                                <th colspan="2">
+                                    <strong>
+
+                                        Till April (corresponding year)
+                                    </strong>
+                                </th>
+                                <th>Final Placement</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2023</td>
+                                    <td>147.36%</td>
+                                    <td>Counting...</td>
+                                </tr>
+                                <tr>
+                                    <td>2022</td>
+                                    <td>175.15%</td>
+                                    <td>191.49%</td>
+                                </tr>
+                                <tr>
+                                    <td>2021</td>
+                                    <td>83.82%</td>
+                                    <td>103.49%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="right">
+                    <picture>
+                        <source srcset="/assets/images/placement.webp">
+                        <img decoding="async" src="/assets/images/placement.jpg" loading="lazy" alt="Group of Student"
+                            title="2024 batch">
+                    </picture>
+                </div>
+            </div>
+            <div class="placementBook">
+                <img decoding="async" src="/assets/video/icons8-pdf.gif" alt="Error">
+                <a href="/assets/pdf/AOT-Placement-2023.pdf">2023 Placement Record</a>
+            </div>
+        </section>
+        <section class="eighth">
+            <h2>Campus Placement in Top Companies</h2>
+            <div class="companies">
+                <div class="company">
+                    <img decoding="async" src="/assets/images/wipro.jpg" loading="lazy" alt="wipro logo"
+                        title="wipro logo">
+                    <span>Wipro</span>
+                </div>
+                <div class="company">
+                    <img decoding="async" src="/assets/images/tcs.jpg" loading="lazy" alt="tcs logo" title="tcs logo">
+                    <span>TCS</span>
+                </div>
+                <div class="company">
+                    <img decoding="async" src="/assets/images/tech-mahindra.jpg" loading="lazy" alt="tech-mahindra logo"
+                        title="tech-mahindra logo">
+                    <span>Tech Mahindra</span>
+                </div>
+                <div class="company">
+                    <img decoding="async" src="/assets/images/cognizant.jpg" loading="lazy" alt="cognizant  logo"
+                        title="cognizant logo">
+                    <span>Cognizant</span>
+                </div>
+            </div>
+        </section>
+        <section class="gallary" id="imageGallary">
+            <h2>Gallary</h2>
+            <p>AOT Campus Tour and Image Gallery</p>
+            <div class="swiper mySwiper3">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="/assets/gallary/classroom.webp">
+                            <img src="/assets/gallary/classroom.jpg" alt="classroom" title="classroom" loading="lazy"
+                                decoding="async">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="/assets/gallary/basketball.webp">
+                            <img decoding="async" src="/assets/gallary/basketball.jpg" alt="basketball court image"
+                                title="basketball court" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="/assets/gallary/lab.webp">
+                            <img decoding="async" src="/assets/gallary/lab.jpg" alt="computer lab image"
+                                title="computer lab" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="/assets/gallary/library.webp">
+                            <img decoding="async" src="/assets/gallary/library.jpg" alt="Library image" title="Library"
+                                loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="/assets/gallary/playground.webp">
+                            <img decoding="async" src="/assets/gallary/playground.jpg" alt="Playground image"
+                                title="Playground" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="/assets/gallary/pond.webp">
+                            <img decoding="async" src="/assets/gallary/pond.jpg" alt="Pond image" title="pond"
+                                loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <source srcset="/assets/gallary/canteen.webp">
+                            <img decoding="async" src="/assets/gallary/canteen.jpg" alt="canteen Image" title="canteen"
+                                loading="lazy">
+                        </picture>
+                    </div>
+                </div>
+                <div class="swiper-button-next firstBtn"></div>
+                <div class="swiper-button-prev firstBtn"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <div class="glance">
+            <h2>At a Glance</h2>
+        </div>
+        <section class="community">
+            <h2>Student Community</h2>
+            <div class="communityImages">
+                <div class="comImgChild">
+                    <div class="child">
+                        <a href="#" target="_blank">
+                            <img src="/assets/communityImage/cncf_logo.svg" alt="cncf_logo" loading="lazy"
+                                decoding="async" title="Cloud Native Community Groups Hooghly">
+                        </a>
+                    </div>
+                    <div class="child">
+                        <a href="#" target="_blank">
+                            <img src="/assets/communityImage/gdsc_logo.svg" alt="gdsc_logo" loading="lazy"
+                                decoding="async" title="Google Developr Student Clubs AOT">
+                        </a>
+                    </div>
+                    <div class="child">
+                        <a href="#" target="_blank">
+                            <img src="/assets/communityImage/ieeesbaot_logo.svg" alt="ieeesbaot_logo" loading="lazy"
+                                decoding="async" title="IEEE AOT">
+                        </a>
+                    </div>
+                    <div class="child">
+                        <a href="#" target="_blank">
+                            <img src="/assets/communityImage/resourcio_logo.svg" alt="resourcio_logo" loading="lazy"
+                                decoding="async" title="Resourcio Community">
+                        </a>
+                    </div>
+                    <div class="child">
+                        <a href="https://www.sccseaot.com/" target="_blank">
+                            <img src="/assets/communityImage/sccse_logo.svg" alt="sccse_logo" loading="lazy"
+                                decoding="async" title="Student Chapter CSE AOT">
+                        </a>
+                    </div>
+                    <div class="child">
+                        <a href="https://sc-csbs.vercel.app/" target="_blank">
+                            <img src="/assets/communityImage/sccsbs_logo.svg" alt="sccsbs_logo" loading="lazy"
+                                decoding="async" title="Student Chapter CSBS AOT">
+                        </a>
+                    </div>
+                    <div class="child">
+                        <a href="https://www.sceceaot.com/" target="_blank">
+                            <img src="/assets/communityImage/scece_logo.svg" alt="scece_logo" loading="lazy"
+                                decoding="async" title="Student Chapter ECE AOT">
+                        </a>
+                    </div>
+                    <div class="child">
+                        <a href="#" target="_blank">
+                            <img src="/assets/communityImage/sceee_logo.svg" alt="sceee_logo" loading="lazy"
+                                decoding="async" title="Student Chapter EEE AOT">
+                        </a>
+                    </div>
+                    <div class="child">
+                        <a href="#" target="_blank">
+                            <img src="/assets/communityImage/scme_logo.svg" alt="scme_logo" loading="lazy"
+                                decoding="async" title="Student Chapter ME AOT">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="antiRagging">
+            <h2>
+                Anti Ragging Policy
+            </h2>
+            <div class="info">
+                <img decoding="async" src="/assets/images/ragging1.jpg" alt="antiRagging image" title="antiRagging"
+                    loading="lazy">
+                <p>
+                    <strong> Academy of Technology</strong> is committed to providing a <strong> safe and nurturing
+                        environment </strong>for all its
+                    students. As part of this commitment,<strong>the college strictly prohibits any form of ragging
+                        on its campus.</strong> Ragging, in any shape or form, whether physical, verbal, or
+                    psychological, is not tolerated.
+                    <strong> The college has implemented a zero-tolerance policy towards ragging</strong> and has put in
+                    place
+                    stringent
+                    measures to prevent and address any incidents. We believe in fostering an atmosphere of mutual
+                    respect, dignity, and friendship among our students.
+                    At Academy of Technology, we are dedicated to creating a harmonious and inclusive learning
+                    environment where every student can thrive without fear of harassment or intimidation.
+                    <br>
+                    <a href="https://antiragging.in/" style="text-decoration: none;"> Know more</a>
+                    <br>
+                    <a href="/assets/pdf/anti-ragging-affidavit.pdf" target="_blank">
+                        <button>Download Affidavit</button>
+                    </a>
+                </p>
+            </div>
+        </section>
+        <section class="workshop">
+            <h2>
+                Workshops and Seminers
+            </h2>
+            <div class="info">
+                <p>
+                    <strong> Academy of Technology regularly organizes seminars and workshops to enrich the learning
+                        experience
+                        of its students.</strong> These events provide a platform for students to interact with experts
+                    from various
+                    industries, gain insights into emerging trends, and enhance their skills.
+                    Seminars at Academy of Technology cover a wide range of topics, from cutting-edge technologies to
+                    industry best practices. <strong> Renowned speakers and professionals are invited </strong>to share
+                    their knowledge
+                    and experiences with students, inspiring them to think innovatively and stay updated with the latest
+                    developments in their respective fields.
+                    <br>
+                    <a href="#" target="_blank">
+                        <button>Know More</button>
+                    </a>
+                </p>
+                <img decoding="async" src="/assets/images/seminer.jpg" id="workshopMain" alt="seminer image"
+                    title="seminar" loading="lazy">
+            </div>
+        </section>
+        <section class="ninth" id="location">
+            <h2>Location</h2>
+            <span>
+                <ul>
+                    <li>
+                        Located at Adisaptagram on the side of G. T. Road in the industrial region of Hooghly under
+                        Kolkata
+                        Metropolitan Development Area, West Bengal.
+                    </li>
+                    <li>
+                        Academy of Technology is only 200 meters away from
+                        Adisaptagram Railway Station, next station to Bandel on Howrah Burdwan main line [Eastern
+                        Railway] and
+                        only 65 minutes journey from Howrah Railway Junction. Kolkata Airport is only 47 km away.
+                    </li>
+                    <li>
+                        Kanchrapara Railway Station (North 24 Parganas) is 9.4 KM and Kalyani Railway Station (Nadia) is
+                        10.4 KM
+                        from Academy of Technology.
+                    </li>
+                    <li>
+                        The communication advantages through established road and railway networks enable a very high
+                        number of
+                        day scholars to commute from adjacent areas of Central Kolkata, North Kolkata, Salt Lake and
+                        even from
+                        South Kolkata.
+                    </li>
+                </ul>
+
+
+            </span>
+            <P>
+                <strong>Address :</strong>
+                <span>
+                    <div class="addressText">
+                        G.T.Road (Adisaptagram), Aedconagar Hooghly, West Bengal Hooghly - 712121 West
+                        Bengal,
+                        India
+                        <img src="/assets/images/icons8-copy-96.png" alt="copy" decoding="async" class="copyAddress"
+                            loading="lazy" title="Copy text">
+                    </div>
+                </span>
+            </P>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d117565.49665841526!2d88.377129!3d22.953108!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f8930eeb863655%3A0xb3a6adf26d41d0b5!2sAcademy%20of%20Technology!5e0!3m2!1sen!2sin!4v1713963362633!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" title="Location"></iframe>
+        </section>
+    </main>
+    <aside>
+        <img decoding="async" src="/assets/images/icons8-cross-90.png" alt="cross image">
+        <div class="content">
+        </div>
+    </aside>
+    <footer>
+        <div class="footerContainer">
+            <div class="footerTalk">
+                <p>Follow us on</p>
+            </div>
+            <div class="footerSocialMediaLinks">
+                <a href="https://www.facebook.com/www.aot.edu.in/" title="Visit AOT Facebook Page">
+                    <img src="/assets/images/facebook_Logo.webp" alt="Error" loading="lazy">
+                </a>
+                <a href="https://www.instagram.com/aotconnect/?igsh=MWhhcDJuY2ZqeWg1OA%3D%3D"
+                    title="Visit AOT Instagram Page">
+                    <img src="/assets/images/instagram_Logo.webp" alt="Error" loading="lazy">
+                </a>
+                <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA" title="Visit AOT YouTube Page">
+                    <img src="/assets/images/youtube_Logo.webp" alt="Error" loading="lazy">
+                </a>
+                <a href="https://www.linkedin.com/school/academy-of-technology/" title="Visit AOT Linkedin Page">
+                    <img src="/assets/images/linkedin_Logo.webp" alt="Error" loading="lazy">
+                </a>
+            </div>
+            <div class="footerTalk">
+                <p>Copyright &copy 2024 all rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/javaScripts/chatbot.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="/javaScripts/header.js" defer></script>
+    <script src="/javaScripts/odometer.js" defer></script>
+    <script src="/javaScripts/home.js" defer></script>
+    <script src="/javaScripts/userOnOff.js" defer></script>
+</body>
+
+</html>

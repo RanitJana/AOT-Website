@@ -1,0 +1,73 @@
+.brakingNews {
+    position: relative;
+    height: fit-content;
+    height: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.ticker-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: var(--aot-color--);
+    left: 0;
+    top: 0;
+    height: 2.5rem;
+    padding: 10px 2rem;
+    z-index: 2;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+}
+
+.ticker-heading:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 11px solid var(--aot-color--);
+    position: absolute;
+    right: 0;
+    transform: translateX(100%);
+}
+
+.ticker-wrap .ticker__item:before {
+    content: "";
+    height: 11px;
+    width: 11px;
+    display: inline-block;
+    background-color: #1074bc;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 15px;
+}
+
+.ticker-wrap {
+    height: 2.5rem;
+    line-height: 2.5rem;
+    white-space: nowrap;
+}
+
+.ticker-wrap .ticker__item {
+    padding: 0 2rem;
+    font-size: 0.875rem;
+    color: #000000;
+}
+
+marquee {
+    width: 100%;
+    background-color: rgb(243, 243, 243);
+}
+
+@media only screen and (max-width:441px) {
+    .ticker-heading {
+        font-size: small;
+        padding: 0.5rem;
+    }
+
+    .ticker-heading::after {
+        margin-left: 7.4rem;
+    }
+}

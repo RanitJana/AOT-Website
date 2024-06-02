@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/headerStyle.css">
+    <link rel="stylesheet" href="/styles/ug-cseStyle.css">
+    <link rel="stylesheet" href="/styles/footerStyle.css">
+    <link rel="stylesheet" href="/styles/curriculam.css">
+    <link rel="stylesheet" href="/styles/chatbot.css">
+    <title>Curriculum</title>
+    <style>
+        /* Style for chatbot icon */
+        #chatbot-icon {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            z-index: 9999;
+            cursor: pointer;
+        }
+
+        /* Style for chatbot window */
+        .chat-container {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 35%;
+            height: 85%;
+            background: white;
+            z-index: 9998;
+
+        }
+
+        /* Style for back icon */
+        #back-icon {
+            cursor: pointer;
+        }
+
+        /* Hidden class */
+        .hidden {
+            display: none;
+        }
+
+        @media only screen and (max-width:1000px) {
+            .chat-container {
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+            }
+
+            .chat-header,
+            button,
+            input {
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Chatbot Icon -->
+    <div id="chatbot-icon" class="icon">
+        <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/chatbot.png" alt="chatbot" />
+    </div>
+
+    <!-- Chatbot Window -->
+    <div class="chat-container hidden">
+        <div class="chat-header">
+            <div id="back-icon" class="icon">
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/multiply.png"
+                    alt="multiply" />
+            </div>
+            <h2>College Chatbot</h2>
+            <button id="clear-chat">Clear Chat</button>
+        </div>
+        <div id="chatbox" class="chatbox"></div>
+        <div class="input-container">
+            <input type="text" id="input" placeholder="Type a message...">
+            <button id="send">Send</button>
+        </div>
+    </div>
+    <!-- chatbot window end here -->
+    <div class="onOrOff">
+        <img src="/assets/images/icons8-no-connection.gif" alt="./assets/images/icons8-no-connection.gif">
+        <img src="/assets/images/icons8-online.gif" alt="./assets/images/icons8-online.gif">
+        <p>We are online</p>
+    </div>
+    <main>
+
+        <div class="to-top">
+            <a href="#">
+                <img src="/assets/images/icons8-up-arrow-50.png" alt="">
+            </a>
+        </div>
+        <header>
+
+            <div class="banner">
+                <div class="left">
+                    <img src="/assets/images/aot-logo.webp" loading="lazy" alt="Error">
+                </div>
+                <div class="middle">
+                    <h1>ACADEMY OF TECHNOLOGY</h1>
+                    <span>...translate your vision into reality</span>
+                </div>
+            </div>
+
+        </header>
+
+        <div class="beforeIntro">
+            <div class="back-btn"><img src="/assets/video/icons8-home.gif" alt="home" /></div>
+            <h1 class="headings">Curriculum</h1>
+        </div>
+
+        <div class="basic-intro">
+
+            <p>Welcome to the <strong>Curriculum</strong> section of our college website. This is where you'll find
+                detailed
+                information about the courses we offer across various disciplines.</p>
+            <p>Our curriculum is designed with a focus on **holistic development** and **academic excellence**. It is
+                regularly updated to keep pace with the latest advancements in education and industry trends. We offer a
+                wide range of courses, from foundational subjects to advanced topics, ensuring our students receive a
+                comprehensive and well-rounded education.</p>
+            <p>Each course includes a detailed syllabus, learning objectives, and assessment methods. This transparency
+                allows students to understand what they will learn and how their progress will be evaluated.</p>
+            <p>We invite you to explore our curriculum and discover the exciting learning opportunities that await you
+                at
+                our college. Whether you're a prospective student trying to find the perfect course or a current student
+                planning your academic journey, you'll find everything you need right here.</p>
+            <p>Remember, education is not just about earning a degree - it's about pursuing your passion, honing your
+                skills, and preparing for a successful future. We're here to support you every step of the way.</p>
+            <p><strong> Happy exploring!</strong></p>
+        </div>
+
+
+        <!-- CSE -->
+        <div class="curriculam-cse">
+            <h1 class="headings">CSE</h1>
+            <div class="curriculam-content curriculam-cse-content">
+                <ul class="sem-count">
+                    <!-- Year I -->
+                    <li>
+                        <h2 class="year">Year: I</h2>
+                        <ul class="sub-count">
+                            <li><strong>English:</strong> Enhances communication skills.</li>
+                            <li><strong>Mathematics I & II:</strong> Foundation in mathematical concepts used in
+                                computer
+                                science.</li>
+                            <li><strong>Computers and Information Technology:</strong> Introduction to the basics of
+                                computers and IT.</li>
+                            <li><strong>Engineering Drawing Practice:</strong> Understanding of technical drawings in
+                                engineering.</li>
+                            <li><strong>Semiconductor Devices and Circuits:</strong> Functioning of semiconductor
+                                devices
+                                and circuits.</li>
+                            <li><strong>Managerial Economics and Accountancy:</strong> Understanding of economic
+                                concepts
+                                and accountancy practices.</li>
+                            <li><strong>C & Data Structures:</strong> Introduction to the C programming language and the
+                                concept of data structures.</li>
+                            <li><strong>IC Application:</strong> Application of Integrated Circuits.</li>
+                            <li><strong>Applied Physics:</strong> Application of the principles of physics to solve
+                                engineering problems.</li>
+                            <li><strong>Data Processing:</strong> Methods and techniques used to process data.</li>
+                        </ul>
+                    </li>
+
+                    <!-- Year II -->
+                    <li>
+                        <h2 class="year">Year: II</h2>
+                        <ul class="sub-count">
+                            <li><strong>Computer Organization:</strong> Study of the architecture and organization of
+                                computer systems.</li>
+                            <li><strong>Electrical Technology:</strong> Introduction to the principles and applications
+                                of
+                                electrical technology.</li>
+                            <li><strong>Probability and Statistics:</strong> Mathematical study of uncertainty and data
+                                analysis.</li>
+                            <li><strong>Operating Systems:</strong> Study of system software that manages computer
+                                hardware
+                                and software.</li>
+                            <li><strong>Object-Oriented Programming:</strong> Introduction to programming paradigm based
+                                on
+                                the concept of “objects”.</li>
+                            <li><strong>Interfacing Through Microprocessors:</strong> Study of microprocessors and how
+                                they
+                                interact with other hardware.</li>
+                            <li><strong>Data Communications:</strong> Study of data transmission methods.</li>
+                            <li><strong>Operations Research:</strong> Use of mathematical models, statistics and
+                                algorithms
+                                to aid in decision-making.</li>
+                            <li><strong>Theory of Computation:</strong> Study of the nature and limits of computation.
+                            </li>
+                            <li><strong>System Programming:</strong> Writing and maintaining system software.</li>
+                        </ul>
+                    </li>
+
+
+
+                    <!-- Year III -->
+                    <li>
+                        <h2 class="year">Year: III</h2>
+                        <ul class="sub-count">
+                            <li><strong>Computer Architecture:</strong> Detailed study of the design and organization of
+                                computers.</li>
+                            <li><strong>Artificial Intelligence:</strong> Introduction to the simulation of human
+                                intelligence processes by machines.</li>
+                            <li><strong>Neuro-Fuzzy:</strong> Study of neural networks and fuzzy logic.</li>
+                            <li><strong>Wireless Network:</strong> Study of wireless communication networks and systems.
+                            </li>
+                            <li><strong>Data Structures and Algorithms:</strong> Study of data organization, storage,
+                                and
+                                retrieval.</li>
+                            <li><strong>Implementation of Programming Languages:</strong> Practical application of
+                                programming languages.</li>
+                            <li><strong>Database Information System:</strong> Study of database systems and their
+                                applications.</li>
+                            <li><strong>Compiler Design:</strong> Design and construction of compilers.</li>
+                            <li><strong>Data Mining:</strong> Process of discovering patterns in large data sets.</li>
+                            <li><strong>Computer Graphics:</strong> Creation and manipulation of graphics and images by
+                                a
+                                computer.</li>
+                        </ul>
+                    </li>
+
+                    <!-- Year IV -->
+                    <li>
+                        <h2 class="year">Year: IV</h2>
+                        <ul class="sub-count">
+                            <li><strong>Software Engineering:</strong> Application of engineering to the development of
+                                software.</li>
+                            <li><strong>Simulation and Modeling:</strong> Creation and use of models and simulations to
+                                understand and solve real-world problems.</li>
+                            <li><strong>Java Programming:</strong> Introduction to the Java programming language.</li>
+                            <li><strong>Mobile Computing:</strong> Study of the technology used to transmit information
+                                without needing to be connected to a fixed physical link.</li>
+                            <li><strong>Distributed Systems:</strong> Study of systems with components located on
+                                networked
+                                computers.</li>
+                            <li><strong>Pattern Recognition:</strong> Study of technology used to identify patterns and
+                                regularities in data.</li>
+                            <li><strong>Image Processing:</strong> Analysis and manipulation of a digitized image.</li>
+                            <li><strong>Formal Languages and Automata Theory:</strong> Study of abstract machines and
+                                computation.</li>
+                            <li><strong>Neural Networks:</strong> Systems modeled after the human brain.</li>
+                            <li><strong>Project Management:</strong> Planning, organizing, and managing resources to
+                                bring
+                                about the successful completion of specific project goals and objectives.</li>
+                            <li><strong>Visual Programming:</strong> Programming to create graphics, such as user
+                                interfaces.</li>
+                            <li><strong>Computer Communication:</strong> Study of the exchange of data and the creation
+                                of
+                                communication networks.</li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+                <p class="syllabus">For detailed structure check out <img src="/assets/video/icons8-pdf.gif" alt=""><a
+                        href="/assets/pdf/CSE.pdf">CSE-Curriculam</a></p>
+            </div>
+        </div>
+
+        <!-- CSBS -->
+        <div class="curriculam-ece">
+            <h1 class="headings">CSBS</h1>
+            <div class="curriculam-content curriculam-csbs-content">
+                <ul class="sem-count">
+
+                    <!-- Year I -->
+                    <li>
+                        <h2 class="year">Year: I</h2>
+                        <ul class="sub-count">
+                            <li><strong>Discrete Mathematics:</strong> Study of mathematical structures that are
+                                fundamentally discrete rather than continuous.</li>
+                            <li><strong>Introductory Topics in Statistics, Probability and Calculus:</strong> Basic
+                                principles of statistics, probability, and calculus.</li>
+                            <li><strong>Fundamentals of Computer Science + Lab:</strong> Introduction to the basics of
+                                computer science and practical applications.</li>
+                            <li><strong>Principles of Electrical Engineering + Lab:</strong> Introduction to the
+                                principles
+                                and applications of electrical engineering.</li>
+                            <li><strong>Physics for Computing Science + Lab:</strong> Application of physics principles
+                                in
+                                computing science.</li>
+                            <li><strong>Business Communication and Value Science – I:</strong> Enhances business
+                                communication skills and understanding of value science.</li>
+                            <li><strong>Linear Algebra:</strong> Study of vector spaces and linear mapping between such
+                                spaces.</li>
+
+                        </ul>
+                    </li>
+
+                    <!-- Year II -->
+                    <li>
+                        <h2 class="year">Year: II</h2>
+                        <ul class="sub-count">
+                            <li><strong>Principles of Electronics + Lab:</strong> Introduction to the principles and
+                                applications of electronics.</li>
+                            <li><strong>Fundamentals of Economics:</strong> Basic principles of economics.</li>
+                            <li><strong>Business Communication and Value Science – II:</strong> Continuation of business
+                                communication skills and understanding of value science.</li>
+                            <li><strong>Formal Language and Automata Theory:</strong> Study of abstract machines and
+                                formal
+                                languages.</li>
+                            <li><strong>Computer Organization and Architecture:</strong> Study of the architecture and
+                                organization of computer systems.</li>
+                            <li><strong>Object Oriented Programming + Lab:</strong> Introduction to programming paradigm
+                                based on the concept of “objects”.</li>
+                            <li><strong>Computational Statistics + Lab:</strong> Techniques for solving statistical
+                                problems
+                                computationally.</li>
+                            <li><strong>Software Engineering + Lab:</strong> Application of engineering to the
+                                development
+                                of software.</li>
+                            <li><strong>Operating Systems + Lab (Unix):</strong> Study of system software that manages
+                                computer hardware and software.</li>
+                            <li><strong>Database Management Systems + Lab:</strong> Study of database systems and their
+                                applications.</li>
+                        </ul>
+                    </li>
+
+
+
+                    <!-- Year III -->
+                    <li>
+                        <h2 class="year">Year: III</h2>
+                        <ul class="sub-count">
+                            <li><strong>Software Design with UML + Lab:</strong> Design of software systems using
+                                Unified
+                                Modeling Language.</li>
+                            <li><strong>Introduction to Innovation, IP Management and Entrepreneurship:</strong>
+                                Introduction to the principles of innovation, intellectual property management, and
+                                entrepreneurship.</li>
+                            <li><strong>Business Communication and Value Science – III:</strong> Further enhancement of
+                                business communication skills and understanding of value science.</li>
+                            <li><strong>Operations Research + Lab:</strong> Use of mathematical models, statistics and
+                                algorithms to aid in decision-making.</li>
+                            <li><strong>Statistical Methods + Lab:</strong> Techniques for collecting, analyzing,
+                                interpreting, presenting, and organizing data.</li>
+                            <li><strong>Data Structures and Algorithms + Lab:</strong> Introduction to data structures
+                                and
+                                algorithms and their practical applications.</li>
+
+                        </ul>
+                    </li>
+
+                    <!-- Year IV -->
+                    <li>
+                        <h2 class="year">Year: IV</h2>
+                        <ul class="sub-count">
+                            <li><strong>Design and Analysis of Algorithms + Lab:</strong> Techniques for designing and
+                                analyzing algorithms.</li>
+                            <li><strong>Compiler Design + Lab (LEX & YACC):</strong> Design and construction of
+                                compilers.
+                            </li>
+                            <li><strong>Fundamentals of Management:</strong> Basic principles of management.</li>
+                            <li><strong>Business Strategy:</strong> Study of strategies used in business.</li>
+                            <li><strong>Design Thinking:</strong> Introduction to the methodology used in design
+                                thinking.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <p class="syllabus">For detailed structure check out <img src="/assets/video/icons8-pdf.gif" alt=""><a
+                        href="/assets/pdf/CSBS.pdf">CSBS-Curriculam</a></p>
+            </div>
+        </div>
+
+
+        <!-- ECE -->
+        <div class="curriculam-ece">
+            <h1 class="headings">ECE</h1>
+            <div class="curriculam-content curriculam-ece-content">
+                <ul class="sem-count">
+
+                    <!-- Year I -->
+                    <li>
+                        <h2 class="year">Year: I</h2>
+                        <ul class="sub-count">
+                            <li><strong>English:</strong> Enhances communication skills.</li>
+                            <li><strong>Mathematics I & II:</strong> Foundation in mathematical concepts used in
+                                computer
+                                science.</li>
+                            <li><strong>Computers and Information Technology:</strong> Introduction to the basics of
+                                computers and IT.</li>
+                            <li><strong>Engineering Drawing Practice:</strong> Understanding of technical drawings in
+                                engineering.</li>
+                            <li><strong>Semiconductor Devices and Circuits:</strong> Functioning of semiconductor
+                                devices
+                                and circuits.</li>
+                            <li><strong>Managerial Economics and Accountancy:</strong> Understanding of economic
+                                concepts
+                                and accountancy practices.</li>
+                            <li><strong>C & Data Structures:</strong> Introduction to the C programming language and the
+                                concept of data structures.</li>
+                            <li><strong>IC Application:</strong> Application of Integrated Circuits.</li>
+                            <li><strong>Applied Physics:</strong> Application of the principles of physics to solve
+                                engineering problems.</li>
+                            <li><strong>Data Processing:</strong> Methods and techniques used to process data.</li>
+                        </ul>
+                    </li>
+
+                    <!-- Year II -->
+                    <li>
+                        <h2 class="year">Year: II</h2>
+                        <ul class="sub-count">
+                            <li><strong>Computer Organization:</strong> Study of the architecture and organization of
+                                computer systems.</li>
+                            <li><strong>Electrical Technology:</strong> Introduction to the principles and applications
+                                of
+                                electrical technology.</li>
+                            <li><strong>Probability and Statistics:</strong> Mathematical study of uncertainty and data
+                                analysis.</li>
+                            <li><strong>Operating Systems:</strong> Study of system software that manages computer
+                                hardware
+                                and software.</li>
+                            <li><strong>Object-Oriented Programming:</strong> Introduction to programming paradigm based
+                                on
+                                the concept of “objects”.</li>
+                            <li><strong>Interfacing Through Microprocessors:</strong> Study of microprocessors and how
+                                they
+                                interact with other hardware.</li>
+                            <li><strong>Data Communications:</strong> Study of data transmission methods.</li>
+                            <li><strong>Operations Research:</strong> Use of mathematical models, statistics and
+                                algorithms
+                                to aid in decision-making.</li>
+                            <li><strong>Theory of Computation:</strong> Study of the nature and limits of computation.
+                            </li>
+                            <li><strong>System Programming:</strong> Writing and maintaining system software.</li>
+                        </ul>
+                    </li>
+
+                    <!-- Year III -->
+                    <li>
+                        <h2 class="year">Year: III</h2>
+                        <ul class="sub-count">
+                            <li><strong>Computer Architecture:</strong> Detailed study of the design and organization of
+                                computers.</li>
+                            <li><strong>Artificial Intelligence:</strong> Introduction to the simulation of human
+                                intelligence processes by machines.</li>
+                            <li><strong>Neuro-Fuzzy:</strong> Study of neural networks and fuzzy logic.</li>
+                            <li><strong>Wireless Network:</strong> Study of wireless communication networks and systems.
+                            </li>
+                            <li><strong>Data Structures and Algorithms:</strong> Study of data organization, storage,
+                                and
+                                retrieval.</li>
+                            <li><strong>Implementation of Programming Languages:</strong> Practical application of
+                                programming languages.</li>
+                            <li><strong>Database Information System:</strong> Study of database systems and their
+                                applications.</li>
+                            <li><strong>Compiler Design:</strong> Design and construction of compilers.</li>
+                            <li><strong>Data Mining:</strong> Process of discovering patterns in large data sets.</li>
+                            <li><strong>Computer Graphics:</strong> Creation and manipulation of graphics and images by
+                                a
+                                computer.</li>
+                        </ul>
+                    </li>
+
+                    <!-- Year IV -->
+                    <li>
+                        <h2 class="year">Year: IV</h2>
+                        <ul class="sub-count">
+                            <li><strong>Software Engineering:</strong> Application of engineering to the development of
+                                software.</li>
+                            <li><strong>Simulation and Modeling:</strong> Creation and use of models and simulations to
+                                understand and solve real-world problems.</li>
+                            <li><strong>Java Programming:</strong> Introduction to the Java programming language.</li>
+                            <li><strong>Mobile Computing:</strong> Study of the technology used to transmit information
+                                without needing to be connected to a fixed physical link.</li>
+                            <li><strong>Distributed Systems:</strong> Study of systems with components located on
+                                networked
+                                computers.</li>
+                            <li><strong>Pattern Recognition:</strong> Study of technology used to identify patterns and
+                                regularities in data.</li>
+                            <li><strong>Image Processing:</strong> Analysis and manipulation of a digitized image.</li>
+                            <li><strong>Formal Languages and Automata Theory:</strong> Study of abstract machines and
+                                computation.</li>
+                            <li><strong>Neural Networks:</strong> Systems modeled after the human brain.</li>
+                            <li><strong>Project Management:</strong> Planning, organizing, and managing resources to
+                                bring
+                                about the successful completion of specific project goals and objectives.</li>
+                            <li><strong>Visual Programming:</strong> Programming to create graphics, such as user
+                                interfaces.</li>
+                            <li><strong>Computer Communication:</strong> Study of the exchange of data and the creation
+                                of
+                                communication networks.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p class="syllabus">For detailed structure check out <img src="/assets/video/icons8-pdf.gif" alt=""><a
+                        href="/assets/pdf/ECE.pdf">ECE-Curriculam</a></p>
+            </div>
+        </div>
+
+        <!-- EE -->
+        <div class="curriculam-ece">
+            <h1 class="headings">EE</h1>
+            <div class="curriculam-content curriculam-ee-content">
+                <ul class="sem-count">
+
+                    <!-- Year I -->
+                    <li>
+                        <h2 class="year">Year: I</h2>
+                        <ul class="sub-count">
+                            <li><strong>Physics, Chemistry, and Mathematics:</strong> Fundamental sciences that form the
+                                basis of engineering.</li>
+                            <li><strong>Basic Electrical Engineering:</strong> Introduction to the principles and
+                                applications of electrical engineering.</li>
+                            <li><strong>Programming for Problem Solving:</strong> Learning to solve problems using
+                                programming languages.</li>
+                        </ul>
+                    </li>
+
+                    <!-- Year II -->
+                    <li>
+                        <h2 class="year">Year: II</h2>
+                        <ul class="sub-count">
+                            <li><strong>Electronic Devices:</strong> Study of electronic devices and their applications.
+                            </li>
+                            <li><strong>Analog Circuits:</strong> Study of analog circuits and their design.</li>
+                            <li><strong>Digital System Design:</strong> Design and analysis of digital systems.</li>
+                            <li><strong>Microcontrollers:</strong> Study of microcontrollers and their applications.
+                            </li>
+                        </ul>
+                    </li>
+
+
+
+                    <!-- Year III -->
+                    <li>
+                        <h2 class="year">Year: III</h2>
+                        <ul class="sub-count">
+                            <li><strong>Signals and Systems:</strong> Introduction to signals and systems.</li>
+                            <li><strong>Analog and Digital Communication:</strong> Study of analog and digital
+                                communication
+                                systems.</li>
+                            <li><strong>Network Theory:</strong> Study of network theory and its applications.</li>
+                            <li><strong>Operations Research:</strong> Use of mathematical models, statistics and
+                                algorithms
+                                to aid in decision-making.</li>
+                        </ul>
+                    </li>
+
+                    <!-- Year IV -->
+                    <li>
+                        <h2 class="year">Year: IV</h2>
+                        <ul class="sub-count">
+                            <li><strong>Power Systems:</strong> Study of the generation, transmission, distribution, and
+                                utilization of electric power.</li>
+                            <li><strong>Control Systems:</strong> Study of systems designed to manage, command, direct
+                                or
+                                regulate the behavior of other devices or systems.</li>
+                            <li><strong>Power Electronics:</strong> Application of solid-state electronics for the
+                                control
+                                and conversion of electric power.</li>
+                            <li><strong>Artificial Intelligence:</strong> Introduction to the simulation of human
+                                intelligence processes by machines.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p class="syllabus">For detailed structure check out <img src="/assets/video/icons8-pdf.gif" alt=""><a
+                        href="/assets/pdf/EE.pdf">EE-Curriculam</a></p>
+            </div>
+        </div>
+
+
+        <!-- EEE -->
+        <div class="curriculam-ece">
+            <h1 class="headings">EEE</h1>
+            <div class="curriculam-content curriculam-eee-content">
+                <ul class="sem-count">
+
+                    <!-- Year I -->
+                    <li>
+                        <h2 class="year">Year: I</h2>
+                        <ul class="sub-count">
+                            <li><strong>Technical English:</strong> Enhances technical communication skills.</li>
+                            <li><strong>Engineering Physics & Chemistry:</strong> Fundamental sciences that form the
+                                basis
+                                of engineering.</li>
+                            <li><strong>Basic EEE:</strong> Introduction to the principles and applications of
+                                electrical
+                                and electronics engineering.</li>
+                            <li><strong>Computer Programming:</strong> Learning to solve problems using programming
+                                languages.</li>
+                            <li><strong>Engineering Mathematics:</strong> Foundation in mathematical concepts used in
+                                engineering.</li>
+                        </ul>
+                    </li>
+
+                    <!-- Year II -->
+                    <li>
+                        <h2 class="year">Year: II</h2>
+                        <ul class="sub-count">
+                            <li><strong>Electrical Machines:</strong> Study of electrical machines and their
+                                applications.
+                            </li>
+                            <li><strong>Electrical and Electronics Measurement:</strong> Techniques for measuring
+                                electrical
+                                and electronic quantities.</li>
+                            <li><strong>Electric Circuit Analysis:</strong> Analysis of electric circuits.</li>
+                            <li><strong>Data Structures and Algorithms:</strong> Introduction to data structures and
+                                algorithms and their practical applications.</li>
+                        </ul>
+                    </li>
+
+
+
+                    <!-- Year III -->
+                    <li>
+                        <h2 class="year">Year: III</h2>
+                        <ul class="sub-count">
+                            <li><strong>Discrete Transforms and Signal Processing:</strong> Techniques for analyzing
+                                signals
+                                and systems.</li>
+                            <li><strong>Microprocessors and Applications:</strong> Study of microprocessors and their
+                                applications.</li>
+                            <li><strong>Control System:</strong> Study of systems designed to manage, command, direct or
+                                regulate the behavior of other devices or systems.</li>
+                            <li><strong>Power Electronics:</strong> Application of solid-state electronics for the
+                                control
+                                and conversion of electric power.</li>
+                        </ul>
+                    </li>
+
+                    <!-- Year IV -->
+                    <li>
+                        <h2 class="year">Year: IV</h2>
+                        <ul class="sub-count">
+                            <li><strong>Utilization of Electrical Energy:</strong> Study of the efficient use of
+                                electrical
+                                energy.</li>
+                            <li><strong>Power System Analysis:</strong> Analysis of power systems and their stability.
+                            </li>
+                            <li><strong>Transmission and Distribution:</strong> Study of the transmission and
+                                distribution
+                                of electrical power.</li>
+                            <li><strong>Power System Protection:</strong> Techniques for protecting power systems from
+                                faults.</li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+                <p class="syllabus">For detailed structure check out <img src="/assets/video/icons8-pdf.gif" alt=""><a
+                        href="/assets/pdf/EEE.pdf">EEE-Curriculam</a></p>
+            </div>
+        </div>
+
+
+        <!-- ME -->
+        <div class="curriculam-ece">
+            <h1 class="headings">ME</h1>
+            <div class="curriculam-content curriculam-me-content">
+                <ul class="sem-count">
+
+                    <!-- Year I -->
+                    <li>
+                        <h2 class="year">Year: I</h2>
+                        <ul class="sub-count">
+                            <li><strong>Engineering Mathematics:</strong> Foundation in mathematical concepts used in
+                                engineering.</li>
+                            <li><strong>Engineering Physics & Chemistry:</strong> Fundamental sciences that form the
+                                basis
+                                of engineering.</li>
+                            <li><strong>Basic Mechanical Engineering:</strong> Introduction to the principles and
+                                applications of mechanical engineering.</li>
+                            <li><strong>Computer Programming:</strong> Learning to solve problems using programming
+                                languages.</li>
+                        </ul>
+                    </li>
+
+                    <!-- Year II -->
+                    <li>
+                        <h2 class="year">Year: II</h2>
+                        <ul class="sub-count">
+                            <li><strong>Thermodynamics:</strong> Study of heat, work, and energy.</li>
+                            <li><strong>Mechanics of Solids:</strong> Study of the behavior of solid objects subject to
+                                stresses and strains.</li>
+                            <li><strong>Fluid Mechanics:</strong> Study of the behavior of fluids either at rest or in
+                                motion.</li>
+                            <li><strong>Machine Drawing:</strong> Techniques for technical drawing of machine parts.
+                            </li>
+                        </ul>
+                    </li>
+
+
+
+                    <!-- Year III -->
+                    <li>
+                        <h2 class="year">Year: III</h2>
+                        <ul class="sub-count">
+                            <li><strong>Heat and Mass Transfer:</strong> Study of the transfer of heat and mass under
+                                different conditions.</li>
+                            <li><strong>Mechanical Measurements and Metrology:</strong> Techniques for measuring
+                                mechanical
+                                components.</li>
+                            <li><strong>Design of Machine Elements:</strong> Design and construction of machine
+                                elements.
+                            </li>
+                            <li><strong>Manufacturing Technology:</strong> Study of manufacturing processes and
+                                technologies.</li>
+                        </ul>
+                    </li>
+
+                    <!-- Year IV -->
+                    <li>
+                        <h2 class="year">Year: IV</h2>
+                        <ul class="sub-count">
+                            <li><strong>Automobile Engineering:</strong> Study of the design, manufacture, and operation
+                                of
+                                automobiles.</li>
+                            <li><strong>Robotics:</strong> Introduction to the design and application of robots.</li>
+                            <li><strong>CAD/CAM:</strong> Study of Computer-Aided Design and Computer-Aided
+                                Manufacturing.
+                            </li>
+                            <li><strong>Project Work:</strong> A large-scale project to apply learned concepts.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p class="syllabus">For detailed structure check out <img src="/assets/video/icons8-pdf.gif" alt=""><a
+                        href="/assets/pdf/ME.pdf">ME-Curriculam</a></p>
+            </div>
+        </div>
+
+
+        <!-- MBA -->
+        <div class="curriculam-ece">
+            <h1 class="headings">MBA</h1>
+            <div class="curriculam-content curriculam-mba-content">
+                <ul class="sem-count">
+
+                    <!-- Year I -->
+                    <li>
+                        <h2 class="year">Year: I</h2>
+                        <ul class="sub-count">
+                            <li><strong>Marketing Management:</strong> Introduction to marketing concepts and
+                                strategies.
+                            </li>
+                            <li><strong>Financial Accounting:</strong> Understanding of financial accounting principles
+                                and
+                                practices.</li>
+                            <li><strong>Business Communication:</strong> Enhances business communication skills.</li>
+                            <li><strong>Microeconomics:</strong> Study of individual economic units such as a market or
+                                company.</li>
+                            <li><strong>Organizational Behaviour:</strong> Study of human behavior in an organizational
+                                setting.</li>
+                        </ul>
+                    </li>
+
+                    <!-- Year II -->
+                    <li>
+                        <h2 class="year">Year: II</h2>
+                        <ul class="sub-count">
+                            <li><strong>Corporate Social Responsibility:</strong> Study of business ethics and corporate
+                                social responsibility.</li>
+                            <li><strong>Strategic Management:</strong> Study of the formulation and implementation of
+                                major
+                                goals and initiatives.</li>
+                            <li><strong>Operations Management:</strong> Management of the processes to produce and
+                                distribute products and services.</li>
+                            <li><strong>Business Analytics:</strong> Use of data and quantitative analysis for
+                                decision-making within organizations.</li>
+                            <li><strong>Entrepreneurship:</strong> Study of the concept, process, and challenges of
+                                entrepreneurship.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p class="syllabus">For detailed structure check out <img src="/assets/video/icons8-pdf.gif" alt=""><a
+                        href="/assets/pdf/MBA.pdf">MBA-Curriculam</a></p>
+            </div>
+        </div>
+
+
+        <!-- MCA -->
+        <div class="curriculam-ece">
+            <h1 class="headings">MCA</h1>
+            <div class="curriculam-content curriculam-mca-content">
+                <ul class="sem-count">
+
+                    <!-- Year I -->
+                    <li>
+                        <h2 class="year">Year: I</h2>
+                        <ul class="sub-count">
+                            <li><strong>Mathematical Foundations of Computer Science:</strong> Fundamental mathematical
+                                concepts used in computer science.</li>
+                            <li><strong>Programming Languages:</strong> Introduction to various programming languages
+                                like
+                                C, Java, and Python.</li>
+                            <li><strong>Data Structures and Algorithms:</strong> Introduction to data organization,
+                                storage,
+                                and retrieval.</li>
+                            <li><strong>Operating System Theory:</strong> Study of system software that manages computer
+                                hardware and software.</li>
+                            <li><strong>Database Management System:</strong> Study of database systems and their
+                                applications.</li>
+                        </ul>
+                    </li>
+
+                    <!-- Year II -->
+                    <li>
+                        <h2>Year: II</h2>
+                        <ul class="sub-count">
+                            <li><strong>Software Engineering:</strong> Application of engineering to the development of
+                                software.</li>
+                            <li><strong>Computer Networks:</strong> Study of computer networks and their applications.
+                            </li>
+                            <li><strong>Artificial Intelligence:</strong> Introduction to the simulation of human
+                                intelligence processes by machines.</li>
+                            <li><strong>Machine Learning:</strong> Study of algorithms and statistical models that
+                                computer
+                                systems use to perform tasks.</li>
+                            <li><strong>Cloud Computing:</strong> Delivery of different services through the Internet.
+                            </li>
+                            <li><strong>Data Science:</strong> Multi-disciplinary field that uses scientific methods,
+                                processes, algorithms and systems to extract knowledge and insights from structured and
+                                unstructured data.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <p class="syllabus">For detailed structure check out <img src="/assets/video/icons8-pdf.gif" alt=""><a
+                    href="/assets/pdf/MCA.pdf">MCA-Curriculam</a></p>
+        </div>
+
+
+
+
+
+
+
+
+
+        <footer>
+            <div class="footerContainer">
+                <div class="footerTalk">
+                    <p>Follow us on</p>
+                </div>
+                <div class="footerSocialMediaLinks">
+                    <a href="https://www.facebook.com/www.aot.edu.in/" title="Visit AOT Facebook Page">
+                        <img src="/assets/images/facebook_Logo.webp" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/aotconnect/?igsh=MWhhcDJuY2ZqeWg1OA%3D%3D"
+                        title="Visit AOT Instagram Page">
+                        <img src="/assets/images/instagram_Logo.webp" alt="">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA" title="Visit AOT YouTube Page">
+                        <img src="/assets/images/youtube_Logo.webp" alt="">
+                    </a>
+                    <a href="https://www.linkedin.com/school/academy-of-technology/" title="Visit AOT Linkedin Page">
+                        <img src="/assets/images/linkedin_Logo.webp" alt="">
+                    </a>
+                </div>
+                <div class="footerTalk">
+                    <p>Copyright &copy 2024 all rights reserved</p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="/javaScripts/chatbot.js"></script>
+    <script src="/javaScripts/scrollToTop.js"></script>
+    <script src="/javaScripts/userOnOff.js"></script>
+</body>
+
+
+
+</html>

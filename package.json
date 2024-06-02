@@ -1,0 +1,17 @@
+{
+  "name": "aot-website",
+  "version": "1.0.0",
+  "description": "Welcome to the official website of **Academy of Technology College**! Our website provides essential information about our college, academic programs, campus life, and more. Whether you're a prospective student, current student, or alumni, you'll find valuable resources here.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
+}

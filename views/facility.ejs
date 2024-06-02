@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/basicStyles.css">
+    <link rel="stylesheet" href="/styles/footerStyle.css">
+    <link rel="stylesheet" href="/styles/headerStyle.css">
+    <link rel="stylesheet" href="/styles/headerResponsive.css">
+    <link rel="stylesheet" href="/styles/facility.css">
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/bannerResponse.css">
+    <link rel="stylesheet" href="/styles/chatbot.css">
+    <title>Campus Facilities</title>
+    <style>
+        /* Style for chatbot icon */
+        #chatbot-icon {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            z-index: 9999;
+            cursor: pointer;
+        }
+
+        /* Style for chatbot window */
+        .chat-container {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 35%;
+            height: 85%;
+            background: white;
+            z-index: 9998;
+
+        }
+
+        /* Style for back icon */
+        #back-icon {
+            cursor: pointer;
+        }
+
+        /* Hidden class */
+        .hidden {
+            display: none;
+        }
+
+        @media only screen and (max-width:1000px) {
+            .chat-container {
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+            }
+
+            .chat-header,
+            button,
+            input {
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Chatbot Icon -->
+    <div id="chatbot-icon" class="icon">
+        <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/chatbot.png" alt="chatbot" />
+    </div>
+
+    <!-- Chatbot Window -->
+    <div class="chat-container hidden">
+        <div class="chat-header">
+            <div id="back-icon" class="icon">
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/multiply.png"
+                    alt="multiply" />
+            </div>
+            <h2>College Chatbot</h2>
+            <button id="clear-chat">Clear Chat</button>
+        </div>
+        <div id="chatbox" class="chatbox"></div>
+        <div class="input-container">
+            <input type="text" id="input" placeholder="Type a message...">
+            <button id="send">Send</button>
+        </div>
+    </div>
+    <!-- chatbot window end here -->
+    <div class="onOrOff">
+        <img src="/assets/images/icons8-no-connection.gif" alt="./assets/images/icons8-no-connection.gif">
+        <img src="/assets/images/icons8-online.gif" alt="./assets/images/icons8-online.gif">
+        <p>We are online</p>
+    </div>
+    <header>
+        <div class="hamberg-menu">
+            <div class="stick"></div>
+            <div class="stick"></div>
+            <div class="stick"></div>
+        </div>
+        <div class="banner">
+            <div class="left">
+                <img src="/assets/images/aot-logo.webp" loading="lazy" alt="Error">
+            </div>
+            <div class="middle">
+                <h1>ACADEMY OF TECHNOLOGY</h1>
+                <span>...translate your vision into reality</span>
+            </div>
+        </div>
+
+    </header>
+    <hr>
+    <main>
+        <div class="section__title">
+            <div class="logo">
+                <a href="/"><img width="32" height="32" src="https://img.icons8.com/windows/32/home.png"
+                        alt="home" /></a>
+            </div>
+            <h1 id="heading">Campus Facility</h1>
+        </div>
+        <br>
+        <div class="para">
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To reduce the cost
+                of education per student, the All India Council for Technical Education (AICTE) had introduced the new
+                scheme from the 2009-10 academic year, namely the “Integrated Campus”. This new scheme allows
+                institutions to optimally utilize their infrastructure. Under this scheme, a society or trust running
+                different types of institutions under AICTE’s purview on contiguous land sites can share a joint campus
+                with common amenities like a common library, canteen, computer centre, auditorium or playground etc.,
+                which saves money on land and infrastructure investments. This scheme has reduces the land requirements
+                by 20 per cent. It’s a mini deemed university without going through the procedures required for deemed
+                university status. In integrated campuses only infrastructure would be shared, and not the academics.
+                The facility can be availed by existing educational groups of institutes as well as new one.</span>
+            <div class="info">
+                <h3>E-CLASSROOM</h3>
+                <p>In order to conduct the online courses, expert lectures, interaction with renowned faculty, two
+                    e-Classroom facility is operational in our institute. These facilities are equipped with latest high
+                    configuration computer systems, LCD Projector, public addressing system & video conferencing
+                    facility. All the systems are connected with high-speed internet with dedicated transmission link of
+                    NMEICT network.</p>
+            </div>
+            <div class="info">
+                <h3>SMART CLASSROOM</h3>
+                <p>A smart classroom is a technology-enhanced learning classroom that enhances the way of teaching and
+                    learning digitally. Our classroom is integrated with the wall mounted LCD projectors, Visualizer,
+                    Windows based desktop computer with touchscreen display, whiteboards and other audio/visual
+                    components that make lectures easier, engaging, and more interactive.</p>
+            </div>
+            <div class="info">
+                <h3>SEMINAR HALL</h3>
+                <p>Our college has fully air-conditioned audio-visual enabled seminar hall which can accommodate over
+                    250 people. The seminar hall is soundproof with warm lights, wireless internet connection, high
+                    resolution overhead projector, white board, dais, podium and sound system with mic.
+                    This facility hall is effectively used to host a plethora of events in the field of academics,
+                    co-curricular and extra-curricular activities. It is perennially occupied by different departments,
+                    clubs and committees for all college events and external functions such as guest lectures, fests,
+                    training, conferences and corporate events.</p>
+            </div>
+            <div class="info">
+                <h3>COMPUTING FACILITIES</h3>
+                <p>The computer has become an indispensable tool for imparting education in all the branches of
+                    engineering. The place of a computer in the modern education is not just limited to computer
+                    programming or web browsing. Whether it is the EEE students using SPICE tools for simulation of
+                    electronic circuits or the ECE students using MATLAB for simulation of the communication circuits
+                    and systems or CS/IT students using Eclipse IDE for application development. the computers have
+                    become integral part of the daily routine of a serious technical student. Our college clearly
+                    understands the importance and hence built up a significant number of well furnished computer labs.
+                    The college has 8 computer labs with an aggregate total of 300 computers in them.</p>
+            </div>
+            <div class="info">
+                <h3>Canteen</h3>
+                <p>The college is providing canteen facility to the students as well as teaching and non-teaching staff
+                    of the college at the subsidized rate. It is capable of catering the demands of the students and can
+                    accommodate 30 persons at a time. It has spacious & properly maintained room as well as kitchen.
+                    Generally, the college provides it to any individual on contract basis after proper official’s
+                    formalities.
+
+                    The College canteen also caters to the functions organized in the college programmes like seminars,
+                    conferences and workshops.
+
+                    Kitchen staff takes care to provide the students and staff a nutritious and hygienic food at our
+                    campus canteens.</p>
+            </div>
+            <div class="info">
+                <h3>Power Backup</h3>
+                <p>Our institute is well equipped with 24X7 power backup as we have dedicated Generator backup to ensure
+                    that students get uninterrupted power supply round the clock.
+                    <br><br>
+                    We acknowledge the hassles caused due to interrupted power backup system and hence to overcome this
+                    problem our institute has two Generator backup (125KVA & 25 KVA), 07 nos. of 10 KVA UPS devoted to
+                    the computer labs and 05 nos . of 1 KVA UPS for Principal and HoD Rooms.
+
+                    We strive to provide our students with comfortable days at our college along with quality and
+                    secured stay. Our uninterrupted 24X7 power backup facility helps us keep our student safe and at
+                    ease.
+                </p>
+            </div>
+            <div class="info">
+                <h3>Sports</h3>
+                <p>Considering the importance of sports in today’s scientific era and its vitality in the shaping of
+                    individual’s personality and health and fitness, the college lays considerable emphasis on students
+                    participation in various games, sports and track and field activities. The spacious ground of the
+                    college is laid out into playfields for Football, Hockey, Kho-Kho, Athletics, Volleyball, and
+                    Badminton etc. Facilities have also been provided for Table Tennis, Chess, Carrom & Yoga. <br><br>
+
+                    The Department of Physical Education is headed by the Physical Director The sports hour has been
+                    scheduled in the respective department time table and the sports activities were conducted to all
+                    the students. During the sports hour, the attitude and behavior of the students were monitored and
+                    tuned in the right way. In this connection, the sports talents of the students were identified and
+                    coaching given accordingly. The students are short listed to the respective games & athletics and
+                    intensive coaching were given to participate in the Inter College Competition, All India South zone
+                    meet and National meets. <br><br>
+
+                    The Department of Physical Education uploaded their activity in two categories. 1. Intramural and
+                    2.Extramural activities. The various sports events for students and staff were conducted between
+                    different departments of the college in the intramural activities. In the extramural activities,
+                    students participating in the Inter College competitions, Inter University competitions, Puducherry
+                    State meet and National meets. During the various sports meets the students participated in the
+                    events like 100mts, 200mts, 400mts, 800mts,1500mts, 4X100mts relay, Long Jump, High Jump, Shot-Put,
+                    Javelin Throw, Discuss Throw, Volleyball, Kho-Kho, Tennikoit, Hand ball, Throw ball, Badminton, Ball
+                    Badminton and weight lifting.</p>
+            </div>
+            <div class="info">
+                <h3>PLASTIC FREE GREEN CAMPUS</h3>
+                <p>Our institution is a green and eco-friendly campus which focuses on energy efficiency by preserving
+                    natural resources for healthy living and a good learning environment.
+                    <br><br>
+                    Colleges can generate enormous amounts of plastic waste, which is toxic to people and the
+                    environment, and never goes away.
+                    This initiative is aimed to measurably reduce plastic waste and pollution in our campus and the
+                    world around us. To achieve this, we have undertaken following steps
+                <ul>
+                    <li>We have banned use of single-use plastics inside the college premises.</li>
+                    <li>We carry out awareness drives and sensitisation workshops on the harmful impacts of single-use
+                        plastics.</li>
+                    <li>Encourage all students to avoid bringing non-bio-degradable plastic items to the college.</li>
+                    <li>We encourage students to sensitize their respective households about the harmful effects of
+                        plastics and make their households also 'plastic- free'.</li>
+                </ul>
+                </p>
+            </div>
+            <div class="info">
+                <h3>NO SMOKING ZONE</h3>
+                <p>To provide a healthy learning and working environment for students and faculties, smoking & use of
+                    tobacco is prohibited in all indoor and outdoor campus locations. Use and sale of tobacco products
+                    within college premises and in its vicinity is strictly prohibited. In an effort to keep our campus
+                    free from smoking and use of tobacco and related products, sensitization programmes in the form of
+                    lectures and seminars, display of banners and posters, etc. are organized to spread awareness among
+                    students and staff about adverse effects of consumption of tobacco in any form.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footerContainer">
+            <div class="footerTalk">
+                <p>Follow us on</p>
+            </div>
+            <div class="footerSocialMediaLinks">
+                <a href="https://www.facebook.com/www.aot.edu.in/" title="Visit AOT Facebook Page">
+                    <img src="/assets/images/facebook_Logo.webp" alt="">
+                </a>
+                <a href="https://www.instagram.com/aotconnect/?igsh=MWhhcDJuY2ZqeWg1OA%3D%3D"
+                    title="Visit AOT Instagram Page">
+                    <img src="/assets/images/instagram_Logo.webp" alt="">
+                </a>
+                <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA" title="Visit AOT YouTube Page">
+                    <img src="/assets/images/youtube_Logo.webp" alt="">
+                </a>
+                <a href="https://www.linkedin.com/school/academy-of-technology/" title="Visit AOT Linkedin Page">
+                    <img src="/assets/images/linkedin_Logo.webp" alt="">
+                </a>
+            </div>
+            <div class="footerTalk">
+                <p>Copyright &copy 2024 all rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/javaScripts/chatbot.js"></script>
+    <script src="/javaScripts/userOnOff.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/ug-cseStyle.css">
+    <link rel="stylesheet" href="/styles/headerStyle.css">
+    <link rel="stylesheet" href="/styles/breakingNews.css">
+    <link rel="stylesheet" href="/styles/footerStyle.css">
+    <link rel="stylesheet" href="/styles/event.css">
+    <link rel="stylesheet" href="/styles/chatbot.css">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/styles/departmentStyle.css">
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+    <title>Department</title>
+    <style>
+        /* Style for chatbot icon */
+        #chatbot-icon {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            z-index: 9999;
+            cursor: pointer;
+        }
+
+        /* Style for chatbot window */
+        .chat-container {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 35%;
+            height: 85%;
+            background: white;
+            z-index: 9998;
+
+        }
+
+        /* Style for back icon */
+        #back-icon {
+            cursor: pointer;
+        }
+
+        /* Hidden class */
+        .hidden {
+            display: none;
+        }
+
+        @media only screen and (max-width:1000px) {
+            .chat-container {
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+            }
+
+            .chat-header,
+            button,
+            input {
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Chatbot Icon -->
+    <div id="chatbot-icon" class="icon">
+        <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/chatbot.png" alt="chatbot" />
+    </div>
+
+    <!-- Chatbot Window -->
+    <div class="chat-container hidden">
+        <div class="chat-header">
+            <div id="back-icon" class="icon">
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/multiply.png"
+                    alt="multiply" />
+            </div>
+            <h2>College Chatbot</h2>
+            <button id="clear-chat">Clear Chat</button>
+        </div>
+        <div id="chatbox" class="chatbox"></div>
+        <div class="input-container">
+            <input type="text" id="input" placeholder="Type a message...">
+            <button id="send">Send</button>
+        </div>
+    </div>
+    <!-- chatbot window end here -->
+    <div class="onOrOff">
+        <img src="/assets/images/icons8-no-connection.gif" alt="/assets/images/icons8-no-connection.gif">
+        <img src="/assets/images/icons8-online.gif" alt="/assets/images/icons8-online.gif">
+        <p>We are online</p>
+    </div>
+    <main>
+        <div class="to-top">
+            <a href="#">
+                <img src="/assets/images/icons8-up-arrow-50.png" alt="">
+            </a>
+        </div>
+        <div class="deny leave"></div>
+        <header>
+            <div class="hamberg-menu">
+                <div class="stick"></div>
+                <div class="stick"></div>
+                <div class="stick"></div>
+            </div>
+            <div class="banner">
+                <div class="left">
+                    <img src="/assets/images/aot-logo.jpg" loading="lazy" alt="Error">
+                </div>
+                <div class="middle">
+                    <h1>ACADEMY OF TECHNOLOGY</h1>
+                    <span>...translate your vision into reality</span>
+                </div>
+                <div class="right">
+                    <div class="search">
+                        <input type="text" name="" class="searchAny" placeholder="Search here..." required>
+                        <img src="/assets/video/icons8-search.gif" alt="Error" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+        <main>
+            <nav>
+                <div class="parentGoback">
+                    <div class="goback">
+                        <img src="/assets/images/aot-logo.jpg" loading="lazy" alt="">
+                    </div>
+                    <div class="search">
+                        <input type="text" name="searchInp" id="searchInp" class="searchAny"
+                            placeholder="Search here..." required>
+                        <img src="/assets/video/icons8-search.gif" alt="Error" loading="lazy" id="searchBtn"
+                            style="z-index: 10;">
+                    </div>
+                </div>
+                <ul>
+                    <li class="go-to-home">
+                        <div class="section">
+                            <a href="/">
+                                <p>Home</p>
+                            </a>
+                        </div>
+
+                    </li>
+                    <li class="parent-nav">
+                        <div class="section">
+                            <p>People</p>
+                            <img src="/assets/images/icons8-forward-52.webp" loading="lazy" alt="Error">
+                        </div>
+                        <ul>
+                            <li><a href="/faculty">Faculty Members</a></li>
+                            <li><a href="/staff">Stuff Members</a></li>
+                        </ul>
+                    </li>
+                    <li class="parent-nav">
+                        <div class="section">
+                            <p>Students</p>
+                            <img src="/assets/images/icons8-forward-52.webp" loading="lazy" alt="Error">
+                        </div>
+                        <ul>
+                            <li><a href="/placement">Placement</a></li>
+                            <li><a href="/StudentActivity">Student Activity</a></li>
+                            <li><a href="/LifeAOT">Life@AOT_Dept</a></li>
+                            <li><a href="/departmentNewsLetter">Department Newsletter</a></li>
+                        </ul>
+                    </li>
+                    <li class="parent-nav">
+                        <div class="section">
+                            <p>Academics</p>
+                            <img src="/assets/images/icons8-forward-52.webp" loading="lazy" alt="Error">
+                        </div>
+                        <ul>
+                            <li class="parent-nav2">
+                                <div class="section">
+                                    <p>UG Programs</p>
+                                    <img src="/assets/images/icons8-forward-52.webp" loading="lazy" alt="Error">
+                                </div>
+                                <ul>
+                                    <li class="navbar-innerlist">
+                                        <a href="/CSE">CSE</a>
+                                    </li>
+                                    <li>CSBS</li>
+                                    <li>ECE</li>
+                                    <li>EE</li>
+                                    <li>EEE</li>
+                                    <li>ME</li>
+                                </ul>
+                            </li>
+                            <li class="parent-nav2">
+                                <div class="section">
+                                    <p>PG Programs</p>
+                                    <img src="/assets/images/icons8-forward-52.webp" loading="lazy" alt="Error">
+                                </div>
+                                <ul>
+                                    <li class="navbar-innerlist">
+                                        <a href="/MBA">MBA</a>
+                                    </li>
+                                    <li>MCA</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="parent-nav">
+                        <div class="section">
+                            <p>Research</p>
+                            <img src="/assets/images/icons8-forward-52.webp" loading="lazy" alt="Error">
+                        </div>
+                        <ul>
+                            <li><a href="/research">Past and Current Researchs</a></li>
+                        </ul>
+                    </li>
+                    <li class="parent-nav">
+                        <div class="section" id="achivement">
+                            <p>Achievements & Events</p>
+                            <img src="/assets/images/icons8-forward-52.webp" loading="lazy" alt="Error">
+                        </div>
+                        <ul>
+                            <li><a href="/achivement">Achievements</a></li>
+                            <li><a href="/event">Events</a></li>
+                        </ul>
+                    </li>
+                    <li class="parent-nav">
+                        <div class="section">
+                            <a href="/JoinUs">Join us</a>
+                        </div>
+                    </li>
+                    <li class="parent-nav go-to-home">
+                        <div class="section">
+                            <a href="/contact">
+                                <p>Contact info</p>
+                            </a>
+                        </div>
+
+                    </li>
+
+                </ul>
+            </nav>
+            <div class="brakingNews">
+                <div class="ticker-heading">Breaking News</div>
+                <marquee loop="" scrollamount="5" scrolldelay="0" direction="left" onmouseover="this.stop()"
+                    onmouseout="this.start()">
+                    <div class="ticker-wrap">
+                        <span class="ticker__item">Techfiesta || Games Meet || Humatronics-2024</span>
+                        <span class="ticker__item">Online Faculty Development Program on Internet of Things (IoT) with
+                            Artificial
+                            Intelligence (AI) and Machine Learning (ML)</span>
+                        <span class="ticker__item">4th International Conference on Computer, Communication, Control and
+                            Information
+                            Technology(C3IT2024)</span>
+                        <span class="ticker__item"> AOT (Team: Buzz 6) bagged the first rank in the AICTE SIH
+                            2023</span>
+                        <span class="ticker__item">Refund of Caution Deposit for 2022 passout students(Last date:
+                            22/12/2023)</span>
+                    </div>
+                </marquee>
+            </div>
+            <section class="first" id="ug">
+                <h2>Our Undergraduate Departments</h2>
+                <div class="firstContainer">
+                    <div class="departmentBox">
+                        <div class="top">
+                            <span>
+                                Computer Science<br> & Engineering
+                            </span>
+                            <div class="back"></div>
+                        </div>
+                        <div class="details">
+                            <a href="/CSE">Computer Science <br> & Engineering</a>
+                            <span>AICTE approved</span>
+                            <a href="/CSE">
+                                <button>Details</button>
+                            </a>
+                        </div>
+                        <img src="/assets/images/coding.jpg" alt="">
+                    </div>
+                    <div class="departmentBox">
+                        <div class="top">
+                            <span>
+                                Computer Science<br> & Business Systems
+                            </span>
+                            <div class="back"></div>
+                        </div>
+                        <div class="details">
+                            <a href="">Computer Science<br> & Business Systems</a>
+                            <span>AICTE approved</span>
+                            <a href="">
+                                <button>Details</button>
+                            </a>
+                        </div>
+                        <img src="/assets/images/csbs.jpg" alt="">
+                    </div>
+                    <div class="departmentBox">
+                        <div class="top">
+                            <span>
+                                Electronics & <br>Commutication<br> Engineering
+                            </span>
+                            <div class="back"></div>
+                        </div>
+                        <div class="details">
+                            <a href="">Electronics & <br>Commutication<br> Engineering</a>
+                            <span>AICTE approved</span>
+                            <a href="">
+                                <button>Details</button>
+                            </a>
+                        </div>
+                        <img src="/assets/images/ece.jpg" alt="">
+                    </div>
+                    <div class="departmentBox">
+                        <div class="top">
+                            <span>
+                                Electrical <br> Engineering
+                            </span>
+                            <div class="back"></div>
+                        </div>
+                        <div class="details">
+                            <a href="">Electrical <br> Engineering</a>
+                            <span>AICTE approved</span>
+                            <a href="">
+                                <button>Details</button>
+                            </a>
+                        </div>
+                        <img src="/assets/images/ee.jpg" alt="">
+                    </div>
+                    <div class="departmentBox">
+                        <div class="top">
+                            <span>
+                                Electrical &<br>Electronics <br> Engineering
+                            </span>
+                            <div class="back"></div>
+                        </div>
+                        <div class="details">
+                            <a href="">Electrical &<br>Electronics <br> Engineering</a>
+                            <span>AICTE approved</span>
+                            <a href="">
+                                <button>Details</button>
+                            </a>
+                        </div>
+                        <img src="/assets/images/eee.jpg" alt="">
+                    </div>
+                    <div class="departmentBox">
+                        <div class="top">
+                            <span>
+                                Mechanical <br> Engineering
+                            </span>
+                            <div class="back"></div>
+                        </div>
+                        <div class="details">
+                            <a href="">Mechanical <br> Engineering</a>
+                            <span>AICTE approved</span>
+                            <a href="">
+                                <button>Details</button>
+                            </a>
+                        </div>
+                        <img src="/assets/images/me.jpg" alt="">
+                    </div>
+                </div>
+            </section>
+            <section class="first" id="pg">
+                <h2>Our Postgraduate Departments </h2>
+                <div class="firstContainer">
+                    <div class="departmentBox">
+                        <div class="top">
+                            <span>
+                                Master of Business <br> Administration
+                            </span>
+                            <div class="back"></div>
+                        </div>
+                        <div class="details">
+                            <a href="/MBA">Master of Business <br> Administration</a>
+                            <span>AICTE approved</span>
+                            <a href="/MBA">
+                                <button>Details</button>
+                            </a>
+                        </div>
+                        <img src="/assets/images/mba_jpg.jpg" alt="">
+                    </div>
+                    <div class="departmentBox">
+                        <div class="top">
+                            <span>
+                                Master of Computer <br> Application
+                            </span>
+                            <div class="back"></div>
+                        </div>
+                        <div class="details">
+                            <a href="">Master of Computer<br> Application</a>
+                            <span>AICTE approved</span>
+                            <a href="">
+                                <button>Details</button>
+                            </a>
+                        </div>
+                        <img src="/assets/images/mca_jpg.jpg" alt="">
+                    </div>
+
+                </div>
+            </section>
+            <section class="club-section">
+                <div class="club-container">
+                    <h2 class="club-intro">Join our Exciting Clubs</h2>
+                    <div class="swiper my_Swiper">
+                        <div class="swiper-wrapper">
+
+                            <!-- slide 1 -->
+                            <div class="swiper-slide">
+                                <div class="club-details">
+                                    <div class="item-container">
+                                        <div class="img-container">
+                                            <img src="/assets/images/club_cricket.jpg" alt="">
+                                        </div>
+                                        <div class="body-container">
+                                            <div class="overlay"></div>
+                                            <div class="event-info">
+                                                <p class="title">Cricket Club</p>
+                                                <div class="separator"></div>
+                                                <!-- <p class="info">adisaptagram,hooghly</p> -->
+                                                <p class="price">₹200/- per month</p>
+                                                <div class="additional-info">
+                                                    <p class="info">
+                                                        <img width="50" height="50"
+                                                            src="https://img.icons8.com/ios-filled/50/marker.png"
+                                                            alt="marker" />
+                                                        College campus Cricket Ground
+                                                    </p>
+                                                    <p class="info">
+                                                        <img width="32" height="32"
+                                                            src="https://img.icons8.com/windows/32/map.png" alt="map" />
+
+                                                        Everyday from 5:00pm
+                                                    </p>
+                                                    <p class="info description">
+                                                        Elevate your game with passion and precision. Join our cricket
+                                                        club
+                                                        at [College Name], where every pitch is an opportunity and every
+                                                        player is a part of the winning team. Play hard, dream big!
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <button class="action">
+                                                <a href="#google-form">Join Now</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- slide 2 -->
+                            <div class="swiper-slide">
+                                <div class="club-details">
+                                    <div class="item-container">
+                                        <div class="img-container">
+                                            <img src="/assets/images/club_football.jpg" alt="">
+                                        </div>
+                                        <div class="body-container">
+                                            <div class="overlay"></div>
+                                            <div class="event-info">
+                                                <p class="title">Football Club</p>
+                                                <div class="separator"></div>
+                                                <!-- <p class="info">adisaptagram,hooghly</p> -->
+                                                <p class="price">₹200/- per month</p>
+                                                <div class="additional-info">
+                                                    <p class="info">
+                                                        <img width="50" height="50"
+                                                            src="https://img.icons8.com/ios-filled/50/marker.png"
+                                                            alt="marker" />
+                                                        College campus Cricket Ground
+                                                    </p>
+                                                    <p class="info">
+                                                        <img width="32" height="32"
+                                                            src="https://img.icons8.com/windows/32/map.png" alt="map" />
+
+                                                        Everyday from 5:00pm
+                                                    </p>
+                                                    <p class="info description">
+                                                        Elevate your game with passion and precision. Join our cricket
+                                                        club
+                                                        at [College Name], where every pitch is an opportunity and every
+                                                        player is a part of the winning team. Play hard, dream big!
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <button class="action">
+                                                <a class="blur" href="#google-form">Join Now</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- slide 3 -->
+                            <div class="swiper-slide">
+                                <div class="club-details">
+                                    <div class="item-container">
+                                        <div class="img-container">
+                                            <img src="/assets/images/club_basketball.jpg" alt="">
+                                        </div>
+                                        <div class="body-container">
+                                            <div class="overlay"></div>
+                                            <div class="event-info">
+                                                <p class="title">Basket-Ball Club</p>
+                                                <div class="separator"></div>
+                                                <!-- <p class="info">adisaptagram,hooghly</p> -->
+                                                <p class="price">₹200/- per month</p>
+                                                <div class="additional-info">
+                                                    <p class="info">
+                                                        <img width="50" height="50"
+                                                            src="https://img.icons8.com/ios-filled/50/marker.png"
+                                                            alt="marker" />
+                                                        College campus Cricket Ground
+                                                    </p>
+                                                    <p class="info">
+                                                        <img width="32" height="32"
+                                                            src="https://img.icons8.com/windows/32/map.png" alt="map" />
+
+                                                        Everyday from 5:00pm
+                                                    </p>
+                                                    <p class="info description">
+                                                        Elevate your game with passion and precision. Join our cricket
+                                                        club
+                                                        at [College Name], where every pitch is an opportunity and every
+                                                        player is a part of the winning team. Play hard, dream big!
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <button class="action">
+                                                <a href="#google-form">Join Now</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- slide 4 -->
+                            <div class="swiper-slide">
+                                <div class="club-details">
+                                    <div class="item-container">
+                                        <div class="img-container">
+                                            <img src="/assets/images/club_photography.jpg" alt="">
+                                        </div>
+                                        <div class="body-container">
+                                            <div class="overlay"></div>
+                                            <div class="event-info">
+                                                <p class="title">Photography Club</p>
+                                                <div class="separator"></div>
+                                                <!-- <p class="info">adisaptagram,hooghly</p> -->
+                                                <p class="price">₹100/- per month</p>
+                                                <div class="additional-info">
+                                                    <p class="info">
+                                                        <img width="50" height="50"
+                                                            src="https://img.icons8.com/ios-filled/50/marker.png"
+                                                            alt="marker" />
+                                                        College campus A block
+                                                    </p>
+                                                    <p class="info">
+                                                        <img width="32" height="32"
+                                                            src="https://img.icons8.com/windows/32/map.png" alt="map" />
+
+                                                        Everyday from 5:00pm
+                                                    </p>
+                                                    <p class="info description">
+                                                        Elevate your game with passion and precision. Join our cricket
+                                                        club
+                                                        at [College Name], where every pitch is an opportunity and every
+                                                        player is a part of the winning team. Play hard, dream big!
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <button class="action">
+                                                <a href="#google-form">Join Now</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- slide 5 -->
+                            <div class="swiper-slide">
+                                <div class="club-details">
+                                    <div class="item-container">
+                                        <div class="img-container">
+                                            <img src="/assets/images/club_drama.jpg" alt="">
+                                        </div>
+                                        <div class="body-container">
+                                            <div class="overlay"></div>
+                                            <div class="event-info">
+                                                <p class="title">Drama Club</p>
+                                                <div class="separator"></div>
+                                                <!-- <p class="info">adisaptagram,hooghly</p> -->
+                                                <p class="price">₹200/- per month</p>
+                                                <div class="additional-info">
+                                                    <p class="info">
+                                                        <img width="50" height="50"
+                                                            src="https://img.icons8.com/ios-filled/50/marker.png"
+                                                            alt="marker" />
+                                                        College campus D block
+                                                    </p>
+                                                    <p class="info">
+                                                        <img width="32" height="32"
+                                                            src="https://img.icons8.com/windows/32/map.png" alt="map" />
+
+                                                        Everyday from 5:00pm
+                                                    </p>
+                                                    <p class="info description">
+                                                        Elevate your game with passion and precision. Join our cricket
+                                                        club
+                                                        at [College Name], where every pitch is an opportunity and every
+                                                        player is a part of the winning team. Play hard, dream big!
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <button class="action">
+                                                <a href="#google-form">Join Now</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- slide 6 -->
+                            <div class="swiper-slide">
+                                <div class="club-details">
+                                    <div class="item-container">
+                                        <div class="img-container">
+                                            <img src="/assets/images/club_painting.jpg" alt="">
+                                        </div>
+                                        <div class="body-container">
+                                            <div class="overlay"></div>
+                                            <div class="event-info">
+                                                <p class="title">Painting Club</p>
+                                                <div class="separator"></div>
+                                                <!-- <p class="info">adisaptagram,hooghly</p> -->
+                                                <p class="price">₹200/- per month</p>
+                                                <div class="additional-info">
+                                                    <p class="info">
+                                                        <img width="50" height="50"
+                                                            src="https://img.icons8.com/ios-filled/50/marker.png"
+                                                            alt="marker" />
+                                                        College campus A block
+                                                    </p>
+                                                    <p class="info">
+                                                        <img width="32" height="32"
+                                                            src="https://img.icons8.com/windows/32/map.png" alt="map" />
+
+                                                        Everyday from 5:00pm
+                                                    </p>
+                                                    <p class="info description">
+                                                        Elevate your game with passion and precision. Join our cricket
+                                                        club
+                                                        at [College Name], where every pitch is an opportunity and every
+                                                        player is a part of the winning team. Play hard, dream big!
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <button class="action">
+                                                <a href="#google-form">Join Now</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- slide 7 -->
+                            <div class="swiper-slide">
+                                <div class="club-details">
+                                    <div class="item-container">
+                                        <div class="img-container">
+                                            <img src="/assets/images/club_dance.jpg" alt="">
+                                        </div>
+                                        <div class="body-container">
+                                            <div class="overlay"></div>
+                                            <div class="event-info">
+                                                <p class="title">Dance Club</p>
+                                                <div class="separator"></div>
+                                                <!-- <p class="info">adisaptagram,hooghly</p> -->
+                                                <p class="price">₹200/- per month</p>
+                                                <div class="additional-info">
+                                                    <p class="info">
+                                                        <img width="50" height="50"
+                                                            src="https://img.icons8.com/ios-filled/50/marker.png"
+                                                            alt="marker" />
+                                                        College campus A block
+                                                    </p>
+                                                    <p class="info">
+                                                        <img width="32" height="32"
+                                                            src="https://img.icons8.com/windows/32/map.png" alt="map" />
+
+                                                        Everyday from 5:00pm
+                                                    </p>
+                                                    <p class="info description">
+                                                        Elevate your game with passion and precision. Join our cricket
+                                                        club
+                                                        at [College Name], where every pitch is an opportunity and every
+                                                        player is a part of the winning team. Play hard, dream big!
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <button class="action">
+                                                <a href="#google-form">Join Now</a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <div class="swiper-button-next firstBtn"></div>
+                        <div class="swiper-button-prev firstBtn"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+            <div class="syllabus">
+                <h2>Syllabus</h2>
+                <div class="content">
+
+                    <div class="left">
+                        <h3>B.Tech Syllabus</h3>
+                        <div class="rt">
+                            <div class="item"><a href="/assets/pdf/CSE.pdf" target="_blank"><img
+                                        src="/assets/video/icons8-pdf.gif" alt=""> CSE </a></div>
+                            <div class="item"><a href="/assets/pdf/IT.pdf" target="_blank"><img
+                                        src="/assets/video/icons8-pdf.gif" alt="">IT</a></div>
+                            <div class="item"><a href="/assets/pdf/ECE.pdf" target="_blank"><img
+                                        src="/assets/video/icons8-pdf.gif" alt="">ECE</a></div>
+                            <div class="item"><a href="/assets/pdf/CSBS.pdf" target="_blank"><img
+                                        src="/assets/video/icons8-pdf.gif" alt="">CSBS</a></div>
+                            <div class="item"><a href="/assets/pdf/EE.pdf" target="_blank"><img
+                                        src="/assets/video/icons8-pdf.gif" alt="">EE</a></div>
+                            <div class="item"><a href="/assets/pdf/EEE.pdf" target="_blank"><img
+                                        src="/assets/video/icons8-pdf.gif" alt="">EEE</a></div>
+                            <div class="item"><a href="/assets/pdf/EIE.pdf" target="_blank"><img
+                                        src="/assets/video/icons8-pdf.gif" alt="">EIE</a></div>
+                            <div class="item"><a href="/assets/pdf/ME.pdf" target="_blank"><img
+                                        src="/assets/video/icons8-pdf.gif" alt="">ME</a></div>
+                        </div>
+
+                    </div>
+
+                    <div class="right">
+                        <h3>PG Syllabus</h3>
+                        <div class="rt">
+                            <div class="item"><a href="/assets/pdf/MBA.pdf" target="_blank"><img
+                                        src="/assets/video/icons8-pdf.gif" alt="">MBA</a></div>
+                            <div class="item"><a href="/assets/pdf/MCA.pdf" target="_blank"><img
+                                        src="/assets/video/icons8-pdf.gif" alt="">MCA</a></div>
+                            <div class="item"><a href="/assets/pdf/AOT-EBrochure-2021.pdf" target="_blank"><img
+                                        src="/assets/video/icons8-pdf.gif" alt="">e-Brochure 2021</a></div>
+                            <div class="item"><a href="/assets/pdf/NIRF2022.pdf" target="_blank"><img
+                                        src="/assets/video/icons8-pdf.gif" alt="">NIRF 2022</a></div>
+                            <div class="item"><a href="/assets/pdf/NIRF2023.pdf" target="_blank"><img
+                                        src="/assets/video/icons8-pdf.gif" alt="">NIRF 2023</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="second">
+                <div class="sec1">
+                    <div class="news">
+                        <h2>News</h2>
+                        <div class="content">
+                            <p>1. Woman in Space Enginnering on 19 April</p>
+                            <p>2. Electrocardiology -its Importance in Clinical Diagnosis on 27 April</p>
+                        </div>
+                    </div>
+                    <div class="events">
+                        <!-- <div class="pastEvent">
+                            <h2>Event</h2>
+                            
+                        </div> -->
+                        <div class="upcomingEvent ">
+                            <h2>Upcoming Events</h2>
+                            <div class="content">
+                                <section class="event">
+                                    <div class="lekha">
+                                        <p>Every year, AOT organizes a massive annual fest and many event.
+                                            All
+                                            the students of our college participate in various events and enjoy a lot in
+                                            this fest.
+                                            These
+                                            fests allow students to socialize with new people and showcase their talent
+                                            to
+                                            everyone
+                                            which
+                                            builds their confidence and helps them in their future. For more information
+                                            &nbsp;<a id="rd" href="/event">click here...</a></p>
+                                    </div>
+                                </section>
+                                <div class="upcoming-event-container">
+                                    <div class="swiper mySwiper2">
+                                        <div class="swiper-wrapper upcomingEvent-swiper-wrapper">
+                                        </div>
+                                        <div class="swiper-button-next secondBtn"></div>
+                                        <div class="swiper-button-prev secondBtn"></div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ninth map">
+                        <h2>Location</h2>
+                        <span id="mp">
+                            <ul>
+                                <li>
+                                    Located at Adisaptagram on the side of G. T. Road in the industrial region of
+                                    Hooghly under
+                                    Kolkata
+                                    Metropolitan Development Area, West Bengal.
+                                </li>
+                                <li>
+                                    Academy of Technology is only 200 meters away from
+                                    Adisaptagram Railway Station, next station to Bandel on Howrah Burdwan main line
+                                    [Eastern
+                                    Railway] and
+                                    only 65 minutes journey from Howrah Railway Junction. Kolkata Airport is only 47 km
+                                    away.
+                                </li>
+                                <li>
+                                    Kanchrapara Railway Station (North 24 Parganas) is 9.4 KM and Kalyani Railway
+                                    Station (Nadia) is
+                                    10.4 KM
+                                    from Academy of Technology.
+                                </li>
+                                <li>
+                                    The communication advantages through established road and railway networks enable a
+                                    very high
+                                    number of
+                                    day scholars to commute from adjacent areas of Central Kolkata, North Kolkata, Salt
+                                    Lake and
+                                    even from
+                                    South Kolkata.
+                                </li>
+                            </ul>
+                        </span>
+                        <P>
+                            <strong>Address :</strong>
+                            <span>
+                                <div class="addressText">
+
+                                    G.T.Road (Adisaptagram), Aedconagar Hooghly, West Bengal Hooghly - 712121 West
+                                    Bengal,
+                                    India
+                                    <img src="/assets/images/icons8-copy-96.png" alt="copy" decoding="async"
+                                        class="copyAddress" loading="lazy" title="Copy text">
+                            </span>
+                    </div>
+                    </P>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d117565.49665841526!2d88.377129!3d22.953108!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f8930eeb863655%3A0xb3a6adf26d41d0b5!2sAcademy%20of%20Technology!5e0!3m2!1sen!2sin!4v1713963362633!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="notice">
+                    <h2>
+                        <img src="/assets/video/icons8-announcement.gif" alt="">
+                        Announcements
+                    </h2>
+
+                    <div class="content">
+                        <div class="sub-content">
+                            <!-- <div class="updateBox">
+                                <a href="https://aotfiesta24.tech/" target="_blank">
+                                    <p>
+                                        Techfiesta || Games Meet || Humatronics-2024
+                                        <img src="/assets/video/new.gif" alt="" style="width: 2rem;">
+                                    </p>
+                                </a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+            </section>
+        </main>
+        <footer>
+            <div class="footerContainer">
+                <div class="footerTalk">
+                    <p>Follow us on</p>
+                </div>
+                <div class="footerSocialMediaLinks">
+                    <a href="https://www.facebook.com/www.aot.edu.in/" title="Visit AOT Facebook Page">
+                        <img src="/assets/images/facebook_Logo.webp" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/aotconnect/?igsh=MWhhcDJuY2ZqeWg1OA%3D%3D"
+                        title="Visit AOT Instagram Page">
+                        <img src="/assets/images/instagram_Logo.webp" alt="">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA" title="Visit AOT YouTube Page">
+                        <img src="/assets/images/youtube_Logo.webp" alt="">
+                    </a>
+                    <a href="https://www.linkedin.com/school/academy-of-technology/" title="Visit AOT Linkedin Page">
+                        <img src="/assets/images/linkedin_Logo.webp" alt="">
+                    </a>
+                </div>
+                <div class="footerTalk">
+                    <p>Copyright &copy 2024 all rights reserved</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="/javaScripts/chatbot.js"></script>
+    <script src="/javaScripts/header.js"></script>
+    <script src="/javaScripts/event.js"></script>
+
+    <!-- Swiper JS for clubs -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper in department.js  -->
+    <script src="/javaScripts/department.js"></script>
+    <script src="/javaScripts/userOnOff.js"></script>
+    <!-- Scroll to top -->
+    <script>
+        const toTopbtn = document.querySelector('.to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                toTopbtn.style.scale = 1;
+            }
+            else {
+                toTopbtn.style.scale = 0;
+            }
+        });
+    </script>
+</body>
+
+</html>

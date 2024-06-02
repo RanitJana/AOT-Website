@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+    <title>Research Page</title>
+    <link rel="stylesheet" href="/styles/research.css">
+    <link rel="stylesheet" href="/styles/chatbot.css">
+    <style>
+        /* Style for chatbot icon */
+        #chatbot-icon {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            z-index: 9999;
+            cursor: pointer;
+        }
+
+        /* Style for chatbot window */
+        .chat-container {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 35%;
+            height: 85%;
+            background: white;
+            z-index: 9998;
+
+        }
+
+        /* Style for back icon */
+        #back-icon {
+            cursor: pointer;
+        }
+
+        /* Hidden class */
+        .hidden {
+            display: none;
+        }
+
+        @media only screen and (max-width:1000px) {
+            .chat-container {
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+            }
+
+            .chat-header,
+            button,
+            input {
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Chatbot Icon -->
+    <div id="chatbot-icon" class="icon">
+        <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/chatbot.png" alt="chatbot" />
+    </div>
+
+    <!-- Chatbot Window -->
+    <div class="chat-container hidden">
+        <div class="chat-header">
+            <div id="back-icon" class="icon">
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/multiply.png"
+                    alt="multiply" />
+            </div>
+            <h2 style="color: white;">College Chatbot</h2>
+            <button id="clear-chat">Clear Chat</button>
+        </div>
+        <div id="chatbox" class="chatbox"></div>
+        <div class="input-container">
+            <input type="text" id="input" placeholder="Type a message...">
+            <button id="send">Send</button>
+        </div>
+    </div>
+    <!-- chatbot window end here -->
+    <div class="onOrOff">
+        <img src="/assets/images/icons8-no-connection.gif" alt="./assets/images/icons8-no-connection.gif">
+        <img src="/assets/images/icons8-online.gif" alt="./assets/images/icons8-online.gif">
+        <p>We are online</p>
+    </div>
+    <header id="destination">
+        <div class="banner">
+            <div class="left">
+                <img src="/assets/images/aot-logo.webp" alt="Error" loading="lazy">
+            </div>
+            <div class="middle">
+                <h1>ACADEMY OF TECHNOLOGY</h1>
+                <span>...translate your vision into reality</span>
+            </div>
+            <div class="right">
+                <div class="search">
+                    <input type="text" name="" id="" placeholder="Search here...">
+                    <img src="/assets/video/icons8-search.gif" alt="" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <nav class="page-title">
+            <div class="logo">
+                <a href="/"><img width="32" height="32" src="/assets/video/icons8-home.gif"
+                        alt="home" /></a>
+            </div>
+            <h1>Research</h1>
+        </nav>
+
+        <nav class="link hideOnMobile">
+            <a href="#current-research">Current Research</a>
+            <a href="#past-research">Past Research</a>
+            <a href="#research-facilities">Research Facilities</a>
+            <!-- Add more links as needed -->
+        </nav>
+        <div class="hamburger-logo" onclick="showsidebar()"><svg xmlns="http://www.w3.org/2000/svg" height="28"
+                viewBox="0 -960 960 960" width="28">
+                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+            </svg></div>
+        <div class="hamburger">
+            <ul>
+                <li onclick="hidesidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24"
+                            viewBox="0 -960 960 960" width="24">
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg></a></li>
+
+                <li onclick="hidesidebar()" class="option"><a href="#current-research">current research</a></li>
+                <li onclick="hidesidebar()" class="option"><a href="#past-research">past research</a></li>
+                <li onclick="hidesidebar()" class="option"><a href="#research-facilities">research facility</a></li>
+            </ul>
+        </div>
+        <div class="scrollTo">
+            <a href="#destination">
+                <img src="/assets/images/icons8-up-arrow-50.png" alt="Error">
+            </a>
+        </div>
+        <section id="current-research">
+            <div class="container">
+                <h2>Current Research</h2>
+
+                <div class="research-item">
+                    <h3> Development of Sustainable Energy Solutions</h3>
+                    <div class="mark"></div>
+                    <img src="/assets/images/research1.jpg" alt="Error">
+                    <p><b>Description:</b> This interdisciplinary project aims to develop innovative solutions for
+                        sustainable energy production and storage. Researchers are exploring novel materials and
+                        technologies to improve the efficiency and scalability of renewable energy sources such as solar
+                        and
+                        wind <a href="#">Know more</a>
+                    </p>
+                    <p><b>Researchers:</b> Dr. John Smith, Dr. Emily Johnson</p>
+                    <p><b>Department:</b> Department of Energy Engineering</p>
+                    <!-- Add more details or links as needed -->
+                </div>
+                <div class="research-item">
+                    <h3>Advancements in Cancer Immunotherapy</h3>
+                    <div class="mark"></div>
+                    <img src="/assets/images/research2.jpg" alt="Error">
+                    <p><b>Description:</b> This project focuses on harnessing the power of the immune system to treat
+                        cancer.
+                        Researchers are investigating new immunotherapeutic approaches, including checkpoint inhibitors
+                        and
+                        CAR-T cell therapy, to improve patient outcomes and minimize side effects.<a href="#">Know
+                            more</a>
+                    </p>
+                    <p>
+                        <b>Researchers:</b> Dr. Sarah Davis, Dr. Michael Brown
+                    </p>
+                    <p><b>Department:</b> Department of Oncology</p>
+                    <!-- Add more details or links as needed -->
+                </div>
+                <div class="research-item">
+                    <h3> Artificial Intelligence for Climate Modeling</h3>
+                    <div class="mark"></div>
+                    <img src="/assets/images/research3.jpg" alt="Error">
+                    <p><b>Description:</b> This project utilizes artificial intelligence and machine learning techniques
+                        to
+                        improve climate modeling and predict future climate scenarios with higher accuracy. Researchers
+                        are
+                        developing advanced algorithms that can analyze large datasets
+                        of atmospheric and oceanic data to better understand climate dynamics and inform climate policy
+                        decisions. <a href="#">Know more</a>
+                    </p>
+                    <p><b>Researchers:</b> Dr. Sophia Lee, Dr. Mark Johnson</p>
+                    <p><b>Department:</b>Department of Environmental Science</p>
+                    <!-- Add more details or links as needed -->
+                </div>
+                <div class="research-item">
+                    <h3> Enhancing Cybersecurity through Quantum Cryptography</h3>
+                    <div class="mark"></div>
+                    <img src="/assets/images/research4.jpg" alt="Error">
+                    <p><b>Description:</b> This research explores the potential of quantum cryptography to enhance
+                        cybersecurity in an increasingly digital world. By leveraging the principles of quantum
+                        mechanics,
+                        researchers are developing encryption protocols that are
+                        theoretically unbreakable, offering unparalleled security for sensitive information and
+                        communication networks. <a href="#">Know more</a>
+                    </p>
+                    <p><b>Researchers:</b>Dr. Christopher Wong, Dr. Rachel Chen</p>
+                    <p><b>Department:</b> Department of Computer Science</p>
+                    <!-- Add more details or links as needed -->
+                </div>
+                <!-- Add more current research items as needed -->
+            </div>
+        </section>
+
+        <section id="past-research">
+            <div class="container">
+                <h2>Past Research Highlights</h2>
+
+                <div class="research-item">
+                    <h3>Discovery of Exoplanets Orbiting Sun-like Stars</h3>
+                    <div class="mark"></div>
+                    <img src="/assets/images/research5.jpg" alt="Error">
+                    <p><b>Description:</b> This landmark study led to the discovery of multiple exoplanets orbiting
+                        nearby
+                        sun-like
+                        stars. The research team used advanced telescopes and data analysis techniques to detect the
+                        presence of these distant worlds, expanding our understanding of planetary systems beyond our
+                        own.
+                        <a href="#">Know more</a>
+                    </p>
+                    <p>
+                        <b>Researchers:</b> Dr. David Martinez, Dr. Lisa Nguyen
+                    </p>
+                    <p>
+                        <b>Department: Department of Astronomy</b>
+                    </p>
+                    <!-- Add more details or links as needed -->
+                </div>
+                <div class="research-item">
+                    <h3>Development of Novel Drug Delivery Systems</h3>
+                    <div class="mark"></div>
+                    <img src="/assets/images/research6.jpg" alt="Error">
+                    <p><b>Description:</b> This groundbreaking research project developed innovative drug delivery
+                        systems
+                        capable
+                        of targeting specific cells or tissues within the body. The technology, based on nanomaterials
+                        and
+                        bioengineering principles, has the potential to revolutionize the treatment of various diseases,
+                        including cancer and neurological disorders. <a href="#">Know more</a>
+                    </p>
+                    <p>
+                        <b>Researchers:</b> Dr. James Wilson, Dr. Maria Garcia
+                    </p>
+                    <p>
+                        <b>Department:</b> Department of Biomedical Engineering
+                    </p>
+                    <!-- Add more details or links as needed -->
+                </div>
+                <div class="research-item">
+                    <h3> Discovery of New Antibiotics from Marine Microorganisms</h3>
+                    <div class="mark"></div>
+                    <img src="/assets/images/research7 (1).jpg" alt="Error">
+                    <p><b>Description:</b>This research project led to the discovery of novel antibiotics derived from
+                        marine microorganisms inhabiting unexplored oceanic depths. These antibiotics exhibit potent
+                        antimicrobial activity against drug-resistant bacteria,
+                        offering promising candidates for the development of new antibiotics to combat infectious
+                        diseases.
+                        <a href="#">Know more</a>
+                    </p>
+                    <p>
+                        <b>Researchers:</b> Dr. Thomas Roberts, Dr. Karen Adams
+                    </p>
+                    <p>
+                        <b>Department:</b> Department of Marine Biology
+                    </p>
+                    <!-- Add more details or links as needed -->
+                </div>
+                <div class="research-item">
+                    <h3>Uncovering the Genetic Basis of Rare Diseases</h3>
+                    <div class="mark"></div>
+                    <img src="/assets/images/research8.jpg" alt="Error">
+                    <p><b>Description:</b> This study identified the genetic mutations underlying rare diseases with
+                        unknown
+                        etiology, providing crucial insights into disease mechanisms and potential therapeutic targets.
+                        By
+                        employing advanced genomic sequencing techniques and bioinformatics analysis, researchers
+                        elucidated
+                        the molecular
+                        pathways contributing to rare genetic disorders, paving the way for personalized medicine
+                        approaches. <a href="#">Know more</a>
+                    </p>
+                    <p>
+                        <b>Researchers:</b>Dr. Sarah Thompson, Dr. Matthew Harris
+                    </p>
+                    <p>
+                        <b>Department:</b>Department of Genetics
+                    </p>
+                    <!-- Add more details or links as needed -->
+                </div>
+                <!-- Add more past research items as needed -->
+            </div>
+        </section>
+
+        <section id="research-facilities">
+            <div class="container">
+                <h2>Research Facilities</h2>
+
+                <div class="research-item">
+                    <h3>Advanced Materials Laboratory</h3>
+                    <div class="mark"></div>
+                    <img src="/assets/images/research9 (1).jpg" alt="">
+                    <p><b>Description:</b> Equipped with state-of-the-art instruments and specialized equipment, the
+                        Advanced Materials Laboratory facilitates research in the development and characterization of
+                        advanced materials for various applications, including nanotechnology, energy storage, and
+                        biomedical engineering. Researchers have access to scanning electron
+                        microscopes, atomic force microscopes, X-ray diffraction systems, and high-performance computing
+                        resources.</p>
+                    <p><b>Location:</b> Engineering Building, Room 301</p>
+                    <p><b>Contact:</b> Dr. Emily Johnson, Director of Advanced Materials Laboratory</p>
+                </div>
+
+                <div class="research-item">
+                    <h3>Biomedical Imaging Center</h3>
+                    <div class="mark"></div>
+                    <img src="/assets/images/research10 (1).jpg" alt="">
+                    <p><b>Description:</b> The Biomedical Imaging Center houses advanced imaging technologies for
+                        non-invasive visualization and analysis of biological systems at the cellular and molecular
+                        level.
+                        Researchers utilize cutting-edge imaging modalities such as confocal microscopy, magnetic
+                        resonance
+                        imaging (MRI), positron emission tomography (PET), and single-photon emission computed
+                        tomography (SPECT) to investigate physiological processes, disease mechanisms, and therapeutic
+                        interventions.</p>
+                    <p><b>Location:</b> Life Sciences Building, Room 201</p>
+                    <p><b>Contact:</b> Dr. Michael Brown, Director of Biomedical Imaging Center</p>
+                </div>
+
+                <div class="research-item">
+                    <h3>Environmental Monitoring Station</h3>
+                    <div class="mark"></div>
+                    <img src="/assets/images/research11 (1).jpg" alt="">
+                    <p><b>Description:</b> The Environmental Monitoring Station is equipped with a comprehensive array
+                        of
+                        sensors and monitoring instruments for real-time environmental data collection and analysis.
+                        Researchers use this facility to study air quality, water pollution, soil contamination, and
+                        ecological dynamics in diverse ecosystems. The station is equipped
+                        with meteorological stations, water quality analyzers, gas chromatographs, and remote sensing
+                        technologies.</p>
+                    <p><b>Location:</b> Environmental Science Building, Room 101</p>
+                    <p><b>Contact:</b> Dr. Sophia Lee, Director of Environmental Monitoring Station</p>
+                </div>
+                <!-- Add more details about facilities as needed -->
+            </div>
+        </section>
+
+        <footer>
+            <div class="footerContainer">
+                <div class="footerTalk">
+                    <p>Follow us on</p>
+                </div>
+                <div class="footerSocialMediaLinks">
+                    <a href="https://www.facebook.com/www.aot.edu.in/" title="Visit AOT Facebook Page">
+                        <img src="/assets/images/facebook_Logo.webp" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/aotconnect/?igsh=MWhhcDJuY2ZqeWg1OA%3D%3D"
+                        title="Visit AOT Instagram Page">
+                        <img src="/assets/images/instagram_Logo.webp" alt="">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA" title="Visit AOT YouTube Page">
+                        <img src="/assets/images/youtube_Logo.webp" alt="">
+                    </a>
+                    <a href="https://www.linkedin.com/school/academy-of-technology/" title="Visit AOT Linkedin Page">
+                        <img src="/assets/images/linkedin_Logo.webp" alt="">
+                    </a>
+                </div>
+                <div class="footerTalk">
+                    <p>Copyright &copy 2024 all rights reserved</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        function hidesidebar() {
+            let bar = document.querySelector('.hamburger');
+            bar.style.right = '-220px';
+            document.body.style.overflow = '';
+        }
+
+        function showsidebar() {
+            let bar = document.querySelector('.hamburger');
+            bar.style.right = '0';
+            document.body.style.overflow = 'hidden';
+        }
+        window.addEventListener('click', e => {
+            let bar = document.querySelector('.hamburger');
+            if (e.x <= window.innerWidth - bar.clientWidth) {
+                hidesidebar();
+            }
+        });
+
+        const icon = document.querySelector('.scrollTo');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > window.innerHeight) {
+                icon.style.display = "block";
+                setTimeout(() => {
+                    icon.style.transform = "scale(1)";
+                }, 300);
+            }
+            else {
+                icon.style.transform = "scale(0)";
+                setTimeout(() => {
+                    icon.style.display = "none";
+                }, 200);
+            }
+        })
+    </script>
+    <script src="/javaScripts/chatbot.js"></script>
+    <script src="/javaScripts/userOnOff.js"></script>
+    <script src="/javaScripts/scrollToTop.js"></script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us</title>
+    <link rel="stylesheet" href="/styles/homeStyle.css">
+    <link rel="stylesheet" href="/styles/headerStyle.css">
+    <link rel="stylesheet" href="/styles/footerStyle.css">
+    <link rel="stylesheet" href="/styles/ug-cseStyle.css">
+    <link rel="stylesheet" href="/styles/JoinUsStyle.css">
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/chatbot.css">
+    <style>
+        /* Style for chatbot icon */
+        #chatbot-icon {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            z-index: 9999;
+            cursor: pointer;
+        }
+
+        /* Style for chatbot window */
+        .chat-container {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 35%;
+            height: 85%;
+            background: white;
+            z-index: 9998;
+
+        }
+
+        /* Style for back icon */
+        #back-icon {
+            cursor: pointer;
+        }
+
+        /* Hidden class */
+        .hidden {
+            display: none;
+        }
+
+        @media only screen and (max-width:1000px) {
+            .chat-container {
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+            }
+
+            .chat-header,
+            button,
+            input {
+                border-radius: 0;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Chatbot Icon -->
+    <div id="chatbot-icon" class="icon">
+        <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/chatbot.png" alt="chatbot" />
+    </div>
+
+    <!-- Chatbot Window -->
+    <div class="chat-container hidden">
+        <div class="chat-header">
+            <div id="back-icon" class="icon">
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/multiply.png"
+                    alt="multiply" />
+            </div>
+            <h2>College Chatbot</h2>
+            <button id="clear-chat">Clear Chat</button>
+        </div>
+        <div id="chatbox" class="chatbox"></div>
+        <div class="input-container">
+            <input type="text" id="input" placeholder="Type a message...">
+            <button id="send">Send</button>
+        </div>
+    </div>
+    <!-- chatbot window end here -->
+    <div class="onOrOff">
+        <img src="/assets/images/icons8-no-connection.gif" alt="./assets/images/icons8-no-connection.gif">
+        <img src="/assets/images/icons8-online.gif" alt="./assets/images/icons8-online.gif">
+        <p>We are online</p>
+    </div>
+    <main>
+        <div class="to-top">
+            <a href="#">
+                <img src="/assets/images/icons8-up-arrow-50.png" alt="">
+            </a>
+        </div>
+        <header>
+
+            <div class="banner">
+                <div class="left">
+                    <img src="/assets/images/aot-logo.webp" loading="lazy" alt="Error">
+                </div>
+                <div class="middle">
+                    <h1>ACADEMY OF TECHNOLOGY</h1>
+                    <span>...translate your vision into reality</span>
+                </div>
+            </div>
+
+        </header>
+
+        <div class="beforeIntro">
+            <div class="back-btn">
+                <img src="/assets/video/icons8-home.gif" alt="home" />
+            </div>
+            <h1 class="headings">CSE</h1>
+        </div>
+
+        <div class="outer welcome">
+            <h2 style="padding:0px 1em">AOT translate your vision into reality</h2>
+            <div class="welcome-inner">
+                <p>Hello and welcome! We're thrilled that you're considering joining our vibrant community. Our college
+                    is a
+                    place where passion meets possibility, and ambition meets opportunity since <strong>2003</strong> .
+                </p>
+                <p>We offer a diverse range of BTech and MBA programs, each designed to equip you with the knowledge,
+                    skills, and confidence to make a real impact in your chosen field. Our BTech courses are perfect for
+                    those who have a passion for technology and innovation, while our MBA programs are designed for
+                    aspiring
+                    leaders and entrepreneurs.</p>
+                <p>At our college, we believe in the power of education to transform lives. We're committed to providing
+                    a
+                    supportive and inclusive environment where every student can thrive. Our dedicated faculty,
+                    state-of-the-art facilities, and strong industry connections are all part of our commitment to your
+                    success.</p>
+                <p>So, whether you're just starting your academic journey with our BTech program or looking to take your
+                    career to the next level with our MBA, we're here to help you every step of the way.
+                </p>
+                <p>We invite you to explore our website, learn more about our programs, and discover why our college
+                    could
+                    be the perfect place for you. We can't wait to see what you'll achieve!</p>
+                <p>Welcome to your future. Welcome to our college.</p>
+            </div>
+        </div>
+
+        <h1 class="headings">Why you shoud join AOT?</h1>
+        <div class="outer whyJoin">
+            <div class="inner whyJoin-inner">
+                Choosing where to pursue your higher education is a significant decision, and we believe that AOT offers
+                a
+                unique blend of opportunities that make it an excellent choice:
+                <ul>
+                    <li><strong>Diverse Programs: </strong>We offer a wide range of BTech and MBA programs, catering to
+                        the
+                        diverse interests and career goals of our students.</li>
+                </ul>
+                <ul>
+                    <li><strong>Experienced Faculty: </strong>Our faculty comprises experienced professionals who are
+                        experts in their respective fields. They are dedicated to providing quality education and
+                        mentoring
+                        our students.</li>
+                </ul>
+                <ul>
+                    <li><strong>State-of-the-art Facilities: </strong>Our campus boasts modern facilities and resources
+                        to
+                        support academic learning and research.</li>
+                </ul>
+                <ul>
+                    <li><strong>Industry Connections: </strong> We have strong ties with the industry, providing our
+                        students with valuable internship and job placement opportunities.</li>
+                </ul>
+                <ul>
+                    <li><strong>Vibrant Campus Life: </strong>At AOT, we believe in holistic development. Our vibrant
+                        campus
+                        life offers various extracurricular activities for our students to participate in.</li>
+                </ul>
+                <ul>
+                    <li><strong>Community: </strong> We pride ourselves on our inclusive and supportive community that
+                        fosters growth and development.</li>
+                </ul>
+                At AOT, we are committed to providing an environment that nurtures talent, fosters creativity, and
+                prepares
+                leaders for the future. Join us and be a part of our journey towards excellence.
+            </div>
+        </div>
+
+
+        <h1 class="headings">Courses Offered</h1>
+        <div class="outer courses">
+            At AOT, we offer a diverse range of programs to cater to the varied interests of our students:
+            <ul class="inner courses-outerlist">
+                <li>UG Programs</li>
+                <ul class="inner courses-innerlist">
+                    <li><a href="./CSE.html">CSE</a></li>
+                    <li><a href="">CSBS</a></li>
+                    <li><a href="">ECE</a></li>
+                    <li><a href="">EE</a></li>
+                    <li><a href="">EEE</a></li>
+                    <li><a href="">ME</a></li>
+                </ul>
+                <li>PG Programs</li>
+                <ul class="inner courses-innerlist">
+                    <li><a href="./MBA.html">MBA</a></li>
+                    <li><a href="">MCA</a></li>
+                </ul>
+            </ul>
+        </div>
+
+        <h1 class="headings">How to Apply in AOT</h1>
+        <div class="outer application ">
+            Applying to AOT involves a few simple steps:
+            <ul class="inner courses-outerlist">
+                <li><strong>Check Eligibility: </strong>Ensure you meet the eligibility criteria for the Btech or PG
+                    program
+                    you are interested in.</li>
+                <li><strong>Entrance Exam: </strong> Prepare for and take the relevant entrance exam (JEE Mains for
+                    BTech,
+                    CAT/MAT for MBA and NIMCET for MCA).</li>
+                <li><strong>Application Form: </strong>Fill out the application form available on our official website.
+                    Make
+                    sure to fill in all the required details accurately.</li>
+                <li><strong>Submit Documents: </strong>Submit the necessary documents as mentioned in the application
+                    form.
+                </li>
+                <li><strong>Admission Decision: </strong> After reviewing your application and entrance exam scores, we
+                    will
+                    make an admission decision and notify you accordingly.</li>
+            </ul>
+            We look forward to receiving your application!!!
+        </div>
+
+
+        <h1 class="headings">Scholarships and Financial Aid</h1>
+        <div class="outer finance">
+
+            <ul class="inner">
+                <li><strong>Scholarship Programs: </strong>If AOT offers any scholarship programs, mention them here.
+                    Scholarships could be based on merit, sports, or other talents. Include details about the
+                    eligibility
+                    criteria, the application process, and the benefits of the scholarship.</li>
+                <li><strong>Financial Aid: </strong> If AOT provides any financial aid options, such as grants or
+                    work-study
+                    opportunities, provide information about these. Explain the eligibility criteria, how to apply, and
+                    what
+                    the financial aid covers.</li>
+                <li><strong>Loan Facilities: </strong> If AOT has tie-ups with any banks for educational loans, mention
+                    this. Provide details about the loan process, the terms and conditions, and the contact information
+                    for
+                    the bank.</li>
+                <li><strong>Fee Waiver Schemes: </strong> If there are any fee waiver schemes available for economically
+                    disadvantaged students, provide information about these. Include details about the eligibility
+                    criteria
+                    and the application process.</li>
+                <li><strong>Contact Information: </strong>For any query, <a href="./contact.html">click me <img
+                            class="link-img" src="/assets/images/icons8-link-96.webp" alt=""></a> to contact</li>
+            </ul>
+            Remember, providing clear information about scholarships and financial aid can help make education more
+            accessible to all students. It's always a good idea to make this information easily accessible and
+            understandable. Good luck!
+
+        </div>
+
+        <div class="outer joinus">
+            <p>Are you ready to take the next step towards a bright future? AOT is here to guide you on your academic
+                journey. With our diverse BTech and MBA programs, experienced faculty, and vibrant campus life, we
+                provide
+                the perfect environment for learning and growth.</p>
+
+            <p>Don't just dream about your future, start building it at AOT. Apply now and join our community of
+                innovators,
+                leaders, and change-makers.</p>
+
+            <p><strong>Take the leap. Shape your future. Join AOT.</strong></p>
+
+            <p>For any queries or further information, feel free to contact us. We're here to help you make the right
+                decision for your future.</p>
+
+            <p>We look forward to welcoming you to AOT!</p>
+
+        </div>
+
+
+
+
+
+
+        <footer>
+            <div class="footerContainer">
+                <div class="footerTalk">
+                    <p>Follow us on</p>
+                </div>
+                <div class="footerSocialMediaLinks">
+                    <a href="https://www.facebook.com/www.aot.edu.in/" title="Visit AOT Facebook Page">
+                        <img src="/assets/images/facebook_Logo.webp" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/aotconnect/?igsh=MWhhcDJuY2ZqeWg1OA%3D%3D"
+                        title="Visit AOT Instagram Page">
+                        <img src="/assets/images/instagram_Logo.webp" alt="">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA" title="Visit AOT YouTube Page">
+                        <img src="/assets/images/youtube_Logo.webp" alt="">
+                    </a>
+                    <a href="https://www.linkedin.com/school/academy-of-technology/" title="Visit AOT Linkedin Page">
+                        <img src="/assets/images/linkedin_Logo.webp" alt="">
+                    </a>
+                </div>
+                <div class="footerTalk">
+                    <p>Copyright &copy 2024 all rights reserved</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="/javaScripts/chatbot.js"></script>
+    <script src="/javaScripts/scrollToTop.js"></script>
+    <script src="/javaScripts/userOnOff.js"></script>
+
+
+</html>

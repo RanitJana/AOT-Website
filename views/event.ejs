@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/styles/event.css">
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/chatbot.css">
+    <style>
+        /* Style for chatbot icon */
+        #chatbot-icon {
+            position: fixed;
+            bottom: 80px;
+            right: 28px;
+            z-index: 9999;
+            cursor: pointer;
+        }
+
+        /* Style for chatbot window */
+        .chat-container {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 35%;
+            height: 85%;
+            background: white;
+            z-index: 9998;
+
+        }
+
+        /* Style for back icon */
+        #back-icon {
+            cursor: pointer;
+        }
+
+        /* Hidden class */
+        .hidden {
+            display: none;
+        }
+
+        @media only screen and (max-width:1000px) {
+            .chat-container {
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+            }
+
+            .chat-header,
+            button,
+            input {
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Chatbot Icon -->
+    <div id="chatbot-icon" class="icon">
+        <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/chatbot.png" alt="chatbot" />
+    </div>
+
+    <!-- Chatbot Window -->
+    <div class="chat-container hidden">
+        <div class="chat-header">
+            <div id="back-icon" class="icon">
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/multiply.png"
+                    alt="multiply" />
+            </div>
+            <h2>College Chatbot</h2>
+            <button id="clear-chat">Clear Chat</button>
+        </div>
+        <div id="chatbox" class="chatbox"></div>
+        <div class="input-container">
+            <input type="text" id="input" placeholder="Type a message...">
+            <button id="send">Send</button>
+        </div>
+    </div>
+    <!-- chatbot window end here -->
+    <div class="onOrOff">
+        <img src="/assets/images/icons8-no-connection.gif" alt="./assets/images/icons8-no-connection.gif">
+        <img src="/assets/images/icons8-online.gif" alt="./assets/images/icons8-online.gif">
+        <p>We are online</p>
+    </div>
+    <header id="destination">
+        <div class="banner">
+            <div class="left">
+                <img src="/assets/images/aot-logo.webp" alt="Error" loading="lazy">
+            </div>
+            <div class="middle">
+                <h1>ACADEMY OF TECHNOLOGY</h1>
+                <span>...translate your vision into reality</span>
+            </div>
+            <div class="right">
+                <div class="search">
+                    <input type="text" name="" id="" placeholder="Search here...">
+                    <img src="/assets/video/icons8-search.gif" alt="" loading="lazy">
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <main>
+
+        <div class="page-title">
+            <div class="logo">
+                <a href="/"><img width="32" height="32" src="/assets/video/icons8-home.gif" alt="home" /></a>
+            </div>
+            <h1>EVENTS</h1>
+        </div>
+        <div class="scrollTo">
+            <a href="#destination">
+                <img src="/assets/images/icons8-up-arrow-50.png" alt="Error">
+            </a>
+        </div>
+        <div class="container">
+            <div class="item-container">
+                <div class="img-container">
+                    <img src="/assets/images/event5.jpg" alt="">
+                </div>
+                <div class="body-container">
+                    <div class="overlay"></div>
+                    <div class="event-info">
+                        <p class="title">Artistix</p>
+                        <div class="separator"></div>
+                        <p class="info">adisaptagram,hooghly</p>
+                        <p class="price">Free</p>
+                        <div class="additional-info">
+                            <p class="info">
+                                <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/marker.png"
+                                    alt="marker" />
+                                Grand central terminal
+                            </p>
+                            <p class="info">
+                                <!-- <i class="far fa-calender-alt"></i> -->
+                                <img width="32" height="32" src="https://img.icons8.com/windows/32/map.png" alt="map" />
+
+                                sat, sep 10, 10:00 AM
+                            </p>
+                            <p class="info description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates dicta quisquam nihil
+                                tempore, repudiandae ad eius reprehenderit doloribus vel unde alias, ea commodi
+                                ipsa hic dolor iusto deleniti, <span>more...</span>
+                            </p>
+                        </div>
+                    </div>
+                    <button class="action">
+                        <a href="#google-form">Book it</a>
+                    </button>
+                </div>
+            </div>
+            <div class="item-container">
+                <div class="img-container">
+                    <img src="/assets/images/event6.jpg" alt="">
+                </div>
+                <div class="body-container">
+                    <div class="overlay"></div>
+                    <div class="event-info">
+                        <p class="title">Football</p>
+                        <div class="separator"></div>
+                        <p class="info">adisaptagram,hooghly</p>
+                        <p class="price">₹125</p>
+                        <div class="additional-info">
+                            <p class="info">
+                                <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/marker.png"
+                                    alt="marker" />
+                                Grand central terminal
+                            </p>
+                            <p class="info">
+                                <!-- <i class="far fa-calender-alt"></i> -->
+                                <img width="32" height="32" src="https://img.icons8.com/windows/32/map.png" alt="map" />
+
+                                sat, sep 10, 10:00 AM
+                            </p>
+                            <p class="info description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates dicta quisquam nihil
+                                tempore, repudiandae ad eius reprehenderit doloribus vel unde alias, ea commodi
+                                ipsa hic dolor iusto deleniti, <span>more...</span>
+                            </p>
+                        </div>
+                    </div>
+                    <button class="action">
+                        <a href="#google-form">Book it</a>
+                    </button>
+                </div>
+            </div>
+            <div class="item-container">
+                <div class="img-container">
+                    <img src="/assets/images/event1.jpg" alt="">
+                </div>
+                <div class="body-container">
+                    <div class="overlay"></div>
+                    <div class="event-info">
+                        <p class="title">Robo-War</p>
+                        <div class="separator"></div>
+                        <p class="info">adisaptagram,hooghly</p>
+                        <p class="price">₹175</p>
+                        <div class="additional-info">
+                            <p class="info">
+                                <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/marker.png"
+                                    alt="marker" />
+                                Grand central terminal
+                            </p>
+                            <p class="info">
+                                <!-- <i class="far fa-calender-alt"></i> -->
+                                <img width="32" height="32" src="https://img.icons8.com/windows/32/map.png" alt="map" />
+
+                                sat, sep 10, 10:00 AM
+                            </p>
+                            <p class="info description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates dicta quisquam nihil
+                                tempore, repudiandae ad eius reprehenderit doloribus vel unde alias, ea commodi
+                                ipsa hic dolor iusto deleniti, <span>more...</span>
+                            </p>
+                        </div>
+                    </div>
+                    <button class="action">
+                        <a href="#google-form">Book it</a>
+                    </button>
+                </div>
+            </div>
+            <div class="item-container">
+                <div class="img-container">
+                    <img src="/assets/images/event2.jpg" alt="">
+                </div>
+                <div class="body-container">
+                    <div class="overlay"></div>
+                    <div class="event-info">
+                        <p class="title">Techfiesta</p>
+                        <div class="separator"></div>
+                        <p class="info">adisaptagram,hooghly</p>
+                        <p class="price">₹85</p>
+                        <div class="additional-info">
+                            <p class="info">
+                                <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/marker.png"
+                                    alt="marker" />
+                                Grand central terminal
+                            </p>
+                            <p class="info">
+                                <!-- <i class="far fa-calender-alt"></i> -->
+                                <img width="32" height="32" src="https://img.icons8.com/windows/32/map.png" alt="map" />
+
+                                sat, sep 10, 10:00 AM
+                            </p>
+                            <p class="info description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates dicta quisquam nihil
+                                tempore, repudiandae ad eius reprehenderit doloribus vel unde alias, ea commodi
+                                ipsa hic dolor iusto deleniti, <span>more...</span>
+                            </p>
+                        </div>
+                    </div>
+                    <button class="action">
+                        <a href="#google-form">Book it</a>
+                    </button>
+                </div>
+            </div>
+            <div class="item-container">
+                <div class="img-container">
+                    <img src="/assets/images/event3.jpg" alt="">
+                </div>
+                <div class="body-container">
+                    <div class="overlay"></div>
+                    <div class="event-info">
+                        <p class="title">Maze Runner</p>
+                        <div class="separator"></div>
+                        <p class="info">adisaptagram,hooghly</p>
+                        <p class="price">₹199</p>
+                        <div class="additional-info">
+                            <p class="info">
+                                <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/marker.png"
+                                    alt="marker" />
+                                Grand central terminal
+                            </p>
+                            <p class="info">
+                                <!-- <i class="far fa-calender-alt"></i> -->
+                                <img width="32" height="32" src="https://img.icons8.com/windows/32/map.png" alt="map" />
+
+                                sat, sep 10, 10:00 AM
+                            </p>
+                            <p class="info description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates dicta quisquam nihil
+                                tempore, repudiandae ad eius reprehenderit doloribus vel unde alias, ea commodi
+                                ipsa hic dolor iusto deleniti, <span>more...</span>
+                            </p>
+                        </div>
+                    </div>
+                    <button class="action">
+                        <a href="#google-form">Book it</a>
+                    </button>
+                </div>
+            </div>
+            <div class="item-container">
+                <div class="img-container">
+                    <img src="/assets/images/event4.jpg" alt="">
+                </div>
+                <div class="body-container">
+                    <div class="overlay"></div>
+                    <div class="event-info">
+                        <p class="title">Davewrap</p>
+                        <div class="separator"></div>
+                        <p class="info">adisaptagram,hooghly</p>
+                        <p class="price">₹75</p>
+                        <div class="additional-info">
+                            <p class="info">
+                                <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/marker.png"
+                                    alt="marker" />
+                                Grand central terminal
+                            </p>
+                            <p class="info">
+                                <!-- <i class="far fa-calender-alt"></i> -->
+                                <img width="32" height="32" src="https://img.icons8.com/windows/32/map.png" alt="map" />
+
+                                sat, sep 10, 10:00 AM
+                            </p>
+                            <p class="info description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates dicta quisquam nihil
+                                tempore, repudiandae ad eius reprehenderit doloribus vel unde alias, ea commodi
+                                ipsa hic dolor iusto deleniti, <span>more...</span>
+                            </p>
+                        </div>
+                    </div>
+                    <button class="action">
+                        <a href="#google-form">Book it</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footerContainer">
+            <div class="footerTalk">
+                <p>Follow us on</p>
+            </div>
+            <div class="footerSocialMediaLinks">
+                <a href="https://www.facebook.com/www.aot.edu.in/" title="Visit AOT Facebook Page">
+                    <img src="/assets/images/facebook_Logo.webp" alt="">
+                </a>
+                <a href="https://www.instagram.com/aotconnect/?igsh=MWhhcDJuY2ZqeWg1OA%3D%3D"
+                    title="Visit AOT Instagram Page">
+                    <img src="/assets/images/instagram_Logo.webp" alt="">
+                </a>
+                <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA" title="Visit AOT YouTube Page">
+                    <img src="/assets/images/youtube_Logo.webp" alt="">
+                </a>
+                <a href="https://www.linkedin.com/school/academy-of-technology/" title="Visit AOT Linkedin Page">
+                    <img src="/assets/images/linkedin_Logo.webp" alt="">
+                </a>
+            </div>
+            <div class="footerTalk">
+                <p>Copyright &copy 2024 all rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const icon = document.querySelector('.scrollTo');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > window.innerHeight) {
+                icon.style.display = "block";
+                setTimeout(() => {
+                    icon.style.transform = "scale(1)";
+                }, 300);
+            }
+            else {
+                icon.style.transform = "scale(0)";
+                setTimeout(() => {
+                    icon.style.display = "none";
+                }, 200);
+            }
+        })
+    </script>
+    <script src="/javaScripts/chatbot.js"></script>
+    <script src="/javaScripts/event.js"></script>
+    <script src="/javaScripts/userOnOff.js"></script>
+</body>
+
+</html>

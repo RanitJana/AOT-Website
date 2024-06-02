@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/styles/headerStyle.css">
+    <link rel="stylesheet" href="/styles/breakingNews.css">
+    <link rel="stylesheet" href="/styles/ug-cseStyle.css">
+    <link rel="stylesheet" href="/styles/footerStyle.css">
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/chatbot.css">
+    <title>UG_MBA</title>
+    <style>
+        /* Style for chatbot icon */
+        #chatbot-icon {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            z-index: 9999;
+            cursor: pointer;
+        }
+
+        /* Style for chatbot window */
+        .chat-container {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 35%;
+            height: 85%;
+            background: white;
+            z-index: 9998;
+
+        }
+
+        /* Style for back icon */
+        #back-icon {
+            cursor: pointer;
+        }
+
+        /* Hidden class */
+        .hidden {
+            display: none;
+        }
+
+        @media only screen and (max-width:1000px) {
+            .chat-container {
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+            }
+
+            .chat-header,
+            button,
+            input {
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Chatbot Icon -->
+    <div id="chatbot-icon" class="icon">
+        <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/chatbot.png" alt="chatbot" />
+    </div>
+
+    <!-- Chatbot Window -->
+    <div class="chat-container hidden">
+        <div class="chat-header">
+            <div id="back-icon" class="icon">
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/multiply.png"
+                    alt="multiply" />
+            </div>
+            <h2>College Chatbot</h2>
+            <button id="clear-chat">Clear Chat</button>
+        </div>
+        <div id="chatbox" class="chatbox"></div>
+        <div class="input-container">
+            <input type="text" id="input" placeholder="Type a message...">
+            <button id="send">Send</button>
+        </div>
+    </div>
+    <!-- chatbot window end here -->
+    <div class="onOrOff">
+        <img src="/assets/images/icons8-no-connection.gif" alt="./assets/images/icons8-no-connection.gif">
+        <img src="/assets/images/icons8-online.gif" alt="./assets/images/icons8-online.gif">
+        <p>We are online</p>
+    </div>
+    <main>
+
+        <div class="to-top">
+            <a href="#">
+                <img src="/assets/images/icons8-up-arrow-50.png" alt="">
+            </a>
+        </div>
+        <header>
+
+            <div class="banner">
+                <div class="left">
+                    <img src="/assets/images/aot-logo.webp" loading="lazy" alt="Error">
+                </div>
+                <div class="middle">
+                    <h1>ACADEMY OF TECHNOLOGY</h1>
+                    <span>...translate your vision into reality</span>
+                </div>
+            </div>
+
+        </header>
+
+        <div class="beforeIntro">
+            <div class="back-btn"><img src="/assets/video/icons8-home.gif" alt="home" /></div>
+            <h1 class="headings">MBA</h1>
+        </div>
+
+        <!-- introduction of department with some photo -->
+        <section class="introduction">
+            <div class="intro-slide-container">
+                <div class="intro-slides">
+                    <img class="active intro-img" src="/assets/images/img1.jpg" alt="">
+                    <img class="intro-img" src="/assets/images/img2.jpg" alt="">
+                    <img class="intro-img" src="/assets/images/img3.jpg" alt="">
+                </div>
+                <div class="intro-btn">
+                    <span class="next">&#10095;</span>
+                    <span class="prev">&#10094;</span>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Infrastructure section -->
+        <section class="infrastructure-section">
+            <h1 class="headings">Infrastructure and Facility</h1>
+
+            <div class="infrastructure">
+
+                <div class="facility">
+                    <h3>High tech Computer Labs</h3>
+                    <p>AOT has Thousands of Computer in their lab, with high speed internet connection.</p>
+                </div>
+                <div class="facility">
+                    <h3>Specialized Software Tools</h3>
+                    <p>We will provide high tech software support for students for free</p>
+                </div>
+                <div class="facility">
+                    <h3>Networking Infrastructure</h3>
+                    <p>Total college supports high speed internet connection all the time</p>
+                </div>
+                <div class="facility">
+                    <h3>Smart Classroom Facilities</h3>
+                    <p>Smart Classroom supports here like projector, practical visulation etc. </p>
+                </div>
+                <div class="facility">
+                    <h3>Research Facilities</h3>
+                    <p>24/7 research facilities with faculty supports. </p>
+                </div>
+                <div class="facility">
+                    <h3>Library Resources</h3>
+                    <p>You can access Physical Library and online Library alont with digital resource . </p>
+                </div>
+                <div class="facility">
+                    <h3>24/7 Access of all facilities</h3>
+                    <p>Facilities are available 24/7 .</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achivements and Academic Programs -->
+        <section class="achivement-section">
+            <h1 class="headings">Achivements</h1>
+
+            <div class="achivementsPrograms">
+
+                <div class="achivements">
+                    <div class="achivement center">
+                        <h3>Flagship PGP Program</h3>
+                        <p>Here we are in the top 50 colleges to get Flagship PGP Programs. </p>
+                    </div>
+                    <div class="achivement center">
+                        <h3>It has a CAT 2023 cutoff of 991.</h3>
+                        <p>In 2023, AOT got maximum CAT cutoff that was 991</p>
+                    </div>
+                    <div class="achivement center">
+                        <h3>Institution of Excellence</h3>
+                        <p>The college is recognized as an “Institution of Excellence” by India’s Ministry of Human
+                            Resource
+                            Development</p>
+                    </div>
+                </div>
+
+                <div class="programs">
+                    <div class="programHeading">
+                        <h2>Poster Corner</h2>
+                    </div>
+                    <div class="program center" id="program1">
+                        <a href="https://www.iima.ac.in/the-institute/events" target="_blank">
+                            <h3>
+                                59th Annual Convocation</h3>
+                            </p>
+                            <p> <img src="/assets/video/new.gif" alt="" style="width: 2rem;">
+                            </p>
+                        </a>
+                    </div>
+                    <div class="program center" id="program2">
+                        <a href="https://www.iima.ac.in/the-institute/events" target="_blank">
+                            <h3>
+                                A Talk on "Impact of ESG on Business Performance"</h3>
+                            <p> This event focused on the impact of Environmental, Social, and Governance (ESG) factors
+                                on
+                                business performance. </p>
+                            <p> <img src="/assets/video/new.gif" alt="" style="width: 2rem;">
+                            </p>
+                        </a>
+                    </div>
+                    <div class="program center" id="program3">
+                        <a href="https://www.iima.ac.in/the-institute/events" target="_blank">
+                            <h3>
+                                Launch of Report titled "Digital Technologies And Inclusion"</h3>
+                            <p> This event marked the launch of a report on digital technologies and inclusion.</p>
+                            <p><img src="/assets/video/new.gif" alt="" style="width: 2rem;">
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="curriculum-section">
+            <h1 class="headings">Curriculum</h1>
+            <div class="curriculum">
+                <ul>
+                    <li>Students undergo a rigorous set of core courses covering fundamental business disciplines such
+                        as
+                        finance, marketing, operations, human resources, strategy, and organizational behavior.</li>
+                    <li>These courses provide a comprehensive understanding of key business functions and their
+                        interdependencies.</li>
+                    <li>In the latter part of the program, students can choose from a wide range of elective courses
+                        based
+                        on their interests and career goals.</li>
+                    <li>Electives cover specialized topics such as entrepreneurship, business analytics, innovation,
+                        international business, and industry-specific subjects.</li>
+                    <li>AOT emphasizes experiential learning through case studies, simulations, live projects, and field
+                        visits.</li>
+                    <li>Students apply theoretical concepts to real-world business challenges, developing practical
+                        problem-solving skills.</li>
+                    <li>The curriculum may include opportunities for international exposure through exchange programs,
+                        study
+                        tours, and collaborations with renowned business schools worldwide.</li>
+                    <li>Through faculty guidance and career counseling services, students can tailor their curriculum to
+                        align with their professional goals.</li>
+                    <li>To get our latest detailed Curriculum of Btech MBA, <a target="_blank"
+                            href="/assets/pdf/MBA.pdf">Click me <img class="link-img"
+                                src="/assets/images/icons8-link-96.webp" alt=""></a></li>
+
+
+                </ul>
+            </div>
+        </section>
+
+        <section class="research-section">
+            <h1 class="headings">Research</h1>
+            <div class="research">
+                <ul>
+                    <li>Advancements in AI-driven Healthcare: A Comprehensive Review of Diagnostics, Treatment, and
+                        Patient
+                        Care Integration. to view full paper, <a title="_blank"
+                            href="https://www.ijsdcs.com/index.php/IJMLSD/article/view/438">Click me <img
+                                class="link-img" src="/assets/images/icons8-link-96.webp" alt=""></a></li>
+
+                    <li>Ai and memory wall to view full paper, <a title="_blank"
+                            href="https://ieeexplore.ieee.org/abstract/document/10477550">Click me <img class="link-img"
+                                src="/assets/images/icons8-link-96.webp" alt=""></a></li>
+
+                    <li>Thousands of AI authors on the future of AI to view full paper, <a title="_blank"
+                            href="https://arxiv.org/abs/2401.02843">Click me <img class="link-img"
+                                src="/assets/images/icons8-link-96.webp" alt=""></a></li>
+
+
+                    <li>Anak Indonesia Pencipta AI untuk Pendidikan to view full paper, <a title="_blank"
+                            href="https://jisma.org/index.php/jisma/article/view/833">Click me <img class="link-img"
+                                src="/assets/images/icons8-link-96.webp" alt=""></a></li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h1 class="headings">Frequently Asked Questions</h1>
+
+            <div class="faqs">
+                <ul>
+                    <li>
+                        <div class="faq faq-1">
+                            <div class="question">
+                                <h4>What is the fee structure</h4>
+                                <img class="rotate-icon" src="/assets/images/plus-48.png" alt="">
+                            </div>
+                            <div class="answer">
+                                <table>
+                                    <tr>
+                                        <th>Year</th>
+                                        <th>Fee</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1st Year</td>
+                                        <td>1,50,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2nd Year</td>
+                                        <td>1,30,000 </td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="faq faq-2">
+                            <div class="question">
+                                <h4>What about college infrastructure</h4>
+                                <img class="rotate-icon" src="/assets/images/plus-48.png" alt="">
+                            </div>
+                            <div class="answer">
+                                <p>In out college, CSE departments usually well-structured computer laboratories
+                                    equipped
+                                    with
+                                    the
+                                    latest hardware and necessary software in accordance to the curriculum</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="faq faq-3">
+                            <div class="question">
+                                <h4>What is the syllabus?</h4>
+                                <img class="rotate-icon" src="/assets/images/plus-48.png" alt="">
+                            </div>
+                            <div class="answer">
+                                <p>The syllabus is usually updated every semester to make students future-ready
+                                    according to
+                                    current
+                                    MAKAUT requirements. We also have some extra class and additional trainning classes
+                                    outside
+                                    the
+                                    college fees.</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="faq faq-4">
+                            <div class="question">
+                                <h4>Which Scholarships are available in the college?</h4>
+                                <img class="rotate-icon" src="/assets/images/plus-48.png" alt="">
+                            </div>
+                            <div class="answer">
+                                <p>All the goverment scholarships all applicable in the college</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="faq faq-5">
+                            <div class="question">
+                                <h4>Is there Loan Facility available?</h4>
+                                <img class="rotate-icon" src="/assets/images/plus-48.png" alt="">
+                            </div>
+                            <div class="answer">
+                                <p>Only Student Credit card loan is available here.</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="faq faq-5">
+                            <div class="question">
+                                <h4>What is the placement rate in the college?</h4>
+                                <img class="rotate-icon" src="/assets/images/plus-48.png" alt="">
+                            </div>
+                            <div class="answer">
+                                <p>last year 131% students got placement from college.For more details, <a
+                                        href="./contact.html">click me <img class="link-img"
+                                            src="/assets/images/icons8-link-96.webp" alt=""></a></p>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="faq faq-6">
+                            <div class="question">
+                                <h4>How to contact to college?</h4>
+                                <img class="rotate-icon" src="/assets/images/plus-48.png" alt="">
+                            </div>
+                            <div class="answer">
+                                <p>To contact to the college just <a href="./contact.html">click me <img
+                                            class="link-img" src="/assets/images/icons8-link-96.webp" alt=""></a></p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
+        <footer>
+            <div class="footerContainer">
+                <div class="footerTalk">
+                    <p>Follow us on</p>
+                </div>
+                <div class="footerSocialMediaLinks">
+                    <a href="https://www.facebook.com/www.aot.edu.in/" title="Visit AOT Facebook Page">
+                        <img src="/assets/images/facebook_Logo.webp" alt="">
+                    </a>
+                    <a href="https://www.instagram.com/aotconnect/?igsh=MWhhcDJuY2ZqeWg1OA%3D%3D"
+                        title="Visit AOT Instagram Page">
+                        <img src="/assets/images/instagram_Logo.webp" alt="">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA" title="Visit AOT YouTube Page">
+                        <img src="/assets/images/youtube_Logo.webp" alt="">
+                    </a>
+                    <a href="https://www.linkedin.com/school/academy-of-technology/" title="Visit AOT Linkedin Page">
+                        <img src="/assets/images/linkedin_Logo.webp" alt="">
+                    </a>
+                </div>
+                <div class="footerTalk">
+                    <p>Copyright &copy 2024 all rights reserved</p>
+                </div>
+            </div>
+        </footer>
+
+
+    </main>
+
+    <script src="/javaScripts/chatbot.js"></script>
+    <script src="/javaScripts/ug-cse.js"></script>
+    <script src="/javaScripts/scrollToTop.js"></script>
+    <script src="/javaScripts/userOnOff.js"></script>
+</body>
+
+
+</html>
