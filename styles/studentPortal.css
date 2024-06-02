@@ -1,0 +1,82 @@
+@import url('../styles/basicStyles.css');
+
+form{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 1.5rem;
+}
+
+.info{
+    padding: 1rem;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--aot-light-color--);
+    /* border: 2px solid var(--aot-dark-color--); */
+    border-radius: 5px;
+}
+
+input{
+    width: 250px;
+}
+
+label{
+    text-align: start;
+    color: var(--aot-dark-color--);
+    font-weight: bold;
+}
+
+#btn{
+    background-color: var(--aot-color--);
+    color: #fff;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 1rem;
+    margin-left: 3rem;
+}
+
+#btn:hover{
+    cursor: pointer;
+    background-color: var(--aot-dark-color--);
+}
+
+#heading{
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+.section__title {
+    position: relative;
+    padding: 0.3em;
+    min-width: 100%;
+    margin-top: 1rem;
+    background: var(--aot-color--);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.logo {
+    position: absolute;
+    margin: 0;
+    padding: 0.55em;
+    width: 70px;
+    background-color: #e5e4e2;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
