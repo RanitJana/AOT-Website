@@ -20,15 +20,73 @@
     <link rel="stylesheet" href="./styles/homeStyle.css">
 
     <link rel="preload" href="./styles/odometer.css" as="style" onload="this.onload=null;this.rel='stylesheet';">
+
     <noscript>
         <link rel="stylesheet" href="./styles/odometer.css">
     </noscript>
+    <style>
+        #chatbot-icon {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 9999;
+            cursor: pointer;
+        }
+
+        /* Style for chatbot window */
+        #chatbot-window {
+            position: fixed;
+            bottom: 40px;
+            left: 10px;
+            width: 35%;
+            height: 90%;
+            background: rgb(229, 100, 100);
+            z-index: 9999;
+        }
+
+        /* Style for back icon */
+        #back-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            cursor: pointer;
+        }
+
+        /* Hidden class */
+        .hidden {
+            display: none;
+        }
+
+        @media only screen and (max-width:800px) {
+            #chatbot-window {
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    </style>
 
 
     <title>Home</title>
 </head>
 
 <body>
+    <!-- Chatbot Icon -->
+    <div id="chatbot-icon" class="icon">
+        <!-- <img src="chat-icon.png" alt="Chatbot" width="50" height="50"> -->
+        <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/chatbot.png" alt="chatbot" />
+    </div>
+
+    <!-- Chatbot Window -->
+    <div id="chatbot-window" class="hidden">
+        <div id="back-icon" class="icon">
+            <img src="./assets/images/icons8-cross-90.png" alt="Back" width="30" height="30">
+        </div>
+        <iframe src="https://www.chatbase.co/chatbot-iframe/xLQtWDMEIQ_iQX-J82sla" title="Chatbot" width="100%"
+            style="height: 100%;" frameborder="0">
+        </iframe>
+    </div>
     <div class="onOrOff">
         <img src="./assets/images/icons8-no-connection.gif" alt="./assets/images/icons8-no-connection.gif">
         <img src="./assets/images/icons8-online.gif" alt="./assets/images/icons8-online.gif">
@@ -839,7 +897,8 @@
                         G.T.Road (Adisaptagram), Aedconagar Hooghly, West Bengal Hooghly - 712121 West
                         Bengal,
                         India
-                        <img src="./assets/images/icons8-copy-96.png" alt="copy" decoding="async" class="copyAddress" loading="lazy" title="Copy text">
+                        <img src="./assets/images/icons8-copy-96.png" alt="copy" decoding="async" class="copyAddress"
+                            loading="lazy" title="Copy text">
                     </div>
                 </span>
             </P>
@@ -879,6 +938,26 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const chatbotIcon = document.getElementById('chatbot-icon');
+            const chatbotWindow = document.getElementById('chatbot-window');
+            const backIcon = document.getElementById('back-icon');
+
+            // Show the chatbot window when the chatbot icon is clicked
+            chatbotIcon.addEventListener('click', function () {
+                chatbotWindow.classList.remove('hidden');
+                chatbotIcon.classList.add('hidden');
+            });
+
+            // Hide the chatbot window when the back icon is clicked
+            backIcon.addEventListener('click', function () {
+                chatbotWindow.classList.add('hidden');
+                chatbotIcon.classList.remove('hidden');
+            });
+        });
+
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="./javaScripts/header.js" defer></script>
     <script src="./javaScripts/odometer.js" defer></script>
