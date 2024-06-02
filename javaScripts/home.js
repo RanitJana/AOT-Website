@@ -354,17 +354,31 @@ const announcementDataContainer = document.querySelector('.second .content .sub-
     async function () {
         let data = await fetch('../assets/announcementData/announcement.json');
         let dataJson = await data.json();
-        dataJson.forEach(item => {
+        dataJson.forEach((item, index) => {
             let boxes = document.createElement('div');
             boxes.classList.add('updateBox');
             console.log(boxes);
-            boxes.innerHTML =
-                ` 
+            if (index == dataJson.length - 1) {
+                boxes.innerHTML =
+                    ` 
                 <a href="${item.link}" target="_blank">
-                    <p>${item.paragraph}</p>
+                <p>${item.paragraph}
+                    <img src="./assets/video/new.gif" alt="Error" loading="lazy" decoding="async"></img>
+                </p>
                 </a>
+                
+                `;
+            }
+            else {
 
-            `;
+                boxes.innerHTML =
+                    ` 
+                <a href="${item.link}" target="_blank">
+                <p>${item.paragraph}</p>
+                </a>
+                
+                `;
+            }
             announcementDataContainer.prepend(boxes);
         })
     }
