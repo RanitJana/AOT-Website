@@ -83,16 +83,9 @@ async function getFutureEventData() {
         let newNode = document.createElement('div');
         newNode.classList.add('swiper-slide');
         newNode.innerHTML =
-            `
-            <div class="eventBox">
-                <div class="writingContent">
-                    <h3>${h3}</h3>
-                    <p>${span}</p>
-                </div>
-            </div>
-         `;
-        newNode.childNodes[1].style.background = `url('${srcImg}') center no-repeat`;
-        newNode.childNodes[1].style.backgroundSize = "cover";
+        `
+        <img src='${srcImg}' loading='lazy' class="eventBox" decoding="async" alt="Event">
+        `;
         secondSwiper.appendChild(newNode);
     })
 }
@@ -121,4 +114,17 @@ getFutureEventData().then(() => {
             window.open("./pages/event.html", '_blank');
         });
     })
+})
+
+//copy text
+let copyAddress = document.querySelector('.copyAddress');
+let addressText = document.querySelector('.addressText');
+copyAddress.addEventListener('click', () => {
+    let text = addressText.textContent;
+    navigator.clipboard.writeText(text);
+    copyAddress.style.scale = '0';
+    setTimeout(()=>{
+        copyAddress.setAttribute('src','../assets/images/icons8-double-tick-24.png');
+        copyAddress.style.scale = '1';
+    },100)
 })

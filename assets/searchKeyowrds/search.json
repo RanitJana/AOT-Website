@@ -22,10 +22,6 @@
             "link": "./department.html",
             "content": "Explore the various departments at our college, each offering specialized courses and programs. Learn about the faculty, courses offered, research areas, and departmental activities. Get insights into the department's vision, mission, and its contributions to academic excellence."
         },
-        "Department News Letter": {
-            "link": "./departmentNewsLetter.html",
-            "content": "The Department News Letter section provides access to newsletters published by the department. Stay updated with the latest news, events, research highlights, and achievements within the department. Explore articles written by faculty members, student contributors, and industry experts. Get insights into departmental activities, initiatives, and collaborations. Dive into engaging content that showcases the department's academic excellence, innovation, and contributions to the field.."
-        },
         "CSE": {
             "link": "./CSE.html",
             "content": "The Computer Science and Engineering department offers cutting-edge courses and research opportunities in computer science, software engineering, artificial intelligence, and related fields. It covers topics such as programming, algorithms, data structures, and emerging technologies."

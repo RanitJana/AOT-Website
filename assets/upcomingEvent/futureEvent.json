@@ -1,17 +1,14 @@
 [
     {
-        "eventName": "Party",
-        "shortInfo": "Enjoy your day",
-        "link": "2first.webp"
+        "link": "footballCompetition.jpg"
     },
     {
-        "eventName": "Random",
-        "shortInfo": "Random Competition",
-        "link": "2second.webp"
+        "link": "codingCompetition.jpg"
     },
     {
-        "eventName": "ARTISTIX",
-        "shortInfo": "Drawing Competition",
-        "link": "2third.webp"
+        "link":"quizCompetition.jpg"
+    },
+    {
+        "link":"music.jpg"
     }
 ]

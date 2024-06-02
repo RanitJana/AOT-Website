@@ -148,15 +148,8 @@ async function getFutureEventData() {
         newNode.classList.add('swiper-slide');
         newNode.innerHTML =
             `
-            <div class="eventBox">
-                <div class="writingContent">
-                    <h3>${h3}</h3>
-                    <p>${span}</p>
-                </div>
-            </div>
-         `;
-        newNode.childNodes[1].style.background = `url('${srcImg}') center no-repeat`;
-        newNode.childNodes[1].style.backgroundSize = "cover";
+            <img src='${srcImg}' loading='lazy' class="eventBox" decoding="async" alt="Event">
+            `;
         secondSwiper.appendChild(newNode);
     })
 }
@@ -176,8 +169,8 @@ getFutureEventData().then(() => {
                 prevEl: ".swiper-button-prev",
             },
             autoplay: {
-                delay: 2000,
-            },
+                delay: 3000,
+            }
         });
     })
     document.querySelectorAll('.eventBox').forEach(val => {
@@ -206,7 +199,7 @@ scrollToTop.addEventListener('click', e => {
 window.addEventListener('scroll', visibility)
 window.addEventListener('load', visibility)
 
-let numbers = document.querySelectorAll('.exp > .blackCover > .content > div > span');
+let numbers = document.querySelectorAll('.exp > .blackCover > .content > div > span:first-child');
 
 window.addEventListener('scroll', () => {
     if (elementIsVisibleInViewport(numbers[0], true) || elementIsVisibleInViewport(numbers[numbers.length - 1], true)) {
@@ -316,7 +309,7 @@ if (!sessionStorage.getItem('loadingPage')) {
             deny.classList.add('arrival');
             deny.classList.remove('leave');
             aside.style.display = 'block';
-            asideContent.innerHTML = `<img decoding="async" src="../assets/aside news${data.path}" alt="">`;
+            asideContent.innerHTML = `<img decoding="async" src="../assets/aside news${data.path}" alt="news">`;
         })
         .catch(err => console.log(err));
 }
@@ -349,8 +342,44 @@ copyAddress.addEventListener('click', () => {
     let text = addressText.textContent;
     navigator.clipboard.writeText(text);
     copyAddress.style.scale = '0';
-    setTimeout(()=>{
-        copyAddress.setAttribute('src','../assets/images/icons8-double-tick-24.png');
+    setTimeout(() => {
+        copyAddress.setAttribute('src', '../assets/images/icons8-double-tick-24.png');
         copyAddress.style.scale = '1';
-    },100)
+    }, 100)
 })
+
+//announcement section 
+const announcementDataContainer = document.querySelector('.second .content .sub-content');
+(
+    async function () {
+        let data = await fetch('../assets/announcementData/announcement.json');
+        let dataJson = await data.json();
+        dataJson.forEach((item, index) => {
+            let boxes = document.createElement('div');
+            boxes.classList.add('updateBox');
+            console.log(boxes);
+            if (index == dataJson.length - 1) {
+                boxes.innerHTML =
+                    ` 
+                <a href="${item.link}" target="_blank">
+                <p>${item.paragraph}
+                    <img src="./assets/video/new.gif" alt="Error" loading="lazy" decoding="async"></img>
+                </p>
+                </a>
+                
+                `;
+            }
+            else {
+
+                boxes.innerHTML =
+                    ` 
+                <a href="${item.link}" target="_blank">
+                <p>${item.paragraph}</p>
+                </a>
+                
+                `;
+            }
+            announcementDataContainer.prepend(boxes);
+        })
+    }
+)()
