@@ -10,9 +10,66 @@
     <link rel="stylesheet" href="../styles/headerStyle.css">
     <link rel="stylesheet" href="../styles/contactpage.css">
     <link rel="stylesheet" href="../styles/footerStyle.css">
+    <style>
+        #chatbot-icon {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 9999;
+            cursor: pointer;
+        }
+
+        /* Style for chatbot window */
+        #chatbot-window {
+            position: fixed;
+            bottom: 40px;
+            left: 10px;
+            width: 35%;
+            height: 90%;
+            background: rgb(229, 100, 100);
+            z-index: 9999;
+        }
+
+        /* Style for back icon */
+        #back-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            cursor: pointer;
+        }
+
+        /* Hidden class */
+        .hidden {
+            display: none;
+        }
+
+        @media only screen and (max-width:800px) {
+            #chatbot-window {
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Chatbot Icon -->
+    <div id="chatbot-icon" class="icon">
+        <!-- <img src="chat-icon.png" alt="Chatbot" width="50" height="50"> -->
+        <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/chatbot.png" alt="chatbot" />
+    </div>
+
+    <!-- Chatbot Window -->
+    <div id="chatbot-window" class="hidden">
+        <div id="back-icon" class="icon">
+            <img src="../assets/images/icons8-cross-90.png" alt="Back" width="30" height="30">
+        </div>
+        <iframe src="https://www.chatbase.co/chatbot-iframe/xLQtWDMEIQ_iQX-J82sla" title="Chatbot" width="100%"
+            style="height: 100%;" frameborder="0">
+        </iframe>
+    </div>
     <div class="onOrOff">
         <img src="../assets/images/icons8-no-connection.gif" alt="./assets/images/icons8-no-connection.gif">
         <img src="../assets/images/icons8-online.gif" alt="./assets/images/icons8-online.gif">
@@ -29,6 +86,7 @@
             </div>
         </div>
     </header>
+
     <main>
         <div class="back">
             <div class="backImg">
@@ -48,7 +106,8 @@
                             <span>Telephone :</span>
                         </strong>
                         <span class="content">+91-98310-21706/ 98310-21641
-                            <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async" title="Copy Text">
+                            <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                                title="Copy Text">
                         </span>
                     </p>
                     <p>
@@ -57,7 +116,8 @@
                             <span>Email :</span>
                         </strong>
                         <span class="content">admission@aot.edu.in
-                            <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async" title="Copy Text">
+                            <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                                title="Copy Text">
                         </span>
                     </p>
                 </div>
@@ -70,7 +130,8 @@
                             <span>Telephone :</span>
                         </strong>
                         <span class="content">+91-9830196317/ +91-9073360791
-                            <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async" title="Copy Text">
+                            <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                                title="Copy Text">
                         </span>
                     </p>
                     <p>
@@ -79,7 +140,8 @@
                             <span>Email :</span>
                         </strong>
                         <span class="content">academy@aot.edu.in/ principal@aot.edu.in
-                            <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async" title="Copy Text">
+                            <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                                title="Copy Text">
                         </span>
                     </p>
                 </div>
@@ -92,7 +154,8 @@
                             <span>Telephone :</span>
                         </strong>
                         <span class="content">+91-9073360791
-                            <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async" title="Copy Text">
+                            <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                                title="Copy Text">
                         </span>
                     </p>
                     <p>
@@ -101,7 +164,8 @@
                             <span>Email :</span>
                         </strong>
                         <span class="content"> oicexam@aot.edu.in
-                            <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async" title="Copy Text">
+                            <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                                title="Copy Text">
                         </span>
                     </p>
                 </div>
@@ -114,7 +178,8 @@
                             <span>Telephone :</span>
                         </strong>
                         <span class="content"> +91-9830161441
-                            <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async" title="Copy Text">
+                            <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                                title="Copy Text">
                         </span>
                     </p>
                     <p>
@@ -123,7 +188,8 @@
                             <span>Email :</span>
                         </strong>
                         <span class="content"> admin@aot.edu.in
-                            <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async" title="Copy Text">
+                            <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                                title="Copy Text">
                         </span>
                     </p>
                 </div>
@@ -136,7 +202,8 @@
                             <span>Telephone :</span>
                         </strong>
                         <span class="content">+91-9073360790
-                            <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async" title="Copy Text">
+                            <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                                title="Copy Text">
                         </span>
                     </p>
                     <p>
@@ -145,7 +212,8 @@
                             <span>Email :</span>
                         </strong>
                         <span class="content">accounts@aot.edu.in
-                            <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async" title="Copy Text">
+                            <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                                title="Copy Text">
                         </span>
                     </p>
                 </div>
@@ -158,7 +226,8 @@
                             <span>Telephone :</span>
                         </strong>
                         <span class="content">+91-9073360792
-                            <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async" title="Copy Text">
+                            <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                                title="Copy Text">
                         </span>
                     </p>
                     <p>
@@ -167,7 +236,8 @@
                             <span>Email :</span>
                         </strong>
                         <span class="content">training@aot.edu.in
-                            <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async" title="Copy Text">
+                            <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                                title="Copy Text">
                         </span>
                     </p>
                 </div>
@@ -183,7 +253,8 @@
                         </span>
                     </strong>
                     <span class="content">CA-150, SALT LAKE, SECTOR-1, KOLKATA-700 064
-                        <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async" title="Copy Text">
+                        <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                            title="Copy Text">
                     </span>
                 </P>
                 <P>
@@ -194,7 +265,8 @@
                         </span>
                     </strong>
                     <span class="content">+91-9830156906/ 9830156907
-                        <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async" title="Copy Text">
+                        <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                            title="Copy Text">
                     </span>
                 </P>
                 <P>
@@ -205,7 +277,8 @@
                         </span>
                     </strong>
                     <span class="content">placement@aot.edu.in, corporaterelations@aot.edu.in
-                        <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async" title="Copy Text">
+                        <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                            title="Copy Text">
                     </span>
                 </P>
             </div>
@@ -220,7 +293,8 @@
                     </strong>
                     <span class="content">G.T.ROAD (ADISAPTAGRAM), AEDCONAGAR
                         HOOGHLY-712121 WEST BENGAL, INDIA
-                        <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async" title="Copy Text"></span>
+                        <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                            title="Copy Text"></span>
                 </p>
                 <p>
                     <strong>
@@ -228,7 +302,8 @@
                         <span>Telephone : </span>
                     </strong>
                     <span class="content">+91-9007556186/ 9830210962
-                        <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async" title="Copy Text">
+                        <img src="../assets/images/icons8-copy-96.png" class="copyBtn" alt="copy" decoding="async"
+                            title="Copy Text">
                     </span>
                 </p>
             </div>
@@ -259,6 +334,27 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const chatbotIcon = document.getElementById('chatbot-icon');
+            const chatbotWindow = document.getElementById('chatbot-window');
+            const backIcon = document.getElementById('back-icon');
+
+            // Show the chatbot window when the chatbot icon is clicked
+            chatbotIcon.addEventListener('click', function () {
+                chatbotWindow.classList.remove('hidden');
+                chatbotIcon.classList.add('hidden');
+            });
+
+            // Hide the chatbot window when the back icon is clicked
+            backIcon.addEventListener('click', function () {
+                chatbotWindow.classList.add('hidden');
+                chatbotIcon.classList.remove('hidden');
+            });
+        });
+
+    </script>
     <script src="../javaScripts/contact.js"></script>
     <script src="../javaScripts/userOnOff.js"></script>
 </body>
