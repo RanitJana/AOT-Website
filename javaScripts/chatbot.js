@@ -42,8 +42,12 @@ document.addEventListener('DOMContentLoaded', function () {
             response: "For technical support, contact our IT helpdesk. To reset your password, use the 'Forgot Password' feature on the login page."
         },
         "faculty": {
-            keywords: ["professors", "professor", "teachers", "teacher", "instructors", "instructor", "sirs", "sir", "faculty", "faculties"],
+            keywords: ["professors", "professor", "teachers", "teacher", "instructors", "instructor", "sirs", "sir", "mam", "faculty", "faculties"],
             response: "we have established and reputed faculty members, you can visit <a href='../pages/faculty.html'>faculty page</a> for more information."
+        },
+        "greetings": {
+            keywords: ["hi", "hello"],
+            response: "Hello! How can I help you today?"
         }
     };
 
@@ -55,6 +59,9 @@ document.addEventListener('DOMContentLoaded', function () {
         chatbox.appendChild(messageDiv);
         chatbox.scrollTop = chatbox.scrollHeight;
     }
+
+    // Flag to track if the welcome message has been shown
+    let isWelcomeMessageShown = false;
 
     function showWelcomeMessage() {
         const welcomeMessage = "Welcome! How can I help you today? You can ask me about admissions, courses, fees, facilities, contact information, events, or support.";
@@ -87,6 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     clearButton.addEventListener('click', function () {
         chatbox.innerHTML = '';
+        isWelcomeMessageShown = false;
     });
 
     // Show the chatbot window when the chatbot icon is clicked
@@ -95,7 +103,10 @@ document.addEventListener('DOMContentLoaded', function () {
         chatbotIcon.classList.add('hidden');
         document.body.style.overflow = 'hidden';
         // Show the welcome message when the chatbot window is opened
-        showWelcomeMessage();
+        if (!isWelcomeMessageShown) {
+            showWelcomeMessage();
+        }
+        isWelcomeMessageShown = true;
     });
 
     // Hide the chatbot window when the back icon is clicked

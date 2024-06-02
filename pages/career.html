@@ -11,10 +11,81 @@
     <link rel="stylesheet" href="../styles/carree.css">
     <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../styles/bannerResponse.css">
+    <link rel="stylesheet" href="../styles/chatbot.css">
     <title>Career Services</title>
+    <style>
+        /* Style for chatbot icon */
+        #chatbot-icon {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            z-index: 9999;
+            cursor: pointer;
+        }
+
+        /* Style for chatbot window */
+        .chat-container {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 35%;
+            height: 85%;
+            background: white;
+            z-index: 9998;
+
+        }
+
+        /* Style for back icon */
+        #back-icon {
+            cursor: pointer;
+        }
+
+        /* Hidden class */
+        .hidden {
+            display: none;
+        }
+
+        @media only screen and (max-width:1000px) {
+            .chat-container {
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+            }
+
+            .chat-header,
+            button,
+            input {
+                border-radius: 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Chatbot Icon -->
+    <div id="chatbot-icon" class="icon">
+        <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/chatbot.png" alt="chatbot" />
+    </div>
+
+    <!-- Chatbot Window -->
+    <div class="chat-container hidden">
+        <div class="chat-header">
+            <div id="back-icon" class="icon">
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/multiply.png"
+                    alt="multiply" />
+            </div>
+            <h2>College Chatbot</h2>
+            <button id="clear-chat">Clear Chat</button>
+        </div>
+        <div id="chatbox" class="chatbox"></div>
+        <div class="input-container">
+            <input type="text" id="input" placeholder="Type a message...">
+            <button id="send">Send</button>
+        </div>
+    </div>
+    <!-- chatbot window end here -->
     <div class="onOrOff">
         <img src="../assets/images/icons8-no-connection.gif" alt="./assets/images/icons8-no-connection.gif">
         <img src="../assets/images/icons8-online.gif" alt="./assets/images/icons8-online.gif">
@@ -102,9 +173,14 @@
                     email your CV indicating the post applied for to career@aot.edu.in</p>
             </div>
             <div class="pdf-ch2">
-                <span><a href="../assets/pdf/Add_12_12_23.pdf" download="">Recruitment Advertisement May, 2023&nbsp;&nbsp;&nbsp;</a>(Publishedin The Telegraph on 05.05.23)</span>
-                <span><a href="../assets/pdf/AOT-Recruitment-Kajer-Bazar-AD-for-10.01-1.pdf" download="">Recruitment Advertisement January, 2023&nbsp;&nbsp;&nbsp;</a>(Published in Anandabazar Patrika on 10.01.23)</span>
-                <span><a href="../assets/pdf/Telegraph_05_05_23.pdf" download="">Recruitment Advertisement December,2023&nbsp;&nbsp;&nbsp;</a>(Published in Anandabazar Patrika & Telegraph on 12.12.23) </span>
+                <span><a href="../assets/pdf/Add_12_12_23.pdf" download="">Recruitment Advertisement May,
+                        2023&nbsp;&nbsp;&nbsp;</a>(Publishedin The Telegraph on 05.05.23)</span>
+                <span><a href="../assets/pdf/AOT-Recruitment-Kajer-Bazar-AD-for-10.01-1.pdf" download="">Recruitment
+                        Advertisement January, 2023&nbsp;&nbsp;&nbsp;</a>(Published in Anandabazar Patrika on
+                    10.01.23)</span>
+                <span><a href="../assets/pdf/Telegraph_05_05_23.pdf" download="">Recruitment Advertisement
+                        December,2023&nbsp;&nbsp;&nbsp;</a>(Published in Anandabazar Patrika & Telegraph on 12.12.23)
+                </span>
                 <a href="../assets/pdf/AOT-Application-Format-2021.pdf" download="">AOT Application Format</a>
             </div>
         </div>
@@ -134,6 +210,7 @@
             </div>
         </div>
     </footer>
+    <script src="../javaScripts/chatbot.js"></script>
     <script src="../javaScripts/userOnOff.js"></script>
 </body>
 
