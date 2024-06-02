@@ -143,7 +143,7 @@ async function getFutureEventData() {
     let res = await fetch('../assets/upcomingEvent/futureEvent.json');
     let data = await res.json();
     data.forEach((val) => {
-        let h3 = val.eventName, span = val.shortInfo, srcImg = "../assets/upcomingEvent/eventImage/" + val.link;
+        let srcImg = "../assets/upcomingEvent/eventImage/" + val.link;
         let newNode = document.createElement('div');
         newNode.classList.add('swiper-slide');
         newNode.innerHTML =

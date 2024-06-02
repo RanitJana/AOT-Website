@@ -79,11 +79,11 @@ async function getFutureEventData() {
     let res = await fetch('../assets/upcomingEvent/futureEvent.json');
     let data = await res.json();
     data.forEach((val) => {
-        let h3 = val.eventName, span = val.shortInfo, srcImg = "../assets/upcomingEvent/eventImage/" + val.link;
+        let srcImg = "../assets/upcomingEvent/eventImage/" + val.link;
         let newNode = document.createElement('div');
         newNode.classList.add('swiper-slide');
         newNode.innerHTML =
-        `
+            `
         <img src='${srcImg}' loading='lazy' class="eventBox" decoding="async" alt="Event">
         `;
         secondSwiper.appendChild(newNode);
@@ -111,7 +111,7 @@ getFutureEventData().then(() => {
     })
     document.querySelectorAll('.eventBox').forEach(val => {
         val.addEventListener('click', () => {
-            window.open("./pages/event.html", '_blank');
+            window.open("./event.html", '_blank');
         });
     })
 })
@@ -123,8 +123,43 @@ copyAddress.addEventListener('click', () => {
     let text = addressText.textContent;
     navigator.clipboard.writeText(text);
     copyAddress.style.scale = '0';
-    setTimeout(()=>{
-        copyAddress.setAttribute('src','../assets/images/icons8-double-tick-24.png');
+    setTimeout(() => {
+        copyAddress.setAttribute('src', '../assets/images/icons8-double-tick-24.png');
         copyAddress.style.scale = '1';
-    },100)
+    }, 100)
 })
+//announcement section 
+const announcementDataContainer = document.querySelector('.second .content .sub-content');
+(
+    async function () {
+        let data = await fetch('../assets/announcementData/announcement.json');
+        let dataJson = await data.json();
+        dataJson.forEach((item, index) => {
+            let boxes = document.createElement('div');
+            boxes.classList.add('updateBox');
+            console.log(boxes);
+            if (index == dataJson.length - 1) {
+                boxes.innerHTML =
+                    ` 
+                <a href="${item.link}" target="_blank">
+                <p>${item.paragraph}
+                    <img src="../assets/video/new.gif" alt="Error" loading="lazy" decoding="async" style="width: 2rem;"></img>
+                </p>
+                </a>
+                
+                `;
+            }
+            else {
+
+                boxes.innerHTML =
+                    ` 
+                <a href="${item.link}" target="_blank">
+                <p>${item.paragraph}</p>
+                </a>
+                
+                `;
+            }
+            announcementDataContainer.prepend(boxes);
+        })
+    }
+)()
