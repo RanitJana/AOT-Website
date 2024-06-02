@@ -8,50 +8,42 @@ document.addEventListener('DOMContentLoaded', function () {
     const chatbotWindow = document.querySelector('.chat-container');
     const backIcon = document.getElementById('back-icon');
 
-    // Show the chatbot window when the chatbot icon is clicked
-    chatbotIcon.addEventListener('click', function () {
-        chatbotWindow.classList.remove('hidden');
-        chatbotIcon.classList.add('hidden');
-        document.body.style.overflow = 'hidden';
-    });
 
-    // Hide the chatbot window when the back icon is clicked
-    backIcon.addEventListener('click', function () {
-        chatbotWindow.classList.add('hidden');
-        chatbotIcon.classList.remove('hidden');
-        document.body.style.overflow = '';
-    });
 
 
 
     const responses = {
         "admissions": {
-            "What are the admission requirements?": "The admission requirements are...",
-            "How can I apply?": "You can apply by..."
+            keywords: ["admission", "apply", "enroll"],
+            response: "For admissions, you can find all requirements and application procedures on our admissions page."
         },
         "courses": {
-            "What programs are offered?": "We offer programs in...",
-            "How do I register for classes?": "You can register for classes by..."
+            keywords: ["programs", "courses", "register", "classes"],
+            response: "We offer a variety of programs. You can register for classes through the student portal."
         },
         "fees": {
-            "What is the tuition fee?": "The tuition fee is...",
-            "Are there any scholarships available?": "Yes, we offer scholarships..."
+            keywords: ["tuition", "fee", "scholarships", "scholarship"],
+            response: "The tuition fees vary by program. We also offer scholarships for eligible students."
         },
         "facilities": {
-            "Where is the library located?": "The library is located at...",
-            "What are the dining options on campus?": "The dining options are..."
+            keywords: ["library", "dining", "cafeteria", "gym"],
+            response: "Our facilities include a library, multiple dining options, and a fully equipped gym."
         },
         "contact": {
-            "How can I contact the admissions office?": "You can contact the admissions office at...",
-            "What is the phone number for the registrar's office?": "The phone number is..."
+            keywords: ["contact", "phone", "email"],
+            response: "You can contact us through our main office or via email at contact@university.edu."
         },
         "events": {
-            "What events are happening this month?": "The events happening this month are...",
-            "Where can I find the latest news?": "You can find the latest news at..."
+            keywords: ["events", "event", "news", "happening"],
+            response: "Upcoming events are listed on our events page. Check out the latest news section for more updates."
         },
         "support": {
-            "How do I reset my password?": "You can reset your password by...",
-            "Who do I contact for technical support?": "Contact technical support at..."
+            keywords: ["support", "help", "technical", "reset", "password"],
+            response: "For technical support, contact our IT helpdesk. To reset your password, use the 'Forgot Password' feature on the login page."
+        },
+        "faculty": {
+            keywords: ["professors", "professor", "teachers", "teacher", "instructors", "instructor", "sirs", "sir", "faculty", "faculties"],
+            response: "we have established and reputed faculty members, you can visit <a href='../pages/faculty.html'>faculty page</a> for more information."
         }
     };
 
@@ -63,6 +55,11 @@ document.addEventListener('DOMContentLoaded', function () {
         chatbox.scrollTop = chatbox.scrollHeight;
     }
 
+    function showWelcomeMessage() {
+        const welcomeMessage = "Welcome! How can I help you today? You can ask me about admissions, courses, fees, facilities, contact information, events, or support.";
+        appendMessage(welcomeMessage, false);
+    }
+
     sendButton.addEventListener('click', function () {
         const userInput = inputField.value.trim().toLowerCase();
         if (userInput === '') return;
@@ -72,10 +69,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
         let response = "Sorry, I didn't understand that. Can you ask differently?";
         for (const category in responses) {
-            for (const question in responses[category]) {
-                if (userInput.includes(question.toLowerCase())) {
-                    response = responses[category][question];
+            const { keywords, response: categoryResponse } = responses[category];
+            for (const keyword of keywords) {
+                if (userInput.includes(keyword)) {
+                    response = categoryResponse;
+                    break;
                 }
+            }
+            if (response !== "Sorry, I didn't understand that. Can you ask differently?") {
+                break;
             }
         }
 
@@ -84,5 +86,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
     clearButton.addEventListener('click', function () {
         chatbox.innerHTML = '';
+    });
+
+    // Show the chatbot window when the chatbot icon is clicked
+    chatbotIcon.addEventListener('click', function () {
+        chatbotWindow.classList.remove('hidden');
+        chatbotIcon.classList.add('hidden');
+        document.body.style.overflow = 'hidden';
+        // Show the welcome message when the chatbot window is opened
+        showWelcomeMessage();
+    });
+
+    // Hide the chatbot window when the back icon is clicked
+    backIcon.addEventListener('click', function () {
+        chatbotWindow.classList.add('hidden');
+        chatbotIcon.classList.remove('hidden');
+        document.body.style.overflow = '';
     });
 });
