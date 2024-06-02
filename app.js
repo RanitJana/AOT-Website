@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path')
 const app = express();
 
 const achivement = require('./routes/achivement.route.js');
@@ -25,7 +26,7 @@ const studentPortal = require('./routes/studentPortal.route.js');
 const search = require('./routes/search.route.js');
 
 app
-    .use(express.static('./public'))
+    .use(express.static(path.join(__dirname, 'public')))
     .set('view engine', 'ejs')
     .use('/achivement', achivement)
     .use('/career', career)
