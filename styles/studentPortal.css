@@ -1,0 +1,27 @@
+@import url('../styles/basicStyles.css');
+/* @import url('../styles/headerStyle.css'); */
+/* @import url('../styles/footerStyle.css'); */
+
+form{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 3px solid  black; */
+    gap: 0.5rem;
+    /* background-color: #bbb; */
+}
+
+input{
+    width: 300px;
+}
+
+label{
+    text-align: start;
+    color: var(--aot-dark-color--);
+    font-weight: bold;
+    /* color: blue; */
+}
+
