@@ -25,17 +25,18 @@ document.addEventListener('DOMContentLoaded', function () {
             keywords: ["tuition", "fee", "scholarships", "scholarship"],
             response: "The tuition fees vary by program. We also offer scholarships for eligible students."
         },
-        "facilities": {
-            keywords: ["library", "dining", "cafeteria", "gym"],
-            response: "Our facilities include a library, multiple dining options, and a fully equipped gym."
+        "facility": {
+            "keywords": ["facility", "facilities", "infrastructure", "campus", "amenities"],
+            "response": "The Academy of Technology offers a range of facilities including e-Classrooms, smart classrooms, seminar halls, extensive computing facilities, a canteen, 24/7 power backup, sports facilities, a plastic-free green campus, and designated no smoking zones. For more details on campus facilities, please visit the <a href='../pages/facility.html' style='text-decoration:none;color:red;'>facilities</a> page."
         },
         "contact": {
-            keywords: ["contact", "phone", "email"],
-            response: "You can contact us through our main office or via email at contact@university.edu."
+            keywords: ["contact", "phone", "email", "Telephone", "contacts"],
+            response: "You can contact the Academy of Technology at +91-98310-21706/ 98310-21641 or via email at admission@aot.edu.in. <span style='display:block;'>For specific Department related contacts you may visit <a href='../pages/contact.html' style='text-decoration:none;color:red;'>contact</a> page.</span>"
+
         },
         "events": {
-            keywords: ["events", "event", "news", "happening"],
-            response: "Upcoming events are listed on our events page. Check out the latest news section for more updates."
+            keywords: ["events", "event", "news", "happening", "schedule", "activities", "activity", "bookings"],
+            response: "Here, you'll find a variety of events including Artistix, Football matches, Robo-War, Techfiesta, Maze Runner, and Davewrap. Each event is held at Grand Central Terminal in Adisaptagram, Hooghly. You can find event details such as time, date, and location on this page. To book your spot, please click on the 'Book it' button below each event. For more information and bookings, visit our <a href='../pages/event.html' style='text-decoration:none;color:red;'>Event page</a>."
         },
         "support": {
             keywords: ["support", "help", "technical", "reset", "password"],
@@ -43,11 +44,19 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         "faculty": {
             keywords: ["professors", "professor", "teachers", "teacher", "instructors", "instructor", "sirs", "sir", "mam", "faculty", "faculties"],
-            response: "we have established and reputed faculty members, you can visit <a href='../pages/faculty.html'>faculty page</a> for more information."
+            "response": "The Academy of Technology has a distinguished faculty led by Prof. (Dr.) Dilip Bhattacharya. The team consists of 111 qualified members specializing in various cutting-edge technologies. For more information about our faculty members and their qualifications, please visit the <a href='../pages/faculty.html' style='text-decoration:none;color:red;'>faculty</a> page."
         },
         "greetings": {
             keywords: ["hi", "hello"],
             response: "Hello! How can I help you today?"
+        },
+        "curriculum": {
+            "keywords": ["curriculum", "syllabus"],
+            "response": "For all the course curriculum at the Academy of Technology is structured over four years, covering a wide range of subjects including English, Mathematics, Computer Fundamentals, Semiconductor Devices, Managerial Economics, C programming, Data Structures, Operating Systems, Database Systems, Artificial Intelligence, Java Programming, Mobile Computing, and more. For a detailed curriculum, please refer to the <a href='../pages/curriculam.html' style='text-decoration:none;color:red;'>curriculum</a>."
+        },
+        "placement": {
+            "keywords": ["placement", "recruitment", "campus interview", "companies", "job offers", "opportunity", "opportunities"],
+            "response": "The Academy of Technology has a strong placement record with consistent performance. Notable companies like TCS, Wipro, and Tech Mahindra regularly recruit from AOT. In 2023, students achieved 147.36% placement offers till now. For more details, please visit the <a href='../pages/placement.html' style='text-decoration:none;color:red;'>placement</a> page."
         }
     };
 
