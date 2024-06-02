@@ -5,7 +5,7 @@ const app = express();
 
 app
     .set('view engine', 'ejs')
-    .use(express.static(path.join(__dirname, 'public')))
+    .use(express.static('./public'));
 
 
 const achivement = require('./routes/achivement.route.js');
