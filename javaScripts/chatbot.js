@@ -12,12 +12,14 @@ document.addEventListener('DOMContentLoaded', function () {
     chatbotIcon.addEventListener('click', function () {
         chatbotWindow.classList.remove('hidden');
         chatbotIcon.classList.add('hidden');
+        document.body.style.overflow = 'hidden';
     });
 
     // Hide the chatbot window when the back icon is clicked
     backIcon.addEventListener('click', function () {
         chatbotWindow.classList.add('hidden');
         chatbotIcon.classList.remove('hidden');
+        document.body.style.overflow = '';
     });
 
 
