@@ -342,8 +342,30 @@ copyAddress.addEventListener('click', () => {
     let text = addressText.textContent;
     navigator.clipboard.writeText(text);
     copyAddress.style.scale = '0';
-    setTimeout(()=>{
-        copyAddress.setAttribute('src','../assets/images/icons8-double-tick-24.png');
+    setTimeout(() => {
+        copyAddress.setAttribute('src', '../assets/images/icons8-double-tick-24.png');
         copyAddress.style.scale = '1';
-    },100)
+    }, 100)
 })
+
+//announcement section 
+const announcementDataContainer = document.querySelector('.second .content .sub-content');
+(
+    async function () {
+        let data = await fetch('../assets/announcementData/announcement.json');
+        let dataJson = await data.json();
+        dataJson.forEach(item => {
+            let boxes = document.createElement('div');
+            boxes.classList.add('updateBox');
+            console.log(boxes);
+            boxes.innerHTML =
+                ` 
+                <a href="${item.link}" target="_blank">
+                    <p>${item.paragraph}</p>
+                </a>
+
+            `;
+            announcementDataContainer.prepend(boxes);
+        })
+    }
+)()
