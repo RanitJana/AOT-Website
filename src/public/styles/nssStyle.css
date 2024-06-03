@@ -1,0 +1,125 @@
+@import url(basicStyles.css);
+
+
+.nss-intro-image{
+    max-height: 32rem;
+    margin: 1em 0.5em;
+}
+.nssSwiper {
+    height: 100%;
+    
+}
+
+.swiper-slide img{
+    width: 100%;
+    height: 32rem;
+    object-fit: cover; 
+}
+
+.secondBtn{
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    font-size: 1rem;
+}
+.secondBtn::after {
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+@media only screen and (max-width:750px) {
+    .swiper-slide img{
+        height: 20rem;
+    }
+}
+
+.nss-quote{
+    margin: 0.5em;
+    background-color: var(--aot-light-color--);
+    box-shadow: var(--normal-shadow--);
+    padding: 1em;
+    text-align: center;
+}
+
+.nss-quote h2{
+    font-size: 2em;
+    text-shadow:  3px 4px 6px #8f8f8f;
+}
+.nss-quote p{
+    font-size: 1em;
+}
+
+
+.nss-pic{
+    margin: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nss-pic-box{
+    min-width: 18em;
+    width: 20em;
+    margin: 0.5em;
+    padding: 0.6em;
+    background-color: var(--aot-light-color--);
+    box-shadow: var(--normal-shadow--);
+    text-align: center;
+}
+.nss-pic-box img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.nss-coordinator{
+    margin: 0.5em;
+    background-color: var(--aot-light-color--);
+    box-shadow: var(--normal-shadow--);
+    padding: 0.8em;
+    position: relative;
+    justify-content: center;
+}
+
+.coordinator-container{
+    margin: 1em auto;
+}
+
+.coordinator{
+    min-width: 40%;
+    padding: 0px 0.3em;
+}
+
+.student-coordinator-box{
+    display: flex;
+}
+
+@media only screen and (max-width:850px) {
+    .student-coordinator-box{
+        display: block;
+    }
+    .coordinator{
+        margin: 0.5em auto;
+    }
+}
+
+.nss-activity-list{
+    margin: 0.5em;
+    background-color: var(--aot-light-color--);
+    box-shadow: var(--normal-shadow--);
+    padding: 0.8em;
+}
+.nss-activity-list ul{
+    padding: 1em;
+    list-style-type: circle;
+}
+
+@media only screen and (max-width:630px) {
+    
+}

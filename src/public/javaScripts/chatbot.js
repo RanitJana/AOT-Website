@@ -81,19 +81,65 @@ document.addEventListener('DOMContentLoaded', function () {
         // messageDiv.textContent = content;
         if (!isUser) {
 
-            messageDiv.innerHTML = "<img src='../assets/video/loading.gif' style='width:50px;height:35px;object-fit:cover;'>";
+            messageDiv.innerHTML = "<img src='/assets/video/loading.gif' style='width:50px;height:35px;object-fit:cover;'>";
             chatbox.appendChild(messageDiv);
+            let i = 0;
+            let speed = 20;
             setTimeout(() => {
-                messageDiv.innerHTML = content;
-                chatbox.scrollTop = chatbox.scrollHeight;
+
+                messageDiv.innerHTML = "";
+                typeWriter();
+
             }, 1500);
+
+            // function typeWriter() {
+            //     if (i < content.length) {
+            //         messageDiv.innerHTML += content.charAt(i);
+            //         i++;
+            //         setTimeout(typeWriter, speed);
+            //         chatbox.scrollTop = chatbox.scrollHeight;
+            //     }
+
+
+            // }
+            function typeWriter() {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(content, 'text/html');
+                const nodes = Array.from(doc.body.childNodes);
+                let nodeIndex = 0;
+                let charIndex = 0;
+
+                function typeNode() {
+                    if (nodeIndex < nodes.length) {
+                        const currentNode = nodes[nodeIndex];
+                        if (currentNode.nodeType === Node.TEXT_NODE) {
+                            if (charIndex < currentNode.textContent.length) {
+                                messageDiv.innerHTML += currentNode.textContent.charAt(charIndex);
+                                charIndex++;
+                                setTimeout(typeNode, speed);
+                            } else {
+                                charIndex = 0;
+                                nodeIndex++;
+                                setTimeout(typeNode, speed);
+                            }
+                        } else {
+                            messageDiv.appendChild(currentNode.cloneNode(true));
+                            nodeIndex++;
+                            setTimeout(typeNode, speed);
+                        }
+                        chatbox.scrollTop = chatbox.scrollHeight; // Scroll to the bottom after adding a character
+                    }
+                }
+
+                typeNode();
+            }
         }
         else {
             messageDiv.innerHTML = content;
             chatbox.appendChild(messageDiv);
             chatbox.scrollTop = chatbox.scrollHeight;
         }
-        chatbox.scrollTop = chatbox.scrollHeight;
+        // chatbox.scrollTop = chatbox.scrollHeight;
 
     }
 
@@ -114,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function () {
         inputField.value = '';
         console.log("user input:", userInput);
         let match = false;
-        let response = "Sorry, I didn't understand that. Can you ask differently?";
+        let response = "Sorry, I didn't understand that. Can you ask differently?🤔";
         // let response = responses.unknown.response;
         for (const category in responses) {
             const entry = responses[category];
@@ -157,6 +203,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Hide the chatbot window when the back icon is clicked
+
     backIcon.addEventListener('click', function () {
         chatbotWindow.classList.add('hidden');
         chatbotIcon.classList.remove('hidden');
