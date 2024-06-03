@@ -4,7 +4,7 @@
   "description": "Welcome to the official website of **Academy of Technology College**! Our website provides essential information about our college, academic programs, campus life, and more. Whether you're a prospective student, current student, or alumni, you'll find valuable resources here.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node ./src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ranit Jana",
