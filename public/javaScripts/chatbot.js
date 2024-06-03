@@ -203,6 +203,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Hide the chatbot window when the back icon is clicked
+
     backIcon.addEventListener('click', function () {
         chatbotWindow.classList.add('hidden');
         chatbotIcon.classList.remove('hidden');
