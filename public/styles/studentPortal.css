@@ -1,15 +1,21 @@
 @import url('../styles/basicStyles.css');
 
 form{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    gap: 1.5rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--aot-light-color--);
+    /* display: grid; */
+    /* grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); */
+    gap: 1rem;
 }
 
 .info{
@@ -19,8 +25,9 @@ form{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--aot-light-color--);
+    background-color: #fff;
     /* border: 2px solid var(--aot-dark-color--); */
+
     border-radius: 5px;
 }
 
@@ -43,6 +50,7 @@ label{
     border: none;
     margin-bottom: 1rem;
     margin-left: 3rem;
+    right: 30px;
 }
 
 #btn:hover{
@@ -79,4 +87,27 @@ label{
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+@media (min-width:700px){
+    .info{
+        width: 600px;
+        padding: 1rem;
+        margin: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-items: flex-start;
+        /* background-color: var(--aot-light-color--); */
+        /* border: 2px solid var(--aot-dark-color--); */
+        border-radius: 5px;
+    }
+    label{
+        width: 300px;
+        /* height: 50px; */
+    }
+    form{
+        width: 650px;
+    }
 }
