@@ -29,6 +29,7 @@ const staff = require('./routes/staff.route.js');
 const StudentActivity = require('./routes/studentActivity.route.js');
 const studentPortal = require('./routes/studentPortal.route.js');
 const search = require('./routes/search.route.js');
+const nss = require('./routes/nss.route.js');
 
 
 app
@@ -54,6 +55,7 @@ app
     .use('/staff', staff)
     .use('/StudentActivity', StudentActivity)
     .use('/studentPortal', studentPortal)
+    .use('/nss', nss)
 
 app
     .get('/', (req, res) => {
