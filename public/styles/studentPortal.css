@@ -35,10 +35,6 @@ input{
     width: 250px;
 }
 
-.frist{
-    margin-bottom: 10rem;
-}
-
 label{
     text-align: start;
     color: var(--aot-dark-color--);
