@@ -15,6 +15,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     const responses = {
+        "placement": {
+            keywords: ["placement", "recruitment", "campus interview", "companies", "job offers", "jobs", "job", "opportunity", "opportunities"],
+            response: "The Academy of Technology has a strong placement record with consistent performance. Notable companies like TCS, Wipro, and Tech Mahindra regularly recruit from AOT. In 2023, students achieved 147.36% placement offers till now. For more details, please visit the <a href='/pages/placement.html' style='text-decoration:none;color:red;'>placement</a> page."
+        },
         "college": {
             keywords: ["college", "about the college", "aot", "academy of technology"],
             response: "The Academy of Technology (AOT) is a prestigious institution in Adisaptagram, West Bengal, offering comprehensive engineering programs with a focus on academic excellence, career development, vibrant campus life, and modern facilities. visit <a href='/pages/LifeAOT.html' style='text-decoration:none;color:red;'>Life at AOT</a> page."
@@ -27,13 +31,14 @@ document.addEventListener('DOMContentLoaded', function () {
             keywords: ["programs", "courses", "register", "classes"],
             response: "We offer a variety of programs. You can register for classes through the student portal."
         },
-        "department": {
-            keywords: ["department", "departments", "stream", "streams", "cse", "ece", "eee", "csbs", "me", "mechanical"],
-            response: "We offer veriety of courses. head to the <a href='/pages/department.html' style='text-decoration:none;color:red;'>Department </a> page for more information."
-        },
+
         "fees": {
-            keywords: ["tuition", "fee", "scholarships", "scholarship"],
-            response: "The tuition fees vary by program. We also offer scholarships for eligible students."
+            keywords: ["tuition", "fee", "fees"],
+            response: "The tuition fees vary by which program you choose. Contact college for more information. <a href='/pages/contact.html' style='text-decoration:none;color:red;'>contact</a>."
+        },
+        "scholarships": {
+            keywords: ["scholarships", "scholarship"],
+            response: "We offer scholarships like Aikyashree,Swami Vivekananda MeritCum Means (SVMCM) for all eligible students."
         },
         "facility": {
             "keywords": ["facility", "facilities", "infrastructure", "campus", "amenities"],
@@ -58,15 +63,16 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         "greetings": {
             keywords: ["hi", "hello", "hey"],
-            response: "<p>Hello! How can I help you today? &#128522;</p>"
+            response: "Hello! How can I help you today? &#128522;"
         },
         "curriculum": {
             keywords: ["curriculum", "syllabus"],
             response: "For all the course curriculum at the Academy of Technology is structured over four years, covering a wide range of subjects including English, Mathematics, Computer Fundamentals, Semiconductor Devices, Managerial Economics, C programming, Data Structures, Operating Systems, Database Systems, Artificial Intelligence, Java Programming, Mobile Computing, and more. For a detailed curriculum, please refer to the <a href='/pages/curriculam.html' style='text-decoration:none;color:red;'>curriculum</a>."
         },
-        "placement": {
-            keywords: ["placement", "recruitment", "campus interview", "companies", "job offers", "jobs", "job", "opportunity", "opportunities"],
-            response: "The Academy of Technology has a strong placement record with consistent performance. Notable companies like TCS, Wipro, and Tech Mahindra regularly recruit from AOT. In 2023, students achieved 147.36% placement offers till now. For more details, please visit the <a href='/pages/placement.html' style='text-decoration:none;color:red;'>placement</a> page."
+
+        "department": {
+            keywords: ["department", "departments", "stream", "streams", "cse", "ece", "eee", "csbs", "mechanical"],
+            response: "We offer veriety of courses. head to the <a href='/pages/department.html' style='text-decoration:none;color:red;'>Department </a> page for more information."
         },
         "career_page": {
             keywords: ["career"],
@@ -77,9 +83,6 @@ document.addEventListener('DOMContentLoaded', function () {
             response: "G.T.Road (Adisaptagram), Aedconagar Hooghly, West Bengal Hooghly - 712121 West Bengal, India <a href='/pages/index.html#location' style='text-decoration:none;color:red;'>map.</a>"
         }
 
-        // "unknown": {
-        //     response: "Sorry, I didn't understand that. Can you ask differently?"
-        // }
     };
 
     function appendMessage(content, isUser = true) {
@@ -87,11 +90,11 @@ document.addEventListener('DOMContentLoaded', function () {
         messageDiv.classList.add(isUser ? 'user-message' : 'bot-message');
         // messageDiv.textContent = content;
         if (!isUser) {
-
-            messageDiv.innerHTML = "<img src='/assets/video/loading.gif' style='width:50px;height:35px;object-fit:cover;'>";
+            content = "🤖 : " + content;
+            messageDiv.innerHTML = "<img src='/assets/video/loadingnew.gif' style='width:50px;height:35px;object-fit:cover;'>";
             chatbox.appendChild(messageDiv);
             let i = 0;
-            let speed = 20;
+            let speed = 15;
             setTimeout(() => {
 
                 messageDiv.innerHTML = "";
@@ -154,11 +157,23 @@ document.addEventListener('DOMContentLoaded', function () {
     let isWelcomeMessageShown = false;
 
     function showWelcomeMessage() {
-        const welcomeMessage = "<p>Welcome! How can I help you today? &#128522;</p>";
+        const welcomeMessage = "Welcome! How can I help you today? &#128522;";
         appendMessage(welcomeMessage, false);
     }
 
+    inputField.addEventListener('keypress', function (event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Prevents the default action of the Enter key (like form submission)
+            processInput();
+        }
+    });
+
     sendButton.addEventListener('click', function () {
+        processInput();
+    });
+
+    //separate function
+    function processInput() {
         const originalInput = inputField.value;
         const userInput = inputField.value.trim().toLowerCase();
         if (userInput === '') return;
@@ -190,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         // console.log("response to be displayed:", response);
         appendMessage(response, false);
-    });
+    }
 
     clearButton.addEventListener('click', function () {
         chatbox.innerHTML = '';
