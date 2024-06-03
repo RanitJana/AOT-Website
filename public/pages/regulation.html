@@ -14,12 +14,39 @@
     <title>Rules and Regulations</title>
     <style>
         /* Style for chatbot icon */
+        @keyframes rotate-left-right {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(-30deg);
+            }
+
+            50% {
+                transform: rotate(30deg);
+            }
+
+            75% {
+                transform: rotate(-30deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
         #chatbot-icon {
             position: fixed;
             bottom: 80px;
-            right: 20px;
-            z-index: 9999;
+            right: 33px;
+            z-index: 9998;
             cursor: pointer;
+            transition: transform 0.1s;
+        }
+
+        #chatbot-icon:hover {
+            animation: rotate-left-right 1s ease-in-out;
         }
 
         /* Style for chatbot window */
@@ -30,7 +57,7 @@
             width: 35%;
             height: 85%;
             background: white;
-            z-index: 9998;
+            z-index: 9997;
 
         }
 
@@ -76,13 +103,16 @@
                     alt="multiply" />
             </div>
             <h2>College Chatbot</h2>
-            <button id="clear-chat">Clear Chat</button>
+            <!-- <button id="clear-chat">Clear Chat</button> -->
+            <img id="clear-chat" width="35" height="35" src="https://img.icons8.com/ultraviolet/40/refresh--v1.png"
+                alt="refresh--v1" />
         </div>
         <div id="chatbox" class="chatbox"></div>
         <div class="input-container">
             <input type="text" id="input" placeholder="Type a message...">
             <button id="send">Send</button>
         </div>
+
     </div>
     <!-- chatbot window end here -->
     <div class="onOrOff">
