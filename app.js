@@ -4,7 +4,7 @@ const app = express();
 
 
 app
-    .set('view engine', 'ejs')
+    // .set('view engine', 'ejs')
     .use(express.static(path.join(__dirname, 'public')))
 
 const achivement = require('./routes/achivement.route.js');
@@ -57,7 +57,7 @@ app
 
 app
     .get('/', (req, res) => {
-        res.render('index');
+        res.sendFile(path.join(__dirname, 'public/pages', 'index.html'));
     })
 
 module.exports = app;

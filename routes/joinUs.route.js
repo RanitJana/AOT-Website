@@ -1,9 +1,10 @@
 const express = require('express');
 const route = express.Router();
+const path = require('path');
 
 route
     .get('/', (req, res) => {
-        res.render('JoinUs');
+        res.sendFile(path.join(__dirname, '../public/pages', 'JoinUs.html'));
     })
 
 module.exports = route;
