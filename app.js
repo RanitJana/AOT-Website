@@ -3,9 +3,7 @@ const path = require('path')
 const app = express();
 
 
-app
-    // .set('view engine', 'ejs')
-    .use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')))
 
 const achivement = require('./routes/achivement.route.js');
 const career = require('./routes/career.route.js');
@@ -29,6 +27,7 @@ const staff = require('./routes/staff.route.js');
 const StudentActivity = require('./routes/studentActivity.route.js');
 const studentPortal = require('./routes/studentPortal.route.js');
 const search = require('./routes/search.route.js');
+const nss = require('./routes/nss.route.js');
 
 
 app
@@ -54,6 +53,7 @@ app
     .use('/staff', staff)
     .use('/StudentActivity', StudentActivity)
     .use('/studentPortal', studentPortal)
+    .use('/nss', nss)
 
 app
     .get('/', (req, res) => {
