@@ -13,7 +13,6 @@ main{
     position: relative;
     padding: 0.3em;
     min-width: 100%;
-    margin-top: 1rem;
     background: var(--aot-color--);
     color: #fff;
     display: flex;
