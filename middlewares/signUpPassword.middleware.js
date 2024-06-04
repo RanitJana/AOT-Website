@@ -14,29 +14,29 @@ const checkValidPassword = (req, res, next) => {
     next();
 }
 
-const matchPassword = (req, res, next) => {
-    // console.log(req.body);
+const matchPassword = async (req, res, next) => {
+    console.log(req.body);
+    if (req.body.formType == 'default') {
 
-    (
-        async () => {
-            try {
-                const roll = req.body["roll"];
-                const password = req.body["password"];
-                const data = await userSchema.findOne({ roll: `${roll}` });
-                const match = await bcrypt.compare(password, data.password);
-                if (match && data) {
-                    res.cookie.username = data.fullName;
-                    res.cookie.roll = data['roll'];
-                    return next();
-                }
-                else return res.redirect('/studentPortal/studentlogin');
+        try {
+            const roll = req.body["roll"];
+            const password = req.body["password"];
+            const data = await userSchema.findOne({ roll: `${roll}` });
+            const match = await bcrypt.compare(password, data.password);
+            if (match && data) {
+                console.log(data);
+                res.cookie.username = data.fullName;
+                res.cookie.roll = data['roll'];
+                return next();
             }
-            catch (err) {
-            }
-            return res.sendFile(path.join(__dirname, '../public/pages', 'studentDetails.html'));
-            // next();
         }
-    )()
+        catch (err) {
+        }
+        return res.redirect('/studentPortal/studentlogin');
+    }
+    else
+        return res.sendFile(path.join(__dirname, '../public/pages', 'studentDetails.html'));
+
 }
 
 module.exports = {
