@@ -127,9 +127,9 @@
         <header>
             <h1>Student Portal</h1>
         </header>
-        <section>
+        <!-- <section>
             <p></p>
-        </section>
+        </section> -->
         <div class="form-container">
             <h2>Submit Your Details</h2>
             <form id="student-form" action="/studentPortal/studentsignup" method="post">
@@ -190,30 +190,30 @@
         </div>
     </div>
     <script>
-        let target = document.querySelector('section p');
-        let parentTarget = document.querySelector('section');
-        let password = document.querySelector('#password'), confirmPass = document.querySelector('#confirm-password');
-        let submit = document.querySelector('#submit');
-        submit.addEventListener('click', e => {
-            if (password.value.length < 8) {
-                sessionStorage.setItem("passwordMismatch", "Password must contain at-least 8 characters.");
-            }
-            else if (password.value.trim() !== confirmPass.value.trim()) {
-                sessionStorage.setItem("passwordMismatch", "Password didn't match. Please re-enter password.");
-            }
-            else {
-                sessionStorage.setItem("passwordMismatch", "Sign up successful! Please log in now.");
-            }
-        })
-        if (sessionStorage.getItem('passwordMismatch')) {
-            target.innerHTML = sessionStorage.getItem('passwordMismatch');
-            parentTarget.style.display = 'grid';
-            sessionStorage.removeItem('passwordMismatch');
-        }
-        else {
-            target.innerHTML = ""
-            parentTarget.style.display = 'none';
-        }
+        // let target = document.querySelector('section p');
+        // let parentTarget = document.querySelector('section');
+        // let password = document.querySelector('#password'), confirmPass = document.querySelector('#confirm-password');
+        // let submit = document.querySelector('#submit');
+        // submit.addEventListener('click', e => {
+        //     if (password.value.length < 8) {
+        //         sessionStorage.setItem("passwordMismatch", "Password must contain at-least 8 characters.");
+        //     }
+        //     else if (password.value.trim() !== confirmPass.value.trim()) {
+        //         sessionStorage.setItem("passwordMismatch", "Password didn't match. Please re-enter password.");
+        //     }
+        //     else {
+        //         sessionStorage.setItem("passwordMismatch", "Sign up successful! Please log in now.");
+        //     }
+        // })
+        // if (sessionStorage.getItem('passwordMismatch')) {
+        //     target.innerHTML = sessionStorage.getItem('passwordMismatch');
+        //     parentTarget.style.display = 'grid';
+        //     sessionStorage.removeItem('passwordMismatch');
+        // }
+        // else {
+        //     target.innerHTML = ""
+        //     parentTarget.style.display = 'none';
+        // }
     </script>
 </body>
 

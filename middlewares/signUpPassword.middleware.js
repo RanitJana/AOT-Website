@@ -21,15 +21,15 @@ const matchPassword = (req, res, next) => {
             try {
                 const data = await userSchema.findOne({ roll: `${roll}` });
                 const match = await bcrypt.compare(password, data.password);
-                // username = data.fullName;
-                // console.log(username);
-                res.cookie.username = data.fullName;
-                // console.log(res.cookie.username);
-                return next();
+                if (match && data) {
+                    res.cookie.username = data.fullName;
+                    return next()
+                }
+                else return res.redirect('/studentPortal/studentlogin');
             }
             catch (err) {
                 console.log(err);
-                return res.redirect('/studentPortal/studentlogin')
+                return res.redirect('/studentPortal/studentlogin');
             }
             next();
         }

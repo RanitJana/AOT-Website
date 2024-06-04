@@ -2,10 +2,12 @@ const path = require('path');
 const express = require('express');
 const bcrypt = require('bcrypt');
 const cookieParser = require('cookie-parser');
+let isUserLoggedIn = false;
 
 const studentSchema = require('../models/student.model.js');
 const { listenerCount } = require('process');
 const { checkValidPassword, matchPassword } = require('../middlewares/signUpPassword.middleware.js');
+const { checkUniqueness } = require('../middlewares/checkUniqueness.middleware.js');
 
 const route = express.Router();
 let saltRounds = 10;
@@ -22,12 +24,17 @@ route
     .get('/studentlogin', (req, res) => {
         res.sendFile(path.join(__dirname, '../public/pages', 'studentlogin.html'));
     })
-    .get(`/studentlogin/:username`, (req, res) => {
-        res.clearCookie('username');
-        // console.log(res.cookie.username);
-        res.sendFile(path.join(__dirname, '../public/pages', 'studentDetails.html'));
-    })
+    .get(`/studentlogin/:username`,
+        (req, res, next) => {
+            if (isUserLoggedIn) return next();
+            return res.redirect('/studentPortal/studentlogin');
+        },
+        (req, res) => {
+            res.clearCookie('username');
+            res.sendFile(path.join(__dirname, '../public/pages', 'studentDetails.html'));
+        })
     .post('/studentlogin', matchPassword, (req, res) => {
+        isUserLoggedIn = true;
         res.redirect(`/studentPortal/studentlogin/${res.cookie.username}`);
     })
 
@@ -35,7 +42,7 @@ route
         res.sendFile(path.join(__dirname, '../public/pages', 'studentsignup.html'));
     })
 
-    .post('/studentsignup', checkValidPassword, (req, res) => {
+    .post('/studentsignup', checkValidPassword, checkUniqueness, (req, res) => {
         try {
             let student;
             bcrypt.hash(req.body["password"], saltRounds, async function (err, hash) {
