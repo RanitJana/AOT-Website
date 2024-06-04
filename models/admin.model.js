@@ -1,7 +1,19 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
+const DB_NAME = require('../constants.js');
 
-mongoose.connect('mongodb://127.0.0.1:27017/aotData');
+; (
+    async () => {
+        try {
+            await mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`);
+        }
+        catch (err) {
+            console.log(err);
+            throw err;
+        }
+    }
+)()
+
 
 const adminSchema = new mongoose.Schema({
     fullName: {

@@ -29,7 +29,6 @@ const studentPortal = require('./routes/studentPortal.route.js');
 const search = require('./routes/search.route.js');
 const nss = require('./routes/nss.route.js');
 
-
 app
     .use('/achivement', achivement)
     .use('/career', career)

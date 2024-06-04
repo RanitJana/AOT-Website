@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/styles/basicStyles.css">
     <link rel="stylesheet" href="/styles/headerStyle.css">
     <link rel="stylesheet" href="/styles/headerResponsive.css">
+    <link rel="stylesheet" href="/styles/placement.css">
     <link rel="stylesheet" href="/styles/studentPortal.css">
     <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="/styles/bannerResponse.css">
@@ -19,137 +20,49 @@
         <img src="/assets/images/icons8-online.gif" alt="./assets/images/icons8-online.gif">
         <p>We are online</p>
     </div>
-    <header>
-        <div class="hamberg-menu">
-            <div class="stick"></div>
-            <div class="stick"></div>
-            <div class="stick"></div>
-        </div>
+    <header id="destination">
         <div class="banner">
             <div class="left">
-                <img src="/assets/images/aot-logo.webp" loading="lazy" alt="Error">
+                <img src="/assets/images/aot-logo.jpg" alt="Error" loading="lazy" decoding="async">
             </div>
             <div class="middle">
                 <h1>ACADEMY OF TECHNOLOGY</h1>
                 <span>...translate your vision into reality</span>
             </div>
         </div>
-
     </header>
-    <hr>
     <main>
-        <div class="section__title">
-            <div class="logo">
-                <a href="/"><img width="32" height="32" src="https://img.icons8.com/windows/32/home.png"
-                        alt="home" /></a>
+        <div class="back">
+            <div class="backImg">
+                <img src="/assets/video/icons8-home.gif" alt="Back Icon">
             </div>
-            <h1 id="heading">Student Portal</h1>
+            <h1>Student Portal</h1>
         </div>
-        <div class="first">
-            <form action="">
+        <section>
 
-                <div class="info">
-                    <label for="nam">Student Name : </label>
-                    <input type="text" name="" id="nam" required>
-                </div>
-
-                <div class="info">
-                    <label for="roll">Student Roll : </label>
-                    <input type="number" name="" id="roll" required>
-                </div>
-
-                <div class="info">
-                    <label for="email">Student Email : </label>
-                    <input type="email" name="" id="email" required>
-                </div>
-
-                <div class="info">
-                    <label for="clgemail">College Email : </label>
-                    <input type="email" name="" id="clgemail" required>
-                </div>
-
-                <div class="info">
-                    <label for="gurdname">Guardian Name : </label>
-                    <input type="text" name="" id="gurdname" required>
-                </div>
-
-                <div class="info">
-                    <label for="gurdno">Guardian Contact No : </label>
-                    <input type="number" name="" id="gurdno" required>
-                </div>
-
-                <div class="info">
-                    <label for="lcgurdnam">Local Guardian Name : </label>
-                    <input type="text" name="" id="lcgurdnam" required>
-                </div>
-
-                <div class="info">
-                    <label for="lcgurdno">Local Guardian Contact No : </label>
-                    <input type="number" name="" id="lcgurdno" required>
-                </div>
-
-                <div class="info">
-                    <label for="address">Address : </label>
-                    <input type="text" name="" id="address" required>
-                </div>
-
-                <div class="info">
-                    <label for="mp">Class 10 marks : </label>
-                    <input type="number" name="" id="mp" required>
-                </div>
-
-                <div class="info">
-                    <label for="hs">Class 12 marks : </label>
-                    <input type="number" name="" id="hs" required>
-                </div>
-
-                <div class="info">
-                    <label for="sem1">Give ODD (1st) Semester SGPA : </label>
-                    <input type="number" name="" id="sem1" required>
-                </div>
-
-                <div class="info">
-                    <label for="sem2">Give EVEN (2nd) Semester SGPA : </label>
-                    <input type="number" name="" id="sem2" required>
-                </div>
-
-                <div class="info">
-                    <label for="sem3">Give ODD (3rd) Semester SGPA : </label>
-                    <input type="number" name="" id="sem3" required>
-                </div>
-
-                <div class="info">
-                    <label for="sem4">Give EVEN (4th) Semester SGPA : </label>
-                    <input type="number" name="" id="sem4" required>
-                </div>
-
-                <div class="info">
-                    <label for="sem5">Give ODD (5th) Semester SGPA : </label>
-                    <input type="number" name="" id="sem5" required>
-                </div>
-
-                <div class="info">
-                    <label for="sem6">Give EVEN (6th) Semester SGPA : </label>
-                    <input type="number" name="" id="sem6" required>
-                </div>
-
-                <div class="info">
-                    <label for="sem7">Give ODD (7th) Semester SGPA : </label>
-                    <input type="number" name="" id="sem7" required>
-                </div>
-
-                <div class="info">
-                    <label for="sem8">Give EVEN (8th) Semester SGPA : </label>
-                    <input type="number" name="" id="sem8" required>
-                </div>
-                <div class="bt">
-                    <button id="btn">Submit</button>
-                </div>
-            </form>
-
-            <button id=" btn">Submit</button>
-        </div>
+            <div class="admin">
+                <img src="/assets/images/icons8-admin-24.png" alt="admin" decoding="async" loading="eager">
+                <p>Admin</p>
+            </div>
+            <div class="student">
+                <img src="/assets/images/icons8-student-24.png" alt="admin" decoding="async" loading="eager">
+                <p>Student</p>
+            </div>
+        </section>
     </main>
 
+    <script>
+        let backImg = document.querySelector('.backImg');
+        backImg.addEventListener('click', e => {
+            window.history.back();
+        })
+        document.querySelector('.student').addEventListener('click', e => {
+            window.location.href = "/studentPortal/studentlogin";
+        })
+        document.querySelector('.admin').addEventListener('click', e => {
+            window.location.href = "/studentPortal/adminlogin";
+        })
+    </script>
 </body>
-</ht6l>
+
+</html>

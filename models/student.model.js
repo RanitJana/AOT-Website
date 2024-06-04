@@ -1,7 +1,18 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
+const DB_NAME = require('../constants.js');
 
-mongoose.connect('mongodb://127.0.0.1:27017/aotData');
+; (
+    async () => {
+        try {
+            await mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`);
+        }
+        catch (err) {
+            console.log(err);
+            throw err;
+        }
+    }
+)()
 
 const studentSchema = new mongoose.Schema({
     fullName: {
@@ -23,10 +34,10 @@ const studentSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
-    password:{
+    password: {
         type: String,
         required: true,
-        unique:true
+        unique: true
     },
     contact: {
         type: Number,
@@ -55,11 +66,11 @@ const studentSchema = new mongoose.Schema({
     },
     class10Marks: {
         type: Number,
-        required: true
+        default: 0
     },
     class12Marks: {
         type: Number,
-        required: true
+        default: 0
     },
     semMarks: [
         {
