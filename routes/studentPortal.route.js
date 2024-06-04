@@ -24,7 +24,7 @@ route
     })
     .get(`/studentlogin/:username`, (req, res) => {
         res.clearCookie('username');
-        console.log(res.cookie.username);
+        // console.log(res.cookie.username);
         res.sendFile(path.join(__dirname, '../public/pages', 'studentDetails.html'));
     })
     .post('/studentlogin', matchPassword, (req, res) => {

@@ -7,6 +7,9 @@
     <title>Student Details</title>
     <link rel="stylesheet" href="/styles/headerStyle.css">
     <link rel="stylesheet" href="/styles/footerStyle.css">
+    <link rel="stylesheet" href="/styles/basicStyles.css">
+    <link rel="stylesheet" href="/styles/placement.css">
+    <!-- <link rel="stylesheet" href="/styles/chatbot.css"> -->
     <link rel="stylesheet" href="/styles/studentDetailsStyle.css">
 </head>
 
@@ -15,11 +18,7 @@
     <main>
 
 
-        <div class="to-top">
-            <a href="#">
-                <img src="/assets/images/icons8-up-arrow-50.png" alt="">
-            </a>
-        </div>
+
         <header>
 
             <div class="banner">
@@ -34,11 +33,11 @@
 
         </header>
 
-        <div class="beforeIntro">
-            <div class="back-btn">
-                <img src="/assets/video/icons8-home.gif" alt="home" />
+        <div class="back">
+            <div class="backImg">
+                <img src="/assets/video/icons8-home.gif" alt="Back Icon">
             </div>
-            <h1 class="headings">Change it</h1>
+            <h1>Placement</h1>
         </div>
 
 
@@ -95,22 +94,24 @@
             <div class="form-group">
                 <label>SGPA:</label>
                 <div class="sgpa-container">
-                    <input type="number" step="0.01" min="0" max="10" id="sgpa1" name="sgpa1" value="8.5"
-                        placeholder="1st Sem" disabled>
-                    <input type="number" step="0.01" min="0" max="10" id="sgpa2" name="sgpa2" value="8.7"
-                        placeholder="2nd Sem" disabled>
-                    <input type="number" step="0.01" min="0" max="10" id="sgpa3" name="sgpa3" value="8.8"
-                        placeholder="3rd Sem" disabled>
-                    <input type="number" step="0.01" min="0" max="10" id="sgpa4" name="sgpa4" value="8.6"
-                        placeholder="4th Sem" disabled>
-                    <input type="number" step="0.01" min="0" max="10" id="sgpa5" name="sgpa5" value="8.9"
-                        placeholder="5th Sem" disabled>
-                    <input type="number" step="0.01" min="0" max="10" id="sgpa6" name="sgpa6" value="9.0"
-                        placeholder="6th Sem" disabled>
-                    <input type="number" step="0.01" min="0" max="10" id="sgpa7" name="sgpa7" value="9.1"
-                        placeholder="7th Sem" disabled>
-                    <input type="number" step="0.01" min="0" max="10" id="sgpa8" name="sgpa8" value="9.2"
-                        placeholder="8th Sem" disabled>
+                    <div>
+                        <span><label for="">1st Sem</label></span> <input type="number" step="0.01" min="0" max="10"
+                            id="sgpa1" name="sgpa1" value="8.5" placeholder="1st Sem" disabled>
+                    </div>
+                    <div><span><label for="">2nd Sem</label></span> <input type="number" step="0.01" min="0" max="10"
+                            id="sgpa3" name="sgpa3" value="8.8" placeholder="3rd Sem" disabled></div>
+                    <div><span><label for="">3rd Sem</label></span> <input type="number" step="0.01" min="0" max="10"
+                            id="sgpa4" name="sgpa4" value="8.6" placeholder="4th Sem" disabled></div>
+                    <div><span><label for="">4th Sem</label></span> <input type="number" step="0.01" min="0" max="10"
+                            id="sgpa5" name="sgpa5" value="8.9" placeholder="5th Sem" disabled></div>
+                    <div><span><label for="">5th Sem</label></span> <input type="number" step="0.01" min="0" max="10"
+                            id="sgpa6" name="sgpa6" value="9.0" placeholder="6th Sem" disabled></div>
+                    <div><span><label for="">6th Sem</label></span> <input type="number" step="0.01" min="0" max="10"
+                            id="sgpa7" name="sgpa7" value="9.1" placeholder="7th Sem" disabled></div>
+                    <div><span><label for="">7th Sem</label></span> <input type="number" step="0.01" min="0" max="10"
+                            id="sgpa8" name="sgpa8" value="9.2" placeholder="8th Sem" disabled></div>
+                    <div><span><label for="">8th Sem</label></span> <input type="number" step="0.01" min="0" max="10"
+                            id="sgpa8" name="sgpa8" value="9.2" placeholder="8th Sem" disabled></div>
                 </div>
             </div>
             <button id="editButton">Edit</button>
@@ -144,7 +145,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- Rows will be dynamically inserted here -->
+
                     </tbody>
                 </table>
             </div>
@@ -155,8 +156,33 @@
             </div>
         </div>
     </main>
+    <footer>
+        <div class="footerContainer">
+            <div class="footerTalk">
+                <p>Follow us on</p>
+            </div>
+            <div class="footerSocialMediaLinks">
+                <a href="https://www.facebook.com/www.aot.edu.in/" title="Visit AOT Facebook Page">
+                    <img src="/assets/images/facebook_Logo.webp" alt="">
+                </a>
+                <a href="https://www.instagram.com/aotconnect/?igsh=MWhhcDJuY2ZqeWg1OA%3D%3D"
+                    title="Visit AOT Instagram Page">
+                    <img src="/assets/images/instagram_Logo.webp" alt="">
+                </a>
+                <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA" title="Visit AOT YouTube Page">
+                    <img src="/assets/images/youtube_Logo.webp" alt="">
+                </a>
+                <a href="https://www.linkedin.com/school/academy-of-technology/" title="Visit AOT Linkedin Page">
+                    <img src="/assets/images/linkedin_Logo.webp" alt="">
+                </a>
+            </div>
+            <div class="footerTalk">
+                <p>Copyright &copy 2024 all rights reserved</p>
+            </div>
+        </div>
+    </footer>
 
-    <script src="/studentDetails.js"></script>
+    <script src="/javaScripts/studentDetails.js"></script>
     <script src="/javaScripts/chatbot.js"></script>
     <script src="/javaScripts/scrollToTop.js"></script>
     <script src="/javaScripts/userOnOff.js"></script>

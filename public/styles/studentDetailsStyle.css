@@ -1,16 +1,16 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-}
+@import url(basicStyles.css);
+
+
 
 .container {
-    max-width: 600px;
-    margin: auto;
+    /* max-width: 600px; */
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 90%;
+    background-color: white;
+    margin: 1rem auto;
 }
 
 .form-group {
@@ -27,9 +27,16 @@ body {
     padding: 8px;
     box-sizing: border-box;
 }
-
+.sgpa-container{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: auto auto;
+}
+.sgpa-container>div{
+    width: 100%;
+}
 .sgpa-container input {
-    width: calc(50% - 10px);
+    /* width: calc(50% - 10px); */
     margin-bottom: 10px;
     margin-right: 10px;
 }
@@ -56,16 +63,17 @@ body {
 /*============================================ table =============================================== */
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
 }
 
 .data-container {
-    max-width: 1390px;
+    max-width: 90%;
     margin: auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    margin-bottom: 1rem;
 }
 
 .table-container {
@@ -117,11 +125,11 @@ th {
 }
 
 
-tbody tr:nth-child(odd) {
+tbody tr:nth-child(even) {
     background-color: #BEF2F5; /* Light blue for odd rows */
 }
 
-tbody tr:nth-child(even) {
+tbody tr:nth-child(odd) {
     background-color: #ffffff; /* White for even rows */
 }
 
@@ -132,4 +140,11 @@ tbody tr:nth-child(even) {
 
 #rowNumber option:nth-child(even) {
     background-color: #BEF2F5;
+}
+main{
+    width: 100dvw;
+}
+body{
+    width: 100%;
+    overflow-x: hidden;
 }
