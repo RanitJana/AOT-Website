@@ -27,13 +27,10 @@ route
         switch (formType) {
             case 'default':
                 let data = JSON.stringify((await userSchema.find()));
-                // console.log(res.cookie.roll);
-                try {
-                    fs.writeFileSync(path.join(__dirname, '../public/temp/temp.json'), data);
-                }
-                catch (err) {
+                fs.writeFile(path.join(__dirname, '../public/temp/temp.json'), data, (err) => {
+                    console.log(err);
+                });
 
-                }
                 break;
             default:
                 editDB();
