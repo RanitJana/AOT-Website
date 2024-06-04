@@ -1,16 +1,18 @@
 const path = require('path');
 const express = require('express');
 const bcrypt = require('bcrypt');
+const cookieParser = require('cookie-parser');
 
 const studentSchema = require('../models/student.model.js');
 const { listenerCount } = require('process');
-const { checkValidPassword } = require('../middlewares/signUpPassword.middleware.js');
+const { checkValidPassword, matchPassword } = require('../middlewares/signUpPassword.middleware.js');
 
 const route = express.Router();
 let saltRounds = 10;
 
 route
     .use(express.urlencoded({ extended: false }))   //to accept form inputs
+    .use(cookieParser())
     .get('/', (req, res) => {
         res.sendFile(path.join(__dirname, '../public/pages', 'studentPortal.html'));
     })
@@ -20,6 +22,15 @@ route
     .get('/studentlogin', (req, res) => {
         res.sendFile(path.join(__dirname, '../public/pages', 'studentlogin.html'));
     })
+    .get(`/studentlogin/:username`, (req, res) => {
+        res.clearCookie('username');
+        console.log(res.cookie.username);
+        res.sendFile(path.join(__dirname, '../public/pages', 'studentDetails.html'));
+    })
+    .post('/studentlogin', matchPassword, (req, res) => {
+        res.redirect(`/studentPortal/studentlogin/${res.cookie.username}`);
+    })
+
     .get('/studentsignup', (req, res) => {
         res.sendFile(path.join(__dirname, '../public/pages', 'studentsignup.html'));
     })
