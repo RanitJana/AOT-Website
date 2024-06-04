@@ -60,7 +60,11 @@ const studentSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    address: {
+    permanentAddress: {
+        type: String,
+        required: true
+    },
+    presentAddress: {
         type: String,
         required: true
     },

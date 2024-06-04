@@ -41,7 +41,8 @@ route
                         gurdianContact: req.body["guardian-contact"],
                         localGurdian: req.body["local-guardian-name"],
                         localGurdianContact: req.body["local-guardian-contact"],
-                        address: req.body["permanent-address"],
+                        permanentAddress: req.body["permanent-address"],
+                        presentAddress: req.body["present-address"]
                     })
                     res.redirect('/studentPortal/studentlogin');
                 }
