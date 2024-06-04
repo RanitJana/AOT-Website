@@ -112,6 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
             // }
+
             function typeWriter() {
                 const parser = new DOMParser();
                 const doc = parser.parseFromString(content, 'text/html');
@@ -223,6 +224,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         isWelcomeMessageShown = true;
     });
+
 
     // Hide the chatbot window when the back icon is clicked
 
