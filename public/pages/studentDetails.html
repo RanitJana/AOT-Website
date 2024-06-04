@@ -36,81 +36,84 @@
         </div>
 
 
-        <div class="container">
+        <form action="/studentPortal/studentlogin" method="post" class="container">
             <h2>Student Details</h2>
+            <input type="hidden" name="formType" value="special">
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" id="name" value="John Doe" disabled>
+                <input type="text" id="name" value="John Doe" name="fullName" disabled>
             </div>
             <div class="form-group">
                 <label for="universityRollNo">University Roll No</label>
-                <input type="text" id="universityRollNo" value="123456" disabled>
+                <input type="number" id="universityRollNo" value="123456" name="roll" disabled>
             </div>
             <div class="form-group">
                 <label for="personalEmail">Personal Email</label>
-                <input type="email" id="personalEmail" value="john.doe@example.com" disabled>
+                <input type="email" id="personalEmail" value="john.doe@example.com" name="emailPersonal" disabled>
             </div>
             <div class="form-group">
                 <label for="collegeEmail">College Email</label>
-                <input type="email" id="collegeEmail" value="john.doe@college.edu" disabled>
+                <input type="email" id="collegeEmail" value="john.doe@college.edu" name="emailAot" disabled>
             </div>
             <div class="form-group">
                 <label for="guardianName">Guardian Name</label>
-                <input type="text" id="guardianName" value="Jane Doe" disabled>
+                <input type="text" id="guardianName" value="Jane Doe" name="gurdian" disabled>
             </div>
             <div class="form-group">
                 <label for="guardianContact">Guardian Contact No</label>
-                <input type="text" id="guardianContact" value="123-456-7890" disabled>
+                <input type="number" id="guardianContact" value="123-456-7890" name="gurdianContact" disabled>
             </div>
             <div class="form-group">
                 <label for="localGuardianName">Local Guardian Name</label>
-                <input type="text" id="localGuardianName" value="Jake Doe" disabled>
+                <input type="text" id="localGuardianName" value="Jake Doe" name="localGurdian" disabled>
             </div>
             <div class="form-group">
                 <label for="localGuardianContact">Local Guardian Contact No</label>
-                <input type="text" id="localGuardianContact" value="098-765-4321" disabled>
+                <input type="number" id="localGuardianContact" value="098-765-4321" name="localGurdianContact" disabled>
             </div>
             <div class="form-group">
                 <label for="permanentAddress">Permanent Address</label>
-                <input type="text" id="permanentAddress" value="123 Main St, Hometown" disabled>
+                <input type="text" id="permanentAddress" value="123 Main St, Hometown" name="permanentAddress" disabled>
             </div>
             <div class="form-group">
                 <label for="presentAddress">Present Address</label>
-                <input type="text" id="presentAddress" value="456 College St, CollegeTown" disabled>
+                <input type="text" id="presentAddress" value="456 College St, CollegeTown" name="presentAddress"
+                    disabled>
             </div>
             <div class="form-group">
                 <label for="class10Marks">Class 10 Marks</label>
-                <input type="text" id="class10Marks" value="95%" disabled>
+                <input type="number" id="class10Marks" value="95%" name="class10Marks" disabled>
             </div>
             <div class="form-group">
                 <label for="class12Marks">Class 12 Marks</label>
-                <input type="text" id="class12Marks" value="90%" disabled>
+                <input type="number" id="class12Marks" value="90%" name="class12Marks" disabled>
             </div>
             <div class="form-group">
                 <label>SGPA:</label>
                 <div class="sgpa-container">
                     <div>
                         <span><label for="">1st Sem</label></span> <input type="number" step="0.01" min="0" max="10"
-                            id="sgpa1" name="sgpa1" value="8.5" placeholder="1st Sem" disabled>
+                            id="sgpa1" name="sgpa1" value="8.5" placeholder="1st Sem" name="1" disabled>
                     </div>
                     <div><span><label for="">2nd Sem</label></span> <input type="number" step="0.01" min="0" max="10"
-                            id="sgpa3" name="sgpa3" value="8.8" placeholder="3rd Sem" disabled></div>
+                            id="sgpa3" name="sgpa3" value="8.8" placeholder="3rd Sem" name="2" disabled></div>
                     <div><span><label for="">3rd Sem</label></span> <input type="number" step="0.01" min="0" max="10"
-                            id="sgpa4" name="sgpa4" value="8.6" placeholder="4th Sem" disabled></div>
+                            id="sgpa4" name="sgpa4" value="8.6" placeholder="4th Sem" name="3" disabled></div>
                     <div><span><label for="">4th Sem</label></span> <input type="number" step="0.01" min="0" max="10"
-                            id="sgpa5" name="sgpa5" value="8.9" placeholder="5th Sem" disabled></div>
+                            id="sgpa5" name="sgpa5" value="8.9" placeholder="5th Sem" name="4" disabled></div>
                     <div><span><label for="">5th Sem</label></span> <input type="number" step="0.01" min="0" max="10"
-                            id="sgpa6" name="sgpa6" value="9.0" placeholder="6th Sem" disabled></div>
+                            id="sgpa6" name="sgpa6" value="9.0" placeholder="6th Sem" name="5" disabled></div>
                     <div><span><label for="">6th Sem</label></span> <input type="number" step="0.01" min="0" max="10"
-                            id="sgpa7" name="sgpa7" value="9.1" placeholder="7th Sem" disabled></div>
+                            id="sgpa7" name="sgpa7" value="9.1" placeholder="7th Sem" name="6" disabled></div>
                     <div><span><label for="">7th Sem</label></span> <input type="number" step="0.01" min="0" max="10"
-                            id="sgpa8" name="sgpa8" value="9.2" placeholder="8th Sem" disabled></div>
+                            id="sgpa8" name="sgpa8" value="9.2" placeholder="8th Sem" name="7" disabled></div>
                     <div><span><label for="">8th Sem</label></span> <input type="number" step="0.01" min="0" max="10"
-                            id="sgpa8" name="sgpa8" value="9.2" placeholder="8th Sem" disabled></div>
+                            id="sgpa8" name="sgpa8" value="9.2" placeholder="8th Sem" name="8" disabled></div>
                 </div>
             </div>
-            <button id="editButton">Edit</button>
-        </div>
+            <div class="editButton" value="Edit">Edit</div>
+            <input type="submit" class="editButton" value="Save" style="display: none;">
+        </form>
 
 
         <div class="data-container">
@@ -178,9 +181,7 @@
     </footer>
 
     <script src="/javaScripts/studentDetails.js"></script>
-    <script src="/javaScripts/chatbot.js"></script>
-    <script src="/javaScripts/scrollToTop.js"></script>
-    <script src="/javaScripts/userOnOff.js"></script>
+    <!-- <script src="/javaScripts/chatbot.js"></script> -->
 </body>
 
 </html>

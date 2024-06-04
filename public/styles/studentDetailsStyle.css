@@ -27,14 +27,17 @@
     padding: 8px;
     box-sizing: border-box;
 }
-.sgpa-container{
+
+.sgpa-container {
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: auto auto;
 }
-.sgpa-container>div{
+
+.sgpa-container>div {
     width: 100%;
 }
+
 .sgpa-container input {
     /* width: calc(50% - 10px); */
     margin-bottom: 10px;
@@ -45,7 +48,7 @@
     margin-right: 0;
 }
 
-#editButton {
+.editButton {
     display: block;
     width: 100%;
     padding: 10px;
@@ -54,9 +57,11 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
 }
 
-#editButton:hover {
+.editButton:hover {
     background-color: #218838;
 }
 
@@ -77,31 +82,35 @@ body {
 }
 
 .table-container {
-    overflow-x: auto; /* Add horizontal scroll if content overflows */
+    overflow-x: auto;
+    /* Add horizontal scroll if content overflows */
     margin-top: 20px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 1200px; /* Ensure table is wide enough to overflow */
+    min-width: 1200px;
+    /* Ensure table is wide enough to overflow */
 }
-table input{
+
+table input {
     border: none;
     background-color: transparent;
     text-align: center;
 }
 
-#rowNumber{
+#rowNumber {
     padding: 10px 20px;
 }
 
 
-th, td {
+th,
+td {
     border: 3px solid #ffffff;
     padding: 10px;
     text-align: center;
-    
+
 }
 
 th {
@@ -126,14 +135,16 @@ th {
 
 
 tbody tr:nth-child(even) {
-    background-color: #BEF2F5; /* Light blue for odd rows */
+    background-color: #BEF2F5;
+    /* Light blue for odd rows */
 }
 
 tbody tr:nth-child(odd) {
-    background-color: #ffffff; /* White for even rows */
+    background-color: #ffffff;
+    /* White for even rows */
 }
 
-#rowNumber option{
+#rowNumber option {
     padding: 10px 20px;
     border: 3px solid white;
 }
@@ -141,10 +152,12 @@ tbody tr:nth-child(odd) {
 #rowNumber option:nth-child(even) {
     background-color: #BEF2F5;
 }
-main{
+
+main {
     width: 100dvw;
 }
-body{
+
+body {
     width: 100%;
     overflow-x: hidden;
 }

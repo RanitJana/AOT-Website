@@ -1,7 +1,9 @@
 
 const bcrypt = require('bcrypt');
+const path = require('path');
 
 const userSchema = require('../models/student.model.js');
+const { default: mongoose } = require('mongoose');
 
 const checkValidPassword = (req, res, next) => {
     const password = req.body["password"];
@@ -13,25 +15,26 @@ const checkValidPassword = (req, res, next) => {
 }
 
 const matchPassword = (req, res, next) => {
-    const roll = req.body["roll"];
-    const password = req.body["password"];
+    // console.log(req.body);
 
     (
         async () => {
             try {
+                const roll = req.body["roll"];
+                const password = req.body["password"];
                 const data = await userSchema.findOne({ roll: `${roll}` });
                 const match = await bcrypt.compare(password, data.password);
                 if (match && data) {
                     res.cookie.username = data.fullName;
-                    return next()
+                    res.cookie.roll = data['roll'];
+                    return next();
                 }
                 else return res.redirect('/studentPortal/studentlogin');
             }
             catch (err) {
-                console.log(err);
-                return res.redirect('/studentPortal/studentlogin');
             }
-            next();
+            return res.sendFile(path.join(__dirname, '../public/pages', 'studentDetails.html'));
+            // next();
         }
     )()
 }
