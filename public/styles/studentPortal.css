@@ -13,6 +13,10 @@
     user-select: none;
 }
 
+section {
+    display: flex;
+}
+
 section>div p {
     display: flex;
     justify-content: center;
@@ -27,12 +31,33 @@ section>div img {
 
 section>div:hover {
     cursor: pointer;
+    background-color: var(--aot-dark-color--);
 }
 
-section>div:active {
-    background-color: #1a214f;
+#heading {
+    text-align: center;
+    font-size: 1.7rem;
 }
 
-section {
+.section__title {
+    position: relative;
+    padding: 0.3em;
+    min-width: 100%;
+    margin-top: 1rem;
+    background: var(--aot-color--);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.logo {
+    position: absolute;
+    margin: 0;
+    padding: 0.55em;
+    width: 70px;
+    background-color: #e5e4e2;
+    left: 0;
     display: flex;
 }
