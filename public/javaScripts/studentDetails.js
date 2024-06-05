@@ -4,8 +4,8 @@ function getData() {
     return new Promise((resolve, reject) => {
         setTimeout(async () => {
             let res = await fetch('/temp/temp.json');
-            console.log(res);
             let data = await res.json();
+            console.log(data);
             resolve(data);
         }, 4)
     })
