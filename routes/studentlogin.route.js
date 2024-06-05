@@ -49,8 +49,8 @@ route
     .post('/', matchPassword, async (req, res) => {
         const jsonData = await userSchema.find().sort({ roll: 1 });
         let data = JSON.stringify(jsonData);
-        fs.writeFile(path.join(__dirname, '../public/temp/temp.json'), data, (err) => {
-            if (err) console.log(err);
+        fs.writeFile(path.join(__dirname, '../public/temp/temp.json'), data,(err)=>{
+            if(err) console.log(err);
         });
         return res.redirect('/studentPortal/studentlogin/studentDetails');
     })

@@ -41,8 +41,7 @@ const studentSchema = new mongoose.Schema({
     },
     contact: {
         type: Number,
-        required: true,
-        unique: true
+        required: true
     },
     gurdian: {
         type: String,

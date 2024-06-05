@@ -22,8 +22,8 @@ const matchPassword = async (req, res, next) => {
         const data = await userSchema.findOne({ roll: `${roll}` });
         const match = await bcrypt.compare(password, data.password);
         if (match && data) {
-            res.cookie.username = data.fullName;
-            res.cookie.id = data['_id'];
+            res.cookie('username', data.fullName);
+            res.cookie('id', data['_id']);
             return next();
         }
     }

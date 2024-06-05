@@ -1,16 +1,17 @@
 const express = require('express');
+// const cookieParser = require('cookie-parser');
 const route = express.Router();
 const path = require('path')
 const userSchema = require('../models/student.model.js');
 const { checkProtected } = require('../middlewares/protected.middleware.js');
 
 async function editDB(req, res, next) {
-    let id = tempId.id;
-    console.log(id);
+    // console.log(req);
+    let id = req.cookies.id;
     if (!id) return res.redirect('/studentPortal/studentlogin');
     const user = await userSchema.findOne({ _id: `${id}` });
     //update here
-    if (user && user.fullName == tempUsername.username) {
+    if (user && user.fullName == req.cookies.username) {
 
         let newSemMarks = [req.body["sgpa1"], req.body["sgpa2"], req.body["sgpa3"], req.body["sgpa4"], req.body["sgpa5"], req.body["sgpa6"], req.body["sgpa7"], req.body["sgpa8"]];
 
@@ -29,7 +30,7 @@ async function editDB(req, res, next) {
         user.presentAddress = req.body["presentAddress"];
         user.class10Marks = req.body["class10Marks"];
         user.class12Marks = req.body["class12Marks"];
-        user.semMarks = newSemMarks;
+        // user.semMarks = newSemMarks;
 
         console.log(user);
 
@@ -44,8 +45,6 @@ async function editDB(req, res, next) {
 
 route
     .get('/', checkProtected, (req, res) => {
-        tempId.id = res.cookie.id;
-        tempUsername.username = res.cookie.username;
         res.sendFile(path.join(__dirname, '../public/pages', 'studentDetails.html'));
     })
     .post('/', editDB, (req, res) => {
