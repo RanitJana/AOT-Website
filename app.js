@@ -54,7 +54,7 @@ app
     .use('/StudentActivity', StudentActivity)
     .use('/studentPortal', studentPortal)
     .use('/nss', nss)
-    .use('/apiInfo', getData)
+    .use('/api', getData)
 
 app
     .get('/', (req, res) => {
