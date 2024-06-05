@@ -3,7 +3,8 @@
 function getData() {
     return new Promise((resolve, reject) => {
         setTimeout(async () => {
-            let res = await fetch('../temp/temp.json');
+            let res = await fetch('/temp/temp.json');
+            console.log(res);
             let data = await res.json();
             resolve(data);
         }, 4)
@@ -36,7 +37,6 @@ let currentPage = 1;
 const rowsPerPage = document.getElementById('rowNumber').value;
 
 function generateStudents(data) {
-    console.log(data);
     for (let i = 0; i < data.length; i++) {
         students.push({
             roll: `${data[i]["roll"]}`,
@@ -86,7 +86,6 @@ function updateTable() {
 
 document.addEventListener('DOMContentLoaded', () => {
     getData().then((data) => {
-        console.log((data));
         generateStudents(data);
         renderTable(currentPage);
         document.getElementById('rowNumber').addEventListener('change', updateTable);
