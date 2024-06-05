@@ -60,5 +60,8 @@ app
     .get('/', (req, res) => {
         res.sendFile(path.join(__dirname, 'public/pages', 'index.html'));
     })
+    .all('*', (req, res) => {
+        res.sendFile(path.join(__dirname, 'public/pages', 'errorPage.html'))
+    })
 
 module.exports = app;

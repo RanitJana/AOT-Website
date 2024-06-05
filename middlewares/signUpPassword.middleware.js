@@ -24,6 +24,7 @@ const matchPassword = async (req, res, next) => {
         if (match && data) {
             res.cookie('username', data.fullName);
             res.cookie('id', data['_id']);
+            res.cookie('roll', data.roll);
             return next();
         }
     }

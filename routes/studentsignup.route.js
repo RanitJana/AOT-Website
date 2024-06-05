@@ -22,7 +22,9 @@ async function assignInDataBase(req, res) {
             localGurdian: req.body["local-guardian-name"],
             localGurdianContact: req.body["local-guardian-contact"],
             permanentAddress: req.body["permanent-address"],
-            presentAddress: req.body["present-address"]
+            presentAddress: req.body["present-address"],
+            class10Marks: 0,
+            class12Marks: 0
         })
         res.redirect('/studentPortal/studentlogin');
     }

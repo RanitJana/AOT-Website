@@ -28,10 +28,11 @@ async function editDB(req, res, next) {
             user.localGurdianContact = req.body["localGurdianContact"];
             user.permanentAddress = req.body["permanentAddress"];
             user.presentAddress = req.body["presentAddress"];
-            user.class10Marks = req.body["class10Marks"];
-            user.class12Marks = req.body["class12Marks"];
-            newSemMarks.forEach(val => {
-                user.semMarks.push(val);
+            user.class10Marks = Number(req.body["class10Marks"]);
+            user.class12Marks = Number(req.body["class12Marks"]);
+            user.semMarks = [0, 0, 0, 0, 0, 0, 0, 0];
+            newSemMarks.forEach((val, idx) => {
+                user.semMarks[idx] = val;
             })
 
             user.save();

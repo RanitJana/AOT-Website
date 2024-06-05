@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Details</title>
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="/styles/headerStyle.css">
     <link rel="stylesheet" href="/styles/footerStyle.css">
     <link rel="stylesheet" href="/styles/basicStyles.css">
@@ -91,11 +92,11 @@
             </div>
             <div class="form-group">
                 <label for="class10Marks">Class 10 Marks</label>
-                <input type="number" id="class10Marks" value="95%" name="class10Marks" disabled>
+                <input type="number" class="class10Marks" id="class10Marks" value="95" name="class10Marks" disabled>
             </div>
             <div class="form-group">
                 <label for="class12Marks">Class 12 Marks</label>
-                <input type="number" id="class12Marks" value="90%" name="class12Marks" disabled>
+                <input type="number" class="class12Marks" id="class12Marks" value="90" name="class12Marks" disabled>
             </div>
             <div class="form-group">
                 <label>SGPA:</label>
@@ -107,32 +108,32 @@
                     </div>
                     <div>
                         <span><label for="">2nd Sem</label></span>
-                        <input type="number" step="0.01" min="0" max="10" id="sgpa3" name="sgpa2" value="8.8"
+                        <input type="number" step="0.01" min="0" max="10" id="sgpa2" name="sgpa2" value="8.8"
                             placeholder="2nd Sem" name="2" disabled>
                     </div>
                     <div>
                         <span><label for="">3rd Sem</label></span>
-                        <input type="number" step="0.01" min="0" max="10" id="sgpa4" name="sgpa3" value="8.6"
+                        <input type="number" step="0.01" min="0" max="10" id="sgpa3" name="sgpa3" value="8.6"
                             placeholder="3rd Sem" disabled>
                     </div>
                     <div>
                         <span><label for="">4th Sem</label></span>
-                        <input type="number" step="0.01" min="0" max="10" id="sgpa5" name="sgpa4" value="8.9"
+                        <input type="number" step="0.01" min="0" max="10" id="sgpa4" name="sgpa4" value="8.9"
                             placeholder="4th Sem" disabled>
                     </div>
                     <div>
                         <span><label for="">5th Sem</label></span>
-                        <input type="number" step="0.01" min="0" max="10" id="sgpa6" name="sgpa5" value="9.0"
+                        <input type="number" step="0.01" min="0" max="10" id="sgpa5" name="sgpa5" value="9.0"
                             placeholder="5th Sem" disabled>
                     </div>
                     <div>
                         <span><label for="">6th Sem</label></span>
-                        <input type="number" step="0.01" min="0" max="10" id="sgpa7" name="sgpa6" value="9.1"
+                        <input type="number" step="0.01" min="0" max="10" id="sgpa6" name="sgpa6" value="9.1"
                             placeholder="6th Sem" disabled>
                     </div>
                     <div>
                         <span><label for="">7th Sem</label></span>
-                        <input type="number" step="0.01" min="0" max="10" id="sgpa8" name="sgpa7" value="9.2"
+                        <input type="number" step="0.01" min="0" max="10" id="sgpa7" name="sgpa7" value="9.2"
                             placeholder="7th Sem" disabled>
                     </div>
                     <div>
@@ -212,6 +213,11 @@
     </footer>
 
     <script src="/javaScripts/studentDetails.js"></script>
+    <script>
+        document.querySelector('.backImg').addEventListener('click', () => {
+            window.location.href = '/studentPortal/studentlogin';
+        })
+    </script>
     <!-- <script src="/javaScripts/chatbot.js"></script> -->
 </body>
 
