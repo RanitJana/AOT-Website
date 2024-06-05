@@ -92,4 +92,6 @@ studentSchema.pre("save", async function (next) {
     next();
 })
 
+
+
 module.exports = mongoose.model('Student', studentSchema);  //In db it'll be saved as students

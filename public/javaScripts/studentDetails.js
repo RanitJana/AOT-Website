@@ -38,10 +38,12 @@ const rowsPerPage = document.getElementById('rowNumber').value;
 
 function generateStudents(data) {
     for (let i = 0; i < data.length; i++) {
+        let arr = data[i]["semMarks"].map(val => val);
+        if (arr.length == 0) arr = Array.from({ length: 8 }, () => 0)
         students.push({
             roll: `${data[i]["roll"]}`,
             name: `${data[i]["fullName"]}`,
-            sgpas: Array.from({ length: 8 }, () => (Math.random() * (10 - 6) + 6).toFixed(2))
+            sgpas: arr
         });
     }
 }
