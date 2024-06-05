@@ -1,13 +1,11 @@
 const express = require('express');
-// const cookieParser = require('cookie-parser');
 const route = express.Router();
-const fs = require('fs');
 const path = require('path')
 const userSchema = require('../models/student.model.js');
 const { checkProtected } = require('../middlewares/protected.middleware.js');
 
 async function editDB(req, res, next) {
-    // console.log(req);
+
     let id = req.cookies.id;
     if (!id) return res.redirect('/studentPortal/studentlogin');
     const user = await userSchema.findOne({ _id: `${id}` });
@@ -36,14 +34,6 @@ async function editDB(req, res, next) {
                 user.semMarks.push(val);
             })
 
-            console.log(user);
-
-            const jsonData = await userSchema.find().sort({ roll: 1 });
-            let data = JSON.stringify(jsonData);
-            fs.writeFile(path.join(__dirname, '../public/temp/temp.json'), data, (err) => {
-                if (err) console.log(err);
-            });
-
             user.save();
             res.cookie.id = user['_id'];
         }
@@ -55,7 +45,7 @@ async function editDB(req, res, next) {
 
     }
     else res.redirect('/studentPortal/studentlogin');
-    // console.log(user);
+
 }
 
 

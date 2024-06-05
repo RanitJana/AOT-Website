@@ -1,14 +1,11 @@
 const express = require('express');
 const route = express.Router();
 const path = require('path');
-const fs = require('fs');
-let userData = null;
 
 const userSchema = require('../models/student.model.js');
 const { matchPassword } = require('../middlewares/signUpPassword.middleware.js');
 
 const studentDetails = require('./studentDetails.route.js');
-
 
 async function updateFirstTimeUserData(req, res) {
     let id = res.cookie.id;
@@ -47,11 +44,6 @@ route
         res.sendFile(path.join(__dirname, '../public/pages', 'studentlogin.html'));
     })
     .post('/', matchPassword, async (req, res) => {
-        const jsonData = await userSchema.find().sort({ roll: 1 });
-        let data = JSON.stringify(jsonData);
-        fs.writeFile(path.join(__dirname, '../public/temp/temp.json'), data,(err)=>{
-            if(err) console.log(err);
-        });
         return res.redirect('/studentPortal/studentlogin/studentDetails');
     })
 module.exports = route;

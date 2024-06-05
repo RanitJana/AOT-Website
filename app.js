@@ -28,6 +28,7 @@ const StudentActivity = require('./routes/studentActivity.route.js');
 const studentPortal = require('./routes/studentPortal.route.js');
 const search = require('./routes/search.route.js');
 const nss = require('./routes/nss.route.js');
+const getData = require('./routes/serveOurData.specialRoute.js');
 
 app
     .use('/achivement', achivement)
@@ -53,6 +54,7 @@ app
     .use('/StudentActivity', StudentActivity)
     .use('/studentPortal', studentPortal)
     .use('/nss', nss)
+    .use('/apiInfo', getData)
 
 app
     .get('/', (req, res) => {

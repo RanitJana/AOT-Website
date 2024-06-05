@@ -3,7 +3,8 @@
 function getData() {
     return new Promise((resolve, reject) => {
         setTimeout(async () => {
-            let res = await fetch('/temp/temp.json');
+            let url = `/apiInfo/getDataStudent`;
+            let res = await fetch(url);
             let data = await res.json();
             console.log(data);
             resolve(data);

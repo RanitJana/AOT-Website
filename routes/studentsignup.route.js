@@ -32,7 +32,6 @@ async function assignInDataBase(req, res) {
     }
 }
 
-
 route
     .get('/', (req, res) => {
         res.sendFile(path.join(__dirname, '../public/pages', 'studentsignup.html'));
