@@ -1,6 +1,3 @@
-// const { response } = require("express");
-
-const { response } = require("express");
 
 document.addEventListener('DOMContentLoaded', function () {
     const chatbox = document.getElementById('chatbox');
