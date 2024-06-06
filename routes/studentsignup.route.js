@@ -25,10 +25,12 @@ async function assignInDataBase(req, res) {
             class10Marks: 0,
             class12Marks: 0
         })
+        req.flash('success', "Sign Up successful");
         res.redirect('/studentPortal/studentlogin');
     }
     catch (err) {
         console.log(err);
+        req.flash('error', "Registration failed");
         res.redirect('/studentPortal/studentsignup');
     }
 }

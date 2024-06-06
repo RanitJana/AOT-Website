@@ -108,7 +108,7 @@
             grid-gap: 1rem;
         }
 
-        section {
+        .success {
             background-color: rgba(120, 178, 34, 0.809);
             width: 100%;
             border-radius: 8px;
@@ -118,6 +118,20 @@
             color: white;
             place-items: center;
             margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .error {
+            background-color: rgb(255, 59, 59);
+            width: 100%;
+            border-radius: 8px;
+            border: 2px solid rgb(193, 0, 0);
+            display: grid;
+            color: white;
+            place-items: center;
+            margin-bottom: 1rem;
+            padding: 0.5rem 1rem;
+            box-sizing: border-box;
             text-align: center;
         }
 
@@ -158,50 +172,28 @@
     <img src="/assets/images/aot-logo.jpg" alt="AOT" loading=" eager" decoding="async">
     <div class="login-container">
         <h2>Login</h2>
-        <section>
-            <p></p>
-        </section>
-        <form id="login-form" action="/studentPortal/studentlogin" method="POST">
-            <div class="form-group">
-                <label for="roll">Roll Number:</label>
-                <input type="number" id="roll" name="roll" placeholder="Enter your roll number" required>
+        <%- include("./partials/message") -%>
+            <form id="login-form" action="/studentPortal/studentlogin" method="POST">
+                <div class="form-group">
+                    <label for="roll">Roll Number:</label>
+                    <input type="number" id="roll" name="roll" placeholder="Enter your roll number" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" id="submit">Login</button>
+            </form>
+            <div class="section">
+                <a href="">
+                    <span>Forget Password?</span>
+                </a>
+                <a href="/studentPortal/studentsignup">
+                    <span>Sign Up</span>
+                </a>
             </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="password" placeholder="Enter your password" required>
-            </div>
-            <button type="submit" id="submit">Login</button>
-        </form>
-        <div class="section">
-            <a href="">
-                <span>Forget Password?</span>
-            </a>
-            <a href="/studentPortal/studentsignup">
-                <span>Sign Up</span>
-            </a>
-        </div>
     </div>
 
-    <script>
-        let target = document.querySelector('section p');
-        let parentTarget = document.querySelector('section');
-        let password = document.querySelector('#password');
-        let submit = document.querySelector('#submit');
-        window.addEventListener('load', async () => {
-
-            // let response
-
-            if (sessionStorage.getItem('passwordMismatch')) {
-                target.innerHTML = sessionStorage.getItem('passwordMismatch');
-                parentTarget.style.display = 'grid';
-                sessionStorage.removeItem('passwordMismatch');
-            }
-            else {
-                target.innerHTML = ""
-                parentTarget.style.display = 'none';
-            }
-        })
-    </script>
 </body>
 
 </html>

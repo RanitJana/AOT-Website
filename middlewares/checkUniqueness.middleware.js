@@ -14,15 +14,19 @@ const checkUniqueness = async (req, res, next) => {
 
             let isExist = await userSchema.findOne({ [value]: `${inpValues[index]}` });
             if (isExist) {
+                req.flash('error', "Your University Roll or Personal Email or Aot Mail Id is already registered!!")
                 ans = true;
             }
         })
 
     }
     catch (err) {
-        console.log((err));
+        // console.log((err));
     }
-    return ans ? res.redirect('/studentPortal/studentsignup') : next();
+    if (ans) {
+        return res.redirect('/studentPortal/studentsignup');
+    }
+    return next();
 
 }
 

@@ -123,7 +123,20 @@
             background-color: #0056b3;
         }
 
-        section {
+        .success {
+            background-color: rgba(120, 178, 34, 0.809);
+            width: 100%;
+            border-radius: 8px;
+            border: 2px solid rgb(1, 106, 1);
+            padding: 1rem;
+            display: grid;
+            color: white;
+            place-items: center;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .error {
             background-color: rgb(255, 59, 59);
             width: 100%;
             border-radius: 8px;
@@ -132,13 +145,18 @@
             color: white;
             place-items: center;
             margin-bottom: 1rem;
+            padding: 0.5rem 1rem;
+            box-sizing: border-box;
+            text-align: center;
         }
-        header img{
+
+        header img {
             width: 7rem;
             margin-right: 1rem;
             mix-blend-mode: multiply;
         }
-        header{
+
+        header {
             margin-top: 2rem;
             display: flex;
             flex-direction: row;
@@ -155,101 +173,78 @@
             <img src="/assets/images/aot-logo.jpg" alt="AOT" loading="eager" decoding="async">
             <h1>Student Portal</h1>
         </header>
-        <section>
-            <p></p>
-        </section>
         <div class="form-container">
             <h2>Submit Your Details</h2>
-            <form id="student-form" action="/studentPortal/studentsignup" method="post">
-                <div class="form-group">
-                    <label for="student-name">Student Name:</label>
-                    <input type="text" id="student-name" name="student-name" placeholder="Eg. John Morry" required>
-                </div>
-                <div class="form-group">
-                    <label for="university-roll">University Roll No:</label>
-                    <input type="number" id="university-roll" name="university-roll" placeholder="Eg. 12345678912"
-                        required>
-                </div>
-                <div class="form-group">
-                    <label for="personal-email">Personal Email:</label>
-                    <input type="email" id="personal-email" name="personal-email" placeholder="Eg. example@gmail.com"
-                        required>
-                </div>
-                <div class="form-group">
-                    <label for="college-email">College Email:</label>
-                    <input type="email" id="college-email" name="college-email"
-                        placeholder="Eg. example.eg2.22@aot.edu.in" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">password:</label>
-                    <input type="password" id="password" name="password" placeholder="Eg. (min 8 length)" required>
-                </div>
-                <div class="form-group">
-                    <label for="confirm-password">Confirm password:</label>
-                    <input type="password" id="confirm-password" name="confirm-password" placeholder="" required>
-                </div>
-                <div class="form-group">
-                    <label for="contact">Contact number:</label>
-                    <input type="number" id="contact" name="contact" placeholder="Eg. 1234567890" required>
-                </div>
-                <div class="form-group">
-                    <label for="guardian-name">Guardian Name:</label>
-                    <input type="text" id="guardian-name" name="guardian-name" placeholder="Eg. Random1" required>
-                </div>
-                <div class="form-group">
-                    <label for="guardian-contact">Guardian Contact No:</label>
-                    <input type="number" id="guardian-contact" name="guardian-contact" placeholder="Eg. 1234567890"
-                        required>
-                </div>
-                <div class="form-group">
-                    <label for="local-guardian-name">Local Guardian Name:</label>
-                    <input type="text" id="local-guardian-name" name="local-guardian-name" placeholder="Eg. Random2"
-                        required>
-                </div>
-                <div class="form-group">
-                    <label for="local-guardian-contact">Local Guardian Contact No:</label>
-                    <input type="number" id="local-guardian-contact" name="local-guardian-contact"
-                        placeholder="Eg. 1234567890" required>
-                </div>
-                <div class="form-group">
-                    <label for="permanent-address">Permanent Address:</label>
-                    <textarea id="permanent-address" name="permanent-address"
-                        placeholder="Eg. vill/city , dist, state,pin" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="present-address">Present Address:</label>
-                    <textarea id="present-address" name="present-address" placeholder="Eg. vill/city , dist, state,pin"
-                        required></textarea>
-                </div>
-                <button type="submit" id="submit">Submit</button>
-            </form>
+
+            <%- include("./partials/message") -%>
+
+                <form id="student-form" action="/studentPortal/studentsignup" method="post">
+                    <div class="form-group">
+                        <label for="student-name">Student Name:</label>
+                        <input type="text" id="student-name" name="student-name" placeholder="Eg. John Morry" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="university-roll">University Roll No:</label>
+                        <input type="number" id="university-roll" name="university-roll" placeholder="Eg. 12345678912"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="personal-email">Personal Email:</label>
+                        <input type="email" id="personal-email" name="personal-email"
+                            placeholder="Eg. example@gmail.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="college-email">College Email:</label>
+                        <input type="email" id="college-email" name="college-email"
+                            placeholder="Eg. example.eg2.22@aot.edu.in" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">password:</label>
+                        <input type="password" id="password" name="password" placeholder="Eg. (min 8 length)" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm password:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact">Contact number:</label>
+                        <input type="number" id="contact" name="contact" placeholder="Eg. 1234567890" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guardian-name">Guardian Name:</label>
+                        <input type="text" id="guardian-name" name="guardian-name" placeholder="Eg. Random1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guardian-contact">Guardian Contact No:</label>
+                        <input type="number" id="guardian-contact" name="guardian-contact" placeholder="Eg. 1234567890"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="local-guardian-name">Local Guardian Name:</label>
+                        <input type="text" id="local-guardian-name" name="local-guardian-name" placeholder="Eg. Random2"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="local-guardian-contact">Local Guardian Contact No:</label>
+                        <input type="number" id="local-guardian-contact" name="local-guardian-contact"
+                            placeholder="Eg. 1234567890" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="permanent-address">Permanent Address:</label>
+                        <textarea id="permanent-address" name="permanent-address"
+                            placeholder="Eg. vill/city , dist, state,pin" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="present-address">Present Address:</label>
+                        <textarea id="present-address" name="present-address"
+                            placeholder="Eg. vill/city , dist, state,pin" required></textarea>
+                    </div>
+                    <button type="submit" id="submit">Submit</button>
+                </form>
         </div>
     </div>
     <script>
-        let target = document.querySelector('section p');
-        let parentTarget = document.querySelector('section');
-        let password = document.querySelector('#password'), confirmPass = document.querySelector('#confirm-password');
-        let submit = document.querySelector('#submit');
-        submit.addEventListener('click', e => {
-            if (password.value.length < 8) {
-                sessionStorage.setItem("passwordMismatch", "Password must contain at-least 8 characters.");
-            }
-            else if (password.value.trim() !== confirmPass.value.trim()) {
-                sessionStorage.setItem("passwordMismatch", "Password didn't match. Please re-enter password.");
-            }
-            else {
-                sessionStorage.setItem("passwordMismatch", "Sign up successful! Please log in now.");
-            }
-        })
-        if (sessionStorage.getItem('passwordMismatch')) {
-            target.innerHTML = sessionStorage.getItem('passwordMismatch');
-            parentTarget.style.display = 'grid';
-            sessionStorage.removeItem('passwordMismatch');
-        }
-        else {
-            target.innerHTML = ""
-            parentTarget.style.display = 'none';
-        }
+
     </script>
 </body>
 
