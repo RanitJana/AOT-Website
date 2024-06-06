@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         "build": {
             keywords: ["build", "who make you", "make", "made"],
-            response: "I am a bot created by <span style='color red;'>Md Salman Farsee</span> during a College web design competition in 2024, with team members <span style='color red;'>Ranit Jana, Dipanjan Panja, Ranajit Dey, and Shreya Ghosh.</span>"
+            response: "I am a bot created by <span style='color:red;'>Md Salman Farsee</span> during a College web design competition in 2024, with team members <span style='color:red;'>Ranit Jana, Dipanjan Panja, Ranajit Dey, and Shreya Ghosh.</span>"
         }
 
     };
