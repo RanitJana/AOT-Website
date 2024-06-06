@@ -24,8 +24,8 @@
 #chatbot-icon {
     position: fixed;
     max-width: 50px;
-    bottom: 80px;
-    right: 33px;
+    bottom: 5%;
+    right: 3%;
     z-index: 100;
     cursor: pointer;
     transition: transform 0.1s;
