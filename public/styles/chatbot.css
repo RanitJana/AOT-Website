@@ -29,7 +29,7 @@
     /* padding: 5px; */
     position: fixed;
     right: 3%;
-    bottom: 0%;
+    bottom: 100px;
 
     z-index: 100;
     cursor: pointer;

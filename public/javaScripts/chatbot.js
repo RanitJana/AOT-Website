@@ -239,13 +239,13 @@ document.addEventListener('DOMContentLoaded', function () {
     let bot = document.querySelector('#chatbot-icon');
     function visibility() {
         if (Math.floor(window.scrollY) >= 190) {
-            bot.style.bottom = '80px';
+            bot.style.bottom = '100px';
         }
         else {
-            bot.style.bottom = '4%';
+            bot.style.bottom = '30px';
         }
     }
-    bot.style.bottom = '4%';
+    bot.style.bottom = '30px';
     window.addEventListener('scroll', visibility)
 });
 
