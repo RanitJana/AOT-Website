@@ -42,7 +42,9 @@
 
         header h1 {
             font-size: 2.5em;
-            color: #333;
+            background: linear-gradient(135deg, skyblue, blue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .form-container {
@@ -131,12 +133,24 @@
             place-items: center;
             margin-bottom: 1rem;
         }
+        header img{
+            width: 7rem;
+            margin-right: 1rem;
+            mix-blend-mode: multiply;
+        }
+        header{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
         <header>
+            <img src="/assets/images/aot-logo.jpg" alt="AOT" loading="eager" decoding="async">
             <h1>Student Portal</h1>
         </header>
         <section>
