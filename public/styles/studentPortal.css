@@ -26,6 +26,8 @@ input[type="number"] {
 
 section {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 section>div p {
