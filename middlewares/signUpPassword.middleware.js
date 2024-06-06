@@ -1,6 +1,5 @@
 
 const bcrypt = require('bcrypt');
-const path = require('path');
 
 const userSchema = require('../models/student.model.js');
 const { default: mongoose } = require('mongoose');
@@ -15,7 +14,6 @@ const checkValidPassword = (req, res, next) => {
 }
 
 const matchPassword = async (req, res, next) => {
-    // console.log(req.body);
     try {
         const roll = req.body["roll"];
         const password = req.body["password"];
@@ -29,6 +27,7 @@ const matchPassword = async (req, res, next) => {
         }
     }
     catch (err) {
+        console.log(err);
     }
     return res.redirect('/studentPortal/studentlogin');
 }

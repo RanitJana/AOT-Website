@@ -47,59 +47,65 @@
             <!-- <input type="hidden" name="formType" value="special"> -->
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" id="name" value=<%=fullName%> name="fullName" disabled>
+                <input type="text" id="name" value="<%= encodeURIComponent(fullName) %>" name="fullName" disabled>
             </div>
             <div class="form-group">
                 <label for="universityRollNo">University Roll No</label>
-                <input type="number" id="universityRollNo" value=<%=roll%> name="roll" disabled>
+                <input type="number" id="universityRollNo" value="<%= encodeURIComponent(roll) %>" name="roll" disabled>
             </div>
             <div class="form-group">
                 <label for="personalEmail">Personal Email</label>
-                <input type="email" id="personalEmail" value=<%=emailPersonal%> name="emailPersonal" disabled>
+                <input type="email" id="personalEmail" value="<%= encodeURIComponent(emailPersonal) %>"
+                    name="emailPersonal" disabled>
             </div>
             <div class="form-group">
                 <label for="collegeEmail">College Email</label>
-                <input type="email" id="collegeEmail" value=<%=emailAot%> name="emailAot" disabled>
+                <input type="email" id="collegeEmail" value="<%= encodeURIComponent(emailAot) %>" name="emailAot"
+                    disabled>
             </div>
             <div class="form-group">
                 <label for="contact">Contact</label>
-                <input type="number" id="contact" value=<%=contact%> name="contact" disabled>
+                <input type="number" id="contact" value="<%= encodeURIComponent(contact) %>" name="contact" disabled>
             </div>
             <div class="form-group">
                 <label for="guardianName">Guardian Name</label>
-                <input type="text" id="guardianName" value=<%=gurdian%> name="gurdian" disabled>
+                <input type="text" id="guardianName" value="<%= encodeURIComponent(gurdian) %>" name="gurdian" disabled>
             </div>
             <div class="form-group">
                 <label for="guardianContact">Guardian Contact No</label>
-                <input type="number" id="guardianContact" value=<%=gurdianContact%> name="gurdianContact" disabled>
+                <input type="number" id="guardianContact" value="<%= encodeURIComponent(gurdianContact) %>"
+                    name="gurdianContact" disabled>
             </div>
             <div class="form-group">
                 <label for="localGuardianName">Local Guardian Name</label>
-                <input type="text" id="localGuardianName" value=<%=localGurdian%> name="localGurdian" disabled>
+                <input type="text" id="localGuardianName" value="<%= encodeURIComponent(localGurdian) %>"
+                    name="localGurdian" disabled>
             </div>
             <div class="form-group">
                 <label for="localGuardianContact">Local Guardian Contact No</label>
-                <input type="number" id="localGuardianContact" value=<%=localGurdianContact%> name="localGurdianContact"
-                disabled>
+                <input type="number" id="localGuardianContact" value="<%= encodeURIComponent(localGurdianContact) %>"
+                    name="localGurdianContact" disabled>
             </div>
             <div class="form-group">
                 <label for="permanentAddress">Permanent Address</label>
-                <input type="text" id="permanentAddress" value=<%=permanentAddress%> name="permanentAddress" disabled>
+                <input type="text" id="permanentAddress" value="<%= encodeURIComponent(permanentAddress) %>"
+                    name="permanentAddress" disabled>
             </div>
             <div class="form-group">
                 <label for="presentAddress">Present Address</label>
-                <input type="text" id="presentAddress" value=<%=presentAddress%> name="presentAddress"
+                <input type="text" id="presentAddress" value="<%= encodeURIComponent(presentAddress) %>"
+                    value=<%=presentAddress%> name="presentAddress"
                 disabled>
             </div>
             <div class="form-group">
                 <label for="class10Marks">Class 10 Marks</label>
-                <input type="number" class="class10Marks" id="class10Marks" value=<%=class10Marks%> name="class10Marks"
-                disabled>
+                <input type="number" class="class10Marks" id="class10Marks"
+                    value="<%= encodeURIComponent(class10Marks) %>" name="class10Marks" disabled>
             </div>
             <div class="form-group">
                 <label for="class12Marks">Class 12 Marks</label>
-                <input type="number" class="class12Marks" id="class12Marks" value=<%=class12Marks%> name="class12Marks"
-                disabled>
+                <input type="number" class="class12Marks" id="class12Marks"
+                    value="<%= encodeURIComponent(class12Marks) %>" name="class12Marks" disabled>
             </div>
             <div class="form-group">
                 <label>SGPA:</label>
@@ -237,6 +243,12 @@
     </footer>
 
     <script src="/javaScripts/studentDetails.js"></script>
+    <script>
+        document.querySelectorAll('input').forEach(val => {
+            val.value = decodeURIComponent(val.value);
+        })
+        document.querySelector('input[name="fullName"]').value = decodeURIComponent('<%= encodeURIComponent(fullName) %>');
+    </script>
 </body>
 
 </html>
