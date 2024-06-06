@@ -41,7 +41,7 @@ async function updateFirstTimeUserData(req, res) {
 route
     .use(`/studentDetails`, studentDetails)
     .get('/', (req, res) => {
-        res.sendFile(path.join(__dirname, '../public/pages', 'studentlogin.html'));
+        res.render('studentlogin');
     })
     .post('/', matchPassword, async (req, res) => {
         return res.redirect('/studentPortal/studentlogin/studentDetails');

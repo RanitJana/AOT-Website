@@ -47,99 +47,102 @@
             <!-- <input type="hidden" name="formType" value="special"> -->
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" id="name" value="John Doe" name="fullName" disabled>
+                <input type="text" id="name" value=<%=fullName%> name="fullName" disabled>
             </div>
             <div class="form-group">
                 <label for="universityRollNo">University Roll No</label>
-                <input type="number" id="universityRollNo" value="123456" name="roll" disabled>
+                <input type="number" id="universityRollNo" value=<%=roll%> name="roll" disabled>
             </div>
             <div class="form-group">
                 <label for="personalEmail">Personal Email</label>
-                <input type="email" id="personalEmail" value="john.doe@example.com" name="emailPersonal" disabled>
+                <input type="email" id="personalEmail" value=<%=emailPersonal%> name="emailPersonal" disabled>
             </div>
             <div class="form-group">
                 <label for="collegeEmail">College Email</label>
-                <input type="email" id="collegeEmail" value="john.doe@college.edu" name="emailAot" disabled>
+                <input type="email" id="collegeEmail" value=<%=emailAot%> name="emailAot" disabled>
             </div>
             <div class="form-group">
                 <label for="contact">Contact</label>
-                <input type="number" id="contact" value="1234567890" name="contact" disabled>
+                <input type="number" id="contact" value=<%=contact%> name="contact" disabled>
             </div>
             <div class="form-group">
                 <label for="guardianName">Guardian Name</label>
-                <input type="text" id="guardianName" value="Jane Doe" name="gurdian" disabled>
+                <input type="text" id="guardianName" value=<%=gurdian%> name="gurdian" disabled>
             </div>
             <div class="form-group">
                 <label for="guardianContact">Guardian Contact No</label>
-                <input type="number" id="guardianContact" value="123-456-7890" name="gurdianContact" disabled>
+                <input type="number" id="guardianContact" value=<%=gurdianContact%> name="gurdianContact" disabled>
             </div>
             <div class="form-group">
                 <label for="localGuardianName">Local Guardian Name</label>
-                <input type="text" id="localGuardianName" value="Jake Doe" name="localGurdian" disabled>
+                <input type="text" id="localGuardianName" value=<%=localGurdian%> name="localGurdian" disabled>
             </div>
             <div class="form-group">
                 <label for="localGuardianContact">Local Guardian Contact No</label>
-                <input type="number" id="localGuardianContact" value="098-765-4321" name="localGurdianContact" disabled>
+                <input type="number" id="localGuardianContact" value=<%=localGurdianContact%> name="localGurdianContact"
+                disabled>
             </div>
             <div class="form-group">
                 <label for="permanentAddress">Permanent Address</label>
-                <input type="text" id="permanentAddress" value="123 Main St, Hometown" name="permanentAddress" disabled>
+                <input type="text" id="permanentAddress" value=<%=permanentAddress%> name="permanentAddress" disabled>
             </div>
             <div class="form-group">
                 <label for="presentAddress">Present Address</label>
-                <input type="text" id="presentAddress" value="456 College St, CollegeTown" name="presentAddress"
-                    disabled>
+                <input type="text" id="presentAddress" value=<%=presentAddress%> name="presentAddress"
+                disabled>
             </div>
             <div class="form-group">
                 <label for="class10Marks">Class 10 Marks</label>
-                <input type="number" class="class10Marks" id="class10Marks" value="95" name="class10Marks" disabled>
+                <input type="number" class="class10Marks" id="class10Marks" value=<%=class10Marks%> name="class10Marks"
+                disabled>
             </div>
             <div class="form-group">
                 <label for="class12Marks">Class 12 Marks</label>
-                <input type="number" class="class12Marks" id="class12Marks" value="90" name="class12Marks" disabled>
+                <input type="number" class="class12Marks" id="class12Marks" value=<%=class12Marks%> name="class12Marks"
+                disabled>
             </div>
             <div class="form-group">
                 <label>SGPA:</label>
                 <div class="sgpa-container">
                     <div>
                         <span><label for="">1st Sem</label></span>
-                        <input type="number" step="0.01" min="0" max="10" id="sgpa1" name="sgpa1" value="8.5"
-                            placeholder="1st Sem" name="1" disabled>
+                        <input type="number" step="0.01" min="0" max="10" id="sgpa1" name="sgpa1" value=<%=sgpa1%>
+                        placeholder="1st Sem" name="1" disabled>
                     </div>
                     <div>
                         <span><label for="">2nd Sem</label></span>
-                        <input type="number" step="0.01" min="0" max="10" id="sgpa2" name="sgpa2" value="8.8"
-                            placeholder="2nd Sem" name="2" disabled>
+                        <input type="number" step="0.01" min="0" max="10" id="sgpa2" name="sgpa2" value=<%=sgpa2%>
+                        placeholder="2nd Sem" name="2" disabled>
                     </div>
                     <div>
                         <span><label for="">3rd Sem</label></span>
-                        <input type="number" step="0.01" min="0" max="10" id="sgpa3" name="sgpa3" value="8.6"
-                            placeholder="3rd Sem" disabled>
+                        <input type="number" step="0.01" min="0" max="10" id="sgpa3" name="sgpa3" value=<%=sgpa3%>
+                        placeholder="3rd Sem" disabled>
                     </div>
                     <div>
                         <span><label for="">4th Sem</label></span>
-                        <input type="number" step="0.01" min="0" max="10" id="sgpa4" name="sgpa4" value="8.9"
-                            placeholder="4th Sem" disabled>
+                        <input type="number" step="0.01" min="0" max="10" id="sgpa4" name="sgpa4" value=<%=sgpa4%>
+                        placeholder="4th Sem" disabled>
                     </div>
                     <div>
                         <span><label for="">5th Sem</label></span>
-                        <input type="number" step="0.01" min="0" max="10" id="sgpa5" name="sgpa5" value="9.0"
-                            placeholder="5th Sem" disabled>
+                        <input type="number" step="0.01" min="0" max="10" id="sgpa5" name="sgpa5" value=<%=sgpa5%>
+                        placeholder="5th Sem" disabled>
                     </div>
                     <div>
                         <span><label for="">6th Sem</label></span>
-                        <input type="number" step="0.01" min="0" max="10" id="sgpa6" name="sgpa6" value="9.1"
-                            placeholder="6th Sem" disabled>
+                        <input type="number" step="0.01" min="0" max="10" id="sgpa6" name="sgpa6" value=<%=sgpa6%>
+                        placeholder="6th Sem" disabled>
                     </div>
                     <div>
                         <span><label for="">7th Sem</label></span>
-                        <input type="number" step="0.01" min="0" max="10" id="sgpa7" name="sgpa7" value="9.2"
-                            placeholder="7th Sem" disabled>
+                        <input type="number" step="0.01" min="0" max="10" id="sgpa7" name="sgpa7" value=<%=sgpa7%>
+                        placeholder="7th Sem" disabled>
                     </div>
                     <div>
                         <span><label for="">8th Sem</label></span>
-                        <input type="number" step="0.01" min="0" max="10" id="sgpa8" name="sgpa8" value="9.2"
-                            placeholder="8th Sem" disabled>
+                        <input type="number" step="0.01" min="0" max="10" id="sgpa8" name="sgpa8" value=<%=sgpa8%>
+                        placeholder="8th Sem" disabled>
                     </div>
                 </div>
             </div>
@@ -150,13 +153,6 @@
 
         <div class="data-container">
             <h2>Student SGPA Table</h2>
-            <label for="rowNumber">Select number of rows:</label>
-            <select id="rowNumber" onchange="updateTable()">
-                <option value="5">5</option>
-                <option value="10" selected>10</option>
-                <option value="20">20</option>
-                <option value="50">50</option>
-            </select>
 
             <div class="table-container">
                 <table id="studentTable">
@@ -175,14 +171,42 @@
                         </tr>
                     </thead>
                     <tbody>
-
+                        <% students.forEach(student=> { %>
+                            <tr>
+                                <td>
+                                    <%= student.roll %>
+                                </td>
+                                <td>
+                                    <%= student.fullName %>
+                                </td>
+                                <td>
+                                    <%= student.semMarks[0]?student.semMarks[0]:0 %>
+                                </td>
+                                <td>
+                                    <%= student.semMarks[1]?student.semMarks[1]:0 %>
+                                </td>
+                                <td>
+                                    <%= student.semMarks[2]?student.semMarks[2]:0 %>
+                                </td>
+                                <td>
+                                    <%= student.semMarks[3]?student.semMarks[3]:0 %>
+                                </td>
+                                <td>
+                                    <%= student.semMarks[4]?student.semMarks[4]:0 %>
+                                </td>
+                                <td>
+                                    <%= student.semMarks[5]?student.semMarks[5]:0 %>
+                                </td>
+                                <td>
+                                    <%= student.semMarks[6]?student.semMarks[6]:0 %>
+                                </td>
+                                <td>
+                                    <%= student.semMarks[7]?student.semMarks[7]:0 %>
+                                </td>
+                            </tr>
+                            <% }) %>
                     </tbody>
                 </table>
-            </div>
-
-            <div class="pagination">
-                <button id="prevButton" onclick="prevPage()" disabled>Previous</button>
-                <button id="nextButton" onclick="nextPage()">Next</button>
             </div>
         </div>
     </main>
@@ -213,12 +237,6 @@
     </footer>
 
     <script src="/javaScripts/studentDetails.js"></script>
-    <script>
-        document.querySelector('.backImg').addEventListener('click', () => {
-            window.location.href = '/studentPortal/studentlogin';
-        })
-    </script>
-    <!-- <script src="/javaScripts/chatbot.js"></script> -->
 </body>
 
 </html>

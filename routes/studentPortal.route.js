@@ -1,4 +1,3 @@
-const path = require('path');
 const express = require('express');
 const cookieParser = require('cookie-parser');
 
@@ -14,11 +13,11 @@ route
     .use('/studentlogin', studentlogin)
     .use('/studentsignup', studentsignup)
     .get('/', (req, res) => {
-        res.sendFile(path.join(__dirname, '../public/pages', 'studentPortal.html'));
+        res.render('studentPortal');
     })
     //admin section
     .get('/adminlogin', (req, res) => {
-        res.sendFile(path.join(__dirname, '../public/pages', 'adminlogin.html'));
+        res.render('adminlogin');
     })
 
 

@@ -38,6 +38,10 @@ input[type="number"] {
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    height: 8px;
+}
+
 .sgpa-container {
     display: grid;
     grid-gap: 1rem;
@@ -97,6 +101,8 @@ body {
     overflow-x: auto;
     /* Add horizontal scroll if content overflows */
     margin-top: 20px;
+    max-height: 500px;
+    border: 2px solid gray;
 }
 
 table {

@@ -1,6 +1,5 @@
 const express = require('express');
 const route = express.Router();
-const path = require('path');
 
 const studentSchema = require('../models/student.model.js');
 
@@ -36,7 +35,7 @@ async function assignInDataBase(req, res) {
 
 route
     .get('/', (req, res) => {
-        res.sendFile(path.join(__dirname, '../public/pages', 'studentsignup.html'));
+        res.render('studentsignup');
     })
     .post('/', checkValidPassword, checkUniqueness, assignInDataBase)
 

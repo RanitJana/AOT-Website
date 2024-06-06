@@ -1,6 +1,5 @@
 const express = require('express');
 const route = express.Router();
-const path = require('path')
 const userSchema = require('../models/student.model.js');
 const { checkProtected } = require('../middlewares/protected.middleware.js');
 
@@ -51,8 +50,42 @@ async function editDB(req, res, next) {
 
 
 route
-    .get('/', checkProtected, (req, res) => {
-        res.sendFile(path.join(__dirname, '../public/pages', 'studentDetails.html'));
+    .get('/', checkProtected, async (req, res) => {
+        try {
+
+            let id = req.cookies.id;
+            const user = await userSchema.findOne({ _id: `${id}` });
+            let students = await userSchema.find().sort({ roll: 1 });
+
+            let info = {
+                fullName: user['fullName'],
+                roll: user['roll'],
+                emailPersonal: user['emailPersonal'],
+                emailAot: user['emailAot'],
+                contact: user['contact'],
+                gurdian: user['gurdian'],
+                gurdianContact: user['gurdianContact'],
+                localGurdian: user['localGurdian'],
+                localGurdianContact: user['localGurdianContact'],
+                permanentAddress: user['permanentAddress'],
+                presentAddress: user['presentAddress'],
+                class10Marks: user['class10Marks'],
+                class12Marks: user['class12Marks'],
+                sgpa1: user.semMarks[0] ? user.semMarks[0] : 0,
+                sgpa2: user.semMarks[1] ? user.semMarks[1] : 0,
+                sgpa3: user.semMarks[2] ? user.semMarks[2] : 0,
+                sgpa4: user.semMarks[3] ? user.semMarks[3] : 0,
+                sgpa5: user.semMarks[4] ? user.semMarks[4] : 0,
+                sgpa6: user.semMarks[5] ? user.semMarks[5] : 0,
+                sgpa7: user.semMarks[6] ? user.semMarks[6] : 0,
+                sgpa8: user.semMarks[7] ? user.semMarks[7] : 0,
+                students
+            }
+            return res.render('studentDetails', info);
+        }
+        catch (err) {
+            return res.redirect('/studentPortal/studentlogin/studentDetails');
+        }
     })
     .post('/', editDB, (req, res) => {
         res.redirect('/studentPortal/studentlogin/studentDetails');
