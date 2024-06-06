@@ -1,5 +1,7 @@
 // const { response } = require("express");
 
+const { response } = require("express");
+
 document.addEventListener('DOMContentLoaded', function () {
     const chatbox = document.getElementById('chatbox');
     const inputField = document.getElementById('input');
@@ -80,7 +82,11 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         "location": {
             keywords: ["location", "locations", "address", "map", "maps"],
-            response: "G.T.Road (Adisaptagram), Aedconagar Hooghly, West Bengal Hooghly - 712121 West Bengal, India <a href='/index#location' style='text-decoration:none;color:red;'>map.</a>"
+            response: "G.T.Road (Adisaptagram), Aedconagar Hooghly, West Bengal Hooghly - 712121 West Bengal, India <a href='/#location' style='text-decoration:none;color:red;'>map.</a>"
+        },
+        "build": {
+            keywords: ["build", "who make you", "make", "made"],
+            response: "I am a bot created by <span style='color red;'>Md Salman Farsee</span> during a College web design competition in 2024, with team members <span style='color red;'>Ranit Jana, Dipanjan Panja, Ranajit Dey, and Shreya Ghosh.</span>"
         }
 
     };
