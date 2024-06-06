@@ -234,3 +234,14 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.style.overflow = '';
     });
 });
+let bot = document.querySelector('#chatbot-icon');
+function visibility() {
+    if (Math.floor(window.scrollY) >= 190) {
+        bot.style.bottom = '80px';
+    }
+    else {
+        bot.style.bottom = '4%';
+    }
+}
+window.addEventListener('scroll', visibility)
+

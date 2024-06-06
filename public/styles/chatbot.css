@@ -21,14 +21,24 @@
     }
 }
 
+
+
 #chatbot-icon {
+    height: 40px;
+    width: 40px;
+    /* padding: 5px; */
     position: fixed;
-    max-width: 50px;
-    bottom: 5%;
     right: 3%;
+    bottom: 4%;
+
     z-index: 100;
     cursor: pointer;
-    transition: transform 0.1s;
+    transition: all 0.3s ease;
+
+    /* background-color: orange; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #chatbot-icon:hover {
@@ -214,4 +224,11 @@ button {
     border-top: 8px solid transparent;
     border-right: 14px solid #F8C794;
     border-bottom: 8px solid transparent;
+}
+
+@media only screen and (max-width: 655px) {
+    #chatbot-icon {
+        right: 40px;
+        bottom: 100px;
+    }
 }
