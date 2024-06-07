@@ -30,11 +30,32 @@ const sendMail = async (req, res, next) => {
         const mailOptions = {
             from: process.env.EMAIL_USER,
             to: req.body['email'],
-            subject: 'OTP to reset Password',
-            text: `Your OTP is :\n${otp.otp}`
+            subject: 'Your OTP for Password Change at Academy of Technology',
+            html: `
+        <div style="font-family: Arial, sans-serif; padding: 20px; line-height: 1.6;">
+            <h2 style="font-size: 24px; color: #333;">Hello,</h2>
+            <p style="font-size: 16px; color: #555;">
+                We have received a request to change the password for your account at the <strong>Academy of Technology</strong>.
+            </p>
+            <p style="font-size: 16px; color: #555;">
+                Please use the following One-Time Password (OTP) to proceed with your password change:
+            </p>
+            <p style="font-size: 24px; color: #333; font-weight: bold;text-align:center">
+                ${otp.otp}
+            </p>
+            <p style="font-size: 16px; color: #555;">
+                If you did not request a password change, please ignore this email or contact our support team immediately.
+            </p>
+            <p style="font-size: 16px; color: #555;">
+                Thank you for your attention.
+            </p>
+            <p style="font-size: 14px; color: #777;">
+                Best regards,<br>
+                <strong>Academy of Technology</strong><br>
+            </p>
+        </div>
+    `,
         };
-
-        // Send email
         const info = await transporter.sendMail(mailOptions);
         req.flash('success', `An OTP is send to your email ${req.body['email']}`);
         return next();
