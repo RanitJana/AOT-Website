@@ -7,6 +7,12 @@ const matchPassword = async (req, res, next) => {
     try {
         const password = req.body["password"].trim();
         const confirmPasword = req.body['confirm-password'].trim();
+
+        if (password.length < 8) {
+            req.flash('error', "Password length must not less than 8")
+            return res.redirect('/studentPortal/studentlogin/forgetPassword/changePassword');
+        }
+
         const user = await userSchema.findOne({ _id: `${req.cookies.id}` });
 
         if (user && password === confirmPasword) {

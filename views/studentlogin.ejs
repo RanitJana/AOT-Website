@@ -97,15 +97,16 @@
         }
 
         a {
-            font-size: 0.9rem;
+            font-size: 1rem;
+            padding: 10px;
         }
 
         .section {
             margin-top: 0.5rem;
             width: 100%;
             display: grid;
-            grid-template-columns: 50% auto;
-            grid-gap: 1rem;
+            grid-template-columns: auto;
+            grid-gap: 0.5rem;
         }
 
         .success {
@@ -145,15 +146,6 @@
         }
 
         @media only screen and (max-width:351px) {
-            .section {
-                grid-template-columns: auto;
-                grid-gap: 0.5rem;
-            }
-
-            .section a {
-                padding: 10px;
-
-            }
 
             .login-container {
                 width: 100%;
@@ -185,11 +177,11 @@
                 <button type="submit" id="submit">Login</button>
             </form>
             <div class="section">
-                <a href="/studentPortal/studentlogin/forgetPassword">
-                    <span>Forget Password?</span>
-                </a>
                 <a href="/studentPortal/studentsignup">
                     <span>Sign Up</span>
+                </a>
+                <a href="/studentPortal/studentlogin/forgetPassword">
+                    <span>Forget Password?</span>
                 </a>
             </div>
     </div>

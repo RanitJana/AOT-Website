@@ -7,7 +7,11 @@ const { default: mongoose } = require('mongoose');
 const checkValidPassword = (req, res, next) => {
     const password = req.body["password"];
     const confirmPassword = req.body["confirm-password"];
-    if (password !== confirmPassword || password.length < 8) {
+    if (password != confirmPassword) {
+        req.flash('error', "Password did not match!")
+        return res.redirect('/studentPortal/studentsignup');
+    }
+    if (password.length < 8) {
         req.flash('error', "Password length must not less than 8")
         return res.redirect('/studentPortal/studentsignup');
     }
