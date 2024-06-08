@@ -184,20 +184,20 @@ getFutureEventData().then(() => {
 
 
 //scroll to top
-let scrollToTop = document.querySelector('.scrollTo');
-function visibility() {
-    if (Math.floor(window.scrollY) >= 190) {
-        scrollToTop.style.scale = '1';
-    }
-    else {
-        scrollToTop.style.scale = '0';
-    }
-}
-scrollToTop.addEventListener('click', e => {
-    window.scrollTo(0, 0);
-})
-window.addEventListener('scroll', visibility)
-window.addEventListener('load', visibility)
+// let scrollToTop = document.querySelector('.scrollTo');
+// function visibility() {
+//     if (Math.floor(window.scrollY) >= 190) {
+//         scrollToTop.style.scale = '1';
+//     }
+//     else {
+//         scrollToTop.style.scale = '0';
+//     }
+// }
+// scrollToTop.addEventListener('click', e => {
+//     window.scrollTo(0, 0);
+// })
+// window.addEventListener('scroll', visibility)
+// window.addEventListener('load', visibility)
 
 let numbers = document.querySelectorAll('.exp > .blackCover > .content > div > span:first-child');
 

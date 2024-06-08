@@ -27,7 +27,38 @@
                 <button type="submit" id="submit">Submit</button>
             </form>
     </div>
+    <script>
+        let inputs = document.querySelectorAll('input');
+        let buttons = document.querySelectorAll('button');
+        let form = document.getElementById('login-form');
+        function disable(elements) {
+            elements.forEach(val => {
+                val.readonly = true;
+            })
+        }
+        function enable(elements) {
+            elements.forEach(val => {
+                val.readonly = false;
+            })
+        }
 
+        form.addEventListener('submit', e => {
+            inputs.forEach(val => {
+                val.readonly = true;
+            })
+            buttons.forEach(val => {
+                val.disabled = true;
+            })
+        })
+        window.addEventListener('load', e => {
+            inputs.forEach(val => {
+                val.readonly = false;
+            })
+            buttons.forEach(val => {
+                val.disabled = false;
+            })
+        })
+    </script>
 </body>
 
 </html>
