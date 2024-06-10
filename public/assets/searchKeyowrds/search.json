@@ -1,7 +1,7 @@
 {
     "achievement rankings": {
         "Achievement": {
-            "link": "./achivemant",
+            "link": "./achivement",
             "content": "This section showcases various achievements of the college such as awards, recognitions, and notable accomplishments by students and faculty members. It includes details about academic achievements, research publications, participation in competitions, and other accolades."
         }
     },
@@ -167,6 +167,12 @@
         "Postgraduate Departments": {
             "link": "./department#pg",
             "content": "The 'Postgraduate Departments' section offers comprehensive information about the postgraduate programs offered by our college. Explore the academic structure, courses, and programs available in various departments for postgraduate students. Learn about the curriculum, academic requirements, course syllabi, and program outcomes designed to advance your knowledge and expertise in your chosen field. Discover opportunities for research, specialization, and professional development to excel in your career."
+        }
+    },
+    "student portal login register": {
+        "student portal": {
+            "link": "/studentPortal",
+            "content": "A student portal is a secure online platform where students access educational resources, grades, schedules, and academic services. It facilitates efficient communication between students, faculty, and administration. By centralizing academic tools and information, it enhances the overall educational experience."
         }
     }
 }
