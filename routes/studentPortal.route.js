@@ -4,6 +4,9 @@ const cookieParser = require('cookie-parser');
 const studentlogin = require('./studentlogin.route.js');
 const studentsignup = require('./studentsignup.route.js');
 
+const adminLogin = require('./adminLogin.route.js');
+const adminSignup = require('./adminSignup.route.js');
+
 const route = express.Router();
 
 route
@@ -12,13 +15,11 @@ route
     //studnet section
     .use('/studentlogin', studentlogin)
     .use('/studentsignup', studentsignup)
+    //admin section
+    .use('/adminLogin', adminLogin)
+    .use('/adminSignup', adminSignup)
     .get('/', (req, res) => {
         res.render('studentPortal');
     })
-    //admin section
-    .get('/adminlogin', (req, res) => {
-        res.render('adminlogin');
-    })
-
 
 module.exports = route;
