@@ -16,8 +16,8 @@ route
     .use('/studentlogin', studentlogin)
     .use('/studentsignup', studentsignup)
     //admin section
-    .use('/adminLogin', adminLogin)
-    .use('/adminSignup', adminSignup)
+    // .use('/adminLogin', adminLogin)
+    // .use('/adminSignup', adminSignup)
     .get('/', (req, res) => {
         res.render('studentPortal');
     })
