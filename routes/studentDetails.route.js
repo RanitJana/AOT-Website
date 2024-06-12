@@ -16,10 +16,10 @@ async function editDB(req, res, next) {
 
             user.fullName = req.body["fullName"];
             res.cookie.username = req.body["fullName"];
-            user.roll = req.body["roll"];
+            // user.roll = req.body["roll"];
             user.emailPersonal = req.body["emailPersonal"];
             user.emailAot = req.body["emailAot"];
-            user.admissionYear = req.body["admissionYear"];
+            // user.admissionYear = req.body["admissionYear"];
             user.contact = req.body["contact"];
             user.gurdian = req.body["gurdian"];
             user.gurdianContact = req.body["gurdianContact"];
@@ -33,7 +33,7 @@ async function editDB(req, res, next) {
             newSemMarks.forEach((val, idx) => {
                 user.semMarks[idx] = val;
             })
-            if (req.body["department"]) user.department = req.body["department"];
+            // if (req.body["department"]) user.department = req.body["department"];
             user.save();
             res.cookie.id = user['_id'];
         }

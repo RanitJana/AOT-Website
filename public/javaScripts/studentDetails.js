@@ -3,7 +3,8 @@ const inputs = document.querySelectorAll('.form-group input');
 const select = document.querySelectorAll('select');
 btns[0].addEventListener('click', e => {
     inputs.forEach(input => {
-        input.disabled = false;
+        if (input.getAttribute('id') != 'admissionYear' && input.getAttribute('id') != 'department' && input.getAttribute('id') != 'universityRollNo')
+            input.disabled = false;
     });
     select.forEach(sel => {
         sel.disabled = false;
