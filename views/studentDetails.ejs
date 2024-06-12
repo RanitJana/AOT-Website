@@ -188,6 +188,7 @@
                         <tr>
                             <th>Student Roll</th>
                             <th>Student Name</th>
+                            <th>Department</th>
                             <th>SGPA Sem 1</th>
                             <th>SGPA Sem 2</th>
                             <th>SGPA Sem 3</th>
@@ -206,6 +207,9 @@
                                 </td>
                                 <td>
                                     <%= student.fullName %>
+                                </td>
+                                <td>
+                                    <%= student.department %>
                                 </td>
                                 <td>
                                     <%= student.semMarks[0]?student.semMarks[0]:0 %>
