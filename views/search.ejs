@@ -45,7 +45,7 @@
 
     </header>
     <main>
-        <div class="response beforeIntro">
+        <div class="response beforeIntro back-btn">
             <img src="/assets/video/icons8-home.gif" alt="Return" decoding="async" class="back-btn">
             <p id="res"></p>
         </div>
@@ -58,6 +58,11 @@
     <link rel="stylesheet" href="/styles/aiBot.css"> <!--for style-->
     <script src="/javaScripts/search.js" defer></script>
     <script src="/javaScripts/userOnOff.js" defer></script>
+    <script>
+        document.querySelector('.back-btn').addEventListener('click', () => {
+            window.history.back();
+        });
+    </script>
 </body>
 
 </html>

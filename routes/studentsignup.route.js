@@ -44,7 +44,6 @@ route
             let user = await memorySchema.findOne({ uniqueID: myUrl.query.slice(3) });
             if (user) {
                 assignInDataBase(req, res, user);
-                await memorySchema.deleteOne({ uniqueID: myUrl.query.slice(3) });
                 req.flash('success', "Sign Up successful");
                 res.redirect('/studentPortal/studentlogin');
             }
@@ -52,6 +51,7 @@ route
                 req.flash('error', "Invalid request");
                 res.redirect('/studentPortal/studentsignup');
             }
+            await memorySchema.deleteOne({ uniqueID: myUrl.query.slice(3) });
         } else
             res.render('studentsignup');
     })

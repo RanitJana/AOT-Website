@@ -225,6 +225,9 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <!-- Initialize Swiper -->
     <script>
+        document.querySelector('.back-btn').addEventListener('click', () => {
+            window.history.back();
+        });
         var swiper = new Swiper(".nssSwiper", {
             slidesPerView: 1,
             spaceBetween: 30,
