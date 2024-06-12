@@ -45,6 +45,22 @@
                             required>
                     </div>
                     <div class="form-group">
+                        <label for="department">Department:</label>
+                        <select name="department" id="department">
+                            <option value="CSE" selected>CSE</option>
+                            <option value="ECE">ECE</option>
+                            <option value="CSBS">CSBS</option>
+                            <option value="EE">EE</option>
+                            <option value="EEE">EEE</option>
+                            <option value="ME">ME</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="admission-year">Admission year:</label>
+                        <input type="number" id="admission-year" name="admission-year" placeholder="2022" min="2000"
+                            max="<%=year%>" required>
+                    </div>
+                    <div class="form-group">
                         <label for="personal-email">Personal Email:</label>
                         <input type="email" id="personal-email" name="personal-email"
                             placeholder="Eg. example@gmail.com" required>

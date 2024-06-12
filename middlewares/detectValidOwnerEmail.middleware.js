@@ -18,6 +18,8 @@ async function assignInMemoryDataBase(req, res, randomSTR) {
         await memorySchema.create({
             fullName: req.body["student-name"],
             roll: req.body["university-roll"],
+            department: req.body["department"],
+            admissionYear: req.body["admission-year"],
             emailPersonal: req.body["personal-email"],
             emailAot: req.body["college-email"],
             password: req.body["password"],

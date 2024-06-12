@@ -16,6 +16,8 @@ async function assignInDataBase(req, res, user) {
         await studentSchema.create({
             fullName: user.fullName,
             roll: user.roll,
+            department: user.department,
+            admissionYear: user.admissionYear,
             emailPersonal: user.emailPersonal,
             emailAot: user.emailAot,
             password: user.password,
@@ -53,7 +55,7 @@ route
             }
             await memorySchema.deleteOne({ uniqueID: myUrl.query.slice(3) });
         } else
-            res.render('studentsignup');
+            res.render('studentsignup', { year: new Date().getFullYear() });
     })
     .post('/', checkValidPassword, checkUniqueness, detectAndSendMail, (req, res) => {
         res.render('sendSignupMail');

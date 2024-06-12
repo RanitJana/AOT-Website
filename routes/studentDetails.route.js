@@ -19,7 +19,7 @@ async function editDB(req, res, next) {
             user.roll = req.body["roll"];
             user.emailPersonal = req.body["emailPersonal"];
             user.emailAot = req.body["emailAot"];
-            // user.password = req.body[];
+            user.admissionYear = req.body["admissionYear"];
             user.contact = req.body["contact"];
             user.gurdian = req.body["gurdian"];
             user.gurdianContact = req.body["gurdianContact"];
@@ -33,19 +33,16 @@ async function editDB(req, res, next) {
             newSemMarks.forEach((val, idx) => {
                 user.semMarks[idx] = val;
             })
-
+            if (req.body["department"]) user.department = req.body["department"];
             user.save();
             res.cookie.id = user['_id'];
         }
         catch (err) {
             console.log(err);
-            return res.redirect('/studentPortal/studentlogin/studentDetails');
         }
         return next();
-
     }
     else res.redirect('/studentPortal/studentlogin');
-
 }
 
 
@@ -60,6 +57,8 @@ route
             let info = {
                 fullName: user['fullName'],
                 roll: user['roll'],
+                department: user['department'],
+                admissionYear: user['admissionYear'],
                 emailPersonal: user['emailPersonal'],
                 emailAot: user['emailAot'],
                 contact: user['contact'],

@@ -22,8 +22,15 @@ const studentSchema = new mongoose.Schema({
     },
     roll: {
         type: Number,
-        required: true,
-        unique: true,
+        required: true
+    },
+    department: {
+        type: String,
+        required: true
+    },
+    admissionYear: {
+        type: Number,
+        required: true
     },
     emailPersonal: {
         type: String,

@@ -81,6 +81,18 @@ input[type="number"] {
     background-color: #218838;
 }
 
+select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
 /*============================================ table =============================================== */
 body {
     font-family: Arial, sans-serif;

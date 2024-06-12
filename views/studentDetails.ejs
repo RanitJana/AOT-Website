@@ -67,6 +67,25 @@
                 <input type="number" id="universityRollNo" value="<%= encodeURIComponent(roll) %>" name="roll" disabled>
             </div>
             <div class="form-group">
+                <label for="department">Department</label>
+                <select name="department" id="department" name="department" disabled>
+                    <option value="" style="visibility: hidden;">
+                        <%=encodeURIComponent(department) %>
+                    </option>
+                    <option value="CSE">CSE</option>
+                    <option value="ECE">ECE</option>
+                    <option value="CSBS">CSBS</option>
+                    <option value="EE">EE</option>
+                    <option value="EEE">EEE</option>
+                    <option value="ME">ME</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="admissionYear">Admission year</label>
+                <input type="number" id="admissionYear" value="<%= encodeURIComponent(admissionYear) %>"
+                    name="admissionYear" disabled>
+            </div>
+            <div class="form-group">
                 <label for="personalEmail">Personal Email</label>
                 <input type="email" id="personalEmail" value="<%= encodeURIComponent(emailPersonal) %>"
                     name="emailPersonal" disabled>
