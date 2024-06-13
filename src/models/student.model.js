@@ -1,19 +1,5 @@
-require('dotenv').config();
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
-const DB_NAME = require('../constants.js');
-
-; (
-    async () => {
-        try {
-            await mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`);
-        }
-        catch (err) {
-            console.log(err);
-            throw err;
-        }
-    }
-)()
 
 const studentSchema = new mongoose.Schema({
     fullName: {

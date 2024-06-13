@@ -1,13 +1,30 @@
 require('dotenv').config()
+const mongoose = require('mongoose');
+const DB_NAME = require('./constants.js');
 const express = require('express');
 const path = require('path')
 const app = express();
 const session = require('express-session');
 const flash = require('connect-flash');
 
+//DB connection
+; (
+    async () => {
+        try {
+            await mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`);
+            console.log('Connected to database');
+        }
+        catch (err) {
+            console.log(err);
+            throw err;
+        }
+    }
+)()
+
+//routing
 
 app
-    .use(express.static(path.join(__dirname, 'public')))
+    .use(express.static(path.join(__dirname, './src/public')))
     .use(session({
         resave: false,
         saveUninitialized: false,
@@ -20,32 +37,33 @@ app
         next();
     })
 
-const achivement = require('./routes/achivement.route.js');
-const career = require('./routes/career.route.js');
-const contact = require('./routes/contact.route.js');
-const cse = require('./routes/cse.route.js');
-const curriculum = require('./routes/curriculum.route.js');
-const department = require('./routes/department.route.js');
-const departmentNewsLetter = require('./routes/departmentNewsLetter.route.js');
-const event = require('./routes/event.route.js');
-const facility = require('./routes/facility.route.js');
-const faculty = require('./routes/faculty.route.js');
-const JoinUs = require('./routes/joinUs.route.js');
-const library = require('./routes/library.route.js');
-const LifeAOT = require('./routes/lifeAOT.route.js')
-const MBA = require('./routes/MBA.route.js');
-const placement = require('./routes/placement.route.js');
-const programStructure = require('./routes/programStructure.route.js');
-const regulation = require('./routes/regulation.route.js');
-const research = require('./routes/research.route.js');
-const staff = require('./routes/staff.route.js');
-const StudentActivity = require('./routes/studentActivity.route.js');
-const studentPortal = require('./routes/studentPortal.route.js');
-const search = require('./routes/search.route.js');
-const nss = require('./routes/nss.route.js');
+const achivement = require('./src/routes/achivement.route.js');
+const career = require('./src/routes/career.route.js');
+const contact = require('./src/routes/contact.route.js');
+const cse = require('./src/routes/cse.route.js');
+const curriculum = require('./src/routes/curriculum.route.js');
+const department = require('./src/routes/department.route.js');
+const departmentNewsLetter = require('./src/routes/departmentNewsLetter.route.js');
+const event = require('./src/routes/event.route.js');
+const facility = require('./src/routes/facility.route.js');
+const faculty = require('./src/routes/faculty.route.js');
+const JoinUs = require('./src/routes/joinUs.route.js');
+const library = require('./src/routes/library.route.js');
+const LifeAOT = require('./src/routes/lifeAOT.route.js')
+const MBA = require('./src/routes/MBA.route.js');
+const placement = require('./src/routes/placement.route.js');
+const programStructure = require('./src/routes/programStructure.route.js');
+const regulation = require('./src/routes/regulation.route.js');
+const research = require('./src/routes/research.route.js');
+const staff = require('./src/routes/staff.route.js');
+const StudentActivity = require('./src/routes/studentActivity.route.js');
+const studentPortal = require('./src/routes/studentPortal.route.js');
+const search = require('./src/routes/search.route.js');
+const nss = require('./src/routes/nss.route.js');
 
 app
     .set('view engine', 'ejs')
+    .set('views', path.join(__dirname, 'src/views'))
     .use('/achivement', achivement)
     .use('/career', career)
     .use('/contact', contact)
