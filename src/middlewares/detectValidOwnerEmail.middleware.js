@@ -42,6 +42,12 @@ async function assignInMemoryDataBase(req, res, randomSTR) {
 
 
 const detectAndSendMail = async (req, res, next) => {
+    //check valid college email
+    if (!req.body['college-email'].endsWith('@aot.edu.in')) {
+        req.flash('error', 'Please enter a valid Academy of Technology email address');
+        return res.redirect('/studentPortal/studentsignup');
+    }
+
     let randomSTR = generateRandomString();
     let link = `${getURI(req)}` + '?id=' + randomSTR;
     assignInMemoryDataBase(req, res, randomSTR);

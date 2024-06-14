@@ -4,30 +4,34 @@ const userSchema = require('../models/student.model.js');
 //unique valus are -> roll, emailPersonal, emailAot, contact
 
 const checkUniqueness = async (req, res, next) => {
-
-    let ans = false;
     try {
-
-        let uniqueValues = ['roll', 'emailPersonal', 'emailAot', 'contact']
-        let inpValues = [req.body["university-roll"], req.body["personal-email"], req.body["college-email"], req.body["contact"],];
-        uniqueValues.forEach(async (value, index) => {
-
-            let isExist = await userSchema.findOne({ [value]: `${inpValues[index]}` });
-            if (isExist) {
-                req.flash('error', "Your University Roll or Personal Email or Aot Mail Id is already registered!!")
-                ans = true;
-            }
-        })
-
+        let isExist = await userSchema.findOne({ roll: `${req.body["university-roll"]}` });
+        if (isExist) {
+            req.flash('error', "Your University Roll is already registered!!");
+            return res.redirect('/studentPortal/studentsignup');
+        }
+        isExist = await userSchema.findOne({ emailPersonal: `${req.body["personal-email"]}` });
+        if (isExist) {
+            req.flash('error', "Your Personal Email is already registered!!");
+            return res.redirect('/studentPortal/studentsignup');
+        }
+        isExist = await userSchema.findOne({ emailAot: `${req.body["college-email"]}` });
+        if (isExist) {
+            req.flash('error', "Your Aot Mail Id is already registered!!");
+            return res.redirect('/studentPortal/studentsignup');
+        }
+        isExist = await userSchema.findOne({ contact: `${req.body["contact"]}` });
+        if (isExist) {
+            req.flash('error', "Your Contact Number is already registered!!");
+            return res.redirect('/studentPortal/studentsignup');
+        }
     }
     catch (err) {
-        // console.log((err));
-    }
-    if (ans) {
+        console.log(err);
+        req.flash('error', "Registration failed");
         return res.redirect('/studentPortal/studentsignup');
     }
     return next();
-
 }
 
 module.exports = {
