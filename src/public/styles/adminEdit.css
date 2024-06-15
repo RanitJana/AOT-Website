@@ -1,12 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
-    padding: 0;
+    padding: 0 1rem;
 }
 
 .container {
-    max-width: 800px;
+    /* max-width: 800px; */
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
@@ -32,7 +36,8 @@ input[type="email"] {
     border-radius: 4px;
 }
 
-button {
+button,
+input[type="submit"] {
     padding: 10px 15px;
     margin-top: 10px;
     border: none;
@@ -121,4 +126,31 @@ tbody tr:nth-child(even) {
 tbody tr:nth-child(odd) {
     background-color: #ffffff;
     /* White for even rows */
+}
+
+.success {
+    background-color: rgba(120, 178, 34, 0.809);
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid rgb(1, 106, 1);
+    padding: 1rem;
+    display: grid;
+    color: white;
+    place-items: center;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.error {
+    background-color: rgb(255, 59, 59);
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid rgb(193, 0, 0);
+    display: grid;
+    color: white;
+    place-items: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    text-align: center;
 }

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/headerStyle.css">
+    <link rel="stylesheet" href="/styles/footerStyle.css">
+    <link rel="stylesheet" href="/styles/basicStyles.css">
+    <link rel="stylesheet" href="/styles/placement.css">
+    <!-- <link rel="stylesheet" href="/styles/chatbot.css"> -->
+    <link rel="preload" href="/styles/aiBot.css" as="style" onload="this.onload=null;this.rel='stylesheet';">
+
+    <noscript>
+        <link rel="stylesheet" href="/styles/aiBot.css">
+    </noscript>
+    <link rel="stylesheet" href="/styles/studentDetailsStyle.css">
+</head>
+
+<body>
+    <div class="previewBot">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+            class="document-icon">
+            <path
+                d="M15 0H5C2.24 0 0 2.23 0 4.98V11.96C0 14.71 2.24 16.94 5 16.94H6.5C6.77 16.94 7.13 17.12 7.3 17.34L8.8 19.33C9.46 20.21 10.54 20.21 11.2 19.33L12.7 17.34C12.89 17.09 13.19 16.94 13.5 16.94H15C17.76 16.94 20 14.71 20 11.96V4.98C20 2.23 17.76 0 15 0ZM11 11.75H5C4.59 11.75 4.25 11.41 4.25 11C4.25 10.59 4.59 10.25 5 10.25H11C11.41 10.25 11.75 10.59 11.75 11C11.75 11.41 11.41 11.75 11 11.75ZM15 6.75H5C4.59 6.75 4.25 6.41 4.25 6C4.25 5.59 4.59 5.25 5 5.25H15C15.41 5.25 15.75 5.59 15.75 6C15.75 6.41 15.41 6.75 15 6.75Z"
+                fill="white" />
+        </svg>
+    </div>
+    <div class="onOrOff">
+        <img src="/assets/images/icons8-no-connection.gif" alt="./assets/images/icons8-no-connection.gif">
+        <img src="/assets/images/icons8-online.gif" alt="./assets/images/icons8-online.gif">
+        <p>We are online</p>
+    </div>
+    <main>
+        <header>
+            <div class="banner">
+                <div class="left">
+                    <img src="/assets/images/aot-logo.webp" loading="lazy" alt="Error">
+                </div>
+                <div class="middle">
+                    <h1>ACADEMY OF TECHNOLOGY</h1>
+                    <span>...translate your vision into reality</span>
+                </div>
+            </div>
+
+        </header>
+
+        <div class="back">
+            <div class="backImg">
+                <img src="/assets/video/icons8-home.gif" alt="Back Icon">
+            </div>
+            <h1>Details</h1>
+        </div>
+
+
+        <form action="/studentPortal/adminlogin/adminDashboard/<%= roll %>/" method="post" class="container">
+            <h2>Student Details</h2>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" value="<%= encodeURIComponent(fullName) %>" name="fullName" disabled>
+            </div>
+            <div class="form-group">
+                <label for="universityRollNo">University Roll No</label>
+                <input type="number" id="universityRollNo" value="<%= encodeURIComponent(roll) %>" name="roll" disabled>
+            </div>
+            <div class="form-group">
+                <label for="department">Department</label>
+                <select name="department" id="department">
+                    <option value="CSE" <%=department==='CSE' ? 'selected' : '' %>>CSE</option>
+                    <option value="ECE" <%=department==='ECE' ? 'selected' : '' %>>ECE</option>
+                    <option value="CSBS" <%=department==='CSBS' ? 'selected' : '' %>>CSBS</option>
+                    <option value="EE" <%=department==='EE' ? 'selected' : '' %>>EE</option>
+                    <option value="EEE" <%=department==='ME' ? 'selected' : '' %>>EEE</option>
+                    <option value="ME" <%=department==='EEE' ? 'selected' : '' %>>ME</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="admissionYear">Admission year</label>
+                <input type="number" id="admissionYear" value="<%= encodeURIComponent(admissionYear) %>"
+                    name="admissionYear" disabled>
+            </div>
+            <div class="form-group">
+                <label for="personalEmail">Personal Email</label>
+                <input type="email" id="personalEmail" value="<%= encodeURIComponent(emailPersonal) %>"
+                    name="emailPersonal" disabled>
+            </div>
+            <div class="form-group">
+                <label for="collegeEmail">College Email</label>
+                <input type="email" id="collegeEmail" value="<%= encodeURIComponent(emailAot) %>" name="emailAot"
+                    disabled>
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact</label>
+                <input type="number" id="contact" value="<%= encodeURIComponent(contact) %>" name="contact" disabled>
+            </div>
+            <div class="form-group">
+                <label for="guardianName">Guardian Name</label>
+                <input type="text" id="guardianName" value="<%= encodeURIComponent(gurdian) %>" name="gurdian" disabled>
+            </div>
+            <div class="form-group">
+                <label for="guardianContact">Guardian Contact No</label>
+                <input type="number" id="guardianContact" value="<%= encodeURIComponent(gurdianContact) %>"
+                    name="gurdianContact" disabled>
+            </div>
+            <div class="form-group">
+                <label for="localGuardianName">Local Guardian Name</label>
+                <input type="text" id="localGuardianName" value="<%= encodeURIComponent(localGurdian) %>"
+                    name="localGurdian" disabled>
+            </div>
+            <div class="form-group">
+                <label for="localGuardianContact">Local Guardian Contact No</label>
+                <input type="number" id="localGuardianContact" value="<%= encodeURIComponent(localGurdianContact) %>"
+                    name="localGurdianContact" disabled>
+            </div>
+            <div class="form-group">
+                <label for="permanentAddress">Permanent Address</label>
+                <input type="text" id="permanentAddress" value="<%= encodeURIComponent(permanentAddress) %>"
+                    name="permanentAddress" disabled>
+            </div>
+            <div class="form-group">
+                <label for="presentAddress">Present Address</label>
+                <input type="text" id="presentAddress" value="<%= encodeURIComponent(presentAddress) %>"
+                    value=<%=presentAddress%> name="presentAddress"
+                disabled>
+            </div>
+            <div class="form-group">
+                <label for="class10Marks">Class 10 Marks</label>
+                <input type="number" class="class10Marks" id="class10Marks"
+                    value="<%= encodeURIComponent(class10Marks) %>" name="class10Marks" disabled>
+            </div>
+            <div class="form-group">
+                <label for="class12Marks">Class 12 Marks</label>
+                <input type="number" class="class12Marks" id="class12Marks"
+                    value="<%= encodeURIComponent(class12Marks) %>" name="class12Marks" disabled>
+            </div>
+            <div class="form-group">
+                <label>SGPA:</label>
+                <div class="sgpa-container">
+                    <div>
+                        <span><label for="">1st Sem</label></span>
+                        <input type="number" step="0.01" min="0" max="10" id="sgpa1" name="sgpa1" value=<%=sgpa1%>
+                        placeholder="1st Sem" name="1" disabled>
+                    </div>
+                    <div>
+                        <span><label for="">2nd Sem</label></span>
+                        <input type="number" step="0.01" min="0" max="10" id="sgpa2" name="sgpa2" value=<%=sgpa2%>
+                        placeholder="2nd Sem" name="2" disabled>
+                    </div>
+                    <div>
+                        <span><label for="">3rd Sem</label></span>
+                        <input type="number" step="0.01" min="0" max="10" id="sgpa3" name="sgpa3" value=<%=sgpa3%>
+                        placeholder="3rd Sem" disabled>
+                    </div>
+                    <div>
+                        <span><label for="">4th Sem</label></span>
+                        <input type="number" step="0.01" min="0" max="10" id="sgpa4" name="sgpa4" value=<%=sgpa4%>
+                        placeholder="4th Sem" disabled>
+                    </div>
+                    <div>
+                        <span><label for="">5th Sem</label></span>
+                        <input type="number" step="0.01" min="0" max="10" id="sgpa5" name="sgpa5" value=<%=sgpa5%>
+                        placeholder="5th Sem" disabled>
+                    </div>
+                    <div>
+                        <span><label for="">6th Sem</label></span>
+                        <input type="number" step="0.01" min="0" max="10" id="sgpa6" name="sgpa6" value=<%=sgpa6%>
+                        placeholder="6th Sem" disabled>
+                    </div>
+                    <div>
+                        <span><label for="">7th Sem</label></span>
+                        <input type="number" step="0.01" min="0" max="10" id="sgpa7" name="sgpa7" value=<%=sgpa7%>
+                        placeholder="7th Sem" disabled>
+                    </div>
+                    <div>
+                        <span><label for="">8th Sem</label></span>
+                        <input type="number" step="0.01" min="0" max="10" id="sgpa8" name="sgpa8" value=<%=sgpa8%>
+                        placeholder="8th Sem" disabled>
+                    </div>
+                </div>
+            </div>
+            <div class="editButton" value="Edit">Edit</div>
+            <input type="submit" class="editButton" value="Save" style="display: none;">
+        </form>
+
+    </main>
+    <footer>
+        <div class="footerContainer">
+            <div class="footerTalk">
+                <p>Follow us on</p>
+            </div>
+            <div class="footerSocialMediaLinks">
+                <a href="https://www.facebook.com/www.aot.edu.in/" title="Visit AOT Facebook Page">
+                    <img src="/assets/images/facebook_Logo.webp" alt="">
+                </a>
+                <a href="https://www.instagram.com/aotconnect/?igsh=MWhhcDJuY2ZqeWg1OA%3D%3D"
+                    title="Visit AOT Instagram Page">
+                    <img src="/assets/images/instagram_Logo.webp" alt="">
+                </a>
+                <a href="https://www.youtube.com/channel/UC1lroAhlIz6Reni_I2dpaHA" title="Visit AOT YouTube Page">
+                    <img src="/assets/images/youtube_Logo.webp" alt="">
+                </a>
+                <a href="https://www.linkedin.com/school/academy-of-technology/" title="Visit AOT Linkedin Page">
+                    <img src="/assets/images/linkedin_Logo.webp" alt="">
+                </a>
+            </div>
+            <div class="footerTalk">
+                <p>Copyright &copy 2024 all rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/javaScripts/adminStudentEdit.js" defer></script>
+    <script src="https://widget.cxgenie.ai/widget.js" data-aid="c78b9b22-6bc1-4025-b9fe-6387f69a16bd" defer></script>
+    <link rel="stylesheet" href="/styles/aiBot.css"> <!--for style-->
+    <script>
+        document.querySelectorAll('input').forEach(val => {
+            val.value = decodeURIComponent(val.value);
+        })
+    </script>
+</body>
+
+</html>

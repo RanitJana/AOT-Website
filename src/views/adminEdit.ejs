@@ -13,19 +13,22 @@
     <div class="container">
         <div class="personal-info">
             <h2>Personal Information</h2>
-            <form id="personal-info-form">
-                <label for="name">First Name:</label>
-                <input type="text" id="name" name="name" disabled>
-                <br>
+            <form id="personal-info-form" action="/studentPortal/adminLogin/adminDashboard" method="post">
+                <%- include("./partials/message")-%>
+                    <input type="hidden" name="formType" value="first">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" value="<%= encodeURIComponent(fullName) %>"
+                        disabled>
+                    <br>
 
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" disabled>
-                <br>
-                <label for="contact">Contact No:</label>
-                <input type="text" id="contact" name="contact" disabled>
-                <br>
-                <button type="button" id="edit-btn">Edit</button>
-                <button type="submit" id="save-btn" style="display: none;">Save</button>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" value="<%= encodeURIComponent(email) %>" disabled>
+                    <br>
+                    <label for="contact">Contact No:</label>
+                    <input type="text" id="contact" name="contact" value="<%= encodeURIComponent(contact) %>" disabled>
+                    <br>
+                    <button type="button" id="edit-btn">Edit</button>
+                    <input type="submit" id="save-btn" value="Save" style="display: none;">
             </form>
         </div>
 
@@ -45,18 +48,25 @@
                     <tr>
                         <th>Student Roll</th>
                         <th>Student Name</th>
-                        <th>SGPA Sem 1</th>
-                        <th>SGPA Sem 2</th>
-                        <th>SGPA Sem 3</th>
-                        <th>SGPA Sem 4</th>
-                        <th>SGPA Sem 5</th>
-                        <th>SGPA Sem 6</th>
-                        <th>SGPA Sem 7</th>
-                        <th>SGPA Sem 8</th>
+                        <th>Department</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Rows will be dynamically inserted here -->
+                    <% students.forEach(student=>{%>
+                        <tr>
+                            <td>
+                                <a href="/studentPortal/adminlogin/adminDashboard/<%=student.roll%>">
+                                    <%= student.roll %>
+                                </a>
+                            </td>
+                            <td>
+                                <%= student.fullName %>
+                            </td>
+                            <td>
+                                <%= student.department %>
+                            </td>
+                        </tr>
+                        <%})%>
                 </tbody>
             </table>
         </div>
@@ -65,8 +75,13 @@
 
     </div>
     <script>
+
+        document.querySelectorAll('input').forEach(val => {
+            val.value = decodeURIComponent(val.value);
+        })
+
         document.getElementById('edit-btn').addEventListener('click', function () {
-            document.getElementById('name').disabled = false;
+            document.getElementById('fullName').disabled = false;
             document.getElementById('email').disabled = false;
             document.getElementById('contact').disabled = false;
 
@@ -74,63 +89,8 @@
             document.getElementById('save-btn').style.display = 'inline-block';
         });
 
-        document.getElementById('personal-info-form').addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            document.getElementById('name').disabled = true;
-            document.getElementById('email').disabled = true;
-            document.getElementById('contact').disabled = true;
-
-            document.getElementById('edit-btn').style.display = 'inline-block';
-            document.getElementById('save-btn').style.display = 'none';
-
-            // Save the updated information
-            // For demonstration purposes, we'll just log the values to the console
-
-            // console.log('First Name:', document.getElementById('name').value);
-            // console.log('Email:', document.getElementById('email').value);
-            // console.log('Contact:', document.getElementById('contact').value);
-        });
-
-        document.getElementById('search-btn').addEventListener('click', function () {
-            const rollNo = document.getElementById('search-box').value;
-            // Perform search operation
-            // For demonstration purposes, we'll just log the roll number to the console
-            // console.log('Searched Roll No:', rollNo);
-        });
 
 
-        let students = [];
-
-        function generateStudents() {
-            for (let i = 1; i <= 50; i++) {
-                students.push({
-                    roll: `Roll ${i}`,
-                    name: `Student ${i}`,
-                    sgpas: Array.from({ length: 8 }, () => (Math.random() * (10 - 6) + 6).toFixed(2))
-                });
-            }
-        }
-
-        function renderTable() {
-            const tableBody = document.getElementById('studentTable').getElementsByTagName('tbody')[0];
-            tableBody.innerHTML = ''; // Clear the table body
-
-            students.forEach(student => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-            <td>${student.roll}</td>
-            <td>${student.name}</td>
-            ${student.sgpas.map(sgpa => `<td><input type="number" step="0.01" min="0" max="10" value="${sgpa}" disabled></td>`).join('')}
-        `;
-                tableBody.appendChild(row);
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            generateStudents();
-            renderTable();
-        });
     </script>
 </body>
 
