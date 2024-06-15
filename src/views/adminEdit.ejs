@@ -43,7 +43,10 @@
     </div>
     <div class="container">
         <div class="personal-info">
-            <h2>Personal Information</h2>
+            <div class="heading">
+                <h2>Personal Information</h2>
+                <img src="/assets/images/plus-48.png" decoding="async" alt="cross">
+            </div>
             <form id="personal-info-form" action="/studentPortal/adminLogin/adminDashboard" method="post">
                 <%- include("./partials/message")-%>
                     <input type="hidden" name="formType" value="first">
@@ -62,17 +65,17 @@
                     <input type="submit" id="save-btn" value="Save" style="display: none;">
             </form>
         </div>
-
     </div>
 
     <div class="data-container">
-        <div class="search-section">
-            <h2>Search Roll No</h2>
-            <input type="text" id="search-box" placeholder="Enter Roll No">
-            <button type="button" id="search-btn">Search</button>
-        </div>
-        <h2>Student SGPA Table</h2>
+        <h2>Student Information</h2>
 
+        <div class="search-section">
+            <div class="container">
+                <input type="text" id="search-box" placeholder="Enter Roll No">
+                <button type="button" id="search-btn">Search</button>
+            </div>
+        </div>
         <div class="table-container">
             <table id="studentTable">
                 <thead>
@@ -177,6 +180,17 @@
 
         document.querySelector('.backImg').addEventListener('click', () => {
             window.location.href = '/studentPortal/adminlogin/';
+        })
+
+        //toogle
+        let angle = [45,0];
+        let idx = 0;
+        document.querySelector('.heading img').style.transform = 'rotate(45deg)';
+
+        document.querySelector('.heading img').addEventListener('click', () => {
+            ;
+            document.querySelector('.heading img').style.transform = `rotate(${angle[idx = (idx + 1) % 2]}deg)`;
+            document.querySelector('.personal-info form').classList.toggle('close');
         })
 
 

@@ -7,7 +7,12 @@
     <title>Admin Login</title>
     <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
     <link rel="preload" href="/assets/images/aot-logo.jpg" as="image">
-    <link rel="stylesheet" href="/styles/studentLogin.css">
+    <link rel="stylesheet" href="/styles/forgetPass.css">
+    <link rel="preload" href="/styles/aiBot.css" as="style" onload="this.onload=null;this.rel='stylesheet';">
+
+    <noscript>
+        <link rel="stylesheet" href="/styles/aiBot.css">
+    </noscript>
 </head>
 
 <body>
@@ -21,29 +26,19 @@
     </div>
     <img src="/assets/images/aot-logo.jpg" alt="AOT" loading=" eager" decoding="async">
     <div class="login-container">
-        <h2>Login</h2>
+        <h2>Enter Information</h2>
         <%- include("./partials/message") -%>
-            <form id="login-form" action="/studentPortal/adminlogin" method="POST">
+            <form id="login-form" action="/studentPortal/adminlogin/forgetPassword" method="POST">
                 <div class="form-group">
-                    <label for="contact">Contact Number:</label>
+                    <label for="contact">Contact Number</label>
                     <input type="number" id="contact" name="contact" placeholder="Enter your contact number" required>
                 </div>
                 <div class="form-group">
-                    <label for="password">Password:</label>
-                    <input type="password" name="password" id="password" placeholder="Enter your password" required>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email" required>
                 </div>
-                <button type="submit" id="submit">Login</button>
+                <button type="submit" id="submit">Submit</button>
             </form>
-            <div class="section">
-                <a href="/studentPortal/adminSignup">
-                    <button>Sign Up</button>
-                </a>
-                <a href="/studentPortal/adminlogin/forgetPassword">
-                    <button>
-                        Forget Password?
-                    </button>
-                </a>
-            </div>
     </div>
     <script src="https://widget.cxgenie.ai/widget.js" data-aid="c78b9b22-6bc1-4025-b9fe-6387f69a16bd" defer></script>
     <link rel="stylesheet" href="/styles/aiBot.css"> <!--for style-->
