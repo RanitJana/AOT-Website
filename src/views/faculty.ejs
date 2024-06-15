@@ -51,13 +51,12 @@
 
     </header>
 
-    <nav class="page-title">
-        <div class="logo" style="background-color: white;">
-            <a href="/" style="height: 100%;width: 100%;display: flex;justify-content: center;align-items: center;"><img
-                    width="50%" height="50%" src="/assets/video/icons8-home.gif" alt="home" /></a>
+    <div class="beforeIntro">
+        <div class="back-btn">
+            <img src="/assets/video/icons8-home.gif" alt="home" />
         </div>
-        <h1 id="heading">AOT Faculty Members</h1>
-    </nav>
+        <h1 class="headings">AOT Faculty Members</h1>
+    </div>
     <main>
 
         <div class="paraent">
@@ -195,6 +194,11 @@
     </footer>
     <script src="/javaScripts/userOnOff.js"></script>
     <script src="https://widget.cxgenie.ai/widget.js" data-aid="c78b9b22-6bc1-4025-b9fe-6387f69a16bd" defer></script>
+    <script>
+        document.querySelector('.back-btn').addEventListener('click', () => {
+            window.history.back();
+        });
+    </script>
     <link rel="stylesheet" href="/styles/aiBot.css"> <!--for style-->
 </body>
 
