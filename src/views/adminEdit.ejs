@@ -52,21 +52,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <% students.forEach(student=>{%>
-                        <tr>
-                            <td>
-                                <a href="/studentPortal/adminlogin/adminDashboard/<%=student.roll%>">
-                                    <%= student.roll %>
-                                </a>
-                            </td>
-                            <td>
-                                <%= student.fullName %>
-                            </td>
-                            <td>
-                                <%= student.department %>
-                            </td>
-                        </tr>
-                        <%})%>
                 </tbody>
             </table>
         </div>
@@ -89,7 +74,55 @@
             document.getElementById('save-btn').style.display = 'inline-block';
         });
 
+        let studentsArray = [];
+        let studentObj;
+        <% students.forEach((student) => { %>
+            studentObj = {
+                roll: '<%= student.roll %>',
+                    fullName: '<%= student.fullName %>',
+                        department: '<%= student.department %>',
+            };
 
+            // Push the constructed object into studentsArray
+            studentsArray.push(studentObj);
+            <% }) %>
+
+            // Log studentsArray to verify the objects
+            console.log(studentsArray);
+
+        let tbody = document.querySelector('tbody');
+        function renderTable(obj) {
+            tbody.innerHTML = '';
+            obj.forEach(student => {
+                let tr = document.createElement('tr');
+                let td1 = document.createElement('td');
+                let td2 = document.createElement('td');
+                td2.textContent = student.fullName;
+                let td3 = document.createElement('td');
+                td3.textContent = student.department;
+                let a = document.createElement('a');
+                a.href = `/studentPortal/adminlogin/adminDashboard/${student.roll}`;
+                a.textContent = student.roll;
+                td1.appendChild(a);
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                tbody.appendChild(tr);
+            });
+        }
+        renderTable(studentsArray);
+
+        document.getElementById('search-box').addEventListener('input', function () {
+            let searchValue = document.getElementById('search-box').value;
+            let searchResult = studentsArray.filter(student => student.roll.startsWith(searchValue));
+            renderTable(searchResult);
+        });
+
+        document.getElementById('search-btn').addEventListener('click', function () {
+            let searchValue = document.getElementById('search-box').value;
+            let searchResult = studentsArray.filter(student => student.roll.startsWith(searchValue));
+            renderTable(searchResult);
+        });
 
     </script>
 </body>
