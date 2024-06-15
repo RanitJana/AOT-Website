@@ -1,5 +1,6 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
 const DB_NAME = require('../constants.js');
 
 ; (
@@ -36,13 +37,11 @@ const studentSchema = new mongoose.Schema({
     },
     password: {
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
     contact: {
         type: Number,
-        required: true,
-        unique: true
+        required: true
     },
     gurdian: {
         type: String,
@@ -60,7 +59,11 @@ const studentSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    address: {
+    permanentAddress: {
+        type: String,
+        required: true
+    },
+    presentAddress: {
         type: String,
         required: true
     },
@@ -80,5 +83,15 @@ const studentSchema = new mongoose.Schema({
     ]
 
 }, { timestamps: true });
+
+
+//pre hook
+studentSchema.pre("save", async function (next) {
+    if (!this.isModified("password")) return next();
+    this.password = await bcrypt.hash(this.password, 10);
+    next();
+})
+
+
 
 module.exports = mongoose.model('Student', studentSchema);  //In db it'll be saved as students

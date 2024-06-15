@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/basicStyles.css">
+    <link rel="stylesheet" href="/styles/headerStyle.css">
+    <link rel="stylesheet" href="/styles/headerResponsive.css">
+    <link rel="stylesheet" href="/styles/placement.css">
+    <link rel="stylesheet" href="/styles/chatbot.css">
+    <link rel="stylesheet" href="/styles/studentPortal.css">
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/bannerResponse.css">
+    <title>Student Portal</title>
+</head>
+
+<body>
+    <!-- Chatbot Icon -->
+    <div id="chatbot-icon" class="icon">
+        <img width="50" height="50" src="https://img.icons8.com/3d-fluency/94/chatbot.png" alt="chatbot" />
+    </div>
+
+    <!-- Chatbot Window -->
+    <div class="chat-container hidden">
+        <div class="chat-header">
+            <div id="back-icon" class="icon">
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/multiply.png"
+                    alt="multiply" />
+            </div>
+            <h2>AOT Assist</h2>
+            <!-- <button id="clear-chat">Clear Chat</button> -->
+            <img id="clear-chat" width="35" height="35" src="https://img.icons8.com/ultraviolet/40/refresh--v1.png"
+                alt="refresh--v1" />
+        </div>
+        <div id="chatbox" class="chatbox"></div>
+        <div class="input-container">
+            <input type="text" id="input" placeholder="Type a message...">
+            <button id="send">Send</button>
+        </div>
+    </div>
+    <!-- chatbot window end here -->
+    <div class="onOrOff">
+        <img src="/assets/images/icons8-no-connection.gif" alt="./assets/images/icons8-no-connection.gif">
+        <img src="/assets/images/icons8-online.gif" alt="./assets/images/icons8-online.gif">
+        <p>We are online</p>
+    </div>
+    <header id="destination">
+        <div class="banner">
+            <div class="left">
+                <img src="/assets/images/aot-logo.jpg" alt="Error" loading="lazy" decoding="async">
+            </div>
+            <div class="middle">
+                <h1>ACADEMY OF TECHNOLOGY</h1>
+                <span>...translate your vision into reality</span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="back">
+            <div class="backImg">
+                <img src="/assets/video/icons8-home.gif" alt="Back Icon">
+            </div>
+            <h1>Student Portal</h1>
+        </div>
+        <section>
+
+            <div class="admin">
+                <img src="/assets/images/icons8-admin-24.png" alt="admin" decoding="async" loading="eager">
+                <p>Admin</p>
+            </div>
+            <div class="student">
+                <img src="/assets/images/icons8-student-24.png" alt="admin" decoding="async" loading="eager">
+                <p>Student</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        let backImg = document.querySelector('.backImg');
+        backImg.addEventListener('click', e => {
+            window.history.back();
+        })
+        document.querySelector('.student').addEventListener('click', e => {
+            window.location.href = "/studentPortal/studentlogin";
+        })
+        document.querySelector('.admin').addEventListener('click', e => {
+            window.location.href = "/studentPortal/adminlogin";
+        })
+    </script>
+    <script src="/javaScripts/chatbot.js"></script>
+
+</body>
+
+</html>

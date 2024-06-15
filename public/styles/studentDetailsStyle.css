@@ -1,16 +1,26 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+@import url(basicStyles.css);
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hide the spin buttons in Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
 }
 
 .container {
-    max-width: 600px;
-    margin: auto;
+    /* max-width: 600px; */
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 90%;
+    background-color: white;
+    margin: 1rem auto;
 }
 
 .form-group {
@@ -28,8 +38,22 @@ body {
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    height: 8px;
+}
+
+.sgpa-container {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: auto auto;
+}
+
+.sgpa-container>div {
+    width: 100%;
+}
+
 .sgpa-container input {
-    width: calc(50% - 10px);
+    /* width: calc(50% - 10px); */
     margin-bottom: 10px;
     margin-right: 10px;
 }
@@ -38,8 +62,10 @@ body {
     margin-right: 0;
 }
 
-#editButton {
-    display: block;
+.editButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     padding: 10px;
     background-color: #28a745;
@@ -47,53 +73,62 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
 }
 
-#editButton:hover {
+.editButton:hover {
     background-color: #218838;
 }
 
 /*============================================ table =============================================== */
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
 }
 
 .data-container {
-    max-width: 1390px;
+    max-width: 90%;
     margin: auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    margin-bottom: 1rem;
 }
 
 .table-container {
-    overflow-x: auto; /* Add horizontal scroll if content overflows */
+    overflow-x: auto;
+    /* Add horizontal scroll if content overflows */
     margin-top: 20px;
+    max-height: 500px;
+    border: 2px solid gray;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 1200px; /* Ensure table is wide enough to overflow */
+    min-width: 1200px;
+    /* Ensure table is wide enough to overflow */
 }
-table input{
+
+table input {
     border: none;
     background-color: transparent;
     text-align: center;
 }
 
-#rowNumber{
+#rowNumber {
     padding: 10px 20px;
 }
 
 
-th, td {
+th,
+td {
     border: 3px solid #ffffff;
     padding: 10px;
     text-align: center;
-    
+
 }
 
 th {
@@ -117,19 +152,30 @@ th {
 }
 
 
-tbody tr:nth-child(odd) {
-    background-color: #BEF2F5; /* Light blue for odd rows */
-}
-
 tbody tr:nth-child(even) {
-    background-color: #ffffff; /* White for even rows */
+    background-color: #BEF2F5;
+    /* Light blue for odd rows */
 }
 
-#rowNumber option{
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+    /* White for even rows */
+}
+
+#rowNumber option {
     padding: 10px 20px;
     border: 3px solid white;
 }
 
 #rowNumber option:nth-child(even) {
     background-color: #BEF2F5;
+}
+
+main {
+    width: 100dvw;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
 }

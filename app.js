@@ -1,9 +1,24 @@
+require('dotenv').config()
 const express = require('express');
 const path = require('path')
 const app = express();
+const session = require('express-session');
+const flash = require('connect-flash');
 
 
-app.use(express.static(path.join(__dirname, 'public')))
+app
+    .use(express.static(path.join(__dirname, 'public')))
+    .use(session({
+        resave: false,
+        saveUninitialized: false,
+        secret: `${process.env.SESSION_SECRET}`
+    }))
+    .use(flash())
+    .use((req, res, next) => {
+        res.locals.successMessages = req.flash('success');
+        res.locals.errorMessages = req.flash('error');
+        next();
+    })
 
 const achivement = require('./routes/achivement.route.js');
 const career = require('./routes/career.route.js');
@@ -30,6 +45,7 @@ const search = require('./routes/search.route.js');
 const nss = require('./routes/nss.route.js');
 
 app
+    .set('view engine', 'ejs')
     .use('/achivement', achivement)
     .use('/career', career)
     .use('/contact', contact)
@@ -56,7 +72,10 @@ app
 
 app
     .get('/', (req, res) => {
-        res.sendFile(path.join(__dirname, 'public/pages', 'index.html'));
+        res.render('index');
+    })
+    .all('*', (req, res) => {
+        res.render('errorPage')
     })
 
 module.exports = app;

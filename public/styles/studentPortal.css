@@ -13,8 +13,21 @@
     user-select: none;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hide the spin buttons in Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 section {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 section>div p {
