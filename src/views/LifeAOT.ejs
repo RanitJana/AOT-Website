@@ -54,12 +54,13 @@
     </header>
     <hr>
     <main>
-        <div class="section__title">
-            <div class="logo">
-                <a href="/"><img width="32" height="32" src="https://img.icons8.com/windows/32/home.png"
-                        alt="home" /></a>
+        
+
+        <div class="beforeIntro">
+            <div class="back-btn">
+                <img src="/assets/video/icons8-home.gif" alt="home" />
             </div>
-            <h1 id="heading">Life@AOT</h1>
+            <h1 class="headings">NSS AOT</h1>
         </div>
 
         <div class="para">
@@ -149,6 +150,11 @@
     <!-- <script src="/javaScripts/chatbot.js"></script> -->
     <script src="/javaScripts/userOnOff.js"></script>
     <script src="https://widget.cxgenie.ai/widget.js" data-aid="c78b9b22-6bc1-4025-b9fe-6387f69a16bd" defer></script>
+    <script>
+        document.querySelector('.back-btn').addEventListener('click', () => {
+            window.history.back();
+        });
+    </script>
     <link rel="stylesheet" href="/styles/aiBot.css"> <!--for style-->
 </body>
 
