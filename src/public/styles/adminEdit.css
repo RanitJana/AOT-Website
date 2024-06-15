@@ -6,12 +6,11 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
-    padding: 0 1rem;
 }
 
 .container {
     /* max-width: 800px; */
-    margin: 20px auto;
+    margin: 20px 1rem;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -81,9 +80,10 @@ input[type="submit"] {
 
 .data-container {
     max-width: 1390px;
-    margin: auto;
+    margin: 1rem;
     padding: 20px;
     border: 1px solid #ccc;
+    background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
