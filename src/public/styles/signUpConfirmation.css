@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f6fa;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #333;
+    min-height: 500px;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+}
+
+.container img {
+    width: 100px;
+    margin-bottom: 1em;
+}
+
+.container h1 {
+    font-size: 1.5em;
+    margin: 0.5em 0;
+    color: #2e86de;
+}
+
+.container p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 0.5em 0;
+}
+
+.container .resend {
+    margin-top: 1em;
+    color: #2e86de;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container .resend:hover {
+    text-decoration: underline;
+}
+
+.success {
+    background-color: rgba(120, 178, 34, 0.809);
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid rgb(1, 106, 1);
+    padding: 1rem;
+    display: grid;
+    color: white;
+    place-items: center;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.error {
+    background-color: rgb(255, 59, 59);
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid rgb(193, 0, 0);
+    display: grid;
+    color: white;
+    place-items: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    text-align: center;
+}

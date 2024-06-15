@@ -1,0 +1,193 @@
+@import url(basicStyles.css);
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hide the spin buttons in Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.container {
+    /* max-width: 600px; */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    background-color: white;
+    margin: 1rem auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    height: 8px;
+}
+
+.sgpa-container {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: auto auto;
+}
+
+.sgpa-container>div {
+    width: 100%;
+}
+
+.sgpa-container input {
+    /* width: calc(50% - 10px); */
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.sgpa-container input:nth-child(2n) {
+    margin-right: 0;
+}
+
+.editButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.editButton:hover {
+    background-color: #218838;
+}
+
+select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+/*============================================ table =============================================== */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.data-container {
+    max-width: 90%;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    margin-bottom: 1rem;
+}
+
+.table-container {
+    overflow-x: auto;
+    /* Add horizontal scroll if content overflows */
+    margin-top: 20px;
+    max-height: 500px;
+    border: 2px solid gray;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1200px;
+    /* Ensure table is wide enough to overflow */
+}
+
+table input {
+    border: none;
+    background-color: transparent;
+    text-align: center;
+}
+
+#rowNumber {
+    padding: 10px 20px;
+}
+
+
+th,
+td {
+    border: 3px solid #ffffff;
+    padding: 10px;
+    text-align: center;
+
+}
+
+th {
+    background-color: skyblue;
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.pagination button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+
+tbody tr:nth-child(even) {
+    background-color: #BEF2F5;
+    /* Light blue for odd rows */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+    /* White for even rows */
+}
+
+#rowNumber option {
+    padding: 10px 20px;
+    border: 3px solid white;
+}
+
+#rowNumber option:nth-child(even) {
+    background-color: #BEF2F5;
+}
+
+main {
+    width: 100dvw;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}

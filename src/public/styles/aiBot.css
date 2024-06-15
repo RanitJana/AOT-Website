@@ -1,0 +1,96 @@
+.cxgenie-chat-button,
+.previewBot {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 99;
+    border-radius: 100%;
+    cursor: pointer;
+    /* pointer-events: none; */
+}
+
+.previewBot {
+    background-color: #364de7;
+
+}
+
+.cxgenie-chat-button .document-icon {
+    width: 20px;
+    height: 20px;
+    color: white;
+}
+
+.cxgenie-chat-button .close-icon {
+    width: 40px;
+    height: 40px;
+    color: white;
+}
+
+.cxgenie-chat-modal {
+    display: block;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    max-height: 455px;
+    max-width: 400px;
+    position: fixed;
+    bottom: 40px;
+    right: 120px;
+    border-radius: 16px;
+    box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.08);
+    transition: all 0.25s ease-in-out;
+    transform-origin: bottom right;
+    transform: scale(0);
+    opacity: 0;
+    pointer-events: none;
+    outline: none;
+    z-index: 99999;
+    user-select: none;
+}
+
+.cxgenie-chat-modal.mobile {
+    max-height: unset;
+    max-width: unset;
+    border-radius: 0;
+    box-shadow: none;
+    right: unset;
+    bottom: unset;
+    position: relative;
+}
+
+.cxgenie-chat-button.open,
+.cxgenie-chat-modal.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.cxgenie-chat-modal.open {
+    transform: scale(1);
+}
+
+@media screen and (max-width: 640px) {
+    .cxgenie-chat-modal {
+        right: unset;
+        left: 50%;
+        width: 90%;
+        transform: scale(0) translateX(-50%);
+        bottom: 120px;
+        right: 40px;
+    }
+
+    .cxgenie-chat-modal.open {
+        transform: scale(1) translateX(-50%);
+    }
+}
+
+body.mobile {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
