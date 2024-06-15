@@ -14,3 +14,6 @@ btns[1].addEventListener('click', e => {
     btns[1].style.display = 'none';
 })
 
+document.querySelector('.backImg').addEventListener('click', () => {
+    window.location.href = '/studentPortal/adminlogin/adminDashboard';
+})
