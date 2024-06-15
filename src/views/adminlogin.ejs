@@ -23,7 +23,7 @@
     <div class="login-container">
         <h2>Login</h2>
         <%- include("./partials/message") -%>
-            <form id="login-form" action="/studentPortal/studentlogin" method="POST">
+            <form id="login-form" action="/studentPortal/adminlogin" method="POST">
                 <div class="form-group">
                     <label for="contact">Contact Number:</label>
                     <input type="number" id="contact" name="contact" placeholder="Enter your contact number" required>
@@ -35,7 +35,7 @@
                 <button type="submit" id="submit">Login</button>
             </form>
             <div class="section">
-                <a href="/studentPortal/studentsignup">
+                <a href="/studentPortal/adminSignup">
                     <button>Sign Up</button>
                 </a>
                 <a href="/studentPortal/studentlogin/forgetPassword">

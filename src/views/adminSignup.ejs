@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Sign up</title>
+    <title>Student Portal Form</title>
     <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
     <link rel="preload" href="/assets/images/aot-logo.jpg" as="image">
     <link rel="stylesheet" href="/styles/studentSignup.css">
@@ -34,25 +34,14 @@
 
             <%- include("./partials/message") -%>
 
-                <form id="student-form" action="/studentPortal/studentsignup" method="post">
+                <form id="student-form" action="/studentPortal/adminSignup" method="post">
                     <div class="form-group">
-                        <label for="student-name">Student Name:</label>
-                        <input type="text" id="student-name" name="student-name" placeholder="Eg. John Morry" required>
+                        <label for="admin-name">Full Name:</label>
+                        <input type="text" id="admin-name" name="admin-name" placeholder="Eg. John Morry" required>
                     </div>
                     <div class="form-group">
-                        <label for="university-roll">University Roll No:</label>
-                        <input type="number" id="university-roll" name="university-roll" placeholder="Eg. 12345678912"
-                            required>
-                    </div>
-                    <div class="form-group">
-                        <label for="personal-email">Personal Email:</label>
-                        <input type="email" id="personal-email" name="personal-email"
-                            placeholder="Eg. example@gmail.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="college-email">College Email:</label>
-                        <input type="email" id="college-email" name="college-email"
-                            placeholder="Eg. example.eg2.22@aot.edu.in" required>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Eg. example@gmail.com" required>
                     </div>
                     <div class="form-group">
                         <label for="password">password:</label>
@@ -65,35 +54,6 @@
                     <div class="form-group">
                         <label for="contact">Contact number:</label>
                         <input type="number" id="contact" name="contact" placeholder="Eg. 1234567890" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="guardian-name">Guardian Name:</label>
-                        <input type="text" id="guardian-name" name="guardian-name" placeholder="Eg. Random1" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="guardian-contact">Guardian Contact No:</label>
-                        <input type="number" id="guardian-contact" name="guardian-contact" placeholder="Eg. 1234567890"
-                            required>
-                    </div>
-                    <div class="form-group">
-                        <label for="local-guardian-name">Local Guardian Name:</label>
-                        <input type="text" id="local-guardian-name" name="local-guardian-name" placeholder="Eg. Random2"
-                            required>
-                    </div>
-                    <div class="form-group">
-                        <label for="local-guardian-contact">Local Guardian Contact No:</label>
-                        <input type="number" id="local-guardian-contact" name="local-guardian-contact"
-                            placeholder="Eg. 1234567890" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="permanent-address">Permanent Address:</label>
-                        <textarea id="permanent-address" name="permanent-address"
-                            placeholder="Eg. vill/city , dist, state,pin" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="present-address">Present Address:</label>
-                        <textarea id="present-address" name="present-address"
-                            placeholder="Eg. vill/city , dist, state,pin" required></textarea>
                     </div>
                     <button type="submit" id="submit">Submit</button>
                 </form>
