@@ -6,7 +6,6 @@ const adminForgetPassVerify = async (req, res, next) => {
         let adminUser = await adminSchema.findOne({ contact: contact });
         if (adminUser) {
             if (adminUser.email === email) {
-                req.flash('success', 'An OTP has been sent to your email. Please verify it to reset your password.');
                 return next();
             }
             else {
@@ -21,7 +20,7 @@ const adminForgetPassVerify = async (req, res, next) => {
     catch (err) {
         rer.flash('error', 'Something went wrong');
     }
-    return res.redirect('/studentPortal/adminlogin/adminforgetpass');
+    return res.redirect('/studentPortal/adminlogin/forgetPassword');
 }
 
 module.exports = { adminForgetPassVerify };
