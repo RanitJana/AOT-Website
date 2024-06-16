@@ -6,6 +6,7 @@ const adminForgetPassVerify = async (req, res, next) => {
         let adminUser = await adminSchema.findOne({ contact: contact });
         if (adminUser) {
             if (adminUser.email === email) {
+                res.cookie('admin', adminUser._id);
                 return next();
             }
             else {
