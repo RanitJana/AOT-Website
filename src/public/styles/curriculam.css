@@ -1,7 +1,7 @@
 @import url(./basicStyles.css);
 
 .basic-intro{
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     margin:1rem 0.5rem;
     border-radius: 5px;
     background-color: var(--aot-light-color--);
@@ -26,22 +26,38 @@ p img{
 }
 
 .sem-count>li{
-    padding: 1rem 1.4rem;
+    padding: 1rem 1.5rem;
     margin:1rem 0.5rem;
     border-radius: 5px;
     background-color: var(--aot-light-color--);
     box-shadow: -10px 10px 10px rgba(0,0,0,0.15);
 }
 
+.sem-count>li>ul>li{
+    padding: 0.25rem 0;
+}
+
 .year{
     text-align: center;
     text-decoration: underline;
+}
+
+.curriculam-content p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.curriculam-content p img{
+    margin: 6px;
 }
  
 
 @media only screen and (max-width:600px) {
     .basic-intro, curriculam-content{
         padding: 1em ;
+    }
+    .sem-count>li>ul>li{
+        padding: 0;
     }
 }
 
