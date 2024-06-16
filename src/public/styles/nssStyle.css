@@ -14,6 +14,7 @@
     width: 100%;
     height: 32rem;
     object-fit: cover; 
+    border-radius: 8px;
 }
 
 .secondBtn{
@@ -45,6 +46,7 @@
     box-shadow: var(--normal-shadow--);
     padding: 1em;
     text-align: center;
+    border-radius: 8px;
 }
 
 .nss-quote h2{
@@ -72,6 +74,7 @@
     background-color: var(--aot-light-color--);
     box-shadow: var(--normal-shadow--);
     text-align: center;
+    border-radius: 8px;
 }
 .nss-pic-box img{
     width: 100%;
@@ -82,9 +85,10 @@
     margin: 0.5em;
     background-color: var(--aot-light-color--);
     box-shadow: var(--normal-shadow--);
-    padding: 0.8em;
+    padding: 0.8rem 1rem;
     position: relative;
-    justify-content: center;
+    /* justify-content: center; */
+    border-radius: 8px;
 }
 
 .coordinator-container{
@@ -113,11 +117,15 @@
     margin: 0.5em;
     background-color: var(--aot-light-color--);
     box-shadow: var(--normal-shadow--);
-    padding: 0.8em;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
 }
 .nss-activity-list ul{
     padding: 1em;
     list-style-type: circle;
+}
+.nss-activity-list ul li{
+    padding: 3px 0;
 }
 
 @media only screen and (max-width:630px) {
