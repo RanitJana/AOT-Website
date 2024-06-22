@@ -1,28 +1,12 @@
 require('dotenv').config()
 const mongoose = require('mongoose');
-const DB_NAME = require('./constants.js');
 const express = require('express');
 const path = require('path')
 const app = express();
 const session = require('express-session');
 const flash = require('connect-flash');
 
-//DB connection
-; (
-    async () => {
-        try {
-            await mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`);
-            console.log('Connected to database');
-        }
-        catch (err) {
-            console.log(err);
-            throw err;
-        }
-    }
-)()
-
 //routing
-
 app
     .use(express.static(path.join(__dirname, './src/public')))
     .use(session({

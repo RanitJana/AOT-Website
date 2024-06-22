@@ -1,2 +1,9 @@
 const DB_NAME = 'aotData';
-module.exports = DB_NAME;
+const cookieOptions = {
+    httpOnly: true,
+    secure: true
+}
+module.exports = {
+    DB_NAME,
+    cookieOptions
+} 

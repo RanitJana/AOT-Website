@@ -2,7 +2,7 @@
 const bcrypt = require('bcrypt');
 
 const userSchema = require('../models/student.model.js');
-const { default: mongoose } = require('mongoose');
+const { cookieOptions } = require('../../constants.js');
 
 const checkValidPassword = (req, res, next) => {
     const password = req.body["password"];
@@ -25,9 +25,9 @@ const matchPassword = async (req, res, next) => {
         const data = await userSchema.findOne({ roll: `${roll}` });
         const match = await bcrypt.compare(password, data.password);
         if (match && data) {
-            res.cookie('username', data.fullName);
-            res.cookie('id', data['_id']);
-            res.cookie('roll', data.roll);
+            res.cookie('username', data.fullName, cookieOptions);
+            res.cookie('id', data['_id'], cookieOptions);
+            res.cookie('roll', data.roll, cookieOptions);
             return next();
         }
     }

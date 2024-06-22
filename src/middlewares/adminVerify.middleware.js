@@ -1,5 +1,6 @@
 const adminSchema = require('../models/admin.model.js');
 const bcrypt = require('bcrypt');
+const { cookieOptions } = require('../../constants.js');
 
 const adminVerify = async (req, res, next) => {
     try {
@@ -8,7 +9,7 @@ const adminVerify = async (req, res, next) => {
         if (admin) {
             const isMatch = await bcrypt.compare(password, admin.password);
             if (isMatch) {
-                res.cookie('admin', admin._id);
+                res.cookie('admin', admin._id, cookieOptions);
                 return next();
             }
             else {
