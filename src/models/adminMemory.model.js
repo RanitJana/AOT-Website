@@ -21,6 +21,11 @@ const adminMemorySchema = new mongoose.Schema({
     },
     uniqueID: {
         type: String
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now,
+        expires: '1h' // TTL of 60 seconds
     }
 }, { timestamps: true });
 
